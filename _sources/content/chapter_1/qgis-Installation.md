@@ -42,3 +42,4 @@ Solltet ihr hierüber eine QGIS Version >3.30 installieren müsst ihr das Plugin
 Mehr zu wie man Plugins in QGIS installiert und aktiviert findet ihr hier:
 [qgis-Interface#erweiterungen-plugins-installieren](https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/-/wikis/qgis-Interface#erweiterungen-plugins-installieren)
  
+### Versions
