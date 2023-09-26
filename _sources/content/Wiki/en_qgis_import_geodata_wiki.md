@@ -69,12 +69,14 @@ Import via drag-and-drop
 :width: 300px
 Import via drag-and-drop
 
+
 1. Layer -> Add Layer -> Add Raster Layer -> Select your file -> click "add" 
 2. A window will open and you have to select the exact dataset you want to use. -> Click "add Layers"
 3. Click on the ? in the Layers window. The window "Coordination Reference System Selectir" will open. -> Select the correct reference system.-> Click “OK”
 :::
 
 ::::
+
 
 *QGGIS Version 3.22.15*
 

@@ -4,6 +4,4 @@
 * Non-spatial queries (II)
 * Non-spatial joins
 
-## Digital
-
-___ 
+Test Test
