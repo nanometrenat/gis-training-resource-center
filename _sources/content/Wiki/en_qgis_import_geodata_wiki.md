@@ -66,6 +66,7 @@ Import via drag-and-drop
 
 :::{figure} /fig/qgis_import_NetCDF_raster.mp4
 :width: 300px
+:align: center
 Import via drag-and-drop
 1. Layer -> Add Layer -> Add Raster Layer -> Select your file -> click "add" 
 2. A window will open and you have to select the exact dataset you want to use. -> Click "add Layers"
