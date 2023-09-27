@@ -8,16 +8,14 @@
 
   - by making use of their spatial location, __information layers__ (or features within a layer) can be analyzed in regard to each other to obtain new information. 
 
--------------------------------
 ## Why are spatial analyses important?
 
-```{hint} text 
-Discuss in groups:
+```
+{Tip} Discuss in groups:
 ```
  - Situations in which you benefitted from spatial analyses.
  - Situations in which you could may be have benefitted from spatial analyses.
  - Main areas where you see potential for spatial analyses in your work.
--------------------------------
 
 ## Introduction to GIS: 
 
@@ -63,17 +61,16 @@ GIS has many applications in the __humanitarian field__:
  - Support operations planning
  - Identify areas most affected by disasters
   
-```{hint} text 
-A few examples:
+```
+{Tip} A few examples:
 ```
 
- - [REACH Initiativehttps](//www.reachresourcecentre.info/search/)  
+ - [REACH Initiativehttps](www.reachresourcecentre.info/search/)  
  - [World Food Programme(WFP)](https://hungermap.wfp.org/) 
  - [Médecins Sans Frontières (MSF)](https://geo.msf.org/catalogue) 
- - [iMMAP](/https://immap.org/products/) 
+ - [iMMAP](https://immap.org/products/) 
  - [MapAction](https://maps.mapaction.org/)
 
---------------------------------------------------------------------------
 
 # Paper maps and cartography 
 
@@ -89,8 +86,8 @@ A few examples:
 In 1854 an __outbreak of cholera__ occurred in London, England. The most common theory was that the disease was spread through the air. Dr.John Snow believed that the danger was __in the water__. He made a map to analyse the __number of deaths__ in Soho per house block. He added the __location of water pumps__ on the map.
 He found a __correlation__ between one specific water pump and the number of infections.
 
-```{hint} text 
-Example:
+```
+{Tip} Example:
 ```
  - [Let’s explore John Snow’s map](https://www.arcgis.com/apps/PublicInformation/index.html?appid=d7deb67f810d46dfacb80ff80ac224e9)
 
@@ -104,7 +101,9 @@ Example:
 - GIS uses __analysis and statistics__ to present data in support of particular arguments which a cartographic map cannot do. 
 - You can use GIS __for__ cartography.
 
-![GIS vs Cartography](en_GIS_vs_Cartography.png) GIS vs Cartography
+<tagName>  <tagName>
+
+![GIS vs Cartography](/fig/en_GIS_vs_Cartography.png) GIS vs Cartography
 
 ### General reference maps
 
@@ -114,7 +113,9 @@ Example:
 -  Usually fairly __simple__
 -  Can be __stylized__ based on the intended audience
 
-![Reference map of Iraq](en_Reference_Map_Iraq-1.png) Reference map of Iraq
+<tagName>  <tagName>
+
+![Reference map of Iraq](/fig/en_Reference_Map_Iraq.png)  Reference map of Iraq
 
 ### Infrastructure maps
 
@@ -123,7 +124,9 @@ Example:
  - High level of __detail__
  - Produced after field __data collection__
 
-![Infrastructure map of Nigeria](en_Infrastructure_Map_Nigeria-1.png)
+<tagName>  <tagName>
+
+![Infrastructure map of Nigeria](/fig/en_Infrastructure_Map_Nigeria.png) 
 Infrastructure map of Nigeria
  
 ### Thematic maps
@@ -133,7 +136,10 @@ Infrastructure map of Nigeria
   - Use __colours and shapes__ to display quantitative and qualitative data
   - Rise __awareness__ about a specific subject
 
-![Thematic map of Africa](en_Thematic_Map_Africa.png) Thematic map of Africa
+  <tagName>  <tagName>
+
+
+![Thematic map of Africa](/fig/en_Thematic_Map_Africa.png) Thematic map of Africa
 
 ### Analysis maps
 
@@ -143,7 +149,9 @@ Infrastructure map of Nigeria
   - __Support__ decision makers
   - Generally display a greater __level of detail__
 
-![Analysis map of Yemen](en_Analysis_Map_Yemen-2.png) Analysis map of Yemen
+  <tagName>  <tagName>
+  
+![Analysis map of Yemen](/fig/en_Analysis_Map_Yemen.png) Analysis map of Yemen
 
 ### Situation/Descriptive maps
 
@@ -151,7 +159,9 @@ Infrastructure map of Nigeria
   - Maps can include __narrative__ and graphic elements 
   - Can be used in reports and/or to __raise awareness__ on a specific event 
 
-![Situation map from Tilkaif to Mosul](en_Situation_Map_Tilkaif_Mosul-1.png)Situation map from Tilkaif to Mosul
+<tagName>  <tagName>
+
+![Situation map from Tilkaif to Mosul](/fig/en_Situation_Map_Tilkaif_Mosul.png)Situation map from Tilkaif to Mosul
 
  
 ### Mapping and GIS
@@ -160,25 +170,24 @@ Infrastructure map of Nigeria
 
 - __Geographic Information Systems__ refer to a set of systems related to the processing of geographic information (spatial data) GIS have their own unique software capable of storing, processing, representing and analysing geographical data.
 
-![Structure GIS System](en_GIS_CartONG01.png) Structure GIS System
+<tagName>  <tagName>
 
-![Data behind the Map](en_Data_behind_the_Map_CartONG02.png) Data behind the Map
+![Structure GIS System](/fig/en_GIS_CartONG01.png) Structure GIS System
 
-![Mapping and GIS - Spreadsheet](en_Spreadsheet_CartONG03.png) Mapping and GIS-Spreadsheet
+![Data behind the Map](/fig/en_Data_behind_the_Map_CartONG02.png) Data behind the Map
 
-![Graphic information](en_Graphic_information_CartONG04.png) Graphic information
+![Mapping and GIS - Spreadsheet](/fig/en_Spreadsheet_CartONG03.png) Mapping and GIS-Spreadsheet
+
+![Graphic information](/fig/en_Graphic_information_CartONG04.png) Graphic information
 
 For further information have a look here: 
  
- <a href="./221013-Module-formation-cartographie-SIG_CartONG_EN-6-10.pdf">Mapping and GIS, p. 6 - 10</a>
+[PDF documentation](../QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-6-10.pdf) Mapping and GIS, p. 6 - 10
 
- ../../../QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-6-10.pdf
  
---------------------------------------------------------------------------
-
 ## Examples for GIS created maps 
 
-```{hint} text 
+```
 The battle against Malaria - Burundi -- Coordination in camps - Bangladesh
 ```
 ### Malaria 
@@ -206,19 +215,17 @@ Population estimate, distribution of tents and infrastructure, risk assessment, 
 
 For further information have a look here: 
 
-<a href=”./221013-Module-formation-cartographie-SIG_CartONG_EN-43-53.pdf”>Examples for GIS created maps, p. 45 - 53</a>
+[PDF documentation](../QGIS-Dokumente/21013-Module-formation-cartographie-SIG_CartONG_EN-43-53.pdf) Examples for GIS created maps, p. 45 - 53
 
-../../../QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-45-53.pdf
-
-```{hint} text 
-Some more examples
+```
+{Tip} Some more examples
 ```
 The examples presented below illustrate __some more map productions by indentiying the need, software, key steps and deliverables__ associated with them. They are not exhaustive but allow to __have a vision of the different possibilities of cartographic rendering__ through different requests and various tools discussed in the toolbox.
 
 - Static products: [https://cartong.pages.gitlab.cartong.org/learning-corner/en/2_mobilize_mapping_gis/2_1_static_mapping](
 https://cartong.pages.gitlab.cartong.org/learning-corner/en/2_mobilize_mapping_gis/2_1_static_mapping)
 
-- Dynamic products:  [https://cartong.pages.gitlab.cartong.org/learning-corner/en/2_mobilize_mapping_gis/2_2_dynamic_mapping](
+- Dynamic products: [https://cartong.pages.gitlab.cartong.org/learning-corner/en/2_mobilize_mapping_gis/2_2_dynamic_mapping](
 https://cartong.pages.gitlab.cartong.org/learning-corner/en/2_mobilize_mapping_gis/2_2_dynamic_mapping)
 
 - A field example: [https://cartong.pages.gitlab.cartong.org/learning-corner/en/2_mobilize_mapping_gis/2_3_field](
@@ -226,11 +233,7 @@ https://cartong.pages.gitlab.cartong.org/learning-corner/en/2_mobilize_mapping_g
 
 For further information have a look here:
 
-<a href=”./GIS_Toolbox-2_Mobilizing_mapping_and_GIS-13-Sept-2022.pdf”>Mobilizing mapping and GIS</a>
-
-../../../QGIS-Dokumente/GIS_Toolbox-2_Mobilizing_mapping_and_GIS-13-Sept-2022.pdf
-
---------------------------------------------------------------------------
+[PDF documentation](../QGIS-Dokumente/GIS_Toolbox-2_Mobilizing_mapping_and_GIS-13-Sept-2022.pdf) Mobilizing mapping and GIS
 
 # Web GIS platforms
 
@@ -267,16 +270,16 @@ See also:
 
    <a href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_4_examples_tools_mdc/3_4_3_tools_webmapping">Webmapping tools</a>
 
-../../../QGIS-Dokumente/GIS_Toolbox-3.4.3_Webmapping_tools-13-Sept-2022.pdf
 
---------------------------------------------------------------------------
+   [PDF documentation](../QGIS-Dokumente/GIS_Toolbox-3.4.3_Webmapping_tools-13-Sept-2022.pdf) Webmapping tools
+
 
 #  Geo Mobile Apps overview (general understanding)
 
 ## Why are spatial analyses so important?
 
-```{hint} text 
-Discuss in groups:
+```
+{Tip} Discuss in groups:
 ```
 - Situations in which you benefitted from spatial analyses
 - Situations in which you could maybe have benefitted from spatial analyses
@@ -290,22 +293,28 @@ Discuss in groups:
 
 - Select feature __by polygon__: Choose „Select feature by polygon“ tool and draw a polygon around the feature of interest
 
-![Select Feature](en_select_feature-1.png)
+<tagName>  <tagName>
+
+![Select Feature](/fig/en_select_feature.png)
 
 ### Save selection (same for all selection types)
 
  - Save selected features as __new layer/ file__: 
    - Right click on layer, choose __„Export“ and „Save selected features as… “__
    - Choose location where the __data should be saved in__,  
-   - Make sure that the mark at __„Save only selected features“__ is set.
+   - Make sure that the mark at __„Save only selected features“__ is set
 
-![Save vector layer](en_save_vector_layer-1.png)
+  <tagName>  <tagName> 
+   
+![Save vector layer](/fig/en_save_vector_layer.png)
 
 ### Select by Location Tool
 
 - Select all features that meet __one or more criteria__ with regard to a spatial reference
 
-![Select by location](en_select_by_location-1.png)
+ <tagName>  <tagName>
+
+![Select by location](/fig/en_select_by_location.png)
 
 - __All features__ that meet one or more criteria with regard to a spatial reference
 
@@ -318,7 +327,9 @@ Step by step:
 - Select __second input layer__ (in example “Dakar_Thies”)
 - Create __new selection__
 
-!![Research tools](en_research_tools-1.png)
+ <tagName>  <tagName>
+
+![Research tools](/fig/en_research_tools.png)
 
 Combination of spatial queries by choosing in dropdown menu (__„Modify current selection by“__, if multiple selections are conducted in a row)
 
@@ -337,15 +348,17 @@ Combination of spatial queries by choosing in dropdown menu (__„Modify current
 
 - Clicking on the __respective features__ directly in the attribute table:
 
-![Selection attribute table](en_selection_attribute_table.png)
+![Selection attribute table](/fig/en_selection_attribute_table.png)
 
-![region indication](en_region_indication.png)
+![region indication](/fig/en_region_indication.png)
 
 ### Select feature by expression:
 
 - Open the attribute table and open the __„Select features using an expression“__ window:
 
-![Select features using an expression](en_select_features_expression-1.png)
+ <tagName>  <tagName>
+
+![Select features using an expression](/fig/en_select_features_expression.png)
 
 - Different kinds of operators to choose from:
 __Arithmetic operators__: >, < , =, !=
@@ -359,11 +372,13 @@ Step by step:
 - Select the __respective unique value__ (here: ‘1’)
 - Click on __“Select features”__ 
 
-![Select by expression](en_select_by_expression.png)
+ <tagName>  <tagName>
+
+![Select by expression](/fig/en_select_by_expression.png)
 
 - Different kinds of operators to choose from:
 __String operators:__ 
-  - For example __“LIKE“__: Select all health facilities that are doctors.
+  - For example __“LIKE“__: Select all health facilities that are doctors
 
 Step by step:
 - Under __“Fields and Values”__: Select column name __“amenity”__
@@ -372,12 +387,16 @@ Step by step:
 - Select the __respective unique value__ (here: ‘doctors’) 
 - Click on __“Select features”__ 
 
-![Select by unique value](en_select_unique_value.png)
+ <tagName>  <tagName>
+
+![Select by unique value](/fig/en_select_unique_value.png)
 
 - Different kinds of operators to choose from:
-__Logical operators__: __“AND“ and “OR“__ → Enable to combine different queries/criteria.
+__Logical operators__: __“AND“ and “OR“__ → Enable to combine different queries/criteria
 
-![Logical operators](en_logical_operators.png)
+ <tagName>  <tagName>
+
+![Logical operators](/fig/en_logical_operators.png)
 
 ## Table Functions
 
@@ -386,7 +405,9 @@ Similar to what you can do in a __spreadsheet__.
 - __Delete Field__: remove attributes that are redundant or attributes you will not work with
 - __Calculate Field__: e.g. calculate new attribute population density
 
-!![Table fields](en_table_fields-1.png)
+ <tagName>  <tagName>
+
+![Table fields](/fig/en_table_fields.png)
 
 ### Table Functions - Delete Fields
 
@@ -395,32 +416,36 @@ Step by step:
 - Click on __delete fields button__
 - __Save and stop__ edit mode
 
+ <tagName>  <tagName>
 
-![Delete table fields](en_delete_table_fields-1.png)
 
-![Delete table fields table display](en_delete_table_fields01-1.png)
+![Delete table fields](/fig/en_delete_table_fields.png)
+
+![Delete table fields table display](/fig/en_delete_table_fields01.png)
 
 ### Table Functions - Field Calculator
 
 - __Calculate__ area in square meters first and then __divide__ by 1,000,000 to get square kilometers
 - __Calculate__ population density as people per square kilometer
 
-![Field calculator view a](en_field_calculator-1.png)
+ <tagName>  <tagName>
 
-![Field calculator view b](en_field_calculator01-1.png)
+![Field calculator view a](/fig/en_field_calculator.png)
 
-![Field calculator view c](en_field_calculator02-1.png)
+![Field calculator view b](/fig/en_field_calculator01.png)
+
+![Field calculator view c](/fig/en_field_calculator02.png)
 
 Geoprocessing Tools (Selection) in QGIS
 
 ## Geoprocessing Tools - Overview
 
-![Geoprocessing icons](en_geoprocessing_icons-1.png)
+![Geoprocessing icons](/fig/en_geoprocessing_icons.png)
 
-![Geoprocessing tools](en_geoprocessing_tools-1.png)
+![Geoprocessing tools](/fig/en_geoprocessing_tools.png)
 
-```{hint} text 
-Example: Clip
+```
+{Tip} Example: Clip
 ```
 Creates a __selection__ based on the spatial relationship between each feature in the input layer and the features in an additional layer.
 
@@ -428,12 +453,14 @@ Step by step:
 - __Input Layer__: Layer from which the selection is clipped 
 - __Overlay Layer__: Area of interest that the input layer will be clipped to 
 
-![Clip](en_clip.png)
+ <tagName>  <tagName>
 
-```{hint} text 
-Example: Buffer
+![Clip](/fig/en_clip.png)
+
 ```
-- __Computes (a) buffer area(s)__ for all the features in an input layer, using a specified distance.
+{Tip} Example: Buffer
+```
+- __Computes (a) buffer area(s)__ for all the features in an input layer, using a specified distance
 
 Step by step:
 - __Input Layer__: Layer around which features the buffer(s) are to be created
@@ -442,10 +469,12 @@ Step by step:
 - Mark __„Dissolve result“__ to automatically dissolve the buffer outputs 
 - If individual buffers are needed, leave __blank__
 
-![Buffer](en_buffer.png)
+ <tagName>  <tagName>
 
-```{hint} text 
-Examples for buffer usage 
+![Buffer](/fig/en_buffer.png)
+
+```
+{Tip} Examples for buffer usage 
 ```
 Philippines: Taal Volcano, Base surge hazard map
 [https://www.phivolcs.dost.gov.ph/vault/1BaseSurge_Layout-Jan2020_A0_v5.jpg](https://www.phivolcs.dost.gov.ph/vault/1BaseSurge_Layout-Jan2020_A0_v5.jpg)
@@ -460,17 +489,17 @@ Nepal: Earthquake, april 2015
 Fukushima: may 2011, Integrated doce results
 [https://www.emsics.com/five-years-fukushima-incident-management-considerations/](https://www.emsics.com/five-years-fukushima-incident-management-considerations/)
 
-![Aerial measuring results](en_Aerial_measuring_results.jpg)
+![Aerial measuring results](/fig/en_Aerial_measuring_results.jpg)
 
 ## Buffer: with and without “dissolve”
 
 With dissolve results:
 
-![With dissolve results](en_dissolve_results.png)
+![With dissolve results](/fig/en_dissolve_results.png)
 
 Without dissolve results:
 
-![Without dissolve results](en_without_dissolve_results.png) 
+![Without dissolve results](/fig/en_without_dissolve_results.png) 
 
 ## Non-Spatial Joins in QGIS
 
@@ -488,14 +517,19 @@ Step by step:
 - Join type: Select __„Take attributes of the first matching feature only (one-to-one)“__.
 - Define __output layer name and destination__ or leave at temporary layer
 
-![Join attributes by field value](en_join_attributes_by_field_value-1.png)
 
-```{hint} text 
-Hint
+ <tagName>  <tagName>
+
+![Join attributes by field value](/fig/en_join_attributes_by_field_value.png)
+
+```
+{Tip} Hint
 ```
 If a table join does not work via the “Join Attributes by Field Value” tool, a join can also be performed via the __layer properties__ (right-click, Properties) under the Join tab.
 
-![Add vector join](en_add_vector_join-1.png)
+ <tagName>  <tagName>
+
+![Add vector join](/fig/en_add_vector_join.png)
 
 ## Spatial Joins in QGIS
 
@@ -505,7 +539,9 @@ Choose __“Join Attributes by Location”__ Tool:
 - __Join layer__: Dataset with additional information/attributes
 (you can specify which fields of the join layer should be added)
 
-![Spatial joins](en_spatial_joins.png)
+ <tagName>  <tagName>
+
+![Spatial joins](/fig/en_spatial_joins.png)
 
 ## A galaxy of tools
 GIS comes with a __galaxy of tools__ that are constantly evolving. An increasing number of traditional tools are now capable of supporting geographic information (Excel, Power BI, Adobe Illustrator…)
@@ -530,9 +566,7 @@ These tools make it possible to manipulate and create maps online in a very simp
 
 For further detalied information have a look here:
 
-<a href="./221013-Module-formation-cartographie-SIG_CartONG_EN-36-41.pdf">GIS-related tools, p. 36 -41</a>
-
-../../../QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-36-41.pdf
+[PDF documentation](../QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-36-41.pdf) GIS-related tools, p. 36 -41
 
 
 

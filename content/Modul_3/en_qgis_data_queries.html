@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_3/en_qgis_data_queries';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Map design- Basic" href="../Modul_4/en_qgis_map_design_I.html" />
-    <link rel="prev" title="Geodata Classification" href="en_qgis_data_classification.html" />
+    <link rel="next" title="Selection and Queries Exercise 1" href="en_qgis_data_queries_ex1.html" />
+    <link rel="prev" title="Geodata Classification Exercise 1" href="en_qgis_classification_ex1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,6 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_geodata_wiki.html">Geodata</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_geodata_types_wiki.html">Types of Geodata</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_layer_concept_wiki.html">Layer Concept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_attribute_table_wiki.html">Attribute Table in QGIS</a></li>
@@ -203,16 +204,33 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html">Geodata and Geodata processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Modul_2/en_qgis_basic_data_processing.html">Basic Geodata  processing</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../Modul_2/en_data_sources.html">Data Sources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html">Basic Geodata  processing</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept_ex1.html">Geodata Concept Exercise 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_qgis_basic_data_processing.html">Geodata and Geodata processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_2/en_qgis_basic_data_processing_ex1.html">Basic Geodata processing Exercise 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_data_sources.html">Data Sources</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_2/en_qgis_data_sources_ex1.html">Data Sources Exercise 1</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 3- Basic GIS operations</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="en_qgis_digitalisation.html">Digitalisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="en_qgis_data_classification.html">Geodata Classification</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Geodata Selection and Queries</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="en_qgis_digitalisation.html">Digitalisation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_digitalisation_ex1.html">Digitalisation Exercise 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="en_qgis_data_classification.html">Geodata Classification</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_classification_ex1.html">Geodata Classification Exercise 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Geodata Selection and Queries</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_data_queries_ex1.html">Selection and Queries Exercise 1</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="nav bd-sidenav">
@@ -230,7 +248,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../About/about_1.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../About/about_1.html">About :)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Glossary</span></p>
 <ul class="nav bd-sidenav">
@@ -437,6 +455,8 @@ document.write(`
 <li><p>Spatial queries: select by polygon+location</p></li>
 <li><p>Non-spatial queries (I/basic)</p></li>
 </ul>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -471,20 +491,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="en_qgis_data_classification.html"
+       href="en_qgis_classification_ex1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Geodata Classification</p>
+        <p class="prev-next-title">Geodata Classification Exercise 1</p>
       </div>
     </a>
     <a class="right-next"
-       href="../Modul_4/en_qgis_map_design_I.html"
+       href="en_qgis_data_queries_ex1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Map design- Basic</p>
+        <p class="prev-next-title">Selection and Queries Exercise 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
