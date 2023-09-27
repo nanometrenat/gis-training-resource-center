@@ -1,44 +1,45 @@
 # Installation
-QGIS ist Open Source und daher frei und ohne Kosten für jeden verfügbar. Ihr könnt QGIS für Windows, Mac und Linux Rechner installieren. 
+
+QGIS is an open source geoinformation system software for viewing, editing, capturing and analyzing spatial data and and to create printable maps. QGIS has been since 2002 and is a project of volunteers. 
+You can install QGIS for Windows, Mac and Linux computers. 
 
 ## Windows
-Für die Installation unter Windows verwenden wir den OSGeo4W Netzwerkinstaller. OSGeo4W ist ein Projekt, das Open Geo bezogene Software für Windows einfach zu installieren anbietet. Besucht die Projektseite [https://trac.osgeo.org/osgeo4w/](https://trac.osgeo.org/osgeo4w/) und klickt dort auf den link `Download the ​OSGeo4W network installer`. 
+For the installation under Windows we use the OSGeo4W network installer. OSGeo4W is a project that offers Open Geo related software for Windows easy to install. Visit the project page [https://trac.osgeo.org/osgeo4w/](https://trac.osgeo.org/osgeo4w/) and click there on the link `Download the ​OSGeo4W network installer`. 
 
-* Achtet darauf während des Installationsprozesses _Advanced Install_ / _Fortgeschrittene Installation_ zu wählen. Nur dann können die für diesen Kurs relevante Software präzise wählen:
+* Make sure to select _Advanced Install_ / _Fortgeschrittene Installation_ during the installation process. Only then can you accurately select the software relevant to this course:
    - QGIS Desktop
    - GRASS GIS
    - SAGA
   
-Videotutorial: https://www.youtube.com/watch?v=pja_EX0tVZA
+Video tutorial: https://www.youtube.com/watch?v=pja_EX0tVZA
 
-Die gewählte Software wird dann über das Internet heruntergeladen und on-the-fly installiert.
-
+The selected software is then downloaded via the Internet and installed on-the-fly.
 
 ## Mac
 
-__**Ab Version 3.30 muss SAGA per plugin eingebunden werden**__
+__**From version 3.30 SAGA must be integrated via plugin**__
 
- Unter https://qgis.org/en/site/forusers/download.html `Download for macOS` wählen. Dann den Link _Download QGIS_ nutzen. 
+At https://qgis.org/en/site/forusers/download.html select `Download for macOS`, then use the link _Download QGIS_. 
 
-In QGIS dann das Plugin _Processing Saga NextGen Provider_ installieren. 
+In QGIS then install the plugin _Processing Saga NextGen Provider_. 
 
-Mehr zu wie man Plugins in QGIS installiert und aktiviert findet ihr hier:
+More about how to install and activate plugins in QGIS can be found here:
 [qgis-Interface#erweiterungen-plugins-installieren](https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/-/wikis/qgis-Interface#erweiterungen-plugins-installieren)
 
 ## Linux
 
-__**Ab Version 3.30 muss SAGA per plugin eingebunden werden**__
+__**From version 3.30 SAGA must be integrated via plugin**__
 
-Für die installation unter Linux Systemen mit apt könnt ihr QGIS installieren:
+For installation on Linux systems with apt you can install QGIS:
 
 ```
 sudo apt install qgis qgis-plugin-grass
 ```
 
-In den herkömmlichen apt Paketquellen wird vermutlich eine ältere Version von QGIS installiert sein. Solltet ihr die Paketquelle [Ubuntugis](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa) nutzen, beachtet die folgenden installations Hinweise auf https://qgis.org/en/site/forusers/alldownloads.html#repositories
+In the conventional apt package sources, an older version of QGIS will probably be installed. If you use the package source [Ubuntugis](https://launchpad.net/~ubuntugis/+archive/ubuntu/ppa), please note the following installation hints at https://qgis.org/en/site/forusers/alldownloads.html#repositories
 
-Solltet ihr hierüber eine QGIS Version >3.30 installieren müsst ihr das Plugin _Processing Saga NextGen Provider_ noch installieren. 
+If you want to install a QGIS version >3.30 you have to install the plugin _Processing Saga NextGen Provider_.  
 
-Mehr zu wie man Plugins in QGIS installiert und aktiviert findet ihr hier:
+More about how to install and activate plugins in QGIS can be found here:
 [qgis-Interface#erweiterungen-plugins-installieren](https://courses.gistools.geog.uni-heidelberg.de/giscience/gis-einfuehrung/-/wikis/qgis-Interface#erweiterungen-plugins-installieren)
  
