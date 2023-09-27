@@ -1,1 +1,0 @@
-# Geodata Classification Exercise 1

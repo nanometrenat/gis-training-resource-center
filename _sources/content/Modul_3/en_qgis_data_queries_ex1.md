@@ -1,1 +1,0 @@
-# Selection and Queries Exercise 1
