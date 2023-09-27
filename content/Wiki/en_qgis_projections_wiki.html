@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -76,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -168,6 +178,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="en_qgis_geodata_wiki.html">Geodata</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_geodata_types_wiki.html">Types of Geodata</a></li>
+
+
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_layer_concept_wiki.html">Layer Concept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_attribute_table_wiki.html">Attribute Table in QGIS</a></li>
@@ -203,16 +216,33 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html">Geodata and Geodata processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Modul_2/en_qgis_basic_data_processing.html">Basic Geodata  processing</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../Modul_2/en_data_sources.html">Data Sources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html">Basic Geodata  processing</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept_ex1.html">Geodata Concept Exercise 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_qgis_basic_data_processing.html">Geodata and Geodata processing</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_2/en_qgis_basic_data_processing_ex1.html">Basic Geodata processing Exercise 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_data_sources.html">Data Sources</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_2/en_qgis_data_sources_ex1.html">Data Sources Exercise 1</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 3- Basic GIS operations</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation.html">Digitalisation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Modul_3/en_qgis_data_classification.html">Geodata Classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Modul_3/en_qgis_data_queries.html">Geodata Selection and Queries</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation.html">Digitalisation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation_ex1.html">Digitalisation Exercise 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_data_classification.html">Geodata Classification</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_3/en_qgis_classification_ex1.html">Geodata Classification Exercise 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_data_queries.html">Geodata Selection and Queries</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_3/en_qgis_data_queries_ex1.html">Selection and Queries Exercise 1</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="nav bd-sidenav">
@@ -223,6 +253,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 6- Data analysis with QGIS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Modul_6/en_qgis_data_analysis_theorie.html">Data analysis theorie</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_how_to_training.html">How to do trainings?</a></li>
@@ -230,7 +264,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../About/about_1.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../About/about_1.html">About :)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Glossary</span></p>
 <ul class="nav bd-sidenav">
@@ -390,10 +424,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -401,11 +435,13 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -421,6 +457,20 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-epsg-code">How to check EPSG-Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it">How to check EPSG-Code/CRS of your QGIS Project and change it</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-epsg-code-crs-of-layer-data">How to check EPSG-Code/CRS of layer/ data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-vector-layer">Changing the projection of a vector layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-raster-layer">Changing the projection of a raster layer</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -432,6 +482,67 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="projections">
 <h1>Projections<a class="headerlink" href="#projections" title="Permalink to this heading">#</a></h1>
+<section id="how-to-check-epsg-code">
+<h2>How to check EPSG-Code<a class="headerlink" href="#how-to-check-epsg-code" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Always check that the Coordinate Reference System (CRS)/EPSG code of your data is the same as the CRS/EPSG-code of your project!</p>
+</div>
+<p>The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 (EPSG: 4326). This CRS is optimized for world maps. So not perfect for most applications, because we mostly use maps for small areas.</p>
+<section id="how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it">
+<h3>How to check EPSG-Code/CRS of your QGIS Project and change it<a class="headerlink" href="#how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it" title="Permalink to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To check and adjust the CRS/ EPSG-Code should be the first thing you should do when starting a new QGIS project</p>
+</div>
+<ol class="arabic simple">
+<li><p>Open a QGIS projeckt</p></li>
+<li><p>In the very down right corner of QGIS you find the butten “EPSG”. The number next to it is the EPSG Code currently used in the project. Your more information click on the butten.
+<img alt="" src="../../_images/EPSG_Code.png" /></p></li>
+<li><p>The window “Project Properties” will open. Here you can view all availbel CRS/EPSG-Code an there properties.</p></li>
+<li><p>To change the CRS/EPSG-code, select the one you want to use and click “Apply”.</p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_change_project_CRS.mp4"></video></p>
+</section>
+<section id="how-to-check-epsg-code-crs-of-layer-data">
+<h3>How to check EPSG-Code/CRS of layer/ data<a class="headerlink" href="#how-to-check-epsg-code-crs-of-layer-data" title="Permalink to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After loading any spatial data in QGIS, check the CRS/EPSG code of the data to make sure it is the same as the CRS/EPSG code of the project.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Reight click on the data layer, click on  “Properties”</p></li>
+<li><p>The “Layer Properties” Window of the data layer will open. Click on “Information”</p></li>
+<li><p>Under the headline “Coordinate Reference System (CRS)” you find all information about the CRS. The most important are:</p>
+<ul class="simple">
+<li><p><strong>Name:</strong>     Here you find the EPSG Code</p></li>
+<li><p><strong>Unites:</strong>    Here yiu can find wather it is possible to use meters with this data layer or latitude and longitude</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="changing-the-projection-of-a-vector-layer">
+<h2>Changing the projection of a vector layer<a class="headerlink" href="#changing-the-projection-of-a-vector-layer" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>“Vector” Tab -&gt; “Data Management Tools” -&gt; “Reproject Layer”</p></li>
+<li><p>Select target CRS/ EPSG-Code</p></li>
+<li><p>Save the new file by clicking on th three dots nest to “Reporjected”, specify the file name and the location where you want to save the file
+Click “Run”
+<video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_reproject_vector.mp4"></video></p></li>
+</ol>
+</section>
+<section id="changing-the-projection-of-a-raster-layer">
+<h2>Changing the projection of a raster layer<a class="headerlink" href="#changing-the-projection-of-a-raster-layer" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>“Raster” Tab -&gt; “Projections” -&gt; “Warp (Reproject)”</p></li>
+<li><p>Select target CRS/ EPSG-Code</p></li>
+<li><p>Select resampling method</p></li>
+<li><p>Save the new file by clicking on th three dots nest to “Reporjected”, specify the file name and the location where you want to save the file
+Click “Run”</p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_reproject_raster.mp4"></video></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -459,11 +570,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="en_qgis_basemaps_wiki.html"
@@ -483,15 +593,32 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-epsg-code">How to check EPSG-Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it">How to check EPSG-Code/CRS of your QGIS Project and change it</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-epsg-code-crs-of-layer-data">How to check EPSG-Code/CRS of layer/ data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-vector-layer">Changing the projection of a vector layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-raster-layer">Changing the projection of a raster layer</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
@@ -535,8 +662,8 @@ By HeiGIT gGmbH
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

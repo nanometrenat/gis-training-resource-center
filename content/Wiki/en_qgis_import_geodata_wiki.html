@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -76,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -169,6 +179,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="en_qgis_geodata_wiki.html">Geodata</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_geodata_types_wiki.html">Types of Geodata</a></li>
+
+
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Geodata Import in QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_layer_concept_wiki.html">Layer Concept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_attribute_table_wiki.html">Attribute Table in QGIS</a></li>
@@ -240,6 +252,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 6- Data analysis with QGIS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Modul_6/en_qgis_data_analysis_theorie.html">Data analysis theorie</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -408,10 +424,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -419,7 +435,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -467,33 +483,6 @@ document.write(`
 <h1>Geodata Import in QGIS<a class="headerlink" href="#geodata-import-in-qgis" title="Permalink to this heading">#</a></h1>
 <section id="vector-data-import">
 <h2>Vector data Import<a class="headerlink" href="#vector-data-import" title="Permalink to this heading">#</a></h2>
-<p>Vector data can have the following data formats:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Filename extension</p></th>
-<th class="head"><p>Name</p></th>
-<th class="head"><p>Dscription</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>.shp</p></td>
-<td><p>Shapefile</p></td>
-<td><p>Old but still widely used geodataformat. Can only contain one dataset. The file has to consist of at least three different files (.shp, .shx, .dbf)</p></td>
-</tr>
-<tr class="row-odd"><td><p>.gpkg</p></td>
-<td><p>GeoPackage</p></td>
-<td><p>Very versatile geodata format and the new standard for geodata. Can contain multiple datafiles (vector, raster and not spatial data like tables)</p></td>
-</tr>
-<tr class="row-even"><td><p>.kml</p></td>
-<td><p>Keyhole Markup Language</p></td>
-<td><p>Geodata format for use with <a class="reference external" href="https://earth.google.com/web/">Google Earth</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>.gpx.</p></td>
-<td><p>GPS Exchange Format</p></td>
-<td><p>Geodata format for the exchange of coordinates. For example for waypoints of tracks.</p></td>
-</tr>
-</tbody>
-</table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>When importing a shapefile by drag-and-drop you have to use the file with the ending .shp!</p>
@@ -507,12 +496,12 @@ document.write(`
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Open vector data via Layer Tab</div>
-<figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/qgis_open_vector.mp4"><video src="../../_images/qgis_open_vector.mp4" title="../../_images/qgis_open_vector.mp4" width="300"><a href="../../_images/qgis_open_vector.mp4">../../_images/qgis_open_vector.mp4</a></video></a>
-<figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Import via Layer Tab</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_vector.mp4"></video></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">“Layer” Tab -&gt; “Vecctor”</p></li>
+<li><p class="sd-card-text">Select file</p></li>
+<li><p class="sd-card-text">Click “Add”</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -521,12 +510,7 @@ Open vector data via Layer Tab</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Open vector data via drag-and-drop</div>
-<figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../../_images/qgis_import_vector_d_d.mp4"><video src="../../_images/qgis_import_vector_d_d.mp4" title="../../_images/qgis_import_vector_d_d.mp4" width="300"><a href="../../_images/qgis_import_vector_d_d.mp4">../../_images/qgis_import_vector_d_d.mp4</a></video></a>
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Import via drag-and-drop</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_vector_d_d.mp4"></video></p>
 </div>
 </div>
 </div>
@@ -536,42 +520,19 @@ Open vector data via drag-and-drop</div>
 </section>
 <section id="raster-data-import">
 <h2>Raster data Import<a class="headerlink" href="#raster-data-import" title="Permalink to this heading">#</a></h2>
-<p>Raster data can have the following data formats:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Filename extension</p></th>
-<th class="head"><p>Name</p></th>
-<th class="head"><p>Dscription</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>.tif/.tiff/.geotiff</p></td>
-<td><p>Tag Image File Format</p></td>
-<td><p>Common raster and image data format. Does not necessarily have georeference information. If a .tif file has georeferenc information it is referred to as GeoTIFF.</p></td>
-</tr>
-<tr class="row-odd"><td><p>.nc</p></td>
-<td><p>netCDF</p></td>
-<td><p>Standard data format for scientific data like speed or temperature. Can be be a raster file. Can contain multible datasets</p></td>
-</tr>
-<tr class="row-even"><td><p>.asc</p></td>
-<td><p>Esri ASCII Grid files</p></td>
-<td><p>Old simple raster file format, always with georeference informations</p></td>
-</tr>
-</tbody>
-</table>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Open raster data via Layer Tab</div>
-<figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../../_images/qgis_open_raster.mp4"><video src="../../_images/qgis_open_raster.mp4" title="../../_images/qgis_open_raster.mp4" width="300"><a href="../../_images/qgis_open_raster.mp4">../../_images/qgis_open_raster.mp4</a></video></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Import via Layer Tab</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_raster.mp4"></video></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">“Layer” Tab -&gt; “Raster”</p></li>
+<li><p class="sd-card-text">Select file</p></li>
+<li><p class="sd-card-text">Click “Add”</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -580,12 +541,9 @@ Open raster data via Layer Tab</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Open raster data via drag-and-drop</div>
-<figure class="align-default" id="id4">
-<a class="reference internal image-reference" href="../../_images/qgis_import_raster_d_d.mp4"><video src="../../_images/qgis_import_raster_d_d.mp4" title="../../_images/qgis_import_raster_d_d.mp4" width="300"><a href="../../_images/qgis_import_raster_d_d.mp4">../../_images/qgis_import_raster_d_d.mp4</a></video></a>
-<figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Import via drag-and-drop</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_raster_d_d.mp4"></video></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -594,46 +552,19 @@ Open raster data via drag-and-drop</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Open NetCDF raster files </div>
-<figure class="align-center" id="id5">
-<a class="reference internal image-reference" href="../../_images/qgis_import_NetCDF_raster.mp4"><video src="../../_images/qgis_import_NetCDF_raster.mp4" title="../../_images/qgis_import_NetCDF_raster.mp4" width="300"><a href="../../_images/qgis_import_NetCDF_raster.mp4">../../_images/qgis_import_NetCDF_raster.mp4</a></video></a>
-<figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Import via drag-and-drop</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
-<div class="legend">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_NetCDF_raster.mp4"></video></p>
 <ol class="arabic simple">
 <li><p class="sd-card-text">Layer -&gt; Add Layer -&gt; Add Raster Layer -&gt; Select your file -&gt; click “add”</p></li>
 <li><p class="sd-card-text">A window will open and you have to select the exact dataset you want to use. -&gt; Click “add Layers”</p></li>
 <li><p class="sd-card-text">Click on the ? in the Layers window. The window “Coordination Reference System Selectir” will open. -&gt; Select the correct reference system.-&gt; Click “OK”</p></li>
 </ol>
 </div>
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
 </div>
 </div>
 </section>
 <section id="text-data-import">
 <h2>Text data import<a class="headerlink" href="#text-data-import" title="Permalink to this heading">#</a></h2>
-<p>Geodata can cum in common text and table data formats like csv. and EXCEL. To import such data directly into QGIS one has to follow specific steps.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Filename extension</p></th>
-<th class="head"><p>Name</p></th>
-<th class="head"><p>Dscription</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>.csv</p></td>
-<td><p>comma-separated values</p></td>
-<td><p>Very common data format which separates data with commas or other delimiters.</p></td>
-</tr>
-<tr class="row-odd"><td><p>.xls</p></td>
-<td><p>EXCEL</p></td>
-<td><p>Data format used for EXCEL. EXCEL is a widely used spreadsheet program.</p></td>
-</tr>
-</tbody>
-</table>
+<p>|</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To directly load .csv or EXCEL data into QGIS, the datasets need to have columns containing geometry in the form of latitude (Y-field) and longitude (X-field).</p>
@@ -645,12 +576,7 @@ Open NetCDF raster files </div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Open csv. data in QGIS</div>
-<figure class="align-default" id="id6">
-<a class="reference internal image-reference" href="../../_images/qgis_open_textfile.mp4"><video src="../../_images/qgis_open_textfile.mp4" title="../../_images/qgis_open_textfile.mp4" width="300"><a href="../../_images/qgis_open_textfile.mp4">../../_images/qgis_open_textfile.mp4</a></video></a>
-<figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Import data from a .csv file</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_textfile.mp4"></video></p>
 </div>
 </div>
 </div>
@@ -659,26 +585,19 @@ Open csv. data in QGIS</div>
 <div class="sd-card-body docutils">
 <div class="sd-card-title sd-font-weight-bold docutils">
 Open .xlsx files in QGIS</div>
-<figure class="align-default" id="id7">
-<a class="reference internal image-reference" href="../../_images/qgis_open_xlsx.mp4"><video src="../../_images/qgis_open_xlsx.mp4" title="../../_images/qgis_open_xlsx.mp4" width="300"><a href="../../_images/qgis_open_xlsx.mp4">../../_images/qgis_open_xlsx.mp4</a></video></a>
-<figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Import .xlsx</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
-<div class="legend">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_xlsx.mp4"></video></p>
 <ol class="arabic simple">
 <li><p class="sd-card-text">Drag and drop the .xlsx file in QGIS.</p></li>
 <li><p class="sd-card-text">If the file contains multible tables, select the table you want to work with. Click “add Layers”</p></li>
 <li><p class="sd-card-text">click on the “Processing” tab -&gt; Toolbox -&gt; search for the tool “Creat points layer from table”</p></li>
 <li><p class="sd-card-text">Select you table as “Input Layer”</p></li>
 <li><p class="sd-card-text">Select the  longitude column for “X field” and the latitude column for “Y field”</p></li>
-<li><p class="sd-card-text">Click Run</p></li>
+<li><p class="sd-card-text">Click “Run”</p></li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p class="sd-card-text">A other option is always to transform the .xlsx file into a .csv, which is eaysier to open in QGIS.</p>
 </div>
-</div>
-</figcaption>
-</figure>
 </div>
 </div>
 </div>
@@ -713,11 +632,10 @@ Open .xlsx files in QGIS</div>
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="en_qgis_geodata_types_wiki.html"
@@ -737,10 +655,7 @@ Open .xlsx files in QGIS</div>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -808,8 +723,8 @@ By HeiGIT gGmbH
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
