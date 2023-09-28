@@ -171,6 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_qgis_basics_wiki.html">QGIS Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_installation_wiki.html">QGIS installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projections_wiki.html">Projections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_plugins_wiki.html">Plugins</a></li>
@@ -179,6 +180,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_geodata_wiki.html">Geodata</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_geodata_types_wiki.html">Types of Geodata</a></li>
+
+
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_layer_concept_wiki.html">Layer Concept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_attribute_table_wiki.html">Attribute Table in QGIS</a></li>
@@ -250,10 +253,6 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 6- Data analysis with QGIS</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_6/en_qgis_data_analysis_theorie.html">Data analysis theorie</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -503,8 +502,9 @@ document.write(`
 <p><tagName>  <tagName></p>
 <p><img alt="QGIS_User_Interface" src="../../_images/en_QGIS_User_Interface.png" />
 User interface</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span> <span class="n">Exercise</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">QGIS</span> <span class="n">project</span>  
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Exercise 1: Create a new QGIS project</p>
 </div>
 <ul class="simple">
 <li><p>In your “GIS_Training” folder, create a <strong>subfolder</strong> called <strong>“Projects”</strong></p></li>
@@ -517,8 +517,9 @@ User interface</p>
 <p><tagName>  <tagName></p>
 <p><img alt="Project template" src="../../_images/en_project_template_BRC.png" />
 Project template</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span> <span class="n">Exercise</span> <span class="mi">2</span><span class="p">:</span> <span class="n">Add</span> <span class="n">a</span> <span class="n">vector</span> <span class="n">file</span>
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Exercise 2: Add a vector file</p>
 </div>
 <ul class="simple">
 <li><p>In the menu, click on <strong>Layer “Add Layer” Add Vector Layer</strong></p></li>
@@ -529,8 +530,9 @@ Project template</p>
 <p><tagName>  <tagName></p>
 <p><img alt="Add a vector file" src="../../_images/en_Add_a_vector_file_a.png" />
 Add a vector file</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span> <span class="n">Exercise</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Add</span> <span class="n">basemaps</span>
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Exercise 3: Add basemaps</p>
 </div>
 <ul class="simple">
 <li><p>In the browser pane scroll to <strong>XYZ Tiles</strong></p></li>
@@ -554,8 +556,9 @@ Add a vector file</p>
 <li><p>You can also <strong>export data</strong> from GIS into Excel.</p></li>
 <li><p>Excel tables have to be <strong>cleaned and formatted</strong> in a specific way before being loaded into GIS.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span> <span class="n">Exercise</span><span class="p">:</span> <span class="n">Load</span> <span class="n">data</span> <span class="kn">from</span> <span class="nn">Excel</span> <span class="n">into</span> <span class="n">QGIS</span>
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Exercise: Load data from Excel into QGIS</p>
 </div>
 <ul class="simple">
 <li><p>In your “GIS_Training” folder, create a <strong>subfolder</strong> called <strong>“Datasets”</strong></p></li>
@@ -609,8 +612,9 @@ Add a vector file</p>
 <li><p><strong>Each column</strong> contains <strong>a particular piece of information</strong> about the feature</p></li>
 <li><p>Features in the table can be <strong>searched, selected, moved or even edited</strong></p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span> <span class="n">Exercise</span><span class="p">:</span> <span class="n">Open</span> <span class="ow">and</span> <span class="n">explore</span> <span class="n">the</span> <span class="n">Attribute</span> <span class="n">Table</span>
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Exercise: Open and explore the Attribute Table</p>
 </div>
 <ul class="simple">
 <li><p>In the Layers pane, right-click on the NGA_Security Incidents layer and select <strong>“Open Attribute Table”</strong></p></li>
@@ -630,8 +634,9 @@ Add a vector file</p>
 <section id="bit-or-64-bit">
 <h3>32 Bit or 64 Bit?<a class="headerlink" href="#bit-or-64-bit" title="Permalink to this heading">#</a></h3>
 <p>For Windows operating systems, there is always a 32-bit version and a 64-bit version of each QGIS version available for download. <strong>Which version to install depends on your computer and operating system</strong>. If it is not clear how many bits your operating system has, you can easily find out: Left-click on the Windows icon at the bottom left of the screen (alternatively, open the Windows search function). Type “System” on the keyboard, click on the entry “System” in the search results. Under the item “System type” you can read the bit number.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span> <span class="n">Exercise</span><span class="p">:</span> <span class="n">Get</span> <span class="n">to</span> <span class="n">know</span> <span class="n">QGIS</span> <span class="ow">and</span> <span class="n">familiarize</span> <span class="n">yourself</span> <span class="k">with</span> <span class="n">geodata</span>
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Exercise: Get to know QGIS and familiarize yourself with geodata</p>
 </div>
 <p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_0">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_0</a></p>
 <p>Data:</p>
@@ -662,8 +667,9 @@ Add a vector file</p>
 </section>
 <section id="qgis-interface-description">
 <h2>QGIS interface description<a class="headerlink" href="#qgis-interface-description" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span> <span class="n">Exercise</span><span class="p">:</span> <span class="n">Take</span> <span class="n">the</span> <span class="n">first</span> <span class="n">steps</span>
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Exercise: Take the first steps</p>
 </div>
 <p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_1">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_1</a></p>
 <ul class="simple">
@@ -698,8 +704,9 @@ Add a vector file</p>
 <li><p>View the <strong>attribute data</strong> of the layers. For this purpose look at the attribute table</p></li>
 <li><p>Changes the projection in the map view to <strong>WGS 84 / Pseudo-Mercator - EPSG:3857</strong>. Note that this does not change the projection (the coordinates) of the files, but only affects the projection of the map view.  Check this in the properties of the point layer. <strong>Which projection is indicated there?</strong></p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span> <span class="n">You</span> <span class="n">can</span> <span class="n">use</span> <span class="n">the</span> <span class="n">search</span> <span class="n">bar</span> <span class="n">on</span> <span class="n">the</span> <span class="n">top</span>
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use the search bar on the top</p>
 </div>
 <ul class="simple">
 <li><p>Now <strong>save the health layer</strong> in the projection <strong>WGS 84 / Pseudo-Mercator - EPSG:3857</strong>. This changes the projection of the file. Check this in the properties of the newly created layer.</p></li>
@@ -731,44 +738,48 @@ Add a vector file</p>
 </section>
 <section id="videos">
 <h3>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">#</a></h3>
-<p><em>&gt; plus Videos?</em></p>
 <ul class="simple">
 <li><p>Move the map view</p></li>
 </ul>
-<p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/490534e96bdd471b6924cd39e28859a2/qgis_move.mp4">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/490534e96bdd471b6924cd39e28859a2/qgis_move.mp4</a></p>
+<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/490534e96bdd471b6924cd39e28859a2/qgis_move.mp4"></video></p>
 <ul class="simple">
 <li><p>Zooming in the map view</p></li>
 </ul>
-<p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/a64f7271eb2a23e876ada002ea89f7f0/qgis_zoom.mp4">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/a64f7271eb2a23e876ada002ea89f7f0/qgis_zoom.mp4</a></p>
+<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/a64f7271eb2a23e876ada002ea89f7f0/qgis_zoom.mp4"></video></p>
 <ul class="simple">
 <li><p>Show properties of objects</p></li>
 </ul>
-<p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/6566c2b8127c7f697619ddcb55831840/qgis_identify.mp4">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/6566c2b8127c7f697619ddcb55831840/qgis_identify.mp4</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span> <span class="n">Make</span> <span class="n">sure</span> <span class="n">to</span> <span class="n">select</span> <span class="n">the</span> <span class="n">layer</span> <span class="n">you</span> <span class="n">want</span> <span class="n">identify</span> <span class="n">features</span> <span class="ow">in</span>
-</pre></div>
+<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/6566c2b8127c7f697619ddcb55831840/qgis_identify.mp4"></video></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Make sure to select the layer you want identify features in</p>
 </div>
 <ul class="simple">
 <li><p>Set the projection of the map view (project CRS)</p></li>
 </ul>
-<p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/325cb2d70b0154c1bd5f38a899cd2b40/qgis_map_projection.mp4">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/325cb2d70b0154c1bd5f38a899cd2b40/qgis_map_projection.mp4</a></p>
+<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/325cb2d70b0154c1bd5f38a899cd2b40/qgis_map_projection.mp4"></video></p>
 <ul class="simple">
-<li><p>Save and open project</p></li>
+<li><p>Save project</p></li>
 </ul>
-<p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/8e2bb629d9c3189f8f635a4cf1381d2c/qgis_save_project.mp4">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/8e2bb629d9c3189f8f635a4cf1381d2c/qgis_save_project.mp4</a></p>
-<p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/1655b97b741749bfa46c6c08ee3d0be6/qgis_open_project.mp4">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/1655b97b741749bfa46c6c08ee3d0be6/qgis_open_project.mp4</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span> <span class="n">The</span> <span class="n">layer</span> <span class="n">data</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">project</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">saved</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">project</span> <span class="n">file</span>
-</pre></div>
+<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/8e2bb629d9c3189f8f635a4cf1381d2c/qgis_save_project.mp4"></video></p>
+<ul class="simple">
+<li><p>Open project</p></li>
+</ul>
+<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/1655b97b741749bfa46c6c08ee3d0be6/qgis_open_project.mp4"></video></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The layer data used in the project is not saved in the project file</p>
 </div>
 <p>Instead, the project file only contains the file paths where the layer data were located at the time the project was last saved on the PC. If the location of this layer data is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.
 Good data organisation with a fixed and well thought-out folder structure prevents such problems.</p>
 <ul class="simple">
 <li><p>Show and hide displays</p></li>
 </ul>
-<p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/b9ccebc4bd584fdbc5092b4804d8a742/Anzeigen_einblenden_ausblenden.mp4">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/b9ccebc4bd584fdbc5092b4804d8a742/Anzeigen_einblenden_ausblenden.mp4</a></p>
+<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/b9ccebc4bd584fdbc5092b4804d8a742/Anzeigen_einblenden_ausblenden.mp4"></video></p>
 <ul class="simple">
 <li><p>Move and arrange toolbars</p></li>
 </ul>
-<p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/07bbf031499eb8da30daaa3bebd24769/qgis_arrange_toolbars.mp4">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/07bbf031499eb8da30daaa3bebd24769/qgis_arrange_toolbars.mp4</a></p>
+<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/07bbf031499eb8da30daaa3bebd24769/qgis_arrange_toolbars.mp4"></video></p>
 <p>At each toolbar there is a field of two dotted lines. If you move the mouse pointer over it until an arrow cross appears and then hold down the left mouse button, you can move the toolbar. This allows an individualised arrangement of your own tools. By compressing all toolbars into a few lines, the map view window can also be enlarged.</p>
 <p>See also:</p>
 <p><span class="xref myst">PDF documentation</span> Structuring a QGIS Project, cartONG QGIS-Tutorial, p. 7 - 9</p>
