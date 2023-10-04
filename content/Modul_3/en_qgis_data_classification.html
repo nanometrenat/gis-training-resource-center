@@ -161,6 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_qgis_basics_wiki.html">QGIS Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_installation_wiki.html">QGIS installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projections_wiki.html">Projections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_plugins_wiki.html">Plugins</a></li>
@@ -169,6 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_geodata_wiki.html">Geodata</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_geodata_types_wiki.html">Types of Geodata</a></li>
+
+
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_layer_concept_wiki.html">Layer Concept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_attribute_table_wiki.html">Attribute Table in QGIS</a></li>
@@ -204,7 +207,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html">Basic Geodata  processing</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html">Geodata concept</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept_ex1.html">Geodata Concept Exercise 1</a></li>
 </ul>
 </li>
@@ -450,10 +453,38 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geodata-classification">
 <h1>Geodata Classification<a class="headerlink" href="#geodata-classification" title="Permalink to this heading">#</a></h1>
-<p><strong>Competences:</strong></p>
+<p><strong>Data Styling/ Classification</strong></p>
+<p>Data classification is the process that allows you to assign different symbols to features. i.e. different objects in the same layer based on their properties. This allows users of the map to quickly see the properties of numerous features.</p>
+<p>In QGIS, a style is a way of cartographic visualization that takes into account a layer’s individual and thematic features. It encompasses basic characteristics of symbology, such as the color and presence of fill, outline parameters, the use of markers, scale-dependent rendering, layer transparency, and interactions with other layers. Source: <a class="reference external" href="https://hub.packtpub.com/style-management-qgis/">https://hub.packtpub.com/style-management-qgis/</a></p>
 <ul class="simple">
-<li><p>Data Styling/ Classification</p></li>
+<li><p>To style or classify in Qgis, you must have an existing shapefile in your Qgis layer or upload the shapefile of the data you want to classify via Layer menu, then add layer, then add vector layer and under source botton, upload the shapefile that you intends to classify or style, then click ok and you can now see it in the layer panel.
+The picture below shows the Sierra Leone food insecurity 2015 shapefile that we can to classify in the layers pannel.</p></li>
 </ul>
+<p><img alt="" src="fig/The%20Sierra%20Leone%20shapefile%20in%20layer%20pannel.png" /></p>
+<ul class="simple">
+<li><p>Right click on the shapefile in the layer pannel and then property</p></li>
+</ul>
+<p><img alt="" src="fig/View%20of%20properties%20from%20layer%20pannel.png" /></p>
+<ul class="simple">
+<li><p>Then a layer properties will pump up. Click on symbology and select the type of classification or style that you want from circle 1.</p></li>
+</ul>
+<p><img alt="" src="fig/Layer%20properties.png" /></p>
+<ul class="simple">
+<li><p>You can choose from single symbol, categorized and graduated in order to classify your data. Just next to it you will see color where you can choose color of your choice. At the bottom left-down, there is classify icon which allow you to classify different features in the layer to your choice. This classify icon can only work if you choose categorized or graduated style from up.</p></li>
+</ul>
+<p><img alt="" src="fig/Picture%20showing%20style%20selection.png" /></p>
+<ul class="simple">
+<li><p>Below the syle option, you can also select the value, symbol and the color ramp that you want</p></li>
+</ul>
+<p><img alt="" src="fig/Picture%20showing%20Value%20and%20Symbol%20selection.png" /></p>
+<ul class="simple">
+<li><p>Once you click on classify, you can then now see all the classify features of your data. You can change the color of any of this categorized features by right click and go to change color and select any color that you want. Apply and click ok</p></li>
+</ul>
+<p><img alt="" src="fig/Picture%20showing%20how%20to%20change%20each%20feature%20color.png" /></p>
+<ul class="simple">
+<li><p>The below screenshot shows the overview of the categorized map</p></li>
+</ul>
+<p><img alt="" src="fig/Overview%20of%20categorized%20district%20map%20of%20Sierra%20Leone.png" /></p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -471,7 +502,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_3"
+            path: "./content/Modul_3"
         },
         predefinedOutput: true
     }

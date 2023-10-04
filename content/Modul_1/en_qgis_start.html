@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_1/en_qgis_start';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Basic Geodata processing" href="../Modul_2/en_qgis_geodata_concept.html" />
+    <link rel="next" title="Geodata concept" href="../Modul_2/en_qgis_geodata_concept.html" />
     <link rel="prev" title="What is GIS? (Theory)" href="en_gis_theorie.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -161,6 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_qgis_basics_wiki.html">QGIS Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_installation_wiki.html">QGIS installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projections_wiki.html">Projections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_plugins_wiki.html">Plugins</a></li>
@@ -169,6 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_geodata_wiki.html">Geodata</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_geodata_types_wiki.html">Types of Geodata</a></li>
+
+
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_layer_concept_wiki.html">Layer Concept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_attribute_table_wiki.html">Attribute Table in QGIS</a></li>
@@ -204,7 +207,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html">Basic Geodata  processing</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html">Geodata concept</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept_ex1.html">Geodata Concept Exercise 1</a></li>
 </ul>
 </li>
@@ -526,7 +529,7 @@ Add a vector file</p>
 <li><p>Click on <strong>OpenStreetMap</strong> and drag it to the layers pane</p></li>
 <li><p>Now in the browser pane right-click on XYZ Tiles and select <strong>“New Connection”</strong></p></li>
 <li><p>In <strong>Name</strong> type “Google Satellite”</p></li>
-<li><p>In <strong>url</strong> copy and paste the following: <a class="reference external" href="http://www.google.cn/maps/vt?lyrs=s&#64;189&amp;gl=cn&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D">http://www.google.cn/maps/vt?lyrs=s&#64;189&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</a></p></li>
+<li><p>In <strong>url</strong> copy and paste the following: <a class="reference external" href="https://www.google.cn/maps/vt?lyrs=s&#64;189&amp;gl=cn&amp;x=%7Bx%7D&amp;y=%7By%7D&amp;z=%7Bz%7D">https://www.google.cn/maps/vt?lyrs=s&#64;189&amp;gl=cn&amp;x={x}&amp;y={y}&amp;z={z}</a> (original link is broken)</p></li>
 <li><p>Click <strong>Ok</strong> then drag the newly created layer from XYZ Tiles to the layers pane</p></li>
 <li><p>Repeat for <strong>Google Terrain</strong>, you will find the url at <a class="reference external" href="https://socalgis.org/2019/11/06/add-google-maps-to-qgis-3/">this link</a></p></li>
 </ul>
@@ -611,6 +614,7 @@ Add a vector file</p>
 <p><tagName>  <tagName></p>
 <p><img alt="Attribute table" src="../../_images/en_Attribute_table.png" /></p>
 <p>See also:</p>
+<p>Share link:</p>
 <p><a href=”./HeiGIT_Slides_28_44”>HeiGIT_Slides, p. 28 - 44</a>: Project structure</p>
 </section>
 </section>
@@ -649,6 +653,7 @@ Add a vector file</p>
 <p><img alt="Excercise0_a" src="../../_images/en_Excercise_0_a.png" /></p>
 <p><img alt="Excercise0_b" src="../../_images/en_Excercise_0_b.png" /></p>
 <p>See also:</p>
+<p>Share link:</p>
 <p><span class="xref myst">PDF documentation</span> Presentation of the interface,cartONG QGIS-Tutorial, p. 6</p>
 <a href=/QGIS-Training/QGIS-Dokumente/2022_Tutoriel_QGIS_CartONG_EN_p06.pdf>
 Presentation of the interface, cartONG QGIS-Tutorial, p. 6</a>
@@ -771,6 +776,7 @@ Good data organisation with a fixed and well thought-out folder structure preven
 <p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/07bbf031499eb8da30daaa3bebd24769/qgis_arrange_toolbars.mp4"></video></p>
 <p>At each toolbar there is a field of two dotted lines. If you move the mouse pointer over it until an arrow cross appears and then hold down the left mouse button, you can move the toolbar. This allows an individualised arrangement of your own tools. By compressing all toolbars into a few lines, the map view window can also be enlarged.</p>
 <p>See also:</p>
+<p>Share link:</p>
 <p><span class="xref myst">PDF documentation</span> Structuring a QGIS Project, cartONG QGIS-Tutorial, p. 7 - 9</p>
 <a href=/QGIS-Training/QGIS-Dokumente/2022_Tutoriel_QGIS_CartONG_EN_p07-09.pdf>
 Structuring a QGIS Project, cartONG QGIS-Tutorial, p. 7 - 9 </a></section>
@@ -790,7 +796,7 @@ Structuring a QGIS Project, cartONG QGIS-Tutorial, p. 7 - 9 </a></section>
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_1"
+            path: "./content/Modul_1"
         },
         predefinedOutput: true
     }
@@ -822,7 +828,7 @@ Structuring a QGIS Project, cartONG QGIS-Tutorial, p. 7 - 9 </a></section>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Basic Geodata  processing</p>
+        <p class="prev-next-title">Geodata concept</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

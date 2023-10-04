@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Basic Geodata processing &#8212; GIS Resource Training Center</title>
+    <title>Geodata concept &#8212; GIS Resource Training Center</title>
   
   
   
@@ -161,6 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_qgis_basics_wiki.html">QGIS Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_installation_wiki.html">QGIS installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></li>
+
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projections_wiki.html">Projections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_plugins_wiki.html">Plugins</a></li>
@@ -169,6 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_geodata_wiki.html">Geodata</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_geodata_types_wiki.html">Types of Geodata</a></li>
+
+
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_layer_concept_wiki.html">Layer Concept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_attribute_table_wiki.html">Attribute Table in QGIS</a></li>
@@ -204,7 +207,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Basic Geodata  processing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Geodata concept</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_geodata_concept_ex1.html">Geodata Concept Exercise 1</a></li>
 </ul>
 </li>
@@ -436,7 +439,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Basic Geodata  processing</h1>
+    <h1>Geodata concept</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -446,7 +449,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projections">Projections</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theory">Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercises">Excercises</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-concept">Layer concept</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-and-raster-data">Vector and raster data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-file-formats">Vector file formats</a></li>
 </ul>
             </nav>
         </div>
@@ -458,8 +469,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="basic-geodata-processing">
-<h1>Basic Geodata  processing<a class="headerlink" href="#basic-geodata-processing" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="geodata-concept">
+<h1>Geodata concept<a class="headerlink" href="#geodata-concept" title="Permalink to this heading">#</a></h1>
 <p><strong>Competences:</strong></p>
 <ul class="simple">
 <li><p>Projections</p></li>
@@ -467,10 +478,18 @@ document.write(`
 <li><p>Vector and raster data (basic concepts)</p></li>
 <li><p>Vector file formats</p></li>
 </ul>
-<p>Die kartographische Darstellung von Vektor-Layern im GIS ist ein weites und komplexes Themenfeld. Wir betrachten hier daher nur einige grundlegende Funktionen.</p>
-<p>The earth is a sphere and cannot be represented on a flat map without being distorted. For this translation, from a curved on a flat surface, thousands of different methods exist. These are called <strong>Coordinate Reference Systems (CRS)</strong>.</p>
-<p><img alt="Different Coordinate Reference Systems" src="../../_images/en_different_crs.gif" /></p>
-<p>The different types of CRS should be used for different use cases. For example, Mercator projections don´t represent the area correctly. This table shows an overview on which projections to use for which needed characteristic:</p>
+<section id="projections">
+<h2>Projections<a class="headerlink" href="#projections" title="Permalink to this heading">#</a></h2>
+<section id="theory">
+<h3>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">#</a></h3>
+<p>The earth is a sphere and cannot be represented on a flat map without being distorted. To able able to display the earth on a flat map for example as a rectangle it needs to be projected. For further explanation, watch this <a class="reference external" href="https://www.youtube.com/watch?v=kIID5FDi2JQ">video</a>.</p>
+<p>For this translation, from a curved on a flat surface, thousands of different methods exist. These are called <strong>Coordinate Reference Systems (CRS)</strong>.</p>
+<p><img alt="Different Coordinate Reference Systems" src="../../_images/en_examples_projections.png" /></p>
+<p>Every projection comes with a trade-off in shape, direction, distance and area. That’s why it is important to choose different types of CRS for different use cases.
+For example, Mercator projections don´t represent the area correctly. Google Maps still uses the Mercator to be able to represent streets correctly, since it works well on a small scale. On a big scale, the shape of the countries stay the same but the area is mispresented. You can check the true size in comparison to different placements on the map on this <a class="reference external" href="https://www.thetruesize.com">website</a>. A popular example is Greenland in comparison with Africa, which seem on the map to be about the same size, but in reality Africa is a lot bigger.</p>
+<p><img alt="Comparison Greenland - Africa" src="../../_images/en_greenland_africa.png" /></p>
+<p>It’s important to work with the right projections, if not we will produce wrong results!</p>
+<p>This table shows an overview on which projections to use for which needed characteristic:</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Mercator (cylindrical)</p></th>
@@ -493,12 +512,35 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<p>For smaller areas local coordinate systems should be used since they give a more accurate display at the expense of more distortion at the global level.</p>
+<p>For smaller areas local projections should be used, since they give a more accurate display at the expense of more distortion at the global level.</p>
 <p><img alt="Local Coordinate Reference Systems" src="../../_images/en_local_crs.png" /></p>
+</section>
+<section id="application">
+<h3>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h3>
+<p>You can find all the projections and their CRS code at this <a class="reference external" href="http://epsg.io">website</a>.</p>
 <p>To change the projection of a <strong>vector file</strong>, click on <em>Vector</em>, <em>Data Management Tools</em>, <em>Reproject Layer</em>. Select your input layer and the target crs. Click on the three dots to <em>Save to File…</em> and click <em>Run</em>. For a detailed instruction click on this <a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/7e7a28698859062d1b832b558b2721c6/qgis_reproject_vector.mp4">video</a>.</p>
 <p>To change the projection of a <strong>raster file</strong>, clickclick on <em>Raster</em>, <em>Projections</em>, <em>Warp (Reproject)</em>. Choose your input layer and target crs. Click on the three dots to <em>Save to File…</em> and click <em>Run</em>. For a detailed instruction click on this <a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/3b7a1bb2408f4453f22d73f54156888b/qgis_reproject_raster.mp4">video</a>.</p>
+<p>It is crucial that you are aware of the difference in data projection and project projection. They should always be the same, or else you will get wrong results! You can change the data projection by following the steps explained above. The project projection is on the bottom left corner, as seen <a class="reference download internal" download="" href="../../_downloads/54547c7e6d6f20d020245b033bbce8f1/en_QGIS_User_Interface.png"><span class="xref download myst">here</span></a>. The interface then will be the same and by searching for the right EPSG you can change the projection.</p>
+</section>
+</section>
+<section id="excercises">
+<h2>Excercises<a class="headerlink" href="#excercises" title="Permalink to this heading">#</a></h2>
+<p>Now it’s your turn!</p>
+<p>You can apply your knowledge on this excercise by getting used to the interface and changing the projections.</p>
+<p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_1">Exercise 1</a>
+–&gt; in future link to HeiCloud</p>
+<p>==explain and show often made mistakes?==</p>
+<p>This <a class="reference external" href="https://ihatecoordinatesystems.com/">Website</a> provides explanations und solutions for often made mistakes.</p>
+<p>In the <a class="reference internal" href="../Wiki/en_qgis_projections_wiki.html"><span class="doc std std-doc">Wiki</span></a> are further tips.</p>
+</section>
 <section id="layer-concept">
 <h2>Layer concept<a class="headerlink" href="#layer-concept" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="vector-and-raster-data">
+<h2>Vector and raster data<a class="headerlink" href="#vector-and-raster-data" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="vector-file-formats">
+<h2>Vector file formats<a class="headerlink" href="#vector-file-formats" title="Permalink to this heading">#</a></h2>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -517,7 +559,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_2"
+            path: "./content/Modul_2"
         },
         predefinedOutput: true
     }
@@ -571,7 +613,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projections">Projections</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theory">Theory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercises">Excercises</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-concept">Layer concept</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-and-raster-data">Vector and raster data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-file-formats">Vector file formats</a></li>
 </ul>
   </nav></div>
 
