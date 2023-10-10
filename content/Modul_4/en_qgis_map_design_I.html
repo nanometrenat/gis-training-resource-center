@@ -471,7 +471,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for vector data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-a-layer">Adding labels to a layer</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-2-different-label-styles-to-the-same-layer">Adding 2 different label styles to the same layer</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -479,10 +483,10 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#print-layout">Print layout</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-print-layout-composer">Understanding the Print Layout Composer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-elements-to-the-print-layout">Adding elements to the print layout</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-new-map">Add a new map</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-text-box">Add a text box</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-legend">Add a legend</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-scale-bar">Add a scale bar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-map">Adding a new map</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-text-box">Adding a text box</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-legend">Adding a legend</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-scale-bar">Adding a scale bar</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-overview-map">Adding an overview map</a></li>
 </ul>
 </li>
@@ -616,7 +620,8 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <li><p>You can change the font, colour and size of labels</p></li>
 <li><p>When you create a map you always add labels to help the final user reading the map</p></li>
 </ul>
-<p><strong>Add labels to a layer</strong></p>
+<section id="adding-labels-to-a-layer">
+<h4>Adding labels to a layer<a class="headerlink" href="#adding-labels-to-a-layer" title="Permalink to this heading">#</a></h4>
 <blockquote>
 <div><p>This is exercise 2 in the PPP</p>
 </div></blockquote>
@@ -640,6 +645,40 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 </figcaption>
 </figure>
 </section>
+<section id="adding-2-different-label-styles-to-the-same-layer">
+<h4>Adding 2 different label styles to the same layer<a class="headerlink" href="#adding-2-different-label-styles-to-the-same-layer" title="Permalink to this heading">#</a></h4>
+<blockquote>
+<div><p>This is exercise 3 in PPP</p>
+</div></blockquote>
+<p>Sometimes you will need to create two different label styles for different features of a single layer. In this example, we will create one label style for the <em>Country Capital</em>, and another one for the <em>State Capitals</em></p>
+<ol class="arabic simple">
+<li><p>Open the styling panel and click on the Labels tab</p></li>
+<li><p>Select <strong>Rule-based Labeling</strong></p></li>
+<li><p>Click on the <strong>Add Rule</strong> button at the bottom (the “+”-sign) and create the first rule</p></li>
+<li><p>For <strong>Value</strong>, select <strong>“NAME”</strong> (so that the labels will show the name of each city), then click on the “ε”-button next to the “Filter” bar.</p></li>
+</ol>
+<figure class="align-default" id="adding-rule-based-labels">
+<a class="reference internal image-reference" href="fig/en.30.30.2_adding_rule-based_labels"><img alt="fig/en.30.30.2_adding_rule-based_labels" src="fig/en.30.30.2_adding_rule-based_labels" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>In the central column, expand ==<strong>Fields and Values</strong>== to display a list of all the fields in your layer and double-click on <em>Class</em>_ to add it to the expression frame on the left.</p></li>
+<li><p>In the right column, click on <strong>All unique</strong> to list all unique values contained in the Class field</p></li>
+<li><p>Click on the “<code class="docutils literal notranslate"><span class="pre">=</span></code>” operator, then doube-click on the <em>value 1</em> (which represent the Country capital in this case). Click OK.</p></li>
+<li><p>Scroll down to <em>change the label style</em>. Make it Arial, bold, black, 12pt and add a white buffer.</p></li>
+<li><p>Repeat steps 4 to 9, but select <em>Value 2</em> (State capitals) and make the label black, bold, 10pt, no buffer.</p></li>
+<li><p>Click <strong>Apply</strong>, the OK.</p></li>
+</ol>
+<figure class="align-default" id="rule-based-labels-expression-builder">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png"><img alt="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" src="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="print-layout">
@@ -652,7 +691,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="create-print-layout">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_create_print_layout.png"><img alt="../../_images/en_30.30.2_create_print_layout.png" src="../../_images/en_30.30.2_create_print_layout.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Create a new Print Layout</span><a class="headerlink" href="#create-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Create a new Print Layout</span><a class="headerlink" href="#create-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="understanding-the-print-layout-composer">
@@ -660,7 +699,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="new-print-layout">
 <img alt="../../_images/en_30.30.2_understanding_the_print_layout_composer.png" src="../../_images/en_30.30.2_understanding_the_print_layout_composer.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">The interface of the Print Layout Composer</span><a class="headerlink" href="#new-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">The interface of the Print Layout Composer</span><a class="headerlink" href="#new-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple">
@@ -681,23 +720,23 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 </section>
 <section id="adding-elements-to-the-print-layout">
 <h2>Adding elements to the print layout<a class="headerlink" href="#adding-elements-to-the-print-layout" title="Permalink to this heading">#</a></h2>
-<section id="add-a-new-map">
-<h3>Add a new map<a class="headerlink" href="#add-a-new-map" title="Permalink to this heading">#</a></h3>
+<section id="adding-a-new-map">
+<h3>Adding a new map<a class="headerlink" href="#adding-a-new-map" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Add a new map by clicking on the <strong>Add map</strong> button on the <strong>toolbar on the left</strong> and __drag a rectangle on the map canvas.</p></li>
 <li><p>To move the map on the canvas, simply <strong>select the map</strong> and <strong>drag</strong> it with your mouse</p></li>
 <li><p>To move within a map select <strong>Move item content</strong> button on the</p></li>
 <li><p>To zoom in on the map, while using the <strong>Move item content</strong> button, you can <strong>Press CTRL + scroll the mouse wheel</strong> (gently) or enter the scale manually in the item properties</p></li>
 </ul>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="add-a-new-map">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_a_map.png"><img alt="../../_images/en_30.30.2_adding_a_map.png" src="../../_images/en_30.30.2_adding_a_map.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Adding a new map to the Print Layout</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Adding a new map to the Print Layout</span><a class="headerlink" href="#add-a-new-map" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-<section id="add-a-text-box">
-<h3>Add a text box<a class="headerlink" href="#add-a-text-box" title="Permalink to this heading">#</a></h3>
+<section id="adding-a-text-box">
+<h3>Adding a text box<a class="headerlink" href="#adding-a-text-box" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>To add text (title, explanations), use the <strong>Add Label</strong> tool and draw a rectangle of the desired size.</p></li>
 <li><p>In the <strong>Item Properties</strong> panel (on the right of your screen) you can <strong>enter your text</strong> and <strong>change the font, style, colour, etc.</strong> (_Remember to use the scroll bar in the window to see all the options).</p></li>
@@ -705,12 +744,12 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="add-text-to-the-print-layout">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_text.png"><img alt="../../_images/en_30.30.2_print_layout_add_text.png" src="../../_images/en_30.30.2_print_layout_add_text.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Adding text to the print Layout</span><a class="headerlink" href="#add-text-to-the-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Adding text to the print Layout</span><a class="headerlink" href="#add-text-to-the-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-<section id="add-a-legend">
-<h3>Add a legend<a class="headerlink" href="#add-a-legend" title="Permalink to this heading">#</a></h3>
+<section id="adding-a-legend">
+<h3>Adding a legend<a class="headerlink" href="#adding-a-legend" title="Permalink to this heading">#</a></h3>
 <p>Before adding a legend, make sure that:</p>
 <ul class="simple">
 <li><p>All your layers have an explicit name (“rivers”, “primary roads”,…)</p></li>
@@ -720,19 +759,19 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="add-a-legend-to-the-print-layout">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_legend.png"><img alt="../../_images/en_30.30.2_print_layout_add_legend.png" src="../../_images/en_30.30.2_print_layout_add_legend.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Adding a legend to the print layout</span><a class="headerlink" href="#add-a-legend-to-the-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Adding a legend to the print layout</span><a class="headerlink" href="#add-a-legend-to-the-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In the <strong>item properties</strong> panel, if you keep the <strong>‘Auto update’</strong> option checked, new layers added to your project will automatically be added to the legend but you cannot control them individually (rename if necessary, reorder ot remove items).<br />
 Once the option is unchecked, you can update the name of the layers, group them, reorganise them, etc.</p>
 </section>
-<section id="add-a-scale-bar">
-<h3>Add a scale bar<a class="headerlink" href="#add-a-scale-bar" title="Permalink to this heading">#</a></h3>
+<section id="adding-a-scale-bar">
+<h3>Adding a scale bar<a class="headerlink" href="#adding-a-scale-bar" title="Permalink to this heading">#</a></h3>
 <p>Before adding a scale bar, select your main map and check in the <strong>Item Properties</strong> panel that the <strong>Scale</strong> fielld has a <strong>round number</strong></p>
 <figure class="align-default" id="round-number-for-scale">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_scale.png"><img alt="../../_images/en_30.30.2_print_layout_scale.png" src="../../_images/en_30.30.2_print_layout_scale.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Make sure that the scale is at a round number</span><a class="headerlink" href="#round-number-for-scale" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Make sure that the scale is at a round number</span><a class="headerlink" href="#round-number-for-scale" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To add a scale bar, you can use the <strong>add scale bar</strong> button on the <strong>left toolbar</strong>. In the <strong>Item Properties</strong> panel, customize the following functions</p>
@@ -747,7 +786,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="add-scale-bar">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_scale_bar.png"><img alt="../../_images/en_30.30.2_print_layout_add_scale_bar.png" src="../../_images/en_30.30.2_print_layout_add_scale_bar.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Add and customize the scale bar</span><a class="headerlink" href="#add-scale-bar" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Add and customize the scale bar</span><a class="headerlink" href="#add-scale-bar" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -767,22 +806,22 @@ Once the option is unchecked, you can update the name of the layers, group them,
 </ol>
 </li>
 </ol>
-<figure class="align-left" id="overview-map-preparation">
+<figure class="align-default" id="overview-map-preparation">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_overview_map_preparations.png"><img alt="../../_images/en_30.30.2_print_layout_overview_map_preparations.png" src="../../_images/en_30.30.2_print_layout_overview_map_preparations.png" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Create an overview map with important landmarks and borders</span><a class="headerlink" href="#overview-map-preparation" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">An overview map should show important landmarks and borders</span><a class="headerlink" href="#overview-map-preparation" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="add-overview-map">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_overview_map.png"><img alt="../../_images/en_30.30.2_print_layout_add_overview_map.png" src="../../_images/en_30.30.2_print_layout_add_overview_map.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Add an overview map and lock the layer</span><a class="headerlink" href="#add-overview-map" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Add an overview map and <strong>lock the layer</strong></span><a class="headerlink" href="#add-overview-map" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="create-an-overview">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png"><img alt="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png" src="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Add a the extent of the main map to your overview map (the red rectangle on the overview)</span><a class="headerlink" href="#create-an-overview" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Add a the extent of the main map to your overview map (the red rectangle on the overview)</span><a class="headerlink" href="#create-an-overview" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition caution">
@@ -829,6 +868,12 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <li><p><strong>Representative</strong>: the figures on the map and in the legend must match (same size, same color, …).</p></li>
 <li><p><strong>Organized</strong>: the data in the legend can be grouped by thematic categories (health, environment, background map, …) or by type of figure (point, line, surface) to facilitate reading.</p></li>
 </ul>
+<figure class="align-default" id="organized-legend">
+<a class="reference internal image-reference" href="../../_images/en_legend_good_practice.png"><img alt="../../_images/en_legend_good_practice.png" src="../../_images/en_legend_good_practice.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Example of a well organized legend</span><a class="headerlink" href="#organized-legend" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>The scale bar</strong> is essential to a map since it gives the correspondence between a distance measured on the map and the distance in the real world. There are two types of scales:</p>
 <ul class="simple">
 <li><p><strong>The numerical Scale</strong> is expressed as a fraction (1/25000 or 1:25000) which indicates the equivalence between 1 centimeter on the map and the real distance. It is a scale that can be calculated with GIS software, and is often found in topographic maps</p>
@@ -841,7 +886,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="scale-bar">
 <img alt="fig/example_scale_bar.png&quot;" src="fig/example_scale_bar.png&quot;" />
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">A scale bar</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">A scale bar</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Orientation</strong></p>
@@ -935,7 +980,7 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_4"
+            path: "./content/Modul_4"
         },
         predefinedOutput: true
     }
@@ -996,7 +1041,11 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for vector data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-a-layer">Adding labels to a layer</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-2-different-label-styles-to-the-same-layer">Adding 2 different label styles to the same layer</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1004,10 +1053,10 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#print-layout">Print layout</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-print-layout-composer">Understanding the Print Layout Composer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-elements-to-the-print-layout">Adding elements to the print layout</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-new-map">Add a new map</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-text-box">Add a text box</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-legend">Add a legend</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-scale-bar">Add a scale bar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-map">Adding a new map</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-text-box">Adding a text box</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-legend">Adding a legend</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-scale-bar">Adding a scale bar</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-overview-map">Adding an overview map</a></li>
 </ul>
 </li>

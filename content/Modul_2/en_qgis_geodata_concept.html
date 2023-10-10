@@ -232,7 +232,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 3- Basic GIS operations</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation.html">Digitalisation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation.html">Digitalisation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation_ex1.html">Digitalisation Exercise 1</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_data_classification.html">Geodata Classification</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -247,8 +248,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Map design- Basic</a></li>
-
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
@@ -468,6 +467,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercises">Excercises</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-concept">Layer concept</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-and-raster-data">Vector and raster data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector">Vector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raster">Raster</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-file-formats">Vector file formats</a></li>
 </ul>
             </nav>
@@ -546,12 +547,77 @@ For example, Mercator projections don´t represent the area correctly. Google Ma
 </section>
 <section id="layer-concept">
 <h2>Layer concept<a class="headerlink" href="#layer-concept" title="Permalink to this heading">#</a></h2>
+<p>Geodata represents a real-world object on a map as a feature. A feature consists of two types of information: the location and attributes, f. e. name or ID. Those informations are collected in layers. A layer can only consist of geographic objects of the same type. <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>By superpositioning different layers, you build your map and can obtain information of different sources. With those you then can perform analyses or adapt the representation by using symbols and colors.</p>
+<p><img alt="Layer concept" src="../../_images/en_layer.png" /></p>
 </section>
 <section id="vector-and-raster-data">
 <h2>Vector and raster data<a class="headerlink" href="#vector-and-raster-data" title="Permalink to this heading">#</a></h2>
+<p>There are two file types of geographic data: <strong>vector and raster</strong>.</p>
+<p><img alt="Vector and raster data" src="../../_images/en_vector_raster.png" /></p>
+<blockquote>
+<div><p><strong>Vector</strong><br />
+Vector data contains a shape or a geometry. By using geometry objects (points, lines and polygons) the real world is represented. Each object stores the location (as adress or coordinates) and further attributes, f. e. name or ID. Which geometry is used, depends on the feature it represents.
+<img alt="Geometry vector data" src="../../_images/en_vector_geometry.png" /></p>
+<blockquote>
+<div><p>Examples: buildings, streets</p>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Raster</strong><br />
+Raster data are images which contain a matrix of pixels. Each pixel stores a value.
+Since a raster is based on an image, the resolution is crucial. It defines the accuracy of the data and size of the pixels.
+<img alt="Raster data quality" src="../../_images/en_quality_raster.png" /></p>
+<blockquote>
+<div><p>Examples (stored as a value): elevation, temperature, land cover</p>
+</div></blockquote>
+</div></blockquote>
+<p>In this picture you can see the same location, on the left as vector data, visualising streets and urban area, and on the right hand as raster data (satellite image), showing the land cover.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>vector</p></th>
+<th class="head text-center"><p>raster</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><img alt="same location as vector data" src="../../_images/en_same_location_vector.png" /></p></td>
+<td class="text-center"><p><img alt="same location as raster data" src="../../_images/en_same_location_raster.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="pull-left">
+</section>
+<section id="vector">
+<h2>Vector<a class="headerlink" href="#vector" title="Permalink to this heading">#</a></h2>
+<hr class="docutils" />
+<p>Vector data contains a shape or a geometry. By using geometry objects (points, lines and polygons) the real world is represented. Each object stores the location (as adress or coordinates) and further attributes, f. e. name or ID. Which geometry is used, depends on the feature it represents.
+<img alt="Geometry vector data" src="../../_images/en_vector_geometry.png" /></p>
+<blockquote>
+<div><p>Examples: buildings, streets</p>
+</div></blockquote>
+<hr class="docutils" />
+</div>
+<div class="pull-right">
+</section>
+<section id="raster">
+<h2>Raster<a class="headerlink" href="#raster" title="Permalink to this heading">#</a></h2>
+<hr class="docutils" />
+<p>Raster data are images which contain a matrix of pixels. Each pixel stores a value.
+Since a raster is based on an image, the resolution is crucial. It defines the accuracy of the data and size of the pixels.
+<img alt="Raster data quality" src="../../_images/en_quality_raster.png" /></p>
+<blockquote>
+<div><p>Examples (stored as a value): elevation, temperature, land cover</p>
+</div></blockquote>
+<hr class="docutils" />
+</div>
 </section>
 <section id="vector-file-formats">
 <h2>Vector file formats<a class="headerlink" href="#vector-file-formats" title="Permalink to this heading">#</a></h2>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_1_layers">https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_1_layers</a></p>
+</aside>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -570,7 +636,7 @@ For example, Mercator projections don´t represent the area correctly. Google Ma
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_2"
+            path: "./content/Modul_2"
         },
         predefinedOutput: true
     }
@@ -628,6 +694,8 @@ For example, Mercator projections don´t represent the area correctly. Google Ma
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excercises">Excercises</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-concept">Layer concept</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-and-raster-data">Vector and raster data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector">Vector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raster">Raster</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-file-formats">Vector file formats</a></li>
 </ul>
   </nav></div>
