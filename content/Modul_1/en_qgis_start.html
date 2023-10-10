@@ -232,8 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 3- Basic GIS operations</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation.html">Digitalisation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation_ex1.html">Digitalisation Exercise 1</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation.html">Digitalisation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_data_classification.html">Geodata Classification</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -248,6 +247,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Map design- Basic</a></li>
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
@@ -460,9 +461,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-qgis-concept">Intro QGIS concept</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-qgis">What is QGIS?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-qgis">Introducing QGIS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-excel-to-qgis">From Excel to QGIS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-attribute-table">The Attribute Table</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-qgis">Installation QGIS</a><ul class="nav section-nav flex-column">
@@ -471,10 +471,14 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-interface-description">QGIS interface description</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interface">Interface:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-qgis-interface">Overview of QGIS Interface</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-zoom">Move and Zoom</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-and-toolbars">Properties and Toolbars</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-and-open-project">Save and Open Project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">Configuration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#projection-of-map-view-project-crs">Projection of map view (project CRS)</a></li>
 </ul>
 </li>
 </ul>
@@ -492,11 +496,15 @@ document.write(`
 <h1>Getting started with QGIS<a class="headerlink" href="#getting-started-with-qgis" title="Permalink to this heading">#</a></h1>
 <section id="intro-qgis-concept">
 <h2>Intro QGIS concept<a class="headerlink" href="#intro-qgis-concept" title="Permalink to this heading">#</a></h2>
+<section id="what-is-qgis">
+<h3>What is QGIS?<a class="headerlink" href="#what-is-qgis" title="Permalink to this heading">#</a></h3>
+<p>QGIS is an <strong>open source geoinformation system software</strong>. That means the source code is available for everyone, making QGIS a free application.
+You may <strong>view, edit, capture and analyze spatial data or create printable maps</strong> with it. QGIS was created in 2002 and is a project of volunteers. And it is <strong>constantly changing</strong>.</p>
+</section>
 <section id="introducing-qgis">
 <h3>Introducing QGIS<a class="headerlink" href="#introducing-qgis" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>QGIS is a <strong>desktop software</strong>: that means you get a program that opens up on your computer as a window with buttons you can click, forms you can fill out to do tasks, and it’s generally a visual interactive experience.</p></li>
-<li><p>QGIS is <strong>open source</strong>: That means the source code is available for everyone, making QGIS a free application.</p></li>
 <li><p>QGIS is backed by a <strong>large community of users</strong>, so it’s easy to find solutions to technical issues by using QGIS forums, blog and subreddit.</p></li>
 </ul>
 <p><tagName>  <tagName></p>
@@ -546,86 +554,6 @@ Add a vector file</p>
 <p><tagName>  <tagName></p>
 <p><img alt="Add_basemaps" src="../../_images/en_Add_basemaps.png" /></p>
 <p>Add basemaps</p>
-</section>
-<section id="from-excel-to-qgis">
-<h3>From Excel to QGIS<a class="headerlink" href="#from-excel-to-qgis" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>A <strong>common workflow</strong> is to load data into QGIS from Excel tables.</p></li>
-<li><p>With GIS you can show an excel table as a <strong>geometric shape</strong> (points, lines or polygons).</p></li>
-<li><p>You can use <strong>any kind of source</strong> to create data to load into GIS, you just have to put them in an Excel table first.</p></li>
-<li><p>You can also <strong>export data</strong> from GIS into Excel.</p></li>
-<li><p>Excel tables have to be <strong>cleaned and formatted</strong> in a specific way before being loaded into GIS.</p></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Exercise: Load data from Excel into QGIS</p>
-</div>
-<ul class="simple">
-<li><p>In your “GIS_Training” folder, create a <strong>subfolder</strong> called <strong>“Datasets”</strong></p></li>
-<li><p>From <a class="reference external" href="https://login.microsoftonline.com/fedc3cba-ca5e-4388-a837-b45c7f0d71b7/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&amp;response%5Fmode=form%5Fpost&amp;response%5Ftype=code%20id%5Ftoken&amp;resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&amp;scope=openid&amp;nonce=ED0D772DCEECB76021BB15ED5856C5F59BFC5642C932A149%2D3D7ED0B8676E60FBE34CDE3B11CF28C9FDD6B4F5AC08BB30CC2023750C2C7D90&amp;redirect%5Furi=https%3A%2F%2Fbrcsbrms%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&amp;state=OD0w&amp;claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&amp;wsucxt=1&amp;cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&amp;client%2Drequest%2Did=fd42dca0%2D7014%2D7000%2D4e1c%2Dd4890d840d5c&amp;sso_reload=true">Sharepoint</a> download the <strong>ACLED_Nigeria_2022-2023</strong> file you will find in the there</p></li>
-<li><p>Open the file and then <strong>save it as CSV</strong> (Comma Delimited) into the <strong>“Datasets” folder</strong> you just created</p></li>
-<li><p>Now your data are ready to be loaded into QGIS</p></li>
-</ul>
-<p><tagName>  <tagName></p>
-<p><img alt="Excel_data01" src="../../_images/en_Excel_Data_a.png" /></p>
-<ul class="simple">
-<li><p>Open your <strong>“Session1”</strong> project</p></li>
-<li><p>From the menu, click on <strong>Layer -&gt; Add layer -&gt; Add Delimited Text Layer…</strong></p></li>
-</ul>
-<p><tagName>  <tagName></p>
-<p><img alt="Excel_data02" src="../../_images/en_Excel_Data_b.png" /></p>
-<ul class="simple">
-<li><p>Click on <strong>…</strong> next to “File name” and browse for the <strong>.csv file</strong> you saved in the Datasets folder</p></li>
-<li><p>Expand the <strong>Geometry Definition</strong> section and select <em>longitude</em> for the <strong>X field</strong> and <em>latitude</em> for the <strong>Y field</strong></p></li>
-<li><p>In Geometry CRS, select Project CRS</p></li>
-<li><p>Click on <strong>Add</strong>, then <strong>Close</strong></p></li>
-<li><p>Now let’s explore the map</p></li>
-</ul>
-<p><tagName>  <tagName></p>
-<p><img alt="Excel_data03" src="../../_images/en_Excel_Data_c.png" /></p>
-<ul class="simple">
-<li><p>In the layers pane, <strong>drag</strong> the newly created layer to the top of the layers list</p></li>
-<li><p>From the menu, select the <strong>Identify feature tool</strong></p></li>
-<li><p>Click on any of the points in the map and have a look at the <strong>feature attributes</strong> on the right pane</p></li>
-</ul>
-<p><tagName>  <tagName></p>
-<p><img alt="Excel_data04" src="../../_images/en_Excel_Data_d.png" /></p>
-<ul class="simple">
-<li><p>Now <strong>let’s export this layer into a Shapefile</strong></p></li>
-<li><p>In the layers pane, <strong>right-click</strong> on the layer and select <strong>Export -&gt; Save feature as..</strong></p></li>
-<li><p>For “Format” choose <strong>ESRI Shapefile</strong></p></li>
-<li><p>In “File name”, click on the three dots, browse to your Shapefiles folder and save the file as <strong>NGA_SecurityIncidents</strong></p></li>
-<li><p>For “Geometry type”, choose <strong>Point</strong></p></li>
-<li><p>Make sure that the “Add saved file to map” option is enabled, then click <strong>Ok</strong></p></li>
-<li><p>Now right-click on the original layer and select <strong>Remove layer</strong></p></li>
-<li><p><strong>Save</strong>  your project</p></li>
-</ul>
-<p><tagName>  <tagName></p>
-<p><img alt="Excel_data05" src="../../_images/en_Excel_Data_e.png" /></p>
-</section>
-<section id="the-attribute-table">
-<h3>The Attribute Table<a class="headerlink" href="#the-attribute-table" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>In GIS we can display a layer both as its geometric representation and as its <strong>attribute table</strong></p></li>
-<li><p>The attribute table <strong>displays information</strong> contained in a selected layer</p></li>
-<li><p><strong>Each row</strong> in the table <strong>represents a feature</strong></p></li>
-<li><p><strong>Each column</strong> contains <strong>a particular piece of information</strong> about the feature</p></li>
-<li><p>Features in the table can be <strong>searched, selected, moved or even edited</strong></p></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Exercise: Open and explore the Attribute Table</p>
-</div>
-<ul class="simple">
-<li><p>In the Layers pane, right-click on the NGA_Security Incidents layer and select <strong>“Open Attribute Table”</strong></p></li>
-<li><p>Explore the Attribute Table. As you can see, <strong>it looks like any table in Excel</strong>. Infact, it looks exactly like the Excel file you originally used to create this layer</p></li>
-<li><p>From the top menu of the Attribute Table, click on <strong>“Dock Attribute Table”</strong></p></li>
-</ul>
-<p><tagName>  <tagName></p>
-<p><img alt="Attribute table" src="../../_images/en_Attribute_table.png" /></p>
-<p>See also:</p>
-<p>Share link:</p>
-<p><a href=”./HeiGIT_Slides_28_44”>HeiGIT_Slides, p. 28 - 44</a>: Project structure</p>
 </section>
 </section>
 <section id="installation-qgis">
@@ -685,10 +613,6 @@ Presentation of the interface, cartONG QGIS-Tutorial, p. 6</a>
 <ul class="simple">
 <li><p><strong>Download the data</strong> and <strong>save it on your PC</strong>.</p></li>
 <li><p><strong>Create a local folder</strong> and save the above data there (.zip folders must be unzipped beforehand)</p></li>
-</ul>
-<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-<p><em>Links are missing!</em></p>
-<ul class="simple">
 <li><p>Sierra Leone Border (Polygon/Lines) GeoPacked</p>
 <ul>
 <li><p>Sierra Leone national boders (Polygon/lines)</p></li>
@@ -698,7 +622,6 @@ Presentation of the interface, cartONG QGIS-Tutorial, p. 6</a>
 <li><p>Sierra Leone health (Points)</p></li>
 <li><p>Sierra Leone airports (CSV)</p></li>
 </ul>
-<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
 <p>Steps:</p>
 <ul class="simple">
 <li><p><strong>Open QGIS</strong> and familiarize yourself with the user interface</p></li>
@@ -723,68 +646,114 @@ Presentation of the interface, cartONG QGIS-Tutorial, p. 6</a>
 <p><img alt="Excercise1_b" src="../../_images/en_Excercise_1_b.png" /></p>
 <section id="interface">
 <h3>Interface:<a class="headerlink" href="#interface" title="Permalink to this heading">#</a></h3>
-<section id="overview">
-<h4>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h4>
+<section id="overview-of-qgis-interface">
+<h4>Overview of QGIS Interface<a class="headerlink" href="#overview-of-qgis-interface" title="Permalink to this heading">#</a></h4>
 <p><img alt="Alt text" src="../../_images/en_Interface_01.png" /></p>
-<ul class="simple">
-<li><p>The <strong>layers list</strong> shows <strong>all layers/files</strong> that are <strong>loaded in the project</strong>. You can show/hide layers and set other properties.</p></li>
-<li><p><strong>Toolbars are shortcuts</strong> to execute frequently used commands. For example, there are special toolbars for <strong>vector and raster files</strong>, but also general ones for saving your project, etc. The toolbar contains, among other things, a list of all the commands you can use. The toolbar also contains the <strong>toolbox</strong>, which is used later in many of the wiki videos.</p></li>
-</ul>
+<ol class="arabic simple">
+<li><p><strong>Layers List / Browser Panel:</strong> The <strong>layers list</strong> shows <strong>all layers/files</strong> that are <strong>loaded in the project</strong>. You can show/hide layers and set other properties.</p></li>
+<li><p><strong>Toolsbars: __ <strong>Toolbars</strong> are shortcuts</strong> to execute frequently used commands. For example, there are special toolbars for <strong>vector and raster files</strong>, but also general ones for saving your project, etc. The toolbar contains, among other things, a list of all the commands you can use. The toolbar also contains the <strong>toolbox</strong>, which is used later in many of the wiki videos.</p></li>
+</ol>
 <p><tagName>  <tagName></p>
 <p><img alt="Alt text" src="../../_images/en_Interface_02.png" /></p>
-<ul class="simple">
-<li><p>The <strong>map view</strong> is the <strong>central component</strong> of every GIS programme. This is where the <strong>geodata</strong> are displayed. The map view has a projection which does not always have to correspond to the projection of the layers.</p></li>
-<li><p>You can set the projection of the map view and the scale. You can read the coordinates of the mouse pointer and thus quickly find out the coordinates of points on the map. You can rotate your map view, e.g. if you want to create a map facing south.</p></li>
-<li><p><strong>Side Toolbar</strong>. You may see a side toolbar. This is another way to easily open vector and raster files in QGIS.</p></li>
-<li><p><strong>Locator bar</strong>. Here you can search for tools and layers. If you don’t know where to find a tool, you can try here.</p></li>
-</ul>
+<ol class="arabic simple" start="3">
+<li><p><strong>Map View:</strong> The <strong>map view</strong> is the <strong>central component</strong> of every GIS programme. This is where the <strong>geodata</strong> are displayed. The map view has a projection which does not always have to correspond to the projection of the layers.</p></li>
+<li><p><strong>Status bar:</strong> In the <strong>status bar</strong> you will find <strong>central information about the current map view</strong>. Here you can set the <strong>projection of the map view and the scale</strong>. You can read the coordinates of the mouse pointer and thus quickly find out the coordinates of points on the map. You can rotate your map view, e.g. if you want to create a map facing south.</p></li>
+<li><p><strong>Side Toolbar</strong>. You may see a <strong>side toolbar</strong>. This is another way to easily open vector and raster files in QGIS.</p></li>
+<li><p><strong>Locator bar</strong>. Here you can <strong>search for tools and layers</strong>. If you don’t know where to find a tool, you can try here.</p></li>
+</ol>
 </section>
 </section>
-<section id="videos">
-<h3>Videos<a class="headerlink" href="#videos" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Move the map view</p></li>
-</ul>
-<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/490534e96bdd471b6924cd39e28859a2/qgis_move.mp4"></video></p>
-<ul class="simple">
-<li><p>Zooming in the map view</p></li>
-</ul>
-<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/a64f7271eb2a23e876ada002ea89f7f0/qgis_zoom.mp4"></video></p>
-<ul class="simple">
-<li><p>Show properties of objects</p></li>
-</ul>
-<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/6566c2b8127c7f697619ddcb55831840/qgis_identify.mp4"></video></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Make sure to select the layer you want identify features in</p>
+<hr class="docutils" />
+<section id="move-and-zoom">
+<h3>Move and Zoom<a class="headerlink" href="#move-and-zoom" title="Permalink to this heading">#</a></h3>
+<div class="highlight-{grid}:gutter:2 notranslate"><div class="highlight"><pre><span></span>
+:::{grid-item-card} Move the map view
+
+&lt;video width=&quot;100%&quot; controls src=&quot;https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_move.mp4&quot;&gt;&lt;/video&gt;
+
+![](/fig/qgis_move_symbol.png)
+* You can also move with the arrow keys
+
+::: :::{grid-item-card} Zooming in the map view
+
+&lt;video width=&quot;100%&quot; controls src=&quot;https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom.mp4&quot;&gt;&lt;/video&gt;
+
+![](/fig/qgis_zoom_symbol.png)
+* You can also zoom by scrolling
+* Or with Ctrl+ or Ctrl-
+
+:::
+
+</pre></div>
 </div>
-<ul class="simple">
-<li><p>Set the projection of the map view (project CRS)</p></li>
-</ul>
-<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/325cb2d70b0154c1bd5f38a899cd2b40/qgis_map_projection.mp4"></video></p>
-<ul class="simple">
-<li><p>Save project</p></li>
-</ul>
-<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/8e2bb629d9c3189f8f635a4cf1381d2c/qgis_save_project.mp4"></video></p>
-<ul class="simple">
-<li><p>Open project</p></li>
-</ul>
-<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/1655b97b741749bfa46c6c08ee3d0be6/qgis_open_project.mp4"></video></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The layer data used in the project is not saved in the project file</p>
+</section>
+<section id="properties-and-toolbars">
+<h3>Properties and Toolbars<a class="headerlink" href="#properties-and-toolbars" title="Permalink to this heading">#</a></h3>
+<div class="highlight-{grid}:gutter:2 notranslate"><div class="highlight"><pre><span></span>
+:::{grid-item-card} Show properties of objects
+
+&lt;video width=&quot;100%&quot; controls src=&quot;https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_identify.mp4&quot;&gt;&lt;/video&gt;
+
+* Make sure to select the layer you want identify features in 
+
+::: :::{grid-item-card} Open Toolbar
+
+&lt;video width=&quot;100%&quot; controls src=&quot;https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_toolbars.mp4&quot;&gt;&lt;/video&gt;
+
+![](/fig/Geschlossene_Toolbox_01.png)
+* You can also zoom by scrolling
+* Or with Ctrl+ or Ctrl- 
+
+:::
+
+</pre></div>
 </div>
-<p>Instead, the project file only contains the file paths where the layer data were located at the time the project was last saved on the PC. If the location of this layer data is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.
-Good data organisation with a fixed and well thought-out folder structure prevents such problems.</p>
-<ul class="simple">
-<li><p>Show and hide displays</p></li>
-</ul>
-<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/b9ccebc4bd584fdbc5092b4804d8a742/Anzeigen_einblenden_ausblenden.mp4"></video></p>
-<ul class="simple">
-<li><p>Move and arrange toolbars</p></li>
-</ul>
-<p><video width="80%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/07bbf031499eb8da30daaa3bebd24769/qgis_arrange_toolbars.mp4"></video></p>
-<p>At each toolbar there is a field of two dotted lines. If you move the mouse pointer over it until an arrow cross appears and then hold down the left mouse button, you can move the toolbar. This allows an individualised arrangement of your own tools. By compressing all toolbars into a few lines, the map view window can also be enlarged.</p>
+</section>
+<section id="save-and-open-project">
+<h3>Save and Open Project<a class="headerlink" href="#save-and-open-project" title="Permalink to this heading">#</a></h3>
+<div class="highlight-{grid}:gutter:2 notranslate"><div class="highlight"><pre><span></span>
+:::{grid-item-card} Save project
+
+&lt;video width=&quot;100%&quot; controls src=&quot;https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/8e2bb629d9c3189f8f635a4cf1381d2c/qgis_save_project.mp4&quot;&gt;&lt;/video&gt;
+
+* The layer data used in the project is not saved in the project file
+
+::: :::{grid-item-card} Open project
+
+&lt;video width=&quot;100%&quot; controls src=&quot;https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/1655b97b741749bfa46c6c08ee3d0be6/qgis_open_project.mp4&quot;&gt;&lt;/video&gt;
+
+:::
+
+</pre></div>
+</div>
+</section>
+<section id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">#</a></h3>
+<div class="highlight-{grid}:gutter:2 notranslate"><div class="highlight"><pre><span></span>
+:::{grid-item-card} Show and hide displays
+
+&lt;video width=&quot;100%&quot; controls src=&quot;https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/b9ccebc4bd584fdbc5092b4804d8a742/Anzeigen_einblenden_ausblenden.mp4&quot;&gt;&lt;/video&gt;
+
+::: :::{grid-item-card} Move and arrange toolbars
+
+ &lt;video width=&quot;100%&quot; controls src=&quot;https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/07bbf031499eb8da30daaa3bebd24769/qgis_arrange_toolbars.mp4&quot;&gt;&lt;/video&gt; 
+
+:::
+
+</pre></div>
+</div>
+</section>
+<section id="projection-of-map-view-project-crs">
+<h3>Projection of map view (project CRS)<a class="headerlink" href="#projection-of-map-view-project-crs" title="Permalink to this heading">#</a></h3>
+<div class="highlight-{grid}:gutter:2 notranslate"><div class="highlight"><pre><span></span>
+:::{grid-item-card} Projection of map view (project CRS)
+
+&lt;video width=&quot;100%&quot; controls src=&quot;https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/325cb2d70b0154c1bd5f38a899cd2b40/qgis_map_projection.mp4&quot;&gt;&lt;/video&gt; 
+
+:::
+
+</pre></div>
+</div>
 <p>See also:</p>
 <p>Share link:</p>
 <p><span class="xref myst">PDF documentation</span> Structuring a QGIS Project, cartONG QGIS-Tutorial, p. 7 - 9</p>
@@ -857,9 +826,8 @@ Structuring a QGIS Project, cartONG QGIS-Tutorial, p. 7 - 9 </a></section>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-qgis-concept">Intro QGIS concept</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-qgis">What is QGIS?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-qgis">Introducing QGIS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#from-excel-to-qgis">From Excel to QGIS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-attribute-table">The Attribute Table</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-qgis">Installation QGIS</a><ul class="nav section-nav flex-column">
@@ -868,10 +836,14 @@ Structuring a QGIS Project, cartONG QGIS-Tutorial, p. 7 - 9 </a></section>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-interface-description">QGIS interface description</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interface">Interface:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-qgis-interface">Overview of QGIS Interface</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#videos">Videos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-zoom">Move and Zoom</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-and-toolbars">Properties and Toolbars</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-and-open-project">Save and Open Project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">Configuration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#projection-of-map-view-project-crs">Projection of map view (project CRS)</a></li>
 </ul>
 </li>
 </ul>
