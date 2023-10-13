@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_4/en_qgis_map_design_I';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Spatial Geodataprocessing" href="../Modul_5/en_qgis_spatial_tools.html" />
+    <link rel="next" title="Mag design 2" href="en_qgis_map_design_2.html" />
     <link rel="prev" title="Selection and Queries Exercise 1" href="../Modul_3/en_qgis_data_queries_ex1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -213,7 +213,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_start.html">Getting started with QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="nav bd-sidenav">
@@ -249,6 +251,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Map design- Basic</a></li>
 
 
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="en_qgis_map_design_2.html">Mag design 2</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_map_design_I_ex1.html">Map design Exercise 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_map_design_I_ex2.html">Map design Exercise 1</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
@@ -470,9 +478,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-and-styling">Symbology and styling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology">Symbology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for vector data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-change-the-symbology-of-a-layer">Exercise: Change the symbology of a layer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-use-different-styles-in-a-single-layer">Exercise: Use different styles in a single layer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for vector data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-style-data-based-on-variable-ranges">Exercise: Style data based on variable ranges</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-a-layer">Adding labels to a layer</a></li>
@@ -493,19 +502,19 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-overview-map">Adding an overview map</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#good-practices-and-common-mistakes-in-mapping">Good practices and common mistakes in mapping</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-composition">Map composition</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-elements-of-a-map">Key elements of a map</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-4-semiological-errors">The 4 semiological errors</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#proportional-circles-vs-solid-colors">1. Proportional circles vs. solid colors</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#color-gradient-vs-distinct-color-palette">Color gradient vs. distinct color palette</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-in-a-single-color-vs-gradient-between-two-colors">Gradient in a single color vs. Gradient between two colors</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#limited-geometric-symbols-vs-complex-icons-and-symbols">Limited geometric symbols vs. complex icons and symbols</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#good-practices-and-common-mistakes-in-mapping">Good practices and common mistakes in mapping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-composition">Map composition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-elements-of-a-map">Key elements of a map</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-4-semiological-errors">The 4 semiological errors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proportional-circles-vs-solid-colors">1. Proportional circles vs. solid colors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#color-gradient-vs-distinct-color-palette">Color gradient vs. distinct color palette</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-in-a-single-color-vs-gradient-between-two-colors">Gradient in a single color vs. Gradient between two colors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limited-geometric-symbols-vs-complex-icons-and-symbols">Limited geometric symbols vs. complex icons and symbols</a></li>
 </ul>
 </li>
 </ul>
@@ -619,6 +628,10 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <li><p>Symbology is applied to layers, but within the same layer we can assign multiple styles to features</p></li>
 <li><p>the symbology of a layer can be <strong>changed based on one of its attributes</strong></p></li>
 </ul>
+<section id="symbology-for-vector-data">
+<h3>Symbology for vector data<a class="headerlink" href="#symbology-for-vector-data" title="Permalink to this heading">#</a></h3>
+<p>It is possible to convey information by assigning different symbology to variables.</p>
+</section>
 <section id="exercise-change-the-symbology-of-a-layer">
 <h3>Exercise: Change the symbology of a layer<a class="headerlink" href="#exercise-change-the-symbology-of-a-layer" title="Permalink to this heading">#</a></h3>
 <blockquote>
@@ -655,7 +668,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 </figcaption>
 </figure>
 <ol class="arabic simple" start="8">
-<li><p>__Repeat the same process for the Adm1 layer, using the same colour as for Adm0 (it will be in “Recent colors) and leave the stroke width at 0.26.</p></li>
+<li><p><strong>Repeat the same process</strong> for the Adm1 layer, using the same colour as for Adm0 (it will be in “Recent colors) and leave the stroke width at 0.26.</p></li>
 <li><p>Now we can see the boundaries of the country and its states, and behind that we cann see the districs (Adm2).</p></li>
 <li><p>Let’s make the districs layer’s style consistent with the others.</p></li>
 <li><p>Choose a <strong>Fill Color</strong></p></li>
@@ -670,12 +683,79 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <section id="exercise-use-different-styles-in-a-single-layer">
 <h3>Exercise: Use different styles in a single layer<a class="headerlink" href="#exercise-use-different-styles-in-a-single-layer" title="Permalink to this heading">#</a></h3>
 <p>We can use symbology to <strong>show the difference between features</strong> in the same layer. For example, it could be different types of buildings, quantities of Covid cases by district, or types of roads. We can choose a specific attribute of a dataset to assign different colors, outlines, or sizes to features:</p>
+<ol class="arabic simple">
+<li><p>From your shapefile folder, <strong>drag te ACLED security incidents shapefile onto your map</strong></p></li>
+<li><p>Open the layer <strong>Symbology</strong> and choose <strong>Categorized</strong> instead of Single Symbol.</p></li>
+</ol>
+<blockquote>
+<div><p>Categorized symbology is used when you have <em><strong>discrete</strong></em> variables.</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Now we need to <strong>choose which attributes we want to display through the symbology</strong>. In this case, it could be the number of casualtiees, or the actor who perpetrated the act. Let’s categorize the features by <strong>event_type</strong></p></li>
+<li><p>Click on <strong>“Classify” to list all the unique values contained in the event_type field</strong> (i.e. all the possible types of security incidents recorded in our table)</p></li>
+<li><p>Now we can <strong>change the style of each single value</strong></p></li>
+<li><p>Double click on Explosions</p></li>
+<li><p>At the bottom of the <strong>Symbol selector</strong> window, choose a symbol to make Explosion points stand our</p></li>
+<li><p>Click on OK, then Apply to preview what the layer will look like</p></li>
+<li><p>Click OK again</p></li>
+</ol>
+<figure class="align-default" id="categorized-layer-symbology-2">
+<a class="reference internal image-reference" href="fig/en_30.30.2_categorized_layer_symbology_2"><img alt="fig/en_30.30.2_categorized_layer_symbology_2" src="fig/en_30.30.2_categorized_layer_symbology_2" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">By double clicking on the <strong>unique values</strong> in the classified list, you can change the symbol for each value</span><a class="headerlink" href="#categorized-layer-symbology-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Now we have a map of Nigeria where you can locate the areas, that are affected by explosions more than others. On the map below, we also added text labels, which will be explained below.</p>
+<figure class="align-default" id="map-design-example-regions-affected-by-explosions-in-nigeria">
+<a class="reference internal image-reference" href="../../_images/en_exercise_map_design_example_Nigeria.png"><img alt="../../_images/en_exercise_map_design_example_Nigeria.png" src="../../_images/en_exercise_map_design_example_Nigeria.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Regions affected by explosions in Nigeria</span><a class="headerlink" href="#map-design-example-regions-affected-by-explosions-in-nigeria" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="symbology-for-vector-data">
-<h3>Symbology for vector data<a class="headerlink" href="#symbology-for-vector-data" title="Permalink to this heading">#</a></h3>
+<section id="exercise-style-data-based-on-variable-ranges">
+<h3>Exercise: Style data based on variable ranges<a class="headerlink" href="#exercise-style-data-based-on-variable-ranges" title="Permalink to this heading">#</a></h3>
+<p>If a layer contains numeric values that are continuous, they can be organized in intervals. These intervals can be displayed in graduated colours. In this exercise, we assign colours to Adm1 polygons based on the total population of each State.</p>
+<blockquote>
+<div><p>Don’t forget to check that they have access to the data</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>From <strong>Sharepoint</strong>, download the NGA_Adm1_Pop shapefile and save it in your shapefile folder</p></li>
+<li><p>In QGIS, turn off the Adm1 and Adm2 layer, leaving only Adm0</p></li>
+<li><p>Drag the shapefile you just downloaded into your map</p></li>
+<li><p>Open its Symbology options and choose “<strong>Graduated</strong>”</p></li>
+<li><p>Select the value you want to use to assign colours, in this case, it will be “<strong>population</strong>”</p></li>
+</ol>
+<figure class="align-default" id="symbology-of-variable-ranges-1">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_1.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_1.png" src="../../_images/en_30.30.2_symbology_variable_ranges_1.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">With variable ranges, select <strong>Graduated</strong> symbology and choose the attribute with continuous values</span><a class="headerlink" href="#symbology-of-variable-ranges-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p>Click on <strong>Classify</strong> to list all valued, divided in classes</p></li>
+<li><p>Choose <strong>how many classes</strong> you want the data to be divided into ‒ let’s say 4</p></li>
+<li><p>By default, the colour ramp will be red. However, red is not the rivht colour to use for population count, as it is generally used to communicate negative elements, such as food insecurity or cholera cases</p></li>
+<li><p>Click on the arrow next to <strong>Color Ramp</strong> to choose another combination of colours - let’s say a color ramp from white to blue</p></li>
+<li><p>Click Apply to preview the look of your layer, then OK</p></li>
+</ol>
+<figure class="align-default" id="symbology-of-variable-ranges-2">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_2.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_2.png" src="../../_images/en_30.30.2_symbology_variable_ranges_2.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">You can categorize the continuous values into classes and assign a colour ramp</span><a class="headerlink" href="#symbology-of-variable-ranges-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The following map shows the most populated States of Nigeria using a graduated colour categorization.</p>
+<figure class="align-default" id="map-design-example-state-population-nigeria">
+<a class="reference internal image-reference" href="fig/en_map_design_example_variable_ranges"><img alt="fig/en_map_design_example_variable_ranges" src="fig/en_map_design_example_variable_ranges" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">An unfinished map showing the population of Nigerian states</span><a class="headerlink" href="#map-design-example-state-population-nigeria" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="symbology-for-raster-data">
 <h3>Symbology for raster data<a class="headerlink" href="#symbology-for-raster-data" title="Permalink to this heading">#</a></h3>
+<p>The symbology of raster data is different than for vector data:</p>
 </section>
 <section id="labels">
 <h3>Labels<a class="headerlink" href="#labels" title="Permalink to this heading">#</a></h3>
@@ -706,7 +786,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="setting-up-labels">
 <a class="reference internal image-reference" href="fig/en_30.30.2_setting_up_labels"><img alt="fig/en_30.30.2_setting_up_labels" src="fig/en_30.30.2_setting_up_labels" style="width: 750px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Setting up labels in QGIS 30.30.2</span><a class="headerlink" href="#setting-up-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Setting up labels in QGIS 30.30.2</span><a class="headerlink" href="#setting-up-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -725,7 +805,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="adding-rule-based-labels">
 <a class="reference internal image-reference" href="fig/en.30.30.2_adding_rule-based_labels"><img alt="fig/en.30.30.2_adding_rule-based_labels" src="fig/en.30.30.2_adding_rule-based_labels" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="5">
@@ -739,7 +819,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="rule-based-labels-expression-builder">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png"><img alt="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" src="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -756,7 +836,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="create-print-layout">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_create_print_layout.png"><img alt="../../_images/en_30.30.2_create_print_layout.png" src="../../_images/en_30.30.2_create_print_layout.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Create a new Print Layout</span><a class="headerlink" href="#create-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Create a new Print Layout</span><a class="headerlink" href="#create-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="understanding-the-print-layout-composer">
@@ -764,7 +844,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="new-print-layout">
 <img alt="../../_images/en_30.30.2_understanding_the_print_layout_composer.png" src="../../_images/en_30.30.2_understanding_the_print_layout_composer.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">The interface of the Print Layout Composer</span><a class="headerlink" href="#new-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">The interface of the Print Layout Composer</span><a class="headerlink" href="#new-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple">
@@ -796,7 +876,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="add-a-new-map">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_a_map.png"><img alt="../../_images/en_30.30.2_adding_a_map.png" src="../../_images/en_30.30.2_adding_a_map.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Adding a new map to the Print Layout</span><a class="headerlink" href="#add-a-new-map" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Adding a new map to the Print Layout</span><a class="headerlink" href="#add-a-new-map" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -809,7 +889,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="add-text-to-the-print-layout">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_text.png"><img alt="../../_images/en_30.30.2_print_layout_add_text.png" src="../../_images/en_30.30.2_print_layout_add_text.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Adding text to the print Layout</span><a class="headerlink" href="#add-text-to-the-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Adding text to the print Layout</span><a class="headerlink" href="#add-text-to-the-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -824,7 +904,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="add-a-legend-to-the-print-layout">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_legend.png"><img alt="../../_images/en_30.30.2_print_layout_add_legend.png" src="../../_images/en_30.30.2_print_layout_add_legend.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Adding a legend to the print layout</span><a class="headerlink" href="#add-a-legend-to-the-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Adding a legend to the print layout</span><a class="headerlink" href="#add-a-legend-to-the-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In the <strong>item properties</strong> panel, if you keep the <strong>‘Auto update’</strong> option checked, new layers added to your project will automatically be added to the legend but you cannot control them individually (rename if necessary, reorder ot remove items).<br />
@@ -836,7 +916,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="round-number-for-scale">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_scale.png"><img alt="../../_images/en_30.30.2_print_layout_scale.png" src="../../_images/en_30.30.2_print_layout_scale.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Make sure that the scale is at a round number</span><a class="headerlink" href="#round-number-for-scale" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Make sure that the scale is at a round number</span><a class="headerlink" href="#round-number-for-scale" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To add a scale bar, you can use the <strong>add scale bar</strong> button on the <strong>left toolbar</strong>. In the <strong>Item Properties</strong> panel, customize the following functions</p>
@@ -851,7 +931,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="add-scale-bar">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_scale_bar.png"><img alt="../../_images/en_30.30.2_print_layout_add_scale_bar.png" src="../../_images/en_30.30.2_print_layout_add_scale_bar.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Add and customize the scale bar</span><a class="headerlink" href="#add-scale-bar" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Add and customize the scale bar</span><a class="headerlink" href="#add-scale-bar" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -874,19 +954,19 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="overview-map-preparation">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_overview_map_preparations.png"><img alt="../../_images/en_30.30.2_print_layout_overview_map_preparations.png" src="../../_images/en_30.30.2_print_layout_overview_map_preparations.png" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">An overview map should show important landmarks and borders</span><a class="headerlink" href="#overview-map-preparation" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">An overview map should show important landmarks and borders</span><a class="headerlink" href="#overview-map-preparation" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="add-overview-map">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_overview_map.png"><img alt="../../_images/en_30.30.2_print_layout_add_overview_map.png" src="../../_images/en_30.30.2_print_layout_add_overview_map.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Add an overview map and <strong>lock the layer</strong></span><a class="headerlink" href="#add-overview-map" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Add an overview map and <strong>lock the layer</strong></span><a class="headerlink" href="#add-overview-map" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="create-an-overview">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png"><img alt="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png" src="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Add a the extent of the main map to your overview map (the red rectangle on the overview)</span><a class="headerlink" href="#create-an-overview" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Add a the extent of the main map to your overview map (the red rectangle on the overview)</span><a class="headerlink" href="#create-an-overview" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition caution">
@@ -895,13 +975,14 @@ Once the option is unchecked, you can update the name of the layers, group them,
 </div>
 </section>
 </section>
-<section id="good-practices-and-common-mistakes-in-mapping">
-<h2>Good practices and common mistakes in mapping<a class="headerlink" href="#good-practices-and-common-mistakes-in-mapping" title="Permalink to this heading">#</a></h2>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="good-practices-and-common-mistakes-in-mapping">
+<h1>Good practices and common mistakes in mapping<a class="headerlink" href="#good-practices-and-common-mistakes-in-mapping" title="Permalink to this heading">#</a></h1>
 <p>In order to produce good maps, there are some <strong>basic rules</strong> to follow and common <strong>semiological mistakes</strong> to avoid.</p>
 <section id="map-composition">
-<h3>Map composition<a class="headerlink" href="#map-composition" title="Permalink to this heading">#</a></h3>
+<h2>Map composition<a class="headerlink" href="#map-composition" title="Permalink to this heading">#</a></h2>
 <section id="key-elements-of-a-map">
-<h4>Key elements of a map<a class="headerlink" href="#key-elements-of-a-map" title="Permalink to this heading">#</a></h4>
+<h3>Key elements of a map<a class="headerlink" href="#key-elements-of-a-map" title="Permalink to this heading">#</a></h3>
 <p>A map is never complete without the following elements:</p>
 <ul class="simple">
 <li><p>Title</p></li>
@@ -936,7 +1017,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="organized-legend">
 <a class="reference internal image-reference" href="../../_images/en_legend_good_practice.png"><img alt="../../_images/en_legend_good_practice.png" src="../../_images/en_legend_good_practice.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Example of a well organized legend</span><a class="headerlink" href="#organized-legend" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Example of a well organized legend</span><a class="headerlink" href="#organized-legend" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>The scale bar</strong> is essential to a map since it gives the correspondence between a distance measured on the map and the distance in the real world. There are two types of scales:</p>
@@ -951,7 +1032,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="scale-bar">
 <img alt="fig/example_scale_bar.png&quot;" src="fig/example_scale_bar.png&quot;" />
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">A scale bar</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">A scale bar</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Orientation</strong></p>
@@ -959,14 +1040,14 @@ Once the option is unchecked, you can update the name of the layers, group them,
 </section>
 </section>
 <section id="sources">
-<h3>Sources<a class="headerlink" href="#sources" title="Permalink to this heading">#</a></h3>
+<h2>Sources<a class="headerlink" href="#sources" title="Permalink to this heading">#</a></h2>
 <p>Any data represented on a map should have its sources indicated. This provides a record of the data used, but also references the author of the data. The reader will then be able to look for more information on the sources if he wishes. Open access geographic data, such as OpenStreetMap, are more and more numerous and must also be cited on the maps.</p>
 <p>It is possible to give the source of each data under the legend, or to do it in a dedicated space in the map. The level of precision of the sources varies according to the author or the precision of the data.</p>
 </section>
 <section id="the-4-semiological-errors">
-<h3>The 4 semiological errors<a class="headerlink" href="#the-4-semiological-errors" title="Permalink to this heading">#</a></h3>
+<h2>The 4 semiological errors<a class="headerlink" href="#the-4-semiological-errors" title="Permalink to this heading">#</a></h2>
 <section id="proportional-circles-vs-solid-colors">
-<h4>1. Proportional circles vs. solid colors<a class="headerlink" href="#proportional-circles-vs-solid-colors" title="Permalink to this heading">#</a></h4>
+<h3>1. Proportional circles vs. solid colors<a class="headerlink" href="#proportional-circles-vs-solid-colors" title="Permalink to this heading">#</a></h3>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>DO NOT represent <strong>quantitative</strong> stock character/data with a <strong>solid color</strong>.</p>
@@ -983,7 +1064,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 </div></blockquote>
 </section>
 <section id="color-gradient-vs-distinct-color-palette">
-<h4>Color gradient vs. distinct color palette<a class="headerlink" href="#color-gradient-vs-distinct-color-palette" title="Permalink to this heading">#</a></h4>
+<h3>Color gradient vs. distinct color palette<a class="headerlink" href="#color-gradient-vs-distinct-color-palette" title="Permalink to this heading">#</a></h3>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>DO NOT use a <strong>separate</strong> color palette to represent <strong>ordered entities</strong></p>
@@ -996,7 +1077,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 </ul>
 </section>
 <section id="gradient-in-a-single-color-vs-gradient-between-two-colors">
-<h4>Gradient in a single color vs. Gradient between two colors<a class="headerlink" href="#gradient-in-a-single-color-vs-gradient-between-two-colors" title="Permalink to this heading">#</a></h4>
+<h3>Gradient in a single color vs. Gradient between two colors<a class="headerlink" href="#gradient-in-a-single-color-vs-gradient-between-two-colors" title="Permalink to this heading">#</a></h3>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>DO NOT use a gradient across two colors for an always positive data.</p>
@@ -1015,7 +1096,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 </ul>
 </section>
 <section id="limited-geometric-symbols-vs-complex-icons-and-symbols">
-<h4>Limited geometric symbols vs. complex icons and symbols<a class="headerlink" href="#limited-geometric-symbols-vs-complex-icons-and-symbols" title="Permalink to this heading">#</a></h4>
+<h3>Limited geometric symbols vs. complex icons and symbols<a class="headerlink" href="#limited-geometric-symbols-vs-complex-icons-and-symbols" title="Permalink to this heading">#</a></h3>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>DO NOT use <strong>too many symbols</strong> in a thematic map</p>
@@ -1027,7 +1108,6 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
 <li><p>It complicates the map and limits its impact.</p></li>
 <li><p>Sometimes you are forced to represent several symbols, so you must be careful about overlapping points and overloading the map.</p></li>
 </ul>
-</section>
 </section>
 </section>
 </section>
@@ -1072,11 +1152,11 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
       </div>
     </a>
     <a class="right-next"
-       href="../Modul_5/en_qgis_spatial_tools.html"
+       href="en_qgis_map_design_2.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Spatial Geodataprocessing</p>
+        <p class="prev-next-title">Mag design 2</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1105,9 +1185,10 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-and-styling">Symbology and styling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology">Symbology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for vector data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-change-the-symbology-of-a-layer">Exercise: Change the symbology of a layer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-use-different-styles-in-a-single-layer">Exercise: Use different styles in a single layer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for vector data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-style-data-based-on-variable-ranges">Exercise: Style data based on variable ranges</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-a-layer">Adding labels to a layer</a></li>
@@ -1128,19 +1209,19 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-overview-map">Adding an overview map</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#good-practices-and-common-mistakes-in-mapping">Good practices and common mistakes in mapping</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-composition">Map composition</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-elements-of-a-map">Key elements of a map</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-4-semiological-errors">The 4 semiological errors</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#proportional-circles-vs-solid-colors">1. Proportional circles vs. solid colors</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#color-gradient-vs-distinct-color-palette">Color gradient vs. distinct color palette</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-in-a-single-color-vs-gradient-between-two-colors">Gradient in a single color vs. Gradient between two colors</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#limited-geometric-symbols-vs-complex-icons-and-symbols">Limited geometric symbols vs. complex icons and symbols</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#good-practices-and-common-mistakes-in-mapping">Good practices and common mistakes in mapping</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-composition">Map composition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-elements-of-a-map">Key elements of a map</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-4-semiological-errors">The 4 semiological errors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proportional-circles-vs-solid-colors">1. Proportional circles vs. solid colors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#color-gradient-vs-distinct-color-palette">Color gradient vs. distinct color palette</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-in-a-single-color-vs-gradient-between-two-colors">Gradient in a single color vs. Gradient between two colors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limited-geometric-symbols-vs-complex-icons-and-symbols">Limited geometric symbols vs. complex icons and symbols</a></li>
 </ul>
 </li>
 </ul>
