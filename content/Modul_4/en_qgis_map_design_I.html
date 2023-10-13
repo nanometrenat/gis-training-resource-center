@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_4/en_qgis_map_design_I';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Mag design 2" href="en_qgis_map_design_2.html" />
+    <link rel="next" title="Spatial Geodataprocessing" href="../Modul_5/en_qgis_spatial_tools.html" />
     <link rel="prev" title="Selection and Queries Exercise 1" href="../Modul_3/en_qgis_data_queries_ex1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -213,9 +213,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-
 <li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_start.html">Getting started with QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="nav bd-sidenav">
@@ -251,20 +249,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Map design- Basic</a></li>
 
 
-<li class="toctree-l1 has-children"><a class="reference internal" href="en_qgis_map_design_2.html">Mag design 2</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_map_design_I_ex1.html">Map design Exercise 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_map_design_I_ex2.html">Map design Exercise 1</a></li>
-</ul>
-</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 6- Data analysis with QGIS</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_6/en_qgis_data_analysis_theorie.html">Data analysis theorie</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -479,7 +468,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-and-styling">Symbology and styling</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology">Symbology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-change-the-symbology-of-a-layer">Exercise: Change the symbology of a layer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-use-different-styles-in-a-single-layer">Exercise: Use different styles in a single layer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for vector data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
@@ -617,6 +609,68 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <blockquote>
 <div><p>Should I continue this?</p>
 </div></blockquote>
+</section>
+<section id="symbology">
+<h2>Symbology<a class="headerlink" href="#symbology" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Symbology is used to change the look of features on a map</p></li>
+<li><p>It makes maps more visually appealing and easier to read</p></li>
+<li><p>Colors and styles represent a specific information</p></li>
+<li><p>Symbology is applied to layers, but within the same layer we can assign multiple styles to features</p></li>
+<li><p>the symbology of a layer can be <strong>changed based on one of its attributes</strong></p></li>
+</ul>
+<section id="exercise-change-the-symbology-of-a-layer">
+<h3>Exercise: Change the symbology of a layer<a class="headerlink" href="#exercise-change-the-symbology-of-a-layer" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>This is exercise 7 in the PPP. Participants will need the specific data.</p>
+</div></blockquote>
+<p>In this exercise, we will apply the same style to all features in the layer. We have the polygons for 3 administrative levels</p>
+<ol class="arabic simple">
+<li><p>Add the “Adm0”, “Adm1” and “Adm2” shapefiles to your Session 2 project.</p></li>
+<li><p>Order the layers so they are all visible: Put the Adm2 at the bottom, then the Adm1 then Adm0. At first, this might look weird because Adm0 will cover everything.</p></li>
+<li><p>Change the symbology of the Adm0 layer by opening the stlying panel and navigating to the Symbology tab. By default, the symbology type will be <strong>Single Symbol</strong>. This means that the same colours and contours will be applied to all the features in that layer.</p></li>
+</ol>
+<figure class="align-left" id="change-layer-style-1">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_changing_layer_style_1.png"><img alt="../../_images/en_30.30.2_changing_layer_style_1.png" src="../../_images/en_30.30.2_changing_layer_style_1.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Order the layers and navigate to the styling panel of the topmost layer</span><a class="headerlink" href="#change-layer-style-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-right" id="change-layer-style-2">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_changing_layer_style_2.png"><img alt="../../_images/en_30.30.2_changing_layer_style_2.png" src="../../_images/en_30.30.2_changing_layer_style_2.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Change the “Simple Fill”</span><a class="headerlink" href="#change-layer-style-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Click on “<strong>Simple Fill</strong>” to open the style options.</p></li>
+<li><p>Expand the “<strong>Fill Color</strong>” menu and check the <strong>Transparent Fill</strong> option. This will make only the boundaries visible, so <strong>we will be able to see the layer under this one</strong>.</p></li>
+<li><p>Choose a <strong>Stroke color</strong>, and make the <strong>Stroke width</strong> 0.66 Millimeters.</p></li>
+<li><p>Click OK</p></li>
+</ol>
+<figure class="align-default" id="change-layer-style-3">
+<img alt="../../_images/en_30.30.2_changing_layer_style_3.png" src="../../_images/en_30.30.2_changing_layer_style_3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">The styling of a vector data consists of the colour and the outline</span><a class="headerlink" href="#change-layer-style-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="8">
+<li><p>__Repeat the same process for the Adm1 layer, using the same colour as for Adm0 (it will be in “Recent colors) and leave the stroke width at 0.26.</p></li>
+<li><p>Now we can see the boundaries of the country and its states, and behind that we cann see the districs (Adm2).</p></li>
+<li><p>Let’s make the districs layer’s style consistent with the others.</p></li>
+<li><p>Choose a <strong>Fill Color</strong></p></li>
+<li><p>Use the same <strong>Stroke color</strong> as for Adm0 and Adm1, but make the width 0.1 Millimeters and the Stroke Style a <strong>Dash Line</strong></p></li>
+<li><p>Click OK and look at yout map: hopefully it’s starting to look nicer!</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember that <strong>the layer’s symbology is saved within your project file, not within your shapefile!</strong> If you share a shapefile with a colleague, it will have a different style when they add it to their own project.</p>
+</div>
+</section>
+<section id="exercise-use-different-styles-in-a-single-layer">
+<h3>Exercise: Use different styles in a single layer<a class="headerlink" href="#exercise-use-different-styles-in-a-single-layer" title="Permalink to this heading">#</a></h3>
+<p>We can use symbology to <strong>show the difference between features</strong> in the same layer. For example, it could be different types of buildings, quantities of Covid cases by district, or types of roads. We can choose a specific attribute of a dataset to assign different colors, outlines, or sizes to features:</p>
+</section>
 <section id="symbology-for-vector-data">
 <h3>Symbology for vector data<a class="headerlink" href="#symbology-for-vector-data" title="Permalink to this heading">#</a></h3>
 </section>
@@ -652,7 +706,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="setting-up-labels">
 <a class="reference internal image-reference" href="fig/en_30.30.2_setting_up_labels"><img alt="fig/en_30.30.2_setting_up_labels" src="fig/en_30.30.2_setting_up_labels" style="width: 750px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Setting up labels in QGIS 30.30.2</span><a class="headerlink" href="#setting-up-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Setting up labels in QGIS 30.30.2</span><a class="headerlink" href="#setting-up-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -671,7 +725,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="adding-rule-based-labels">
 <a class="reference internal image-reference" href="fig/en.30.30.2_adding_rule-based_labels"><img alt="fig/en.30.30.2_adding_rule-based_labels" src="fig/en.30.30.2_adding_rule-based_labels" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="5">
@@ -685,7 +739,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="rule-based-labels-expression-builder">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png"><img alt="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" src="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -702,7 +756,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="create-print-layout">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_create_print_layout.png"><img alt="../../_images/en_30.30.2_create_print_layout.png" src="../../_images/en_30.30.2_create_print_layout.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Create a new Print Layout</span><a class="headerlink" href="#create-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Create a new Print Layout</span><a class="headerlink" href="#create-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="understanding-the-print-layout-composer">
@@ -710,7 +764,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="new-print-layout">
 <img alt="../../_images/en_30.30.2_understanding_the_print_layout_composer.png" src="../../_images/en_30.30.2_understanding_the_print_layout_composer.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">The interface of the Print Layout Composer</span><a class="headerlink" href="#new-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">The interface of the Print Layout Composer</span><a class="headerlink" href="#new-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple">
@@ -742,7 +796,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="add-a-new-map">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_a_map.png"><img alt="../../_images/en_30.30.2_adding_a_map.png" src="../../_images/en_30.30.2_adding_a_map.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Adding a new map to the Print Layout</span><a class="headerlink" href="#add-a-new-map" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Adding a new map to the Print Layout</span><a class="headerlink" href="#add-a-new-map" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -755,7 +809,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="add-text-to-the-print-layout">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_text.png"><img alt="../../_images/en_30.30.2_print_layout_add_text.png" src="../../_images/en_30.30.2_print_layout_add_text.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Adding text to the print Layout</span><a class="headerlink" href="#add-text-to-the-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Adding text to the print Layout</span><a class="headerlink" href="#add-text-to-the-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -770,7 +824,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="add-a-legend-to-the-print-layout">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_legend.png"><img alt="../../_images/en_30.30.2_print_layout_add_legend.png" src="../../_images/en_30.30.2_print_layout_add_legend.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Adding a legend to the print layout</span><a class="headerlink" href="#add-a-legend-to-the-print-layout" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Adding a legend to the print layout</span><a class="headerlink" href="#add-a-legend-to-the-print-layout" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In the <strong>item properties</strong> panel, if you keep the <strong>‘Auto update’</strong> option checked, new layers added to your project will automatically be added to the legend but you cannot control them individually (rename if necessary, reorder ot remove items).<br />
@@ -782,7 +836,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="round-number-for-scale">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_scale.png"><img alt="../../_images/en_30.30.2_print_layout_scale.png" src="../../_images/en_30.30.2_print_layout_scale.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Make sure that the scale is at a round number</span><a class="headerlink" href="#round-number-for-scale" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Make sure that the scale is at a round number</span><a class="headerlink" href="#round-number-for-scale" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To add a scale bar, you can use the <strong>add scale bar</strong> button on the <strong>left toolbar</strong>. In the <strong>Item Properties</strong> panel, customize the following functions</p>
@@ -797,7 +851,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="add-scale-bar">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_scale_bar.png"><img alt="../../_images/en_30.30.2_print_layout_add_scale_bar.png" src="../../_images/en_30.30.2_print_layout_add_scale_bar.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Add and customize the scale bar</span><a class="headerlink" href="#add-scale-bar" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Add and customize the scale bar</span><a class="headerlink" href="#add-scale-bar" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -820,19 +874,19 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="overview-map-preparation">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_overview_map_preparations.png"><img alt="../../_images/en_30.30.2_print_layout_overview_map_preparations.png" src="../../_images/en_30.30.2_print_layout_overview_map_preparations.png" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">An overview map should show important landmarks and borders</span><a class="headerlink" href="#overview-map-preparation" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">An overview map should show important landmarks and borders</span><a class="headerlink" href="#overview-map-preparation" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="add-overview-map">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_overview_map.png"><img alt="../../_images/en_30.30.2_print_layout_add_overview_map.png" src="../../_images/en_30.30.2_print_layout_add_overview_map.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Add an overview map and <strong>lock the layer</strong></span><a class="headerlink" href="#add-overview-map" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Add an overview map and <strong>lock the layer</strong></span><a class="headerlink" href="#add-overview-map" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="create-an-overview">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png"><img alt="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png" src="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Add a the extent of the main map to your overview map (the red rectangle on the overview)</span><a class="headerlink" href="#create-an-overview" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Add a the extent of the main map to your overview map (the red rectangle on the overview)</span><a class="headerlink" href="#create-an-overview" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition caution">
@@ -882,7 +936,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="organized-legend">
 <a class="reference internal image-reference" href="../../_images/en_legend_good_practice.png"><img alt="../../_images/en_legend_good_practice.png" src="../../_images/en_legend_good_practice.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Example of a well organized legend</span><a class="headerlink" href="#organized-legend" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Example of a well organized legend</span><a class="headerlink" href="#organized-legend" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>The scale bar</strong> is essential to a map since it gives the correspondence between a distance measured on the map and the distance in the real world. There are two types of scales:</p>
@@ -897,7 +951,7 @@ Once the option is unchecked, you can update the name of the layers, group them,
 <figure class="align-default" id="scale-bar">
 <img alt="fig/example_scale_bar.png&quot;" src="fig/example_scale_bar.png&quot;" />
 <figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">A scale bar</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">A scale bar</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Orientation</strong></p>
@@ -1018,11 +1072,11 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
       </div>
     </a>
     <a class="right-next"
-       href="en_qgis_map_design_2.html"
+       href="../Modul_5/en_qgis_spatial_tools.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mag design 2</p>
+        <p class="prev-next-title">Spatial Geodataprocessing</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1049,7 +1103,10 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-and-styling">Symbology and styling</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology">Symbology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-change-the-symbology-of-a-layer">Exercise: Change the symbology of a layer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-use-different-styles-in-a-single-layer">Exercise: Use different styles in a single layer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for vector data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">

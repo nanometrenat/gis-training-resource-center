@@ -35,8 +35,6 @@ name: Thematic maps examples
 Examples for thematic maps
 ```
 
-
-
 ## Graphic Semiology
 
 __Definition__: A set of rules allowing the use of a __graphic sign systems__ to convey information. Graphic semiology uses visual variables to construct a system of signs, allowing the graphic translation of information.
@@ -100,6 +98,68 @@ For each layer in QGIS, there is a styling panel where you can change the symbol
 In the styling panel, you can change the symbology (1) and the labels (2).
 
 > Should I continue this?
+
+## Symbology
+
+- Symbology is used to change the look of features on a map
+- It makes maps more visually appealing and easier to read
+- Colors and styles represent a specific information
+- Symbology is applied to layers, but within the same layer we can assign multiple styles to features
+- the symbology of a layer can be __changed based on one of its attributes__
+
+### Exercise: Change the symbology of a layer
+>This is exercise 7 in the PPP. Participants will need the specific data.
+
+In this exercise, we will apply the same style to all features in the layer. We have the polygons for 3 administrative levels
+
+1. Add the "Adm0", "Adm1" and "Adm2" shapefiles to your Session 2 project.
+2. Order the layers so they are all visible: Put the Adm2 at the bottom, then the Adm1 then Adm0. At first, this might look weird because Adm0 will cover everything.
+3. Change the symbology of the Adm0 layer by opening the stlying panel and navigating to the Symbology tab. By default, the symbology type will be __Single Symbol__. This means that the same colours and contours will be applied to all the features in that layer.
+
+```{figure} ../../fig/en_30.30.2_changing_layer_style_1.png
+---
+name: change layer style 1
+height: 400px 
+align: left
+---
+Order the layers and navigate to the styling panel of the topmost layer
+```
+```{figure} ../../fig/en_30.30.2_changing_layer_style_2.png
+---
+name: change layer style 2
+width: 300 px
+align: right
+---
+Change the "Simple Fill"
+```
+
+4. Click on "__Simple Fill__" to open the style options.
+5. Expand the "__Fill Color__" menu and check the __Transparent Fill__ option. This will make only the boundaries visible, so __we will be able to see the layer under this one__.
+6. Choose a __Stroke color__, and make the __Stroke width__ 0.66 Millimeters.
+7. Click OK
+
+```{figure} ../../fig/en_30.30.2_changing_layer_style_3.png
+---
+name: change layer style 3
+---
+The styling of a vector data consists of the colour and the outline
+```
+
+8. __Repeat the same process for the Adm1 layer, using the same colour as for Adm0 (it will be in "Recent colors) and leave the stroke width at 0.26.
+9. Now we can see the boundaries of the country and its states, and behind that we cann see the districs (Adm2).
+10. Let's make the districs layer's style consistent with the others.
+11. Choose a __Fill Color__
+12. Use the same __Stroke color__ as for Adm0 and Adm1, but make the width 0.1 Millimeters and the Stroke Style a __Dash Line__
+13. Click OK and look at yout map: hopefully it's starting to look nicer!
+
+```{note} 
+Remember that __the layer's symbology is saved within your project file, not within your shapefile!__ If you share a shapefile with a colleague, it will have a different style when they add it to their own project.
+```
+
+### Exercise: Use different styles in a single layer
+
+We can use symbology to __show the difference between features__ in the same layer. For example, it could be different types of buildings, quantities of Covid cases by district, or types of roads. We can choose a specific attribute of a dataset to assign different colors, outlines, or sizes to features:
+
 
 
 ### Symbology for vector data

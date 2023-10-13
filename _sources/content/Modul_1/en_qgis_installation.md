@@ -1,4 +1,4 @@
-# QGIS Installation
+# Installation
 QGIS ist Open Source und daher frei und ohne Kosten für jeden verfügbar. Ihr könnt QGIS für Windows, Mac und Linux Rechner installieren. 
 
 ## Windows
