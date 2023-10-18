@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Map design Exercise 1 &#8212; GIS Resource Training Center</title>
+    <title>What is GIS? (Theory) &#8212; GIS Resource Training Center</title>
   
   
   
@@ -61,11 +61,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_4/en_qgis_map_design_I_ex1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_1/en_qgis_theorie';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Map design Exercise 1" href="en_qgis_map_design_I_ex2.html" />
-    <link rel="prev" title="Print layout" href="en_qgis_map_design_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -199,8 +197,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_start.html">Getting started with QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_installation.html">QGIS Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_start.html">Getting started with QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="nav bd-sidenav">
@@ -232,10 +230,10 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_2.html">Print layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_2.html">Print layout</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
@@ -326,7 +324,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/GIScience/gis-training-resource-center/issues/new?title=Issue%20on%20page%20%2Fcontent/Modul_4/en_qgis_map_design_I_ex1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/GIScience/gis-training-resource-center/issues/new?title=Issue%20on%20page%20%2Fcontent/Modul_1/en_qgis_theorie.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -356,7 +354,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/content/Modul_4/en_qgis_map_design_I_ex1.md" target="_blank"
+      <li><a href="../../_sources/content/Modul_1/en_qgis_theorie.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -438,7 +436,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Map design Exercise 1</h1>
+    <h1>What is GIS? (Theory)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -448,9 +446,37 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-change-the-symbology-of-a-layer">Exercise: Change the symbology of a layer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-use-different-styles-in-a-single-layer">Exercise: Use different styles in a single layer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-style-data-based-on-variable-ranges">Exercise: Style data based on variable ranges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-information">General Information:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-are-spatial-analyses-important">Why are Spatial Analyses important?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-gis">Introduction to GIS:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-use-gis-for">We use GIS for:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gis-in-humanitarian-responses">GIS in Humanitarian Responses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-galaxy-of-tools">A Galaxy of Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-overview">An Overview:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paper-maps-and-cartography">Paper Maps and Cartography</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-spatial-analysis">What is Spatial Analysis?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-from-the-past-john-snows-cholera-map">An Example from the Past: John Snows’ Cholera Map</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gis-vs-cartography">GIS vs Cartography</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reference-maps">General Reference Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#infrastructure-maps">Infrastructure Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thematic-maps">Thematic Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-maps">Analysis Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#situation-descriptive-maps">Situation/Descriptive Maps</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#web-gis-platforms">Web GIS platforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gis-applications">GIS Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-mobile-apps-overview-general-understanding">Geo Mobile Apps Overview (General Understanding)</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -462,128 +488,221 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="map-design-exercise-1">
-<h1>Map design Exercise 1<a class="headerlink" href="#map-design-exercise-1" title="Permalink to this heading">#</a></h1>
-<section id="exercise-change-the-symbology-of-a-layer">
-<h2>Exercise: Change the symbology of a layer<a class="headerlink" href="#exercise-change-the-symbology-of-a-layer" title="Permalink to this heading">#</a></h2>
-<blockquote>
-<div><p>This is exercise 7 in the PPP. Participants will need the specific data.</p>
-</div></blockquote>
-<p>In this exercise, we will apply the same style to all features in the layer. We have the polygons for 3 administrative levels</p>
-<ol class="arabic simple">
-<li><p>Add the “Adm0”, “Adm1” and “Adm2” shapefiles to your Session 2 project.</p></li>
-<li><p>Order the layers so they are all visible: Put the Adm2 at the bottom, then the Adm1 then Adm0. At first, this might look weird because Adm0 will cover everything.</p></li>
-<li><p>Change the symbology of the Adm0 layer by opening the stlying panel and navigating to the Symbology tab. By default, the symbology type will be <strong>Single Symbol</strong>. This means that the same colours and contours will be applied to all the features in that layer.</p></li>
-</ol>
-<figure class="align-left" id="change-layer-style-1">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_changing_layer_style_1.png"><img alt="../../_images/en_30.30.2_changing_layer_style_1.png" src="../../_images/en_30.30.2_changing_layer_style_1.png" style="height: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Order the layers and navigate to the styling panel of the topmost layer</span><a class="headerlink" href="#change-layer-style-1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-right" id="change-layer-style-2">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_changing_layer_style_2.png"><img alt="../../_images/en_30.30.2_changing_layer_style_2.png" src="../../_images/en_30.30.2_changing_layer_style_2.png" style="width: 300px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Change the “Simple Fill”</span><a class="headerlink" href="#change-layer-style-2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<ol class="arabic simple" start="4">
-<li><p>Click on “<strong>Simple Fill</strong>” to open the style options.</p></li>
-<li><p>Expand the “<strong>Fill Color</strong>” menu and check the <strong>Transparent Fill</strong> option. This will make only the boundaries visible, so <strong>we will be able to see the layer under this one</strong>.</p></li>
-<li><p>Choose a <strong>Stroke color</strong>, and make the <strong>Stroke width</strong> 0.66 Millimeters.</p></li>
-<li><p>Click OK</p></li>
-</ol>
-<figure class="align-default" id="change-layer-style-3">
-<img alt="../../_images/en_30.30.2_changing_layer_style_3.png" src="../../_images/en_30.30.2_changing_layer_style_3.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">The styling of a vector data consists of the colour and the outline</span><a class="headerlink" href="#change-layer-style-3" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<ol class="arabic simple" start="8">
-<li><p><strong>Repeat the same process</strong> for the Adm1 layer, using the same colour as for Adm0 (it will be in “Recent colors) and leave the stroke width at 0.26.</p></li>
-<li><p>Now we can see the boundaries of the country and its states, and behind that we cann see the districs (Adm2).</p></li>
-<li><p>Let’s make the districs layer’s style consistent with the others.</p></li>
-<li><p>Choose a <strong>Fill Color</strong></p></li>
-<li><p>Use the same <strong>Stroke color</strong> as for Adm0 and Adm1, but make the width 0.1 Millimeters and the Stroke Style a <strong>Dash Line</strong></p></li>
-<li><p>Click OK and look at yout map: hopefully it’s starting to look nicer!</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="what-is-gis-theory">
+<h1>What is GIS? (Theory)<a class="headerlink" href="#what-is-gis-theory" title="Permalink to this heading">#</a></h1>
+<section id="general-information">
+<h2>General Information:<a class="headerlink" href="#general-information" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A Geographic Information System (GIS) is a <strong>digital system that connects data to maps</strong>.</p></li>
+<li><p>Geoinformatics in general focus on the <strong>visualisation, organisation and processing of spatial data</strong>.</p></li>
+<li><p>Spatial analyses furthermore allow <strong>to reveal circumstances and connections between spatial data features</strong>:</p>
+<ul>
+<li><p>by making use of their spatial location, <strong>information layers</strong> (or features within a layer) can be analyzed in regard to each other to obtain new information.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="why-are-spatial-analyses-important">
+<h2>Why are Spatial Analyses important?<a class="headerlink" href="#why-are-spatial-analyses-important" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Remember that <strong>the layer’s symbology is saved within your project file, not within your shapefile!</strong> If you share a shapefile with a colleague, it will have a different style when they add it to their own project.</p>
+<p>Discuss in groups:</p>
 </div>
+<ul class="simple">
+<li><p>Situations in which you benefitted from spatial analyses.</p></li>
+<li><p>Situations in which you could may be have benefitted from spatial analyses.</p></li>
+<li><p>Main areas where you see potential for spatial analyses in your work.</p></li>
+</ul>
 </section>
-<section id="exercise-use-different-styles-in-a-single-layer">
-<h2>Exercise: Use different styles in a single layer<a class="headerlink" href="#exercise-use-different-styles-in-a-single-layer" title="Permalink to this heading">#</a></h2>
-<p>We can use symbology to <strong>show the difference between features</strong> in the same layer. For example, it could be different types of buildings, quantities of Covid cases by district, or types of roads. We can choose a specific attribute of a dataset to assign different colors, outlines, or sizes to features:</p>
-<ol class="arabic simple">
-<li><p>From your shapefile folder, <strong>drag te ACLED security incidents shapefile onto your map</strong></p></li>
-<li><p>Open the layer <strong>Symbology</strong> and choose <strong>Categorized</strong> instead of Single Symbol.</p></li>
-</ol>
-<blockquote>
-<div><p>Categorized symbology is used when you have <em><strong>discrete</strong></em> variables.</p>
-</div></blockquote>
-<ol class="arabic simple" start="3">
-<li><p>Now we need to <strong>choose which attributes we want to display through the symbology</strong>. In this case, it could be the number of casualtiees, or the actor who perpetrated the act. Let’s categorize the features by <strong>event_type</strong></p></li>
-<li><p>Click on <strong>“Classify” to list all the unique values contained in the event_type field</strong> (i.e. all the possible types of security incidents recorded in our table)</p></li>
-<li><p>Now we can <strong>change the style of each single value</strong></p></li>
-<li><p>Double click on Explosions</p></li>
-<li><p>At the bottom of the <strong>Symbol selector</strong> window, choose a symbol to make Explosion points stand our</p></li>
-<li><p>Click on OK, then Apply to preview what the layer will look like</p></li>
-<li><p>Click OK again</p></li>
-</ol>
-<figure class="align-default" id="categorized-layer-symbology-2">
-<a class="reference internal image-reference" href="fig/en_30.30.2_categorized_layer_symbology_2"><img alt="fig/en_30.30.2_categorized_layer_symbology_2" src="fig/en_30.30.2_categorized_layer_symbology_2" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">By double clicking on the <strong>unique values</strong> in the classified list, you can change the symbol for each value</span><a class="headerlink" href="#categorized-layer-symbology-2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Now we have a map of Nigeria where you can locate the areas, that are affected by explosions more than others. On the map below, we also added text labels, which will be explained below.</p>
-<figure class="align-default" id="map-design-example-regions-affected-by-explosions-in-nigeria">
-<a class="reference internal image-reference" href="../../_images/en_exercise_map_design_example_Nigeria.png"><img alt="../../_images/en_exercise_map_design_example_Nigeria.png" src="../../_images/en_exercise_map_design_example_Nigeria.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Regions affected by explosions in Nigeria</span><a class="headerlink" href="#map-design-example-regions-affected-by-explosions-in-nigeria" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<section id="introduction-to-gis">
+<h2>Introduction to GIS:<a class="headerlink" href="#introduction-to-gis" title="Permalink to this heading">#</a></h2>
+<section id="we-use-gis-for">
+<h3>We use GIS for:<a class="headerlink" href="#we-use-gis-for" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Creating interactive queries <strong>(Querying)</strong></p></li>
+<li><p>Analysing spatial information <strong>(Spatial analysis)</strong></p></li>
+<li><p>Editing and visualizing data in maps <strong>(Editing)</strong></p></li>
+<li><p>Present the results of all these operations <strong>(Map making)</strong></p></li>
+</ul>
 </section>
-<section id="exercise-style-data-based-on-variable-ranges">
-<h2>Exercise: Style data based on variable ranges<a class="headerlink" href="#exercise-style-data-based-on-variable-ranges" title="Permalink to this heading">#</a></h2>
-<p>If a layer contains numeric values that are continuous, they can be organized in intervals. These intervals can be displayed in graduated colours. In this exercise, we assign colours to Adm1 polygons based on the total population of each State.</p>
-<blockquote>
-<div><p>Don’t forget to check that they have access to the data</p>
-</div></blockquote>
-<ol class="arabic simple">
-<li><p>From <strong>Sharepoint</strong>, download the NGA_Adm1_Pop shapefile and save it in your shapefile folder</p></li>
-<li><p>In QGIS, turn off the Adm1 and Adm2 layer, leaving only Adm0</p></li>
-<li><p>Drag the shapefile you just downloaded into your map</p></li>
-<li><p>Open its Symbology options and choose “<strong>Graduated</strong>”</p></li>
-<li><p>Select the value you want to use to assign colours, in this case, it will be “<strong>population</strong>”</p></li>
-</ol>
-<figure class="align-default" id="symbology-of-variable-ranges-1">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_1.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_1.png" src="../../_images/en_30.30.2_symbology_variable_ranges_1.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">With variable ranges, select <strong>Graduated</strong> symbology and choose the attribute with continuous values</span><a class="headerlink" href="#symbology-of-variable-ranges-1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<ol class="arabic simple" start="6">
-<li><p>Click on <strong>Classify</strong> to list all valued, divided in classes</p></li>
-<li><p>Choose <strong>how many classes</strong> you want the data to be divided into ‒ let’s say 4</p></li>
-<li><p>By default, the colour ramp will be red. However, red is not the rivht colour to use for population count, as it is generally used to communicate negative elements, such as food insecurity or cholera cases</p></li>
-<li><p>Click on the arrow next to <strong>Color Ramp</strong> to choose another combination of colours - let’s say a color ramp from white to blue</p></li>
-<li><p>Click Apply to preview the look of your layer, then OK</p></li>
-</ol>
-<figure class="align-default" id="symbology-of-variable-ranges-2">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_2.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_2.png" src="../../_images/en_30.30.2_symbology_variable_ranges_2.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 32 </span><span class="caption-text">You can categorize the continuous values into classes and assign a colour ramp</span><a class="headerlink" href="#symbology-of-variable-ranges-2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>The following map shows the most populated States of Nigeria using a graduated colour categorization.</p>
-<figure class="align-default" id="map-design-example-state-population-nigeria">
-<a class="reference internal image-reference" href="fig/en_map_design_example_variable_ranges"><img alt="fig/en_map_design_example_variable_ranges" src="fig/en_map_design_example_variable_ranges" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">An unfinished map showing the population of Nigerian states</span><a class="headerlink" href="#map-design-example-state-population-nigeria" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<section id="gis-in-humanitarian-responses">
+<h3>GIS in Humanitarian Responses<a class="headerlink" href="#gis-in-humanitarian-responses" title="Permalink to this heading">#</a></h3>
+<p>GIS has many applications in the <strong>humanitarian field</strong>:</p>
+<ul class="simple">
+<li><p>Refugee/IDP camp planning</p></li>
+<li><p>Mapping remote areas to facilitate access</p></li>
+<li><p>Keep track of field operations</p></li>
+<li><p>Support security decisions</p></li>
+<li><p>Support operations planning</p></li>
+<li><p>Identify areas most affected by disasters</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A few examples:</p>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.reachresourcecentre.info/search/">REACH Initiative</a></p></li>
+<li><p><a class="reference external" href="https://hungermap.wfp.org/">World Food Programme (WFP)</a></p></li>
+<li><p><a class="reference external" href="https://geo.msf.org/catalogue">Médecins Sans Frontières (MSF)</a></p></li>
+<li><p><a class="reference external" href="https://immap.org/products/">iMMAP</a></p></li>
+<li><p><a class="reference external" href="https://maps.mapaction.org/">MapAction</a></p></li>
+</ul>
+</section>
+</section>
+<section id="a-galaxy-of-tools">
+<h2>A Galaxy of Tools<a class="headerlink" href="#a-galaxy-of-tools" title="Permalink to this heading">#</a></h2>
+<p>GIS comes with a <strong>galaxy of tools</strong> that are constantly evolving. An increasing number of traditional tools are now capable of supporting geographic information (Excel, Power BI, Adobe Illustrator…)</p>
+<section id="an-overview">
+<h3>An Overview:<a class="headerlink" href="#an-overview" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Mobile Data Collection Tools</strong></p></li>
+</ul>
+<p>The latter make it possible to collect data via mobile or tablet, and often to visualize and exchange it with other platforms according to a common format.</p>
+<ul class="simple">
+<li><p><strong>Mapping Tools</strong></p></li>
+</ul>
+<p>These tools provide a simple vizualisation of geographic data, and allow for the production of maps.</p>
+<ul class="simple">
+<li><p><strong>GIS Tools</strong></p></li>
+</ul>
+<p>As opposed to the previous ones, these more advanced tools are very comprehensive and allow for advanced analyses to be carried out on the geographical components of data.</p>
+<ul class="simple">
+<li><p><strong>Webmapping Tools</strong></p></li>
+</ul>
+<p>These tools make it possible to manipulate and create maps online in a very simple way directly in a web browser.</p>
+</section>
+</section>
+<section id="paper-maps-and-cartography">
+<h2>Paper Maps and Cartography<a class="headerlink" href="#paper-maps-and-cartography" title="Permalink to this heading">#</a></h2>
+<section id="what-is-spatial-analysis">
+<h3>What is Spatial Analysis?<a class="headerlink" href="#what-is-spatial-analysis" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Spatial analysis <strong>studies entities and events</strong> using their topological, geometric, or geographic properties.</p></li>
+<li><p>It includes a <strong>variety of techniques</strong> to analyse geographic data.</p></li>
+<li><p>Data can be <strong>added to a map as layers and they can interact with each other</strong>.</p></li>
+<li><p>GIS enables you to work with these <strong>layers</strong> to explore critically important questions and <strong>find answers</strong> to those questions.</p></li>
+</ul>
+<section id="an-example-from-the-past-john-snows-cholera-map">
+<h4>An Example from the Past: John Snows’ Cholera Map<a class="headerlink" href="#an-example-from-the-past-john-snows-cholera-map" title="Permalink to this heading">#</a></h4>
+<p>In 1854 an <strong>outbreak of cholera</strong> occurred in London, England. The most common theory was that the disease was spread through the air. Dr.John Snow believed that the danger was <strong>in the water</strong>. He made a map to analyse the <strong>number of deaths</strong> in Soho per house block. He added the <strong>location of water pumps</strong> on the map.
+He found a <strong>correlation</strong> between one specific water pump and the number of infections.</p>
+<p><strong>Dr. Snow’s map of the Cholera outbreak of 1854</strong>, and the reports that it accompanied, <strong>won over the predominant “Miasma Theory”</strong> that the disease <strong>was spread through the air</strong>. Residents were now warned to <strong>boil their water</strong>, and so ended the last Cholera outbreak London has seen.</p>
+<p><img alt="John Snows' Map" src="../../_images/en_John_Snows_Map.png" /> John Snows’ Map</p>
+<p><strong>Using GIS</strong>, several measures of spatial central tendency have been applied to the dataset, revealing that the Spatial Mean (the geographic center of the distribution of deaths) of the outbreak lies <strong>within 35 meters of the Broad Street Pump</strong>, identified as the <strong>source of contamination</strong> in the 1854 outbreak.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Further information:</p>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.arcgis.com/apps/PublicInformation/index.html?appid=d7deb67f810d46dfacb80ff80ac224e9">Let’s explore John Snow’s map</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="gis-vs-cartography">
+<h2>GIS vs Cartography<a class="headerlink" href="#gis-vs-cartography" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Cartography</strong> is the study and practice of <strong>making maps</strong>.</p></li>
+<li><p>A GIS is a <strong>modern extension</strong> of traditional cartography.</p></li>
+<li><p>Both contain examples of a <strong>base map</strong> to which additional data can be added.</p></li>
+<li><p>The differences are that there is no limit to the <strong>amount of additional data</strong> that can be added to a GIS map.</p></li>
+<li><p>Cartographic maps are often extremely simplified as there are limits to the amount of data that can be physically and meaningfully stored on a small map.</p></li>
+<li><p>GIS uses <strong>analysis and statistics</strong> to present data in support of particular arguments which a cartographic map cannot do.</p></li>
+<li><p>You can use GIS <strong>for</strong> cartography.</p></li>
+</ul>
+<p><tagName>  <tagName></p>
+<p><img alt="GIS vs Cartography" src="../../_images/en_GIS_vs_Cartography.png" /> GIS vs Cartography</p>
+<section id="general-reference-maps">
+<h3>General Reference Maps<a class="headerlink" href="#general-reference-maps" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Show important <strong>physical features</strong> of an area</p></li>
+<li><p>Include <strong>natural and man-made features</strong></p></li>
+<li><p>Usually meant to help for <strong>navigation</strong> or discovery of locations</p></li>
+<li><p>Usually fairly <strong>simple</strong></p></li>
+<li><p>Can be <strong>stylized</strong> based on the intended audience</p></li>
+</ul>
+<p><tagName>  <tagName></p>
+<p><img alt="Reference map of Iraq" src="../../_images/en_Reference_Map_Iraq.png" />  Reference map of Iraq</p>
+</section>
+<section id="infrastructure-maps">
+<h3>Infrastructure Maps<a class="headerlink" href="#infrastructure-maps" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Display relevant features and <strong>structures</strong> in a specific area</p></li>
+<li><p>Help <strong>planning</strong> and navigation</p></li>
+<li><p>High level of <strong>detail</strong></p></li>
+<li><p>Produced after field <strong>data collection</strong></p></li>
+</ul>
+<p><tagName>  <tagName></p>
+<p><img alt="Infrastructure map of Nigeria" src="../../_images/en_Infrastructure_Map_Nigeria.png" />
+Infrastructure map of Nigeria</p>
+</section>
+<section id="thematic-maps">
+<h3>Thematic Maps<a class="headerlink" href="#thematic-maps" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Focus on a <strong>specific theme</strong> or subject</p></li>
+<li><p>Features on the map <strong>represent the subject</strong> being mapped</p></li>
+<li><p>Use <strong>colours and shapes</strong> to display quantitative and qualitative data</p></li>
+<li><p>Rise <strong>awareness</strong> about a specific subject</p></li>
+</ul>
+<p><tagName>  <tagName></p>
+<p><img alt="Thematic map of Africa" src="../../_images/en_Thematic_Map_Africa.png" /> Thematic map of Africa</p>
+</section>
+<section id="analysis-maps">
+<h3>Analysis Maps<a class="headerlink" href="#analysis-maps" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Analyse data</strong> in respect to their geographic location</p></li>
+<li><p>Create <strong>new layers of information</strong> from the interaction between multiple features</p></li>
+<li><p>Use colours and shapes <strong>to help users</strong> understand specific events</p></li>
+<li><p><strong>Support</strong> decision makers</p></li>
+<li><p>Generally display a greater <strong>level of detail</strong></p></li>
+</ul>
+<p><tagName>  <tagName></p>
+<p><img alt="Analysis map of Yemen" src="../../_images/en_Analysis_Map_Yemen.png" /> Analysis map of Yemen</p>
+</section>
+<section id="situation-descriptive-maps">
+<h3>Situation/Descriptive Maps<a class="headerlink" href="#situation-descriptive-maps" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Used to <strong>better visualize</strong> a specific ongoing and/or past situation</p></li>
+<li><p>Maps can include <strong>narrative</strong> and graphic elements</p></li>
+<li><p>Can be used in reports and/or to <strong>raise awareness</strong> on a specific event</p></li>
+</ul>
+<p><tagName>  <tagName></p>
+<p><img alt="Situation map from Tilkaif to Mosul" src="../../_images/en_Situation_Map_Tilkaif_Mosul.png" />Situation map from Tilkaif to Mosul</p>
+</section>
+</section>
+<section id="web-gis-platforms">
+<h2>Web GIS platforms<a class="headerlink" href="#web-gis-platforms" title="Permalink to this heading">#</a></h2>
+<section id="gis-applications">
+<h3>GIS Applications<a class="headerlink" href="#gis-applications" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>You can use GIS through <strong>multiple applications</strong>, from desktop software, to online platforms, to mobile apps.</p></li>
+<li><p>At a basic level, you can perform limited geospatial tasks with apps such as <strong>Google Earth</strong> or <strong>Google Maps</strong>.</p></li>
+<li><p>As a GIS professional, you will mostly use a <strong>desktop software</strong>, which could be either: Proprietary or Open source.</p></li>
+<li><p><strong>Open Street Maps (OSM)</strong>:
+<a class="reference external" href="https://www.openstreetmap.org/#map=14/49.4192/8.7235">https://www.openstreetmap.org/#map=14/49.4192/8.7235</a>
+An <strong>open geographic database</strong> updated and maintained by a community of volunteers via open collaboration. It works using a tag system (each feature is categorized through tags).</p></li>
+<li><p><strong>uMap</strong>: <a class="reference external" href="https://umap.openstreetmap.fr/en/">https://umap.openstreetmap.fr/en/</a>
+Online tool to create maps <strong>using OSM layers</strong>.</p></li>
+<li><p><strong>Felt</strong>: <span class="xref myst">https://felt.com/</span>
+An <strong>easy tool</strong> to create maps. You can draw, create feature and upload shapefiles.</p></li>
+<li><p><strong>Wikimapia:</strong> <a class="reference external" href="https://wikimapia.org/#lang=de&amp;lat=49.402500&amp;lon=8.633100&amp;z=12&amp;m=w">https://wikimapia.org/#lang=de&amp;lat=49.402500&amp;lon=8.633100&amp;z=12&amp;m=w</a>
+Online editable map service. Updated and maintained by contributors all over the world. It uses <strong>local knowledge</strong>, making it particularly useful in remote areas.</p></li>
+<li><p><strong>Google Maps:</strong> <a class="reference external" href="https://www.google.com/maps/d/">https://www.google.com/maps/d/</a>
+Limited, but it allows to upload layers, create and export features, <strong>share simple maps</strong>.</p></li>
+</ul>
+</section>
+<section id="geo-mobile-apps-overview-general-understanding">
+<h3>Geo Mobile Apps Overview (General Understanding)<a class="headerlink" href="#geo-mobile-apps-overview-general-understanding" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Qfield</strong>: <a class="reference external" href="https://docs.qfield.org/">https://docs.qfield.org/</a>
+Through QFieldCloud, you can <strong>open your QGIS projects</strong> on Qfield on your mobile device. Any edit made on the map in the app can then be synced and displayed in QGIS.</p></li>
+<li><p><strong>OsmAnd</strong>: <a class="reference external" href="https://osmand.net/">https://osmand.net/</a>
+Using OSM basemap, it’s a good app for <strong>offline navigation</strong>. You can upload kml-files to display on the map, as well as recording your trips and then export them to kml.</p></li>
+<li><p><strong>GeoODK</strong>: <a class="reference external" href="http://geoodk.com/index.html">http://geoodk.com/index.html</a>
+Combines <strong>ODK with a geo app</strong>. You can collect data through ODK surveys and display them on a map, in addition to easily create polygons and add information to them.</p></li>
+</ul>
+<p><tagName>  <tagName></p>
+</section>
 </section>
 </section>
 
@@ -600,7 +719,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_4"
+            path: "./content\Modul_1"
         },
         predefinedOutput: true
     }
@@ -618,24 +737,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="en_qgis_map_design_2.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Print layout</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="en_qgis_map_design_I_ex2.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Map design Exercise 1</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -654,9 +755,37 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-change-the-symbology-of-a-layer">Exercise: Change the symbology of a layer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-use-different-styles-in-a-single-layer">Exercise: Use different styles in a single layer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-style-data-based-on-variable-ranges">Exercise: Style data based on variable ranges</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-information">General Information:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-are-spatial-analyses-important">Why are Spatial Analyses important?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-gis">Introduction to GIS:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-use-gis-for">We use GIS for:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gis-in-humanitarian-responses">GIS in Humanitarian Responses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-galaxy-of-tools">A Galaxy of Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-overview">An Overview:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paper-maps-and-cartography">Paper Maps and Cartography</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-spatial-analysis">What is Spatial Analysis?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-from-the-past-john-snows-cholera-map">An Example from the Past: John Snows’ Cholera Map</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gis-vs-cartography">GIS vs Cartography</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reference-maps">General Reference Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#infrastructure-maps">Infrastructure Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thematic-maps">Thematic Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-maps">Analysis Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#situation-descriptive-maps">Situation/Descriptive Maps</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#web-gis-platforms">Web GIS platforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gis-applications">GIS Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-mobile-apps-overview-general-understanding">Geo Mobile Apps Overview (General Understanding)</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

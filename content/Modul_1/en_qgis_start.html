@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="QGIS Installation" href="en_qgis_installation.html" />
-    <link rel="prev" title="What is GIS? (Theory)" href="en_gis_theorie.html" />
+    <link rel="prev" title="Non-Spatial Joins" href="../Wiki/en_qgis_non_spatial_joins_wiki.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -199,7 +199,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="en_gis_theorie.html">What is GIS? (Theory)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting started with QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
@@ -234,8 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Map design- Basic</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_2.html">Print layout</a></li>
 
@@ -456,12 +454,13 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-qgis">Introducing QGIS</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-interface">QGIS Interface</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-zoom">Move and Zoom</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-functionalities">Further Functionalities</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-the-map-view">Move the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-the-map-view">Zooming in the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-properties-of-objects">Show properties of objects</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-projection-of-the-map-view-project-crs">Set the projection of the map view (project CRS)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-and-open-project">Save and Open Project</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-project">Open Project</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-project">Save Project</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays">Show and hide displays</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-arrange-toolbars">Move and arrange toolbars</a></li>
 </ul>
@@ -530,8 +529,8 @@ Toolbox</p>
 <p><img alt="Project template" src="../../_images/en_project_template_BRC.png" />
 Project template</p>
 </section>
-<section id="move-and-zoom">
-<h3>Move and Zoom<a class="headerlink" href="#move-and-zoom" title="Permalink to this heading">#</a></h3>
+<section id="further-functionalities">
+<h3>Further Functionalities<a class="headerlink" href="#further-functionalities" title="Permalink to this heading">#</a></h3>
 <section id="move-the-map-view">
 <h4>Move the map view<a class="headerlink" href="#move-the-map-view" title="Permalink to this heading">#</a></h4>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_move.mp4"></video></p>
@@ -559,13 +558,19 @@ Project template</p>
 <section id="set-the-projection-of-the-map-view-project-crs">
 <h4>Set the projection of the map view (project CRS)<a class="headerlink" href="#set-the-projection-of-the-map-view-project-crs" title="Permalink to this heading">#</a></h4>
 <p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/325cb2d70b0154c1bd5f38a899cd2b40/qgis_map_projection.mp4"></video></p>
-</section>
-<section id="save-and-open-project">
-<h4>Save and Open Project<a class="headerlink" href="#save-and-open-project" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/8e2bb629d9c3189f8f635a4cf1381d2c/qgis_save_project.mp4"></video></p>
-<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/1655b97b741749bfa46c6c08ee3d0be6/qgis_open_project.mp4"></video></p>
 <ul class="simple">
-<li><p>The layer data used in the project is not saved in the project file. Instead, the project file only contains the file paths where the layer data were located at the time the project was last saved on the PC. If the location of this layer data is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.
+<li><p>Geodata concepts are explained in detail in <a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html"><span class="doc std std-doc">module 2</span></a></p></li>
+</ul>
+</section>
+<section id="open-project">
+<h4>Open Project<a class="headerlink" href="#open-project" title="Permalink to this heading">#</a></h4>
+<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/1655b97b741749bfa46c6c08ee3d0be6/qgis_open_project.mp4"></video></p>
+</section>
+<section id="save-project">
+<h4>Save Project<a class="headerlink" href="#save-project" title="Permalink to this heading">#</a></h4>
+<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/8e2bb629d9c3189f8f635a4cf1381d2c/qgis_save_project.mp4"></video></p>
+<ul class="simple">
+<li><p>The layer data used in the project are not saved in the project file. Instead, the project file only contains the file paths where the layer data were located at the time the project was last saved on the PC. If the location of this layer data is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.
 Good data organisation with a fixed and well thought-out folder structure prevents such problems.</p></li>
 </ul>
 </section>
@@ -619,12 +624,12 @@ Good data organisation with a fixed and well thought-out folder structure preven
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="en_gis_theorie.html"
+       href="../Wiki/en_qgis_non_spatial_joins_wiki.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">What is GIS? (Theory)</p>
+        <p class="prev-next-title">Non-Spatial Joins</p>
       </div>
     </a>
     <a class="right-next"
@@ -660,12 +665,13 @@ Good data organisation with a fixed and well thought-out folder structure preven
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-qgis">Introducing QGIS</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-interface">QGIS Interface</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-zoom">Move and Zoom</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-functionalities">Further Functionalities</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-the-map-view">Move the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-the-map-view">Zooming in the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-properties-of-objects">Show properties of objects</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-projection-of-the-map-view-project-crs">Set the projection of the map view (project CRS)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-and-open-project">Save and Open Project</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-project">Open Project</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-project">Save Project</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays">Show and hide displays</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-arrange-toolbars">Move and arrange toolbars</a></li>
 </ul>

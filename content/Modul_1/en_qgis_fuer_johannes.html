@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Map design Exercise 1 &#8212; GIS Resource Training Center</title>
+    <title>Non-Spatial Analyses in QGIS &#8212; GIS Resource Training Center</title>
   
   
   
@@ -61,11 +61,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_4/en_qgis_map_design_I_ex1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_1/en_qgis_fuer_johannes';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Map design Exercise 1" href="en_qgis_map_design_I_ex2.html" />
-    <link rel="prev" title="Print layout" href="en_qgis_map_design_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -199,8 +197,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_start.html">Getting started with QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_installation.html">QGIS Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_start.html">Getting started with QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="nav bd-sidenav">
@@ -232,10 +230,10 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_2.html">Print layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_2.html">Print layout</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
@@ -326,7 +324,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/GIScience/gis-training-resource-center/issues/new?title=Issue%20on%20page%20%2Fcontent/Modul_4/en_qgis_map_design_I_ex1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/GIScience/gis-training-resource-center/issues/new?title=Issue%20on%20page%20%2Fcontent/Modul_1/en_qgis_fuer_johannes.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -356,7 +354,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/content/Modul_4/en_qgis_map_design_I_ex1.md" target="_blank"
+      <li><a href="../../_sources/content/Modul_1/en_qgis_fuer_johannes.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -438,7 +436,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Map design Exercise 1</h1>
+    <h1>Non-Spatial Analyses in QGIS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -448,10 +446,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-change-the-symbology-of-a-layer">Exercise: Change the symbology of a layer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-use-different-styles-in-a-single-layer">Exercise: Use different styles in a single layer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-style-data-based-on-variable-ranges">Exercise: Style data based on variable ranges</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Non-Spatial Analyses in QGIS</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geoprocessing-tools-overview-and-selection">Geoprocessing Tools - Overview and Selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer-with-and-without-dissolve">Buffer: with and without “Dissolve”</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-joins-in-qgis">Non-Spatial Joins in QGIS</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-joins-in-qgis">Spatial Joins in QGIS</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -462,129 +465,100 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="map-design-exercise-1">
-<h1>Map design Exercise 1<a class="headerlink" href="#map-design-exercise-1" title="Permalink to this heading">#</a></h1>
-<section id="exercise-change-the-symbology-of-a-layer">
-<h2>Exercise: Change the symbology of a layer<a class="headerlink" href="#exercise-change-the-symbology-of-a-layer" title="Permalink to this heading">#</a></h2>
-<blockquote>
-<div><p>This is exercise 7 in the PPP. Participants will need the specific data.</p>
-</div></blockquote>
-<p>In this exercise, we will apply the same style to all features in the layer. We have the polygons for 3 administrative levels</p>
-<ol class="arabic simple">
-<li><p>Add the “Adm0”, “Adm1” and “Adm2” shapefiles to your Session 2 project.</p></li>
-<li><p>Order the layers so they are all visible: Put the Adm2 at the bottom, then the Adm1 then Adm0. At first, this might look weird because Adm0 will cover everything.</p></li>
-<li><p>Change the symbology of the Adm0 layer by opening the stlying panel and navigating to the Symbology tab. By default, the symbology type will be <strong>Single Symbol</strong>. This means that the same colours and contours will be applied to all the features in that layer.</p></li>
-</ol>
-<figure class="align-left" id="change-layer-style-1">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_changing_layer_style_1.png"><img alt="../../_images/en_30.30.2_changing_layer_style_1.png" src="../../_images/en_30.30.2_changing_layer_style_1.png" style="height: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Order the layers and navigate to the styling panel of the topmost layer</span><a class="headerlink" href="#change-layer-style-1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-right" id="change-layer-style-2">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_changing_layer_style_2.png"><img alt="../../_images/en_30.30.2_changing_layer_style_2.png" src="../../_images/en_30.30.2_changing_layer_style_2.png" style="width: 300px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Change the “Simple Fill”</span><a class="headerlink" href="#change-layer-style-2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<ol class="arabic simple" start="4">
-<li><p>Click on “<strong>Simple Fill</strong>” to open the style options.</p></li>
-<li><p>Expand the “<strong>Fill Color</strong>” menu and check the <strong>Transparent Fill</strong> option. This will make only the boundaries visible, so <strong>we will be able to see the layer under this one</strong>.</p></li>
-<li><p>Choose a <strong>Stroke color</strong>, and make the <strong>Stroke width</strong> 0.66 Millimeters.</p></li>
-<li><p>Click OK</p></li>
-</ol>
-<figure class="align-default" id="change-layer-style-3">
-<img alt="../../_images/en_30.30.2_changing_layer_style_3.png" src="../../_images/en_30.30.2_changing_layer_style_3.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">The styling of a vector data consists of the colour and the outline</span><a class="headerlink" href="#change-layer-style-3" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<ol class="arabic simple" start="8">
-<li><p><strong>Repeat the same process</strong> for the Adm1 layer, using the same colour as for Adm0 (it will be in “Recent colors) and leave the stroke width at 0.26.</p></li>
-<li><p>Now we can see the boundaries of the country and its states, and behind that we cann see the districs (Adm2).</p></li>
-<li><p>Let’s make the districs layer’s style consistent with the others.</p></li>
-<li><p>Choose a <strong>Fill Color</strong></p></li>
-<li><p>Use the same <strong>Stroke color</strong> as for Adm0 and Adm1, but make the width 0.1 Millimeters and the Stroke Style a <strong>Dash Line</strong></p></li>
-<li><p>Click OK and look at yout map: hopefully it’s starting to look nicer!</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Remember that <strong>the layer’s symbology is saved within your project file, not within your shapefile!</strong> If you share a shapefile with a colleague, it will have a different style when they add it to their own project.</p>
+  <section id="non-spatial-analyses-in-qgis">
+<h1>Non-Spatial Analyses in QGIS<a class="headerlink" href="#non-spatial-analyses-in-qgis" title="Permalink to this heading">#</a></h1>
+<section id="geoprocessing-tools-overview-and-selection">
+<h2>Geoprocessing Tools - Overview and Selection<a class="headerlink" href="#geoprocessing-tools-overview-and-selection" title="Permalink to this heading">#</a></h2>
+<p><img alt="Geoprocessing icons" src="../../_images/en_geoprocessing_icons.png" /></p>
+<p><img alt="Geoprocessing tools" src="../../_images/en_geoprocessing_tools.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Example for a clip:</p>
 </div>
+<p>Creates a <strong>selection</strong> based on the spatial relationship between each feature in the input layer and the features in an additional layer.</p>
+<p>Step by step:</p>
+<ul class="simple">
+<li><p><strong>Input Layer</strong>: Layer from which the selection is clipped</p></li>
+<li><p><strong>Overlay Layer</strong>: Area of interest that the input layer will be clipped to</p></li>
+</ul>
+<p><tagName>  <tagName></p>
+<p><img alt="Clip" src="../../_images/en_clip.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Example for a buffer:</p>
+</div>
+<ul class="simple">
+<li><p><strong>Computes (a) buffer area(s)</strong> for all the features in an input layer, using a specified distance</p></li>
+</ul>
+<p>Step by step:</p>
+<ul class="simple">
+<li><p><strong>Input Layer</strong>: Layer around which features the buffer(s) are to be created</p></li>
+<li><p><strong>Distance</strong>: Choose a value and unit (make sure that your input data is projected)</p></li>
+<li><p><strong>Segments</strong>: Add value</p></li>
+<li><p>Mark <strong>„Dissolve result“</strong> to automatically dissolve the buffer outputs</p></li>
+<li><p>If individual buffers are needed, leave <strong>blank</strong></p></li>
+</ul>
+<p><tagName>  <tagName></p>
+<p><img alt="Buffer" src="../../_images/en_buffer.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Examples for buffer usage:</p>
+</div>
+<p>Philippines: Taal Volcano, Base surge hazard map
+<a class="reference external" href="https://www.phivolcs.dost.gov.ph/vault/1BaseSurge_Layout-Jan2020_A0_v5.jpg">https://www.phivolcs.dost.gov.ph/vault/1BaseSurge_Layout-Jan2020_A0_v5.jpg</a></p>
+<p><img alt="Taal Volcano" src="../../_images/en_Taal_Volcano.png" /></p>
+<p>Nepal: Earthquake, april 2015
+<a class="reference external" href="https://reliefweb.int/sites/reliefweb.int/files/resources/reach_npl_map_earthquakeaffected_27apr2015_a3.pdf">https://reliefweb.int/sites/reliefweb.int/files/resources/reach_npl_map_earthquakeaffected_27apr2015_a3.pdf</a></p>
+<p><img alt="Nepal Earthquake" src="../../_images/en_Nepal_earthquake.png" /></p>
+<p>Fukushima: may 2011, Integrated doce results<br>
+<a class="reference external" href="https://www.emsics.com/five-years-fukushima-incident-management-considerations/">https://www.emsics.com/five-years-fukushima-incident-management-considerations/</a></p>
+<p><img alt="Aerial measuring results" src="../../_images/en_Aerial_measuring_results.jpg" /></p>
 </section>
-<section id="exercise-use-different-styles-in-a-single-layer">
-<h2>Exercise: Use different styles in a single layer<a class="headerlink" href="#exercise-use-different-styles-in-a-single-layer" title="Permalink to this heading">#</a></h2>
-<p>We can use symbology to <strong>show the difference between features</strong> in the same layer. For example, it could be different types of buildings, quantities of Covid cases by district, or types of roads. We can choose a specific attribute of a dataset to assign different colors, outlines, or sizes to features:</p>
-<ol class="arabic simple">
-<li><p>From your shapefile folder, <strong>drag te ACLED security incidents shapefile onto your map</strong></p></li>
-<li><p>Open the layer <strong>Symbology</strong> and choose <strong>Categorized</strong> instead of Single Symbol.</p></li>
-</ol>
-<blockquote>
-<div><p>Categorized symbology is used when you have <em><strong>discrete</strong></em> variables.</p>
-</div></blockquote>
-<ol class="arabic simple" start="3">
-<li><p>Now we need to <strong>choose which attributes we want to display through the symbology</strong>. In this case, it could be the number of casualtiees, or the actor who perpetrated the act. Let’s categorize the features by <strong>event_type</strong></p></li>
-<li><p>Click on <strong>“Classify” to list all the unique values contained in the event_type field</strong> (i.e. all the possible types of security incidents recorded in our table)</p></li>
-<li><p>Now we can <strong>change the style of each single value</strong></p></li>
-<li><p>Double click on Explosions</p></li>
-<li><p>At the bottom of the <strong>Symbol selector</strong> window, choose a symbol to make Explosion points stand our</p></li>
-<li><p>Click on OK, then Apply to preview what the layer will look like</p></li>
-<li><p>Click OK again</p></li>
-</ol>
-<figure class="align-default" id="categorized-layer-symbology-2">
-<a class="reference internal image-reference" href="fig/en_30.30.2_categorized_layer_symbology_2"><img alt="fig/en_30.30.2_categorized_layer_symbology_2" src="fig/en_30.30.2_categorized_layer_symbology_2" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">By double clicking on the <strong>unique values</strong> in the classified list, you can change the symbol for each value</span><a class="headerlink" href="#categorized-layer-symbology-2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Now we have a map of Nigeria where you can locate the areas, that are affected by explosions more than others. On the map below, we also added text labels, which will be explained below.</p>
-<figure class="align-default" id="map-design-example-regions-affected-by-explosions-in-nigeria">
-<a class="reference internal image-reference" href="../../_images/en_exercise_map_design_example_Nigeria.png"><img alt="../../_images/en_exercise_map_design_example_Nigeria.png" src="../../_images/en_exercise_map_design_example_Nigeria.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Regions affected by explosions in Nigeria</span><a class="headerlink" href="#map-design-example-regions-affected-by-explosions-in-nigeria" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<section id="buffer-with-and-without-dissolve">
+<h2>Buffer: with and without “Dissolve”<a class="headerlink" href="#buffer-with-and-without-dissolve" title="Permalink to this heading">#</a></h2>
+<p>With dissolve results:</p>
+<p><img alt="With dissolve results" src="../../_images/en_dissolve_results.png" /></p>
+<p>Without dissolve results:</p>
+<p><img alt="Without dissolve results" src="../../_images/en_without_dissolve_results.png" /></p>
 </section>
-<section id="exercise-style-data-based-on-variable-ranges">
-<h2>Exercise: Style data based on variable ranges<a class="headerlink" href="#exercise-style-data-based-on-variable-ranges" title="Permalink to this heading">#</a></h2>
-<p>If a layer contains numeric values that are continuous, they can be organized in intervals. These intervals can be displayed in graduated colours. In this exercise, we assign colours to Adm1 polygons based on the total population of each State.</p>
-<blockquote>
-<div><p>Don’t forget to check that they have access to the data</p>
-</div></blockquote>
-<ol class="arabic simple">
-<li><p>From <strong>Sharepoint</strong>, download the NGA_Adm1_Pop shapefile and save it in your shapefile folder</p></li>
-<li><p>In QGIS, turn off the Adm1 and Adm2 layer, leaving only Adm0</p></li>
-<li><p>Drag the shapefile you just downloaded into your map</p></li>
-<li><p>Open its Symbology options and choose “<strong>Graduated</strong>”</p></li>
-<li><p>Select the value you want to use to assign colours, in this case, it will be “<strong>population</strong>”</p></li>
-</ol>
-<figure class="align-default" id="symbology-of-variable-ranges-1">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_1.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_1.png" src="../../_images/en_30.30.2_symbology_variable_ranges_1.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">With variable ranges, select <strong>Graduated</strong> symbology and choose the attribute with continuous values</span><a class="headerlink" href="#symbology-of-variable-ranges-1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<ol class="arabic simple" start="6">
-<li><p>Click on <strong>Classify</strong> to list all valued, divided in classes</p></li>
-<li><p>Choose <strong>how many classes</strong> you want the data to be divided into ‒ let’s say 4</p></li>
-<li><p>By default, the colour ramp will be red. However, red is not the rivht colour to use for population count, as it is generally used to communicate negative elements, such as food insecurity or cholera cases</p></li>
-<li><p>Click on the arrow next to <strong>Color Ramp</strong> to choose another combination of colours - let’s say a color ramp from white to blue</p></li>
-<li><p>Click Apply to preview the look of your layer, then OK</p></li>
-</ol>
-<figure class="align-default" id="symbology-of-variable-ranges-2">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_2.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_2.png" src="../../_images/en_30.30.2_symbology_variable_ranges_2.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 32 </span><span class="caption-text">You can categorize the continuous values into classes and assign a colour ramp</span><a class="headerlink" href="#symbology-of-variable-ranges-2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>The following map shows the most populated States of Nigeria using a graduated colour categorization.</p>
-<figure class="align-default" id="map-design-example-state-population-nigeria">
-<a class="reference internal image-reference" href="fig/en_map_design_example_variable_ranges"><img alt="fig/en_map_design_example_variable_ranges" src="fig/en_map_design_example_variable_ranges" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">An unfinished map showing the population of Nigerian states</span><a class="headerlink" href="#map-design-example-state-population-nigeria" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
 </section>
+<section id="non-spatial-joins-in-qgis">
+<h1>Non-Spatial Joins in QGIS<a class="headerlink" href="#non-spatial-joins-in-qgis" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Choose <strong>“Join Attributes by Field Value”</strong> Tool (use search tool):</p></li>
+<li><p><strong>Adds attributes</strong> of a non-spatial table to the layer</p></li>
+<li><p>Enables join using a <strong>field/column</strong> that is present in both data sets</p></li>
+</ul>
+<p>Step by step:</p>
+<ul class="simple">
+<li><p>Input layer: <strong>Vector layer</strong></p></li>
+<li><p>Table field: Field/ column that exists in <strong>both data sets</strong> (name of column in vector layer)</p></li>
+<li><p>Input layer 2: <strong>Text/csv/xls data</strong></p></li>
+<li><p>Table field 2: Field/ column that exists in <strong>both data sets</strong> (name of column in text/csv/xls)</p></li>
+<li><p>Join type: Select <strong>„Take attributes of the first matching feature only (one-to-one)“</strong>.</p></li>
+<li><p>Define <strong>output layer name and destination</strong> or leave at temporary layer</p></li>
+</ul>
+<p><tagName>  <tagName></p>
+<p><img alt="Join attributes by field value" src="../../_images/en_join_attributes_by_field_value.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Hint</p>
+</div>
+<p>If a table join does not work via the “Join Attributes by Field Value” tool, a join can also be performed via the <strong>layer properties</strong> (right-click, Properties) under the Join tab.</p>
+<p><tagName>  <tagName></p>
+<p><img alt="Add vector join" src="../../_images/en_add_vector_join.png" /></p>
+</section>
+<section id="spatial-joins-in-qgis">
+<h1>Spatial Joins in QGIS<a class="headerlink" href="#spatial-joins-in-qgis" title="Permalink to this heading">#</a></h1>
+<p>Choose <strong>“Join Attributes by Location”</strong> Tool:</p>
+<ul class="simple">
+<li><p>Adds <strong>additional attributes</strong> of the join layer to the input layer based on the spatial relationship</p></li>
+<li><p><strong>Input Layer</strong>: Dataset you want to enrich</p></li>
+<li><p><strong>Join layer</strong>: Dataset with additional information/attributes
+(you can specify which fields of the join layer should be added)</p></li>
+</ul>
+<p><tagName>  <tagName></p>
+<p><img alt="Spatial joins" src="../../_images/en_spatial_joins.png" /></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -600,7 +574,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_4"
+            path: "./content\Modul_1"
         },
         predefinedOutput: true
     }
@@ -618,24 +592,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="en_qgis_map_design_2.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Print layout</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="en_qgis_map_design_I_ex2.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Map design Exercise 1</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -654,10 +610,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-change-the-symbology-of-a-layer">Exercise: Change the symbology of a layer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-use-different-styles-in-a-single-layer">Exercise: Use different styles in a single layer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-style-data-based-on-variable-ranges">Exercise: Style data based on variable ranges</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Non-Spatial Analyses in QGIS</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geoprocessing-tools-overview-and-selection">Geoprocessing Tools - Overview and Selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer-with-and-without-dissolve">Buffer: with and without “Dissolve”</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-joins-in-qgis">Non-Spatial Joins in QGIS</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-joins-in-qgis">Spatial Joins in QGIS</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>

@@ -199,7 +199,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="en_gis_theorie.html">What is GIS? (Theory)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_start.html">Getting started with QGIS</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">QGIS Installation</a></li>
 </ul>
@@ -234,8 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Map design- Basic</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_2.html">Print layout</a></li>
 
@@ -450,8 +448,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bit-or-64-bit">32 Bit or 64 Bit?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bit-or-64-bit">32 Bit or 64 Bit?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mac">Mac</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
 </ul>
@@ -469,12 +470,14 @@ document.write(`
 <h1>QGIS Installation<a class="headerlink" href="#qgis-installation" title="Permalink to this heading">#</a></h1>
 <p>QGIS is open source and therefore freely available to everyone at no cost. You can install QGIS for Windows, Mac and Linux computers. The actual <strong>Long Term Release</strong> is <strong>QGIS 3.28.11 Firenze</strong>. Generally we recommend to use the <strong>latest Long Term Release</strong>, because it is the most stable and contains the fewest bugs. You can <strong>download</strong> the latest version here: <a class="reference external" href="https://www.qgis.org/en/site/forusers/download.html">https://www.qgis.org/en/site/forusers/download.html</a></p>
 <p>For our introduction, the standalone installers from OSGeo4W packages are sufficient for Windows.</p>
-<section id="bit-or-64-bit">
-<h2>32 Bit or 64 Bit?<a class="headerlink" href="#bit-or-64-bit" title="Permalink to this heading">#</a></h2>
-<p>For <strong>Windows operating systems</strong>, there is always a 32-bit version and a 64-bit version of each QGIS version available for download. Which version to install depends on your computer and operating system. If it is not clear how many bits your operating system has, you can easily find out: Left-click on the <strong>Windows icon at</strong> the bottom left of the screen (alternatively, open the Windows search function). Type <strong>“System”</strong> on the keyboard, click on the entry <strong>“System”</strong> in the search results. Under the item <strong>“System type”</strong> you can read the bit number.</p>
-</section>
 <section id="windows">
 <h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">#</a></h2>
+<section id="bit-or-64-bit">
+<h3>32 Bit or 64 Bit?<a class="headerlink" href="#bit-or-64-bit" title="Permalink to this heading">#</a></h3>
+<p>For <strong>Windows operating systems</strong>, there is always a 32-bit version and a 64-bit version of each QGIS version available for download. Which version to install depends on your computer and operating system. If it is not clear how many bits your operating system has, you can easily find out: Left-click on the <strong>Windows icon at</strong> the bottom left of the screen (alternatively, open the Windows search function). Type <strong>“System”</strong> on the keyboard, click on the entry <strong>“System”</strong> in the search results. Under the item <strong>“System type”</strong> you can read the bit number.</p>
+</section>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h3>
 <p>For the installation under Windows we use the <strong>OSGeo4W network installer</strong>. OSGeo4W is a project that offers <strong>Open Geo related software for Windows</strong> easy to install. Visit the project page <a class="reference external" href="https://trac.osgeo.org/osgeo4w/">https://trac.osgeo.org/osgeo4w/</a> select there <em>Download the ​OSGeo4W network installer</em>.</p>
 <ul class="simple">
 <li><p>Make sure to select <em>Advanced Install</em> / <em>Fortgeschrittene Installation</em> during the installation process.</p>
@@ -488,6 +491,7 @@ document.write(`
 <p>Video tutorial: <a class="reference external" href="https://www.youtube.com/watch?v=pja_EX0tVZA">https://www.youtube.com/watch?v=pja_EX0tVZA</a></p>
 <p>The selected software is then downloaded via the Internet and installed on-the-fly.</p>
 </section>
+</section>
 <section id="mac">
 <h2>Mac<a class="headerlink" href="#mac" title="Permalink to this heading">#</a></h2>
 <p><strong><strong>From version 3.30 SAGA must be integrated via plugin</strong></strong></p>
@@ -497,7 +501,7 @@ document.write(`
 </section>
 <section id="linux">
 <h2>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">#</a></h2>
-<p><strong><strong>Ab Version 3.30 muss SAGA per plugin eingebunden werden</strong></strong></p>
+<p><strong><strong>From version 3.30 SAGA must be integrated via plugin</strong></strong></p>
 <p>For installation on Linux systems with apt you can install QGIS:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">qgis</span> <span class="n">qgis</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">grass</span>
 </pre></div>
@@ -576,8 +580,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bit-or-64-bit">32 Bit or 64 Bit?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bit-or-64-bit">32 Bit or 64 Bit?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mac">Mac</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
 </ul>
