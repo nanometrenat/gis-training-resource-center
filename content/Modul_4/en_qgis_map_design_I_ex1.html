@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Map design Exercise 1" href="en_qgis_map_design_I_ex2.html" />
-    <link rel="prev" title="Mag design 2" href="en_qgis_map_design_2.html" />
+    <link rel="prev" title="Print layout" href="en_qgis_map_design_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,9 +171,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_qgis_basics_wiki.html">QGIS Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_installation_wiki.html">QGIS installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_wiki_projects_wiki.html">QGIS manage Projects and Geodata</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projections_wiki.html">Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_plugins_wiki.html">Plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_data_sources_wiki.html">Data sources</a></li>
 </ul>
@@ -209,11 +209,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_gis_theorie.html">What is GIS? (Theory)</a></li>
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_start.html">Getting started with QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
@@ -248,14 +243,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_I.html">Map design- Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_2.html">Print layout</a></li>
 
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="en_qgis_map_design_2.html">Mag design 2</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Map design Exercise 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_map_design_I_ex2.html">Map design Exercise 1</a></li>
-</ul>
-</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
@@ -448,7 +439,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -464,6 +457,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-change-the-symbology-of-a-layer">Exercise: Change the symbology of a layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-use-different-styles-in-a-single-layer">Exercise: Use different styles in a single layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-style-data-based-on-variable-ranges">Exercise: Style data based on variable ranges</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -475,6 +478,127 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="map-design-exercise-1">
 <h1>Map design Exercise 1<a class="headerlink" href="#map-design-exercise-1" title="Permalink to this heading">#</a></h1>
+<section id="exercise-change-the-symbology-of-a-layer">
+<h2>Exercise: Change the symbology of a layer<a class="headerlink" href="#exercise-change-the-symbology-of-a-layer" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>This is exercise 7 in the PPP. Participants will need the specific data.</p>
+</div></blockquote>
+<p>In this exercise, we will apply the same style to all features in the layer. We have the polygons for 3 administrative levels</p>
+<ol class="arabic simple">
+<li><p>Add the “Adm0”, “Adm1” and “Adm2” shapefiles to your Session 2 project.</p></li>
+<li><p>Order the layers so they are all visible: Put the Adm2 at the bottom, then the Adm1 then Adm0. At first, this might look weird because Adm0 will cover everything.</p></li>
+<li><p>Change the symbology of the Adm0 layer by opening the stlying panel and navigating to the Symbology tab. By default, the symbology type will be <strong>Single Symbol</strong>. This means that the same colours and contours will be applied to all the features in that layer.</p></li>
+</ol>
+<figure class="align-left" id="change-layer-style-1">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_changing_layer_style_1.png"><img alt="../../_images/en_30.30.2_changing_layer_style_1.png" src="../../_images/en_30.30.2_changing_layer_style_1.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Order the layers and navigate to the styling panel of the topmost layer</span><a class="headerlink" href="#change-layer-style-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-right" id="change-layer-style-2">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_changing_layer_style_2.png"><img alt="../../_images/en_30.30.2_changing_layer_style_2.png" src="../../_images/en_30.30.2_changing_layer_style_2.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Change the “Simple Fill”</span><a class="headerlink" href="#change-layer-style-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Click on “<strong>Simple Fill</strong>” to open the style options.</p></li>
+<li><p>Expand the “<strong>Fill Color</strong>” menu and check the <strong>Transparent Fill</strong> option. This will make only the boundaries visible, so <strong>we will be able to see the layer under this one</strong>.</p></li>
+<li><p>Choose a <strong>Stroke color</strong>, and make the <strong>Stroke width</strong> 0.66 Millimeters.</p></li>
+<li><p>Click OK</p></li>
+</ol>
+<figure class="align-default" id="change-layer-style-3">
+<img alt="../../_images/en_30.30.2_changing_layer_style_3.png" src="../../_images/en_30.30.2_changing_layer_style_3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">The styling of a vector data consists of the colour and the outline</span><a class="headerlink" href="#change-layer-style-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="8">
+<li><p><strong>Repeat the same process</strong> for the Adm1 layer, using the same colour as for Adm0 (it will be in “Recent colors) and leave the stroke width at 0.26.</p></li>
+<li><p>Now we can see the boundaries of the country and its states, and behind that we cann see the districs (Adm2).</p></li>
+<li><p>Let’s make the districs layer’s style consistent with the others.</p></li>
+<li><p>Choose a <strong>Fill Color</strong></p></li>
+<li><p>Use the same <strong>Stroke color</strong> as for Adm0 and Adm1, but make the width 0.1 Millimeters and the Stroke Style a <strong>Dash Line</strong></p></li>
+<li><p>Click OK and look at yout map: hopefully it’s starting to look nicer!</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember that <strong>the layer’s symbology is saved within your project file, not within your shapefile!</strong> If you share a shapefile with a colleague, it will have a different style when they add it to their own project.</p>
+</div>
+</section>
+<section id="exercise-use-different-styles-in-a-single-layer">
+<h2>Exercise: Use different styles in a single layer<a class="headerlink" href="#exercise-use-different-styles-in-a-single-layer" title="Permalink to this heading">#</a></h2>
+<p>We can use symbology to <strong>show the difference between features</strong> in the same layer. For example, it could be different types of buildings, quantities of Covid cases by district, or types of roads. We can choose a specific attribute of a dataset to assign different colors, outlines, or sizes to features:</p>
+<ol class="arabic simple">
+<li><p>From your shapefile folder, <strong>drag te ACLED security incidents shapefile onto your map</strong></p></li>
+<li><p>Open the layer <strong>Symbology</strong> and choose <strong>Categorized</strong> instead of Single Symbol.</p></li>
+</ol>
+<blockquote>
+<div><p>Categorized symbology is used when you have <em><strong>discrete</strong></em> variables.</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Now we need to <strong>choose which attributes we want to display through the symbology</strong>. In this case, it could be the number of casualtiees, or the actor who perpetrated the act. Let’s categorize the features by <strong>event_type</strong></p></li>
+<li><p>Click on <strong>“Classify” to list all the unique values contained in the event_type field</strong> (i.e. all the possible types of security incidents recorded in our table)</p></li>
+<li><p>Now we can <strong>change the style of each single value</strong></p></li>
+<li><p>Double click on Explosions</p></li>
+<li><p>At the bottom of the <strong>Symbol selector</strong> window, choose a symbol to make Explosion points stand our</p></li>
+<li><p>Click on OK, then Apply to preview what the layer will look like</p></li>
+<li><p>Click OK again</p></li>
+</ol>
+<figure class="align-default" id="categorized-layer-symbology-2">
+<a class="reference internal image-reference" href="fig/en_30.30.2_categorized_layer_symbology_2"><img alt="fig/en_30.30.2_categorized_layer_symbology_2" src="fig/en_30.30.2_categorized_layer_symbology_2" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">By double clicking on the <strong>unique values</strong> in the classified list, you can change the symbol for each value</span><a class="headerlink" href="#categorized-layer-symbology-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Now we have a map of Nigeria where you can locate the areas, that are affected by explosions more than others. On the map below, we also added text labels, which will be explained below.</p>
+<figure class="align-default" id="map-design-example-regions-affected-by-explosions-in-nigeria">
+<a class="reference internal image-reference" href="../../_images/en_exercise_map_design_example_Nigeria.png"><img alt="../../_images/en_exercise_map_design_example_Nigeria.png" src="../../_images/en_exercise_map_design_example_Nigeria.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Regions affected by explosions in Nigeria</span><a class="headerlink" href="#map-design-example-regions-affected-by-explosions-in-nigeria" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="exercise-style-data-based-on-variable-ranges">
+<h2>Exercise: Style data based on variable ranges<a class="headerlink" href="#exercise-style-data-based-on-variable-ranges" title="Permalink to this heading">#</a></h2>
+<p>If a layer contains numeric values that are continuous, they can be organized in intervals. These intervals can be displayed in graduated colours. In this exercise, we assign colours to Adm1 polygons based on the total population of each State.</p>
+<blockquote>
+<div><p>Don’t forget to check that they have access to the data</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>From <strong>Sharepoint</strong>, download the NGA_Adm1_Pop shapefile and save it in your shapefile folder</p></li>
+<li><p>In QGIS, turn off the Adm1 and Adm2 layer, leaving only Adm0</p></li>
+<li><p>Drag the shapefile you just downloaded into your map</p></li>
+<li><p>Open its Symbology options and choose “<strong>Graduated</strong>”</p></li>
+<li><p>Select the value you want to use to assign colours, in this case, it will be “<strong>population</strong>”</p></li>
+</ol>
+<figure class="align-default" id="symbology-of-variable-ranges-1">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_1.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_1.png" src="../../_images/en_30.30.2_symbology_variable_ranges_1.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">With variable ranges, select <strong>Graduated</strong> symbology and choose the attribute with continuous values</span><a class="headerlink" href="#symbology-of-variable-ranges-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p>Click on <strong>Classify</strong> to list all valued, divided in classes</p></li>
+<li><p>Choose <strong>how many classes</strong> you want the data to be divided into ‒ let’s say 4</p></li>
+<li><p>By default, the colour ramp will be red. However, red is not the rivht colour to use for population count, as it is generally used to communicate negative elements, such as food insecurity or cholera cases</p></li>
+<li><p>Click on the arrow next to <strong>Color Ramp</strong> to choose another combination of colours - let’s say a color ramp from white to blue</p></li>
+<li><p>Click Apply to preview the look of your layer, then OK</p></li>
+</ol>
+<figure class="align-default" id="symbology-of-variable-ranges-2">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_2.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_2.png" src="../../_images/en_30.30.2_symbology_variable_ranges_2.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">You can categorize the continuous values into classes and assign a colour ramp</span><a class="headerlink" href="#symbology-of-variable-ranges-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The following map shows the most populated States of Nigeria using a graduated colour categorization.</p>
+<figure class="align-default" id="map-design-example-state-population-nigeria">
+<a class="reference internal image-reference" href="fig/en_map_design_example_variable_ranges"><img alt="fig/en_map_design_example_variable_ranges" src="fig/en_map_design_example_variable_ranges" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">An unfinished map showing the population of Nigerian states</span><a class="headerlink" href="#map-design-example-state-population-nigeria" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -513,7 +637,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Mag design 2</p>
+        <p class="prev-next-title">Print layout</p>
       </div>
     </a>
     <a class="right-next"
@@ -531,6 +655,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-change-the-symbology-of-a-layer">Exercise: Change the symbology of a layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-use-different-styles-in-a-single-layer">Exercise: Use different styles in a single layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-style-data-based-on-variable-ranges">Exercise: Style data based on variable ranges</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Map design- Basic &#8212; GIS Resource Training Center</title>
+    <title>Graphical Variables and Symbology &#8212; GIS Resource Training Center</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_4/en_qgis_map_design_I';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Mag design 2" href="en_qgis_map_design_2.html" />
+    <link rel="next" title="Print layout" href="en_qgis_map_design_2.html" />
     <link rel="prev" title="Selection and Queries Exercise 1" href="../Modul_3/en_qgis_data_queries_ex1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -209,11 +209,6 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_gis_theorie.html">What is GIS? (Theory)</a></li>
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_start.html">Getting started with QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
@@ -248,14 +243,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Map design- Basic</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Graphical Variables and Symbology</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_2.html">Print layout</a></li>
 
-<li class="toctree-l1 has-children"><a class="reference internal" href="en_qgis_map_design_2.html">Mag design 2</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_map_design_I_ex1.html">Map design Exercise 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_map_design_I_ex2.html">Map design Exercise 1</a></li>
-</ul>
-</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
@@ -461,7 +452,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Map design- Basic</h1>
+    <h1>Graphical Variables and Symbology</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -471,49 +462,34 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Map design- Basic</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representation">Representation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Graphical Variables and Symbology</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-maps">Types of maps</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphic-semiology">Graphic Semiology</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-variables">Visual variables</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-and-styling">Symbology and styling</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for vector data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-a-layer">Adding labels to a layer</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-2-different-label-styles-to-the-same-layer">Adding 2 different label styles to the same layer</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-and-styling">Symbology and styling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology">Symbology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colours">Colours</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colour-blindness">Colour Blindness</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for Vector data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-points">Symbology for points</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-lines">Symbology for lines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-polygons">Symbology for polygons</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#print-layout">Print layout</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-print-layout-composer">Understanding the Print Layout Composer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-elements-to-the-print-layout">Adding elements to the print layout</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-map">Adding a new map</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-text-box">Adding a text box</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-legend">Adding a legend</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-scale-bar">Adding a scale bar</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-overview-map">Adding an overview map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-colour-gradient-to-raster-data">Assigning a colour gradient to raster data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#good-practices-and-common-mistakes-in-mapping">Good practices and common mistakes in mapping</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-composition">Map composition</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-elements-of-a-map">Key elements of a map</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-4-semiological-errors">The 4 semiological errors</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#proportional-circles-vs-solid-colors">1. Proportional circles vs. solid colors</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#color-gradient-vs-distinct-color-palette">Color gradient vs. distinct color palette</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-in-a-single-color-vs-gradient-between-two-colors">Gradient in a single color vs. Gradient between two colors</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#limited-geometric-symbols-vs-complex-icons-and-symbols">Limited geometric symbols vs. complex icons and symbols</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-a-layer">Adding labels to a layer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-2-different-label-styles-to-the-same-layer">Adding 2 different label styles to the same layer</a></li>
 </ul>
 </li>
 </ul>
@@ -530,18 +506,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="map-design-basic">
-<h1>Map design- Basic<a class="headerlink" href="#map-design-basic" title="Permalink to this heading">#</a></h1>
-<p><strong>Competences:</strong></p>
-<ul class="simple">
-<li><p>Map design</p></li>
-</ul>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="representation">
-<h1>Representation<a class="headerlink" href="#representation" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="graphical-variables-and-symbology">
+<h1>Graphical Variables and Symbology<a class="headerlink" href="#graphical-variables-and-symbology" title="Permalink to this heading">#</a></h1>
 <p>The representation of geodata in maps is crucial in order to provide useful location-based insights. This subchapter will cover the basics of good map design, how to create a map design in QGIS as well as common mistakes when designing or interpreting maps.</p>
 <section id="types-of-maps">
 <h2>Types of maps<a class="headerlink" href="#types-of-maps" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>remove probably</p>
+</div></blockquote>
 <p>In general, there are two main types of maps: <strong>topographic maps</strong> and <strong>thematic maps</strong>.</p>
 <p><strong>Topographic maps</strong> are intended to be exhaustive, including elements fundamental to localisation (localities, road networks, terrain, hydrography). They represent the physical location of objects in the real world. The representation of elements in topographic maps is done via conventional signs (e.g.: blue for water, green for forests, yellow for agricultural land).</p>
 <figure class="align-default" id="topographic-maps-examples">
@@ -591,15 +563,15 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 </div></blockquote>
 </section>
 </section>
-<section id="symbology-and-styling">
-<h2>Symbology and styling<a class="headerlink" href="#symbology-and-styling" title="Permalink to this heading">#</a></h2>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="symbology-and-styling">
+<h1>Symbology and styling<a class="headerlink" href="#symbology-and-styling" title="Permalink to this heading">#</a></h1>
 <p>Depending on the use case and type of geodata at your disposal, there are multiple ways to visualise geodata in a comprehensive format:</p>
 <ul class="simple">
 <li><p>You can change the ‘styling’ and color of the data</p></li>
 <li><p>You can add textlabels</p></li>
 <li><p>Vector and raster data is visualized differently in GIS-Software.</p></li>
 </ul>
-</section>
 <section id="styling-panel">
 <h2>Styling Panel<a class="headerlink" href="#styling-panel" title="Permalink to this heading">#</a></h2>
 <figure class="align-left" id="id2">
@@ -613,18 +585,95 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <li><p>Right click on the layer you wish to style and select properties</p></li>
 <li><p>Open the layer styling panel by enabling it under “View”&gt;”Panels”&gt;”Layer Styling”</p></li>
 </ol>
-<p>In the styling panel, you can change the symbology (1) and the labels (2).</p>
+<p>~~In the styling panel, you can change the symbology (1) and the labels (2).~~</p>
+</section>
+<section id="symbology">
+<h2>Symbology<a class="headerlink" href="#symbology" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Symbology is used to change the look of features on a map</p></li>
+<li><p>It makes maps more visually appealing and easier to read</p></li>
+<li><p>Colors and styles represent a specific information</p></li>
+<li><p>Symbology is applied to layers, but within the same layer we can assign multiple styles to features</p></li>
+<li><p>the symbology of a layer can be <strong>changed based on one of its attributes</strong></p></li>
+</ul>
+</section>
+<section id="colours">
+<h2>Colours<a class="headerlink" href="#colours" title="Permalink to this heading">#</a></h2>
+<p>Colours are arguably the most striking visual variables as they are easily disinguishable. However, depending on the type of data and the information you wish to convey, there are a few things to consider when choosing a colour scheme for your map. The most important variables for colours are the <strong>hue</strong> and the <strong>value</strong> (saturation, transparency).</p>
 <blockquote>
-<div><p>Should I continue this?</p>
+<div><p>look for correct words</p>
 </div></blockquote>
+<p>Colours schemes can be <strong>categorial, sequential, or diverging</strong>. If you wish to display different types of buildings or roads, the colour schemes should be categorial. Colour gradients, either sequential or diverging, are used for numerical data or data that can be ordered. For example, for the population sizes of districts a sequential colouring schemes is best to show the relative difference between the values. However, if the data has positive <strong>and</strong> negative values, a diverging colour gradient should be used.</p>
+<figure class="align-default" id="colouring-schemes">
+<a class="reference internal image-reference" href="../../_images/en_Colour_Gradients_6.png"><img alt="../../_images/en_Colour_Gradients_6.png" src="../../_images/en_Colour_Gradients_6.png" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Different types of colouring schemes</span><a class="headerlink" href="#colouring-schemes" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>When choosing colour gradients, a clear gradient from lighter to darker colours is the best most of the times as the gradation is easily distinguishable and translates well into black and white. In the figure below, example A) and B) are not ideal as it is difficult to make out the gradation and it does not translate into black and white. You can achieve a clear sequence by grading the <strong>saturation</strong> of the colour gradient.</p>
+<figure class="align-default" id="colour-gradients-saturation-example">
+<a class="reference internal image-reference" href="fig/en_colour_gradients_saturation"><img alt="fig/en_colour_gradients_saturation" src="fig/en_colour_gradients_saturation" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Examples for different colour gradients translated into black and white. Pay attention to the saturation gradient</span><a class="headerlink" href="#colour-gradients-saturation-example" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Colour gradients can also encompass several hues</p>
+<figure class="align-default" id="colour-gradient-hues">
+<a class="reference internal image-reference" href="fig/Colour_Gradients_2"><img alt="fig/Colour_Gradients_2" src="fig/Colour_Gradients_2" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Single hue gradient on the left; Multiple hue gradient on the right</span><a class="headerlink" href="#colour-gradient-hues" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="colour-blindness">
+<h3>Colour Blindness<a class="headerlink" href="#colour-blindness" title="Permalink to this heading">#</a></h3>
+<p>When choosing the colours, you have to keep in mind that colour gradients (especially diverging Red-Green gradients) can be hard or impossible to distinguish for persons with colour blindness.</p>
+<figure class="align-default" id="colour-blindness-examples">
+<a class="reference internal image-reference" href="fig/Colour_Blindness"><img alt="fig/Colour_Blindness" src="fig/Colour_Blindness" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Different Colour schemes for the Colour Vision Impaired; Source: Jenny, Bernhard, and Nathaniel Vaughn Kelso. (2007). Color Design for the Color Vision Impaired. <em>Cartographic Perspectives</em>, no. 58 (September 1, 2007): 61-67. <a class="reference external" href="https://doi.org/10.14714/CP58.270">https://doi.org/10.14714/CP58.270</a></span><a class="headerlink" href="#colour-blindness-examples" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 <section id="symbology-for-vector-data">
-<h3>Symbology for vector data<a class="headerlink" href="#symbology-for-vector-data" title="Permalink to this heading">#</a></h3>
+<h2>Symbology for Vector data<a class="headerlink" href="#symbology-for-vector-data" title="Permalink to this heading">#</a></h2>
+<p>You can use graphical variables to style vector data. As we have already learned, vector data can be either points, lines, or polygons. There are different options to symbolize these different types of vector data.</p>
+<figure class="align-default" id="symbolization-for-vector-data">
+<a class="reference internal image-reference" href="fig/en_symbolization_vector_data"><img alt="fig/en_symbolization_vector_data" src="fig/en_symbolization_vector_data" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Symbolization for vector data; Source: White, T. (2017). Symbolization and the Visual Variables. *The Geographic Information Science &amp; Technology Body of Knowledge (2nd Quarter 2017 Edition), John P. Wilson (ed.). DOI: 10.2222/gistbok/2017.2.3</span><a class="headerlink" href="#symbolization-for-vector-data" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils" />
+<section id="symbology-for-points">
+<h3>Symbology for points<a class="headerlink" href="#symbology-for-points" title="Permalink to this heading">#</a></h3>
+<p>For point data, you can</p>
+</section>
+<section id="symbology-for-lines">
+<h3>Symbology for lines<a class="headerlink" href="#symbology-for-lines" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="symbology-for-polygons">
+<h3>Symbology for polygons<a class="headerlink" href="#symbology-for-polygons" title="Permalink to this heading">#</a></h3>
+</section>
 </section>
 <section id="symbology-for-raster-data">
-<h3>Symbology for raster data<a class="headerlink" href="#symbology-for-raster-data" title="Permalink to this heading">#</a></h3>
+<h2>Symbology for raster data<a class="headerlink" href="#symbology-for-raster-data" title="Permalink to this heading">#</a></h2>
+<p>As we have already learned, raster data are basically a grid of pixels with different (numerical) values. As such, you can’t style the shape, fill or outline of raster data. It is only possible to assign colours to the different values of the pixels.</p>
+<section id="assigning-a-colour-gradient-to-raster-data">
+<h3>Assigning a colour gradient to raster data<a class="headerlink" href="#assigning-a-colour-gradient-to-raster-data" title="Permalink to this heading">#</a></h3>
+<p>To assign a colour gradient for raster data, you need to:</p>
+<ol class="arabic simple">
+<li><p>Open the styling panel for the raster layer</p></li>
+<li><p>Navigate to the Symbology tab</p></li>
+<li><p>By default, the colour scheme is set to Singleband gray (if you only have one colour band in the data set). Click on <strong>Singleband gray</strong> and switch to <strong>Singleband pseudocolour</strong></p></li>
+<li><p>Click on the arrow to the right of the colour ramp. Here you can choose a premade colour ramp</p></li>
+<li><p>You can modify the colour ramp by clicking on the colour ramp itself</p></li>
+</ol>
+<p>In the colour ramp selector, you can adjust each colour step. On the bottom, you can see a plot for the Hue, <strong>Saturation</strong>, <strong>Lightness</strong> and <strong>Opacity</strong>. Especially latter three are useful to see how your colour ramp will translate.</p>
+</section>
 </section>
 <section id="labels">
-<h3>Labels<a class="headerlink" href="#labels" title="Permalink to this heading">#</a></h3>
+<h2>Labels<a class="headerlink" href="#labels" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Labels are text that show a specific attribute of features.</p></li>
 <li><p>It is useful to add labels to features to easily identify them. For example, the name of a settlement.</p></li>
@@ -632,7 +681,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <li><p>When you create a map you always add labels to help the final user reading the map</p></li>
 </ul>
 <section id="adding-labels-to-a-layer">
-<h4>Adding labels to a layer<a class="headerlink" href="#adding-labels-to-a-layer" title="Permalink to this heading">#</a></h4>
+<h3>Adding labels to a layer<a class="headerlink" href="#adding-labels-to-a-layer" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>This is exercise 2 in the PPP</p>
 </div></blockquote>
@@ -652,12 +701,12 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="setting-up-labels">
 <a class="reference internal image-reference" href="fig/en_30.30.2_setting_up_labels"><img alt="fig/en_30.30.2_setting_up_labels" src="fig/en_30.30.2_setting_up_labels" style="width: 750px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Setting up labels in QGIS 30.30.2</span><a class="headerlink" href="#setting-up-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Setting up labels in QGIS 30.30.2</span><a class="headerlink" href="#setting-up-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="adding-2-different-label-styles-to-the-same-layer">
-<h4>Adding 2 different label styles to the same layer<a class="headerlink" href="#adding-2-different-label-styles-to-the-same-layer" title="Permalink to this heading">#</a></h4>
+<h3>Adding 2 different label styles to the same layer<a class="headerlink" href="#adding-2-different-label-styles-to-the-same-layer" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>This is exercise 3 in PPP</p>
 </div></blockquote>
@@ -671,7 +720,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="adding-rule-based-labels">
 <a class="reference internal image-reference" href="fig/en.30.30.2_adding_rule-based_labels"><img alt="fig/en.30.30.2_adding_rule-based_labels" src="fig/en.30.30.2_adding_rule-based_labels" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="5">
@@ -685,295 +734,12 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <figure class="align-default" id="rule-based-labels-expression-builder">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png"><img alt="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" src="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
-</section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="print-layout">
-<h1>Print layout<a class="headerlink" href="#print-layout" title="Permalink to this heading">#</a></h1>
-<p>In order to export a PDF of the map, you need to create a print layout. QGIS project is not a map until the layout elements (legend, title, scale bar, etc.) are added.</p>
-<ol class="arabic simple">
-<li><p>Go to <strong>Project &gt; New Print Layout &gt; enter a name for the new print layout &gt; click OK</strong></p></li>
-<li><p>A new window witha blank print playout will appear.</p></li>
-</ol>
-<figure class="align-default" id="create-print-layout">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_create_print_layout.png"><img alt="../../_images/en_30.30.2_create_print_layout.png" src="../../_images/en_30.30.2_create_print_layout.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Create a new Print Layout</span><a class="headerlink" href="#create-print-layout" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<section id="understanding-the-print-layout-composer">
-<h2>Understanding the Print Layout Composer<a class="headerlink" href="#understanding-the-print-layout-composer" title="Permalink to this heading">#</a></h2>
-<figure class="align-default" id="new-print-layout">
-<img alt="../../_images/en_30.30.2_understanding_the_print_layout_composer.png" src="../../_images/en_30.30.2_understanding_the_print_layout_composer.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">The interface of the Print Layout Composer</span><a class="headerlink" href="#new-print-layout" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<ol class="arabic simple">
-<li><p><strong>Layout Settings</strong> (Add pages, Export Map, manage panels)</p></li>
-<li><p><strong>Dialer Tools</strong> (Save, New, Duplicate, Add items from template, Save template)</p></li>
-<li><p><strong>Navigation bar</strong> (Zoom, Refresh, Lock/Unlock elements)</p></li>
-<li><p><strong>Toolbar</strong> (Zoom, Select, Move in Map, Add new map/image/text/legend/scale/shape/…)</p></li>
-<li><p><strong>Feature Panel</strong>: displays the elements added to the print layout</p></li>
-<li><p><strong>Advanced Options</strong>: customize each element of the layer</p></li>
-</ol>
-<p>First of all, you should always set the size of your map:</p>
-<ul class="simple">
-<li><p>Right-click on the blank map &gt; Page Properties</p></li>
-<li><p>Choose <strong>the size of your document</strong> (A4, A3, A2)</p></li>
-<li><p>Choose the orientation (Landscape or Portrait)</p></li>
-</ul>
-<p><em>A4 and A3 are the most commonly used sizes for maps</em></p>
-</section>
-<section id="adding-elements-to-the-print-layout">
-<h2>Adding elements to the print layout<a class="headerlink" href="#adding-elements-to-the-print-layout" title="Permalink to this heading">#</a></h2>
-<section id="adding-a-new-map">
-<h3>Adding a new map<a class="headerlink" href="#adding-a-new-map" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Add a new map by clicking on the <strong>Add map</strong> button on the <strong>toolbar on the left</strong> and __drag a rectangle on the map canvas.</p></li>
-<li><p>To move the map on the canvas, simply <strong>select the map</strong> and <strong>drag</strong> it with your mouse</p></li>
-<li><p>To move within a map select <strong>Move item content</strong> button on the</p></li>
-<li><p>To zoom in on the map, while using the <strong>Move item content</strong> button, you can <strong>Press CTRL + scroll the mouse wheel</strong> (gently) or enter the scale manually in the item properties</p></li>
-</ul>
-<figure class="align-default" id="add-a-new-map">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_a_map.png"><img alt="../../_images/en_30.30.2_adding_a_map.png" src="../../_images/en_30.30.2_adding_a_map.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Adding a new map to the Print Layout</span><a class="headerlink" href="#add-a-new-map" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="adding-a-text-box">
-<h3>Adding a text box<a class="headerlink" href="#adding-a-text-box" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>To add text (title, explanations), use the <strong>Add Label</strong> tool and draw a rectangle of the desired size.</p></li>
-<li><p>In the <strong>Item Properties</strong> panel (on the right of your screen) you can <strong>enter your text</strong> and <strong>change the font, style, colour, etc.</strong> (_Remember to use the scroll bar in the window to see all the options).</p></li>
-</ul>
-<figure class="align-default" id="add-text-to-the-print-layout">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_text.png"><img alt="../../_images/en_30.30.2_print_layout_add_text.png" src="../../_images/en_30.30.2_print_layout_add_text.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Adding text to the print Layout</span><a class="headerlink" href="#add-text-to-the-print-layout" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="adding-a-legend">
-<h3>Adding a legend<a class="headerlink" href="#adding-a-legend" title="Permalink to this heading">#</a></h3>
-<p>Before adding a legend, make sure that:</p>
-<ul class="simple">
-<li><p>All your layers have an explicit name (“rivers”, “primary roads”,…)</p></li>
-<li><p>You use the final version of your map (no more layers to add, move, rename or modify). You can still modify them later but you will have to redo the legend.</p></li>
-</ul>
-<p>To add a legend, you can use the <strong>add legend</strong> button on the <strong>left toolbar</strong>.</p>
-<figure class="align-default" id="add-a-legend-to-the-print-layout">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_legend.png"><img alt="../../_images/en_30.30.2_print_layout_add_legend.png" src="../../_images/en_30.30.2_print_layout_add_legend.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Adding a legend to the print layout</span><a class="headerlink" href="#add-a-legend-to-the-print-layout" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>In the <strong>item properties</strong> panel, if you keep the <strong>‘Auto update’</strong> option checked, new layers added to your project will automatically be added to the legend but you cannot control them individually (rename if necessary, reorder ot remove items).<br />
-Once the option is unchecked, you can update the name of the layers, group them, reorganise them, etc.</p>
-</section>
-<section id="adding-a-scale-bar">
-<h3>Adding a scale bar<a class="headerlink" href="#adding-a-scale-bar" title="Permalink to this heading">#</a></h3>
-<p>Before adding a scale bar, select your main map and check in the <strong>Item Properties</strong> panel that the <strong>Scale</strong> fielld has a <strong>round number</strong></p>
-<figure class="align-default" id="round-number-for-scale">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_scale.png"><img alt="../../_images/en_30.30.2_print_layout_scale.png" src="../../_images/en_30.30.2_print_layout_scale.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Make sure that the scale is at a round number</span><a class="headerlink" href="#round-number-for-scale" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>To add a scale bar, you can use the <strong>add scale bar</strong> button on the <strong>left toolbar</strong>. In the <strong>Item Properties</strong> panel, customize the following functions</p>
-<ul class="simple">
-<li><p>Which Map <strong>is related to the scale</strong></p></li>
-<li><p><strong>Unit system of the bar</strong> (metres, miles, degrees)</p></li>
-<li><p><strong>Segments on the left</strong>: segments shown before 0 m (always set to 0).</p></li>
-<li><p><strong>Fixed width</strong>: define the width of each segment (e.g. 1 km, 10 km, 50 km, …).</p></li>
-<li><p><strong>Height</strong>: height (thickness) of the scale bar</p></li>
-</ul>
-<p><em>There are many other options to customize the scale bar (change the font, colours, etc.).</em></p>
-<figure class="align-default" id="add-scale-bar">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_scale_bar.png"><img alt="../../_images/en_30.30.2_print_layout_add_scale_bar.png" src="../../_images/en_30.30.2_print_layout_add_scale_bar.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Add and customize the scale bar</span><a class="headerlink" href="#add-scale-bar" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="adding-an-overview-map">
-<h3>Adding an overview map<a class="headerlink" href="#adding-an-overview-map" title="Permalink to this heading">#</a></h3>
-<p>Adding an overview map in the corner of your map will help locate the area you are viewing on the main map.</p>
-<p>To create an overview map, you need to follow these steps:</p>
-<ol class="arabic simple">
-<li><p>Prepare a <strong>layer with national or subnational borders or important landmarks</strong> in your project (e.g: Administrative boundaries, Capitals)</p></li>
-<li><p><strong>Insert the overview map</strong> into your print layout (in the bottom right corner for example)</p></li>
-<li><p><strong>Lock the new map</strong> in the Item properties panel</p></li>
-<li><p>Add a rectangle to display the extent of your main map</p>
-<ol class="arabic simple">
-<li><p>Go to the <strong>properties</strong> of your Main map &gt; scroll down until you see <strong>“Overviews”</strong></p></li>
-<li><p>Add an Overview by clicking on the <strong>“+” icon</strong></p></li>
-<li><p><strong>Link the main map</strong> by selecting it in the <strong>“Map frame”</strong> option</p></li>
-</ol>
-</li>
-</ol>
-<figure class="align-default" id="overview-map-preparation">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_overview_map_preparations.png"><img alt="../../_images/en_30.30.2_print_layout_overview_map_preparations.png" src="../../_images/en_30.30.2_print_layout_overview_map_preparations.png" style="width: 200px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">An overview map should show important landmarks and borders</span><a class="headerlink" href="#overview-map-preparation" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="add-overview-map">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_overview_map.png"><img alt="../../_images/en_30.30.2_print_layout_add_overview_map.png" src="../../_images/en_30.30.2_print_layout_add_overview_map.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Add an overview map and <strong>lock the layer</strong></span><a class="headerlink" href="#add-overview-map" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="create-an-overview">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png"><img alt="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png" src="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Add a the extent of the main map to your overview map (the red rectangle on the overview)</span><a class="headerlink" href="#create-an-overview" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>This method requires you to be sure that you are not going to modify the oveview map, as once the layers are locked, they will keep the style, and any updates will not affect the overview map</p>
-</div>
-</section>
-</section>
-<section id="good-practices-and-common-mistakes-in-mapping">
-<h2>Good practices and common mistakes in mapping<a class="headerlink" href="#good-practices-and-common-mistakes-in-mapping" title="Permalink to this heading">#</a></h2>
-<p>In order to produce good maps, there are some <strong>basic rules</strong> to follow and common <strong>semiological mistakes</strong> to avoid.</p>
-<section id="map-composition">
-<h3>Map composition<a class="headerlink" href="#map-composition" title="Permalink to this heading">#</a></h3>
-<section id="key-elements-of-a-map">
-<h4>Key elements of a map<a class="headerlink" href="#key-elements-of-a-map" title="Permalink to this heading">#</a></h4>
-<p>A map is never complete without the following elements:</p>
-<ul class="simple">
-<li><p>Title</p></li>
-<li><p>Legend</p></li>
-<li><p>Scale</p></li>
-<li><p>Orientation</p></li>
-<li><p>Source</p></li>
-<li><p>Localization (Overview) Map</p></li>
-<li><p>Author</p></li>
-</ul>
 <blockquote>
-<div><p>Image?</p>
+<div><p>Add underligned labels and an example on how to add the street names</p>
 </div></blockquote>
-<hr class="docutils" />
-<p><strong>The title</strong> summarizes in a few words the information represented on the map, giving the reader useful contextual information. Titles should include the following information:</p>
-<ul class="simple">
-<li><p><strong>The place</strong>, with several degrees of precision according to the scale (Country, Region, Township,…)</p></li>
-<li><p><strong>The subject</strong> intelligible by all (make sure that the acronyms used are detailed elsewhere on the map)</p></li>
-<li><p><strong>the date</strong> of the represented data</p></li>
-</ul>
-<p><em>Examples:</em></p>
-<ul class="simple">
-<li><p><em>“Access to health care in Maputo, Mozambique in 2022”</em></p></li>
-<li><p><em>“Flooding Risk in Ghardaia, Algeria”</em></p></li>
-</ul>
-<p><strong>The legend</strong> is key to interpreting the information represented on the map. Without it, it is impossible to understand the meaning of the different symbols and colours used map. In order to guide the reader, the legend must be:</p>
-<ul class="simple">
-<li><p><strong>Comprehensive</strong>: All the data on the map must be presented in the legend.</p></li>
-<li><p><strong>Representative</strong>: the figures on the map and in the legend must match (same size, same color, …).</p></li>
-<li><p><strong>Organized</strong>: the data in the legend can be grouped by thematic categories (health, environment, background map, …) or by type of figure (point, line, surface) to facilitate reading.</p></li>
-</ul>
-<figure class="align-default" id="organized-legend">
-<a class="reference internal image-reference" href="../../_images/en_legend_good_practice.png"><img alt="../../_images/en_legend_good_practice.png" src="../../_images/en_legend_good_practice.png" style="width: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Example of a well organized legend</span><a class="headerlink" href="#organized-legend" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p><strong>The scale bar</strong> is essential to a map since it gives the correspondence between a distance measured on the map and the distance in the real world. There are two types of scales:</p>
-<ul class="simple">
-<li><p><strong>The numerical Scale</strong> is expressed as a fraction (1/25000 or 1:25000) which indicates the equivalence between 1 centimeter on the map and the real distance. It is a scale that can be calculated with GIS software, and is often found in topographic maps</p>
-<ul>
-<li><p>A scale of 1:25000 means that 1 cm represents 25000 cm (or 250 meters) on the gound.</p></li>
-</ul>
-</li>
-<li><p><strong>the graphical scale</strong> is expressed by a line on the map, with an associated distance value. This scale is very useful to have an idea of the distances on the ground. The graphical scale will always be the correct size, even if a different printing format is used, since it will undergo the same transformation as the rest of the map</p></li>
-</ul>
-<figure class="align-default" id="scale-bar">
-<img alt="fig/example_scale_bar.png&quot;" src="fig/example_scale_bar.png&quot;" />
-<figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">A scale bar</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p><strong>Orientation</strong></p>
-<p>Even if by default the majority of the maps are oriented to the North, it is still necessary to specify the orientation of the map. It is often indicated by an arrow to the North. Sometimes the orientation of different in order to optimize the representation of the study area on the map.</p>
-</section>
-</section>
-<section id="sources">
-<h3>Sources<a class="headerlink" href="#sources" title="Permalink to this heading">#</a></h3>
-<p>Any data represented on a map should have its sources indicated. This provides a record of the data used, but also references the author of the data. The reader will then be able to look for more information on the sources if he wishes. Open access geographic data, such as OpenStreetMap, are more and more numerous and must also be cited on the maps.</p>
-<p>It is possible to give the source of each data under the legend, or to do it in a dedicated space in the map. The level of precision of the sources varies according to the author or the precision of the data.</p>
-</section>
-<section id="the-4-semiological-errors">
-<h3>The 4 semiological errors<a class="headerlink" href="#the-4-semiological-errors" title="Permalink to this heading">#</a></h3>
-<section id="proportional-circles-vs-solid-colors">
-<h4>1. Proportional circles vs. solid colors<a class="headerlink" href="#proportional-circles-vs-solid-colors" title="Permalink to this heading">#</a></h4>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>DO NOT represent <strong>quantitative</strong> stock character/data with a <strong>solid color</strong>.</p>
-</div>
-<p>This is one of the most common mistakes in mapping. While this representation is graphically appealing, it is still false and distracts from the message of the map.</p>
-<p>It is a mistake because:</p>
-<ul class="simple">
-<li><p>You lose the <strong>order relationship between the data</strong> (a circle can be twice as big as another one, a color cannot be “twice as dark”)</p></li>
-<li><p>Countries with a large surface area stand out visually (eg.: Russia in the example below)</p></li>
-<li><p>We are trying to represent <strong>data that has nothing to do with the area of a country</strong>, but rather speaks of individual elements</p></li>
-</ul>
-<blockquote>
-<div><p>Add different example</p>
-</div></blockquote>
-</section>
-<section id="color-gradient-vs-distinct-color-palette">
-<h4>Color gradient vs. distinct color palette<a class="headerlink" href="#color-gradient-vs-distinct-color-palette" title="Permalink to this heading">#</a></h4>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>DO NOT use a <strong>separate</strong> color palette to represent <strong>ordered entities</strong></p>
-</div>
-<p>A representatin that “feels right” because it seems logical that a “low” rate would be represented differently than a “high” rate.</p>
-<p>It is a mistake because:</p>
-<ul class="simple">
-<li><p>By using a differentiating color variable, <strong>you lose the ordinal relationship between entities</strong>. Instead, a <strong>gradient of the same color</strong> that should be used.</p></li>
-<li><p>Different colors are used to differentiate between distinct entities.</p></li>
-</ul>
-</section>
-<section id="gradient-in-a-single-color-vs-gradient-between-two-colors">
-<h4>Gradient in a single color vs. Gradient between two colors<a class="headerlink" href="#gradient-in-a-single-color-vs-gradient-between-two-colors" title="Permalink to this heading">#</a></h4>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>DO NOT use a gradient across two colors for an always positive data.</p>
-</div>
-<p>This is a mistake that is often found because our brais are used to prioritizing certain colors, especially green to red, or blue to red. We must remember that __if our values are always positive, we must stay in the same color that will degrade into several shades.</p>
-<blockquote>
-<div><p>What about height?</p>
-</div></blockquote>
-<p>A gradient between two colors can be used when it is necessary to show a gradation that can go from negative to positive. As for temperatures, it makes sense to distinguish negative values (in shades of blue for example) and positive values (in shades of red).</p>
-<p>It is a mistake because:</p>
-<ul class="simple">
-<li><p>By choosing different colors for values that are linked to each other, our eyes perceive a difference between the elements, and not an order.</p></li>
-<li><p>Darker colors stand out more than lighter colors, and can be perceived as more important.</p></li>
-<li><p>The map will send a message of divergence, of opposition between certain values, when we are simply trying to represent a hierarchy between values</p></li>
-<li><p>In this way, the color itself directly indicates information about the trend (positive/negative or increasing/decreasing).</p></li>
-</ul>
-</section>
-<section id="limited-geometric-symbols-vs-complex-icons-and-symbols">
-<h4>Limited geometric symbols vs. complex icons and symbols<a class="headerlink" href="#limited-geometric-symbols-vs-complex-icons-and-symbols" title="Permalink to this heading">#</a></h4>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>DO NOT use <strong>too many symbols</strong> in a thematic map</p>
-</div>
-<p>Incorportating a multitude of symbols (and data) for a informative map is a common desire. However, too many symbols can <strong>overload the map</strong> and <strong>reduce the readability</strong> of the map. Using too many symbols (especially geometric ones) can make it difficult to read and understand the map.<br />
-__The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is difficult to dinstinguish the elements. This is a less serious error because it does not convey false information on the map.</p>
-<p>It is a mistake because:</p>
-<ul class="simple">
-<li><p>It complicates the map and limits its impact.</p></li>
-<li><p>Sometimes you are forced to represent several symbols, so you must be careful about overlapping points and overloading the map.</p></li>
-</ul>
-</section>
 </section>
 </section>
 </section>
@@ -1022,7 +788,7 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mag design 2</p>
+        <p class="prev-next-title">Print layout</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1041,49 +807,34 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Map design- Basic</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representation">Representation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Graphical Variables and Symbology</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-maps">Types of maps</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphic-semiology">Graphic Semiology</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-variables">Visual variables</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-and-styling">Symbology and styling</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for vector data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-a-layer">Adding labels to a layer</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-2-different-label-styles-to-the-same-layer">Adding 2 different label styles to the same layer</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-and-styling">Symbology and styling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology">Symbology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colours">Colours</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colour-blindness">Colour Blindness</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for Vector data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-points">Symbology for points</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-lines">Symbology for lines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-polygons">Symbology for polygons</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#print-layout">Print layout</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-print-layout-composer">Understanding the Print Layout Composer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-elements-to-the-print-layout">Adding elements to the print layout</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-map">Adding a new map</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-text-box">Adding a text box</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-legend">Adding a legend</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-scale-bar">Adding a scale bar</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-overview-map">Adding an overview map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-colour-gradient-to-raster-data">Assigning a colour gradient to raster data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#good-practices-and-common-mistakes-in-mapping">Good practices and common mistakes in mapping</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-composition">Map composition</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-elements-of-a-map">Key elements of a map</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sources">Sources</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-4-semiological-errors">The 4 semiological errors</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#proportional-circles-vs-solid-colors">1. Proportional circles vs. solid colors</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#color-gradient-vs-distinct-color-palette">Color gradient vs. distinct color palette</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-in-a-single-color-vs-gradient-between-two-colors">Gradient in a single color vs. Gradient between two colors</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#limited-geometric-symbols-vs-complex-icons-and-symbols">Limited geometric symbols vs. complex icons and symbols</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-a-layer">Adding labels to a layer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-2-different-label-styles-to-the-same-layer">Adding 2 different label styles to the same layer</a></li>
 </ul>
 </li>
 </ul>
