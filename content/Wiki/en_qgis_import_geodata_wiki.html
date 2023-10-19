@@ -171,8 +171,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="en_qgis_qgis_basics_wiki.html">QGIS Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_installation_wiki.html">QGIS installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_interface_wiki.html">QGIS Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_basemaps_wiki.html">Basemaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_projects_folder_structure_wiki.html">Projects and Folder Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_projections_wiki.html">Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_basemaps_wiki.html">Basemaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_plugins_wiki.html">Plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_data_sources_wiki.html">Data sources</a></li>
 </ul>
@@ -208,15 +209,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_gis_theorie.html">What is GIS? (Theory)</a></li>
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_theorie.html">What is GIS? (Theory)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_start.html">Getting started with QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html">Basic Geodata  processing</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html">Geodata concept</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Modul_2/en_qgis_geodata_concept_ex1.html">Geodata Concept Exercise 1</a></li>
 </ul>
 </li>
@@ -231,8 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 3- Basic GIS operations</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation.html">Digitalisation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation_ex1.html">Digitalisation Exercise 1</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation.html">Digitalisation</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_data_classification.html">Geodata Classification</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -246,7 +244,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Map design- Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_2.html">Print layout</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
@@ -463,11 +464,24 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-data-import">Vector data Import</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-layer">Open vector layer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-layer">Open vector layer</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-data-via-layer-tab">Open vector data via Layer Tab</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-data-via-drag-and-drop">Open vector data via drag-and-drop</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-import">Raster data Import</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-data-import">Text data import</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-import">Raster data Import</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-raster-data-via-layer-tab">Open raster data via Layer Tab</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-raster-data-via-drag-and-drop">Open raster data via drag-and-drop</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-netcdf-raster-files">Open NetCDF raster files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-data-import">Text data import</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-csv-data-in-qgis">Open csv. data in QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-xlsx-files-in-qgis">Open .xlsx files in QGIS</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -489,121 +503,73 @@ document.write(`
 </div>
 <section id="open-vector-layer">
 <h3>Open vector layer<a class="headerlink" href="#open-vector-layer" title="Permalink to this heading">#</a></h3>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Open vector data via Layer Tab</div>
-<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_vector.mp4"></video></p>
+<section id="open-vector-data-via-layer-tab">
+<h4>Open vector data via Layer Tab<a class="headerlink" href="#open-vector-data-via-layer-tab" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
-<li><p class="sd-card-text">“Layer” Tab -&gt; “Vecctor”</p></li>
-<li><p class="sd-card-text">Select file</p></li>
-<li><p class="sd-card-text">Click “Add”</p></li>
+<li><p>“Layer” Tab -&gt; “Vecctor”</p></li>
+<li><p>Select file</p></li>
+<li><p>Click “Add”</p></li>
 </ol>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Open vector data via drag-and-drop</div>
-<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_vector_d_d.mp4"></video></p>
-</div>
-</div>
-</div>
-</div>
-</div>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_vector.mp4"></video></p>
+</section>
+<section id="open-vector-data-via-drag-and-drop">
+<h4>Open vector data via drag-and-drop<a class="headerlink" href="#open-vector-data-via-drag-and-drop" title="Permalink to this heading">#</a></h4>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_vector_d_d.mp4"></video></p>
+</section>
 </section>
 </section>
 <section id="raster-data-import">
 <h2>Raster data Import<a class="headerlink" href="#raster-data-import" title="Permalink to this heading">#</a></h2>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Open raster data via Layer Tab</div>
-<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_raster.mp4"></video></p>
+<section id="open-raster-data-via-layer-tab">
+<h3>Open raster data via Layer Tab<a class="headerlink" href="#open-raster-data-via-layer-tab" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p class="sd-card-text">“Layer” Tab -&gt; “Raster”</p></li>
-<li><p class="sd-card-text">Select file</p></li>
-<li><p class="sd-card-text">Click “Add”</p></li>
+<li><p>“Layer” Tab -&gt; “Raster”</p></li>
+<li><p>Select file</p></li>
+<li><p>Click “Add”</p></li>
 </ol>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Open raster data via drag-and-drop</div>
-<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_raster_d_d.mp4"></video></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Open NetCDF raster files </div>
-<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_NetCDF_raster.mp4"></video></p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_raster.mp4"></video></p>
+</section>
+<section id="open-raster-data-via-drag-and-drop">
+<h3>Open raster data via drag-and-drop<a class="headerlink" href="#open-raster-data-via-drag-and-drop" title="Permalink to this heading">#</a></h3>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_raster_d_d.mp4"></video></p>
+</section>
+<section id="open-netcdf-raster-files">
+<h3>Open NetCDF raster files<a class="headerlink" href="#open-netcdf-raster-files" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p class="sd-card-text">Layer -&gt; Add Layer -&gt; Add Raster Layer -&gt; Select your file -&gt; click “add”</p></li>
-<li><p class="sd-card-text">A window will open and you have to select the exact dataset you want to use. -&gt; Click “add Layers”</p></li>
-<li><p class="sd-card-text">Click on the ? in the Layers window. The window “Coordination Reference System Selectir” will open. -&gt; Select the correct reference system.-&gt; Click “OK”</p></li>
+<li><p>Layer -&gt; Add Layer -&gt; Add Raster Layer -&gt; Select your file -&gt; click “add”</p></li>
+<li><p>A window will open and you have to select the exact dataset you want to use. -&gt; Click “add Layers”</p></li>
+<li><p>Click on the ? in the Layers window. The window “Coordination Reference System Selectir” will open. -&gt; Select the correct reference system.-&gt; Click “OK”</p></li>
 </ol>
-</div>
-</div>
-</div>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_NetCDF_raster.mp4"></video></p>
+</section>
 </section>
 <section id="text-data-import">
 <h2>Text data import<a class="headerlink" href="#text-data-import" title="Permalink to this heading">#</a></h2>
-<p>|</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To directly load .csv or EXCEL data into QGIS, the datasets need to have columns containing geometry in the form of latitude (Y-field) and longitude (X-field).</p>
 </div>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Open csv. data in QGIS</div>
-<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_textfile.mp4"></video></p>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Open .xlsx files in QGIS</div>
-<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_xlsx.mp4"></video></p>
+<section id="open-csv-data-in-qgis">
+<h3>Open csv. data in QGIS<a class="headerlink" href="#open-csv-data-in-qgis" title="Permalink to this heading">#</a></h3>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_textfile.mp4"></video></p>
+</section>
+<section id="open-xlsx-files-in-qgis">
+<h3>Open .xlsx files in QGIS<a class="headerlink" href="#open-xlsx-files-in-qgis" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p class="sd-card-text">Drag and drop the .xlsx file in QGIS.</p></li>
-<li><p class="sd-card-text">If the file contains multible tables, select the table you want to work with. Click “add Layers”</p></li>
-<li><p class="sd-card-text">click on the “Processing” tab -&gt; Toolbox -&gt; search for the tool “Creat points layer from table”</p></li>
-<li><p class="sd-card-text">Select you table as “Input Layer”</p></li>
-<li><p class="sd-card-text">Select the  longitude column for “X field” and the latitude column for “Y field”</p></li>
-<li><p class="sd-card-text">Click “Run”</p></li>
+<li><p>Drag and drop the .xlsx file in QGIS.</p></li>
+<li><p>If the file contains multible tables, select the table you want to work with. Click “add Layers”</p></li>
+<li><p>click on the “Processing” tab -&gt; Toolbox -&gt; search for the tool “Creat points layer from table”</p></li>
+<li><p>Select you table as “Input Layer”</p></li>
+<li><p>Select the  longitude column for “X field” and the latitude column for “Y field”</p></li>
+<li><p>Click “Run”</p></li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p class="sd-card-text">A other option is always to transform the .xlsx file into a .csv, which is eaysier to open in QGIS.</p>
+<p>A other option is always to transform the .xlsx file into a .csv, which is eaysier to open in QGIS.</p>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_xlsx.mp4"></video></p>
 <p><em>QGGIS Version 3.22.15</em></p>
+</section>
 </section>
 </section>
 
@@ -671,11 +637,24 @@ Open .xlsx files in QGIS</div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-data-import">Vector data Import</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-layer">Open vector layer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-layer">Open vector layer</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-data-via-layer-tab">Open vector data via Layer Tab</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-data-via-drag-and-drop">Open vector data via drag-and-drop</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-import">Raster data Import</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-data-import">Text data import</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-import">Raster data Import</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-raster-data-via-layer-tab">Open raster data via Layer Tab</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-raster-data-via-drag-and-drop">Open raster data via drag-and-drop</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-netcdf-raster-files">Open NetCDF raster files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text-data-import">Text data import</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-csv-data-in-qgis">Open csv. data in QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-xlsx-files-in-qgis">Open .xlsx files in QGIS</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
