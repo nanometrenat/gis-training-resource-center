@@ -1,10 +1,12 @@
 # Attribute Table in QGIS
 
-The attribute table, a core component of Geographic Information Systems (GIS), organizes and presents detailed information about features in a selected layer. Each row in the table represents a feature, while columns store specific attributes. This table facilitates searching, selection, sorting, filtering, and editing of features.
+The attribute table, a core component of Geographic Information Systems (GIS), __organizes and presents__ detailed information about features in a selected layer. Each __row__ in the table represents a __feature__, while __columns__ store specific __attributes__. This table facilitates searching, selection, sorting, filtering, and editing of features.
 
 ## Buttons of Attribute Tabel
 
-![](/fig/attribute_table.png)
+![Example of an attribute table](/fig/attribute_table.png)
+
+Below all buttons of the attribute table are listed. 
 
 |Icon|Description|Purpose|Shortcut|
 |---|---|-----|---|
@@ -32,5 +34,29 @@ The attribute table, a core component of Geographic Information Systems (GIS), o
 |![](/fig/mActionConditionalFormatting.png)| Conditional formatting | Enable table formatting| |
 |![](/fig/dock.png)| Dock attribute table | Allows to dock/undock the attribute table||
 |![](/fig/mAction.png)| Actions | Lists the actions related to the layer           | |
+
+## Attribute Table- Basics
+
+### Display attribute table and sort features in the attribute table
+
+* __Open Attribute Table:__ Right click on your layer --> `Open Attribute Table`
+* __Sort column:__ Click on a column header
+
+<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_show_attribute_table.mp4"></video>
+
+
+### Manually select features in the attribute table
+
+* __Select:__ Click on the lines of the features. 
+* __Multi Select:__ To select multiple features press `Ctrl` and select features.
+* __Show only selected features:__ In the bottom left of the attribute table open the dropdown menu and select `Show selected features`. To show again all features click on `Show all features` 
+
+<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_select.mp4"></video>
+
+### Unselect feature
+
+* __Unselect:__ Click on ![](/fig/mActionDeselectActiveLayer.png) or use `Ctrl+Shift+A`.
+
+<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_unselect.mp4"></video>
 
 
