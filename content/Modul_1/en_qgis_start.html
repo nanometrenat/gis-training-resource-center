@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -76,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -242,7 +252,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -411,10 +424,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -422,7 +435,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -456,7 +469,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-qgis">Introducing QGIS</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-interface">QGIS Interface</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-functionalities">Further Functionalities</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-the-map-view">Moving the map view</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-the-map-view">Move the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-the-map-view">Zooming in the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-properties-of-objects">Show properties of objects</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-projection-of-the-map-view-project-crs">Set the projection of the map view (project CRS)</a></li>
@@ -532,8 +545,8 @@ Project template</p>
 </section>
 <section id="further-functionalities">
 <h3>Further Functionalities<a class="headerlink" href="#further-functionalities" title="Permalink to this heading">#</a></h3>
-<section id="moving-the-map-view">
-<h4>Moving the map view<a class="headerlink" href="#moving-the-map-view" title="Permalink to this heading">#</a></h4>
+<section id="move-the-map-view">
+<h4>Move the map view<a class="headerlink" href="#move-the-map-view" title="Permalink to this heading">#</a></h4>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_move.mp4"></video></p>
 <p><img alt="" src="../../_images/qgis_move_symbol.png" /></p>
 <ul class="simple">
@@ -558,19 +571,18 @@ Project template</p>
 </section>
 <section id="set-the-projection-of-the-map-view-project-crs">
 <h4>Set the projection of the map view (project CRS)<a class="headerlink" href="#set-the-projection-of-the-map-view-project-crs" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_map_projection.mp4"></video></p>
+<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/325cb2d70b0154c1bd5f38a899cd2b40/qgis_map_projection.mp4"></video></p>
 <ul class="simple">
 <li><p>Geodata concepts are explained in detail in <a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html"><span class="doc std std-doc">module 2</span></a></p></li>
 </ul>
 </section>
 <section id="open-project">
 <h4>Open Project<a class="headerlink" href="#open-project" title="Permalink to this heading">#</a></h4>
-<video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_project.mp4">
-</video>
+<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/1655b97b741749bfa46c6c08ee3d0be6/qgis_open_project.mp4"></video></p>
 </section>
 <section id="save-project">
 <h4>Save Project<a class="headerlink" href="#save-project" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_save_project.mp4"></video></p>
+<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/8e2bb629d9c3189f8f635a4cf1381d2c/qgis_save_project.mp4"></video></p>
 <ul class="simple">
 <li><p>The layer data used in the project are not saved in the project file. Instead, the project file only contains the file paths where the layer data were located at the time the project was last saved on the PC. If the location of this layer data is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.
 Good data organisation with a fixed and well thought-out folder structure prevents such problems.</p></li>
@@ -578,7 +590,7 @@ Good data organisation with a fixed and well thought-out folder structure preven
 </section>
 <section id="show-and-hide-displays">
 <h4>Show and hide displays<a class="headerlink" href="#show-and-hide-displays" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Anzeigen_einblenden_ausblenden.mp4"></video></p>
+<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/b9ccebc4bd584fdbc5092b4804d8a742/Anzeigen_einblenden_ausblenden.mp4"></video></p>
 </section>
 <section id="move-and-arrange-toolbars">
 <h4>Move and arrange toolbars<a class="headerlink" href="#move-and-arrange-toolbars" title="Permalink to this heading">#</a></h4>
@@ -586,7 +598,7 @@ Good data organisation with a fixed and well thought-out folder structure preven
 <li><p>At each toolbar there is a field of two dotted lines. If you move the mouse pointer over it until an arrow cross appears and then hold down the left mouse button, you can move the toolbar. This allows an individualised arrangement of your own tools. By compressing all toolbars into a few lines, the map view window can also be enlarged.</p></li>
 </ul>
 <p><tagName>  <tagName></p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_arrange_toolbars.mp4"></video></p>
+<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/07bbf031499eb8da30daaa3bebd24769/qgis_arrange_toolbars.mp4"></video></p>
 <p>See also:
 <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html">corresponding page in the Wiki</a></p>
 </section>
@@ -619,11 +631,10 @@ Good data organisation with a fixed and well thought-out folder structure preven
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="en_qgis_theorie.html"
@@ -643,10 +654,7 @@ Good data organisation with a fixed and well thought-out folder structure preven
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -668,7 +676,7 @@ Good data organisation with a fixed and well thought-out folder structure preven
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-qgis">Introducing QGIS</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-interface">QGIS Interface</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-functionalities">Further Functionalities</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-the-map-view">Moving the map view</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-the-map-view">Move the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-the-map-view">Zooming in the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-properties-of-objects">Show properties of objects</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-projection-of-the-map-view-project-crs">Set the projection of the map view (project CRS)</a></li>
@@ -727,8 +735,8 @@ By HeiGIT gGmbH
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
