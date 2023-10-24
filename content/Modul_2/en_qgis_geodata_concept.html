@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -77,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -255,7 +245,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a></li>
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -424,10 +413,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
@@ -435,7 +424,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -495,7 +484,8 @@ document.write(`
 <h2>Projections<a class="headerlink" href="#projections" title="Permalink to this heading">#</a></h2>
 <section id="theory">
 <h3>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">#</a></h3>
-<p>The earth is a sphere and cannot be represented on a flat map without being distorted. To able able to display the earth on a flat map for example as a rectangle it needs to be projected. For further explanation, watch this <a class="reference external" href="https://www.youtube.com/watch?v=kIID5FDi2JQ">video</a>.</p>
+<p>The earth is a sphere and cannot be represented on a flat map without being distorted. To able able to display the earth on a flat map for example as a rectangle it needs to be projected. For further explanation, watch this video.
+<a class="reference external" href="https://www.youtube.com/watch?v=kIID5FDi2JQ"><img alt="preview video" src="../../_images/screenshot_video_every_world_map_is_wrong.png" /></a></p>
 <p>For this translation, from a curved on a flat surface, thousands of different methods exist. These are called <strong>Coordinate Reference Systems (CRS)</strong>.</p>
 <p><img alt="Different Coordinate Reference Systems" src="../../_images/en_examples_projections.png" /></p>
 <p>Every projection comes with a trade-off in shape, direction, distance and area. That’s why it is important to choose different types of CRS for different use cases.
@@ -531,11 +521,11 @@ For example, Mercator projections don´t represent the area correctly. Google Ma
 <section id="application">
 <h3>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h3>
 <p>You can find all the projections and their CRS code at this <a class="reference external" href="http://epsg.io">website</a>.</p>
-<p>To change the projection of a <strong>vector file</strong>, click on <em>Vector</em>, <em>Data Management Tools</em>, <em>Reproject Layer</em>. Select your input layer and the target crs. Click on the three dots to <em>Save to File…</em> and click <em>Run</em>. For a detailed instruction click on this <a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/7e7a28698859062d1b832b558b2721c6/qgis_reproject_vector.mp4">video</a>.</p>
-<p>To change the projection of a <strong>raster file</strong>, clickclick on <em>Raster</em>, <em>Projections</em>, <em>Warp (Reproject)</em>. Choose your input layer and target crs. Click on the three dots to <em>Save to File…</em> and click <em>Run</em>. For a detailed instruction click on this <a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/3b7a1bb2408f4453f22d73f54156888b/qgis_reproject_raster.mp4">video</a>.</p>
-<p>It is crucial that you are aware of the difference in data projection and project projection. They should always be the same, or else you will get wrong results! You can change the data projection by following the steps explained above. The project projection is on the bottom left corner, as seen here.
-<img alt="QGIS Interface" src="../../_images/en_QGIS_User_Interface.png" />
-The interface then will be the same and by searching for the right EPSG you can change the projection.</p>
+<p>To change the projection of a <strong>vector file</strong>, click on <em>Vector</em>, <em>Data Management Tools</em>, <em>Reproject Layer</em>. Select your input layer and the target crs. Click on the three dots to <em>Save to File…</em> and click <em>Run</em>. For a detailed instruction click on this video.
+<video width="100%" controls src=""></video></p>
+<p>To change the projection of a <strong>raster file</strong>, clickclick on <em>Raster</em>, <em>Projections</em>, <em>Warp (Reproject)</em>. Choose your input layer and target crs. Click on the three dots to <em>Save to File…</em> and click <em>Run</em>. For a detailed instruction click on this video. <video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/blob/main/fig/qgis_reproject_raster.mp4"></video></p>
+<p>It is crucial that you are aware of the difference in data projection and project projection. They should always be the same, or else you will get wrong results! You can change the data projection by following the steps explained above. The project projection is on the bottom left corner, as seen <a class="reference download internal" download="" href="../../_downloads/54547c7e6d6f20d020245b033bbce8f1/en_QGIS_User_Interface.png"><span class="xref download myst">here</span></a>.</p>
+<p>The interface then will be the same and by searching for the right EPSG you can change the projection.</p>
 </section>
 </section>
 <section id="excercises">
@@ -646,7 +636,7 @@ Since a raster is based on an image, the resolution is crucial. It defines the a
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_2"
+            path: "./content/Modul_2"
         },
         predefinedOutput: true
     }
@@ -658,10 +648,11 @@ Since a raster is based on an image, the resolution is crucial. It defines the a
 
               
               
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../Modul_1/en_qgis_installation.html"
@@ -681,7 +672,10 @@ Since a raster is based on an image, the resolution is crucial. It defines the a
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -752,8 +746,8 @@ By HeiGIT gGmbH
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

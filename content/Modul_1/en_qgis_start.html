@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -77,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -423,10 +413,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
@@ -434,7 +424,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -466,7 +456,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-qgis">Introducing QGIS</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-interface">QGIS Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-qgis-interface">Overview of QGIS Interface</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-functionalities">Further Functionalities</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-the-map-view">Moving the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-the-map-view">Zooming in the map view</a></li>
@@ -474,7 +464,8 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-projection-of-the-map-view-project-crs">Set the projection of the map view (project CRS)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-project">Open Project</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-project">Save Project</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays">Show and hide displays</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-toolbox">Open Toolbox</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays-and-toolbars">Show and hide displays and toolbars</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-arrange-toolbars">Move and arrange toolbars</a></li>
 </ul>
 </li>
@@ -507,8 +498,8 @@ You may <strong>view, edit, capture and analyze spatial data or create printable
 <li><p>QGIS is a <strong>desktop software</strong>: that means you get a program that opens up on your computer as a window with buttons you can click, forms you can fill out to do tasks, and it’s generally a visual interactive experience.</p></li>
 <li><p>QGIS is backed by a <strong>large community of users</strong>, so it’s easy to find solutions to technical issues by using QGIS forums, blog and subreddit.</p></li>
 </ul>
-<section id="qgis-interface">
-<h3>QGIS Interface<a class="headerlink" href="#qgis-interface" title="Permalink to this heading">#</a></h3>
+<section id="overview-of-qgis-interface">
+<h3>Overview of QGIS Interface<a class="headerlink" href="#overview-of-qgis-interface" title="Permalink to this heading">#</a></h3>
 <p><img alt="QGIS_User_Interface" src="../../_images/en_QGIS_GUI.png" />
 User interface</p>
 <ol class="arabic simple">
@@ -546,20 +537,20 @@ Project template</p>
 <h3>Further Functionalities<a class="headerlink" href="#further-functionalities" title="Permalink to this heading">#</a></h3>
 <section id="moving-the-map-view">
 <h4>Moving the map view<a class="headerlink" href="#moving-the-map-view" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_move.mp4"></video></p>
 <p><img alt="" src="../../_images/qgis_move_symbol.png" /></p>
 <ul class="simple">
 <li><p>You can also move with the <em>arrow keys</em></p></li>
 </ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_move.mp4"></video></p>
 </section>
 <section id="zooming-in-the-map-view">
 <h4>Zooming in the map view<a class="headerlink" href="#zooming-in-the-map-view" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom.mp4"></video></p>
 <p><img alt="" src="../../_images/qgis_zoom_symbol.png" /></p>
 <ul class="simple">
 <li><p>You can also zoom by scrolling</p></li>
 <li><p>Or with Ctrl+ or Ctrl-</p></li>
 </ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom.mp4"></video></p>
 </section>
 <section id="show-properties-of-objects">
 <h4>Show properties of objects<a class="headerlink" href="#show-properties-of-objects" title="Permalink to this heading">#</a></h4>
@@ -588,17 +579,26 @@ Project template</p>
 Good data organisation with a fixed and well thought-out folder structure prevents such problems.</p></li>
 </ul>
 </section>
-<section id="show-and-hide-displays">
-<h4>Show and hide displays<a class="headerlink" href="#show-and-hide-displays" title="Permalink to this heading">#</a></h4>
+<section id="open-toolbox">
+<h4>Open Toolbox<a class="headerlink" href="#open-toolbox" title="Permalink to this heading">#</a></h4>
+<p><img alt="" src="../../_images/Geschlossene_Toolbox_01.png" /></p>
+<ul class="simple">
+<li><p>You can also zoom by scrolling</p></li>
+<li><p>Or with Ctrl+ or Ctrl-</p></li>
+</ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_toolbars.mp4"></video></p>
+</section>
+<section id="show-and-hide-displays-and-toolbars">
+<h4>Show and hide displays and toolbars<a class="headerlink" href="#show-and-hide-displays-and-toolbars" title="Permalink to this heading">#</a></h4>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Anzeigen_einblenden_ausblenden.mp4"></video></p>
 </section>
 <section id="move-and-arrange-toolbars">
 <h4>Move and arrange toolbars<a class="headerlink" href="#move-and-arrange-toolbars" title="Permalink to this heading">#</a></h4>
+<p><tagName>  <tagName></p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_arrange_toolbars.mp4"></video></p>
 <ul class="simple">
 <li><p>At each toolbar there is a field of two dotted lines. If you move the mouse pointer over it until an arrow cross appears and then hold down the left mouse button, you can move the toolbar. This allows an individualised arrangement of your own tools. By compressing all toolbars into a few lines, the map view window can also be enlarged.</p></li>
 </ul>
-<p><tagName>  <tagName></p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_arrange_toolbars.mp4"></video></p>
 <p>See also:
 <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html">corresponding page in the Wiki</a></p>
 </section>
@@ -619,7 +619,7 @@ Good data organisation with a fixed and well thought-out folder structure preven
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_1"
+            path: "./content/Modul_1"
         },
         predefinedOutput: true
     }
@@ -631,10 +631,11 @@ Good data organisation with a fixed and well thought-out folder structure preven
 
               
               
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="en_qgis_theorie.html"
@@ -654,7 +655,10 @@ Good data organisation with a fixed and well thought-out folder structure preven
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -674,7 +678,7 @@ Good data organisation with a fixed and well thought-out folder structure preven
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-qgis">Introducing QGIS</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-interface">QGIS Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-qgis-interface">Overview of QGIS Interface</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-functionalities">Further Functionalities</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-the-map-view">Moving the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-the-map-view">Zooming in the map view</a></li>
@@ -682,7 +686,8 @@ Good data organisation with a fixed and well thought-out folder structure preven
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-projection-of-the-map-view-project-crs">Set the projection of the map view (project CRS)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-project">Open Project</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-project">Save Project</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays">Show and hide displays</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-toolbox">Open Toolbox</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays-and-toolbars">Show and hide displays and toolbars</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-arrange-toolbars">Move and arrange toolbars</a></li>
 </ul>
 </li>
@@ -735,8 +740,8 @@ By HeiGIT gGmbH
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
