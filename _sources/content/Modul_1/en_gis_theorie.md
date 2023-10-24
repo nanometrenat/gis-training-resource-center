@@ -66,7 +66,7 @@ GIS has many applications in the __humanitarian field__:
 A few examples:
 ```
 
- - [REACH Initiative](https://www.reachresourcecentre.info/search/)  
+ - [REACH Initiativehttps](www.reachresourcecentre.info/search/)  
  - [World Food Programme(WFP)](https://hungermap.wfp.org/) 
  - [Médecins Sans Frontières (MSF)](https://geo.msf.org/catalogue) 
  - [iMMAP](https://immap.org/products/) 
@@ -163,6 +163,7 @@ Infrastructure map of Nigeria
 <tagName>  <tagName>
 
 ![Situation map from Tilkaif to Mosul](/fig/en_Situation_Map_Tilkaif_Mosul.png)Situation map from Tilkaif to Mosul
+
  
 ### Mapping and GIS
 
@@ -181,13 +182,8 @@ Infrastructure map of Nigeria
 ![Graphic information](/fig/en_Graphic_information_CartONG04.png) Graphic information
 
 For further information have a look here: 
-
-Share link:
-
-[PDF documentation](/QGIS-Training/QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-6-10.pdf) Mapping and GIS, p. 6 - 10
-
-<a href=/QGIS-Training/QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-6-10.pdf>
-Mapping and GIS, p. 6 - 10</a>
+ 
+[PDF documentation](../QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-6-10.pdf) Mapping and GIS, p. 6 - 10
  
 ## Examples for GIS created maps 
 
@@ -216,13 +212,9 @@ to help field teams move around in such a huge camp without getting lost
 - __Planning support:__ 
 Population estimate, distribution of tents and infrastructure, risk assessment, …
 
-Share link:
-
 For further information have a look here: 
 
-[PDF documentation](/QGIS-Training/QGIS-Dokumente/21013-Module-formation-cartographie-SIG_CartONG_EN-43-53.pdf) Examples for GIS created maps, p. 45 - 53
-
-<a href=/21013-Module-formation-cartographie-SIG_CartONG_EN-43-53.pdf)>Examples for GIS created maps, p. 45 - 53</a>
+[PDF documentation](../QGIS-Dokumente/21013-Module-formation-cartographie-SIG_CartONG_EN-43-53.pdf) Examples for GIS created maps, p. 45 - 53
 
 ```{Tip} 
 Some more examples:
@@ -240,12 +232,7 @@ https://cartong.pages.gitlab.cartong.org/learning-corner/en/2_mobilize_mapping_g
 
 For further information have a look here:
 
-Share link:
-
-[PDF documentation](/QGIS-Training/QGIS-Dokumente/GIS_Toolbox-2_Mobilizing_mapping_and_GIS-13-Sept-2022.pdf) Mobilizing mapping and GIS
-
-<a href=/QGIS-Training/QGIS-Dokumente/GIS_Toolbox-2_Mobilizing_mapping_and_GIS-13-Sept-2022.pdf> Mobilizing mapping and GIS</a>
-
+[PDF documentation](../QGIS-Dokumente/GIS_Toolbox-2_Mobilizing_mapping_and_GIS-13-Sept-2022.pdf) Mobilizing mapping and GIS
 
 # Web GIS platforms
 
@@ -280,11 +267,11 @@ Combines __ODK with a geo app__. You can collect data through ODK surveys and di
 
 See also:
 
-Share link:
+   <a href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_4_examples_tools_mdc/3_4_3_tools_webmapping">Webmapping tools</a>
 
-[PDF documentation](https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_4_examples_tools_mdc/3_4_3_tools_webmappin) Webmapping tools
-  
-<a href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_4_examples_tools_mdc/3_4_3_tools_webmapping">Webmapping tools</a>
+
+   [PDF documentation](../QGIS-Dokumente/GIS_Toolbox-3.4.3_Webmapping_tools-13-Sept-2022.pdf) Webmapping tools
+
 
 #  Geo Mobile Apps overview (general understanding)
 
@@ -491,14 +478,14 @@ Examples for buffer usage:
 Philippines: Taal Volcano, Base surge hazard map
 [https://www.phivolcs.dost.gov.ph/vault/1BaseSurge_Layout-Jan2020_A0_v5.jpg](https://www.phivolcs.dost.gov.ph/vault/1BaseSurge_Layout-Jan2020_A0_v5.jpg)
 
-![Taal Volcano](/fig/en_Taal_Volcano.png)
+![Taal Volcano](en_Taal_Volcano.png)
 
 Nepal: Earthquake, april 2015
 [https://reliefweb.int/sites/reliefweb.int/files/resources/reach_npl_map_earthquakeaffected_27apr2015_a3.pdf](https://reliefweb.int/sites/reliefweb.int/files/resources/reach_npl_map_earthquakeaffected_27apr2015_a3.pdf)
 
-![Nepal Earthquake](/fig/en_Nepal_earthquake.png)
+![Nepal Earthquake](en_Nepal_earthquake.png)
 
-Fukushima: may 2011, Integrated doce results<br>
+Fukushima: may 2011, Integrated doce results
 [https://www.emsics.com/five-years-fukushima-incident-management-considerations/](https://www.emsics.com/five-years-fukushima-incident-management-considerations/)
 
 ![Aerial measuring results](/fig/en_Aerial_measuring_results.jpg)
@@ -578,10 +565,11 @@ These tools make it possible to manipulate and create maps online in a very simp
 
 For further detalied information have a look here:
 
-Share link:
+[PDF documentation](../QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-36-41.pdf) GIS-related tools, p. 36 -41
 
-[PDF documentation](/QGIS-Training/QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-36-41.pdf) GIS-related tools, p. 36 -41
 
-<a href=/QGIS-Training/QGIS-Dokumente/221013-Module-formation-cartographie-SIG_CartONG_EN-36-41.pdf> GIS-related tools, p. 36 -41</a>
+
+
+
 
 
