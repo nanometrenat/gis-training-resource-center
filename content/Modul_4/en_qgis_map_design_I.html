@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -76,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -413,10 +423,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -424,7 +434,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -453,10 +463,8 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Graphical Variables and Symbology</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-maps">Types of maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphic-semiology">Graphic Semiology</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-variables">Visual variables</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphic-semiology">Graphic Semiology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-variables">Visual variables</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-and-styling">Symbology and styling</a><ul class="visible nav section-nav flex-column">
@@ -466,21 +474,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colour-blindness">Colour Blindness</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for Vector data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-points">Symbology for points</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-lines">Symbology for lines</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-polygons">Symbology for polygons</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for Vector data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-colour-gradient-to-raster-data">Assigning a colour gradient to raster data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-a-layer">Adding labels to a layer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-2-different-label-styles-to-the-same-layer">Adding 2 different label styles to the same layer</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
 </ul>
 </li>
 </ul>
@@ -500,9 +499,6 @@ document.write(`
 <p>The representation of geodata in maps is crucial in order to provide useful location-based insights. This subchapter will cover the basics of good map design, how to create a map design in QGIS as well as common mistakes when designing or interpreting maps.</p>
 <section id="types-of-maps">
 <h2>Types of maps<a class="headerlink" href="#types-of-maps" title="Permalink to this heading">#</a></h2>
-<blockquote>
-<div><p>remove probably</p>
-</div></blockquote>
 <p>In general, there are two main types of maps: <strong>topographic maps</strong> and <strong>thematic maps</strong>.</p>
 <p><strong>Topographic maps</strong> are intended to be exhaustive, including elements fundamental to localisation (localities, road networks, terrain, hydrography). They represent the physical location of objects in the real world. The representation of elements in topographic maps is done via conventional signs (e.g.: blue for water, green for forests, yellow for agricultural land).</p>
 <figure class="align-default" id="topographic-maps-examples">
@@ -529,8 +525,9 @@ document.write(`
 <p><span class="caption-number">Fig. 3 </span><span class="caption-text">Depending on the type of information you want to display, you can use different graphic signs</span><a class="headerlink" href="#graphic-information" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
 <section id="visual-variables">
-<h3>Visual variables<a class="headerlink" href="#visual-variables" title="Permalink to this heading">#</a></h3>
+<h2>Visual variables<a class="headerlink" href="#visual-variables" title="Permalink to this heading">#</a></h2>
 <p>Visual variables are the <strong>graphical means for visually transcribing information</strong>. The visual variables are <strong>shape, size, hue, value, texture, and orientation</strong>. You can vary these variables to appropriately represent the data at your disposal.<br />
 It allows for the expression of <strong>relationship of difference, order, association, or quantity</strong> between each element.</p>
 <figure class="align-default" id="id1">
@@ -547,10 +544,6 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <li><p>Transcultural (green = nature, blue = water)</p></li>
 </ul>
 </div>
-<blockquote>
-<div><p>Check Uni HD cartography slides</p>
-</div></blockquote>
-</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="symbology-and-styling">
@@ -574,7 +567,8 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <li><p>Right click on the layer you wish to style and select properties</p></li>
 <li><p>Open the layer styling panel by enabling it under “View”&gt;”Panels”&gt;”Layer Styling”</p></li>
 </ol>
-<p>~~In the styling panel, you can change the symbology (1) and the labels (2).~~</p>
+<p>On the left of the styling panel you can choose the different tabs to access different styling options.</p>
+<p>In the styling panel you can change the styling for all features of a layer, set up categories for different symbols, create labels, and create colour ramps to differentiate between features with variable values.</p>
 </section>
 <section id="symbology">
 <h2>Symbology<a class="headerlink" href="#symbology" title="Permalink to this heading">#</a></h2>
@@ -599,16 +593,18 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <p><span class="caption-number">Fig. 6 </span><span class="caption-text">Different types of colouring schemes</span><a class="headerlink" href="#colouring-schemes" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>When choosing colour gradients, a clear gradient from lighter to darker colours is the best most of the times as the gradation is easily distinguishable and translates well into black and white. In the figure below, example A) and B) are not ideal as it is difficult to make out the gradation and it does not translate into black and white. You can achieve a clear sequence by grading the <strong>saturation</strong> of the colour gradient.</p>
+<p>When choosing colour gradients, a clear gradient from lighter to darker colours is the best most of the times as the gradation is easily distinguishable and translates well into black and white. In the figure below, example A and B are not ideal as it is difficult to make out the gradation and it does not translate into black and white. You can achieve a clear sequence by grading the <strong>saturation</strong> of the colour gradient.</p>
 <figure class="align-default" id="colour-gradients-saturation-example">
-<a class="reference internal image-reference" href="fig/en_colour_gradients_saturation"><img alt="fig/en_colour_gradients_saturation" src="fig/en_colour_gradients_saturation" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_colour_gradients_saturation.png"><img alt="../../_images/en_colour_gradients_saturation.png" src="../../_images/en_colour_gradients_saturation.png" style="width: 800px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 7 </span><span class="caption-text">Examples for different colour gradients translated into black and white. Pay attention to the saturation gradient</span><a class="headerlink" href="#colour-gradients-saturation-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Colour gradients can also encompass several hues</p>
+<ul class="simple">
+<li><p>Colour gradients can also encompass multiple hues</p></li>
+</ul>
 <figure class="align-default" id="colour-gradient-hues">
-<a class="reference internal image-reference" href="fig/Colour_Gradients_2"><img alt="fig/Colour_Gradients_2" src="fig/Colour_Gradients_2" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Colour_Gradients_2.png"><img alt="../../_images/Colour_Gradients_2.png" src="../../_images/Colour_Gradients_2.png" style="width: 750px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 8 </span><span class="caption-text">Single hue gradient on the left; Multiple hue gradient on the right</span><a class="headerlink" href="#colour-gradient-hues" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -617,7 +613,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <h3>Colour Blindness<a class="headerlink" href="#colour-blindness" title="Permalink to this heading">#</a></h3>
 <p>When choosing the colours, you have to keep in mind that colour gradients (especially diverging Red-Green gradients) can be hard or impossible to distinguish for persons with colour blindness.</p>
 <figure class="align-default" id="colour-blindness-examples">
-<a class="reference internal image-reference" href="fig/Colour_Blindness"><img alt="fig/Colour_Blindness" src="fig/Colour_Blindness" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Colour_Blindness.png"><img alt="../../_images/Colour_Blindness.png" src="../../_images/Colour_Blindness.png" style="width: 750px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 9 </span><span class="caption-text">Different Colour schemes for the Colour Vision Impaired; Source: Jenny, Bernhard, and Nathaniel Vaughn Kelso. (2007). Color Design for the Color Vision Impaired. <em>Cartographic Perspectives</em>, no. 58 (September 1, 2007): 61-67. <a class="reference external" href="https://doi.org/10.14714/CP58.270">https://doi.org/10.14714/CP58.270</a></span><a class="headerlink" href="#colour-blindness-examples" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -626,25 +622,175 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 </section>
 <section id="symbology-for-vector-data">
 <h2>Symbology for Vector data<a class="headerlink" href="#symbology-for-vector-data" title="Permalink to this heading">#</a></h2>
-<p>You can use graphical variables to style vector data. As we have already learned, vector data can be either points, lines, or polygons. There are different options to symbolize these different types of vector data.</p>
+<p>You can use graphical variables to style vector data. As we have already learned, vector data can be either points, lines, or polygons. There are different options to symbolize these different types of vector data. In this subchapter, we will focus on a few common examples.</p>
 <figure class="align-default" id="symbolization-for-vector-data">
-<a class="reference internal image-reference" href="fig/en_symbolization_vector_data"><img alt="fig/en_symbolization_vector_data" src="fig/en_symbolization_vector_data" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_symbolization_vector_data.png"><img alt="../../_images/en_symbolization_vector_data.png" src="../../_images/en_symbolization_vector_data.png" style="width: 750px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 10 </span><span class="caption-text">Symbolization for vector data; Source: White, T. (2017). Symbolization and the Visual Variables. *The Geographic Information Science &amp; Technology Body of Knowledge (2nd Quarter 2017 Edition), John P. Wilson (ed.). DOI: 10.2222/gistbok/2017.2.3</span><a class="headerlink" href="#symbolization-for-vector-data" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<hr class="docutils" />
-<section id="symbology-for-points">
-<h3>Symbology for points<a class="headerlink" href="#symbology-for-points" title="Permalink to this heading">#</a></h3>
-<p>For point data, you can</p>
-</section>
-<section id="symbology-for-lines">
-<h3>Symbology for lines<a class="headerlink" href="#symbology-for-lines" title="Permalink to this heading">#</a></h3>
-</section>
-<section id="symbology-for-polygons">
-<h3>Symbology for polygons<a class="headerlink" href="#symbology-for-polygons" title="Permalink to this heading">#</a></h3>
-</section>
-</section>
+<p>In the dropdowns below you can find examples on how to set up common vector data styling.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Exercise: Only display the outlines of polygons<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In this example, wewant to change the symbology of a single layer so that <strong>only the outlines of the polygons are visible</strong>.</p>
+<p class="sd-card-text">To change the symbology of a single layer:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Open the styling panel and navigate to the symbology tab. By default, the symbology will be set to <strong>Single Symbol</strong>. This means that the same colours and contours will be applied to all the features in that layer.</p></li>
+<li><p class="sd-card-text">Click on <strong>“Simple Fill”</strong></p></li>
+<li><p class="sd-card-text">Click on the arrow to the right of <strong>Fill Colour</strong></p></li>
+<li><p class="sd-card-text">Check the <strong>“Transparent Fill”</strong> option</p></li>
+</ol>
+<figure class="align-default" id="layer-styling-transparent">
+<img alt="../../_images/en_30.30.2_vector_layer_styling_transparent.png" src="../../_images/en_30.30.2_vector_layer_styling_transparent.png" />
+</figure>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Change the styling for multiple overlayed layers<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<blockquote>
+<div><p class="sd-card-text">This is exercise 7 in the PPP. Participants will need the specific data.
+In this exercise, we will apply the same style to all features in a layer, but we will change multiple layers and overlay them so each is visible in a different style. We have the polygons for 3 administrative levels.</p>
+</div></blockquote>
+<figure class="align-default" id="change-layer-style-1">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_changing_layer_style_1.png"><img alt="../../_images/en_30.30.2_changing_layer_style_1.png" src="../../_images/en_30.30.2_changing_layer_style_1.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Order the layers and navigate to the styling panel of the topmost layer</span><a class="headerlink" href="#change-layer-style-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Add the “Adm0”, “Adm1” and “Adm2” shapefiles to your Session 2 project.</p></li>
+<li><p class="sd-card-text">Order the layers so they are all visible: Put the Adm2 at the bottom, then the Adm1 then Adm0. At first, this might look weird because Adm0 will cover everything.</p></li>
+<li><p class="sd-card-text">Change the symbology of the Adm0 layer by opening the stlying panel and navigating to the Symbology tab.</p></li>
+</ol>
+<figure class="align-left" id="change-layer-style-2">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_changing_layer_style_2.png"><img alt="../../_images/en_30.30.2_changing_layer_style_2.png" src="../../_images/en_30.30.2_changing_layer_style_2.png" style="width: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Change the Fill type</span><a class="headerlink" href="#change-layer-style-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p class="sd-card-text">Click on “<strong>Simple Fill</strong>” to open the style options.</p></li>
+<li><p class="sd-card-text">Expand the “<strong>Fill Color</strong>” menu and check the <strong>Transparent Fill</strong> option. This will make only the boundaries visible, so <strong>we will be able to see the layer under this one</strong>.</p></li>
+<li><p class="sd-card-text">Choose a <strong>Stroke color</strong>, and make the <strong>Stroke width</strong> 0.66 Millimeters.</p></li>
+<li><p class="sd-card-text">Click OK</p></li>
+<li><p class="sd-card-text"><strong>Repeat the same process</strong> for the Adm1 layer, using the same colour as for Adm0 (it will be in “Recent colors) and leave the stroke width at 0.26.</p></li>
+<li><p class="sd-card-text">Now we can see the boundaries of the country and its states, and behind that we cann see the districs (Adm2).</p></li>
+<li><p class="sd-card-text">Let’s make the districs layer’s style consistent with the others.</p></li>
+<li><p class="sd-card-text">Choose a <strong>Fill Color</strong></p></li>
+<li><p class="sd-card-text">Use the same <strong>Stroke color</strong> as for Adm0 and Adm1, but make the width 0.1 Millimeters and the Stroke Style a <strong>Dash Line</strong></p></li>
+<li><p class="sd-card-text">Click OK and look at yout map: hopefully it’s starting to look nicer!</p></li>
+</ol>
+<figure class="align-default" id="change-layer-style-3">
+<img alt="../../_images/en_30.30.2_changing_layer_style_3.png" src="../../_images/en_30.30.2_changing_layer_style_3.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">The styling of a vector data consists of the colour and the outline</span><a class="headerlink" href="#change-layer-style-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">Remember that <strong>the layer’s symbology is saved within your project file, not within your shapefile!</strong> If you share a shapefile with a colleague, it will have a different style when they add it to their own project.</p>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Use different styles in a single layer<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We can use symbology to <strong>show the difference between features</strong> in the same layer. For example, it could be different types of buildings, quantities of Covid cases by district, or types of roads. We can choose a specific attribute of a dataset to assign different colors, outlines, or sizes to features:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">From your shapefile folder, <strong>drag te ACLED security incidents shapefile onto your map</strong></p></li>
+<li><p class="sd-card-text">Open the layer <strong>Symbology</strong> and choose <strong>Categorized</strong> instead of Single Symbol.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">Categorized symbology is used when you have <em><strong>discrete</strong></em> variables.</p>
+</div>
+<figure class="align-default" id="categorized-layer-symbology-1">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_categorized_layer_symbology_1.png"><img alt="../../_images/en_30.30.2_categorized_layer_symbology_1.png" src="../../_images/en_30.30.2_categorized_layer_symbology_1.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Change the symbology type to “categorized” and choose the Value (variable) you wish to display</span><a class="headerlink" href="#categorized-layer-symbology-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p class="sd-card-text">Now we need to <strong>choose which attributes we want to display through the symbology</strong>. In this case, it could be the number of casualtiees, or the actor who perpetrated the act. Let’s categorize the features by <strong>event_type</strong></p></li>
+<li><p class="sd-card-text">Click on <strong>“Classify” to list all the unique values contained in the event_type field</strong> (i.e. all the possible types of security incidents recorded in our table)</p></li>
+<li><p class="sd-card-text">Now we can <strong>change the style of each single value</strong></p></li>
+<li><p class="sd-card-text">Double click on Explosions</p></li>
+<li><p class="sd-card-text">At the bottom of the <strong>Symbol selector</strong> window, choose a symbol to make Explosion points stand our</p></li>
+<li><p class="sd-card-text">Click on OK, then Apply to preview what the layer will look like</p></li>
+<li><p class="sd-card-text">Click OK again</p></li>
+</ol>
+<figure class="align-default" id="categorized-layer-symbology-2">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_categorized_layer_symbology_2.png"><img alt="../../_images/en_30.30.2_categorized_layer_symbology_2.png" src="../../_images/en_30.30.2_categorized_layer_symbology_2.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">By double clicking on the <strong>unique values</strong> in the classified list, you can change the symbol for each value</span><a class="headerlink" href="#categorized-layer-symbology-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">Now we have a map of Nigeria where you can locate the areas, that are affected by explosions more than others. On the map below, we also added text labels, which will be explained below.</p>
+<figure class="align-default" id="map-design-example-regions-affected-by-explosions-in-nigeria">
+<a class="reference internal image-reference" href="../../_images/en_exercise_map_design_example_Nigeria.png"><img alt="../../_images/en_exercise_map_design_example_Nigeria.png" src="../../_images/en_exercise_map_design_example_Nigeria.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Regions affected by explosions in Nigeria</span><a class="headerlink" href="#map-design-example-regions-affected-by-explosions-in-nigeria" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Style data based on variable ranges<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If a layer contains numeric values that are continuous, they can be organized in intervals. These intervals can be displayed in graduated colours. In this exercise, we assign colours to Adm1 polygons based on the total population of each State.</p>
+<blockquote>
+<div><p class="sd-card-text">Don’t forget to check that they have access to the data</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p class="sd-card-text">From <strong>Sharepoint</strong>, download the NGA_Adm1_Pop shapefile and save it in your shapefile folder</p></li>
+<li><p class="sd-card-text">In QGIS, turn off the Adm1 and Adm2 layer, leaving only Adm0</p></li>
+<li><p class="sd-card-text">Drag the shapefile you just downloaded into your map</p></li>
+<li><p class="sd-card-text">Open its Symbology options and choose “<strong>Graduated</strong>”</p></li>
+<li><p class="sd-card-text">Select the value you want to use to assign colours, in this case, it will be “<strong>population</strong>”</p></li>
+</ol>
+<figure class="align-default" id="symbology-of-variable-ranges-1">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_1.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_1.png" src="../../_images/en_30.30.2_symbology_variable_ranges_1.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">With variable ranges, select <strong>Graduated</strong> symbology and choose the attribute with continuous values</span><a class="headerlink" href="#symbology-of-variable-ranges-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p class="sd-card-text">Click on <strong>Classify</strong> to list all valued, divided in classes</p></li>
+<li><p class="sd-card-text">Choose <strong>how many classes</strong> you want the data to be divided into ‒ let’s say 4</p></li>
+<li><p class="sd-card-text">By default, the colour ramp will be red. However, red is not the rivht colour to use for population count, as it is generally used to communicate negative elements, such as food insecurity or cholera cases</p></li>
+<li><p class="sd-card-text">Click on the arrow next to <strong>Color Ramp</strong> to choose another combination of colours - let’s say a color ramp from white to blue</p></li>
+<li><p class="sd-card-text">Click Apply to preview the look of your layer, then OK</p></li>
+</ol>
+<figure class="align-default" id="symbology-of-variable-ranges-2">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_2.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_2.png" src="../../_images/en_30.30.2_symbology_variable_ranges_2.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">You can categorize the continuous values into classes and assign a colour ramp</span><a class="headerlink" href="#symbology-of-variable-ranges-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p class="sd-card-text">The following map shows the most populated States of Nigeria using a graduated colour categorization.</p>
+<figure class="align-default" id="map-design-example-state-population-nigeria">
+<a class="reference internal image-reference" href="../../_images/en_map_design_example_variable_ranges.png"><img alt="../../_images/en_map_design_example_variable_ranges.png" src="../../_images/en_map_design_example_variable_ranges.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">An unfinished map showing the population of Nigerian states</span><a class="headerlink" href="#map-design-example-state-population-nigeria" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</details></section>
 <section id="symbology-for-raster-data">
 <h2>Symbology for raster data<a class="headerlink" href="#symbology-for-raster-data" title="Permalink to this heading">#</a></h2>
 <p>As we have already learned, raster data are basically a grid of pixels with different (numerical) values. As such, you can’t style the shape, fill or outline of raster data. It is only possible to assign colours to the different values of the pixels.</p>
@@ -658,6 +804,12 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <li><p>Click on the arrow to the right of the colour ramp. Here you can choose a premade colour ramp</p></li>
 <li><p>You can modify the colour ramp by clicking on the colour ramp itself</p></li>
 </ol>
+<figure class="align-default" id="raster-data-colour-gradient">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_raster_data_colour_gradient.png"><img alt="../../_images/en_30.30.2_raster_data_colour_gradient.png" src="../../_images/en_30.30.2_raster_data_colour_gradient.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Colour Ramp Selector</span><a class="headerlink" href="#raster-data-colour-gradient" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In the colour ramp selector, you can adjust each colour step. On the bottom, you can see a plot for the Hue, <strong>Saturation</strong>, <strong>Lightness</strong> and <strong>Opacity</strong>. Especially latter three are useful to see how your colour ramp will translate.</p>
 </section>
 </section>
@@ -669,68 +821,104 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <li><p>You can change the font, colour and size of labels</p></li>
 <li><p>When you create a map you always add labels to help the final user reading the map</p></li>
 </ul>
-<section id="adding-labels-to-a-layer">
-<h3>Adding labels to a layer<a class="headerlink" href="#adding-labels-to-a-layer" title="Permalink to this heading">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Adding labels to a layer<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <blockquote>
-<div><p>This is exercise 2 in the PPP</p>
+<div><p class="sd-card-text">This is exercise 2 in the PPP, also review</p>
 </div></blockquote>
 <ol class="arabic simple">
-<li><p>In the styling panel, click on the “Labels” tab.</p></li>
-<li><p>Select <em>Single Labels</em>.</p></li>
-<li><p>“Value” is where you choose the attribute that will be displayed as a label. For example “NAME”. This will display the “NAME” attribute for each feature. In the example (figure X), <em>ADM1_EN</em> will display the English names of Nigerian states.</p></li>
+<li><p class="sd-card-text">In the styling panel, click on the “Labels” tab.</p></li>
+<li><p class="sd-card-text">Select <em>Single Labels</em>.</p></li>
+<li><p class="sd-card-text">“Value” is where you choose the attribute that will be displayed as a label. For example “NAME”. This will display the “NAME” attribute for each feature. In the example (figure X), <em>ADM1_EN</em> will display the English names of Nigerian states.</p></li>
 </ol>
 <blockquote>
-<div><p>change figure number</p>
+<div><p class="sd-card-text">change figure number</p>
 </div></blockquote>
 <ol class="arabic simple" start="4">
-<li><p>Let’s change the font: make it Arial, bold, dark grey, 8 pt</p></li>
-<li><p>Let’s add a white buffer around the label.</p></li>
-<li><p>Click Apply and Ok.</p></li>
+<li><p class="sd-card-text">Let’s change the font: make it Arial, bold, dark grey, 8 pt</p></li>
+<li><p class="sd-card-text">Let’s add a white buffer around the label.</p></li>
+<li><p class="sd-card-text">Click Apply and Ok.</p></li>
 </ol>
 <figure class="align-default" id="setting-up-labels">
-<a class="reference internal image-reference" href="fig/en_30.30.2_setting_up_labels"><img alt="fig/en_30.30.2_setting_up_labels" src="fig/en_30.30.2_setting_up_labels" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_setting_up_labels.png"><img alt="../../_images/en_30.30.2_setting_up_labels.png" src="../../_images/en_30.30.2_setting_up_labels.png" style="width: 750px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Setting up labels in QGIS 30.30.2</span><a class="headerlink" href="#setting-up-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Setting up labels in QGIS 30.30.2</span><a class="headerlink" href="#setting-up-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
-<section id="adding-2-different-label-styles-to-the-same-layer">
-<h3>Adding 2 different label styles to the same layer<a class="headerlink" href="#adding-2-different-label-styles-to-the-same-layer" title="Permalink to this heading">#</a></h3>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Adding different label styles to the same layer<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <blockquote>
-<div><p>This is exercise 3 in PPP</p>
+<div><p class="sd-card-text">This is exercise 3 in PPP</p>
 </div></blockquote>
-<p>Sometimes you will need to create two different label styles for different features of a single layer. In this example, we will create one label style for the <em>Country Capital</em>, and another one for the <em>State Capitals</em></p>
+<p class="sd-card-text">Sometimes you will need to create two different label styles for different features of a single layer. In this example, we will create one label style for the <em>Country Capital</em>, and another one for the <em>State Capitals</em></p>
 <ol class="arabic simple">
-<li><p>Open the styling panel and click on the Labels tab</p></li>
-<li><p>Select <strong>Rule-based Labeling</strong></p></li>
-<li><p>Click on the <strong>Add Rule</strong> button at the bottom (the “+”-sign) and create the first rule</p></li>
-<li><p>For <strong>Value</strong>, select <strong>“NAME”</strong> (so that the labels will show the name of each city), then click on the “ε”-button next to the “Filter” bar.</p></li>
+<li><p class="sd-card-text">Open the styling panel and click on the Labels tab</p></li>
+<li><p class="sd-card-text">Select <strong>Rule-based Labeling</strong></p></li>
+<li><p class="sd-card-text">Click on the <strong>Add Rule</strong> button at the bottom (the “+”-sign) and create the first rule</p></li>
+<li><p class="sd-card-text">For <strong>Value</strong>, select <strong>“NAME”</strong> (so that the labels will show the name of each city), then click on the “ε”-button next to the “Filter” bar.</p></li>
 </ol>
 <figure class="align-default" id="adding-rule-based-labels">
-<a class="reference internal image-reference" href="fig/en.30.30.2_adding_rule-based_labels"><img alt="fig/en.30.30.2_adding_rule-based_labels" src="fig/en.30.30.2_adding_rule-based_labels" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="fig/en.30.30.2_adding_rule-based_labels.png"><img alt="fig/en.30.30.2_adding_rule-based_labels.png" src="fig/en.30.30.2_adding_rule-based_labels.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="5">
-<li><p>In the central column, expand ==<strong>Fields and Values</strong>== to display a list of all the fields in your layer and double-click on <em>Class</em>_ to add it to the expression frame on the left.</p></li>
-<li><p>In the right column, click on <strong>All unique</strong> to list all unique values contained in the Class field</p></li>
-<li><p>Click on the “<code class="docutils literal notranslate"><span class="pre">=</span></code>” operator, then doube-click on the <em>value 1</em> (which represent the Country capital in this case). Click OK.</p></li>
-<li><p>Scroll down to <em>change the label style</em>. Make it Arial, bold, black, 12pt and add a white buffer.</p></li>
-<li><p>Repeat steps 4 to 9, but select <em>Value 2</em> (State capitals) and make the label black, bold, 10pt, no buffer.</p></li>
-<li><p>Click <strong>Apply</strong>, the OK.</p></li>
+<li><p class="sd-card-text">In the central column, expand ==<strong>Fields and Values</strong>== to display a list of all the fields in your layer and double-click on <em>Class</em>_ to add it to the expression frame on the left.</p></li>
+<li><p class="sd-card-text">In the right column, click on <strong>All unique</strong> to list all unique values contained in the Class field</p></li>
+<li><p class="sd-card-text">Click on the “<code class="docutils literal notranslate"><span class="pre">=</span></code>” operator, then doube-click on the <em>value 1</em> (which represent the Country capital in this case). Click OK.</p></li>
+<li><p class="sd-card-text">Scroll down to <em>change the label style</em>. Make it Arial, bold, black, 12pt and add a white buffer.</p></li>
+<li><p class="sd-card-text">Repeat steps 4 to 9, but select <em>Value 2</em> (State capitals) and make the label black, bold, 10pt, no buffer.</p></li>
+<li><p class="sd-card-text">Click <strong>Apply</strong>, the OK.</p></li>
 </ol>
 <figure class="align-default" id="rule-based-labels-expression-builder">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png"><img alt="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" src="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Move labels independently<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Sometimes the placement of labels is not ideal and can obstruct the readability of the map. In this case, you can move labels independently.</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">On the label toolbar, there is an option to move labels independently. Click on it to activate it. (Note: In some cases, the label toolbar might not be visible. In this case, turn it on by navigating to “View”&gt;”Toolbars”&gt;activate the Label toolbar)</p></li>
+<li><p class="sd-card-text">Click on the label you want to move.</p></li>
+<li><p class="sd-card-text">You will be prompted to select the primary key for joining with internal data storage. You do not need to change it, or select the ID of the feature and click on OK.</p></li>
+<li><p class="sd-card-text">Click on the label again, now you can move it freely.</p></li>
+</ol>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Add labels to roads<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <blockquote>
-<div><p>Add underligned labels and an example on how to add the street names</p>
+<div><p class="sd-card-text">When working with line features, the labels will align themselves parallel to the line representing the feature.</p>
 </div></blockquote>
-</section>
-</section>
+<blockquote>
+<div><p class="sd-card-text">VIDEO</p>
+</div></blockquote>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -746,7 +934,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
         },
         kernelOptions: {
             name: "python3",
-            path: "./content/Modul_4"
+            path: "./content\Modul_4"
         },
         predefinedOutput: true
     }
@@ -758,11 +946,10 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../Modul_3/en_qgis_data_queries_ex1.html"
@@ -782,10 +969,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -802,10 +986,8 @@ It allows for the expression of <strong>relationship of difference, order, assoc
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Graphical Variables and Symbology</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-maps">Types of maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphic-semiology">Graphic Semiology</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-variables">Visual variables</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphic-semiology">Graphic Semiology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-variables">Visual variables</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-and-styling">Symbology and styling</a><ul class="visible nav section-nav flex-column">
@@ -815,21 +997,12 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colour-blindness">Colour Blindness</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for Vector data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-points">Symbology for points</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-lines">Symbology for lines</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-polygons">Symbology for polygons</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for Vector data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-colour-gradient-to-raster-data">Assigning a colour gradient to raster data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-labels-to-a-layer">Adding labels to a layer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-2-different-label-styles-to-the-same-layer">Adding 2 different label styles to the same layer</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
 </ul>
 </li>
 </ul>
@@ -880,8 +1053,8 @@ By HeiGIT gGmbH
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
