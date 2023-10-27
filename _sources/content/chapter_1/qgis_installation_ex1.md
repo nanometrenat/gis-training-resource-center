@@ -1,1 +1,0 @@
-# Exercise QGIS Installation
