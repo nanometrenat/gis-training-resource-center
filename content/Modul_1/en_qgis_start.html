@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="QGIS Installation" href="en_qgis_installation.html" />
-    <link rel="prev" title="Non-Spatial Joins" href="../Wiki/en_qgis_non_spatial_joins_wiki.html" />
+    <link rel="prev" title="What is GIS? (Theory)" href="en_qgis_theorie.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,7 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_qgis_basics_wiki.html">QGIS Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_installation_wiki.html">QGIS installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_wiki_projects_wiki.html">QGIS manage Projects and Geodata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projects_folder_structure_wiki.html">Projects and Folder Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projections_wiki.html">Projections</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_plugins_wiki.html">Plugins</a></li>
@@ -209,6 +209,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_theorie.html">What is GIS? (Theory)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting started with QGIS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
@@ -245,12 +246,14 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
 
+
 <li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_2.html">Print layout</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 6- Data analysis with QGIS</span></p>
@@ -462,20 +465,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-qgis-concept">Intro QGIS concept</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-qgis">What is QGIS?</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-qgis">What is QGIS?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-qgis">Introducing QGIS</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-interface">QGIS Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-qgis-interface">Overview of QGIS Interface</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-functionalities">Further Functionalities</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-the-map-view">Move the map view</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-the-map-view">Moving the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-the-map-view">Zooming in the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-properties-of-objects">Show properties of objects</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-projection-of-the-map-view-project-crs">Set the projection of the map view (project CRS)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-project">Open Project</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-project">Save Project</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays">Show and hide displays</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-toolbox">Open Toolbox</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays-and-toolbars">Show and hide displays and toolbars</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-arrange-toolbars">Move and arrange toolbars</a></li>
 </ul>
 </li>
@@ -494,13 +495,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-qgis">
 <h1>Getting started with QGIS<a class="headerlink" href="#getting-started-with-qgis" title="Permalink to this heading">#</a></h1>
-<section id="intro-qgis-concept">
-<h2>Intro QGIS concept<a class="headerlink" href="#intro-qgis-concept" title="Permalink to this heading">#</a></h2>
+<p><strong>Competences:</strong></p>
+<ul class="simple">
+<li><p>What is QGIS?</p></li>
+<li><p>Introducing QGIS: Interface and further basic functionalities</p></li>
+</ul>
 <section id="what-is-qgis">
-<h3>What is QGIS?<a class="headerlink" href="#what-is-qgis" title="Permalink to this heading">#</a></h3>
+<h2>What is QGIS?<a class="headerlink" href="#what-is-qgis" title="Permalink to this heading">#</a></h2>
 <p>QGIS is an <strong>open source geoinformation system software</strong>. That means the source code is available for everyone, making QGIS a free application.
 You may <strong>view, edit, capture and analyze spatial data or create printable maps</strong> with it. QGIS was created in 2002 and is a project of volunteers. And it is <strong>constantly changing</strong>.</p>
-</section>
 </section>
 <section id="introducing-qgis">
 <h2>Introducing QGIS<a class="headerlink" href="#introducing-qgis" title="Permalink to this heading">#</a></h2>
@@ -508,13 +511,13 @@ You may <strong>view, edit, capture and analyze spatial data or create printable
 <li><p>QGIS is a <strong>desktop software</strong>: that means you get a program that opens up on your computer as a window with buttons you can click, forms you can fill out to do tasks, and it’s generally a visual interactive experience.</p></li>
 <li><p>QGIS is backed by a <strong>large community of users</strong>, so it’s easy to find solutions to technical issues by using QGIS forums, blog and subreddit.</p></li>
 </ul>
-<section id="qgis-interface">
-<h3>QGIS Interface<a class="headerlink" href="#qgis-interface" title="Permalink to this heading">#</a></h3>
+<section id="overview-of-qgis-interface">
+<h3>Overview of QGIS Interface<a class="headerlink" href="#overview-of-qgis-interface" title="Permalink to this heading">#</a></h3>
 <p><img alt="QGIS_User_Interface" src="../../_images/en_QGIS_GUI.png" />
 User interface</p>
 <ol class="arabic simple">
 <li><p><strong>Layers List / Browser Panel:</strong> The <strong>layers list</strong> shows <strong>all layers/files</strong> that are <strong>loaded in the project</strong>. You can show/hide layers and set other properties.</p></li>
-<li><p><strong>Toolsbars: __ <strong>Toolbars</strong> are shortcuts</strong> to execute frequently used commands. For example, there are special toolbars for <strong>vector and raster files</strong>, but also general ones for saving your project, etc. The toolbar contains, among other things, a list of all the commands you can use. The toolbar also contains the <strong>toolbox</strong>, which is used later in many of the wiki videos.</p></li>
+<li><p><strong>Toolsbars:  <strong>Toolbars</strong> are shortcuts</strong> to execute frequently used commands. For example, there are special toolbars for <strong>vector and raster files</strong>, but also general ones for saving your project, etc. The toolbar contains, among other things, a list of all the commands you can use. The toolbar also contains the <strong>toolbox</strong>, which is used later in many of the wiki videos.</p></li>
 </ol>
 <p><tagName>  <tagName></p>
 <p><img alt="Alt text" src="../../_images/en_Interface_02.png" />
@@ -527,10 +530,10 @@ Toolbox</p>
 <li><p><strong>Side Toolbar</strong>. You may see a <strong>side toolbar</strong>. This is another way to easily open vector and raster files in QGIS.</p></li>
 <li><p><strong>Locator bar</strong>. Here you can <strong>search for tools and layers</strong>. If you don’t know where to find a tool, you can try here.</p></li>
 </ol>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Exercise: Create a new QGIS project</p>
-</div>
+<p><tagName>  <tagName></p>
+<blockquote>
+<div><p><strong>Exercise: Create a new QGIS project</strong></p>
+</div></blockquote>
 <ul class="simple">
 <li><p>In your “GIS_Training” folder, create a <strong>subfolder</strong> called <strong>“Projects”</strong></p></li>
 <li><p>Open <strong>QGIS</strong></p></li>
@@ -545,22 +548,22 @@ Project template</p>
 </section>
 <section id="further-functionalities">
 <h3>Further Functionalities<a class="headerlink" href="#further-functionalities" title="Permalink to this heading">#</a></h3>
-<section id="move-the-map-view">
-<h4>Move the map view<a class="headerlink" href="#move-the-map-view" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_move.mp4"></video></p>
+<section id="moving-the-map-view">
+<h4>Moving the map view<a class="headerlink" href="#moving-the-map-view" title="Permalink to this heading">#</a></h4>
 <p><img alt="" src="../../_images/qgis_move_symbol.png" /></p>
 <ul class="simple">
 <li><p>You can also move with the <em>arrow keys</em></p></li>
 </ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_move.mp4"></video></p>
 </section>
 <section id="zooming-in-the-map-view">
 <h4>Zooming in the map view<a class="headerlink" href="#zooming-in-the-map-view" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom.mp4"></video></p>
 <p><img alt="" src="../../_images/qgis_zoom_symbol.png" /></p>
 <ul class="simple">
 <li><p>You can also zoom by scrolling</p></li>
 <li><p>Or with Ctrl+ or Ctrl-</p></li>
 </ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom.mp4"></video></p>
 </section>
 <section id="show-properties-of-objects">
 <h4>Show properties of objects<a class="headerlink" href="#show-properties-of-objects" title="Permalink to this heading">#</a></h4>
@@ -571,34 +574,44 @@ Project template</p>
 </section>
 <section id="set-the-projection-of-the-map-view-project-crs">
 <h4>Set the projection of the map view (project CRS)<a class="headerlink" href="#set-the-projection-of-the-map-view-project-crs" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/325cb2d70b0154c1bd5f38a899cd2b40/qgis_map_projection.mp4"></video></p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_map_projection.mp4"></video></p>
 <ul class="simple">
 <li><p>Geodata concepts are explained in detail in <a class="reference internal" href="../Modul_2/en_qgis_geodata_concept.html"><span class="doc std std-doc">module 2</span></a></p></li>
 </ul>
 </section>
 <section id="open-project">
 <h4>Open Project<a class="headerlink" href="#open-project" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/1655b97b741749bfa46c6c08ee3d0be6/qgis_open_project.mp4"></video></p>
+<video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_project.mp4">
+</video>
 </section>
 <section id="save-project">
 <h4>Save Project<a class="headerlink" href="#save-project" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/8e2bb629d9c3189f8f635a4cf1381d2c/qgis_save_project.mp4"></video></p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_save_project.mp4"></video></p>
 <ul class="simple">
 <li><p>The layer data used in the project are not saved in the project file. Instead, the project file only contains the file paths where the layer data were located at the time the project was last saved on the PC. If the location of this layer data is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.
 Good data organisation with a fixed and well thought-out folder structure prevents such problems.</p></li>
 </ul>
 </section>
-<section id="show-and-hide-displays">
-<h4>Show and hide displays<a class="headerlink" href="#show-and-hide-displays" title="Permalink to this heading">#</a></h4>
-<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/b9ccebc4bd584fdbc5092b4804d8a742/Anzeigen_einblenden_ausblenden.mp4"></video></p>
+<section id="open-toolbox">
+<h4>Open Toolbox<a class="headerlink" href="#open-toolbox" title="Permalink to this heading">#</a></h4>
+<p><img alt="" src="../../_images/Geschlossene_Toolbox_01.png" /></p>
+<ul class="simple">
+<li><p>You can also zoom by scrolling</p></li>
+<li><p>Or with Ctrl+ or Ctrl-</p></li>
+</ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_toolbars.mp4"></video></p>
+</section>
+<section id="show-and-hide-displays-and-toolbars">
+<h4>Show and hide displays and toolbars<a class="headerlink" href="#show-and-hide-displays-and-toolbars" title="Permalink to this heading">#</a></h4>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Anzeigen_einblenden_ausblenden.mp4"></video></p>
 </section>
 <section id="move-and-arrange-toolbars">
 <h4>Move and arrange toolbars<a class="headerlink" href="#move-and-arrange-toolbars" title="Permalink to this heading">#</a></h4>
+<p><tagName>  <tagName></p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_arrange_toolbars.mp4"></video></p>
 <ul class="simple">
 <li><p>At each toolbar there is a field of two dotted lines. If you move the mouse pointer over it until an arrow cross appears and then hold down the left mouse button, you can move the toolbar. This allows an individualised arrangement of your own tools. By compressing all toolbars into a few lines, the map view window can also be enlarged.</p></li>
 </ul>
-<p><tagName>  <tagName></p>
-<p><video width="100%" controls src="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/07bbf031499eb8da30daaa3bebd24769/qgis_arrange_toolbars.mp4"></video></p>
 <p>See also:
 <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html">corresponding page in the Wiki</a></p>
 </section>
@@ -637,12 +650,12 @@ Good data organisation with a fixed and well thought-out folder structure preven
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Wiki/en_qgis_non_spatial_joins_wiki.html"
+       href="en_qgis_theorie.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Non-Spatial Joins</p>
+        <p class="prev-next-title">What is GIS? (Theory)</p>
       </div>
     </a>
     <a class="right-next"
@@ -669,20 +682,18 @@ Good data organisation with a fixed and well thought-out folder structure preven
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro-qgis-concept">Intro QGIS concept</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-qgis">What is QGIS?</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-qgis">What is QGIS?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introducing-qgis">Introducing QGIS</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-interface">QGIS Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-qgis-interface">Overview of QGIS Interface</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-functionalities">Further Functionalities</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-the-map-view">Move the map view</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-the-map-view">Moving the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-the-map-view">Zooming in the map view</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-properties-of-objects">Show properties of objects</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-projection-of-the-map-view-project-crs">Set the projection of the map view (project CRS)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-project">Open Project</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#save-project">Save Project</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays">Show and hide displays</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-toolbox">Open Toolbox</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays-and-toolbars">Show and hide displays and toolbars</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-arrange-toolbars">Move and arrange toolbars</a></li>
 </ul>
 </li>

@@ -171,9 +171,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_qgis_basics_wiki.html">QGIS Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_installation_wiki.html">QGIS installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projects_folder_structure_wiki.html">Projects and Folder Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projections_wiki.html">Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_plugins_wiki.html">Plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_data_sources_wiki.html">Data sources</a></li>
 </ul>
@@ -209,12 +209,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_gis_theorie.html">What is GIS? (Theory)</a></li>
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_theorie.html">What is GIS? (Theory)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_start.html">Getting started with QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="nav bd-sidenav">
@@ -247,13 +244,16 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Map design- Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
 
+
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_2.html">Print layout</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
+
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Non-Spatial Geodataprocessing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 6- Data analysis with QGIS</span></p>
@@ -465,14 +465,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-functions">Table functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-calculator">Field Calculator:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-field">Add field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-field">Delete field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-field">Calculate field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-statistics-for-fields">Basic statistics for fields</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics-by-categories">Statistics by categories</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-queries-ii">Non-spatial queries (II)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#querying-data">Querying data:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-builder">Query Builder</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-operators">Query operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-queries">Non-spatial queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-selection">Manual selection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression">Select by expression</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-joins">Non-spatial joins</a></li>
@@ -489,64 +493,269 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="non-spatial-geodataprocessing">
 <h1>Non-Spatial Geodataprocessing<a class="headerlink" href="#non-spatial-geodataprocessing" title="Permalink to this heading">#</a></h1>
-<p><strong>Competences:</strong></p>
+<section id="introduction">
+<h2>Introduction:<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>Non-spatial geodataprocessing in QGIS refers to the manipulation, subsetting and analysis of attribute data within a GIS environment without directly involving spatial components. It involves operations on the non-geometric attributes of geospatial datasets. This can include data cleaning, transformation, enrichment and analysis based on the associated attribute information, such as population statistics, land use classifications or economic indicators. Non-spatial geodataprocessing can be used to perform calculations, generate statistics and gain insights into the non-spatial aspects of geospatial datasets. QGIS offers a variety of tools for non-spatial geodataprocessing to assist users in managing and analyzing attribute data effectively.</p>
+<p>This segment of Module 5 will start with the introduction of table functions. It will then progress into techniques for querying data, ultimately introducing the important concept of non-spatial joins.</p>
+<figure class="align-default" id="attribute-table-all">
+<a class="reference internal image-reference" href="../../_images/en_attribute_table_large.png"><img alt="../../_images/en_attribute_table_large.png" src="../../_images/en_attribute_table_large.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Screenshot of an attribute table for QGIS version 3.28.4</span><a class="headerlink" href="#attribute-table-all" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 <section id="table-functions">
 <h2>Table functions<a class="headerlink" href="#table-functions" title="Permalink to this heading">#</a></h2>
-<section id="field-calculator">
-<h3>Field Calculator:<a class="headerlink" href="#field-calculator" title="Permalink to this heading">#</a></h3>
-<p>The <strong>Field Calculator</strong> is a tool for querying (filtering) your data or layers using their attributes.</p>
-</section>
-</section>
-<section id="non-spatial-queries-ii">
-<h2>Non-spatial queries (II)<a class="headerlink" href="#non-spatial-queries-ii" title="Permalink to this heading">#</a></h2>
-<section id="querying-data">
-<h3>Querying data:<a class="headerlink" href="#querying-data" title="Permalink to this heading">#</a></h3>
-<p>In GIS one can <strong>query</strong> (filter) data based on specific information (attribute). After successfull filtering only the wanted features that represent the <strong>attribute</strong> are displayed. Data filtering can be used to create a <strong>subset</strong> of features and export them as a new layer.</p>
-</section>
-<section id="query-builder">
-<h3>Query Builder<a class="headerlink" href="#query-builder" title="Permalink to this heading">#</a></h3>
+<section id="add-field">
+<h3>Add field<a class="headerlink" href="#add-field" title="Permalink to this heading">#</a></h3>
+<p>The information of a vector layer can be accessed through its attribute table, and it can be enriched by adding new fields to this table.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Depending on the information that will be added to the created attribute field, the correct data type must be selected.</p>
+</div>
+<p><strong>Possible data types:</strong></p>
 <ul class="simple">
-<li><p>The Query Builder is a tool for querying (filtering) data or layers using their attributes to define a subset of the features in the layer.</p></li>
-<li><p>The querying is based on <strong>SQL</strong> (Structured Query Language) expressions to use one or more conditions to filter a layer.</p></li>
+<li><p><strong>Whole number: Integer (32 and 64 bit)</strong></p></li>
+<li><p><strong>Decimal number (real)</strong></p></li>
+<li><p><strong>Text (string)</strong></p></li>
+<li><p>Date and Date and time</p></li>
+<li><p>Boolean</p></li>
 </ul>
-<p>Built a drop-down menu for SQL:
-SQL is a standardized programming language that is used to manage databases and perform various operations on the data in them</p>
-<ul class="simple">
-<li><p>As long as a query is active, only the features corresponding to its result are available in the project.</p></li>
-</ul>
+<p>The most common data types are the first three.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Add a field for population density; the data type should be Decimal number (real)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_add_field.mp4"></video></p>
+</div>
+</details></section>
+<section id="delete-field">
+<h3>Delete field<a class="headerlink" href="#delete-field" title="Permalink to this heading">#</a></h3>
+<p>It is also possible to <strong>delete fields</strong> from the attribute table. A commonly used practice is to <strong>remove all unused or unnecessary fields</strong> from a layer before starting to work on it. This <strong>makes the dataset much more organized</strong>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Delete all unused/unnecessary fields from the vector layer<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_delete_field.mp4"></video></p>
+</div>
+</details></section>
+<section id="calculate-field">
+<h3>Calculate field<a class="headerlink" href="#calculate-field" title="Permalink to this heading">#</a></h3>
+<p>An important practice is to calculate the attribute values for a field, e.g., based on the values of other fields. In QGIS, you can <strong>create a new field or update an existing field</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The Query Builder dialog is accessible through the Layer Properties dialog (maybe hint to Wiki?), at the bottom right of the Source section tab.</p>
+<p>It is necessary to <strong>check if the data type of the field</strong> (new or updated) <strong>and your calculation match</strong>. For example: if you are calculating a ratio (e.g. density), the field should not be of type integer but rather of type decimal number.</p>
 </div>
-<p><img alt="Query Builder location" src="../../_images/en_query_builder_location.png" /> Location of the Query Builder</p>
-</section>
-<section id="query-operators">
-<h3>Query operators<a class="headerlink" href="#query-operators" title="Permalink to this heading">#</a></h3>
-<p>Within the Query Builder we use different <strong>operators</strong> to build query expressions and filter our layers. Some operators are <strong>mathematical</strong> and others are <strong>logical</strong>.</p>
-<p>Important examples:</p>
+<p>An example could be to calculate the population density based on the already existing fields Population and Area.</p>
+<p>A very important tool for such calculations is the <strong>Field Calculator</strong>. It allows you to <strong>perform calculations based on existing attribute values or defined functions</strong>, for example, to calculate the length or area of a geometry feature. The results of these calculations can be written into a new field or update an existing field.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Calculate the population density based on the already existing fields Population and Area<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_calculate_field.mp4"></video></p>
+</div>
+</details></section>
+<section id="basic-statistics-for-fields">
+<h3>Basic statistics for fields<a class="headerlink" href="#basic-statistics-for-fields" title="Permalink to this heading">#</a></h3>
+<p>The tool <strong>Basic statistics for fields</strong> generates statistics for a specific field of the attribute table of a vector layer. The results are generated as an HTML file and can be accessed by using the <strong>file path link</strong> in the <strong>Results Viewer</strong>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Calculate statistics for the field population density for all the countries. What are the max./min. values, average, etc.?<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_field_stats.mp4"></video></p>
+</div>
+</details></section>
+<section id="statistics-by-categories">
+<h3>Statistics by categories<a class="headerlink" href="#statistics-by-categories" title="Permalink to this heading">#</a></h3>
+<p>To calculate statistics of a field depending on a parent class you can use the tool <strong>Statistics by catergories</strong>. The parent class is a combination of values from other fields.</p>
+<p><strong>Questions that need to be considered when doing these calculations:</strong></p>
 <ul class="simple">
-<li><p>“field” <strong>=</strong> “value” : use the <strong>=</strong> operator to show only features which include the value</p></li>
-<li><p>“field” <strong>!=</strong> “value” : use the <strong>!=</strong> operator to show all features that don’t include the value</p></li>
-<li><p>“field” = “value1” <strong>OR</strong> “field” = “value2” : use <strong>OR</strong> to show all features that include either value1 or value2</p></li>
-<li><p>“field1” = “value” <strong>AND</strong> “field2” = “value” : use <strong>AND</strong> to show all features that include both values indicated</p></li>
+<li><p>For which fields should the statistics be calculated in the attribute table?</p></li>
+<li><p>Which field in the attribute table contains which information?</p></li>
 </ul>
-<p><img alt="Query Builder" src="../../_images/en_query_builder.png" /> Query Builder</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+How many cities per country have more than 300.000 inhabitants? For each country: how many people live in the largest agglomeration?<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_stats_by_category.mp4"></video></p>
+</div>
+</details></section>
 </section>
+<section id="non-spatial-queries">
+<h2>Non-spatial queries<a class="headerlink" href="#non-spatial-queries" title="Permalink to this heading">#</a></h2>
+<p>In GIS you can <strong>query</strong> (filter) data based on specific attribute information. Once the filtering is successful, only the desired features that <strong>correspond</strong> to the chosen attribute are displayed. Data filtering is a valuable technique for creating <strong>subsets</strong> of features that can be exported as a new layer.</p>
+<section id="manual-selection">
+<h3>Manual selection<a class="headerlink" href="#manual-selection" title="Permalink to this heading">#</a></h3>
+<p>It is possible to manually select specific rows by clicking on the number on the left side of it. This can be easily used to select a small number of rows. If they are selected successfully, they will appear in <strong>yellow</strong>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Manual selection of rows<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_select_by_attribute_table.mp4"></video></p>
+</div>
+</details></section>
+<section id="select-by-expression">
+<h3>Select by expression<a class="headerlink" href="#select-by-expression" title="Permalink to this heading">#</a></h3>
+<p>In this dialog, you can build your expressions to query the data. There are several operators that can be used to filter your vector layer.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Arithmetic operators</label><div class="sd-tab-content docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>operator</p></th>
+<th class="head"><p>functionality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>+</strong></p></td>
+<td><p>addition</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>-</strong></p></td>
+<td><p>substraction</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>*</strong></p></td>
+<td><p>multiplication</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>/</strong></p></td>
+<td><p>division</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>%</strong></p></td>
+<td><p>remainder of division</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Comparison operators</label><div class="sd-tab-content docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>operator</p></th>
+<th class="head"><p>functionality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>=</strong></p></td>
+<td><p>equals</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>!=</strong></p></td>
+<td><p>not equal</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>&lt;</strong></p></td>
+<td><p>less than</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>&gt;</strong></p></td>
+<td><p>greater than</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>&lt;=</strong></p></td>
+<td><p>less than or equal to</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>&gt;=</strong></p></td>
+<td><p>greater than or equal to</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Logical operators</label><div class="sd-tab-content docutils">
+<p>Operators such as AND, OR can be used to combine different queris or criteria</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>operator</p></th>
+<th class="head"><p>functionality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>AND</strong></p></td>
+<td><p>logical AND</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>OR</strong></p></td>
+<td><p>logical OR</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>NOT</strong></p></td>
+<td><p>logical NOT</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Special operators</label><div class="sd-tab-content docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>operator</p></th>
+<th class="head"><p>functionality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>LIKE</strong></p></td>
+<td><p>pattern matching</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>IN</strong></p></td>
+<td><p>checks if a value is in a list of values</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>IS NULL</strong></p></td>
+<td><p>checks for null values</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>BETWEEN</strong></p></td>
+<td><p>checks if a value is within a specified range</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>CASE WHEN</strong></p></td>
+<td><p>conditional expressions</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Build query for the question: Cities that were not yet cities of one million inhabitants in 1950 but already had more than 10 million inhabitants in 2015.<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_select_by_expression_and.mp4"></video></p>
+</div>
+</details></section>
 </section>
 <section id="non-spatial-joins">
 <h2>Non-spatial joins<a class="headerlink" href="#non-spatial-joins" title="Permalink to this heading">#</a></h2>
 <p>A lot of analysis can be done with just a single layer. But sometimes the necessary information we need for our analysis is <strong>split across</strong> different datasets/layers. With QGIS, these layers can be <strong>combined</strong> to perform the analysis we want. The simplest way to combine layers is via an <strong>attribute join</strong>. This operation looks up information from a second data source based on a <strong>shared attribute value</strong>. This value functions as a common unique identifier, also known as an ID, UID or key.</p>
 <p>In QGIS the tool <strong>Join attributes by field value</strong> is often used for such operations:</p>
-<p><img alt="Join attributes by field value" src="../../_images/en_join_attributes_by_field_values.png" /> Screenshot of the Join attributes by field value tool</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<figure class="align-default" id="join-attributes-by-field-value">
+<a class="reference internal image-reference" href="../../_images/en_join_attributes_by_field_values.png"><img alt="../../_images/en_join_attributes_by_field_values.png" src="../../_images/en_join_attributes_by_field_values.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Screenshot of the Join attributes by field value tool</span><a class="headerlink" href="#join-attributes-by-field-value" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
 <ul class="simple">
 <li><p>An attribute join in QGIS only works properly, when the attributes <strong>match exactly</strong>.</p></li>
 <li><p>For example: <strong>“S. Sudan”</strong> will not match with <strong>“South Sudan”</strong>.</p></li>
 <li><p>Where possible it’s best to <strong>use attributes that have been designed for joining</strong>, such as <strong>P-codes</strong> or <strong>ID’s</strong> which are not susceptible to spelling mistakes.</p></li>
 </ul>
 </div>
-<p>Test Test</p>
 </section>
 </section>
 
@@ -613,14 +822,18 @@ SQL is a standardized programming language that is used to manage databases and 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-functions">Table functions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-calculator">Field Calculator:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-field">Add field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-field">Delete field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-field">Calculate field</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-statistics-for-fields">Basic statistics for fields</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics-by-categories">Statistics by categories</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-queries-ii">Non-spatial queries (II)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#querying-data">Querying data:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-builder">Query Builder</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-operators">Query operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-queries">Non-spatial queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-selection">Manual selection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression">Select by expression</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-joins">Non-spatial joins</a></li>

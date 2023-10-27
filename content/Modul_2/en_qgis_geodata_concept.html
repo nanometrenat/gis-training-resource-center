@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Geodata Concept Exercise 1" href="en_qgis_geodata_concept_ex1.html" />
-    <link rel="prev" title="Getting started with QGIS" href="../Modul_1/en_qgis_start.html" />
+    <link rel="prev" title="QGIS Installation" href="../Modul_1/en_qgis_installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,9 +171,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_qgis_basics_wiki.html">QGIS Basics</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_installation_wiki.html">QGIS installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projects_folder_structure_wiki.html">Projects and Folder Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_projections_wiki.html">Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html">Basemaps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_plugins_wiki.html">Plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_data_sources_wiki.html">Data sources</a></li>
 </ul>
@@ -209,12 +209,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_gis_theorie.html">What is GIS? (Theory)</a></li>
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_theorie.html">What is GIS? (Theory)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_start.html">Getting started with QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modul_1/en_qgis_installation.html">QGIS Installation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="current nav bd-sidenav">
@@ -247,13 +244,16 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Map design- Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
 
+
+<li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_2.html">Print layout</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 6- Data analysis with QGIS</span></p>
@@ -498,7 +498,8 @@ document.write(`
 <h2>Projections<a class="headerlink" href="#projections" title="Permalink to this heading">#</a></h2>
 <section id="theory">
 <h3>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">#</a></h3>
-<p>The earth is a sphere and cannot be represented on a flat map without being distorted. To able able to display the earth on a flat map for example as a rectangle it needs to be projected. For further explanation, watch this <a class="reference external" href="https://www.youtube.com/watch?v=kIID5FDi2JQ">video</a>.</p>
+<p>The earth is a sphere and cannot be represented on a flat map without being distorted. To able able to display the earth on a flat map for example as a rectangle it needs to be projected. For further explanation, watch this video.
+<a class="reference external" href="https://www.youtube.com/watch?v=kIID5FDi2JQ"><img alt="preview video" src="../../_images/screenshot_video_every_world_map_is_wrong.png" /></a></p>
 <p>For this translation, from a curved on a flat surface, thousands of different methods exist. These are called <strong>Coordinate Reference Systems (CRS)</strong>.</p>
 <p><img alt="Different Coordinate Reference Systems" src="../../_images/en_examples_projections.png" /></p>
 <p>Every projection comes with a trade-off in shape, direction, distance and area. That’s why it is important to choose different types of CRS for different use cases.
@@ -534,11 +535,11 @@ For example, Mercator projections don´t represent the area correctly. Google Ma
 <section id="application">
 <h3>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h3>
 <p>You can find all the projections and their CRS code at this <a class="reference external" href="http://epsg.io">website</a>.</p>
-<p>To change the projection of a <strong>vector file</strong>, click on <em>Vector</em>, <em>Data Management Tools</em>, <em>Reproject Layer</em>. Select your input layer and the target crs. Click on the three dots to <em>Save to File…</em> and click <em>Run</em>. For a detailed instruction click on this <a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/7e7a28698859062d1b832b558b2721c6/qgis_reproject_vector.mp4">video</a>.</p>
-<p>To change the projection of a <strong>raster file</strong>, clickclick on <em>Raster</em>, <em>Projections</em>, <em>Warp (Reproject)</em>. Choose your input layer and target crs. Click on the three dots to <em>Save to File…</em> and click <em>Run</em>. For a detailed instruction click on this <a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/uploads/3b7a1bb2408f4453f22d73f54156888b/qgis_reproject_raster.mp4">video</a>.</p>
-<p>It is crucial that you are aware of the difference in data projection and project projection. They should always be the same, or else you will get wrong results! You can change the data projection by following the steps explained above. The project projection is on the bottom left corner, as seen here.
-<img alt="QGIS Interface" src="../../_images/en_QGIS_User_Interface.png" />
-The interface then will be the same and by searching for the right EPSG you can change the projection.</p>
+<p>To change the projection of a <strong>vector file</strong>, click on <em>Vector</em>, <em>Data Management Tools</em>, <em>Reproject Layer</em>. Select your input layer and the target crs. Click on the three dots to <em>Save to File…</em> and click <em>Run</em>. For a detailed instruction click on this video.
+<video width="100%" controls src="../../fig/qgis_reproject_vector.mp4"></video></p>
+<p>To change the projection of a <strong>raster file</strong>, clickclick on <em>Raster</em>, <em>Projections</em>, <em>Warp (Reproject)</em>. Choose your input layer and target crs. Click on the three dots to <em>Save to File…</em> and click <em>Run</em>. For a detailed instruction click on this video. <video width="100%" controls src="../../fig/qgis_reproject_raster.mp4"></video></p>
+<p>It is crucial that you are aware of the difference in data projection and project projection. They should always be the same, or else you will get wrong results! You can change the data projection by following the steps explained above. The project projection is on the bottom left corner, as seen <a class="reference download internal" download="" href="../../_downloads/54547c7e6d6f20d020245b033bbce8f1/en_QGIS_User_Interface.png"><span class="xref download myst">here</span></a>.</p>
+<p>The interface then will be the same and by searching for the right EPSG you can change the projection.</p>
 </section>
 </section>
 <section id="excercises">
@@ -667,12 +668,12 @@ Since a raster is based on an image, the resolution is crucial. It defines the a
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Modul_1/en_qgis_start.html"
+       href="../Modul_1/en_qgis_installation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Getting started with QGIS</p>
+        <p class="prev-next-title">QGIS Installation</p>
       </div>
     </a>
     <a class="right-next"
