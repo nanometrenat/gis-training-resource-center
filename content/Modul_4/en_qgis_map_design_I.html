@@ -477,11 +477,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for Vector data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-colour-gradient-to-raster-data">Assigning a colour gradient to raster data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-and-importing-styles">Exporting and Importing Styles</a></li>
@@ -632,7 +632,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <p><span class="caption-number">Fig. 10 </span><span class="caption-text">Symbolization for vector data; Source: White, T. (2017). Symbolization and the Visual Variables. *The Geographic Information Science &amp; Technology Body of Knowledge (2nd Quarter 2017 Edition), John P. Wilson (ed.). DOI: 10.2222/gistbok/2017.2.3</span><a class="headerlink" href="#symbolization-for-vector-data" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In the dropdowns below you can find examples on how to set up common vector data styling. Make sure you have downloaded the Exercise XX data from the github repository!</p>
+<p>In the dropdowns below you can find examples on how to set up common vector data styling. Make sure you have downloaded the Exercise XX data from the github repository if you want to follow along!</p>
 <blockquote>
 <div><p>Link the files and github repository</p>
 </div></blockquote>
@@ -652,7 +652,7 @@ Exercise: Only display the outlines of polygons<div class="sd-summary-down docut
 <li><p class="sd-card-text">Check the <strong>“Transparent Fill”</strong> option</p></li>
 </ol>
 <figure class="align-default" id="layer-styling-transparent">
-<img alt="../../_images/en_30.30.2_vector_layer_styling_transparent.png" src="../../_images/en_30.30.2_vector_layer_styling_transparent.png" />
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_vector_layer_styling_transparent.png"><img alt="../../_images/en_30.30.2_vector_layer_styling_transparent.png" src="../../_images/en_30.30.2_vector_layer_styling_transparent.png" style="width: 500px;" /></a>
 </figure>
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_make_only_outlines_visible.mp4"></video></p>
 </div>
@@ -693,7 +693,7 @@ Change the styling for multiple overlayed layers<div class="sd-summary-down docu
 <li><p class="sd-card-text">Now we can see the boundaries of the country and its states, and behind that we cann see the districs (Adm2).</p></li>
 <li><p class="sd-card-text">Let’s make the districs layer’s style consistent with the others.</p></li>
 </ol>
-<br/>
+<p class="sd-card-text"><br/><br/></p>
 <ol class="arabic simple" start="11">
 <li><p class="sd-card-text">Choose a <strong>Fill Color</strong></p></li>
 <li><p class="sd-card-text">Use the same <strong>Stroke color</strong> as for Adm0 and Adm1, but make the width 0.1 Millimeters and the Stroke Style a <strong>Dash Line</strong></p></li>
@@ -811,31 +811,6 @@ Style data based on variable ranges (graduated styling)<div class="sd-summary-do
 </figure>
 </div>
 </details></section>
-<section id="symbology-for-raster-data">
-<h2>Symbology for raster data<a class="headerlink" href="#symbology-for-raster-data" title="Permalink to this heading">#</a></h2>
-<p>As we have already learned, raster data are basically a grid of pixels with different (numerical) values. As such, you can’t style the shape, fill or outline of raster data. It is only possible to assign colours to the different values of the pixels.</p>
-<section id="assigning-a-colour-gradient-to-raster-data">
-<h3>Assigning a colour gradient to raster data<a class="headerlink" href="#assigning-a-colour-gradient-to-raster-data" title="Permalink to this heading">#</a></h3>
-<p>To assign a colour gradient for raster data, you need to:</p>
-<ol class="arabic simple">
-<li><p>Open the styling panel for the raster layer</p></li>
-<li><p>Navigate to the Symbology tab</p></li>
-<li><p>By default, the colour scheme is set to Singleband gray (if you only have one colour band in the data set). Click on <strong>Singleband gray</strong> and switch to <strong>Singleband pseudocolour</strong></p></li>
-<li><p>Click on the arrow to the right of the colour ramp. Here you can choose a premade colour ramp</p></li>
-<li><p>You can modify the colour ramp by clicking on the colour ramp itself</p></li>
-</ol>
-<figure class="align-default" id="raster-data-colour-gradient">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_raster_data_colour_gradient.png"><img alt="../../_images/en_30.30.2_raster_data_colour_gradient.png" src="../../_images/en_30.30.2_raster_data_colour_gradient.png" style="width: 600px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Colour Ramp Selector</span><a class="headerlink" href="#raster-data-colour-gradient" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>In the colour ramp selector, you can adjust each colour step. On the bottom, you can see a plot for the Hue, <strong>Saturation</strong>, <strong>Lightness</strong> and <strong>Opacity</strong>. Especially latter three are useful to see how your colour ramp will translate. Gradients from light to dark are easier to read: Check if the plot for the <strong>Lightness</strong> has a more or less linear plot.</p>
-<blockquote>
-<div><p>Examples Video! and how to invert ramp</p>
-</div></blockquote>
-</section>
-</section>
 <section id="labels">
 <h2>Labels<a class="headerlink" href="#labels" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
@@ -865,7 +840,7 @@ Adding labels to a layer<div class="sd-summary-down docutils">
 <figure class="align-default" id="setting-up-labels">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_setting_up_labels.png"><img alt="../../_images/en_30.30.2_setting_up_labels.png" src="../../_images/en_30.30.2_setting_up_labels.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Setting up labels in QGIS 30.30.2</span><a class="headerlink" href="#setting-up-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Setting up labels in QGIS 30.30.2</span><a class="headerlink" href="#setting-up-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_setting_up_labels
@@ -888,7 +863,7 @@ Adding different label styles to the same layer<div class="sd-summary-down docut
 <figure class="align-default" id="adding-rule-based-labels">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_rule-based_labels.png"><img alt="../../_images/en_30.30.2_adding_rule-based_labels.png" src="../../_images/en_30.30.2_adding_rule-based_labels.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">To add rule-based labels, you need to enter an expression</span><a class="headerlink" href="#adding-rule-based-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="5">
@@ -902,7 +877,7 @@ Adding different label styles to the same layer<div class="sd-summary-down docut
 <figure class="align-default" id="rule-based-labels-expression-builder">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png"><img alt="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" src="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">The expression builder: Expression (left); building blocks, operators, fields and values(center); unique values (right)</span><a class="headerlink" href="#rule-based-labels-expression-builder" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_rule_based_labelling
@@ -953,6 +928,31 @@ Add labels to roads<div class="sd-summary-down docutils">
 .mp4"></video></p>
 </div>
 </details></section>
+<section id="symbology-for-raster-data">
+<h2>Symbology for raster data<a class="headerlink" href="#symbology-for-raster-data" title="Permalink to this heading">#</a></h2>
+<p>As we have already learned, raster data are basically a grid of pixels with different (numerical) values. As such, you can’t style the shape, fill or outline of raster data. It is only possible to assign colours to the different values of the pixels.</p>
+<section id="assigning-a-colour-gradient-to-raster-data">
+<h3>Assigning a colour gradient to raster data<a class="headerlink" href="#assigning-a-colour-gradient-to-raster-data" title="Permalink to this heading">#</a></h3>
+<p>To assign a colour gradient for raster data, you need to:</p>
+<ol class="arabic simple">
+<li><p>Open the styling panel for the raster layer</p></li>
+<li><p>Navigate to the Symbology tab</p></li>
+<li><p>By default, the colour scheme is set to Singleband gray (if you only have one colour band in the data set). Click on <strong>Singleband gray</strong> and switch to <strong>Singleband pseudocolour</strong></p></li>
+<li><p>Click on the arrow to the right of the colour ramp. Here you can choose a premade colour ramp</p></li>
+<li><p>You can modify the colour ramp by clicking on the colour ramp itself</p></li>
+</ol>
+<figure class="align-default" id="raster-data-colour-gradient">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_raster_data_colour_gradient.png"><img alt="../../_images/en_30.30.2_raster_data_colour_gradient.png" src="../../_images/en_30.30.2_raster_data_colour_gradient.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Colour Ramp Selector</span><a class="headerlink" href="#raster-data-colour-gradient" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the colour ramp selector, you can adjust each colour step. On the bottom, you can see a plot for the Hue, <strong>Saturation</strong>, <strong>Lightness</strong> and <strong>Opacity</strong>. Especially latter three are useful to see how your colour ramp will translate. Gradients from light to dark are easier to read: Check if the plot for the <strong>Lightness</strong> has a more or less linear plot.</p>
+<blockquote>
+<div><p>Examples Video! and how to invert ramp</p>
+</div></blockquote>
+</section>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exporting-and-importing-styles">
 <h1>Exporting and Importing Styles<a class="headerlink" href="#exporting-and-importing-styles" title="Permalink to this heading">#</a></h1>
@@ -1042,11 +1042,11 @@ Add labels to roads<div class="sd-summary-down docutils">
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for Vector data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-colour-gradient-to-raster-data">Assigning a colour gradient to raster data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-and-importing-styles">Exporting and Importing Styles</a></li>
