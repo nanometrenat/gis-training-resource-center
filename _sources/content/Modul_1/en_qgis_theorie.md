@@ -1,15 +1,5 @@
 # What is GIS? (Theory)
 
-**Competences**
-
-- General Information
-- Why are Spatial Analyses important?
-- Introduction to GIS
-- A Galaxy of Tools
-- Paper Maps and Cartography
-- GIS vs Cartography
-- Web GIS Platforms
-
 ## General Information: 
 
 - A Geographic Information System (GIS) is a __digital system that connects data to maps__.
@@ -22,11 +12,13 @@
 
 ## Why are Spatial Analyses important?
 
-> **Discuss in groups**  
-- Situations in which you benefitted from spatial analyses.
-- Situations in which you could may be have benefitted from spatial analyses.
-- Main areas where you see potential for spatial analyses in your work.
+```{Note} 
+Discuss in groups:
+```
 
+ - Situations in which you benefitted from spatial analyses.
+ - Situations in which you could may be have benefitted from spatial analyses.
+ - Main areas where you see potential for spatial analyses in your work.
 
 ## Introduction to GIS: 
 
@@ -47,10 +39,10 @@ GIS has many applications in the __humanitarian field__:
  - Support security decisions
  - Support operations planning
  - Identify areas most affected by disasters
-
-  <tagName>  <tagName>
-
-> **A few examples:** 
+  
+```{Tip}
+A few examples:
+```
 
  - [REACH Initiative](https://www.reachresourcecentre.info/search/)  
  - [World Food Programme (WFP)](https://hungermap.wfp.org/) 
@@ -64,15 +56,24 @@ GIS comes with a __galaxy of tools__ that are constantly evolving. An increasing
 
 ### An Overview: 
 
-| Name | Description |
-| --- | --- |
-| Mobile Data Collection Tools |The latter make it possible to collect data via mobile or tablet, and often to visualize and exchange it with other platforms according to a common format.|
-| Mapping Tools | These tools provide a simple vizualisation of geographic data, and allow for the production of maps.|
-|GIS Tools| As opposed to the previous ones, these more advanced tools are very comprehensive and allow for advanced analyses to be carried out on the geographical components of data.|
-| Webmapping Tools|These tools make it possible to manipulate and create maps online in a very simple way directly in a web browser. |
+- __Mobile Data Collection Tools__
+
+The latter make it possible to collect data via mobile or tablet, and often to visualize and exchange it with other platforms according to a common format.
+
+-  __Mapping Tools__
+
+These tools provide a simple vizualisation of geographic data, and allow for the production of maps.
+
+- __GIS Tools__
+
+As opposed to the previous ones, these more advanced tools are very comprehensive and allow for advanced analyses to be carried out on the geographical components of data.
+
+-  __Webmapping Tools__
+
+These tools make it possible to manipulate and create maps online in a very simple way directly in a web browser.
 
 
- ## Paper Maps and Cartography 
+## Paper Maps and Cartography 
 
 ### What is Spatial Analysis?
 
@@ -81,9 +82,7 @@ GIS comes with a __galaxy of tools__ that are constantly evolving. An increasing
 - Data can be __added to a map as layers and they can interact with each other__. 
 - GIS enables you to work with these __layers__ to explore critically important questions and __find answers__ to those questions.
 
-<tagName>  <tagName>
-
-> **An Example from the Past: John Snows' Cholera Map**  
+#### An Example from the Past: John Snows' Cholera Map
 
 In 1854 an __outbreak of cholera__ occurred in London, England. The most common theory was that the disease was spread through the air. Dr.John Snow believed that the danger was __in the water__. He made a map to analyse the __number of deaths__ in Soho per house block. He added the __location of water pumps__ on the map.
 He found a __correlation__ between one specific water pump and the number of infections.
@@ -94,10 +93,10 @@ __Dr. Snow's map of the Cholera outbreak of 1854__, and the reports that it acco
 
 __Using GIS__, several measures of spatial central tendency have been applied to the dataset, revealing that the Spatial Mean (the geographic center of the distribution of deaths) of the outbreak lies __within 35 meters of the Broad Street Pump__, identified as the __source of contamination__ in the 1854 outbreak. 
 
-<tagName>  <tagName>
 
-> **Further information**:
-
+```{Tip}
+Further information:
+```
  - [Let’s explore John Snow’s map](https://www.arcgis.com/apps/PublicInformation/index.html?appid=d7deb67f810d46dfacb80ff80ac224e9)
 
 ## GIS vs Cartography
