@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -146,14 +146,13 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-  
     
     
       
     
     
-    <img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-light" alt="GIS Resource Training Center - Home"/>
-    <script>document.write(`<img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-dark" alt="GIS Resource Training Center - Home"/>`);</script>
+    <img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -246,8 +245,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
-
-
 
 <li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_2.html">Print layout</a></li>
 
@@ -496,9 +493,9 @@ document.write(`
 <p>Non-spatial geodataprocessing in QGIS refers to the manipulation, subsetting and analysis of attribute data within a GIS environment without directly involving spatial components. It involves operations on the non-geometric attributes of geospatial datasets. This can include data cleaning, transformation, enrichment and analysis based on the associated attribute information, such as population statistics, land use classifications or economic indicators. Non-spatial geodataprocessing can be used to perform calculations, generate statistics and gain insights into the non-spatial aspects of geospatial datasets. QGIS offers a variety of tools for non-spatial geodataprocessing to assist users in managing and analyzing attribute data effectively.</p>
 <p>This segment of Module 5 will start with the introduction of table functions. It will then progress into techniques for querying data, ultimately introducing the important concept of non-spatial joins.</p>
 <figure class="align-default" id="attribute-table-all">
-<a class="reference internal image-reference" href="fig/en_attribute_table_large.png"><img alt="fig/en_attribute_table_large.png" src="fig/en_attribute_table_large.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_attribute_table_large.PNG"><img alt="../../_images/en_attribute_table_large.PNG" src="../../_images/en_attribute_table_large.PNG" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Screenshot of an attribute table for QGIS version 3.28.4</span><a class="headerlink" href="#attribute-table-all" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Screenshot of an attribute table for QGIS version 3.28.4</span><a class="headerlink" href="#attribute-table-all" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -741,9 +738,9 @@ Build query for the question: Cities that were not yet cities of one million inh
 <p>A lot of analysis can be done with just a single layer. But sometimes the necessary information we need for our analysis is <strong>split across</strong> different datasets/layers. With QGIS, these layers can be <strong>combined</strong> to perform the analysis we want. The simplest way to combine layers is via an <strong>attribute join</strong>. This operation looks up information from a second data source based on a <strong>shared attribute value</strong>. This value functions as a common unique identifier, also known as an ID, UID or key.</p>
 <p>In QGIS the tool <strong>Join attributes by field value</strong> is often used for such operations:</p>
 <figure class="align-default" id="join-attributes-by-field-value">
-<a class="reference internal image-reference" href="fig/en_join_attributes_by_field_values.png"><img alt="fig/en_join_attributes_by_field_values.png" src="fig/en_join_attributes_by_field_values.png" style="height: 500px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_join_attributes_by_field_values.PNG"><img alt="../../_images/en_join_attributes_by_field_values.PNG" src="../../_images/en_join_attributes_by_field_values.PNG" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Screenshot of the Join attributes by field value tool</span><a class="headerlink" href="#join-attributes-by-field-value" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Screenshot of the Join attributes by field value tool</span><a class="headerlink" href="#join-attributes-by-field-value" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition attention">
@@ -770,7 +767,7 @@ Build query for the question: Cities that were not yet cities of one million inh
         },
         kernelOptions: {
             name: "python3",
-            path: "./content/Modul_5"
+            path: "./content\Modul_5"
         },
         predefinedOutput: true
     }
@@ -882,8 +879,8 @@ By HeiGIT gGmbH
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
