@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -146,13 +146,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-light" alt="GIS Resource Training Center - Home"/>
+    <script>document.write(`<img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-dark" alt="GIS Resource Training Center - Home"/>`);</script>
   
   
 </a></div>
@@ -254,7 +255,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
@@ -501,7 +501,7 @@ document.write(`
 <h1>Graphical Variables and Symbology<a class="headerlink" href="#graphical-variables-and-symbology" title="Permalink to this heading">#</a></h1>
 <p>The representation of geodata in maps is crucial in order to provide useful location-based insights. This subchapter will cover the basics of good map design, how to create a map design in QGIS as well as common mistakes when designing or interpreting maps.</p>
 <blockquote>
-<div><p>Overview?</p>
+<div><p>Overview of the chapter:</p>
 </div></blockquote>
 <section id="types-of-maps">
 <h2>Types of maps<a class="headerlink" href="#types-of-maps" title="Permalink to this heading">#</a></h2>
@@ -586,29 +586,32 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <li><p>Symbology is applied to layers, but within the same layer we can assign multiple styles to features</p></li>
 <li><p>the symbology of a layer can be <strong>changed based on one of its attributes</strong></p></li>
 </ul>
+<blockquote>
+<div><p>different visualisation for different types of data (discrete vs. continuous values, insert image). For example the amount of rainfall/temperature is a continuous value. Which means that the</p>
+</div></blockquote>
 </section>
 <section id="colours">
 <h2>Colours<a class="headerlink" href="#colours" title="Permalink to this heading">#</a></h2>
 <p>Colours are arguably the most striking visual variables as they are easily disinguishable. However, depending on the type of data and the information you wish to convey, there are a few things to consider when choosing a colour scheme for your map. The most important variables for colours are the <strong>hue</strong>, the <strong>value</strong> (saturation) and the <strong>transparency</strong>.</p>
 <p>Colours schemes can be <strong>categorial, sequential, or diverging</strong>. If you wish to display different types of buildings or roads, the colour schemes should be categorial. Colour gradients, either sequential or diverging, are used for numerical data or data that can be ordered. For example, for the population sizes of districts a sequential colouring schemes is best to show the relative difference between the values. However, if the data has positive <strong>and</strong> negative values, a diverging colour gradient should be used.</p>
 <figure class="align-default" id="colouring-schemes">
-<a class="reference internal image-reference" href="../../_images/en_Colour_Gradients_6.png"><img alt="../../_images/en_Colour_Gradients_6.png" src="../../_images/en_Colour_Gradients_6.png" style="width: 750px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_colour_gradients_qualities.png"><img alt="../../_images/en_colour_gradients_qualities.png" src="../../_images/en_colour_gradients_qualities.png" style="width: 750px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6 </span><span class="caption-text">Different types of colouring schemes</span><a class="headerlink" href="#colouring-schemes" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>When choosing colour gradients, a clear gradient from lighter to darker colours is the best most of the times as the gradation is easily distinguishable and translates well into black and white. In the figure below, example A and B are not ideal as it is difficult to make out the gradation and it does not translate into black and white. You can achieve a clear sequence by grading the <strong>saturation</strong> of the colour gradient.</p>
 <figure class="align-default" id="colour-gradients-saturation-example">
-<a class="reference internal image-reference" href="../../_images/en_colour_gradients_saturation.png"><img alt="../../_images/en_colour_gradients_saturation.png" src="../../_images/en_colour_gradients_saturation.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../../_images/de_colour_gradients_saturation.png"><img alt="../../_images/de_colour_gradients_saturation.png" src="../../_images/de_colour_gradients_saturation.png" style="width: 750px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Examples for different colour gradients translated into black and white. Pay attention to the saturation gradient</span><a class="headerlink" href="#colour-gradients-saturation-example" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Examples for different colour gradients translated into black and white. Pay attention to the saturation gradient under each example.</span><a class="headerlink" href="#colour-gradients-saturation-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Colour gradients can also encompass multiple hues:</p>
-<figure class="align-default" id="colour-gradient-hues">
-<a class="reference internal image-reference" href="../../_images/Colour_Gradients_2.png"><img alt="../../_images/Colour_Gradients_2.png" src="../../_images/Colour_Gradients_2.png" style="width: 750px;" /></a>
+<figure class="align-default" id="colour-gradients-with-multiple-hues">
+<a class="reference internal image-reference" href="../../_images/colour_gradients_hues.png"><img alt="../../_images/colour_gradients_hues.png" src="../../_images/colour_gradients_hues.png" style="width: 750px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Single hue gradient on the left; Multiple hue gradient on the right</span><a class="headerlink" href="#colour-gradient-hues" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Single hue gradient on the left; Multiple hue gradient on the right</span><a class="headerlink" href="#colour-gradients-with-multiple-hues" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="colour-blindness">
@@ -631,7 +634,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <p><span class="caption-number">Fig. 10 </span><span class="caption-text">Symbolization for vector data; Source: White, T. (2017). Symbolization and the Visual Variables. *The Geographic Information Science &amp; Technology Body of Knowledge (2nd Quarter 2017 Edition), John P. Wilson (ed.). DOI: 10.2222/gistbok/2017.2.3</span><a class="headerlink" href="#symbolization-for-vector-data" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In the dropdowns below you can find examples on how to set up common vector data styling. Make sure you have downloaded the Exercise XX data from the github repository if you want to follow along!</p>
+<p>In the dropdowns below you can find examples on how to set up common vector data styling. Make sure you have downloaded the Exercise XX data from the github repository if you wantto follow!</p>
 <blockquote>
 <div><p>Link the files and github repository</p>
 </div></blockquote>
@@ -782,10 +785,10 @@ Style data based on variable ranges (graduated styling)<div class="sd-summary-do
 <li><p class="sd-card-text">Open its Symbology options and choose “<strong>Graduated</strong>”</p></li>
 <li><p class="sd-card-text">Select the value you want to use to assign colours, in this case, it will be “<strong>population</strong>”</p></li>
 </ol>
-<figure class="align-default" id="symbology-of-variable-ranges-1">
-<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_1.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_1.png" src="../../_images/en_30.30.2_symbology_variable_ranges_1.png" style="width: 500px;" /></a>
+<figure class="align-default" id="symbology-of-variable-ranges">
+<a class="reference internal image-reference" href="fig/en_30.30.2_symbology_variable_ranges_1.png"><img alt="fig/en_30.30.2_symbology_variable_ranges_1.png" src="fig/en_30.30.2_symbology_variable_ranges_1.png" style="width: 550px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">With variable ranges, select <strong>Graduated</strong> symbology and choose the attribute with continuous values</span><a class="headerlink" href="#symbology-of-variable-ranges-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">With variable ranges, select <strong>Graduated</strong> symbology and choose the attribute with continuous values</span><a class="headerlink" href="#symbology-of-variable-ranges" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="6">
@@ -955,12 +958,12 @@ Add labels to roads<div class="sd-summary-down docutils">
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exporting-and-importing-styles">
 <h1>Exporting and Importing Styles<a class="headerlink" href="#exporting-and-importing-styles" title="Permalink to this heading">#</a></h1>
-<p>As we have already learned, the layers in QGIS are saved separately from the settings and styles of a QGIS Project. Therefore, it can be useful to</p>
+<p>As we have already learned, the layers in QGIS are saved separately from the settings and styles of a QGIS Project. Therefore, it can be useful to prepare template styles that you can load into your QGIS project or send to a colleage.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="examples-for-map-design">
 <h1>Examples for Map design<a class="headerlink" href="#examples-for-map-design" title="Permalink to this heading">#</a></h1>
 <blockquote>
-<div><p>insert maps and discuss how to achieve this</p>
+<div><p>insert map examples and discuss how to achieve the map design</p>
 </div></blockquote>
 </section>
 
@@ -977,7 +980,7 @@ Add labels to roads<div class="sd-summary-down docutils">
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_4"
+            path: "./content/Modul_4"
         },
         predefinedOutput: true
     }
@@ -1098,8 +1101,8 @@ By HeiGIT gGmbH
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>

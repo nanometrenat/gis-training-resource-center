@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -146,13 +146,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-light" alt="GIS Resource Training Center - Home"/>
+    <script>document.write(`<img src="../../_static/HeiGIT_Logo_compact.svg" class="logo__image only-dark" alt="GIS Resource Training Center - Home"/>`);</script>
   
   
 </a></div>
@@ -246,16 +247,15 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_I.html">Graphical Variables and Symbology</a></li>
 
+
+
 <li class="toctree-l1"><a class="reference internal" href="../Modul_4/en_qgis_map_design_2.html">Print layout</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a></li>
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -467,6 +467,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-import">Raster data import</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delimited-text-import">Delimited Text import</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geopackage-import">GeoPackage import</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-osm-plugin">quick osm plugin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-turbo">overpass turbo</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-basemap">Adding basemap</a></li>
 </ul>
 </li>
@@ -512,9 +514,20 @@ Go to the data source manager and choose vector on the right. By clicking on the
 </section>
 <section id="delimited-text-import">
 <h3>Delimited Text import<a class="headerlink" href="#delimited-text-import" title="Permalink to this heading">#</a></h3>
+<p>Go to the data source manager and choose vector on the right. By clicking on the three dots you can browse your files and choose the ones you want to import. Next, choose your file format and expand the geometry definition section to select <strong>latitude (Y field)</strong> and <strong>longitude (X field)</strong>. Usually there is one column each that contains the geometry ot coordinates.<br />
+Click on Geometry CRS (5) and select the Project CRS.
+<img alt="import text data" src="../../_images/en_import_delimeted_text.png" />
+When you choose custom delimiters in the file format (3 &amp; 3.1), you can change the delimiters.
+<img alt="file format" src="../../_images/en_delimited_text_fileformat.png" /></p>
 </section>
 <section id="geopackage-import">
 <h3>GeoPackage import<a class="headerlink" href="#geopackage-import" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="quick-osm-plugin">
+<h3>quick osm plugin<a class="headerlink" href="#quick-osm-plugin" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="overpass-turbo">
+<h3>overpass turbo<a class="headerlink" href="#overpass-turbo" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="adding-basemap">
 <h3>Adding basemap<a class="headerlink" href="#adding-basemap" title="Permalink to this heading">#</a></h3>
@@ -546,7 +559,7 @@ Go to the data source manager and choose vector on the right. By clicking on the
         },
         kernelOptions: {
             name: "python3",
-            path: "./content\Modul_2"
+            path: "./content/Modul_2"
         },
         predefinedOutput: true
     }
@@ -601,6 +614,8 @@ Go to the data source manager and choose vector on the right. By clicking on the
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-import">Raster data import</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delimited-text-import">Delimited Text import</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geopackage-import">GeoPackage import</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-osm-plugin">quick osm plugin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-turbo">overpass turbo</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-basemap">Adding basemap</a></li>
 </ul>
 </li>
@@ -654,8 +669,8 @@ By HeiGIT gGmbH
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>
