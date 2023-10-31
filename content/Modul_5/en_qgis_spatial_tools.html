@@ -480,7 +480,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-calculate-sum-of-affected-population-and-flooded-area-for-the-area-of-interest">Exercise: Calculate sum of affected population and flooded area for the Area of interest</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
 </ul>
             </nav>
         </div>
@@ -526,7 +525,7 @@ document.write(`
 </figure>
 <ol class="arabic simple" start="2">
 <li><p>Filter the layer by using the <strong>query builder</strong> to only show <strong>primary and residential roads</strong> (“highway” = ‘primary’ OR “highway” = ‘residential’)</p></li>
-<li><p>Load the admin1 layer for Sudan which contains the district White Nile, <strong>ne_10m_admin_1_Sudan_White_Nile.geojson</strong></p></li>
+<li><p>Load the admin1 layer for Sudan which contains the district White Nile, <strong>ne_10m_admin_1_Sudan_White_Nile.geojson</strong>. They are downloaded and adapted from <a class="reference external" href="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/">Natural Earth Data</a>.</p></li>
 <li><p>Select the roads layer and open the <strong>Clip</strong> dialogue from Vector &gt; Geoprocessing Tools</p>
 <ul class="simple">
 <li><p>Set roads as the <strong>input layer</strong> and the district boundaries of White Nile as the <strong>overlay layer</strong></p></li>
@@ -607,8 +606,8 @@ Clip vector by mask layer</label><div class="sd-tab-content docutils">
 <section id="exercise-create-10km-buffer-around-health-centres">
 <h3>Exercise: Create 10km buffer around health centres<a class="headerlink" href="#exercise-create-10km-buffer-around-health-centres" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Download the Sudan health sites data from <a class="reference external" href="https://data.humdata.org/dataset/sudan-healthsites">HDX</a> as a shapefile</p></li>
-<li><p>Load your new data into QGIS. Also add the district boundaries of Khartoum, <strong>ne_10m_admin_1_Sudan_Khartoum.geojson</strong></p></li>
+<li><p>Download the <strong>Sudan health sites</strong> data from <a class="reference external" href="https://data.humdata.org/dataset/sudan-healthsites">HDX</a> as a shapefile</p></li>
+<li><p>Load your new data into QGIS. Also add the district boundaries of Khartoum, <strong>ne_10m_admin_1_Sudan_Khartoum.geojson</strong>. They are also downloaded and adapted from <a class="reference external" href="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/">Natural Earth Data</a>.</p></li>
 <li><p>Clip your health sites to the boundaries of Karthoum district</p></li>
 <li><p><strong>Reproject</strong> the health sites layer to a local coordinate system to enable setting distances in km</p>
 <ul class="simple">
@@ -747,8 +746,8 @@ Join attributes by nearest</label><div class="sd-tab-content docutils">
 <ol class="arabic simple">
 <li><p>Load the necessary data for this exercise into your QGIS. Both datasets were downloaded from HDX:</p>
 <ul class="simple">
-<li><p><strong>State_Unity_South_Sudan.geojson</strong></p></li>
-<li><p><strong>VIIRS_20230811_20230815_MaximumFloodWaterExtent_SouthSudan.geojson</strong></p></li>
+<li><p><a class="reference external" href="https://data.humdata.org/dataset/cod-ab-ssd">South Sudan - Subnational Administrative Boundaries</a>:<br /> <strong>State_Unity_South_Sudan.geojson</strong></p></li>
+<li><p><a class="reference external" href="https://data.humdata.org/dataset/satellite-detected-water-extents-between-11-and-15-august-2023-over-south-sudan">Satellite detected water extents between 11 and 15 August 2023 over South Sudan</a>: <strong>VIIRS_20230811_20230815_MaximumFloodWaterExtent_SouthSudan.geojson</strong></p></li>
 </ul>
 </li>
 <li><p>Locate the tool named <strong>Join attribute by location (summary)</strong></p>
@@ -774,14 +773,6 @@ Solution: Calculate sum of affected population and flooded area for the Area of 
 </div>
 </details><p>You can find further information about spatial joins by referring to the QGIS documentation, specifically in the section <a class="reference external" href="https://docs.qgis.org/3.28/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html?highlight=join%20attributes%20location#join-attributes-by-location">Join attributes by location</a>.</p>
 </section>
-</section>
-<section id="data-sources">
-<h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this heading">#</a></h2>
-<p>HOT Export tool for road infrastructure
-Natural Earth Data for country and district boundaries (Admin 1 - States, Provinces) and then Download states and provinces
-HDX for health sites
-HDX for flood water extent <a class="reference external" href="https://data.humdata.org/dataset/satellite-detected-water-extents-between-11-and-15-august-2023-over-south-sudan">https://data.humdata.org/dataset/satellite-detected-water-extents-between-11-and-15-august-2023-over-south-sudan</a>
-HDX for admin boundaries <a class="reference external" href="https://data.humdata.org/dataset/cod-ab-ssd">https://data.humdata.org/dataset/cod-ab-ssd</a></p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -864,7 +855,6 @@ HDX for admin boundaries <a class="reference external" href="https://data.humdat
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-calculate-sum-of-affected-population-and-flooded-area-for-the-area-of-interest">Exercise: Calculate sum of affected population and flooded area for the Area of interest</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
 </ul>
   </nav></div>
 
