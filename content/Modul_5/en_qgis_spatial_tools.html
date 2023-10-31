@@ -472,7 +472,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dissolve">Dissolve</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-joins">Spatial joins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-joins">Spatial joins</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-calculate-sum-of-affected-population-and-flooded-area-for-the-area-of-interest">Exercise: Calculate sum of affected population and flooded area for the Area of interest</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
 </ul>
             </nav>
@@ -619,6 +622,7 @@ Clip vector by mask layer</label><div class="sd-tab-content docutils">
 <li><p>Leave the other options as defaults and click Run</p></li>
 </ul>
 </li>
+<li><p>Now you have a rough overview over the coverage with health sites for the district of Khartoum</p></li>
 </ol>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -645,13 +649,7 @@ Solution: Create 10km buffer around health centres<div class="sd-summary-down do
 <section id="spatial-joins">
 <h2>Spatial joins<a class="headerlink" href="#spatial-joins" title="Permalink to this heading">#</a></h2>
 <p>Spatial joins in QGIS enhance the attributes of the input layer by adding additional information from the join layer, relying on their <strong>spatial relationship</strong>. This process enriches your data by incorporating relevant details from one layer into another based on their geographical associations.</p>
-<figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/en_select_by_location.png"><img alt="../../_images/en_select_by_location.png" src="../../_images/en_select_by_location.png" style="height: 300px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Looking for spatial relations between layers <br /> (Source: <a class="reference external" href="https://docs.qgis.org/3.28/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html?highlight=join%20attributes%20location">QGIS Documentation</a>, Version 3.28)</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Various types of spatial relations exist between the source feature and the target feature, enabling their potential linkage. The subsequent list outlines these distinct options and provides descriptions, all oriented around the upper figure for clarity.</p>
+<p>Various types of spatial relations exist between the source feature and the target feature, enabling their potential linkage. The subsequent list outlines these distinct options and provides descriptions, all oriented around the lower figure for clarity.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
@@ -694,6 +692,12 @@ Cross</label><div class="sd-tab-content docutils">
 <p>Returns 1 (true) if the supplied geometries have some, but not all, interior points in common and the actual crossing is of a lower dimension than the highest supplied geometry. For example, a line crossing a polygon will cross as a line (true). Two lines crossing will cross as a point (true). Two polygons cross as a polygon (false). In the picture, no circles will be returned.</p>
 </div>
 </div>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/en_select_by_location.png"><img alt="../../_images/en_select_by_location.png" src="../../_images/en_select_by_location.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Looking for spatial relations between layers <br /> (Source: <a class="reference external" href="https://docs.qgis.org/3.28/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html?highlight=join%20attributes%20location">QGIS Documentation</a>, Version 3.28)</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>QGIS provides a range of tools that allow users to delve into spatial relationships and leverage them for enhancing their datasets.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-10" name="sd-tab-set-2" type="radio">
@@ -733,13 +737,47 @@ Join attributes by nearest</label><div class="sd-tab-content docutils">
 </figure>
 </div>
 </div>
-<p>Further helpful information on the processes of spatial joins can be found on the QGIS documentation under <a class="reference external" href="https://docs.qgis.org/3.28/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html?highlight=join%20attributes%20location#join-attributes-by-location">Join attributes by location</a>.</p>
+<p>In the aftermath of flooding events, data on the affected population and the extent of flooding is crucial. This information can be refined from a nationwide dataset to provide specific numbers for individual districts or states. This can aid in identifying the areas most heavily impacted, leading to more efficient relief operations. In the upcoming exercise, we will calculate the total flooding extent in square kilometers and the affected population for the state of Unity State, South Sudan. To accomplish this, we will utilize the <strong>Join attributes by location (summary)</strong> tool.</p>
+<section id="exercise-calculate-sum-of-affected-population-and-flooded-area-for-the-area-of-interest">
+<h3>Exercise: Calculate sum of affected population and flooded area for the Area of interest<a class="headerlink" href="#exercise-calculate-sum-of-affected-population-and-flooded-area-for-the-area-of-interest" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Load the necessary data for this exercise into your QGIS. Both datasets were downloaded from HDX:</p>
+<ul class="simple">
+<li><p><strong>State_Unity_South_Sudan.geojson</strong></p></li>
+<li><p><strong>VIIRS_20230811_20230815_MaximumFloodWaterExtent_SouthSudan.geojson</strong></p></li>
+</ul>
+</li>
+<li><p>Locate the tool named <strong>Join attribute by location (summary)</strong></p>
+<ul class="simple">
+<li><p>Choose <strong>state boundaries</strong> as the target layer for joining features</p></li>
+<li><p>Set <strong>intersect</strong> as the spatial relationship</p></li>
+<li><p>Select  <strong>flood extent layer</strong> as the comparison layer</p></li>
+<li><p>Specify the fields to be summarized as <strong>Area_km2</strong> and <strong>Pop</strong></p></li>
+<li><p>Choose <strong>sum</strong> as the type of summaries to be calculated</p></li>
+<li><p>Click Run to start the process</p></li>
+</ul>
+</li>
+<li><p>Once completed, you will have access to information on the <strong>total affected population</strong> and <strong>flooded areas</strong> for the entire state of Unity.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution: Calculate sum of affected population and flooded area for the Area of interest<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_exercise_spatial_join.mp4"></video></p>
+</div>
+</details><p>You can find further information about spatial joins by referring to the QGIS documentation, specifically in the section <a class="reference external" href="https://docs.qgis.org/3.28/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html?highlight=join%20attributes%20location#join-attributes-by-location">Join attributes by location</a>.</p>
+</section>
 </section>
 <section id="data-sources">
 <h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this heading">#</a></h2>
 <p>HOT Export tool for road infrastructure
 Natural Earth Data for country and district boundaries (Admin 1 - States, Provinces) and then Download states and provinces
-HDX for health sites</p>
+HDX for health sites
+HDX for flood water extent <a class="reference external" href="https://data.humdata.org/dataset/satellite-detected-water-extents-between-11-and-15-august-2023-over-south-sudan">https://data.humdata.org/dataset/satellite-detected-water-extents-between-11-and-15-august-2023-over-south-sudan</a>
+HDX for admin boundaries <a class="reference external" href="https://data.humdata.org/dataset/cod-ab-ssd">https://data.humdata.org/dataset/cod-ab-ssd</a></p>
 </section>
 </section>
 
@@ -816,7 +854,10 @@ HDX for health sites</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dissolve">Dissolve</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-joins">Spatial joins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-joins">Spatial joins</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-calculate-sum-of-affected-population-and-flooded-area-for-the-area-of-interest">Exercise: Calculate sum of affected population and flooded area for the Area of interest</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
 </ul>
   </nav></div>
