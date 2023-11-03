@@ -254,6 +254,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_2.html">Print layout</a></li>
 
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
@@ -486,6 +487,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-colour-gradient-to-raster-data">Assigning a colour gradient to raster data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inverting-the-colour-ramp">Inverting the colour ramp</a></li>
 </ul>
 </li>
 </ul>
@@ -577,8 +579,8 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 </figure>
 <p>For each layer in QGIS, there is a styling panel where you can change the symbology, colour and label for the features in that layer. There are two ways to open the layer styling options in QGIS:</p>
 <ol class="arabic simple">
-<li><p>Right click on the layer you wish to style and select properties</p></li>
-<li><p>Open the layer styling panel by enabling it under “View”&gt;”Panels”&gt;”Layer Styling”</p></li>
+<li><p>Right click on the layer you wish to style and select <code class="docutils literal notranslate"><span class="pre">properties</span></code>. A new window will open up with a vertical tab section on the left. Navigate to the <code class="docutils literal notranslate"><span class="pre">symbology</span></code> tab.</p></li>
+<li><p>Open the layer styling panel by enabling it under <code class="docutils literal notranslate"><span class="pre">View</span></code>&gt;<code class="docutils literal notranslate"><span class="pre">Panels</span></code>&gt;<code class="docutils literal notranslate"><span class="pre">Styling</span> <span class="pre">Panel</span></code>. Usually, the</p></li>
 </ol>
 <p>On the left of the styling panel you can choose the different tabs to access different styling options.</p>
 <p>In the styling panel you can change the styling for all features of a layer, set up categories for different symbols, create labels, and create colour ramps to differentiate between features with variable values.</p>
@@ -655,10 +657,10 @@ Exercise: Only display the outlines of polygons<div class="sd-summary-down docut
 <p class="sd-card-text">In this example, wewant to change the symbology of a single layer so that <strong>only the outlines of the polygons are visible</strong>.</p>
 <p class="sd-card-text">To change the symbology of a single layer:</p>
 <ol class="arabic simple">
-<li><p class="sd-card-text">Open the styling panel and navigate to the symbology tab. By default, the symbology will be set to <strong>Single Symbol</strong>. This means that the same colours and contours will be applied to all the features in that layer.</p></li>
-<li><p class="sd-card-text">Click on <strong>“Simple Fill”</strong></p></li>
-<li><p class="sd-card-text">Click on the arrow to the right of <strong>Fill Colour</strong></p></li>
-<li><p class="sd-card-text">Check the <strong>“Transparent Fill”</strong> option</p></li>
+<li><p class="sd-card-text">Open the <code class="docutils literal notranslate"><span class="pre">Styling</span> <span class="pre">panel</span></code> and navigate to the symbology tab. By default, the symbology will be set to <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">Symbol</span></code>. This means that the same colours and contours will be applied to all the features in that layer.</p></li>
+<li><p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Simple</span> <span class="pre">Fill</span></code></p></li>
+<li><p class="sd-card-text">Click on the arrow to the right of <code class="docutils literal notranslate"><span class="pre">Fill</span> <span class="pre">Colour</span></code></p></li>
+<li><p class="sd-card-text">Check the <code class="docutils literal notranslate"><span class="pre">Transparent</span> <span class="pre">Fill</span></code> option</p></li>
 </ol>
 <figure class="align-default" id="layer-styling-transparent">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_vector_layer_styling_transparent.png"><img alt="../../_images/en_30.30.2_vector_layer_styling_transparent.png" src="../../_images/en_30.30.2_vector_layer_styling_transparent.png" style="width: 500px;" /></a>
@@ -683,8 +685,8 @@ Change the styling for multiple overlayed layers<div class="sd-summary-down docu
 </figcaption>
 </figure>
 <ol class="arabic simple">
-<li><p class="sd-card-text">Add the “Adm0”, “Adm1” and “Adm2” shapefiles to your Session 2 project.</p></li>
-<li><p class="sd-card-text">Order the layers so they are all visible: Put the Adm2 at the bottom, then the Adm1 then Adm0. At first, this might look weird because Adm0 will cover everything.</p></li>
+<li><p class="sd-card-text">Add the <code class="docutils literal notranslate"><span class="pre">Adm0</span></code>, <code class="docutils literal notranslate"><span class="pre">Adm1</span></code> and <code class="docutils literal notranslate"><span class="pre">Adm2</span></code> shapefiles to your Session 2 project.</p></li>
+<li><p class="sd-card-text">Order the layers so they are all visible: Put the <code class="docutils literal notranslate"><span class="pre">Adm2</span></code> layer at the bottom, then the <code class="docutils literal notranslate"><span class="pre">Adm1</span></code> then <code class="docutils literal notranslate"><span class="pre">Adm0</span></code>. At first, this might look weird because <code class="docutils literal notranslate"><span class="pre">Adm0</span></code> will cover everything.</p></li>
 <li><p class="sd-card-text">Change the symbology of the Adm0 layer by opening the stlying panel and navigating to the Symbology tab.</p></li>
 </ol>
 <figure class="align-left" id="change-layer-style-2">
@@ -694,9 +696,9 @@ Change the styling for multiple overlayed layers<div class="sd-summary-down docu
 </figcaption>
 </figure>
 <ol class="arabic simple" start="4">
-<li><p class="sd-card-text">Click on “<strong>Simple Fill</strong>” to open the style options.</p></li>
-<li><p class="sd-card-text">Expand the “<strong>Fill Color</strong>” menu and check the <strong>Transparent Fill</strong> option. This will make only the boundaries visible, so <strong>we will be able to see the layer under this one</strong>.</p></li>
-<li><p class="sd-card-text">Choose a <strong>Stroke color</strong>, and make the <strong>Stroke width</strong> 0.66 Millimeters.</p></li>
+<li><p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Simple</span> <span class="pre">Fill</span></code> to open the style options.</p></li>
+<li><p class="sd-card-text">Expand the <code class="docutils literal notranslate"><span class="pre">Fill</span> <span class="pre">Colour</span></code> menu and check the <code class="docutils literal notranslate"><span class="pre">Transparent</span> <span class="pre">Fill</span></code> option. This will make only the boundaries visible, so <strong>we will be able to see the layer under this one</strong>.</p></li>
+<li><p class="sd-card-text">Choose a <code class="docutils literal notranslate"><span class="pre">Stroke</span> <span class="pre">Colour</span></code>, and make the <code class="docutils literal notranslate"><span class="pre">Stroke</span> <span class="pre">Width</span></code> 0.66 Millimeters.</p></li>
 <li><p class="sd-card-text">Click OK</p></li>
 <li><p class="sd-card-text"><strong>Repeat the same process</strong> for the Adm1 layer, using the same colour as for Adm0 (it will be in “Recent colors) and leave the stroke width at 0.26.</p></li>
 <li><p class="sd-card-text">Now we can see the boundaries of the country and its states, and behind that we cann see the districs (Adm2).</p></li>
@@ -704,8 +706,8 @@ Change the styling for multiple overlayed layers<div class="sd-summary-down docu
 </ol>
 <p class="sd-card-text"><br/><br/></p>
 <ol class="arabic simple" start="11">
-<li><p class="sd-card-text">Choose a <strong>Fill Color</strong></p></li>
-<li><p class="sd-card-text">Use the same <strong>Stroke color</strong> as for Adm0 and Adm1, but make the width 0.1 Millimeters and the Stroke Style a <strong>Dash Line</strong></p></li>
+<li><p class="sd-card-text">Choose a <code class="docutils literal notranslate"><span class="pre">Fill</span> <span class="pre">Color</span></code></p></li>
+<li><p class="sd-card-text">Use the same Stroke Colour` as for Adm0 and Adm1, but make the width 0.1 Millimeters and the Stroke Style a <strong>Dash Line</strong></p></li>
 <li><p class="sd-card-text">Click OK and look at yout map: hopefully it’s starting to look nicer!</p></li>
 </ol>
 <figure class="align-default" id="change-layer-style-3">
@@ -728,16 +730,15 @@ Use different styles in a single layer<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<div class="highlight-{note}For notranslate"><div class="highlight"><pre><span></span>
-&gt;Check if the others have the same issue with importing the .csv file (excel export as csv delimits with &quot;;&quot; instead of &quot;,&quot;. QGIS expects &quot;,&quot;, if you replace all the &quot;;&quot; with &quot;,&quot; the coordinates do not work any longer because the degree are delimited with a &quot;,&quot; as well. You can fix it in VSC)
-</pre></div>
-</div>
+<blockquote>
+<div><p class="sd-card-text">For this exercise, you must have convertet the excel-spreadsheet “ACLED_Nigeria_2022-2023” into a .csv-file. Read how you can do this <span class="xref myst">here</span>.  Check if the others have the same issue with importing the .csv file (excel export as csv delimits with “;” instead of “,”. QGIS expects “,”, if you replace all the “;” with “,” the coordinates do not work any longer because the degree are delimited with a “,” as well. You can fix it in VSC)</p>
+</div></blockquote>
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_rule_based_styling
 .mp4"></video></p>
 <p class="sd-card-text">We can use symbology to <strong>show the difference between features</strong> in the same layer. For example, it could be different types of buildings, quantities of Covid cases by district, or types of roads. We can choose a specific attribute of a dataset to assign different colors, outlines, or sizes to features:</p>
 <ol class="arabic simple">
 <li><p class="sd-card-text">From your shapefile folder, <strong>drag te ACLED security incidents shapefile onto your map</strong></p></li>
-<li><p class="sd-card-text">Open the layer <strong>Symbology</strong> and choose <strong>Categorized</strong> instead of Single Symbol.</p></li>
+<li><p class="sd-card-text">Open the <code class="docutils literal notranslate"><span class="pre">Symbology</span> <span class="pre">tab</span></code> for that layer and choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code> instead of Single Symbol.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -750,13 +751,13 @@ Use different styles in a single layer<div class="sd-summary-down docutils">
 </figcaption>
 </figure>
 <ol class="arabic simple" start="3">
-<li><p class="sd-card-text">Now we need to <strong>choose which attributes we want to display through the symbology</strong>. In this case, it could be the number of casualtiees, or the actor who perpetrated the act. Let’s categorize the features by <strong>event_type</strong></p></li>
-<li><p class="sd-card-text">Click on <strong>“Classify” to list all the unique values contained in the event_type field</strong> (i.e. all the possible types of security incidents recorded in our table)</p></li>
+<li><p class="sd-card-text">Now we need to <strong>choose which attributes we want to display through the symbology</strong>. In this case, it could be the number of casualtiees, or the actor who perpetrated the act. Let’s categorize the features by <code class="docutils literal notranslate"><span class="pre">event_type</span></code></p></li>
+<li><p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code> to <strong>list all the unique values contained</strong> in the <code class="docutils literal notranslate"><span class="pre">event_type</span></code> field (i.e. all the possible types of security incidents recorded in our table)</p></li>
 <li><p class="sd-card-text">Now we can <strong>change the style of each single value</strong></p></li>
-<li><p class="sd-card-text">Double click on Explosions</p></li>
+<li><p class="sd-card-text">Double click on the value <code class="docutils literal notranslate"><span class="pre">Explosions</span></code></p></li>
 <li><p class="sd-card-text">At the bottom of the <strong>Symbol selector</strong> window, choose a symbol to make Explosion points stand our</p></li>
-<li><p class="sd-card-text">Click on OK, then Apply to preview what the layer will look like</p></li>
-<li><p class="sd-card-text">Click OK again</p></li>
+<li><p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">OK</span></code>, then Apply to preview what the layer will look like</p></li>
+<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> again</p></li>
 </ol>
 <figure class="align-default" id="categorized-layer-symbology-2">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_categorized_layer_symbology_2.png"><img alt="../../_images/en_30.30.2_categorized_layer_symbology_2.png" src="../../_images/en_30.30.2_categorized_layer_symbology_2.png" style="width: 500px;" /></a>
@@ -789,21 +790,21 @@ Style data based on variable ranges (graduated styling)<div class="sd-summary-do
 <li><p class="sd-card-text">Download the NGA_Adm1_Pop shapefile [link!!] and save it in your shapefile folder</p></li>
 <li><p class="sd-card-text">In QGIS, turn off the Adm1 and Adm2 layer, leaving only Adm0</p></li>
 <li><p class="sd-card-text">Drag the shapefile NGA_Adm1_Pop into your map</p></li>
-<li><p class="sd-card-text">Open its Symbology options and choose “<strong>Graduated</strong>”</p></li>
-<li><p class="sd-card-text">Select the value you want to use to assign colours, in this case, it will be “<strong>population</strong>”</p></li>
+<li><p class="sd-card-text">Open its <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> options and choose <code class="docutils literal notranslate"><span class="pre">Graduated</span></code></p></li>
+<li><p class="sd-card-text"><strong>Select the value you want to use to assign colours</strong>, in this case, it will be <code class="docutils literal notranslate"><span class="pre">Population</span></code></p></li>
 </ol>
 <figure class="align-default" id="symbology-of-variable-ranges">
-<a class="reference internal image-reference" href="fig/en_30.30.2_symbology_variable_ranges_1.png"><img alt="fig/en_30.30.2_symbology_variable_ranges_1.png" src="fig/en_30.30.2_symbology_variable_ranges_1.png" style="width: 550px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges.png" src="../../_images/en_30.30.2_symbology_variable_ranges.png" style="width: 550px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 18 </span><span class="caption-text">With variable ranges, select <strong>Graduated</strong> symbology and choose the attribute with continuous values</span><a class="headerlink" href="#symbology-of-variable-ranges" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="6">
-<li><p class="sd-card-text">Click on <strong>Classify</strong> to list all valued, divided in classes</p></li>
+<li><p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code> to <strong>list all values divided in classes</strong></p></li>
 <li><p class="sd-card-text">Choose <strong>how many classes</strong> you want the data to be divided into ‒ let’s say 4</p></li>
-<li><p class="sd-card-text">By default, the colour ramp will be red. However, red is not the rivht colour to use for population count, as it is generally used to communicate negative elements, such as food insecurity or cholera cases</p></li>
-<li><p class="sd-card-text">Click on the arrow next to <strong>Color Ramp</strong> to choose another combination of colours - let’s say a color ramp from white to blue</p></li>
-<li><p class="sd-card-text">Click Apply to preview the look of your layer, then OK</p></li>
+<li><p class="sd-card-text">By default, the colour ramp will be red. However, red is not the right colour to use for population count, as it is generally used to communicate negative elements, such as food insecurity or cholera cases</p></li>
+<li><p class="sd-card-text">Click on <strong>the arrow next to the colour ramp</strong> to choose another combination of colours - let’s say a color ramp from white to blue</p></li>
+<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to preview the look of your layer, then <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
 </ol>
 <figure class="align-default" id="symbology-of-variable-ranges-2">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_symbology_variable_ranges_2.png"><img alt="../../_images/en_30.30.2_symbology_variable_ranges_2.png" src="../../_images/en_30.30.2_symbology_variable_ranges_2.png" style="width: 500px;" /></a>
@@ -839,12 +840,12 @@ Adding labels to a layer<div class="sd-summary-down docutils">
 <div><p class="sd-card-text">This is exercise 2 in the PPP, also review</p>
 </div></blockquote>
 <ol class="arabic simple">
-<li><p class="sd-card-text">In the styling panel, click on the “Labels” tab.</p></li>
-<li><p class="sd-card-text">Select <em>Single Labels</em>.</p></li>
+<li><p class="sd-card-text">In the styling panel, click on the <code class="docutils literal notranslate"><span class="pre">Labels</span></code> tab underneath the Symbology tab.</p></li>
+<li><p class="sd-card-text">Select <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">labels</span></code>.</p></li>
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">&quot;Value&quot;</span></code> is where you choose the attribute that will be displayed as a label. For example <code class="docutils literal notranslate"><span class="pre">*ADM1_EN*</span></code> will display the English names of Nigerian states for each feature in the data set.</p></li>
-<li><p class="sd-card-text">Let’s change the font: make it Arial, bold, dark grey, 8 pt</p></li>
-<li><p class="sd-card-text">Let’s add a white buffer around the label.</p></li>
-<li><p class="sd-card-text">Click Apply and Ok.</p></li>
+<li><p class="sd-card-text">Let’s <strong>change the font</strong>: Open the Font dropdown menu and select Arial. Make the text <code class="docutils literal notranslate"><span class="pre">Bold</span></code> in the Style dropdown menu. Change the colour by clicking on <code class="docutils literal notranslate"><span class="pre">Colour</span></code>, and change the <code class="docutils literal notranslate"><span class="pre">Size</span></code> to 8 pt</p></li>
+<li><p class="sd-card-text">Let’s <strong>add a white buffer</strong> around the label. In the <code class="docutils literal notranslate"><span class="pre">Labels</span></code> tab, you will find a list with different options to style the labels. Right now, we are in the <code class="docutils literal notranslate"><span class="pre">Text</span></code> menu. Select <code class="docutils literal notranslate"><span class="pre">Buffer</span></code> and check the <code class="docutils literal notranslate"><span class="pre">Draw</span> <span class="pre">text</span> <span class="pre">buffer</span></code> option. This will make the labels stand out more on dark or crowded maps.</p></li>
+<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
 </ol>
 <figure class="align-default" id="setting-up-labels">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_setting_up_labels.png"><img alt="../../_images/en_30.30.2_setting_up_labels.png" src="../../_images/en_30.30.2_setting_up_labels.png" style="width: 500px;" /></a>
@@ -864,10 +865,10 @@ Adding different label styles to the same layer<div class="sd-summary-down docut
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Sometimes you will need to create two different label styles for different features of a single layer. In this example, we will create one label style for the <em>Country Capital</em>, and another one for the <em>State Capitals</em></p>
 <ol class="arabic simple">
-<li><p class="sd-card-text">Open the styling panel for the <code class="docutils literal notranslate"><span class="pre">&quot;NGA_settlements_nga&quot;</span></code> layer and click on the Labels tab</p></li>
-<li><p class="sd-card-text">Select <strong>Rule-based Labeling</strong></p></li>
-<li><p class="sd-card-text">Click on the <strong>Add Rule</strong> button at the bottom (the “+”-sign) and create the first rule</p></li>
-<li><p class="sd-card-text">For <strong>Value</strong>, select <strong>“NAME”</strong> (so that the labels will show the name of each city), then click on the “ε”-button next to the “Filter” bar.</p></li>
+<li><p class="sd-card-text">Open the styling panel for the <code class="docutils literal notranslate"><span class="pre">&quot;NGA_settlements_nga&quot;</span></code> layer and click on the <code class="docutils literal notranslate"><span class="pre">Labels</span></code> tab</p></li>
+<li><p class="sd-card-text">Select <code class="docutils literal notranslate"><span class="pre">Rule-based</span> <span class="pre">Labelling</span></code></p></li>
+<li><p class="sd-card-text">Click on the <strong>Add Rule</strong> button at the bottom (the “+”-sign) and <strong>create the first rule</strong></p></li>
+<li><p class="sd-card-text">For <strong>Value</strong>, select <code class="docutils literal notranslate"><span class="pre">&quot;NAME&quot;</span></code> (so that the labels will show the name of each city), then click on the <code class="docutils literal notranslate"><span class="pre">&quot;ε&quot;-button</span></code> next to the <strong>Filter</strong> bar.</p></li>
 </ol>
 <figure class="align-default" id="adding-rule-based-labels">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_rule-based_labels.png"><img alt="../../_images/en_30.30.2_adding_rule-based_labels.png" src="../../_images/en_30.30.2_adding_rule-based_labels.png" style="width: 500px;" /></a>
@@ -876,12 +877,12 @@ Adding different label styles to the same layer<div class="sd-summary-down docut
 </figcaption>
 </figure>
 <ol class="arabic simple" start="5">
-<li><p class="sd-card-text">In the central column, expand <strong>Fields and Values</strong> to display a list of all the fields in your layer and double-click on <strong>Class</strong> to add it to the expression frame on the left.</p></li>
-<li><p class="sd-card-text">In the right column, click on <strong>All unique</strong> to list all unique values contained in the Class field. In this dataset, <code class="docutils literal notranslate"><span class="pre">&quot;CLASS&quot;=1</span></code> designates the capital city, whereas <code class="docutils literal notranslate"><span class="pre">&quot;CLASS&quot;=2</span></code> designate other major cities.</p></li>
-<li><p class="sd-card-text">Click on the <code class="docutils literal notranslate"><span class="pre">&quot;=&quot;</span></code> operator, then doube-click on the <em>value 1</em> (which represent the Country capital in this case). Click OK.</p></li>
-<li><p class="sd-card-text">Scroll down to <em>change the label style</em>. Make it Arial, bold, black, 12pt and add a white buffer.</p></li>
-<li><p class="sd-card-text">Repeat steps 4 to 9, but select <em>Value 2</em> (State capitals) and make the label black, bold, 10pt, no buffer.</p></li>
-<li><p class="sd-card-text">Click <strong>Apply</strong>, the OK.</p></li>
+<li><p class="sd-card-text">In the central column, expand <code class="docutils literal notranslate"><span class="pre">Fields</span> <span class="pre">and</span> <span class="pre">Values</span></code> to display a list of all the fields in your layer and double-click on <code class="docutils literal notranslate"><span class="pre">&quot;CLASS&quot;</span></code> to <strong>add it to the expression frame</strong> on the left.</p></li>
+<li><p class="sd-card-text">In the right column, click on <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">unique</span></code> to list all unique values contained in the Class field. In this dataset, <code class="docutils literal notranslate"><span class="pre">&quot;CLASS&quot;=1</span></code> designates the capital city, whereas <code class="docutils literal notranslate"><span class="pre">&quot;CLASS&quot;=2</span></code> designate other major cities. Make sure to familiarise yourself with the dataset at your disposal, so you know what the different attributes represent.</p></li>
+<li><p class="sd-card-text">Click on the <code class="docutils literal notranslate"><span class="pre">&quot;=&quot;</span></code> operator, then doube-click on the <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">1</span></code> (which represent the Country capital in this case). Click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
+<li><p class="sd-card-text">Scroll down to <strong>change the label style</strong>. Make it Arial, bold, black, 12pt and add a white buffer.</p></li>
+<li><p class="sd-card-text"><strong>Repeat steps 4 to 9</strong>, but select <code class="docutils literal notranslate"><span class="pre">Value</span> <span class="pre">2</span></code> (State capitals) and make the label black, bold, 10pt, no buffer.</p></li>
+<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code>, the <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
 </ol>
 <figure class="align-default" id="rule-based-labels-expression-builder">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png"><img alt="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" src="../../_images/en_30.30.2_adding_rule-based_labels_expression_builder.png" style="width: 500px;" /></a>
@@ -915,9 +916,9 @@ Move labels independently<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Sometimes the placement of labels is not ideal and can obstruct the readability of the map. In this case, you can move labels independently.</p>
 <ol class="arabic simple">
-<li><p class="sd-card-text">On the label toolbar, there is an option to move labels independently. Click on it to activate it. (Note: In some cases, the label toolbar might not be visible. In this case, turn it on by navigating to “View”&gt;”Toolbars”&gt;activate the Label toolbar)</p></li>
-<li><p class="sd-card-text">Click on the label you want to move.</p></li>
-<li><p class="sd-card-text">You will be prompted to select the primary key for joining with internal data storage. You do not need to change it (you can select the ID field of the dataset) and click OK.</p></li>
+<li><p class="sd-card-text">On the <code class="docutils literal notranslate"><span class="pre">label</span> <span class="pre">toolbar</span></code>, there is an option to <strong>move labels independently</strong>. Click on it to activate the tool. (Note: In some cases, the label toolbar might not be visible. In this case, turn it on by navigating to <code class="docutils literal notranslate"><span class="pre">View</span></code>&gt;<code class="docutils literal notranslate"><span class="pre">Toolbars</span></code>&gt;activate the Label toolbar)</p></li>
+<li><p class="sd-card-text">Click on the <strong>label you want to move</strong>.</p></li>
+<li><p class="sd-card-text">You will be prompted to select the primary key for joining with internal data storage. <strong>You do not need to change it</strong> (you can select the ID field of the dataset) and click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
 <li><p class="sd-card-text">Click on the label again, now you can move it freely.</p></li>
 </ol>
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_move_labels_independently
@@ -944,11 +945,11 @@ Add labels to roads<div class="sd-summary-down docutils">
 <h3>Assigning a colour gradient to raster data<a class="headerlink" href="#assigning-a-colour-gradient-to-raster-data" title="Permalink to this heading">#</a></h3>
 <p>To assign a colour gradient for raster data, you need to:</p>
 <ol class="arabic simple">
-<li><p>Open the styling panel for the raster layer</p></li>
-<li><p>Navigate to the Symbology tab</p></li>
-<li><p>By default, the colour scheme is set to Singleband gray (if you only have one colour band in the data set). Click on <strong>Singleband gray</strong> and switch to <strong>Singleband pseudocolour</strong></p></li>
-<li><p>Click on the arrow to the right of the colour ramp. Here you can choose a premade colour ramp</p></li>
-<li><p>You can modify the colour ramp by clicking on the colour ramp itself</p></li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">styling</span> <span class="pre">panel</span></code> for the raster layer</p></li>
+<li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">Symbology</span> <span class="pre">tab</span></code></p></li>
+<li><p>By default, the colour scheme is set to Singleband gray (if you only have one colour band in the data set). Click on <code class="docutils literal notranslate"><span class="pre">Singleband</span> <span class="pre">Gray</span></code> and switch to <code class="docutils literal notranslate"><span class="pre">Singleband</span> <span class="pre">pseudocolour</span></code></p></li>
+<li><p>Click on <strong>the arrow to the right of the colour ramp</strong>. Here you can choose a premade colour ramp</p></li>
+<li><p>You can modify the colour ramp by <strong>clicking on the colour ramp</strong>.</p></li>
 </ol>
 <figure class="align-default" id="raster-data-colour-gradient">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_raster_data_colour_gradient.png"><img alt="../../_images/en_30.30.2_raster_data_colour_gradient.png" src="../../_images/en_30.30.2_raster_data_colour_gradient.png" style="width: 600px;" /></a>
@@ -957,15 +958,37 @@ Add labels to roads<div class="sd-summary-down docutils">
 </figcaption>
 </figure>
 <p>In the colour ramp selector, you can adjust each colour step. On the bottom, you can see a plot for the Hue, <strong>Saturation</strong>, <strong>Lightness</strong> and <strong>Opacity</strong>. Especially latter three are useful to see how your colour ramp will translate. Gradients from light to dark are easier to read: Check if the plot for the <strong>Lightness</strong> has a more or less linear plot.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Styling an elevation model<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Elevation data sets are frequently used to communicate the terrain on a map. By default, an elevation model will be displayed with a gray colour ramp. However, if you don’t need the to know the elevation at certain points, you can choose to display the <strong>hillshade</strong> of the terrain. Hillshading will simulate the shadow of the terrain as if it would be exposed to a lightsource. In this example, we will use the elevation raster data (.tiff) of Algeria from the Humanitarian Data Exchange platform (<a class="reference external" href="http://humdata.org">humdata.org</a>) To achieve this,</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Open the <code class="docutils literal notranslate"><span class="pre">symbology</span></code> tab</p></li>
+<li><p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Render</span> <span class="pre">type</span></code> and select <code class="docutils literal notranslate"><span class="pre">Hillshade</span></code>. You will have an option to select the direction of the light. Conventionally, the lightsource is positioned in the North-West, so we can keep the default settings. In some cases with rough terrain, it can be useful to make the Hillshade <strong>Multidirectional</strong>.</p></li>
+<li><p class="sd-card-text">The Hillshade will be very dark and cover most of the map. We need to make it lighter…</p></li>
+</ol>
 <blockquote>
-<div><p>Examples Video! and how to invert ramp</p>
+<div><p class="sd-card-text">Example Video and continue explanation, maybe an algorithm would be better?</p>
 </div></blockquote>
+</div>
+</details></section>
+<section id="inverting-the-colour-ramp">
+<h3>Inverting the colour ramp<a class="headerlink" href="#inverting-the-colour-ramp" title="Permalink to this heading">#</a></h3>
+<p>In some cases, the colour ramp should be inverted to make it easier to read the map:</p>
+<ol class="arabic simple">
+<li><p>Click on the <strong>arrow next to the Colour ramp</strong> to open the dropdown menu.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Invert</span> <span class="pre">Colour</span> <span class="pre">Ramp</span></code>.</p></li>
+</ol>
 </section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exporting-and-importing-styles">
 <h1>Exporting and Importing Styles<a class="headerlink" href="#exporting-and-importing-styles" title="Permalink to this heading">#</a></h1>
-<p>As we have already learned, the layers in QGIS are saved separately from the settings and styles of a QGIS Project. Therefore, it can be useful to prepare template styles that you can load into your QGIS project or send to a colleage.</p>
+<p>As we have already learned, the layers in QGIS are saved separately from the settings and styles of a QGIS Project. Therefore, it can be useful to prepare template styles that you can load into your QGIS project or send to a colleague.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="examples-for-map-design">
 <h1>Examples for Map design<a class="headerlink" href="#examples-for-map-design" title="Permalink to this heading">#</a></h1>
@@ -1054,6 +1077,7 @@ Add labels to roads<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-raster-data">Symbology for raster data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assigning-a-colour-gradient-to-raster-data">Assigning a colour gradient to raster data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inverting-the-colour-ramp">Inverting the colour ramp</a></li>
 </ul>
 </li>
 </ul>
