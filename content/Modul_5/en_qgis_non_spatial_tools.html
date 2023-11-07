@@ -485,6 +485,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sql">SQL</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-builder">Query Builder</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-joins">Non-spatial joins</a></li>
@@ -520,7 +521,7 @@ document.write(`
 <p>The information within a vector layer can be accessed through its attribute table, and it can be enhanced by introducing new fields to this table. These additional fields may be derived from calculations, as exemplified in the following case where population density is computed to provide deeper insights into spatial population distribution.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>Depending on the information that will be added to the created attribute field, the correct data type must be selected.</p>
+<p>The selection of the appropriate data type should align with the information being added to the new attribute field. Please keep this in mind while watching the example video.</p>
 </div>
 <p><strong>Possible data types:</strong></p>
 <p>The most common ones are:</p>
@@ -536,7 +537,7 @@ document.write(`
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Add a field for population density; the data type should be Decimal number (real)<div class="sd-summary-down docutils">
+Example: Add a field for population density<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -549,7 +550,7 @@ Add a field for population density; the data type should be Decimal number (real
 <p>It is also possible to <strong>delete fields</strong> from the attribute table. A commonly used practice is to <strong>remove all unused or unnecessary fields</strong> from a layer before starting to work on it. This <strong>makes the dataset much more organized</strong>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Delete all unused/unnecessary fields from the vector layer<div class="sd-summary-down docutils">
+Example: Delete all unused/unnecessary fields from a vector layer<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -565,7 +566,7 @@ Delete all unused/unnecessary fields from the vector layer<div class="sd-summary
 <p>It is necessary to <strong>check if the data type of the field</strong> (new or updated) <strong>and your calculation match</strong>. For example: if you are calculating a ratio (e.g. density), the field should not be of type integer but rather of type decimal number.</p>
 </div>
 <p>An example could be to calculate the population density based on the already existing fields Population and Area.</p>
-<p>A very important tool for such calculations is the <strong>Field Calculator</strong>. It allows you to <strong>perform calculations based on existing attribute values or defined functions</strong>, for example, to calculate the length or area of a geometry feature. The results of these calculations can be written into a new field or update an existing field.</p>
+<p>A very important tool for such calculations is the <strong>Field Calculator</strong>. It allows you to <strong>perform calculations based on existing attribute values or defined functions</strong>, for example, to calculate the length or area of a geometry feature or in the given example, could be used to calculate the population density based on the already existing fields Population and Area. The results of these calculations can be written into a new field or update an existing field.</p>
 <figure class="align-default" id="field-calculator">
 <a class="reference internal image-reference" href="../../_images/en_field_calculator_red_boxes.png"><img alt="../../_images/en_field_calculator_red_boxes.png" src="../../_images/en_field_calculator_red_boxes.png" style="height: 350px;" /></a>
 <figcaption>
@@ -597,7 +598,7 @@ Delete all unused/unnecessary fields from the vector layer<div class="sd-summary
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Calculate the population density based on the already existing fields Population and Area<div class="sd-summary-down docutils">
+Example: Calculate the population density<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -607,10 +608,10 @@ Calculate the population density based on the already existing fields Population
 </details></section>
 <section id="basic-statistics-for-fields">
 <h3>Basic statistics for fields<a class="headerlink" href="#basic-statistics-for-fields" title="Permalink to this heading">#</a></h3>
-<p>The tool <strong>Basic statistics for fields</strong> generates statistics for a specific field of the attribute table of a vector layer. The results are generated as an HTML file and can be accessed by using the <strong>file path link</strong> in the <strong>Results Viewer</strong>.</p>
+<p>The tool <strong>Basic statistics for fields</strong> generates statistics for a specific field of the attribute table of a vector layer. The results are generated as an HTML file and can be accessed by using the <strong>file path link</strong> in the <strong>Results Viewer</strong>. This operation is highly valuable for gaining a comprehensive understanding of the data you intend to work with. It allows you to determine the range of values, pinpoint the minimum and maximum values. In the provided example, this operation is applied to calculate the global population density, enabling you to easily identify the most densely populated region worldwide.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Calculate statistics for the field population density for all the countries. What are the max./min. values, average, etc.?<div class="sd-summary-down docutils">
+Example: Calculate statistics for the field population density for countries worldwide.<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -626,9 +627,10 @@ Calculate statistics for the field population density for all the countries. Wha
 <li><p>For which fields should the statistics be calculated in the attribute table?</p></li>
 <li><p>Which field in the attribute table contains which information?</p></li>
 </ul>
+<p>For greater precision in these calculations, statistics by categories offer more comprehensive insights than those mentioned earlier. In this case, it becomes simple to determine the number of cities per country with over 300,000 inhabitants and, for each country, the population living in the largest urban agglomeration.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-How many cities per country have more than 300.000 inhabitants? For each country: how many people live in the largest agglomeration?<div class="sd-summary-down docutils">
+Example: Cities with more than 300.000 inhabitants and the amount of population in the largest agglomerations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -645,7 +647,7 @@ How many cities per country have more than 300.000 inhabitants? For each country
 <p>It is possible to manually select specific rows by clicking on the number on the left side of it. This can be easily used to select a small number of rows. If they are selected successfully, they will appear in <strong>yellow</strong>.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Manual selection of rows<div class="sd-summary-down docutils">
+Example: Manual selection of rows<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -768,32 +770,70 @@ Special operators</label><div class="sd-tab-content docutils">
 </table>
 </div>
 </div>
-<section id="sql">
-<h4>SQL<a class="headerlink" href="#sql" title="Permalink to this heading">#</a></h4>
-<p>Another possibility to build your expressions is to utilize SQL.</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
-SQL introduction</label><div class="sd-tab-content docutils">
-<p>SQL in QGIS, often referred to as “Spatial SQL” or “Spatial Query Language,” is a specialized version of SQL used for querying and manipulating geospatial data. It allows users to interact with geographic information by writing SQL queries that can filter, analyze, and visualize spatial data. With Spatial SQL in QGIS, you can work with various types of geospatial datasets and perform operations specific to geographic data, such as selecting features within a certain area, calculating spatial relationships, and much more. This capability makes SQL a valuable tool for geospatial data management and analysis in the QGIS environment.</p>
-</div>
-<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
-SQL Cheat sheet</label><div class="sd-tab-content docutils">
-<p>SQL in QGIS, often referred to as “Spatial SQL” or “Spatial Query Language,” is a specialized version of SQL used for querying and manipulating geospatial data. It allows users to interact with geographic information by writing SQL queries that can filter, analyze, and visualize spatial data. With Spatial SQL in QGIS, you can work with various types of geospatial datasets and perform operations specific to geographic data, such as selecting features within a certain area, calculating spatial relationships, and much more. This capability makes SQL a valuable tool for geospatial data management and analysis in the QGIS environment.</p>
-</div>
-</div>
+<p>Querying your data to answer more complex question is of great importance. This can be accomplished using the “Select by expression” tool. In the provided example, we aim to answer the question: Which cities, not having a population of one million inhabitants in 1950, had surged to over 10 million inhabitants by 2015?</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Build query for the question: Cities that were not yet cities of one million inhabitants in 1950 but already had more than 10 million inhabitants in 2015.<div class="sd-summary-down docutils">
+Example: Cities, not having a population of one million inhabitants in 1950, had surged to over 10 million inhabitants by 2015?<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_select_by_expression_and.mp4"></video></p>
 </div>
-</details></section>
+</details><section id="sql">
+<h4>SQL<a class="headerlink" href="#sql" title="Permalink to this heading">#</a></h4>
+<p>Another possibility to build your expressions is to utilize SQL.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+SQL introduction</label><div class="sd-tab-content docutils">
+<p>SQL (Structured Query Language) is a standardized programming language that is used to manage databases and perform various operations on the data in them. In the Query Builder in QGIS, you can use SQL expressions to use one or more conditions to filter a layer.</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+SQL Cheat Sheet</label><div class="sd-tab-content docutils">
+<p>You can easily access essential SQL statements by referring to this handy <a class="reference external" href="https://www.sqltutorial.org/sql-cheat-sheet/">Cheat Sheet</a>. This offers a concise overview of the core functionalities.</p>
+</div>
+</div>
 </section>
+</section>
+<section id="query-builder">
+<h3>Query Builder<a class="headerlink" href="#query-builder" title="Permalink to this heading">#</a></h3>
+<p>The Query Builder provides an interface that allows you to define a <strong>subset of the features</strong> in the layer using SQL-like statements and to display the results in the main window. As long as the query is active, only the <strong>features corresponding</strong> to its result are available in the project. You can use one or more layer attributes to define the filter in the Query Builder. The Query Builder is built as follows:</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/en_query_builder_comment.png"><img alt="../../_images/en_query_builder_comment.png" src="../../_images/en_query_builder_comment.png" style="height: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Screenshot of the Query Builder</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple">
+<li><p>The <strong>Fields list</strong> contains all the fields of the layer. To add an attribute column to the expression window, double-click its name or just type it into the box.</p></li>
+<li><p>The <strong>Values</strong> frame lists the values of the currently selected field.</p>
+<ul class="simple">
+<li><p>To list <strong>all unique values</strong> of a field, click the <strong>All</strong> button.</p></li>
+<li><p>To list the <strong>first 25</strong> unique values of the column, click the <strong>Sample</strong> button.</p></li>
+<li><p>To add a value to the expression window, double click it in the Values list. You can use the <strong>search box</strong> at the top of the Values frame to easily browse and find attribute values in the list.</p></li>
+</ul>
+</li>
+<li><p>The <strong>Operators</strong> section contains all usable operators. To add an operator, click the appropriate button.</p></li>
+<li><p>The <strong>Test</strong> button helps you to check your query and <strong>displays a message box with the number of features</strong> satisfying the current query.</p></li>
+<li><p>Use the <strong>Clear</strong> button to revert the layer to its original state.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When a filter is applied with the Query Builder, QGIS treats the resulting subset as if it were the <strong>entire layer</strong>.</p>
+</div>
+<p>In this short video, you’ll discover the location of the query builder and learn how to create a straightforward query for isolating a particular state from a dataset that covers the entire country. The example focuses on a dataset related to South Sudan and serves as a basic illustration.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Examplpe: Simple usage of the Query Builder.<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_query_builder.mp4"></video></p>
+</div>
+</details></section>
 </section>
 <section id="non-spatial-joins">
 <h2>Non-spatial joins<a class="headerlink" href="#non-spatial-joins" title="Permalink to this heading">#</a></h2>
@@ -802,7 +842,7 @@ Build query for the question: Cities that were not yet cities of one million inh
 <figure class="align-default" id="join-attributes-by-field-value">
 <a class="reference internal image-reference" href="../../_images/en_join_attributes_by_field_values.PNG"><img alt="../../_images/en_join_attributes_by_field_values.PNG" src="../../_images/en_join_attributes_by_field_values.PNG" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Screenshot of the Join attributes by field value tool</span><a class="headerlink" href="#join-attributes-by-field-value" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Screenshot of the Join attributes by field value tool</span><a class="headerlink" href="#join-attributes-by-field-value" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition attention">
@@ -896,6 +936,7 @@ Build query for the question: Cities that were not yet cities of one million inh
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sql">SQL</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-builder">Query Builder</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-joins">Non-spatial joins</a></li>
