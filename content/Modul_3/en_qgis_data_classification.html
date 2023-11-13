@@ -547,16 +547,16 @@ document.write(`
 <li><p>Right-click on your layer</p></li>
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Categorized</span></code></p></li>
-<li><p>Further down the window click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  Now you should see all unique values or attributes of the selected column in <code class="docutils literal notranslate"><span class="pre">Value</span></code>. Do add or delete single values use the <code class="docutils literal notranslate"><span class="pre">-</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code> buttons.
-In the <code class="docutils literal notranslate"><span class="pre">Value</span></code> dropdown menu select the column based on which you want to categorize your data</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Value</span></code> dropdown menu select the column based on which you want to categorize your data.</p></li>
+<li><p>Further down the window click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  Now you should see all unique values or attributes of the selected column in <code class="docutils literal notranslate"><span class="pre">Value</span></code>. To add or delete single values use the <code class="docutils literal notranslate"><span class="pre">-</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code> buttons.</p></li>
 <li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> dropdown menu you can select the colours and symbols you want to use</p></li>
 <li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">ramp</span></code> dropdown menu you can specify the range of colours you want to use</p></li>
 <li><p><em>Optional</em>: You can open the panel <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Rendering</span></code> on the button of the window. Here you can adjust the opacity/ transparency of the layer.</p></li>
-<li><p>Clic__k <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the window.</p></li>
 </ol>
 <figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../../_images/Categorized_district_map_SierraLeone.png"><img alt="../../_images/Categorized_district_map_SierraLeone.png" src="../../_images/Categorized_district_map_SierraLeone.png" style="width: 900px;" /></a>
+<img alt="../../_images/Categorized_district_map_SierraLeone.png" src="../../_images/Categorized_district_map_SierraLeone.png" />
 </figure>
 </section>
 <section id="graduated-classification">
@@ -604,7 +604,7 @@ In the <code class="docutils literal notranslate"><span class="pre">Value</span>
 <p>There are <strong>seven</strong> ways in QGIS you can split quantitative data into classes.  The four most important ones are: <strong>Equal intervals</strong>, <strong>Quantile</strong>, <strong>Natiral breaks</strong>, <strong>Manual</strong>.
 Let’s have a look at how the classes of the district population would look like if we split the data into three classes using these methods.</p>
 <figure class="align-center" id="id4">
-<a class="reference internal image-reference" href="../../_images/classification_methods_basic.png"><img alt="../../_images/classification_methods_basic.png" src="../../_images/classification_methods_basic.png" style="width: 900px;" /></a>
+<a class="reference internal image-reference" href="../../_images/classification_method_map.drawio.svg"><img alt="../../_images/classification_method_map.drawio.svg" src="../../_images/classification_method_map.drawio.svg" width="900px" /></a>
 </figure>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -647,20 +647,39 @@ Standard Deviation</label><div class="sd-tab-content docutils">
 <hr class="docutils" />
 <section id="how-to-graduated-classification-in-qgis">
 <h3>How to Graduated classification in QGIS<a class="headerlink" href="#how-to-graduated-classification-in-qgis" title="Permalink to this heading">#</a></h3>
+<p>To perform a graduated classification in QGIS is easy. However, unlike the categorised classification, here you have to decide on how many classes and which method you want to use.</p>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Graduated_classification.mp4"></video></p>
-<p><img alt="" src="../../_images/Graduated_classify_classes.png" /></p>
-<p>From <strong>step 1</strong> where you select graduated uptill <strong>step 13</strong> where you can see the classified outcome. You can play and change variables within the stages and use any parameter that suits your goal.</p>
-<p>More so, there is no single correct number of classes, there is no single best way to classify you data into ranges. To acheive the goal of classification, the data can be best classify by <strong>equal interval, quantile, natural breaks and or manual</strong> depending on what suits your purpose.</p>
-<p><img alt="" src="../../_images/Classification_methods.PNG" /></p>
-<ul class="simple">
-<li><p>Graduated classification by histogram</p></li>
-</ul>
-<p><img alt="" src="../../_images/Graduated_classify_histogram.png" />
-You can show the mean value and standard deviation through this classification.
-See outlook of histogram by graduated classification.</p>
-<p><img alt="" src="../../_images/Graduated_histogram.png" /></p>
-<p>See the video of graduated classes and histogram classification.</p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Graduated_classes_histogram.mp4"></video></p>
+<p><strong>To classify data in classes…</strong></p>
+<ol class="arabic simple">
+<li><p>Right-click on your layer</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Graduated</span></code></p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Value</span></code> dropdown menu select the column based on which you want to classify your data.</p></li>
+<li><p>Downright select the number of classes you want to use.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Mode</span></code> select the classification method you want to use e.g. Equal count (Quantile).</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  Now you should see all classes and the distribution of values. To add or delete single classes use the <code class="docutils literal notranslate"><span class="pre">-</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code> buttons.</p></li>
+<li><p><em>Optional</em>: Click on <code class="docutils literal notranslate"><span class="pre">Histogram</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Values</span></code>. Now you can see the exact distribution of values over the classes. This is very practical to decide on a classification method. You can also check the mean value and standard deviation.</p></li>
+</ol>
+<figure class="align-center" id="raduated-classification">
+<a class="reference internal image-reference" href="../../_images/Graduated_histogram.png"><img alt="../../_images/Graduated_histogram.png" src="../../_images/Graduated_histogram.png" style="width: 900px;" /></a>
+</figure>
+<ol class="arabic simple" start="9">
+<li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> dropdown menu you can select the colours and symbols you want to use.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When you use a point layer you can also use the <strong>size</strong> of the symbols to visualize the classes, not just the color. To do that select a point layer and do steps 1 to 7. Under <code class="docutils literal notranslate"><span class="pre">Method</span></code> select <code class="docutils literal notranslate"><span class="pre">Size</span></code>.</p>
+</div>
+<ol class="arabic simple" start="10">
+<li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">ramp</span></code> dropdown menu you can specify the range of colours you want to use. To see all color ramps click on the down arrow of the <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">ramp</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Color</span> <span class="pre">Ramps</span></code>.</p></li>
+<li><p><em>Optional</em>: Under <code class="docutils literal notranslate"><span class="pre">Legend</span> <span class="pre">Format</span></code> you can adjust how precise the range of the classes will be displayed in the legend. Usually, it is practical to not use too complicated numbers in the legend.</p></li>
+<li><p><em>Optional</em>: You can open the panel <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Rendering</span></code> on the button of the window. Here you can adjust the opacity/ transparency of the layer.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the window.</p></li>
+</ol>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/classification_graduated_basic.png"><img alt="../../_images/classification_graduated_basic.png" src="../../_images/classification_graduated_basic.png" style="width: 900px;" /></a>
+</figure>
 </section>
 </section>
 <div class="toctree-wrapper compound">
