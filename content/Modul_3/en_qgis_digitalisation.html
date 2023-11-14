@@ -473,13 +473,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-digitization">What is Digitization?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-of-digitizing-in-qgis">Uses of Digitizing in QGIS</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digitization-toolbars">Digitization toolbars</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digitizing-in-qgis">Digitizing in QGIS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#digitization-toolbars">Digitization toolbars</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digital-data-creation">Digital data creation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-point-data">Creation of point data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-line-data">Creation of line data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-polygon-data">Creation of polygon data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-point-data">Creation of point data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-line-data">Creation of line data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-polygon-data">Creation of polygon data</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-new-shapefile-data">Creation of new shapefile data</a></li>
 </ul>
 </li>
@@ -504,34 +507,235 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="digitalisation">
 <h1>Digitalisation<a class="headerlink" href="#digitalisation" title="Permalink to this heading">#</a></h1>
-<section id="what-is-digitization">
-<h2>What is Digitization?<a class="headerlink" href="#what-is-digitization" title="Permalink to this heading">#</a></h2>
-<p>Digitization is the process of converting geographic (raster) data into digital form (vector data). During this process, spatial data on maps or images are traced as points, polylines or polygons. Digitization is one of the important tasks for a GIS specialist and it has many uses in GIS, including recording and displaying geographic information, generating map layers, and storing data. Digital datasets usually contain data that can be represented as numbers or symbols such as text or graphics. The process can also involve converting analogue images into digital ones. Digitization in GIS can be integrated with many other software applications like CAD (Computer-Aided Design), 3D modelling, etc. <a class="reference external" href="https://www.spatialpost.com/what-is-digitization-in-gis/#0-types-of-digitization-in-gis-what-is-digitization-in-gis">Source</a></p>
-</section>
-<section id="uses-of-digitizing-in-qgis">
-<h2>Uses of Digitizing in QGIS<a class="headerlink" href="#uses-of-digitizing-in-qgis" title="Permalink to this heading">#</a></h2>
-<p>•	The digital map has become one of the most efficient tools for surveying and analyzing data across industries especially for geologists, geographers, urban planners, etc.</p>
-<p>•	It allows managers and staff members to easily access information when needed.</p>
-<p>•	Digitization often make it easier for companies to make the edits by importing the digitized data into a PDF or jpg format whenever there are changes that need to be made to the QGIS file.</p>
-<p>•	It also gives decision-makers access to maps in their preferred format such as PDF and jpg when needed.</p>
-<p>•	Digitization has made it possible to store and process data at a much faster rate.</p>
-<p>•	It also provides more flexible data input and improve efficiency of ever-changing spatial information.</p>
-</section>
+<p>Digitization is the process of converting geographic data from maps or images into digital form commonly represented as vector data.
+During this procedure, spatial information from maps or images is traced, forming points, polylines, or polygons.
+Proficiency in digitization stands as a cornerstone for GIS specialists. It empowers them to convert spatial information into a digital format, facilitating more efficient data manipulation compared to traditional methods of interpreting images or paper maps.</p>
+<figure class="align-center" id="digitalisation-with-gis-concept">
+<a class="reference internal image-reference" href="../../_images/Digitizsation_concept.drawio.svg"><img alt="../../_images/Digitizsation_concept.drawio.svg" src="../../_images/Digitizsation_concept.drawio.svg" width="900px" /></a>
+</figure>
+<section id="digitizing-in-qgis">
+<h2>Digitizing in QGIS<a class="headerlink" href="#digitizing-in-qgis" title="Permalink to this heading">#</a></h2>
+<p>Digitalizing data in QGIS is straightforward. In the following, you will learn all the steps in detail.</p>
 <section id="digitization-toolbars">
-<h2>Digitization toolbars<a class="headerlink" href="#digitization-toolbars" title="Permalink to this heading">#</a></h2>
-<p>Firstly, you need to check if Digitizing Toolbox is activated in your QGIS in order to digitize. If not then you can activate it using following process.</p>
+<h3>Digitization toolbars<a class="headerlink" href="#digitization-toolbars" title="Permalink to this heading">#</a></h3>
+<p>Firstly, you need to check if the ‘Digitizing Toolbox` is activated. To do that</p>
+<ul class="simple">
+<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">view</span></code> tab in the menu bar and click <code class="docutils literal notranslate"><span class="pre">Toolbars</span></code>. Check if the <code class="docutils literal notranslate"><span class="pre">digitizing</span></code> and <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">digitizing</span></code> toolbox is activated.</p></li>
+</ul>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Activate <code class="docutils literal notranslate"><span class="pre">Digitizing</span> <span class="pre">Toolbox</span></code></div>
+<p class="sd-card-text">Firstly, you need to check if the ‘Digitizing Toolbox` is activated. To do that</p>
 <ol class="arabic simple">
-<li><p>Click view tab in the menu bar and click toolbar and then check digitizing and advance digitizing tool box.</p></li>
+<li><p class="sd-card-text">Click on the <code class="docutils literal notranslate"><span class="pre">view</span></code> tab in the menu bar and click <code class="docutils literal notranslate"><span class="pre">Toolbars</span></code>. Check if the <code class="docutils literal notranslate"><span class="pre">digitizing</span></code> and <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">digitizing</span></code> toolbox is activated.</p></li>
+<li><p class="sd-card-text">A tool box like this should appear on top of your Qgis</p></li>
 </ol>
-<p><img alt="" src="../../_images/Activate_digitizing_toolbox.png" /></p>
-<p>A tool box like this should appear on top of your Qgis</p>
-<p><img alt="" src="../../_images/Toolbox.png" /></p>
+<p class="sd-card-text"><img alt="" src="../../_images/Toolbox.png" /></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+How to: </div>
+<figure class="align-center" id="digitalisation-toolbar">
+<a class="reference internal image-reference" href="../../_images/Activate_digitizing_toolbox.png"><img alt="../../_images/Activate_digitizing_toolbox.png" src="../../_images/Activate_digitizing_toolbox.png" style="width: 300px;" /></a>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The normal digitalisation toolbar offers all the necessary functions to do digitalisation. However, for everything that goes above just creating new features and deleting features, the advanced digitalisation toolbar is needed.
+The advanced digitalisation toolbar allows you to move features, delete parts of features and much more. All functions are listed in the two tables below.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Digitalisation Toolbar<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Tool</p></th>
+<th class="head"><p class="sd-card-text">Purpose</p></th>
+<th class="head"><p class="sd-card-text">Tool</p></th>
+<th class="head"><p class="sd-card-text">Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionAllEdits.png" /></p></td>
+<td><p class="sd-card-text">Access to save, rollback or cancel changes in all or selected layers simultaneously</p></td>
+<td><p class="sd-card-text"><img alt="" src="../../_images/mActionToggleEditing.png" /></p></td>
+<td><p class="sd-card-text">Turn on or off edit status of selected layer(s) based on the active layer status</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionSaveEdits.png" /></p></td>
+<td><p class="sd-card-text">Save edits</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionDigitizeWithSegment.png" /></p></td>
+<td><p class="sd-card-text">Digitize using straight segments</p></td>
+<td><p class="sd-card-text"><img alt="" src="../../_images/mActionDigitizeWithCurve.png" /></p></td>
+<td><p class="sd-card-text">Digitize using curve lines</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionStreamingDigitize.png" /></p></td>
+<td><p class="sd-card-text">Enable freehand digitizing</p></td>
+<td><p class="sd-card-text"><img alt="" src="../../_images/mActionDigitizeShape.png" /></p></td>
+<td><p class="sd-card-text">Digitize polygon of regular shape</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionNewTableRow.png" /></p></td>
+<td><p class="sd-card-text">Add new record</p></td>
+<td><p class="sd-card-text"><img alt="" src="../../_images/mActionCapturePoint.png" /></p></td>
+<td><p class="sd-card-text">Add Feature: Capture Point</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionCaptureLine.png" /></p></td>
+<td><p class="sd-card-text">Add Feature: Capture Line</p></td>
+<td><p class="sd-card-text"><img alt="" src="../../_images/mActionCapturePolygon.png" /></p></td>
+<td><p class="sd-card-text">Add Feature: Capture Polygon</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionVertexTool.png" /></p></td>
+<td><p class="sd-card-text">Vertex Tool (All Layers)</p></td>
+<td><p class="sd-card-text"><img alt="" src="../../_images/mActionVertexToolActiveLayer.png" /></p></td>
+<td><p class="sd-card-text">Vertex Tool (Current Layer)</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/checkbox.png" /></p></td>
+<td><p class="sd-card-text">Set whether the vertex editor panel should auto-open</p></td>
+<td><p class="sd-card-text"><img alt="" src="../../_images/mActionMultiEdit.png" /></p></td>
+<td><p class="sd-card-text">Modify the attributes of all selected features simultaneously</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionDeleteSelectedFeatures.png" /></p></td>
+<td><p class="sd-card-text">Delete Selected features from the active layer</p></td>
+<td><p class="sd-card-text"><img alt="" src="../../_images/mActionEditCut.png" /></p></td>
+<td><p class="sd-card-text">Cut Features from the active layer</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionCopySelected.png" /></p></td>
+<td><p class="sd-card-text">Copy selected Features from the active layer</p></td>
+<td><p class="sd-card-text"><img alt="" src="../../_images/mActionEditPaste.png" /></p></td>
+<td><p class="sd-card-text">Paste Features into the active layer</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionUndo.png" /></p></td>
+<td><p class="sd-card-text">Undo changes in the active layer</p></td>
+<td><p class="sd-card-text"><img alt="" src="../../_images/mActionRedo.png" /></p></td>
+<td><p class="sd-card-text">Redo changes in active layer</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Advanced digitizing Toolbar<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Tool</p></th>
+<th class="head"><p class="sd-card-text">Purpose</p></th>
+<th class="head"><p class="sd-card-text">Tool</p></th>
+<th class="head"><p class="sd-card-text">Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/cad.png" /></p></td>
+<td><p class="sd-card-text">Enable Advanced Digitizing Tools</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="fig/mActionMoveFeature-1.png" /><img alt="" src="../../_images/mActionMoveFeatureLine.png" /><img alt="Alt text" src="../../_images/mActionMoveFeaturePoint.png" /></p></td>
+<td><p class="sd-card-text">Move Feature(s)</p></td>
+<td><p class="sd-card-text">![Alt text]/fig/(mActionMoveFeatureCopy.png) <img alt="Alt text" src="../../_images/mActionMoveFeatureCopyLine.png" /><img alt="Alt text" src="fig/mActionMoveFeatureCopyPoint-2.png" /></p></td>
+<td><p class="sd-card-text">Copy and Move Feature(s)</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionRotateFeature.png" /></p></td>
+<td><p class="sd-card-text">Rotate Feature(s)</p></td>
+<td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionSimplify.png" /></p></td>
+<td><p class="sd-card-text">Simplify Feature</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionScaleFeature.png" /></p></td>
+<td><p class="sd-card-text">Scale Feature</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionCapturePolygon.png" /></p></td>
+<td><p class="sd-card-text">Add Ring</p></td>
+<td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionAddPart.png" /></p></td>
+<td><p class="sd-card-text">Add Part</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="Alt text" src="content/Modul_3/mActionFillRing.png" /></p></td>
+<td><p class="sd-card-text">Fill Ring</p></td>
+<td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionReverseLine.png" /></p></td>
+<td><p class="sd-card-text">Swap direction</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="Alt text" src="fig/mActionDeleteRing-1.png" /></p></td>
+<td><p class="sd-card-text">Delete Ring</p></td>
+<td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionDeletePart.png" /></p></td>
+<td><p class="sd-card-text">Delete Part</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionOffsetCurve.png" /></p></td>
+<td><p class="sd-card-text">Offset Curve</p></td>
+<td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionReshape.png" /></p></td>
+<td><p class="sd-card-text">Reshape Features</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionSplitParts.png" /></p></td>
+<td><p class="sd-card-text">Split Parts</p></td>
+<td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionSplitFeatures.png" /></p></td>
+<td><p class="sd-card-text">Split Features</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionMergeFeatureAttributes.png" /></p></td>
+<td><p class="sd-card-text">Merge Attributes of Selected Features</p></td>
+<td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionMergeFeatures.png" /></p></td>
+<td><p class="sd-card-text">Merge Selected Features</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionRotatePointSymbols.png" /></p></td>
+<td><p class="sd-card-text">Rotate Point Symbols</p></td>
+<td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionOffsetPointSymbols.png" /></p></td>
+<td><p class="sd-card-text">Offset Point Symbols</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionTrimExtend.png" /></p></td>
+<td><p class="sd-card-text">Trim or Extend Feature</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></section>
 </section>
 <section id="digital-data-creation">
 <h2>Digital data creation<a class="headerlink" href="#digital-data-creation" title="Permalink to this heading">#</a></h2>
+<p>To digitise data for a new dataset you always have to start with creating the dataset before filling it with digitised data.</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Create_new_vector_data.mp4"></video></p>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">Layer</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">GeoPackage</span> <span class="pre">Layer</span></code> or <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Shapefile</span> <span class="pre">Layer</span></code></p></li>
+<li><p>Click on <img alt="" src="../../_images/Three_points.png" /> and navigate to the folder where you want to save the dataset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">encoding</span></code>: Make sure this is set to UTF-8</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">type</span></code>: Select the type of feature you want to digitalise e.g. points or lines.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Additional</span> <span class="pre">dimension</span></code> you should always make sure that you check <code class="docutils literal notranslate"><span class="pre">None</span></code>. Except if there is the possibility to collect the Z-values (Elevation) as well. But this is mostly not the case.</p></li>
+<li><p>CRS dropdown: Select the EPSG/CRS you want to set for the new layer. By default, the QGIS selects the project CRS. If you want to change the CRS click on <img alt="" src="../../_images/mIconProjectionEnabled.png" />.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Field</span></code> you can add columns to the new layer.</p>
 <ul class="simple">
-<li><p>Digital can be created in points, lines, polygons and in shapefiles.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Typ</span></code>: Select the data type the column will have e.g. <code class="docutils literal notranslate"><span class="pre">Text</span></code>, <code class="docutils literal notranslate"><span class="pre">Whole</span> <span class="pre">number</span></code>, <code class="docutils literal notranslate"><span class="pre">Decimal</span> <span class="pre">Number</span></code>, <code class="docutils literal notranslate"><span class="pre">Date</span></code>.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The number of options depends on the data format the layer will have. GeoPackage for example offers far more options than the Shapefileformat.</p>
+</div>
+<ul class="simple">
+<li><p>Click on <img alt="" src="../../_images/mActionNewAttribute.png" /> to add the new column to the <code class="docutils literal notranslate"><span class="pre">Fields</span> <span class="pre">List</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
+</ol>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/New_GeoPackage_Layer.png"><img alt="../../_images/New_GeoPackage_Layer.png" src="../../_images/New_GeoPackage_Layer.png" style="width: 500px;" /></a>
+</figure>
 <section id="creation-of-point-data">
 <h3>Creation of point data<a class="headerlink" href="#creation-of-point-data" title="Permalink to this heading">#</a></h3>
 <p>Click on the following numbers bottons as seen in the picture below. Number <strong>1</strong> will switch to edit mode, number <strong>2</strong> is to create a new entry point, number <strong>3</strong> is to move or copy point and number <strong>4</strong> is to delete entry point.</p>
@@ -541,9 +745,8 @@ document.write(`
 </ul>
 <p><img alt="" src="../../_images/Naming_of_point_created.png" /></p>
 <p>You can name the point as you want and enter any number in the ID and click ok. The new point feature has been created and named which can be easily seen on the map.</p>
-</section>
 <section id="creation-of-line-data">
-<h3>Creation of line data<a class="headerlink" href="#creation-of-line-data" title="Permalink to this heading">#</a></h3>
+<h4>Creation of line data<a class="headerlink" href="#creation-of-line-data" title="Permalink to this heading">#</a></h4>
 <p>The  method  is  similar  to  digitising  a  point  (see  above).This can be possible when you have firstly created a new line shapefiles layer. Remember to change the geometry type into lines because we are creating lines data now.</p>
 <p><img alt="" src="../../_images/Creation_of_line_data.png" /></p>
 <p>See video of line data creation</p>
@@ -555,7 +758,7 @@ document.write(`
 <p>Use  the  “Create  new  line”  button  and  click  several  times  on  the  map  (left  button)  to  draw  the  different parts of your line. When this is done, right-click to complete your line and access the Attributes window.&gt; Complete the attributes and click OK</p>
 </section>
 <section id="creation-of-polygon-data">
-<h3>Creation of polygon data<a class="headerlink" href="#creation-of-polygon-data" title="Permalink to this heading">#</a></h3>
+<h4>Creation of polygon data<a class="headerlink" href="#creation-of-polygon-data" title="Permalink to this heading">#</a></h4>
 <p>The method is similar to digitising a point or a line (see above).  Only  the  fourth  icon  changes  slightly:  this  one  corresponds to “Create a new polygon”</p>
 <p><img alt="" src="../../_images/polygon_data_creation.png" /></p>
 <div class="admonition tip">
@@ -565,6 +768,7 @@ document.write(`
 <p>Please remember to firstly created a new polygon shapefiles layer so thatthe icon to create a polygon can be active and ensure you change the geometry type into polygons because we are creating polygon data now.</p>
 <p>See video of polygon data creation</p>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/polygon_data_creation.mp4"></video></p>
+</section>
 </section>
 <section id="creation-of-new-shapefile-data">
 <h3>Creation of new shapefile data<a class="headerlink" href="#creation-of-new-shapefile-data" title="Permalink to this heading">#</a></h3>
@@ -696,13 +900,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-digitization">What is Digitization?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-of-digitizing-in-qgis">Uses of Digitizing in QGIS</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digitization-toolbars">Digitization toolbars</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digitizing-in-qgis">Digitizing in QGIS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#digitization-toolbars">Digitization toolbars</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digital-data-creation">Digital data creation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-point-data">Creation of point data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-line-data">Creation of line data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-polygon-data">Creation of polygon data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-point-data">Creation of point data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-line-data">Creation of line data</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-polygon-data">Creation of polygon data</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-new-shapefile-data">Creation of new shapefile data</a></li>
 </ul>
 </li>
