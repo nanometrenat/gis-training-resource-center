@@ -474,19 +474,20 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-qgis-interface">Overview of QGIS Interface</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#move-zoom">Move &amp; Zoom</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-the-map-view">Move the map view</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-an-orientation-on-the-map-canvas">Moving an orientation on the Map Canvas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-the-map-view">Moving the map view</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-the-map-view">Zooming in the map view</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">Properties</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#show-properties-of-objects">Show properties of objects</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toolbars">Toolbars</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toolbox-toolbars">Toolbox &amp; Toolbars</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-toolbox">Open Toolbox</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays-and-toolbars">Show and hide displays and toolbars</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-arrange-toolbars-and-panels">Move and arrange toolbars and panels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-arrange-toolbars">Move and arrange toolbars</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#save-open-qgis-projects">Save &amp; Open QGIS Projects</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-projects">Open Projects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-projects">Save Projects</a></li>
 </ul>
 </li>
 </ul>
@@ -506,68 +507,83 @@ document.write(`
 <h2>Overview of QGIS Interface<a class="headerlink" href="#overview-of-qgis-interface" title="Permalink to this heading">#</a></h2>
 <p><img alt="" src="../../_images/en_QGIS_GUI.png" /></p>
 <ol class="arabic simple">
-<li><p><strong>Layers List / Browser Panel:</strong> The layers list shows all layers/files that are loaded in the project. You can show/hide layers and set other properties.</p></li>
-<li><p><strong>Toolbars:</strong>  Toolbars are shortcuts to execute frequently used commands. For example, there are special toolbars for vector and raster files, but also general ones for saving your project, etc. The toolbar contains, among other things, a list of all the commands you can use. The toolbar also contains the toolbox, which is used later in many of the wiki videos.
-<img alt="" src="../../_images/Geschlossene_Toolbox_01.png" /></p></li>
-<li><p><strong>Map view:</strong> The map view is the central component of every GIS programme. This is where the geodata are displayed. The map view has a projection which does not always have to correspond to the projection of the layers.</p></li>
-<li><p><strong>Status bar:</strong> In the status bar you will find central information about the current map view. Here you can set the projection of the map view and the scale. You can read the coordinates of the mouse pointer and thus quickly find out the coordinates of points on the map. You can rotate your map view, e.g. if you want to create a map facing south.</p></li>
-<li><p><strong>Side Toolbar</strong>: You may see a side toolbar. This is another way to easily open vector and raster files in QGIS.</p></li>
-<li><p><strong>Locator bar:</strong> Here you can search for tools and layers. If you don’t know where to find a tool, you can try here.</p></li>
+<li><p><strong>Layers List / Browser Panel:</strong> The <strong>layers list</strong> shows <strong>all layers/files</strong> that are <strong>loaded in the project</strong>. You can show/hide layers and set other properties.</p></li>
+<li><p><strong>Toolsbars:  <strong>Toolbars</strong> are shortcuts</strong> to execute frequently used commands. For example, there are special toolbars for <strong>vector and raster files</strong>, but also general ones for saving your project, etc. The toolbar contains, among other things, a list of all the commands you can use. The toolbar also contains the <strong>toolbox</strong>, which is used later in many of the wiki videos.</p></li>
+</ol>
+<p><img alt="" src="../../_images/Geschlossene_Toolbox_01.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Map View:</strong> The <strong>map view</strong> is the <strong>central component</strong> of every GIS programme. This is where the <strong>geodata</strong> are displayed. The map view has a projection which does not always have to correspond to the projection of the layers.</p></li>
+<li><p><strong>Status bar:</strong> In the <strong>status bar</strong> you will find <strong>central information about the current map view</strong>. Here you can set the <strong>projection of the map view and the scale</strong>. You can read the coordinates of the mouse pointer and thus quickly find out the coordinates of points on the map. You can rotate your map view, e.g. if you want to create a map facing south.</p></li>
+<li><p><strong>Side Toolbar</strong>. You may see a <strong>side toolbar</strong>. This is another way to easily open vector and raster files in QGIS.</p></li>
+<li><p><strong>Locator bar</strong>. Here you can <strong>search for tools and layers</strong>. If you don’t know where to find a tool, you can try here.</p></li>
 </ol>
 <p><strong>Offical QGIS Documentation: <a class="reference external" href="https://docs.qgis.org/3.4/de/docs/training_manual/introduction/overview.html">An Overview of the Interface</a></strong></p>
 </section>
 <hr class="docutils" />
-<section id="move-zoom">
-<h2>Move &amp; Zoom<a class="headerlink" href="#move-zoom" title="Permalink to this heading">#</a></h2>
-<section id="move-the-map-view">
-<h3>Move the map view<a class="headerlink" href="#move-the-map-view" title="Permalink to this heading">#</a></h3>
+<section id="moving-an-orientation-on-the-map-canvas">
+<h2>Moving an orientation on the Map Canvas<a class="headerlink" href="#moving-an-orientation-on-the-map-canvas" title="Permalink to this heading">#</a></h2>
+<section id="moving-the-map-view">
+<h3>Moving the map view<a class="headerlink" href="#moving-the-map-view" title="Permalink to this heading">#</a></h3>
+<p>To move on the map canvas with your mouse cursor you need to toggle the hand button.</p>
 <p><img alt="" src="../../_images/qgis_move_symbol.png" /></p>
-<ul class="simple">
-<li><p>You can also move with the arrow keys</p></li>
-</ul>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_move.mp4"></video></p>
+<p>You can also move on the map canvas with arrow keys on your keyboard.</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_move.mp4"></video></p>
 </section>
 <section id="zooming-in-the-map-view">
 <h3>Zooming in the map view<a class="headerlink" href="#zooming-in-the-map-view" title="Permalink to this heading">#</a></h3>
+<p>The easiest way to zoom on Map Canvas is by <strong>scrolling</strong>.</p>
+<p>Or with the hotkeys <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>+<code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>+<code class="docutils literal notranslate"><span class="pre">-</span></code></p>
 <p><img alt="" src="../../_images/qgis_zoom_symbol.png" /></p>
-<ul class="simple">
-<li><p>You can also zoom by scrolling</p></li>
-<li><p>Or with Ctrl+ or Ctrl-</p></li>
-</ul>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom.mp4"></video></p>
+<p>Another way is to use the zoom buttons in the toolbox panel.</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom.mp4"></video></p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="properties">
-<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">#</a></h2>
-<section id="show-properties-of-objects">
-<h3>Show properties of objects<a class="headerlink" href="#show-properties-of-objects" title="Permalink to this heading">#</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Make sure to select the layer you want identify featuers in</p>
-</div>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_identify.mp4"></video></p>
-</section>
-</section>
-<section id="toolbars">
-<h2>Toolbars<a class="headerlink" href="#toolbars" title="Permalink to this heading">#</a></h2>
+<section id="toolbox-toolbars">
+<h2>Toolbox &amp; Toolbars<a class="headerlink" href="#toolbox-toolbars" title="Permalink to this heading">#</a></h2>
+<p>Basically, all the functionality, tools and applications of QGIS are organised in the Toolbox. Some Tools have their own toolbars which you can add to your QGIS interface.</p>
 <section id="open-toolbox">
 <h3>Open Toolbox<a class="headerlink" href="#open-toolbox" title="Permalink to this heading">#</a></h3>
 <p>To open the Toolbox in QGIS click on the gearwheel button. Or click on <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p>
 <p><img alt="" src="../../_images/Geschlossene_Toolbox_01.png" /></p>
+<p>You can use the search bar to find specific tools.</p>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_toolbars.mp4"></video></p>
 </section>
 <section id="show-and-hide-displays-and-toolbars">
 <h3>Show and hide displays and toolbars<a class="headerlink" href="#show-and-hide-displays-and-toolbars" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">View</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbars</span></code> -&gt; Check or uncheck the toolboxes you want to add or remove</p></li>
-</ul>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Show_display.mp4"></video></p>
+<p>There are toolbars and panels for many different tasks. To avoid an overcrowded interface it is smart to only activate specific toolbars or panels only when you really need them.</p>
+<p>To add or remove toolbars from your interface click on <code class="docutils literal notranslate"><span class="pre">View</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbars</span></code> -&gt; Check or uncheck the toolboxes you want to add or remove</p>
+<p>To add or remove  panels from your interface click on <code class="docutils literal notranslate"><span class="pre">View</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">TPanels</span></code> -&gt; Check or uncheck the panels you want to add or remove</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Anzeigen_einblenden_ausblenden.mp4"></video></p>
 </section>
-<section id="move-and-arrange-toolbars-and-panels">
-<h3>Move and arrange toolbars and panels<a class="headerlink" href="#move-and-arrange-toolbars-and-panels" title="Permalink to this heading">#</a></h3>
+<section id="move-and-arrange-toolbars">
+<h3>Move and arrange toolbars<a class="headerlink" href="#move-and-arrange-toolbars" title="Permalink to this heading">#</a></h3>
+<p>At each toolbar there is a field of two dotted lines. If you move the mouse pointer over it until an arrow cross appears and then hold down the left mouse button, you can move the toolbar. This allows an individualised arrangement of your own tools. By compressing all toolbars into a few lines, the map view window can also be enlarged.</p>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_arrange_toolbars.mp4"></video></p>
-<p><em>QGGIS Version 3.22.15</em></p>
+</section>
+</section>
+<section id="save-open-qgis-projects">
+<h2>Save &amp; Open QGIS Projects<a class="headerlink" href="#save-open-qgis-projects" title="Permalink to this heading">#</a></h2>
+<p>To save progress or to open an existing project in QGIS is very similar to programs like MS Word. However, there is one <strong>BIG</strong> difference.
+In QGIS the geodata you work with is <strong>not</strong> saved in your QGIS projectfile. Instead, the project file only contains the file paths where the geodata were located at the time the project was last saved on the PC. If the location of this geodata is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.</p>
+<section id="open-projects">
+<h3>Open Projects<a class="headerlink" href="#open-projects" title="Permalink to this heading">#</a></h3>
+<p>To open an existing QGIS project click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Open…</span></code> -&gt; Navigate to your project and open it.</p>
+<video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_project.mp4">
+</video>
+</section>
+<section id="save-projects">
+<h3>Save Projects<a class="headerlink" href="#save-projects" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>When you save the first time</strong>: To save the QGIS project you are working on click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as…</span></code>-&gt; Navigate to the folder where you want to save the project -&gt; Give the project a name -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p><strong>When you save progress</strong>: To save progress in a project that was already saved somewhere on your computer there are two good options:</p>
+<ul>
+<li><p>Use the hotkey <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>+ <code class="docutils literal notranslate"><span class="pre">s</span></code> on your keyboard.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_save_project.mp4"></video></p>
 </section>
 </section>
 </section>
@@ -636,19 +652,20 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-qgis-interface">Overview of QGIS Interface</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#move-zoom">Move &amp; Zoom</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-the-map-view">Move the map view</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-an-orientation-on-the-map-canvas">Moving an orientation on the Map Canvas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-the-map-view">Moving the map view</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zooming-in-the-map-view">Zooming in the map view</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">Properties</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#show-properties-of-objects">Show properties of objects</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toolbars">Toolbars</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#toolbox-toolbars">Toolbox &amp; Toolbars</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-toolbox">Open Toolbox</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#show-and-hide-displays-and-toolbars">Show and hide displays and toolbars</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-arrange-toolbars-and-panels">Move and arrange toolbars and panels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-and-arrange-toolbars">Move and arrange toolbars</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#save-open-qgis-projects">Save &amp; Open QGIS Projects</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-projects">Open Projects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-projects">Save Projects</a></li>
 </ul>
 </li>
 </ul>
