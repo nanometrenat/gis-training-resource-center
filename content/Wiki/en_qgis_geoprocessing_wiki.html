@@ -259,10 +259,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../Modul_5/en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools_ex1.html">I plan on using this exercise: https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_4?ref_type=heads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Modul_5/en_qgis_non_spatial_tools_ex2.html">And for the second exercise the second task of exercise 4: https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_4?ref_type=heads</a></li>
 
@@ -474,7 +473,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subsection-to-be-created">Subsection to be created:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer">Buffer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clip">Clip</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dissolve">Dissolve</a></li>
@@ -491,19 +489,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geoprocessing">
 <h1>Geoprocessing<a class="headerlink" href="#geoprocessing" title="Permalink to this heading">#</a></h1>
-<section id="subsection-to-be-created">
-<h2>Subsection to be created:<a class="headerlink" href="#subsection-to-be-created" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Clip</p></li>
-<li><p>Buffer</p></li>
-<li><p>Dissolve</p></li>
-<li><p>….</p></li>
-</ul>
-</section>
 <section id="buffer">
 <h2>Buffer<a class="headerlink" href="#buffer" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Calculate a <img alt="" src="../../_images/mAlgorithmBuffer.png" /> <code class="docutils literal notranslate"><span class="pre">buffer</span></code> with a defined distance</p></li>
+<li><p>Calculate a <img alt="" src="../../_images/mAlgorithmBuffer.png" /> <code class="docutils literal notranslate"><span class="pre">buffer</span></code> with a defined distance.</p></li>
 <li><p>Dissolve: if 2 or more buffer areas overlap, they can be combined.</p></li>
 </ul>
 <div class="admonition attention">
@@ -529,7 +518,7 @@ Example: Which regions fall within a 100-kilometer radius of major cities?<div c
 <ul class="simple">
 <li><p>With the <img alt="" src="../../_images/mAlgorithmClip.png" /> <code class="docutils literal notranslate"><span class="pre">Clip</span></code> tool you can extract and retain the spatial extent of one vector layer based on the boundaries of another layer.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: refers to the specific <strong>layer to be clipped</strong>, for instance, a road network.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Overlay</span> <span class="pre">Layer</span></code>: e.g. a polygon layer of the region (e.g. borders of Heidelberg)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Overlay</span> <span class="pre">Layer</span></code>: e.g. a polygon layer of the region (e.g. borders of Heidelberg).</p></li>
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
@@ -544,8 +533,8 @@ Example: Extract the rail network of Germany<div class="sd-summary-down docutils
 <section id="dissolve">
 <h2>Dissolve<a class="headerlink" href="#dissolve" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>The <img alt="" src="../../_images/mAlgorithmDissolve.png" /> <code class="docutils literal notranslate"><span class="pre">dissolve</span></code> tool aggregates geometries with the same attribute values</p></li>
-<li><p>When 2 or more buffer areas overlap, they can be combined using dissolve</p></li>
+<li><p>The <img alt="" src="../../_images/mAlgorithmDissolve.png" /> <code class="docutils literal notranslate"><span class="pre">dissolve</span></code> tool aggregates geometries with the same attribute values.</p></li>
+<li><p>When 2 or more buffer areas overlap, they can be combined using dissolve.</p></li>
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
@@ -626,7 +615,6 @@ Example: Extract the rail network of Germany<div class="sd-summary-down docutils
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subsection-to-be-created">Subsection to be created:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer">Buffer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clip">Clip</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dissolve">Dissolve</a></li>
