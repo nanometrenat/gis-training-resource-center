@@ -450,7 +450,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -466,6 +468,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-specialities">Windows specialities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bit-or-64-bit">32 Bit or 64 Bit?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mac-specialities">Mac specialities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux-specialities">Linux specialities</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -477,17 +492,44 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="qgis-installation">
 <h1>QGIS installation<a class="headerlink" href="#qgis-installation" title="Permalink to this heading">#</a></h1>
-<p>QGIS is open source and therefore freely available to everyone at no cost. You can install QGIS for Windows, Mac and Linux computers. In the course we use QGIS 3.22.15 Białowieża (LTR). Generally, we recommend using the latest Long Term Release, because it is the most stable and contains the fewest bugs.
-You can download the latest version here:</p>
-<p><a class="reference external" href="https://www.qgis.org/en/site/forusers/download.html">https://www.qgis.org/en/site/forusers/download.html</a></p>
-<p>For our introduction, the standalone installers from OSGeo4W packages are sufficient for Windows.</p>
-<p><strong>32 Bit or 64 Bit?</strong></p>
-<p>For Windows operating systems, there is always a 32-bit version and a 64-bit version of each QGIS version available for download. Which version to install depends on your computer and operating system.
-If it is not clear how many bits your operating system has, you can easily find out:</p>
-<p>Left-click on the Windows icon at the bottom left of the screen (alternatively, open the Windows search function).
-Type “System” on the keyboard
-Click on the entry “System” in the search results.
-Under the item “System type” you can read the bit number.</p>
+<p>QGIS is open source and therefore freely available to everyone at no cost. You can install QGIS for Windows, Mac and Linux computers.</p>
+<p>Generally, we recommend using the latest Long Term Release, because it is the most stable and contains the fewest bugs.</p>
+<p>You can download the latest version here:</p>
+<ol class="arabic simple">
+<li><p>Go to the <a class="reference external" href="https://www.qgis.org/en/site/forusers/download.html"><strong>QGIS download page</strong></a>.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">for</span> <span class="pre">Windows</span></code>, <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">for</span> <span class="pre">macOS</span></code> or <code class="docutils literal notranslate"><span class="pre">Dowload</span> <span class="pre">for</span> <span class="pre">Linux</span></code>, depending on your system.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Looking</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">most</span> <span class="pre">stable</span> <span class="pre">version?</span> <span class="pre">Get</span> <span class="pre">QGIS</span> <span class="pre">3.28</span> <span class="pre">LTR</span></code></p></li>
+</ol>
+<section id="windows-specialities">
+<h2>Windows specialities<a class="headerlink" href="#windows-specialities" title="Permalink to this heading">#</a></h2>
+<section id="bit-or-64-bit">
+<h3>32 Bit or 64 Bit?<a class="headerlink" href="#bit-or-64-bit" title="Permalink to this heading">#</a></h3>
+<p>For <strong>Windows operating systems</strong>, there is always a 32-bit version and a 64-bit version of each QGIS version available for download. Which version to install depends on your computer and operating system. If it is not clear how many bits your operating system has, you can easily find out: Left-click on the <strong>Windows icon at</strong> the bottom left of the screen (alternatively, open the Windows search function). Type <strong>“System”</strong> on the keyboard, click on the entry <strong>“System”</strong> in the search results. Under the item <strong>“System type”</strong> you can read the bit number.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since QGIS 3.20 there are only 64-bit Windows executables.</p>
+</div>
+</section>
+</section>
+<section id="mac-specialities">
+<h2>Mac specialities<a class="headerlink" href="#mac-specialities" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From version 3.30 SAGA must be integrated via plugin.</p>
+</div>
+</section>
+<section id="linux-specialities">
+<h2>Linux specialities<a class="headerlink" href="#linux-specialities" title="Permalink to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>From version 3.30 SAGA must be integrated via plugin.</p>
+</div>
+<p>For installation on Linux systems with apt you can install QGIS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">qgis</span> <span class="n">qgis</span><span class="o">-</span><span class="n">plugin</span><span class="o">-</span><span class="n">grass</span>
+</pre></div>
+</div>
+<p>If you install a QGIS version 3.30 or higher you have to install the plugin <em>Processing Saga NextGen Provider</em> .</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -544,6 +586,25 @@ Under the item “System type” you can read the bit number.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-specialities">Windows specialities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bit-or-64-bit">32 Bit or 64 Bit?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mac-specialities">Mac specialities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux-specialities">Linux specialities</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
