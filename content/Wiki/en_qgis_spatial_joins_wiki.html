@@ -450,7 +450,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -466,6 +468,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-attributes-by-location">Join Attributes by Location</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -477,6 +487,24 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="spatial-joins">
 <h1>Spatial Joins<a class="headerlink" href="#spatial-joins" title="Permalink to this heading">#</a></h1>
+<section id="join-attributes-by-location">
+<h2>Join Attributes by Location<a class="headerlink" href="#join-attributes-by-location" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Adds additional attributes of the join layer to the input layer based on the <strong>spatial relationship</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: dataset you want to enrich</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">layer</span></code>: dataset with additional information/attributes</p></li>
+<li><p>You can specify which fields of the join layer should be added</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Example: Add the time zone (join layer) to the cities (input layer)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_spatial_join_wiki.mp4"></video></p>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -533,6 +561,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-attributes-by-location">Join Attributes by Location</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

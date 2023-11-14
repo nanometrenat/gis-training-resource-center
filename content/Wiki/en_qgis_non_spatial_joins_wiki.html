@@ -450,7 +450,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -466,6 +468,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-attributes-by-field-value">Join attributes by field value</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -477,6 +487,32 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="non-spatial-joins">
 <h1>Non-Spatial Joins<a class="headerlink" href="#non-spatial-joins" title="Permalink to this heading">#</a></h1>
+<section id="join-attributes-by-field-value">
+<h2>Join attributes by field value<a class="headerlink" href="#join-attributes-by-field-value" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Adds attributes of a non-spatial table to the layer</p></li>
+<li><p>Join using a field that is present in both data sets</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Example: Add population figures from a table to the states layer<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_non_spatial_join_wiki.mp4"></video></p>
+</div>
+</details><div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If a table join does not work via the <strong>Join attributes by field value</strong> tool, a join can also be performed via the <strong>layer properties</strong> (<code class="docutils literal notranslate"><span class="pre">right-click</span></code>, <code class="docutils literal notranslate"><span class="pre">Properties</span></code>) under the <code class="docutils literal notranslate"><span class="pre">Join</span></code> tab.</p>
+</div>
+<figure class="align-default" id="en-qgis-add-vector-join-wiki">
+<a class="reference internal image-reference" href="../../_images/en_qgis_add_vector_join_wiki.png"><img alt="../../_images/en_qgis_add_vector_join_wiki.png" src="../../_images/en_qgis_add_vector_join_wiki.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Screenshot of the Add Vector join tool</span><a class="headerlink" href="#en-qgis-add-vector-join-wiki" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -533,6 +569,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-attributes-by-field-value">Join attributes by field value</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
