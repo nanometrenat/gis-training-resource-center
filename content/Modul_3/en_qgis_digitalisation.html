@@ -483,16 +483,15 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-polygon-data">Creation of polygon data</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-new-shapefile-data">Creation of new shapefile data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-layer">Create Layer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digital-data-editing">Digital data editing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-attribute-selection-and-editing">Feature attribute selection and editing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-features">Deleting features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-features">Moving features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-geometries-of-feature">Modifying geometries of feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-ring-to-a-polygon-feature">Add a ring to a polygon feature</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-data-data-creation-and-deletion">Editing data - Data creation and deletion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-table-editing">Attributes table editing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digitization-errors-in-qgis">Digitization Errors in QGIS</a></li>
 </ul>
             </nav>
@@ -663,17 +662,17 @@ Advanced digitizing Toolbar<div class="sd-summary-down docutils">
 <td><p class="sd-card-text"></p></td>
 <td><p class="sd-card-text"></p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionCapturePolygon.png" /></p></td>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionAddRing.png" /></p></td>
 <td><p class="sd-card-text">Add Ring</p></td>
 <td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionAddPart.png" /></p></td>
 <td><p class="sd-card-text">Add Part</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text"><img alt="Alt text" src="content/Modul_3/mActionFillRing.png" /></p></td>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionFillRing.png" /></p></td>
 <td><p class="sd-card-text">Fill Ring</p></td>
 <td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionReverseLine.png" /></p></td>
 <td><p class="sd-card-text">Swap direction</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text"><img alt="Alt text" src="fig/mActionDeleteRing-1.png" /></p></td>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionDeleteRing.png" /></p></td>
 <td><p class="sd-card-text">Delete Ring</p></td>
 <td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionDeletePart.png" /></p></td>
 <td><p class="sd-card-text">Delete Part</p></td>
@@ -750,7 +749,8 @@ After you are done manipulating the layer click on <img alt="" src="../../_image
 <li><p>Click on <img alt="" src="../../_images/mActionCapturePoint.png" />.</p></li>
 <li><p>Left-click on the feature you want to digitalise.</p></li>
 <li><p>Once you click, a window will appear <code class="docutils literal notranslate"><span class="pre">[Your</span> <span class="pre">Layer</span> <span class="pre">Name]-</span> <span class="pre">Feature</span> <span class="pre">Attribute</span></code>. Here you can add the information about this feature to the different columns, based on the attribute table of the layer.</p></li>
-<li><p>Once you are done with digitalisation <img alt="" src="../../_images/mActionSaveEdits.png" />.</p></li>
+<li><p>Once you are done with digitalisation <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits.</p></li>
+<li><p>Click again on <img alt="" src="../../_images/mActionToggleEditing.png" /> to end the editing mode.</p></li>
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Creat_point_feature.mp4"></video></p>
 <p>Creat_point_feature.mp4</p>
@@ -770,7 +770,8 @@ After you are done manipulating the layer click on <img alt="" src="../../_image
 <li><p>Click on <img alt="" src="../../_images/mActionCaptureLine.png" />.</p></li>
 <li><p>To digitalise line features, click along the line. When you are done, right-click on the last point of the line to finish the feature.</p></li>
 <li><p>Once you click, a window will appear <code class="docutils literal notranslate"><span class="pre">[Your</span> <span class="pre">Layer</span> <span class="pre">Name]-</span> <span class="pre">Feature</span> <span class="pre">Attribute</span></code>. Here you can add the information about this feature to the different columns, based on the attribute table of the layer.</p></li>
-<li><p>Once you are done with digitalisation <img alt="" src="../../_images/mActionSaveEdits.png" />.</p></li>
+<li><p>Once you are done with digitalisation <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits.</p></li>
+<li><p>Click again on <img alt="" src="../../_images/mActionToggleEditing.png" /> to end the editing mode.</p></li>
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Creat_line_feature.mp4"></video></p>
 </section>
@@ -780,71 +781,81 @@ After you are done manipulating the layer click on <img alt="" src="../../_image
 <ol class="arabic simple">
 <li><p>Select the polygon layer you want to add data to in the Layer panel</p></li>
 <li><p>Go to the digitalisation toolbar and click on<img alt="" src="../../_images/mActionToggleEditing.png" />. No the layer is in the editing mode.</p></li>
-<li><p>Click on <img alt="" src="../../_images/mActionCapturePoint.png" />.</p></li>
+<li><p>Click on <img alt="" src="../../_images/mActionCapturePolygon.png" />.</p></li>
 <li><p>To digitalise polygon features, left-click around the area you want do digitise. When you are done, right-click on the last point of the area to finish the feature.</p></li>
 <li><p>Once you click, a window will appear <code class="docutils literal notranslate"><span class="pre">[Your</span> <span class="pre">Layer</span> <span class="pre">Name]-</span> <span class="pre">Feature</span> <span class="pre">Attribute</span></code>. Here you can add the information about this feature to the different columns, based on the attribute table of the layer.</p></li>
-<li><p>Once you are done with digitalisation <img alt="" src="../../_images/mActionSaveEdits.png" />.</p></li>
+<li><p>Once you are done with digitalisation <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits.</p></li>
+<li><p>Click again on <img alt="" src="../../_images/mActionToggleEditing.png" /> to end the editing mode.</p></li>
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_digitize_add_feature.mp4"></video></p>
 </section>
 </section>
-<section id="creation-of-new-shapefile-data">
-<h3>Creation of new shapefile data<a class="headerlink" href="#creation-of-new-shapefile-data" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Go to Layer, Create Layer, New Shapefile Layer in the top menu.</p></li>
-<li><p>In the New Shapefile dialog, specify the name and location for the new shapefile.</p></li>
-<li><p>Select the geometry type for the shapefile from the Type dropdown (e.g. Point, line, Polygon).</p></li>
-<li><p>Click the OK button to create the shapefile</p></li>
-</ul>
-<p><img alt="" src="../../_images/New_shapefile_layer_creation.png" /></p>
-<ul class="simple">
-<li><p>The new shapefile layer</p></li>
-</ul>
-<p><img alt="" src="../../_images/New_shapefile_layer_naming.png" /></p>
-</section>
-</section>
-<section id="create-layer">
-<h2>Create Layer<a class="headerlink" href="#create-layer" title="Permalink to this heading">#</a></h2>
-<p>Now add some layers for drawing. Click layer in the menu bar, select create layer and select <strong>new spatialite layer</strong> or select <strong>new shapefile layer</strong> if you have to digitize a single feature like some places or roads or buildings. We are choosing new spatialite layer because we want to draw more than one feature in single file and it is easy to transfer this file.</p>
-<p><strong>Next</strong></p>
-<p>Click ‘…’ browse button and save your database. Give name to your layer, select type of layer and specify attributes and their type such as text or numerals and click add attributes to the list and click OK. Specify CRS of the layer same as the CRS of Raster data.</p>
-<p><img alt="" src="../../_images/New_spatialite_layer.png" /></p>
 </section>
 <section id="digital-data-editing">
 <h2>Digital data editing<a class="headerlink" href="#digital-data-editing" title="Permalink to this heading">#</a></h2>
-<p>Select the layer in the Layers panel and click on Toggle Editing under Layer. Alternatively, you can right-click on a layer in the Layers panel and choose Toggle Editing from the context menu. Multiple layers can be edited at a time. The layer currently being edited is the one selected in the Layers panel.</p>
-<p><img alt="" src="../../_images/Toggle_editingbox.png" /></p>
-<section id="feature-attribute-selection-and-editing">
-<h3>Feature attribute selection and editing<a class="headerlink" href="#feature-attribute-selection-and-editing" title="Permalink to this heading">#</a></h3>
-<p>The first group of tools in the Attributes toolbar allows us to select features on the map using the mouse. The following screenshot shows the Select Feature(s) tool. We can select a single feature by clicking on it, or select multiple features by drawing a rectangle.</p>
-<p><img alt="" src="../../_images/Select_Feature(s)_tool.png" /></p>
-<ul class="simple">
-<li><p>How to export selected features</p></li>
-</ul>
-<p><img alt="" src="../../_images/Export_selected_features.png" /></p>
+<p>For editing existing geodata you use the same toolbars as for the creation. This chapter will cover the change of geometries of data, not covering changing data in the attribute table.</p>
+<p>For all cases…</p>
+<ol class="arabic simple">
+<li><p>You first have to select the layer you want to edit.</p></li>
+<li><p>Click on <img alt="" src="../../_images/mActionToggleEditing.png" /> to activate editing mode.</p></li>
+<li><p>Do you editing.</p></li>
+<li><p>Save your edit by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" />.</p></li>
+<li><p>Click again on <img alt="" src="../../_images/mActionToggleEditing.png" /> to end the editing mode.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can use the <img alt="" src="../../_images/mActionUndo.png" /> &amp; <img alt="" src="../../_images/mActionRedo.png" /> buttons to reverse changes easily.</p>
+<p>Not that this is only possible <strong>before</strong> you save the changes.</p>
+</div>
+<section id="deleting-features">
+<h3>Deleting features<a class="headerlink" href="#deleting-features" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Select the line layer you want to add data to in the Layer panel.</p></li>
+<li><p>Go to the digitalisation toolbar and click on<img alt="" src="../../_images/mActionToggleEditing.png" />.</p></li>
+<li><p>Clicking on <img alt="" src="../../_images/mActionSelectRectangle.png" /> and selecting the feature you want to delete (see <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_spatial_queries_wiki.html#manual-selection">wiki</a>).</p></li>
+<li><p>Once you have selected the features click on to delete the feature.</p></li>
+<li><p>Once you are done with editing click on <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits.</p></li>
+<li><p>Click again on <img alt="" src="../../_images/mActionToggleEditing.png" /> to end the editing mode.</p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/delete_feature.mp4"></video></p>
 </section>
+<section id="moving-features">
+<h3>Moving features<a class="headerlink" href="#moving-features" title="Permalink to this heading">#</a></h3>
+<p>There are multiple methods to move features. Here we show the method that works for point, line and polygon features the same.
+For that you need the Advanced Digitalisation Toolbox.</p>
+<ol class="arabic simple">
+<li><p>Select the line layer you want to add data to in the Layer panel.</p></li>
+<li><p>Go to the digitalisation toolbar and click on<img alt="" src="../../_images/mActionToggleEditing.png" />.</p></li>
+<li><p>Click on <img alt="" src="../../_images/mActionMoveFeaturePoint.png" /> and click on the feature you want to move. Then click on the location you want to move the feature to.</p></li>
+<li><p>Once you are done with editing click on <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits.</p></li>
+<li><p>Click again on <img alt="" src="../../_images/mActionToggleEditing.png" /> to end the editing mode.</p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Move_feature.mp4"></video></p>
 </section>
-<section id="editing-data-data-creation-and-deletion">
-<h2>Editing data - Data creation and deletion<a class="headerlink" href="#editing-data-data-creation-and-deletion" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>To create or delete a field in your attribute table you need to be in edit mode, click on the Switch to edit mode button.</p></li>
-</ul>
-<p><img alt="" src="../../_images/Switch_to_edit_mode_of_attribute_table.png" /></p>
-<ul class="simple">
-<li><p>To add new data field; click on symbol circle 1 and to delete a data field; click on symbol circle 2</p></li>
-</ul>
-<p><img alt="" src="../../_images/add_delete_data_in_attribute_table.png" /></p>
+<section id="modifying-geometries-of-feature">
+<h3>Modifying geometries of feature<a class="headerlink" href="#modifying-geometries-of-feature" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Select the line layer you want to add data to in the Layer panel.</p></li>
+<li><p>Go to the digitalisation toolbar and click on<img alt="" src="../../_images/mActionToggleEditing.png" />.</p></li>
+<li><p>Click on <img alt="" src="../../_images/mActionVertexToolActiveLayer.png" />.</p></li>
+<li><p>Now you can now move every vertex (corner) of a feature. Click on the vertex/corner you want to move and then click on the location where you want to move the vertex to.</p></li>
+<li><p>Once you are done with editing click on <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits.</p></li>
+<li><p>Click again on <img alt="" src="../../_images/mActionToggleEditing.png" /> to end the editing mode.</p></li>
+</ol>
 </section>
-<section id="attributes-table-editing">
-<h2>Attributes table editing<a class="headerlink" href="#attributes-table-editing" title="Permalink to this heading">#</a></h2>
-<p>The attribute table displays information on features of a selected layer. Features in the table can be searched, selected, moved or even edited. It is also possible to right-click on the layer and choose openTable Open Attribute Table from the drop-down menu, or to click on the openTable Open Attribute Table button in the Attributes toolbar.</p>
-<p>If you prefer shortcuts, <strong>F6</strong> will open the attribute table. <strong>Shift+F6</strong> will open the attribute table filtered to selected features and <strong>Ctrl+F6</strong> will open the attribute table filtered to visible features.</p>
-<p><img alt="" src="../../_images/Opening_attribute_table.png" /></p>
-<ul class="simple">
-<li><p>Right click the layer in the Layers Panel then click the Open Attribute Table menu option. Click the Toggle Editing Mode button. Click the New Field button. Input the field’s Name, Type, and Length, then click the OK button.</p></li>
-</ul>
-<p><img alt="" src="../../_images/New_fieldcolumn_creation_in_attribute_table.png" /></p>
-<p><img alt="" src="../../_images/Input_newfield_and_to_save_editing.png" /></p>
+<section id="add-a-ring-to-a-polygon-feature">
+<h3>Add a ring to a polygon feature<a class="headerlink" href="#add-a-ring-to-a-polygon-feature" title="Permalink to this heading">#</a></h3>
+<p>A ring in QGIS is part inside a polygon that is not part of the polygon. Image a polygon representing a lake. The ring is an island in the lake. For a better understanding, watch the video below.</p>
+<ol class="arabic simple">
+<li><p>Select the line layer you want to add data to in the Layer panel.</p></li>
+<li><p>Go to the digitalisation toolbar and click on<img alt="" src="../../_images/mActionToggleEditing.png" />.</p></li>
+<li><p>Click on <img alt="Alt text" src="../../_images/mActionAddRing.png" />.</p></li>
+<li><p>Create a ring by clicking the area you want to exclude. To close the ring do a right-click.</p></li>
+<li><p>Once you are done with editing <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits.</p></li>
+<li><p>Click again on <img alt="" src="../../_images/mActionToggleEditing.png" /> to end the editing mode.</p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_digitize_add_ring.mp4"></video></p>
+</section>
 </section>
 <section id="digitization-errors-in-qgis">
 <h2>Digitization Errors in QGIS<a class="headerlink" href="#digitization-errors-in-qgis" title="Permalink to this heading">#</a></h2>
@@ -928,16 +939,15 @@ After you are done manipulating the layer click on <img alt="" src="../../_image
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-polygon-data">Creation of polygon data</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-new-shapefile-data">Creation of new shapefile data</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-layer">Create Layer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digital-data-editing">Digital data editing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-attribute-selection-and-editing">Feature attribute selection and editing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-features">Deleting features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-features">Moving features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modifying-geometries-of-feature">Modifying geometries of feature</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-ring-to-a-polygon-feature">Add a ring to a polygon feature</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-data-data-creation-and-deletion">Editing data - Data creation and deletion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-table-editing">Attributes table editing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#digitization-errors-in-qgis">Digitization Errors in QGIS</a></li>
 </ul>
   </nav></div>
