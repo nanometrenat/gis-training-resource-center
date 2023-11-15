@@ -648,9 +648,9 @@ Advanced digitizing Toolbar<div class="sd-summary-down docutils">
 <td><p class="sd-card-text"></p></td>
 <td><p class="sd-card-text"></p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="fig/mActionMoveFeature-1.png" /><img alt="" src="../../_images/mActionMoveFeatureLine.png" /><img alt="Alt text" src="../../_images/mActionMoveFeaturePoint.png" /></p></td>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="fig/mActionMoveFeature-1.png" /><img alt="" src="../../_images/mActionMoveFeatureLine.png" /><img alt="" src="../../_images/mActionMoveFeaturePoint.png" /></p></td>
 <td><p class="sd-card-text">Move Feature(s)</p></td>
-<td><p class="sd-card-text">![Alt text]/fig/(mActionMoveFeatureCopy.png) <img alt="Alt text" src="../../_images/mActionMoveFeatureCopyLine.png" /><img alt="Alt text" src="fig/mActionMoveFeatureCopyPoint-2.png" /></p></td>
+<td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionMoveFeatureCopy.png" /> <img alt="" src="../../_images/mActionMoveFeatureCopyLine.png" /> <img alt="" src="fig/mActionMoveFeatureCopyPoint-2.png" /></p></td>
 <td><p class="sd-card-text">Copy and Move Feature(s)</p></td>
 </tr>
 <tr class="row-even"><td><p class="sd-card-text"><img alt="Alt text" src="../../_images/mActionRotateFeature.png" /></p></td>
@@ -711,7 +711,7 @@ Advanced digitizing Toolbar<div class="sd-summary-down docutils">
 <section id="digital-data-creation">
 <h2>Digital data creation<a class="headerlink" href="#digital-data-creation" title="Permalink to this heading">#</a></h2>
 <p>To digitise data for a new dataset you always have to start with creating the dataset before filling it with digitised data.</p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Create_new_vector_data.mp4"></video></p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_create_layer.mp4"></video></p>
 <ol class="arabic">
 <li><p><code class="docutils literal notranslate"><span class="pre">Layer</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">GeoPackage</span> <span class="pre">Layer</span></code> or <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Shapefile</span> <span class="pre">Layer</span></code></p></li>
 <li><p>Click on <img alt="" src="../../_images/Three_points.png" /> and navigate to the folder where you want to save the dataset.</p></li>
@@ -736,38 +736,56 @@ Advanced digitizing Toolbar<div class="sd-summary-down docutils">
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/New_GeoPackage_Layer.png"><img alt="../../_images/New_GeoPackage_Layer.png" src="../../_images/New_GeoPackage_Layer.png" style="width: 500px;" /></a>
 </figure>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>One important concept to understand before starting to add data to datasets is that whenever you make changes to a dataset other than styling, you have to put it in editing mode. This is done by selecting the layer and clicking on<img alt="" src="../../_images/mActionToggleEditing.png" />. Now the buttons for many functions of the digitalisation toolbar are clickable.
+After you are done manipulating the layer click on <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits.</p>
+</div>
 <section id="creation-of-point-data">
 <h3>Creation of point data<a class="headerlink" href="#creation-of-point-data" title="Permalink to this heading">#</a></h3>
-<p>Click on the following numbers bottons as seen in the picture below. Number <strong>1</strong> will switch to edit mode, number <strong>2</strong> is to create a new entry point, number <strong>3</strong> is to move or copy point and number <strong>4</strong> is to delete entry point.</p>
-<p><img alt="" src="../../_images/New_point_creation_data.png" /></p>
-<ul class="simple">
-<li><p>Create  a  new  point:  Use  the  “Create  a  new  entity”  button  &gt;  left-click  on  the  map &gt; enter the attributes &gt; click OK &gt; a new point is created.</p></li>
-</ul>
-<p><img alt="" src="../../_images/Naming_of_point_created.png" /></p>
-<p>You can name the point as you want and enter any number in the ID and click ok. The new point feature has been created and named which can be easily seen on the map.</p>
+<p>To digitalise points, first you need an existing point layer or you need to create one (check out <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_3/en_qgis_digitalisation.html#digital-data-creation">Digital Data Creation</a> above).</p>
+<ol class="arabic simple">
+<li><p>Select the point layer you want to add data to in the Layer panel</p></li>
+<li><p>Go to the digitalisation toolbar and click on<img alt="" src="../../_images/mActionToggleEditing.png" />. No the layer is in the editing mode.</p></li>
+<li><p>Click on <img alt="" src="../../_images/mActionCapturePoint.png" />.</p></li>
+<li><p>Left-click on the feature you want to digitalise.</p></li>
+<li><p>Once you click, a window will appear <code class="docutils literal notranslate"><span class="pre">[Your</span> <span class="pre">Layer</span> <span class="pre">Name]-</span> <span class="pre">Feature</span> <span class="pre">Attribute</span></code>. Here you can add the information about this feature to the different columns, based on the attribute table of the layer.</p></li>
+<li><p>Once you are done with digitalisation <img alt="" src="../../_images/mActionSaveEdits.png" />.</p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Creat_point_feature.mp4"></video></p>
+<p>Creat_point_feature.mp4</p>
+<figure class="align-center" id="point-creation">
+<a class="reference internal image-reference" href="../../_images/point_creation.png"><img alt="../../_images/point_creation.png" src="../../_images/point_creation.png" style="width: 500px;" /></a>
+</figure>
 <section id="creation-of-line-data">
 <h4>Creation of line data<a class="headerlink" href="#creation-of-line-data" title="Permalink to this heading">#</a></h4>
-<p>The  method  is  similar  to  digitising  a  point  (see  above).This can be possible when you have firstly created a new line shapefiles layer. Remember to change the geometry type into lines because we are creating lines data now.</p>
-<p><img alt="" src="../../_images/Creation_of_line_data.png" /></p>
-<p>See video of line data creation</p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Line_data_creation.mp4"></video></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Try:</p>
+<p>The  method  is  similar  to  digitising  a  point  (see  above). First you have to created a new line layer or use an existing one.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If you create a new line layer remember to change the geometry type into lines because we are creating lines data now.</p>
 </div>
-<p>Use  the  “Create  new  line”  button  and  click  several  times  on  the  map  (left  button)  to  draw  the  different parts of your line. When this is done, right-click to complete your line and access the Attributes window.&gt; Complete the attributes and click OK</p>
+<ol class="arabic simple">
+<li><p>Select the line layer you want to add data to in the Layer panel</p></li>
+<li><p>Go to the digitalisation toolbar and click on<img alt="" src="../../_images/mActionToggleEditing.png" />. No the layer is in the editing mode.</p></li>
+<li><p>Click on <img alt="" src="../../_images/mActionCaptureLine.png" />.</p></li>
+<li><p>To digitalise line features, click along the line. When you are done, right-click on the last point of the line to finish the feature.</p></li>
+<li><p>Once you click, a window will appear <code class="docutils literal notranslate"><span class="pre">[Your</span> <span class="pre">Layer</span> <span class="pre">Name]-</span> <span class="pre">Feature</span> <span class="pre">Attribute</span></code>. Here you can add the information about this feature to the different columns, based on the attribute table of the layer.</p></li>
+<li><p>Once you are done with digitalisation <img alt="" src="../../_images/mActionSaveEdits.png" />.</p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Creat_line_feature.mp4"></video></p>
 </section>
 <section id="creation-of-polygon-data">
 <h4>Creation of polygon data<a class="headerlink" href="#creation-of-polygon-data" title="Permalink to this heading">#</a></h4>
-<p>The method is similar to digitising a point or a line (see above).  Only  the  fourth  icon  changes  slightly:  this  one  corresponds to “Create a new polygon”</p>
-<p><img alt="" src="../../_images/polygon_data_creation.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Caution:</p>
-</div>
-<p>Please remember to firstly created a new polygon shapefiles layer so thatthe icon to create a polygon can be active and ensure you change the geometry type into polygons because we are creating polygon data now.</p>
-<p>See video of polygon data creation</p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/polygon_data_creation.mp4"></video></p>
+<p>The method is similar to digitising a point or a line (see above).</p>
+<ol class="arabic simple">
+<li><p>Select the polygon layer you want to add data to in the Layer panel</p></li>
+<li><p>Go to the digitalisation toolbar and click on<img alt="" src="../../_images/mActionToggleEditing.png" />. No the layer is in the editing mode.</p></li>
+<li><p>Click on <img alt="" src="../../_images/mActionCapturePoint.png" />.</p></li>
+<li><p>To digitalise polygon features, left-click around the area you want do digitise. When you are done, right-click on the last point of the area to finish the feature.</p></li>
+<li><p>Once you click, a window will appear <code class="docutils literal notranslate"><span class="pre">[Your</span> <span class="pre">Layer</span> <span class="pre">Name]-</span> <span class="pre">Feature</span> <span class="pre">Attribute</span></code>. Here you can add the information about this feature to the different columns, based on the attribute table of the layer.</p></li>
+<li><p>Once you are done with digitalisation <img alt="" src="../../_images/mActionSaveEdits.png" />.</p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_digitize_add_feature.mp4"></video></p>
 </section>
 </section>
 <section id="creation-of-new-shapefile-data">
