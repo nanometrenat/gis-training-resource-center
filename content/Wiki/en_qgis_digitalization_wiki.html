@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Didgitalization &#8212; GIS Resource Training Center</title>
+    <title>Digitalization &#8212; GIS Resource Training Center</title>
   
   
   
@@ -186,7 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_layer_concept_wiki.html">Layer Concept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_attribute_table_wiki.html">Attribute Table in QGIS</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Didgitalization</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Digitalization</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="en_qgis_data_classification_wiki.html">Data Classification</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -451,7 +451,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -462,11 +464,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Didgitalization</h1>
+    <h1>Digitalization</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-layer">Create a new layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-geometries-to-a-layer">Add geometries to a layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-existing-geometries-in-the-layer">Modify existing geometries in the layer</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -476,8 +488,58 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="didgitalization">
-<h1>Didgitalization<a class="headerlink" href="#didgitalization" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="digitalization">
+<h1>Digitalization<a class="headerlink" href="#digitalization" title="Permalink to this heading">#</a></h1>
+<p>Digitization is the process of converting geographic data from maps or images into digital form commonly represented as vector data.
+During this procedure, spatial information from maps or images is traced, forming points, polylines, or polygons.
+To digitize data for a new dataset you always have to start with creating the dataset before filling it with digitized data.</p>
+<section id="create-a-new-layer">
+<h2>Create a new layer<a class="headerlink" href="#create-a-new-layer" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Layer</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">GeoPackage</span> <span class="pre">Layer</span></code> or <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Shapefile</span> <span class="pre">Layer</span></code></p></li>
+<li><p>Click on <img alt="" src="../../_images/Three_points.png" /> and navigate to the folder where you want to save the dataset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">encoding</span></code>: Make sure this is set to UTF-8</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">type</span></code>: Select the type of feature you want to digitalise e.g. points, lines or polygones.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Additional</span> <span class="pre">dimension</span></code> you should always make sure that you check <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p>Select the coordinate system you want to set for the new layer. By default, the QGIS selects the project CRS. If you want to change the CRS click on <img alt="" src="../../_images/mIconProjectionEnabled.png" />.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Field</span></code> you can add columns to the new layer.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Type</span></code>: Select the data type the column will have e.g. <code class="docutils literal notranslate"><span class="pre">Text</span></code>, <code class="docutils literal notranslate"><span class="pre">Whole</span> <span class="pre">number</span></code>, <code class="docutils literal notranslate"><span class="pre">Decimal</span> <span class="pre">Number</span></code>, <code class="docutils literal notranslate"><span class="pre">Date</span></code>.</p></li>
+<li><p>Click on <img alt="" src="../../_images/mActionNewAttribute.png" /> to add the new column to the <code class="docutils literal notranslate"><span class="pre">Fields</span> <span class="pre">List</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
+</ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/fig/raw/main/en_qgis_create_layer.mp4"></video></p>
+</section>
+<section id="add-geometries-to-a-layer">
+<h2>Add geometries to a layer<a class="headerlink" href="#add-geometries-to-a-layer" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Open a new <code class="docutils literal notranslate"><span class="pre">polygone</span> <span class="pre">layer</span></code>.</p></li>
+<li><p>Clicking on <img alt="" src="../../_images/mActionToggleEditing.png" /> start <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code> and Add Feature: <code class="docutils literal notranslate"><span class="pre">Capture</span> <span class="pre">Polygone</span></code><img alt="" src="../../_images/mActionCapturePolygon.png" />|.</p></li>
+<li><p>Draw geometries and enter <code class="docutils literal notranslate"><span class="pre">feature</span> <span class="pre">attributes</span></code>, like <em>id</em> and <em>name</em>.</p></li>
+<li><p>Save edits <img alt="" src="../../_images/mActionSaveEdits.png" /> , exit <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code>.</p></li>
+</ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/fig/raw/main/en_qgis_digitize_add_feature.mp4"></video></p>
+<ul class="simple">
+<li><p>Clicking on <img alt="" src="../../_images/mActionToggleEditing.png" /> start <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code>.</p></li>
+<li><p>Add Feature: <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Ring</span></code><img alt="" src="../../_images/mActionAddRing.png" /> (e.g. map the inner courtyard of a building, or -  as shown in the video - create a cercle to mark an isle in the lake).</p></li>
+<li><p>To open the <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Digitizing</span> <span class="pre">Toolbar</span></code> go to <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&gt;</span> <span class="pre">Toolboxes</span> <span class="pre">&gt;</span> <span class="pre">Advanced</span> <span class="pre">Digitizing</span> <span class="pre">Toolbar</span></code>.</p></li>
+<li><p>To add rectangles ‘automatically’ go to <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&gt;</span> <span class="pre">Toolbars</span> <span class="pre">&gt;</span> <span class="pre">Shape</span> <span class="pre">Digitizing</span> <span class="pre">Toolbar</span></code>.</p></li>
+</ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/fig/raw/main/en_qgis_digitize_add_ring.mp4"></video></p>
+</section>
+<section id="modify-existing-geometries-in-the-layer">
+<h2>Modify existing geometries in the layer<a class="headerlink" href="#modify-existing-geometries-in-the-layer" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Clicking on <img alt="" src="../../_images/mActionToggleEditing.png" /> start <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Move</span> <span class="pre">vertices</span></code> and <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">new</span> <span class="pre">vertices</span></code>.</p></li>
+<li><p>Save edits <img alt="" src="../../_images/mActionSaveEdits.png" />, exit <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code>.</p></li>
+</ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/fig/raw/main/en_qgis_digitize_move_vertices.mp4"></video></p>
+<p>Further resources:</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Zer558SnKX4"><img alt="Digitizing shapefile QGIS" src="../../_images/en_digitizing_shapefiles.png" /></a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -534,6 +596,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-layer">Create a new layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-geometries-to-a-layer">Add geometries to a layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-existing-geometries-in-the-layer">Modify existing geometries in the layer</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
