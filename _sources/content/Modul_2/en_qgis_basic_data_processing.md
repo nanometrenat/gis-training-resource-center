@@ -39,8 +39,11 @@ Go to the data source manager and choose vector on the right. By clicking on the
 :::
 
 :::{tab-item} GeoPackage import
+Go to the data source manager and choose GeoPackage on the right. Click on New to add a connection. Browse through your data to the Geopackage and add. By clicking on Connect and Add you can add the data to your project.
 
 
+![datasource manager](../../fig/en_datasourcemanager_qgis.png)
+![import gpkg](../../fig/en_import_gpkg.png)
 :::
 
 ::::
@@ -100,7 +103,7 @@ First download the plugin by following the steps:
 
 ```{figure} /fig/en_install_plugin.png
 ---
-height: 500px
+width: 250
 name: install_plugin
 ---
 Screenshot of how to install plugins
