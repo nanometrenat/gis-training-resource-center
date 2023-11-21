@@ -474,11 +474,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-symbol-and-categorized-data-classification">Single symbol and categorized data classification:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-of-ordinal-scaled-data-see-old-wiki">Classification of ordinal scaled data (see old Wiki)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graduated-data-classification">Graduated data classification:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-of-metric-scaled-data-see-old-wiki">Classification of metric scaled data (see old Wiki)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subsection-to-be-created">Subsection to be created:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-symbol-classification">Single symbol classification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categorized-classification">Categorized classification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graduated-classification">Graduated classification</a></li>
 </ul>
             </nav>
         </div>
@@ -492,52 +490,119 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-classification">
 <h1>Data Classification<a class="headerlink" href="#data-classification" title="Permalink to this heading">#</a></h1>
-<section id="single-symbol-and-categorized-data-classification">
-<h2>Single symbol and categorized data classification:<a class="headerlink" href="#single-symbol-and-categorized-data-classification" title="Permalink to this heading">#</a></h2>
+<p>The attributes of geospatial data are stored in a specific column within the attribute table.</p>
+<section id="single-symbol-classification">
+<h2>Single symbol classification<a class="headerlink" href="#single-symbol-classification" title="Permalink to this heading">#</a></h2>
+<p>By default, QGIS visualizes all layers in the <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">symbol</span></code> setting. This means all the features of a layer are visualised the same. In this setting, you can change many parameters like colour or opacity <strong>but you can not classify any data!</strong></p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Single_symbol_video.mp4"></video></p>
+<p><strong>To adjust the style of a layer…</strong></p>
+<ol class="arabic simple">
+<li><p>Right-click on your layer</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>Confirm that the layer setting is on <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">Symbol</span></code></p></li>
+<li><p>Select the colour of your choice in the drop-down menu. For more colour options select in the drop-down menu <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">Color</span></code></p></li>
+<li><p><em>Optional</em>:. You can adjust the opacity/ transparency of the layer. This can be very useful when you want to show multiple overlapping layers.</p></li>
+<li><p><em>Optional</em>: Here you can set the unit type. This is usefull when you want for example visualize points in a certain size.</p></li>
+<li><p>Optional. Here you can find standard and previously used styles quickly.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the window.</p></li>
+</ol>
+<figure class="align-center" id="basic-classification">
+<a class="reference internal image-reference" href="../../_images/Single_symbol_classify.png"><img alt="../../_images/Single_symbol_classify.png" src="../../_images/Single_symbol_classify.png" style="width: 900px;" /></a>
+</figure>
 </section>
-<section id="classification-of-ordinal-scaled-data-see-old-wiki">
-<h2>Classification of ordinal scaled data (see old Wiki)<a class="headerlink" href="#classification-of-ordinal-scaled-data-see-old-wiki" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Select the layer you want to classify and click on the Styling panel icon above.</p></li>
-<li><p>Click on Single symbol and select Categorized.</p></li>
-<li><p>Chose the column which contains the data you want to use.</p></li>
-<li><p>Click on Classify below in the styling panel.</p></li>
-<li><p>Bring the classes in the right order.</p></li>
-<li><p>Click on the small color icon in the Symbol column.</p></li>
-<li><p>Adjust the colours accordingly to the class values by clicking on the corresponding color bar.</p></li>
-<li><p>You may change also the Opacity by using the slider below.</p></li>
-<li><p>Use the Back arrow icon above to change further values.</p></li>
-<li><p>Save all via the Apply-Button.</p></li>
-</ul>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_QGIS_classification_ordinal_data.mp4"></video></p>
+<section id="categorized-classification">
+<h2>Categorized classification<a class="headerlink" href="#categorized-classification" title="Permalink to this heading">#</a></h2>
+<p>Categorized classification in QGIS groups spatial data into distinct categories based on specific attributes. This classification enhances the organization and interpretation of geospatial information for clearer insights.</p>
+<p>Categorized classification is usually used for <strong>nominal</strong> and <strong>ordinal</strong> scaled data.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data Scale</p></th>
+<th class="head"><p>Definition</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Typical Data Format</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Nominal Scale</p></td>
+<td><p>Categories without inherent order or ranking</p></td>
+<td><p>Land cover types, districts, livelihood zones</p></td>
+<td><p>Text (“Desert”) or Integer (5)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ordinal Scale</p></td>
+<td><p>Categories with a meaningful order or ranking</p></td>
+<td><p>Ranks (e.g., low, medium)</p></td>
+<td><p>Text (“high”) or Integer (5)</p></td>
+</tr>
+</tbody>
+</table>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Classify_by_categorized.mp4"></video></p>
+<p><strong>To classify data in categories…</strong></p>
+<ol class="arabic simple">
+<li><p>Right-click on your layer</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Categorized</span></code></p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Value</span></code> dropdown menu select the column based on which you want to categorize your data.</p></li>
+<li><p>Further down the window click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  Now you should see all unique values or attributes of the selected column in <code class="docutils literal notranslate"><span class="pre">Value</span></code>. To add or delete single values use the <code class="docutils literal notranslate"><span class="pre">-</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code> buttons.</p></li>
+<li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> dropdown menu you can select the colours and symbols you want to use</p></li>
+<li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">ramp</span></code> dropdown menu you can specify the range of colours you want to use</p></li>
+<li><p><em>Optional</em>: You can open the panel <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Rendering</span></code> on the button of the window. Here you can adjust the opacity/ transparency of the layer.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the window.</p></li>
+</ol>
+<figure class="align-center" id="id1">
+<img alt="../../_images/Categorized_district_map_SierraLeone.png" src="../../_images/Categorized_district_map_SierraLeone.png" />
+</figure>
 </section>
-<section id="graduated-data-classification">
-<h2>Graduated data classification:<a class="headerlink" href="#graduated-data-classification" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="classification-of-metric-scaled-data-see-old-wiki">
-<h2>Classification of metric scaled data (see old Wiki)<a class="headerlink" href="#classification-of-metric-scaled-data-see-old-wiki" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Open the Styling panel and select the layer you want to classify.</p></li>
-<li><p>In the Styling panel select Graduated.
-Choose the column which contains the data you want to use.</p></li>
-<li><p>Create a specific number classes by clicking on the corresponding arrow buttons below.</p></li>
-<li><p>You may change the Mode of Interval by selecting a specific one and also the precision of the values.</p></li>
-<li><p>Set the limits of the classes by clicking in the “Value” column.</p></li>
-<li><p>Add a name for each class by clicking in the “Legend” column.</p></li>
-<li><p>Bring the classes in the right order</p></li>
-<li><p>Adjust the colours.</p></li>
-<li><p>Save all via the Apply-Button.</p></li>
-</ul>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_QGIS_graduated_classes.mp4"></video></p>
-</section>
-<hr class="docutils" />
-<section id="subsection-to-be-created">
-<h2>Subsection to be created:<a class="headerlink" href="#subsection-to-be-created" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Single symbol</p></li>
-<li><p>Categorized</p></li>
-<li><p>Graduated</p></li>
-</ul>
+<section id="graduated-classification">
+<h2>Graduated classification<a class="headerlink" href="#graduated-classification" title="Permalink to this heading">#</a></h2>
+<p>Graduated classification in GIS involves categorizing spatial data into classes or ranges based on a progression of values. This method is particularly useful for visualizing quantitative data, allowing for the differentiation of intensity, density, or magnitude across a spectrum, facilitating a nuanced representation of geographic phenomena.</p>
+<p>Graduated classification is used for quantitative data usually <strong>interval</strong> or <strong>ratio</strong> scaled.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data Scale</p></th>
+<th class="head"><p>Definition</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Typical Data Format</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Interval Scale</p></td>
+<td><p>Equal intervals between values, no true zero point</p></td>
+<td><p>Temperature (Celsius)</p></td>
+<td><p>Float (44.5 Degree)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ratio Scale</p></td>
+<td><p>Equal intervals with a true zero point</p></td>
+<td><p>Population, Length, Number of trees</p></td>
+<td><p>Integer (5 Trees) or Float (12.5 km of Road)</p></td>
+</tr>
+</tbody>
+</table>
+<p>To classify quantitative data there are many methods how to set up the classes. There is no single best way to select a method or to decide how many classes you like to use. It all comes down to what you want to show.</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Graduated_classification.mp4"></video></p>
+<p><strong>To classify data in classes…</strong></p>
+<ol class="arabic simple">
+<li><p>Right-click on your layer</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Graduated</span></code></p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Value</span></code> dropdown menu select the column based on which you want to classify your data.</p></li>
+<li><p>Downright select the number of classes you want to use.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Mode</span></code> select the classification method you want to use e.g. Equal count (Quantile).</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  Now you should see all classes and the distribution of values. To add or delete single classes use the <code class="docutils literal notranslate"><span class="pre">-</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code> buttons.</p></li>
+<li><p><em>Optional</em>: Click on <code class="docutils literal notranslate"><span class="pre">Histogram</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Values</span></code>. Now you can see the exact distribution of values over the classes. This is very practical to decide on a classification method. You can also check the mean value and standard deviation.</p></li>
+</ol>
+<figure class="align-center" id="raduated-classification">
+<a class="reference internal image-reference" href="../../_images/Graduated_histogram.png"><img alt="../../_images/Graduated_histogram.png" src="../../_images/Graduated_histogram.png" style="width: 900px;" /></a>
+</figure>
+<ol class="arabic simple" start="9">
+<li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> dropdown menu you can select the colours and symbols you want to use.</p></li>
+<li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">ramp</span></code> dropdown menu you can specify the range of colours you want to use. To see all color ramps click on the down arrow of the <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">ramp</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Color</span> <span class="pre">Ramps</span></code>.</p></li>
+<li><p><em>Optional</em>: Under <code class="docutils literal notranslate"><span class="pre">Legend</span> <span class="pre">Format</span></code> you can adjust how precise the range of the classes will be displayed in the legend. Usually, it is practical to not use too complicated numbers in the legend.</p></li>
+<li><p><em>Optional</em>: You can open the panel <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Rendering</span></code> on the button of the window. Here you can adjust the opacity/ transparency of the layer.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the window.</p></li>
+</ol>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -606,11 +671,9 @@ Choose the column which contains the data you want to use.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-symbol-and-categorized-data-classification">Single symbol and categorized data classification:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-of-ordinal-scaled-data-see-old-wiki">Classification of ordinal scaled data (see old Wiki)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graduated-data-classification">Graduated data classification:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-of-metric-scaled-data-see-old-wiki">Classification of metric scaled data (see old Wiki)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subsection-to-be-created">Subsection to be created:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#single-symbol-classification">Single symbol classification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categorized-classification">Categorized classification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graduated-classification">Graduated classification</a></li>
 </ul>
   </nav></div>
 
