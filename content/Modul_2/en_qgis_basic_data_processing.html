@@ -475,14 +475,18 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-import">Data import</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-osm-plugin">quick osm plugin</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-turbo">overpass turbo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-basemap">Adding basemap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-osm-plugin">quick osm plugin</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-features-and-attributes">Geo features and attributes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-selection">Feature selection</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemap-selection">Basemap selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemap-selection">Basemap selection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">OpenStreetMap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickmapservices">QuickMapServices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-organization">Data organization</a></li>
 </ul>
             </nav>
         </div>
@@ -537,14 +541,43 @@ When you choose custom delimiters in the file format (3 &amp; 3.1), you can chan
 GeoPackage import</label><div class="sd-tab-content docutils">
 </div>
 </div>
-<section id="quick-osm-plugin">
-<h3>quick osm plugin<a class="headerlink" href="#quick-osm-plugin" title="Permalink to this heading">#</a></h3>
-</section>
 <section id="overpass-turbo">
 <h3>overpass turbo<a class="headerlink" href="#overpass-turbo" title="Permalink to this heading">#</a></h3>
 </section>
-<section id="adding-basemap">
-<h3>Adding basemap<a class="headerlink" href="#adding-basemap" title="Permalink to this heading">#</a></h3>
+<section id="quick-osm-plugin">
+<h3>quick osm plugin<a class="headerlink" href="#quick-osm-plugin" title="Permalink to this heading">#</a></h3>
+<p>By installing the QuickOSM plugin you can run the query directly in QGIS to download data from OpenStreetMap.
+First download the plugin by following the steps:</p>
+<figure class="align-default" id="install-plugin">
+<a class="reference internal image-reference" href="../../_images/en_install_plugin.png"><img alt="../../_images/en_install_plugin.png" src="../../_images/en_install_plugin.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Screenshot of how to install plugins</span><a class="headerlink" href="#install-plugin" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="search-plugin">
+<a class="reference internal image-reference" href="../../_images/en_search_plugin.png"><img alt="../../_images/en_search_plugin.png" src="../../_images/en_search_plugin.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Screenshot of how to search for plugins</span><a class="headerlink" href="#search-plugin" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You will see a new icon on your toolbar on the top. Now it is possible to search for your key:value in a given location and run the query. If you are unsure which key and value are used, take a look in the <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Tags">OSM wiki</a>.</p>
+<figure class="align-default" id="quickosmplugin">
+<a class="reference internal image-reference" href="../../_images/en_quickosmplugin.png"><img alt="../../_images/en_quickosmplugin.png" src="../../_images/en_quickosmplugin.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Screenshot of the QuickOSM plugin</span><a class="headerlink" href="#quickosmplugin" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<details>
+<summary>What do i do if there is no new icon?</summary>
+<br>
+If you can't find your new icon for the plugin, select view - toolbars and check that the QuickOSM plugin has a tick to be shown.
+<figure class="align-default" id="no-new-icon">
+<a class="reference internal image-reference" href="../../_images/en_no_new_icon.png"><img alt="../../_images/en_no_new_icon.png" src="../../_images/en_no_new_icon.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Screenshot of how to add a new icon</span><a class="headerlink" href="#no-new-icon" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</details>
 </section>
 </section>
 <section id="geo-features-and-attributes">
@@ -555,6 +588,23 @@ GeoPackage import</label><div class="sd-tab-content docutils">
 </section>
 <section id="basemap-selection">
 <h2>Basemap selection<a class="headerlink" href="#basemap-selection" title="Permalink to this heading">#</a></h2>
+<section id="openstreetmap">
+<h3>OpenStreetMap<a class="headerlink" href="#openstreetmap" title="Permalink to this heading">#</a></h3>
+<p>If you are using version 3.4 or higher in QGIS, it is by default possible to add the OSM base map to your project. Unfold the XYZ tiles, right-click on OpenStreetMap and select add layer to project.</p>
+<figure class="align-default" id="add-osm-basemap">
+<a class="reference internal image-reference" href="../../_images/en_add_osm_basemap.png"><img alt="../../_images/en_add_osm_basemap.png" src="../../_images/en_add_osm_basemap.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Screenshot of how to add OSM basemap</span><a class="headerlink" href="#add-osm-basemap" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="quickmapservices">
+<h3>QuickMapServices<a class="headerlink" href="#quickmapservices" title="Permalink to this heading">#</a></h3>
+<p>BRC exc 1.3</p>
+</section>
+</section>
+<section id="data-organization">
+<h2>Data organization<a class="headerlink" href="#data-organization" title="Permalink to this heading">#</a></h2>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -624,14 +674,18 @@ GeoPackage import</label><div class="sd-tab-content docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-import">Data import</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-osm-plugin">quick osm plugin</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-turbo">overpass turbo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-basemap">Adding basemap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-osm-plugin">quick osm plugin</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-features-and-attributes">Geo features and attributes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-selection">Feature selection</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemap-selection">Basemap selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemap-selection">Basemap selection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">OpenStreetMap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickmapservices">QuickMapServices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-organization">Data organization</a></li>
 </ul>
   </nav></div>
 
