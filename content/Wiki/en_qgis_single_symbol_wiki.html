@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Single Symbol &#8212; GIS Resource Training Center</title>
+    <title>Single symbol classification &#8212; GIS Resource Training Center</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Wiki/en_qgis_single_symbol_wiki';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Catagorized" href="en_qgis_categorized_wiki.html" />
+    <link rel="next" title="Categorized classification" href="en_qgis_categorized_wiki.html" />
     <link rel="prev" title="Data Classification" href="en_qgis_data_classification_wiki.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -190,9 +190,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="en_qgis_data_classification_wiki.html">Data Classification</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Single Symbol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_categorized_wiki.html">Catagorized</a></li>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_graduated_wiki.html">Graduated</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Single symbol classification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_categorized_wiki.html">Categorized classification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_graduated_wiki.html">Graduated classification</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_geoprocessing_wiki.html">Geoprocessing</a></li>
@@ -462,7 +462,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Single Symbol</h1>
+    <h1>Single symbol classification</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -476,8 +476,25 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="single-symbol">
-<h1>Single Symbol<a class="headerlink" href="#single-symbol" title="Permalink to this heading">#</a></h1>
+  <section id="single-symbol-classification">
+<h1>Single symbol classification<a class="headerlink" href="#single-symbol-classification" title="Permalink to this heading">#</a></h1>
+<p>By default, QGIS visualizes all layers in the <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">symbol</span></code> setting. This means all the features of a layer are visualised the same. In this setting, you can change many parameters like colour or opacity <strong>but you can not classify any data!</strong></p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Single_symbol_video.mp4"></video></p>
+<p><strong>To adjust the style of a layer…</strong></p>
+<ol class="arabic simple">
+<li><p>Right-click on your layer</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>Confirm that the layer setting is on <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">Symbol</span></code></p></li>
+<li><p>Select the colour of your choice in the drop-down menu. For more colour options select in the drop-down menu <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">Color</span></code></p></li>
+<li><p><em>Optional</em>:. You can adjust the opacity/ transparency of the layer. This can be very useful when you want to show multiple overlapping layers.</p></li>
+<li><p><em>Optional</em>: Here you can set the unit type. This is usefull when you want for example visualize points in a certain size.</p></li>
+<li><p>Optional. Here you can find standard and previously used styles quickly.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the window.</p></li>
+</ol>
+<figure class="align-center" id="basic-classification">
+<a class="reference internal image-reference" href="../../_images/Single_symbol_classify.png"><img alt="../../_images/Single_symbol_classify.png" src="../../_images/Single_symbol_classify.png" style="width: 900px;" /></a>
+</figure>
 </section>
 
     <script type="text/x-thebe-config">
@@ -524,7 +541,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Catagorized</p>
+        <p class="prev-next-title">Categorized classification</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
