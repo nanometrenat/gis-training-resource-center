@@ -207,6 +207,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_non_spatial_joins_wiki.html">Non-Spatial Joins</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../Wiki/en_qgis_raster_basic_wiki.html">Basic Raster operations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 1- Introduction GIS</span></p>
 <ul class="nav bd-sidenav">
@@ -475,8 +476,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-queries">Geodata queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries">Spatial queries</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-click">Spatial queries: select by click</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-queries">Geodata queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Spatial queries: select by click</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-polygon">Spatial queries: select by polygon</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-location">Spatial queries: select by location</a></li>
 </ul>
@@ -504,11 +509,42 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geodata-selection-and-queries">
 <h1>Geodata Selection and Queries<a class="headerlink" href="#geodata-selection-and-queries" title="Permalink to this heading">#</a></h1>
+<p>Geodata selection and non-spatial queries in QGIS involve the targeted extraction of specific information from spatial datasets. This process enables users to choose and analyze relevant geographic features based on defined criteria. Imagine you have a large dataset but you only want to work with specific data from that dataset. For example all villages in a district or all villages with a health station.</p>
+<p>In general, there are two ways to select features in QGIS.</p>
+<ol class="arabic simple">
+<li><p>Based on the location of the feature 	-&gt; Spatial Queries</p></li>
+</ol>
+<p>OR</p>
+<ol class="arabic simple" start="2">
+<li><p>Based on criteria you can specify	-&gt; Non-spatial Queries</p></li>
+</ol>
+<section id="spatial-queries">
+<h2>Spatial queries<a class="headerlink" href="#spatial-queries" title="Permalink to this heading">#</a></h2>
+<p>Spatial queries are all methods you use to select features based on their location. Here we will start explaining the easier methods and then move to the more complex ones.</p>
+<section id="spatial-queries-select-by-click">
+<h3>Spatial queries: select by click<a class="headerlink" href="#spatial-queries-select-by-click" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Select the layer you want to query from.</p></li>
+<li><p>Click on at <img alt="" src="../../_images/mActionSelectRectangle.png" /> the toolbar.</p></li>
+<li><p>No click on the features you want to select. To select multiple features press and hold <code class="docutils literal notranslate"><span class="pre">Shift</span></code> on your keyboard.The features you selected will turn yellow.</p></li>
+<li><p><em>Optional</em>: Open the attribute table. Here the selected features will be marked in blue. To only see selected features click in the down left corner on the dropdown menu and select <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">selected</span> <span class="pre">Features</span></code>.</p></li>
+<li></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To deselect features click on in the toolbar.</p>
+</div>
+<p>This section demonstrate how to select an area or location by just a click and view its spatial features. Below is a map of Nigeria. Click on the icon number 1 which is the select feature and click on any part of the map that you want to select. See point number 2 which has already shown yellow as the selected area. Open the attribute table through the layer pannel, number 3 and click on number 4 to just view the feature of the selected part by clicking on selected features, then you arrive at number 6 which display only selected features.</p>
+<p><img alt="" src="../../_images/Select_by_click.png" /></p>
+<p>See video of select by click</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Select_by_click.mp4"></video></p>
+</section>
+</section>
 <section id="geodata-queries">
 <h2>Geodata queries<a class="headerlink" href="#geodata-queries" title="Permalink to this heading">#</a></h2>
 <p>Spatial queries allows you to select features in layers by their spatial relationships (intersect, contain, touch etc.) with features from another layer. In Qgis, this functionality is available via the selection by location and extract by location processing tools.</p>
-<section id="spatial-queries-select-by-click">
-<h3>Spatial queries: select by click<a class="headerlink" href="#spatial-queries-select-by-click" title="Permalink to this heading">#</a></h3>
+<section id="id1">
+<h3>Spatial queries: select by click<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>This section demonstrate how to select an area or location by just a click and view its spatial features. Below is a map of Nigeria. Click on the icon number 1 which is the select feature and click on any part of the map that you want to select. See point number 2 which has already shown yellow as the selected area. Open the attribute table through the layer pannel, number 3 and click on number 4 to just view the feature of the selected part by clicking on selected features, then you arrive at number 6 which display only selected features.</p>
 <p><img alt="" src="../../_images/Select_by_click.png" /></p>
 <p>See video of select by click</p>
@@ -702,8 +738,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-queries">Geodata queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries">Spatial queries</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-click">Spatial queries: select by click</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-queries">Geodata queries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Spatial queries: select by click</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-polygon">Spatial queries: select by polygon</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-location">Spatial queries: select by location</a></li>
 </ul>
