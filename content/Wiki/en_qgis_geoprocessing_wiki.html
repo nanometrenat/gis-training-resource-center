@@ -271,6 +271,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">GIS in Anticipatory Action</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../GIS_AA/en_qgis_drought_trigger_somalia.html">QGIS Trigger Workflow for Somalia</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_how_to_training.html">How to do trainings?</a></li>
@@ -479,6 +483,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer">Buffer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clip">Clip</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dissolve">Dissolve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection">Intersection</a></li>
 </ul>
             </nav>
         </div>
@@ -553,6 +558,42 @@ Example: Extract the rail network of Germany<div class="sd-summary-down docutils
 <p>In QGIS, only the attributes selected for the dissolve operation will receive the accurate attribute, while the remaining attributes remain unaggregated; hence, in this example, the name is not accurately represented (e.g. the name for Western Europe might be mistakenly assigned as “Netherlands”).</p>
 </div>
 </section>
+<section id="intersection">
+<h2>Intersection<a class="headerlink" href="#intersection" title="Permalink to this heading">#</a></h2>
+<p>The <img alt="" src="../../_images/intersection_icon.png" /> <code class="docutils literal notranslate"><span class="pre">interstion</span></code> tool extracts the part of layers which overlap.</p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Vector</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Geoprocessing</span> <span class="pre">Tool</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Intersection</span></code> OR <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for <code class="docutils literal notranslate"><span class="pre">Intersection</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">layer</span></code>: select layer one</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Overlay</span> <span class="pre">layer</span></code>: select layer two</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Intersection</span></code>: Speficiy where you want to save the results and give it a good name</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Order of input layer and overlay layer does not matter here</p></li>
+<li><p>Possibility to keep only certain fields of the output layer</p></li>
+<li><p>⚠️ Attention: Attribute values that refer to output areas (e.g. population) are no longer meaningful after the intersect</p></li>
+</ul>
+</div>
+<figure class="align-default" id="intersction-concept">
+<a class="reference internal image-reference" href="../../_images/Intersect_concept_2.png"><img alt="../../_images/Intersect_concept_2.png" src="../../_images/Intersect_concept_2.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">Intersection</span></code> operation between a two-features input layer and a single feature overlay layer (left) - resulting features are moved for clarity (right)</span><a class="headerlink" href="#intersction-concept" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p>Source: <a class="reference external" href="http://GISGeography.com">GISGeography.com</a></p>
+</div>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Example: Extract the rail network of Germany<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_intersect.mp4"></video></p>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -621,6 +662,7 @@ Example: Extract the rail network of Germany<div class="sd-summary-down docutils
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer">Buffer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clip">Clip</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dissolve">Dissolve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection">Intersection</a></li>
 </ul>
   </nav></div>
 
