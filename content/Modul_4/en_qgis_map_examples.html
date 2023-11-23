@@ -460,7 +460,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -476,6 +478,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-examples">Map Examples</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -487,6 +497,40 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="map-example">
 <h1>Map Example<a class="headerlink" href="#map-example" title="Permalink to this heading">#</a></h1>
+<p>In this chapter we will go over some common mistakes and good practice in map design. A second part of this chapter will be dedicated to discuss well designed maps and give examples on how to recreate the design in QGIS.</p>
+<section id="map-examples">
+<h2>Map Examples<a class="headerlink" href="#map-examples" title="Permalink to this heading">#</a></h2>
+<p>In this section, we will present some well designed maps and discuss how to create similar maps. If you need further examples for good map design, check out these websites/repositories:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.reachresourcecentre.info/search/?search=1&amp;initiative%5B%5D=reach&amp;ptype%5B%5D=map&amp;dates=&amp;keywords">researchresourcecentre.info maps</a></p></li>
+<li><p><a class="reference external" href="https://geo.msf.org/catalogue/DOCID-1877329211-4979?from=0&amp;sort=_score&amp;desc=true">geo.msf.org maps</a></p></li>
+<li><p><a class="reference external" href="https://reliefweb.int/updates?advanced-search=%28S1242%29_%28F12%29">reliefweb.int maps</a></p></li>
+</ul>
+<p>The map above shows the flood affected areas, as well as the important road networks in the Somali Region, Ethtopia, in November 2023. Maps such as these are crucial for humanitarian aid workers when planning relief or aid operations and need to be up to date. They display important settlements, and most importantly, the accessibility of roads and airstrips.</p>
+<p>This is a thematic map with a clear purpose and the elements on the map are reduced to the most necessary elements relevant to the purpose of the map.</p>
+<blockquote>
+<div><p>Insert links to the tutorial content/wiki</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>A shapefile for the flood affected areas was given a hashed fill. In QGIS, you can find this symbology</p></li>
+<li><p>A layer with the road network has been put above the layer with the flood-affected areas. The road symbology has been <strong>categorized</strong> into three categories: Accessible road (green), partially accessible road (grey), and hard to reach road (red).</p></li>
+<li><p>The topmost layer is a point-layer with information on unaccessible roads or bridges as well as the location of airstrips and which airstrips are accessible. The points have been symbolized with SVG-symbols.</p></li>
+<li><p>(The administrative boundaries of Ethiopia are set apart from the surrounding countries by making the polygon a clear white and the surrounding countries in a shade of grey. This can be achieved by copying the polygon of Ethiopia into a new layer, and changing the symbology respectively)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The colour scheme of the roads makes an intuitive reading of the map possible, as red is associated with negative qualities, whereas green with positive qualities. It should be noted, however, that persons with colourblindness will have trouble reading the map.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Context: Situation in Ethiopia<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><hr class="docutils" />
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -543,6 +587,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-examples">Map Examples</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
