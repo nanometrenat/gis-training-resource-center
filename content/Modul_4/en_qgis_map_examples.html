@@ -483,7 +483,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Examples for Good Map Design</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Examples for Good Map Design</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-examples">Map Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-1-flood-affected-areas-and-roads-in-the-somali-region-ethiopia">Map Example 1: Flood-affected areas and roads in the Somali Region, Ethiopia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-2-flooding-risk-in-the-ouham-region-central-african-republic">Map Example 2: Flooding Risk in the Ouham Region, Central African Republic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-3">Map Example 3:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#good-practices-and-common-mistakes-in-mapping">Good practices and common mistakes in mapping</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-composition">Map composition</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-elements-of-a-map">Key elements of a map</a></li>
@@ -496,12 +504,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#color-gradient-vs-distinct-color-palette">2. Color gradient vs. distinct color palette</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-in-a-single-color-vs-gradient-between-two-colors">3. Gradient in a single color vs. Gradient between two colors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limited-geometric-symbols-vs-complex-icons-and-symbols">4. Limited Geometric Symbols vs. Complex Icons and Symbols</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-examples">Map Examples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-1-flood-affected-areas-and-roads-in-the-somali-region-ethiopia">Map Example 1: Flood-affected areas and roads in the Somali Region, Ethiopia</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-2-flooding-risk-in-the-ouham-region-central-african-republic">Map Example 2: Flooding Risk in the Ouham Region, Central African Republic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-3">Map Example 3:</a></li>
 </ul>
 </li>
 </ul>
@@ -532,6 +534,68 @@ Insert links to the tutorial content/wiki</p>
 <li><p><a class="reference external" href="https://geo.msf.org/catalogue/DOCID-1877329211-4979?from=0&amp;sort=_score&amp;desc=true">geo.msf.org maps</a></p></li>
 <li><p><a class="reference external" href="https://reliefweb.int/updates?advanced-search=%28S1242%29_%28F12%29">reliefweb.int maps</a></p></li>
 </ul>
+<section id="map-examples">
+<h2>Map Examples<a class="headerlink" href="#map-examples" title="Permalink to this heading">#</a></h2>
+<section id="map-example-1-flood-affected-areas-and-roads-in-the-somali-region-ethiopia">
+<h3>Map Example 1: Flood-affected areas and roads in the Somali Region, Ethiopia<a class="headerlink" href="#map-example-1-flood-affected-areas-and-roads-in-the-somali-region-ethiopia" title="Permalink to this heading">#</a></h3>
+<figure class="align-default" id="flood-affected-areas-in-somali">
+<a class="reference internal image-reference" href="../../_images/ET_Somali_Humanitarian_Access_Flooded_Areas_11152023_A4.png"><img alt="../../_images/ET_Somali_Humanitarian_Access_Flooded_Areas_11152023_A4.png" src="../../_images/ET_Somali_Humanitarian_Access_Flooded_Areas_11152023_A4.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Flood affected areas and roads in Somali Region, Ethiopia (Source: OCHA)</span><a class="headerlink" href="#flood-affected-areas-in-somali" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The map above shows the flood affected areas, as well as the important road networks in the Somali Region, Ethtopia, in November 2023. Maps such as these are crucial for humanitarian aid workers when planning relief or aid operations and need to be up to date. They display important settlements, and most importantly, the accessibility of roads and airstrips.</p>
+<p>This is a thematic map with a clear purpose and the elements on the map are reduced to the most necessary elements relevant to the purpose of the map.</p>
+<ul class="simple">
+<li><p>A shapefile for the flood affected areas was given a hashed fill. In QGIS, you can find this symbology</p></li>
+<li><p>A layer with the road network has been put above the layer with the flood-affected areas. The road symbology has been <strong>categorized</strong> into three categories: Accessible road (green), partially accessible road (grey), and hard to reach road (red).</p></li>
+<li><p>The topmost layer is a point-layer with information on unaccessible roads or bridges as well as the location of airstrips and which airstrips are accessible. The points have been symbolized with SVG-symbols.</p></li>
+<li><p>(The administrative boundaries of Ethiopia are set apart from the surrounding countries by making the polygon a clear white and the surrounding countries in a shade of grey. This can be achieved by copying the polygon of Ethiopia into a new layer, and changing the symbology respectively)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The colour scheme of the roads makes an intuitive reading of the map possible, as red is associated with negative qualities, whereas green with positive qualities. It should be noted, however, that persons with colourblindness will have trouble reading the map.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Context: Situation in Ethiopia<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="map-example-2-flooding-risk-in-the-ouham-region-central-african-republic">
+<h3>Map Example 2: Flooding Risk in the Ouham Region, Central African Republic<a class="headerlink" href="#map-example-2-flooding-risk-in-the-ouham-region-central-african-republic" title="Permalink to this heading">#</a></h3>
+<p>This map displays the flooding risk using a raster image. The raster data was calculated using several factors, including the precipitation intensity, the maximum duration of precipiation, the height of the nearest drainage, the flow direction and river network, the topographic humidity, a digital elevation model and the ground cover.</p>
+<ul class="simple">
+<li><p>The raster data is displayed using a diverging colour ramp. (Here you can check out how to assign a colour ramp)</p></li>
+<li><p>The surrounding administrative districts have been overlayed with a transparent grey.</p></li>
+<li><p>The river network has been added in blue</p></li>
+<li><p>The mainroads as well have been added in black</p></li>
+<li><p>Settlements are displayed i black dots. This helps to identify areas whith a higher population density in the areas most at risk</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Context: Situation in the Central African Republic<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details></section>
+<hr class="docutils" />
+<section id="map-example-3">
+<h3>Map Example 3:<a class="headerlink" href="#map-example-3" title="Permalink to this heading">#</a></h3>
+<figure class="align-default" id="infrastructure-map-kunduz-district-afghanistan">
+<a class="reference internal image-reference" href="../../_images/REACH_AFG_Map_ABR_infrastructure_mapping_Kunduz_Kunduz_PD-07_17May2022_A3P.png"><img alt="../../_images/REACH_AFG_Map_ABR_infrastructure_mapping_Kunduz_Kunduz_PD-07_17May2022_A3P.png" src="../../_images/REACH_AFG_Map_ABR_infrastructure_mapping_Kunduz_Kunduz_PD-07_17May2022_A3P.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Infrastructure Map Kunduz Province</span><a class="headerlink" href="#infrastructure-map-kunduz-district-afghanistan" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="good-practices-and-common-mistakes-in-mapping">
 <h1>Good practices and common mistakes in mapping<a class="headerlink" href="#good-practices-and-common-mistakes-in-mapping" title="Permalink to this heading">#</a></h1>
@@ -553,7 +617,7 @@ Insert links to the tutorial content/wiki</p>
 <figure class="align-default" id="good-map-composition-example">
 <a class="reference internal image-reference" href="../../_images/en_good_map_composition_example.png"><img alt="../../_images/en_good_map_composition_example.png" src="../../_images/en_good_map_composition_example.png" style="width: 750px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Elements of good map composition</span><a class="headerlink" href="#good-map-composition-example" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Elements of good map composition</span><a class="headerlink" href="#good-map-composition-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <hr class="docutils" />
@@ -577,7 +641,7 @@ Insert links to the tutorial content/wiki</p>
 <figure class="align-default" id="organized-legend">
 <a class="reference internal image-reference" href="../../_images/en_legend_good_practice.png"><img alt="../../_images/en_legend_good_practice.png" src="../../_images/en_legend_good_practice.png" style="width: 750px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Example of a well organized legend</span><a class="headerlink" href="#organized-legend" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Example of a well organized legend</span><a class="headerlink" href="#organized-legend" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>The scale bar</strong> is essential to a map since it gives the correspondence between a distance meas ured on the map and the distance in the real world. There are two types of scales:</p>
@@ -592,7 +656,7 @@ Insert links to the tutorial content/wiki</p>
 <figure class="align-default" id="scale-bar">
 <img alt="../../_images/example_scale_bar.png" src="../../_images/example_scale_bar.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Scale bar examples</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Scale bar examples</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -672,68 +736,6 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
 </ul>
 </section>
 </section>
-<section id="map-examples">
-<h2>Map Examples<a class="headerlink" href="#map-examples" title="Permalink to this heading">#</a></h2>
-<section id="map-example-1-flood-affected-areas-and-roads-in-the-somali-region-ethiopia">
-<h3>Map Example 1: Flood-affected areas and roads in the Somali Region, Ethiopia<a class="headerlink" href="#map-example-1-flood-affected-areas-and-roads-in-the-somali-region-ethiopia" title="Permalink to this heading">#</a></h3>
-<figure class="align-default" id="flood-affected-areas-in-somali">
-<a class="reference internal image-reference" href="../../_images/ET_Somali_Humanitarian_Access_Flooded_Areas_11152023_A4.png"><img alt="../../_images/ET_Somali_Humanitarian_Access_Flooded_Areas_11152023_A4.png" src="../../_images/ET_Somali_Humanitarian_Access_Flooded_Areas_11152023_A4.png" style="width: 800px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Flood affected areas and roads in Somali Region, Ethiopia (Source: OCHA)</span><a class="headerlink" href="#flood-affected-areas-in-somali" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>The map above shows the flood affected areas, as well as the important road networks in the Somali Region, Ethtopia, in November 2023. Maps such as these are crucial for humanitarian aid workers when planning relief or aid operations and need to be up to date. They display important settlements, and most importantly, the accessibility of roads and airstrips.</p>
-<p>This is a thematic map with a clear purpose and the elements on the map are reduced to the most necessary elements relevant to the purpose of the map.</p>
-<ul class="simple">
-<li><p>A shapefile for the flood affected areas was given a hashed fill. In QGIS, you can find this symbology</p></li>
-<li><p>A layer with the road network has been put above the layer with the flood-affected areas. The road symbology has been <strong>categorized</strong> into three categories: Accessible road (green), partially accessible road (grey), and hard to reach road (red).</p></li>
-<li><p>The topmost layer is a point-layer with information on unaccessible roads or bridges as well as the location of airstrips and which airstrips are accessible. The points have been symbolized with SVG-symbols.</p></li>
-<li><p>(The administrative boundaries of Ethiopia are set apart from the surrounding countries by making the polygon a clear white and the surrounding countries in a shade of grey. This can be achieved by copying the polygon of Ethiopia into a new layer, and changing the symbology respectively)</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The colour scheme of the roads makes an intuitive reading of the map possible, as red is associated with negative qualities, whereas green with positive qualities. It should be noted, however, that persons with colourblindness will have trouble reading the map.</p>
-</div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Context: Situation in Ethiopia<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-</div>
-</details></section>
-<hr class="docutils" />
-<section id="map-example-2-flooding-risk-in-the-ouham-region-central-african-republic">
-<h3>Map Example 2: Flooding Risk in the Ouham Region, Central African Republic<a class="headerlink" href="#map-example-2-flooding-risk-in-the-ouham-region-central-african-republic" title="Permalink to this heading">#</a></h3>
-<p>This map displays the flooding risk using a raster image. The raster data was calculated using several factors, including the precipitation intensity, the maximum duration of precipiation, the height of the nearest drainage, the flow direction and river network, the topographic humidity, a digital elevation model and the ground cover.</p>
-<ul class="simple">
-<li><p>The raster data is displayed using a diverging colour ramp. (Here you can check out how to assign a colour ramp)</p></li>
-<li><p>The surrounding administrative districts have been overlayed with a transparent grey.</p></li>
-<li><p>The river network has been added in blue</p></li>
-<li><p>The mainroads as well have been added in black</p></li>
-<li><p>Settlements are displayed i black dots. This helps to identify areas whith a higher population density in the areas most at risk</p></li>
-</ul>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Context: Situation in the Central African Republic<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-</div>
-</details></section>
-<hr class="docutils" />
-<section id="map-example-3">
-<h3>Map Example 3:<a class="headerlink" href="#map-example-3" title="Permalink to this heading">#</a></h3>
-<figure class="align-default" id="infrastructure-map-kunduz-district-afghanistan">
-<a class="reference internal image-reference" href="../../_images/REACH_AFG_Map_ABR_infrastructure_mapping_Kunduz_Kunduz_PD-07_17May2022_A3P.png"><img alt="../../_images/REACH_AFG_Map_ABR_infrastructure_mapping_Kunduz_Kunduz_PD-07_17May2022_A3P.png" src="../../_images/REACH_AFG_Map_ABR_infrastructure_mapping_Kunduz_Kunduz_PD-07_17May2022_A3P.png" style="width: 800px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Infrastructure Map Kunduz Province</span><a class="headerlink" href="#infrastructure-map-kunduz-district-afghanistan" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -799,7 +801,15 @@ Context: Situation in the Central African Republic<div class="sd-summary-down do
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Examples for Good Map Design</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Examples for Good Map Design</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-examples">Map Examples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-1-flood-affected-areas-and-roads-in-the-somali-region-ethiopia">Map Example 1: Flood-affected areas and roads in the Somali Region, Ethiopia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-2-flooding-risk-in-the-ouham-region-central-african-republic">Map Example 2: Flooding Risk in the Ouham Region, Central African Republic</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-3">Map Example 3:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#good-practices-and-common-mistakes-in-mapping">Good practices and common mistakes in mapping</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-composition">Map composition</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-elements-of-a-map">Key elements of a map</a></li>
@@ -812,12 +822,6 @@ Context: Situation in the Central African Republic<div class="sd-summary-down do
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#color-gradient-vs-distinct-color-palette">2. Color gradient vs. distinct color palette</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-in-a-single-color-vs-gradient-between-two-colors">3. Gradient in a single color vs. Gradient between two colors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limited-geometric-symbols-vs-complex-icons-and-symbols">4. Limited Geometric Symbols vs. Complex Icons and Symbols</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-examples">Map Examples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-1-flood-affected-areas-and-roads-in-the-somali-region-ethiopia">Map Example 1: Flood-affected areas and roads in the Somali Region, Ethiopia</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-2-flooding-risk-in-the-ouham-region-central-african-republic">Map Example 2: Flooding Risk in the Ouham Region, Central African Republic</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-example-3">Map Example 3:</a></li>
 </ul>
 </li>
 </ul>
