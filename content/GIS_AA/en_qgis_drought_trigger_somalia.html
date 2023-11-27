@@ -494,13 +494,13 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">QGIS Trigger Workflow for Somalia</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-statment">Trigger Statment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-manually">Trigger Workflow Manually</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1.: Setting up folder structure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2.: Download of the forecast data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3.: Loading data into QGIS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4.:Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5.:Calculation of Population per  Intersection Polygon</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6.:Weighting of the Population based on IPC-Phase</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-adding-the-total-district-population-to-intersection-polygons">Step 7.:Adding the total district population to Intersection Polygons</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per  Intersection Polygon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6: Weighting of the Population based on IPC-Phase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-adding-the-total-district-population-to-intersection-polygons">Step 7: Adding the total district population to Intersection Polygons</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8.: Calculation of Population Proportion per Intersection Polygon</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9.: Calculate IPC Index per District</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-join-ml1-and-ml2-i">Step 10.: Join ML1 and ML2 I</a></li>
@@ -538,7 +538,7 @@ The chapter Workflow Automated explains the process and how it is intended in pr
 <section id="trigger-workflow-manually">
 <h2>Trigger Workflow Manually<a class="headerlink" href="#trigger-workflow-manually" title="Permalink to this heading">#</a></h2>
 <section id="step-1-setting-up-folder-structure">
-<h3>Step 1.: Setting up folder structure<a class="headerlink" href="#step-1-setting-up-folder-structure" title="Permalink to this heading">#</a></h3>
+<h3>Step 1: Setting up folder structure<a class="headerlink" href="#step-1-setting-up-folder-structure" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_1_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_1_1.png" src="../../_images/Drought_EAP_Worklow_Step_1_1.png" style="width: 1000px;" /></a>
 </figure>
@@ -552,66 +552,155 @@ The result could be the folder “2022_05”</p></li>
 </ol>
 </section>
 <section id="step-2-download-of-the-forecast-data">
-<h3>Step 2.: Download of the forecast data<a class="headerlink" href="#step-2-download-of-the-forecast-data" title="Permalink to this heading">#</a></h3>
+<h3>Step 2: Download of the forecast data<a class="headerlink" href="#step-2-download-of-the-forecast-data" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="fig/Drought_EAP_Worklow_Step_2_1.png"><img alt="fig/Drought_EAP_Worklow_Step_2_1.png" src="fig/Drought_EAP_Worklow_Step_2_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
 </section>
 <section id="step-3-loading-data-into-qgis">
-<h3>Step 3.: Loading data into QGIS<a class="headerlink" href="#step-3-loading-data-into-qgis" title="Permalink to this heading">#</a></h3>
+<h3>Step 3: Loading data into QGIS<a class="headerlink" href="#step-3-loading-data-into-qgis" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_3_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_3_1.png" src="../../_images/Drought_EAP_Worklow_Step_3_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
 <ol class="arabic simple">
-<li><p>Open QGIS and create a <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#step-by-step-setting-up-a-new-qgis-project-from-scratch">new project</a> by clicking on “Project” -&gt; “New”</p></li>
-<li><p>Once the project is created save the project in the folder you created in Step 1 (e.g. 2022_05). To do that click on ”Project” -&gt; “Save as” and navigate to the folder. Give the project the same name as the folder you created (e.g. 2022_05). Then click “Save”</p></li>
-<li><p>Load all input data in QGIS by drag and drop. Click on “Project” -&gt; “Save”</p></li>
+<li><p>Open QGIS and create a <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#step-by-step-setting-up-a-new-qgis-project-from-scratch">new project</a> by clicking on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span></code></p></li>
+<li><p>Once the project is created save the project in the folder you created in Step 1 (e.g. 2022_05). To do that click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code> and navigate to the folder. Give the project the same name as the folder you created (e.g. 2022_05). Then click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Load all input data in QGIS by <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-raster-data-via-drag-and-drop">drag and drop</a>. Click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
 </ol>
 </section>
 <section id="step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">
-<h3>Step 4.:Intersection of ML 1 &amp; ML 2 data with the district polygons<a class="headerlink" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons" title="Permalink to this heading">#</a></h3>
+<h3>Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons<a class="headerlink" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_4_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_4_1.png" src="../../_images/Drought_EAP_Worklow_Step_4_1.png" style="width: 1000px;" /></a>
 </figure>
-<p>Click on “Vector” -&gt; “Geoprocessing Tools” -&gt; “Intersection”
-“Input Layer”: ML 1 or ML 2
-“Overlay layer”: district_pop_sum</p>
 <p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
+</div>
+<p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#intersection"><code class="docutils literal notranslate"><span class="pre">Intersection</span></code></a></p>
+<ol class="arabic simple">
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Vector</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Geoprocessing</span> <span class="pre">Tools</span></code> -&gt; <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#intersection"><code class="docutils literal notranslate"><span class="pre">Intersection</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: ML 1 or ML 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Overlay</span> <span class="pre">layer</span></code>: district_pop_sum</p></li>
+</ol>
 </section>
 <section id="step-5-calculation-of-population-per-intersection-polygon">
-<h3>Step 5.:Calculation of Population per  Intersection Polygon<a class="headerlink" href="#step-5-calculation-of-population-per-intersection-polygon" title="Permalink to this heading">#</a></h3>
+<h3>Step 5: Calculation of Population per  Intersection Polygon<a class="headerlink" href="#step-5-calculation-of-population-per-intersection-polygon" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_5_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_5_1.png" src="../../_images/Drought_EAP_Worklow_Step_5_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
+</div>
+<p><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Intersection Polygons</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Layer</span></code>: som_ppp_2020_UNadj_constrained.tif</p></li>
+<li><p>Statistics to calculate: <code class="docutils literal notranslate"><span class="pre">Sum</span></code></p></li>
+</ol>
 </section>
 <section id="step-6-weighting-of-the-population-based-on-ipc-phase">
-<h3>Step 6.:Weighting of the Population based on IPC-Phase<a class="headerlink" href="#step-6-weighting-of-the-population-based-on-ipc-phase" title="Permalink to this heading">#</a></h3>
+<h3>Step 6: Weighting of the Population based on IPC-Phase<a class="headerlink" href="#step-6-weighting-of-the-population-based-on-ipc-phase" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_6_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_6_1.png" src="../../_images/Drought_EAP_Worklow_Step_6_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
+</div>
+<p><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
+<ol class="arabic simple">
+<li><p>Right-click on Intersection_population Polygons layer -&gt; <code class="docutils literal notranslate"><span class="pre">Attribute</span> <span class="pre">Table</span></code>-&gt; click on <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" /> to open the field calculator</p></li>
+<li><p>Check “Create new field”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">field</span> <span class="pre">name</span></code>: Name the new column “pop_sum_weighted”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">field</span> <span class="pre">type</span></code>: Decimal</p></li>
+<li><p>Add the code block from Input into the “Expression” field
+Click <code class="docutils literal notranslate"><span class="pre">ok</span></code></p></li>
+</ol>
+<table class="table">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ML 1</p></th>
+<th class="head"><p>ML 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>CASE
+WHEN &quot;ML1&quot; = 3 THEN &quot;_sum&quot; * 1
+WHEN &quot;ML1&quot; = 4 THEN &quot;_sum&quot; * 3
+WHEN &quot;ML1&quot; = 5 THEN &quot;_sum&quot; * 6
+ELSE &quot;_sum&quot;
+END`
+</pre></div>
+</div>
+</td>
+<td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>CASE
+WHEN &quot;ML2&quot; = 3 THEN &quot;_sum&quot; * 1
+WHEN &quot;ML2&quot; = 4 THEN &quot;_sum&quot; * 3
+WHEN &quot;ML2&quot; = 5 THEN &quot;_sum&quot; * 6
+ELSE &quot;_sum&quot;
+END
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="6">
+<li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table</p></li>
+</ol>
 </section>
 <section id="step-7-adding-the-total-district-population-to-intersection-polygons">
-<h3>Step 7.:Adding the total district population to Intersection Polygons<a class="headerlink" href="#step-7-adding-the-total-district-population-to-intersection-polygons" title="Permalink to this heading">#</a></h3>
+<h3>Step 7: Adding the total district population to Intersection Polygons<a class="headerlink" href="#step-7-adding-the-total-district-population-to-intersection-polygons" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_7_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_7_1.png" src="../../_images/Drought_EAP_Worklow_Step_7_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
+</div>
+<p><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your Intersection_population_weighted_total_pop” layer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select the layer “district_pop_som”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">2</span> <span class="pre">field</span> <span class="pre">to</span> <span class="pre">copy</span></code>: Click on the three points and select “admin2Name” and “districtpop”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
+</ol>
 </section>
 <section id="step-8-calculation-of-population-proportion-per-intersection-polygon">
 <h3>Step 8.: Calculation of Population Proportion per Intersection Polygon<a class="headerlink" href="#step-8-calculation-of-population-proportion-per-intersection-polygon" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_8_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_8_1.png" src="../../_images/Drought_EAP_Worklow_Step_8_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
+</div>
 <p><strong>Tool:</strong></p>
+<ol class="arabic simple">
+<li><p>Right-click on Intersection_population Polygons layer -&gt; “Attribute Table”-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" />to open the field calculator</p></li>
+<li><p>Check “Create new field”</p></li>
+<li><p>“Output field name”: Name the new column “Index_per_IPCPolygon_ML1” (or “Index_per_IPCPolygon_ML2”)</p></li>
+<li><p>“Result field type”: Decimal</p></li>
+<li><p>Add the code block from Input into the “Expression” field</p></li>
+<li><p>Click “ok”</p></li>
+<li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table</p></li>
+</ol>
 </section>
 <section id="step-9-calculate-ipc-index-per-district">
 <h3>Step 9.: Calculate IPC Index per District<a class="headerlink" href="#step-9-calculate-ipc-index-per-district" title="Permalink to this heading">#</a></h3>
@@ -749,13 +838,13 @@ The result could be the folder “2022_05”</p></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">QGIS Trigger Workflow for Somalia</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-statment">Trigger Statment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-manually">Trigger Workflow Manually</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1.: Setting up folder structure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2.: Download of the forecast data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3.: Loading data into QGIS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4.:Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5.:Calculation of Population per  Intersection Polygon</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6.:Weighting of the Population based on IPC-Phase</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-adding-the-total-district-population-to-intersection-polygons">Step 7.:Adding the total district population to Intersection Polygons</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per  Intersection Polygon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6: Weighting of the Population based on IPC-Phase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-adding-the-total-district-population-to-intersection-polygons">Step 7: Adding the total district population to Intersection Polygons</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8.: Calculation of Population Proportion per Intersection Polygon</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9.: Calculate IPC Index per District</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-join-ml1-and-ml2-i">Step 10.: Join ML1 and ML2 I</a></li>
