@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/GIS_AA/en_qgis_drought_trigger_somalia';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Drought Trigger Somaliland Somalia" href="Anne.html" />
+    <link rel="next" title="Risk Assessment" href="en_qgis_risk_assessment_plugin.html" />
     <link rel="prev" title="And for the second exercise the second task of exercise 4: https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_4?ref_type=heads" href="../Modul_5/en_qgis_non_spatial_tools_ex2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -283,6 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">QGIS Trigger Workflow for Somalia</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_risk_assessment_plugin.html">Risk Assessment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Anne.html">Drought Trigger Somaliland Somalia</a></li>
 
 </ul>
@@ -497,7 +498,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-statment">Trigger Statment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-manually">Trigger Workflow Manually</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12">SPI-12:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-projection">IPC-Projection</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per  Intersection Polygon</a></li>
@@ -545,20 +550,34 @@ The chapter Workflow Automated explains the process and how it is intended in pr
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_1_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_1_1.png" src="../../_images/Drought_EAP_Worklow_Step_1_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
+<p><strong>Tool:</strong> No special tools or programs are needed</p>
 <ol class="arabic simple">
-<li><p>Open the Folder “FbF_Drought_Monitoring_Trigger</p></li>
+<li><p>Open the Folder “FbF_Drought_Monitoring_Trigger”</p></li>
 <li><p>Open the subfolder “Monitoring”</p></li>
-<li><p>Copy the Template folder “TEMPLATE_Year_Month” and change the name to the current year and month.
-The result could be the folder “2022_05”</p></li>
+<li><p>Copy the Template folder “TEMPLATE_Year_Month” and change the name to the current year and month. The result could be the folder “2022_05”</p></li>
 </ol>
 </section>
 <section id="step-2-download-of-the-forecast-data">
 <h3>Step 2: Download of the forecast data<a class="headerlink" href="#step-2-download-of-the-forecast-data" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="fig/Drought_EAP_Worklow_Step_2_1.png"><img alt="fig/Drought_EAP_Worklow_Step_2_1.png" src="fig/Drought_EAP_Worklow_Step_2_1.png" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_2_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_2_1.png" src="../../_images/Drought_EAP_Worklow_Step_2_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
+<p><strong>Purpose:</strong>
+<strong>Tool:</strong> FileZilla</p>
+<section id="spi-12">
+<h4>SPI-12:<a class="headerlink" href="#spi-12" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">Download FileZilla</a> and establish the connection to the FTP-Server</p></li>
+<li><p>Select the latest SPI-12 data and drag and drop to your predefined directory for Monitoring data</p></li>
+</ol>
+</section>
+<section id="ipc-projection">
+<h4>IPC-Projection<a class="headerlink" href="#ipc-projection" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Navigate to the FEWSNET website, then “Data” -&gt; “Acute Food Insecurity Data” and download the provided .zip folder for the latest timestamp.</p></li>
+<li><p>Select the ML1 and ML2 procection shapefiles from the folder an save them in the predefined directory for monitoring data</p></li>
+</ol>
+</section>
 </section>
 <section id="step-3-loading-data-into-qgis">
 <h3>Step 3: Loading data into QGIS<a class="headerlink" href="#step-3-loading-data-into-qgis" title="Permalink to this heading">#</a></h3>
@@ -753,22 +772,22 @@ END
 <p><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
 <ol class="arabic simple">
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>´`: Select your “IPC_index_district_ML2_ML2”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “IPC_index_district_ML2_ML2”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your “SPI12_districts”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)”</p></li>
 </ol>
 </section>
 <section id="step-13-evaluate-trigger-activation">
 <h3>Step 13.: Evaluate Trigger Activation<a class="headerlink" href="#step-13-evaluate-trigger-activation" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="fig/Drought_EAP_Worklow_Step_13_1.png"><img alt="fig/Drought_EAP_Worklow_Step_13_1.png" src="fig/Drought_EAP_Worklow_Step_13_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
 <p><strong>Tool:</strong></p>
 <ol class="arabic simple">
-<li><p>Right-click on Intersection_population Polygons layer -&gt; “Attribute Table”-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" /> to open the field calculator</p></li>
+<li><p>Right-click on Intersection_population Polygons layer -&gt; <code class="docutils literal notranslate"><span class="pre">Attribute</span> <span class="pre">Table</span></code>-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" /> to open the field calculator</p></li>
 <li><p>Check <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">field</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">field</span> <span class="pre">name</span></code>: Name the new column “Trigger_activation”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">field</span> <span class="pre">type</span></code>: Text</p></li>
@@ -797,17 +816,25 @@ END`
 </tbody>
 </table>
 <ol class="arabic simple" start="6">
-<li><p>Click “ok”</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">ok</span></code></p></li>
 <li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table</p></li>
 </ol>
 </section>
 <section id="step-14-visualisation-of-results">
 <h3>Step 14.: Visualisation of results<a class="headerlink" href="#step-14-visualisation-of-results" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="fig/Drought_EAP_Worklow_Step_14_1.png"><img alt="fig/Drought_EAP_Worklow_Step_14_1.png" src="fig/Drought_EAP_Worklow_Step_14_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
+<p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_I.html#symbology-for-vector-data">Symbology</a></p>
+<ol class="arabic simple">
+<li><p>Right cklick on the “Trigger_activation” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>In the drop-down menu on the top choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code></p></li>
+<li><p>In the down left corner click on <code class="docutils literal notranslate"><span class="pre">Style</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
+<li><p>In the new window click on the three points <img alt="" src="../../_images/Three_points.png" />. Navigate to the “FbF_Drought_Monitoring_Trigger” folder and select the file “Style_Model_Output.qml”.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Open</span></code>. Then click on <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
+<li><p>Back in the “Layer Properties” Window click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
+</ol>
 </section>
 <section id="step-15-making-print-map">
 <h3>Step 15.: Making print map<a class="headerlink" href="#step-15-making-print-map" title="Permalink to this heading">#</a></h3>
@@ -871,11 +898,11 @@ END`
       </div>
     </a>
     <a class="right-next"
-       href="Anne.html"
+       href="en_qgis_risk_assessment_plugin.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Drought Trigger Somaliland Somalia</p>
+        <p class="prev-next-title">Risk Assessment</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -898,7 +925,11 @@ END`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-statment">Trigger Statment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-manually">Trigger Workflow Manually</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12">SPI-12:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-projection">IPC-Projection</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per  Intersection Polygon</a></li>
