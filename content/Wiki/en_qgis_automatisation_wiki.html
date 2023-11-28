@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Wiki/en_qgis_automatisation_wiki';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="The QGIS Model Designer" href="en_qgis_model_builder_wiki.html" />
+    <link rel="next" title="Model Builder" href="en_qgis_model_builder_wiki.html" />
     <link rel="prev" title="Basic Raster operations" href="en_qgis_raster_basic_wiki.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -213,7 +213,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Automatistation in QGIS</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_model_builder_wiki.html">The QGIS Model Designer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_model_builder_wiki.html">Model Builder</a></li>
 </ul>
 </li>
 </ul>
@@ -283,10 +283,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../GIS_AA/en_qgis_drought_trigger_somalia.html">QGIS Trigger Workflow for Somalia</a></li>
 
-<li class="toctree-l1 has-children"><a class="reference internal" href="../GIS_AA/Anne.html">Trigger Statement</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../GIS_AA/qgis_SRCS_Training_basic_ex.html">QGGIS Basic</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../GIS_AA/Anne.html">Drought Trigger Somaliland Somalia</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -496,6 +494,12 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-need-for-automatisation">What is the need for Automatisation?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-qgis-model-designer">The QGIS Model Designer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-model-designer">Using the Model Designer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-components">Model Components</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-and-save-model">Create and save model</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -512,6 +516,39 @@ document.write(`
 <section id="what-is-the-need-for-automatisation">
 <h2>What is the need for Automatisation?<a class="headerlink" href="#what-is-the-need-for-automatisation" title="Permalink to this heading">#</a></h2>
 <p>Automation streamlines tasks by reducing the user effort and minimizing errors through less manual repetition. It allows for modularization, enhances reusability and reduces redundancy by repaatedly using a defined set of needed tools. In QGIS in can be achieved by using the “Model Designer”.</p>
+</section>
+<section id="the-qgis-model-designer">
+<h2>The QGIS Model Designer<a class="headerlink" href="#the-qgis-model-designer" title="Permalink to this heading">#</a></h2>
+<p>The Model Designer is a visual tool that allows users to create and edit a workflow with all tools available in QGIS that can be used repeatedly in a simple and time-efficient manner. It provides a graphical interface to build workflows by connecting geoprocessing tools and algorithms. The user can define inputs, outputs, and the flow of data between different processing steps.</p>
+<section id="using-the-model-designer">
+<h3>Using the Model Designer<a class="headerlink" href="#using-the-model-designer" title="Permalink to this heading">#</a></h3>
+<p>Open the tool under “Processing &gt; Model Designer”.</p>
+<p>Give the model file a name and save it on you Computer.</p>
+<p>You can also open a existing model via “Model &gt; Open Model” and navigating to the model file</p>
+<p><strong>VIDEO</strong></p>
+</section>
+<section id="model-components">
+<h3>Model Components<a class="headerlink" href="#model-components" title="Permalink to this heading">#</a></h3>
+<p><strong>Inputs/Outputs</strong>: The model starts with input data and produces output filesi
+<strong>Algorithms</strong>: Algorithms or Tools are specific geoprocessing steps that perform specific tasks, such as clipping, reprojecting or buffering.</p>
+</section>
+<section id="create-and-save-model">
+<h3>Create and save model<a class="headerlink" href="#create-and-save-model" title="Permalink to this heading">#</a></h3>
+<p><strong>Add Inputs</strong>
+You can add Spaces for input files via the “Inputs” Window on the left. Expand “Parameters” and choose the kind of Input type you need. For example “Vector Layer” for a layer with administrative districts or “CRS” for a coordinate refernece system that is needed for multiple reprojections in the model.</p>
+<p>Addition if inputs is possible by double clicking or via drag and drop.</p>
+<p><strong>VIDEO</strong></p>
+<p><strong>Add Processing Steps:</strong>
+In the “Algorithms” panel on the left hand side you can choose procesing steps out of the QGIS toolbox. For example the “buffer” tool for buffering all administrative distrits of a input layer by 5 km.</p>
+<p>Addition of algorithms is possible double clicking or via “drag and drop”.</p>
+<p><strong>VIDEO</strong></p>
+<p><strong>Run the Model</strong>
+To run the model click the green arrow in the top bar and enter your inputs in the apperaing console and click “Run”. Output layers are automatically added to you QGIS project interface.</p>
+<p><strong>Export the Model</strong>
+Models can be exported as an image (e.g. in png format), PDF, SVG and as a Python Script. Exporting the model can be benefical for documenting your work steps or to intergrate it in a Python based workflow.</p>
+<p>Export the model via Model &gt; Export &gt; Export as Image/PDF/SVG Python Script</p>
+<p><strong>VIDEO</strong></p>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -561,7 +598,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The QGIS Model Designer</p>
+        <p class="prev-next-title">Model Builder</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -581,6 +618,12 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-need-for-automatisation">What is the need for Automatisation?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-qgis-model-designer">The QGIS Model Designer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-model-designer">Using the Model Designer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-components">Model Components</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-and-save-model">Create and save model</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

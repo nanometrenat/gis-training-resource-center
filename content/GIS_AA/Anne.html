@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Trigger Statement &#8212; GIS Resource Training Center</title>
+    <title>Drought Trigger Somaliland Somalia &#8212; GIS Resource Training Center</title>
   
   
   
@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/GIS_AA/Anne';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="QGGIS Basic" href="qgis_SRCS_Training_basic_ex.html" />
+    <link rel="next" title="How to do trainings?" href="../Trainers_corner/en_how_to_training.html" />
     <link rel="prev" title="QGIS Trigger Workflow for Somalia" href="en_qgis_drought_trigger_somalia.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -215,7 +215,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Wiki/en_qgis_automatisation_wiki.html">Automatistation in QGIS</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_model_builder_wiki.html">The QGIS Model Designer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Wiki/en_qgis_model_builder_wiki.html">Model Builder</a></li>
 </ul>
 </li>
 </ul>
@@ -285,10 +285,8 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_drought_trigger_somalia.html">QGIS Trigger Workflow for Somalia</a></li>
 
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Trigger Statement</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="qgis_SRCS_Training_basic_ex.html">QGGIS Basic</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Drought Trigger Somaliland Somalia</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -487,7 +485,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Trigger Statement</h1>
+    <h1>Drought Trigger Somaliland Somalia</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -497,15 +495,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Drought Trigger Somaliland Somalia</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-statement">Trigger Statement</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data">Trigger Input Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-data">Fixed Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-data">Variable Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monitoring-data">Monitoring Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-standarized-precipitation-index-spi-12">What is the Standarized Precipitation Index (SPI-12)?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ipc-food-security-projection-data">What is IPC Food Security Projection Data?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data-download">Trigger Input Data Download</a></li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -516,7 +519,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="trigger-statement">
+  <section class="tex2jax_ignore mathjax_ignore" id="drought-trigger-somaliland-somalia">
+<h1>Drought Trigger Somaliland Somalia<a class="headerlink" href="#drought-trigger-somaliland-somalia" title="Permalink to this heading">#</a></h1>
+<p>The main parameters chosen for the trigger based on the historical impact assessment are the twelve month Standard Precipitation Index (SPI12) and the IPC acute food insecurity classification. The exact data used are the documented and forecasted SPI12 (source: ICPAC) and the forecasted IPC classification (8 month forecast, source: FEWSNET), that is used to calculate a population weighted index of food insecurity. The trigger thresholds for both components were optimised towards the most favourable proportion of hit rate and false alarm rate. The emerging thresholds were &lt;-1 for the SPI12 and &gt;=0,7 for the IPC based index. The triggering is done on district level and per district just one trigger initiation per year is possible.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="trigger-statement">
 <h1>Trigger Statement<a class="headerlink" href="#trigger-statement" title="Permalink to this heading">#</a></h1>
 <p>When ICPAC issues a SPI-12 forecast of less than -1 for a district AND the current FEWSNET food insecurity projection reaches at least 0.7 in its
 derived population weighted index in the same district, then we will act in this district. We expect the lead-time to be 90 days.</p>
@@ -546,10 +553,9 @@ derived population weighted index in the same district, then we will act in this
 </tbody>
 </table>
 </section>
-<section id="variable-data">
-<h2>Variable Data<a class="headerlink" href="#variable-data" title="Permalink to this heading">#</a></h2>
-<p>btrgtr</p>
-<p>The drought trigger mechanism is based on two variable datasets updated monthly: The SPI-12 forecast produced by ICPAC and the Food Insecurity projection produced by FEWSNET. The SPI-12 is used to capture hazard forecasts while the Food Insecurity Projection captures the dynamic vulnerability.
+<section id="monitoring-data">
+<h2>Monitoring Data<a class="headerlink" href="#monitoring-data" title="Permalink to this heading">#</a></h2>
+<p>The drought trigger mechanism is based on two variable monitoring datasets updated monthly: The SPI-12 forecast produced by ICPAC and the Food Insecurity projection produced by FEWSNET. The SPI-12 is used to capture hazard forecasts while the Food Insecurity Projection captures the dynamic vulnerability.
 In this way upcoming drought events (SPI) that most probably will lead to food insecurity (IPC) will be captured.</p>
 <table class="table">
 <thead>
@@ -601,26 +607,38 @@ IPC 4 = 6</p>
 <p>The current plans provide that ICPAC will monthly provide the SPI-12 Forcast whereas the IPC data will be pulled from the FEWSNET website. FEWS NET publishes IPC data on its website.
 The main publications plus the updates of the IPC data amount to the publication of new data almost monthly.</p>
 <p><strong>SPI-12 Data</strong></p>
-<p>ICPAC will provide the SPI-12 forecasts on their FTP (File Transfer Protocol). There are different ways to access the FTP-Server. We recommend to install and once set up <a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">FileZilla</a>.</p>
+<p>ICPAC will provide the SPI-12 forecasts on their FTP (File Transfer Protocol). There are different ways to access the FTP-Server. We recommend to install and once set up <a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">FileZilla</a>. This will make your work easily repeatable on a monthly basis.</p>
+<ol class="arabic simple">
+<li><p>Download Filezilla <a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">here</a>.</p></li>
+<li><p>Install the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file you have downloaded</p></li>
+<li><p>Open FileZilla</p></li>
+<li><p>Establish a connection to the FTP Server by insterting the credentials you have been passed (Host, Username and Password) and clicking “Quickconnect”.</p></li>
+</ol>
+<p>In FileZilla you have four windows. On the left hand side you will see the folder on your computer in the upper window. By clicking on a folder, the documents in the folder will be shown in the lower left window.
+On the right hand side, you will see in the upper window the FTP data folder and by clicking on it, the data will be shown in the lower right window.</p>
+<p>In order to pass the data from the FTP Server to your own machine you can simply drag and drop the folder or data from the righthandside windows (FTP-Server) to the lefthandside windows (your Computer). To do so, firstly navigate to your folder where you wneed the latest SPI-12 data to be located <code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template/SPI_12</span></code>. Then drag and drop the latest SPI-12 into the folder.</p>
+<figure class="align-center" id="filezilla-interface">
+<a class="reference internal image-reference" href="../../_images/FileZilla.PNG"><img alt="../../_images/FileZilla.PNG" src="../../_images/FileZilla.PNG" style="height: 100px;" /></a>
+</figure>
 <p><strong>IPC Data</strong></p>
 <p>The IPC Projection data is provided and regulary updated on the <a class="reference external" href="https://fews.net/">FEWSNET Website</a>.
-On the website you will have to click on Somalia to acess the data. Alternativley, you can  navigate through Data –&gt; Acute Food Insecurity Data and enter „Somalia”. In the menu you will see different dataformats for different timestamps. Once you find out which timestamp is the most current one find the ZIP download. We need the data in shapefile (.shp) format, which is only included in the ZIP file and not provided as single download file.</p>
+On the website you will have to click on Somalia to acess the data. Alternativley, you can  navigate through <code class="docutils literal notranslate"><span class="pre">Data</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Acute</span> <span class="pre">Food</span> <span class="pre">Insecurity</span> <span class="pre">Data</span></code> and enter „Somalia”. In the menu you will see different dataformats for different timestamps. Once you find out which timestamp is the most current one find the ZIP download. We need the data in shapefile (.shp) format, which is only included in the ZIP file and not provided as single download file.</p>
 <figure class="align-center" id="fewsnet-ipc-download-ipc-projections">
-<a class="reference internal image-reference" href="../../_images/IPC_Projections_website.png"><img alt="../../_images/IPC_Projections_website.png" src="../../_images/IPC_Projections_website.png" style="height: 100px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IPC_Projections_website.png"><img alt="../../_images/IPC_Projections_website.png" src="../../_images/IPC_Projections_website.png" style="height: 300px;" /></a>
 </figure>
 <p>Once downloaded the ZIP folder, right click on it and unzip it. You will see various datasets. We are interested in the ML1 and ML2 projections. The filename is composed of “SO” for Somalia, year and month of the report month of the respective projection and _ML1 or _ML2 forn the respective projection. This is what the the dataname for ML1 and ML2 projections published in August would look like:</p>
-<p>“SO_202308_ML1.shp”,
-“SO_202308_ML2.shp”</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;SO_202308_ML1.shp&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;SO_202308_ML2.shp&quot;</span></code></p>
 <p>You can then copy the respective shapefiles to you folder</p>
-<p>…/Input_Trigger_model/Variable_data/IPC_ML1 and
-…/Input_Trigger_model/Variable_data/IPC_ML2</p>
+<p><code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template/IPC_ML1</span></code> and
+<code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template//IPC_ML2</span></code></p>
 <p>Remember that you need to copy over all components that the respective <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geodata_types_wiki.html#vector-data">shapefile</a> is composed of. Most probably it has 5 components: .cpg, .dbf, .prj, .shp, and .shx.</p>
 <figure class="align-center" id="content-of-zip-file-downloaded-containing-ml1-and-ml2-ipc-projections">
-<a class="reference internal image-reference" href="../../_images/IPC_zip.PNG"><img alt="../../_images/IPC_zip.PNG" src="../../_images/IPC_zip.PNG" style="height: 100px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IPC_zip.PNG"><img alt="../../_images/IPC_zip.PNG" src="../../_images/IPC_zip.PNG" style="height: 300px;" /></a>
 </figure>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>On the <a class="reference external" href="https://fews.net/">main FEWSNET page</a> you can also sign up for information on latest updates via email. For this option scroll down to the end of the page and click on “Sign up for Emails”. You will then get the option to choose updates only for Somalia.</p>
+<p>On the <a class="reference external" href="https://fews.net/">main FEWSNET page</a> you can also sign up for information on latest updates via email. For this option scroll down to the end of the page and click on <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">up</span> <span class="pre">for</span> <span class="pre">Emails</span></code>. You will then get the option to choose updates only for Somalia.</p>
 <figure class="align-center" id="fewsnet-newsletter">
 <a class="reference internal image-reference" href="../../_images/IPC_Newsletter.png"><img alt="../../_images/IPC_Newsletter.png" src="../../_images/IPC_Newsletter.png" style="height: 100px;" /></a>
 </figure>
@@ -641,8 +659,6 @@ On the website you will have to click on Somalia to acess the data. Alternativle
 </div>
 </section>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -685,11 +701,11 @@ On the website you will have to click on Somalia to acess the data. Alternativle
       </div>
     </a>
     <a class="right-next"
-       href="qgis_SRCS_Training_basic_ex.html"
+       href="../Trainers_corner/en_how_to_training.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">QGGIS Basic</p>
+        <p class="prev-next-title">How to do trainings?</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -708,15 +724,20 @@ On the website you will have to click on Somalia to acess the data. Alternativle
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Drought Trigger Somaliland Somalia</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-statement">Trigger Statement</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data">Trigger Input Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-data">Fixed Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-data">Variable Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monitoring-data">Monitoring Data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-standarized-precipitation-index-spi-12">What is the Standarized Precipitation Index (SPI-12)?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ipc-food-security-projection-data">What is IPC Food Security Projection Data?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data-download">Trigger Input Data Download</a></li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

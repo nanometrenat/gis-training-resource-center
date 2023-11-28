@@ -22,7 +22,7 @@ align: center
 ```
 __Purpose:__ 
 
-__Tool:__ No special tools or programs are needed
+__Tool:__
 
 1. Open the Folder “FbF_Drought_Monitoring_Trigger
 2. Open the subfolder "Monitoring"
@@ -60,8 +60,6 @@ __Purpose:__
 1. Open QGIS and create a [new project](https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#step-by-step-setting-up-a-new-qgis-project-from-scratch) by clicking on `Project` -> `New`
 2. Once the project is created save the project in the folder you created in Step 1 (e.g. 2022_05). To do that click on `Project` -> `Save as` and navigate to the folder. Give the project the same name as the folder you created (e.g. 2022_05). Then click `Save`
 3. Load all input data in QGIS by [drag and drop](https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-raster-data-via-drag-and-drop). Click on `Project` -> `Save` 
-
-:::{dropdown} Steps covered by the QGIS Model
 
 ### Step 4: Intersection of ML 1 & ML 2 data with the district polygons 
 
@@ -275,14 +273,14 @@ __Tool:__[`Join attributes by field value`](https://giscience.github.io/gis-trai
 
 
 1. Click `Processing` -> `Toolbox`-> Search for [`Join attributes by field value`](https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value)
-2. `Input Layer`: Select your “IPC_index_district_ML2_ML2”
+2. `Input Layer`´`: Select your “IPC_index_district_ML2_ML2”
 3. `Table field`: Select “admin2Name”
 4. `Input Layer 2`: Select your “SPI12_districts”
 5. `Table field 2`: Select “admin2Name”
 6. `Join type`: Select the option “Take attributes of the first matching feature only (one-to-one)
 
 ### Step 13.: Evaluate Trigger Activation 
-```{figure} /fig/Drought_EAP_Worklow_Step_13_1.png
+```{figure} /fig/
 ---
 width: 1000px
 name: 
@@ -318,10 +316,8 @@ __Tool:__
 6. Click "ok"
 7. Save the new column by clicking on ![](/fig/mActionSaveEdits.png) in the attribute table
 
-:::
-
 ### Step 14.: Visualisation of results
-```{figure} /fig/Drought_EAP_Worklow_Step_14_1.png
+```{figure} /fig/
 ---
 width: 1000px
 name: 
@@ -331,14 +327,7 @@ align: center
 
 __Purpose:__ 
 
-__Tool:__ [Symbology](https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_I.html#symbology-for-vector-data)
-
-1. Right cklick on the “Trigger_activation” layer -> `Properties` -> `Symbology`
-2. In the drop-down menu on the top choose `Categorized`
-3. In the down left corner click on `Style` -> `Load Style`
-4. In the new window click on the three points ![](/fig/Three_points.png). Navigate to the “FbF_Drought_Monitoring_Trigger” folder and select the file “Style_Model_Output.qml”.
-5. Click “Open”. Then click on “Load Style”
-6. Back in the “Layer Properties” Window click `Apply` and `OK`
+__Tool:__
 
 ### Step 15.: Making print map
 ```{figure} /fig/
