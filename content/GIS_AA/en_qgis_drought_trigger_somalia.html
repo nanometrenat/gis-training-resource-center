@@ -283,7 +283,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">QGIS Trigger Workflow for Somalia</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="Anne.html">Trigger Statement</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Anne.html">Trigger Statement</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="qgis_SRCS_Training_basic_ex.html">QGGIS Basic</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -498,15 +501,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per  Intersection Polygon</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6: Weighting of the Population based on IPC-Phase</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-adding-the-total-district-population-to-intersection-polygons">Step 7: Adding the total district population to Intersection Polygons</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8.: Calculation of Population Proportion per Intersection Polygon</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9.: Calculate IPC Index per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-join-ml1-and-ml2-i">Step 10.: Join ML1 and ML2 I</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-calculation-of-spi12-mean-per-district">Step 11.: Calculation of SPI12 Mean per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi12-mean-to-the-ipc-index">Step 12.: Join SPI12 Mean to the IPC Index</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-evaluate-trigger-activation">Step 13.: Evaluate Trigger Activation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-visualisation-of-results">Step 14.: Visualisation of results</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-making-print-map">Step 15.: Making print map</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-exporting-map">Step 16.: Exporting Map</a></li>
 </ul>
@@ -542,7 +537,7 @@ The chapter Workflow Automated explains the process and how it is intended in pr
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_1_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_1_1.png" src="../../_images/Drought_EAP_Worklow_Step_1_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
+<p><strong>Tool:</strong> No special tools or programs are needed</p>
 <ol class="arabic simple">
 <li><p>Open the Folder “FbF_Drought_Monitoring_Trigger</p></li>
 <li><p>Open the subfolder “Monitoring”</p></li>
@@ -579,54 +574,49 @@ Steps covered by the QGIS Model<div class="sd-summary-down docutils">
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_4_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_4_1.png" src="../../_images/Drought_EAP_Worklow_Step_4_1.png" style="width: 1000px;" /></a>
 </figure>
-</div>
-</details><p><strong>Purpose:</strong></p>
+<p class="sd-card-text"><strong>Purpose:</strong></p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
+<p class="sd-card-text">You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
 </div>
-<p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#intersection"><code class="docutils literal notranslate"><span class="pre">Intersection</span></code></a></p>
+<p class="sd-card-text"><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#intersection"><code class="docutils literal notranslate"><span class="pre">Intersection</span></code></a></p>
 <ol class="arabic simple">
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Vector</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Geoprocessing</span> <span class="pre">Tools</span></code> -&gt; <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#intersection"><code class="docutils literal notranslate"><span class="pre">Intersection</span></code></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: ML 1 or ML 2</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Overlay</span> <span class="pre">layer</span></code>: district_pop_sum</p></li>
+<li><p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Vector</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Geoprocessing</span> <span class="pre">Tools</span></code> -&gt; <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#intersection"><code class="docutils literal notranslate"><span class="pre">Intersection</span></code></a></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: ML 1 or ML 2</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Overlay</span> <span class="pre">layer</span></code>: district_pop_sum</p></li>
 </ol>
-</section>
-<section id="step-5-calculation-of-population-per-intersection-polygon">
-<h3>Step 5: Calculation of Population per  Intersection Polygon<a class="headerlink" href="#step-5-calculation-of-population-per-intersection-polygon" title="Permalink to this heading">#</a></h3>
+<p class="rubric">Step 5: Calculation of Population per  Intersection Polygon</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_5_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_5_1.png" src="../../_images/Drought_EAP_Worklow_Step_5_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
+<p class="sd-card-text"><strong>Purpose:</strong></p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
+<p class="sd-card-text">You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
 </div>
-<p><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p>
+<p class="sd-card-text"><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p>
 <ol class="arabic simple">
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Intersection Polygons</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Layer</span></code>: som_ppp_2020_UNadj_constrained.tif</p></li>
-<li><p>Statistics to calculate: <code class="docutils literal notranslate"><span class="pre">Sum</span></code></p></li>
+<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Intersection Polygons</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Layer</span></code>: som_ppp_2020_UNadj_constrained.tif</p></li>
+<li><p class="sd-card-text">Statistics to calculate: <code class="docutils literal notranslate"><span class="pre">Sum</span></code></p></li>
 </ol>
-</section>
-<section id="step-6-weighting-of-the-population-based-on-ipc-phase">
-<h3>Step 6: Weighting of the Population based on IPC-Phase<a class="headerlink" href="#step-6-weighting-of-the-population-based-on-ipc-phase" title="Permalink to this heading">#</a></h3>
+<p class="rubric">Step 6: Weighting of the Population based on IPC-Phase</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_6_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_6_1.png" src="../../_images/Drought_EAP_Worklow_Step_6_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
+<p class="sd-card-text"><strong>Purpose:</strong></p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
+<p class="sd-card-text">You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
 </div>
-<p><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
+<p class="sd-card-text"><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
 <ol class="arabic simple">
-<li><p>Right-click on Intersection_population Polygons layer -&gt; <code class="docutils literal notranslate"><span class="pre">Attribute</span> <span class="pre">Table</span></code>-&gt; click on <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" /> to open the field calculator</p></li>
-<li><p>Check “Create new field”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">field</span> <span class="pre">name</span></code>: Name the new column “pop_sum_weighted”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">field</span> <span class="pre">type</span></code>: Decimal</p></li>
-<li><p>Add the code block from Input into the <code class="docutils literal notranslate"><span class="pre">Expression</span></code> field
+<li><p class="sd-card-text">Right-click on Intersection_population Polygons layer -&gt; <code class="docutils literal notranslate"><span class="pre">Attribute</span> <span class="pre">Table</span></code>-&gt; click on <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" /> to open the field calculator</p></li>
+<li><p class="sd-card-text">Check “Create new field”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">field</span> <span class="pre">name</span></code>: Name the new column “pop_sum_weighted”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">field</span> <span class="pre">type</span></code>: Decimal</p></li>
+<li><p class="sd-card-text">Add the code block from Input into the <code class="docutils literal notranslate"><span class="pre">Expression</span></code> field
 Click <code class="docutils literal notranslate"><span class="pre">ok</span></code></p></li>
 </ol>
 <table class="table">
@@ -635,8 +625,8 @@ Click <code class="docutils literal notranslate"><span class="pre">ok</span></co
 <col style="width: 50%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>ML 1</p></th>
-<th class="head"><p>ML 2</p></th>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">ML 1</p></th>
+<th class="head"><p class="sd-card-text">ML 2</p></th>
 </tr>
 </thead>
 <tbody>
@@ -662,127 +652,113 @@ END
 </tbody>
 </table>
 <ol class="arabic simple" start="6">
-<li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table</p></li>
+<li><p class="sd-card-text">Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table</p></li>
 </ol>
-</section>
-<section id="step-7-adding-the-total-district-population-to-intersection-polygons">
-<h3>Step 7: Adding the total district population to Intersection Polygons<a class="headerlink" href="#step-7-adding-the-total-district-population-to-intersection-polygons" title="Permalink to this heading">#</a></h3>
+<p class="rubric">Step 7: Adding the total district population to Intersection Polygons</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_7_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_7_1.png" src="../../_images/Drought_EAP_Worklow_Step_7_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
+<p class="sd-card-text"><strong>Purpose:</strong></p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
+<p class="sd-card-text">You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
 </div>
-<p><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
+<p class="sd-card-text"><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
 <ol class="arabic simple">
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your Intersection_population_weighted_total_pop” layer</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select the layer “district_pop_som”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">2</span> <span class="pre">field</span> <span class="pre">to</span> <span class="pre">copy</span></code>: Click on the three points and select “admin2Name” and “districtpop”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
+<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your Intersection_population_weighted_total_pop” layer</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select the layer “district_pop_som”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">2</span> <span class="pre">field</span> <span class="pre">to</span> <span class="pre">copy</span></code>: Click on the three points and select “admin2Name” and “districtpop”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
 </ol>
-</section>
-<section id="step-8-calculation-of-population-proportion-per-intersection-polygon">
-<h3>Step 8.: Calculation of Population Proportion per Intersection Polygon<a class="headerlink" href="#step-8-calculation-of-population-proportion-per-intersection-polygon" title="Permalink to this heading">#</a></h3>
+<p class="rubric">Step 8.: Calculation of Population Proportion per Intersection Polygon</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_8_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_8_1.png" src="../../_images/Drought_EAP_Worklow_Step_8_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
+<p class="sd-card-text"><strong>Purpose:</strong></p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
+<p class="sd-card-text">You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
 </div>
-<p><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
+<p class="sd-card-text"><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
 <ol class="arabic simple">
-<li><p>Right-click on Intersection_population Polygons layer -&gt; “Attribute Table”-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" />to open the field calculator</p></li>
-<li><p>Check “Create new field”</p></li>
-<li><p>“Output field name”: Name the new column “Index_per_IPCPolygon_ML1” (or “Index_per_IPCPolygon_ML2”)</p></li>
-<li><p>“Result field type”: Decimal</p></li>
-<li><p>Add the code: <code class="docutils literal notranslate"><span class="pre">&quot;pop_sum_weighted&quot;/&quot;districtpo&quot;</span></code> into the <code class="docutils literal notranslate"><span class="pre">Expression</span></code> field</p></li>
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">ok</span></code></p></li>
-<li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table</p></li>
+<li><p class="sd-card-text">Right-click on Intersection_population Polygons layer -&gt; “Attribute Table”-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" />to open the field calculator</p></li>
+<li><p class="sd-card-text">Check “Create new field”</p></li>
+<li><p class="sd-card-text">“Output field name”: Name the new column “Index_per_IPCPolygon_ML1” (or “Index_per_IPCPolygon_ML2”)</p></li>
+<li><p class="sd-card-text">“Result field type”: Decimal</p></li>
+<li><p class="sd-card-text">Add the code: <code class="docutils literal notranslate"><span class="pre">&quot;pop_sum_weighted&quot;/&quot;districtpo&quot;</span></code> into the <code class="docutils literal notranslate"><span class="pre">Expression</span></code> field</p></li>
+<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">ok</span></code></p></li>
+<li><p class="sd-card-text">Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table</p></li>
 </ol>
-</section>
-<section id="step-9-calculate-ipc-index-per-district">
-<h3>Step 9.: Calculate IPC Index per District<a class="headerlink" href="#step-9-calculate-ipc-index-per-district" title="Permalink to this heading">#</a></h3>
+<p class="rubric">Step 9.: Calculate IPC Index per District</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
-</section>
-<section id="step-10-join-ml1-and-ml2-i">
-<h3>Step 10.: Join ML1 and ML2 I<a class="headerlink" href="#step-10-join-ml1-and-ml2-i" title="Permalink to this heading">#</a></h3>
+<p class="sd-card-text"><strong>Purpose:</strong></p>
+<p class="sd-card-text"><strong>Tool:</strong></p>
+<p class="rubric">Step 10.: Join ML1 and ML2 I</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_10_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_10_1.png" src="../../_images/Drought_EAP_Worklow_Step_10_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
+<p class="sd-card-text"><strong>Purpose:</strong></p>
+<p class="sd-card-text"><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “IPC_Index_district” layer for ML 1</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your “IPC_Index_district” layer for ML 2</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">2</span> <span class="pre">field</span> <span class="pre">to</span> <span class="pre">copy</span></code>: Click on the three points and  select “Index_per_IPCPolygon_ML2_mean”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “IPC_Index_district” layer for ML 1</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your “IPC_Index_district” layer for ML 2</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">2</span> <span class="pre">field</span> <span class="pre">to</span> <span class="pre">copy</span></code>: Click on the three points and  select “Index_per_IPCPolygon_ML2_mean”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
 </ol>
-</section>
-<section id="step-11-calculation-of-spi12-mean-per-district">
-<h3>Step 11.: Calculation of SPI12 Mean per District<a class="headerlink" href="#step-11-calculation-of-spi12-mean-per-district" title="Permalink to this heading">#</a></h3>
+<p class="rubric">Step 11.: Calculation of SPI12 Mean per District</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_11_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_11_1.png" src="../../_images/Drought_EAP_Worklow_Step_11_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p>
+<p class="sd-card-text"><strong>Purpose:</strong></p>
+<p class="sd-card-text"><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p>
 <ol class="arabic simple">
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: district_pop_som</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Layer</span></code>: SPI Forecast</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">column</span> <span class="pre">prefix</span></code>: Use  “SPI12_”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Statistics</span> <span class="pre">to</span> <span class="pre">calculate</span></code>: “Mean”</p></li>
+<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: district_pop_som</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Layer</span></code>: SPI Forecast</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">column</span> <span class="pre">prefix</span></code>: Use  “SPI12_”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Statistics</span> <span class="pre">to</span> <span class="pre">calculate</span></code>: “Mean”</p></li>
 </ol>
-</section>
-<section id="step-12-join-spi12-mean-to-the-ipc-index">
-<h3>Step 12.: Join SPI12 Mean to the IPC Index<a class="headerlink" href="#step-12-join-spi12-mean-to-the-ipc-index" title="Permalink to this heading">#</a></h3>
+<p class="rubric">Step 12.: Join SPI12 Mean to the IPC Index</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_12_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_12_1.png" src="../../_images/Drought_EAP_Worklow_Step_12_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
+<p class="sd-card-text"><strong>Purpose:</strong></p>
+<p class="sd-card-text"><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
 <ol class="arabic simple">
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “IPC_index_district_ML2_ML2”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your “SPI12_districts”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
+<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “IPC_index_district_ML2_ML2”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your “SPI12_districts”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
 </ol>
-</section>
-<section id="step-13-evaluate-trigger-activation">
-<h3>Step 13.: Evaluate Trigger Activation<a class="headerlink" href="#step-13-evaluate-trigger-activation" title="Permalink to this heading">#</a></h3>
+<p class="rubric">Step 13.: Evaluate Trigger Activation</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_13_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_13_1.png" src="../../_images/Drought_EAP_Worklow_Step_13_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
+<p class="sd-card-text"><strong>Purpose:</strong></p>
+<p class="sd-card-text"><strong>Tool:</strong></p>
 <ol class="arabic simple">
-<li><p>Right-click on Intersection_population Polygons layer -&gt; “Attribute Table”-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" /> to open the field calculator</p></li>
-<li><p>Check <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">field</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">field</span> <span class="pre">name</span></code>: Name the new column “Trigger_activation”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">field</span> <span class="pre">type</span></code>: Text</p></li>
-<li><p>Add the code below into the <code class="docutils literal notranslate"><span class="pre">Expression</span></code> field</p></li>
+<li><p class="sd-card-text">Right-click on Intersection_population Polygons layer -&gt; “Attribute Table”-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" /> to open the field calculator</p></li>
+<li><p class="sd-card-text">Check <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">field</span></code></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">field</span> <span class="pre">name</span></code>: Name the new column “Trigger_activation”</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">field</span> <span class="pre">type</span></code>: Text</p></li>
+<li><p class="sd-card-text">Add the code below into the <code class="docutils literal notranslate"><span class="pre">Expression</span></code> field</p></li>
 </ol>
 <table class="table">
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Code</p></th>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Code</p></th>
 </tr>
 </thead>
 <tbody>
@@ -800,19 +776,16 @@ END`
 </tbody>
 </table>
 <ol class="arabic simple" start="6">
-<li><p>Click “ok”</p></li>
-<li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table</p></li>
+<li><p class="sd-card-text">Click “ok”</p></li>
+<li><p class="sd-card-text">Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-### Step 14.: Visualisation of results
-```{figure} /fig/Drought_EAP_Worklow_Step_14_1.png
----
-width: 1000px
-name: 
-align: center
----
-</pre></div>
 </div>
+</details></section>
+<section id="step-14-visualisation-of-results">
+<h3>Step 14.: Visualisation of results<a class="headerlink" href="#step-14-visualisation-of-results" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_14_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_14_1.png" src="../../_images/Drought_EAP_Worklow_Step_14_1.png" style="width: 1000px;" /></a>
+</figure>
 <p><strong>Purpose:</strong></p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_I.html#symbology-for-vector-data">Symbology</a></p>
 <ol class="arabic simple">
@@ -915,15 +888,7 @@ align: center
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per  Intersection Polygon</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6: Weighting of the Population based on IPC-Phase</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-adding-the-total-district-population-to-intersection-polygons">Step 7: Adding the total district population to Intersection Polygons</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8.: Calculation of Population Proportion per Intersection Polygon</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9.: Calculate IPC Index per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-join-ml1-and-ml2-i">Step 10.: Join ML1 and ML2 I</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-calculation-of-spi12-mean-per-district">Step 11.: Calculation of SPI12 Mean per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi12-mean-to-the-ipc-index">Step 12.: Join SPI12 Mean to the IPC Index</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-evaluate-trigger-activation">Step 13.: Evaluate Trigger Activation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-visualisation-of-results">Step 14.: Visualisation of results</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-making-print-map">Step 15.: Making print map</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-exporting-map">Step 16.: Exporting Map</a></li>
 </ul>
