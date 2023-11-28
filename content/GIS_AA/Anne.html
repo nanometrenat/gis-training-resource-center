@@ -506,6 +506,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data-download">Trigger Input Data Download</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-print-map">Making print map</a></li>
 </ul>
 </li>
 </ul>
@@ -619,13 +620,13 @@ The main publications plus the updates of the IPC data amount to the publication
 On the right hand side, you will see in the upper window the FTP data folder and by clicking on it, the data will be shown in the lower right window.</p>
 <p>In order to pass the data from the FTP Server to your own machine you can simply drag and drop the folder or data from the righthandside windows (FTP-Server) to the lefthandside windows (your Computer). To do so, firstly navigate to your folder where you wneed the latest SPI-12 data to be located <code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template/SPI_12</span></code>. Then drag and drop the latest SPI-12 into the folder.</p>
 <figure class="align-center" id="filezilla-interface">
-<a class="reference internal image-reference" href="../../_images/FileZilla.PNG"><img alt="../../_images/FileZilla.PNG" src="../../_images/FileZilla.PNG" style="height: 100px;" /></a>
+<a class="reference internal image-reference" href="../../_images/FileZilla.PNG"><img alt="../../_images/FileZilla.PNG" src="../../_images/FileZilla.PNG" style="height: 400px;" /></a>
 </figure>
 <p><strong>IPC Data</strong></p>
 <p>The IPC Projection data is provided and regulary updated on the <a class="reference external" href="https://fews.net/">FEWSNET Website</a>.
 On the website you will have to click on Somalia to acess the data. Alternativley, you can  navigate through <code class="docutils literal notranslate"><span class="pre">Data</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Acute</span> <span class="pre">Food</span> <span class="pre">Insecurity</span> <span class="pre">Data</span></code> and enter „Somalia”. In the menu you will see different dataformats for different timestamps. Once you find out which timestamp is the most current one find the ZIP download. We need the data in shapefile (.shp) format, which is only included in the ZIP file and not provided as single download file.</p>
 <figure class="align-center" id="fewsnet-ipc-download-ipc-projections">
-<a class="reference internal image-reference" href="../../_images/IPC_Projections_website.png"><img alt="../../_images/IPC_Projections_website.png" src="../../_images/IPC_Projections_website.png" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IPC_Projections_website.png"><img alt="../../_images/IPC_Projections_website.png" src="../../_images/IPC_Projections_website.png" style="height: 400px;" /></a>
 </figure>
 <p>Once downloaded the ZIP folder, right click on it and unzip it. You will see various datasets. We are interested in the ML1 and ML2 projections. The filename is composed of “SO” for Somalia, year and month of the report month of the respective projection and _ML1 or _ML2 forn the respective projection. This is what the the dataname for ML1 and ML2 projections published in August would look like:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&quot;SO_202308_ML1.shp&quot;</span></code>,
@@ -635,30 +636,23 @@ On the website you will have to click on Somalia to acess the data. Alternativle
 <code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template//IPC_ML2</span></code></p>
 <p>Remember that you need to copy over all components that the respective <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geodata_types_wiki.html#vector-data">shapefile</a> is composed of. Most probably it has 5 components: .cpg, .dbf, .prj, .shp, and .shx.</p>
 <figure class="align-center" id="content-of-zip-file-downloaded-containing-ml1-and-ml2-ipc-projections">
-<a class="reference internal image-reference" href="../../_images/IPC_zip.PNG"><img alt="../../_images/IPC_zip.PNG" src="../../_images/IPC_zip.PNG" style="height: 300px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IPC_zip.PNG"><img alt="../../_images/IPC_zip.PNG" src="../../_images/IPC_zip.PNG" style="height: 400px;" /></a>
 </figure>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>On the <a class="reference external" href="https://fews.net/">main FEWSNET page</a> you can also sign up for information on latest updates via email. For this option scroll down to the end of the page and click on <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">up</span> <span class="pre">for</span> <span class="pre">Emails</span></code>. You will then get the option to choose updates only for Somalia.</p>
 <figure class="align-center" id="fewsnet-newsletter">
-<a class="reference internal image-reference" href="../../_images/IPC_Newsletter.png"><img alt="../../_images/IPC_Newsletter.png" src="../../_images/IPC_Newsletter.png" style="height: 100px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IPC_Newsletter.png"><img alt="../../_images/IPC_Newsletter.png" src="../../_images/IPC_Newsletter.png" style="height: 60px;" /></a>
 </figure>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-
-
-
-<span class="c1"># Making print map</span>
-
-<span class="n">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">easily</span> <span class="n">visualize</span> <span class="n">the</span> <span class="n">outout</span> <span class="n">of</span> <span class="n">the</span> <span class="n">trigger</span> <span class="n">analysis</span> <span class="n">we</span> <span class="n">provide</span> <span class="n">you</span> <span class="k">with</span> <span class="n">a</span> <span class="p">[</span><span class="nb">map</span> <span class="n">template</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">giscience</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">gis</span><span class="o">-</span><span class="n">training</span><span class="o">-</span><span class="n">resource</span><span class="o">-</span><span class="n">center</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">Modul_4</span><span class="o">/</span><span class="n">en_qgis_map_design_2</span><span class="o">.</span><span class="n">html</span><span class="c1">#map-templates) that you can use as a base for your visualization.</span>
-
-<span class="n">Check</span> <span class="p">[</span><span class="n">here</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">giscience</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">gis</span><span class="o">-</span><span class="n">training</span><span class="o">-</span><span class="n">resource</span><span class="o">-</span><span class="n">center</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">Modul_4</span><span class="o">/</span><span class="n">en_qgis_map_design_2</span><span class="o">.</span><span class="n">html</span><span class="c1">#map-templates) how to open templates and how to use them in QGIS.</span>
-
-<span class="n">You</span> <span class="n">can</span> <span class="n">also</span> <span class="n">adapt</span> <span class="n">the</span> <span class="n">template</span> <span class="n">to</span> <span class="n">your</span> <span class="n">needs</span> <span class="ow">and</span> <span class="n">preferences</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">find</span> <span class="n">help</span> <span class="p">[</span><span class="n">here</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">giscience</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">gis</span><span class="o">-</span><span class="n">training</span><span class="o">-</span><span class="n">resource</span><span class="o">-</span><span class="n">center</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">Modul_4</span><span class="o">/</span><span class="n">en_qgis_map_design_2</span><span class="o">.</span><span class="n">html</span><span class="c1">#print-layout).</span>
-</pre></div>
-</div>
 </section>
+</section>
+<section id="making-print-map">
+<h2>Making print map<a class="headerlink" href="#making-print-map" title="Permalink to this heading">#</a></h2>
+<p>In order to easily visualize the outout of the trigger analysis we provide you with a
+<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">map template</a> that you can be used as a base for your visualization.</p>
+<p>Check <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">here</a> how to open templates and how to use them in QGIS.</p>
+<p>You can also adapt the template to your needs and preferences. You can find help <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#print-layout">here</a>.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -737,6 +731,7 @@ On the website you will have to click on Somalia to acess the data. Alternativle
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data-download">Trigger Input Data Download</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-print-map">Making print map</a></li>
 </ul>
 </li>
 </ul>
