@@ -506,18 +506,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ipc-food-security-projection-data">What is IPC Food Security Projection Data?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data-download">Trigger Input Data Download</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12-data">SPI-12 Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-data">IPC Data</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-manually">Trigger Workflow Manually</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12">SPI-12:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-projection">IPC-Projection</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12-data">SPI-12 Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-data">IPC Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per  Intersection Polygon</a></li>
@@ -641,10 +634,31 @@ IPC 4 = 6</p>
 <p>The IPC Index represents low-population districts equal to high-population districts. No underrepresentation of high food insecurity of small districts occurs.</p>
 </section>
 </section>
-<section id="trigger-input-data-download">
-<h2>Trigger Input Data Download<a class="headerlink" href="#trigger-input-data-download" title="Permalink to this heading">#</a></h2>
+<section id="trigger-workflow-manually">
+<h2>Trigger Workflow Manually<a class="headerlink" href="#trigger-workflow-manually" title="Permalink to this heading">#</a></h2>
+<section id="step-1-setting-up-folder-structure">
+<h3>Step 1: Setting up folder structure<a class="headerlink" href="#step-1-setting-up-folder-structure" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_1_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_1_1.png" src="../../_images/Drought_EAP_Worklow_Step_1_1.png" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Purpose:</strong></p>
+<p><strong>Tool:</strong> No special tools or programs are needed</p>
+<ol class="arabic simple">
+<li><p>Open the Folder “FbF_Drought_Monitoring_Trigger”</p></li>
+<li><p>Open the subfolder “Monitoring”</p></li>
+<li><p>Copy the Template folder “TEMPLATE_Year_Month” and change the name to the current year and month. The result could be the folder “2022_05”</p></li>
+</ol>
+</section>
+<section id="step-2-download-of-the-forecast-data">
+<h3>Step 2: Download of the forecast data<a class="headerlink" href="#step-2-download-of-the-forecast-data" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_2_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_2_1.png" src="../../_images/Drought_EAP_Worklow_Step_2_1.png" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Purpose:</strong></p>
+<p><strong>Tool:</strong> FileZilla</p>
 <p>The current plans provide that ICPAC will monthly provide the SPI-12 Forcast whereas the IPC data will be pulled from the FEWSNET website. FEWS NET publishes IPC data on its website.
 The main publications plus the updates of the IPC data amount to the publication of new data almost monthly.</p>
+</section>
 <section id="spi-12-data">
 <h3>SPI-12 Data<a class="headerlink" href="#spi-12-data" title="Permalink to this heading">#</a></h3>
 <p>ICPAC will provide the SPI-12 forecasts on their FTP (File Transfer Protocol). There are different ways to access the FTP-Server. We recommend to install and once set up <a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">FileZilla</a>. This will make your work easily repeatable on a monthly basis.</p>
@@ -685,44 +699,6 @@ On the website you will have to click on Somalia to acess the data. Alternativle
 <a class="reference internal image-reference" href="../../_images/IPC_Newsletter.png"><img alt="../../_images/IPC_Newsletter.png" src="../../_images/IPC_Newsletter.png" style="height: 60px;" /></a>
 </figure>
 </div>
-</section>
-</section>
-<section id="trigger-workflow-manually">
-<h2>Trigger Workflow Manually<a class="headerlink" href="#trigger-workflow-manually" title="Permalink to this heading">#</a></h2>
-<section id="step-1-setting-up-folder-structure">
-<h3>Step 1: Setting up folder structure<a class="headerlink" href="#step-1-setting-up-folder-structure" title="Permalink to this heading">#</a></h3>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_1_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_1_1.png" src="../../_images/Drought_EAP_Worklow_Step_1_1.png" style="width: 1000px;" /></a>
-</figure>
-<p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong> No special tools or programs are needed</p>
-<ol class="arabic simple">
-<li><p>Open the Folder “FbF_Drought_Monitoring_Trigger”</p></li>
-<li><p>Open the subfolder “Monitoring”</p></li>
-<li><p>Copy the Template folder “TEMPLATE_Year_Month” and change the name to the current year and month. The result could be the folder “2022_05”</p></li>
-</ol>
-</section>
-<section id="step-2-download-of-the-forecast-data">
-<h3>Step 2: Download of the forecast data<a class="headerlink" href="#step-2-download-of-the-forecast-data" title="Permalink to this heading">#</a></h3>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_2_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_2_1.png" src="../../_images/Drought_EAP_Worklow_Step_2_1.png" style="width: 1000px;" /></a>
-</figure>
-<p><strong>Purpose:</strong>
-<strong>Tool:</strong> FileZilla</p>
-<section id="spi-12">
-<h4>SPI-12:<a class="headerlink" href="#spi-12" title="Permalink to this heading">#</a></h4>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">Download FileZilla</a> and establish the connection to the FTP-Server</p></li>
-<li><p>Select the latest SPI-12 data and drag and drop to your predefined directory for Monitoring data</p></li>
-</ol>
-</section>
-<section id="ipc-projection">
-<h4>IPC-Projection<a class="headerlink" href="#ipc-projection" title="Permalink to this heading">#</a></h4>
-<ol class="arabic simple">
-<li><p>Navigate to the FEWSNET website, then “Data” -&gt; “Acute Food Insecurity Data” and download the provided .zip folder for the latest timestamp.</p></li>
-<li><p>Select the ML1 and ML2 procection shapefiles from the folder an save them in the predefined directory for monitoring data</p></li>
-</ol>
-</section>
 </section>
 <section id="step-3-loading-data-into-qgis">
 <h3>Step 3: Loading data into QGIS<a class="headerlink" href="#step-3-loading-data-into-qgis" title="Permalink to this heading">#</a></h3>
@@ -986,7 +962,7 @@ END`
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
 </figure>
-<p>In order to easily visualize the outout of the trigger analysis we provide you with a
+<p>In order to easily visualize the output of the trigger analysis we provide you with a
 <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">map template</a> that you can be used as a base for your visualization.</p>
 <p>Check <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">here</a> how to open templates and how to use them in QGIS.</p>
 <p>You can also adapt the template to your needs and preferences. You can find help <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#print-layout">here</a>.</p>
@@ -1080,18 +1056,11 @@ END`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ipc-food-security-projection-data">What is IPC Food Security Projection Data?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data-download">Trigger Input Data Download</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12-data">SPI-12 Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-data">IPC Data</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-manually">Trigger Workflow Manually</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12">SPI-12:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-projection">IPC-Projection</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12-data">SPI-12 Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-data">IPC Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per  Intersection Polygon</a></li>
