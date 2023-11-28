@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; GIS Resource Training Center</title>
+    <title>Trigger Statement &#8212; GIS Resource Training Center</title>
   
   
   
@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/GIS_AA/Anne';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -280,9 +282,10 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">GIS in Anticipatory Action</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_drought_trigger_somalia.html">QGIS Trigger Workflow for Somalia</a></li>
 
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Trigger Statement</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -481,7 +484,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Trigger Statement</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -490,9 +493,16 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data">Trigger Input Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-data">Fixed Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-data">Variable Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-standarized-precipitation-index-spi-12">What is the Standarized Precipitation Index (SPI-12)?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ipc-food-security-projection-data">What is IPC Food Security Projection Data?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data-download">Trigger Input Data Download</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -503,7 +513,133 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  
+  <section class="tex2jax_ignore mathjax_ignore" id="trigger-statement">
+<h1>Trigger Statement<a class="headerlink" href="#trigger-statement" title="Permalink to this heading">#</a></h1>
+<p>When ICPAC issues a SPI-12 forecast of less than -1 for a district AND the current FEWSNET food insecurity projection reaches at least 0.7 in its
+derived population weighted index in the same district, then we will act in this district. We expect the lead-time to be 90 days.</p>
+<section id="trigger-input-data">
+<h2>Trigger Input Data<a class="headerlink" href="#trigger-input-data" title="Permalink to this heading">#</a></h2>
+<p>For the trigger mechanism to work properly we currently use different datasets: data that we assume to be fixed in the near term, and variable data which describe the datasets that will be checked for triggering on a monthly base.</p>
+</section>
+<section id="fixed-data">
+<h2>Fixed Data<a class="headerlink" href="#fixed-data" title="Permalink to this heading">#</a></h2>
+<p>By fixed data we mean datasets that are needed for the trigger to work, that will most probably not change in the near term. In the long term these datasets can be adapted easily.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head"><p>Source</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Adminstrative bounderies</p></td>
+<td><p><a class="reference external" href="https://data.humdata.org/dataset/cod-ab-som?">HDX</a></p></td>
+<td><p>The administrative bounderies on level 0-2 for Somalia and Somaliland can be accessed via HDX. For this trigger mechanism we provide the administrative bounderies on level 2 (district level) as a shapefile. We have added the population number for each district derived from Worldpop.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Population Counts</p></td>
+<td><p><a class="reference external" href="https://hub.worldpop.org/doi/10.5258/SOTON/WP00534">Worldpop</a></p></td>
+<td><p>The worldpop dataset in .geotif rasterformat provides population estimates per hectar for the year 2020</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="variable-data">
+<h2>Variable Data<a class="headerlink" href="#variable-data" title="Permalink to this heading">#</a></h2>
+<p>btrgtr</p>
+<p>The drought trigger mechanism is based on two variable datasets updated monthly: The SPI-12 forecast produced by ICPAC and the Food Insecurity projection produced by FEWSNET. The SPI-12 is used to capture hazard forecasts while the Food Insecurity Projection captures the dynamic vulnerability.
+In this way upcoming drought events (SPI) that most probably will lead to food insecurity (IPC) will be captured.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head"><p>Source</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SPI-12 forecast</p></td>
+<td><p><a class="reference external" href="https://www.icpac.net/">ICPAC</a></p></td>
+<td><p>meteorological drought indicator to monitor precipitation anomalies over 12-month accumulation periods</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPC Projections</p></td>
+<td><p><a class="reference external" href="https://fews.net/">FEWSNET</a></p></td>
+<td><p>five-phase scale providing common standards for classifying the severity of acute or anticipated acute food insecurity.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="what-is-the-standarized-precipitation-index-spi-12">
+<h3>What is the Standarized Precipitation Index (SPI-12)?<a class="headerlink" href="#what-is-the-standarized-precipitation-index-spi-12" title="Permalink to this heading">#</a></h3>
+<p>The Standardized Precipitation Index (SPI) is a widely used index to characterize meteorological drought.
+The Standarized Precipitation Index (SPI-12) compares the total rainfall received at a particular location during the last 12 months with the long-term rainfall mean (42 years) for the same period of time at that location.</p>
+</section>
+<section id="what-is-ipc-food-security-projection-data">
+<h3>What is IPC Food Security Projection Data?<a class="headerlink" href="#what-is-ipc-food-security-projection-data" title="Permalink to this heading">#</a></h3>
+<p>The IPC is a commonly acceepted measure and classification to describe the current and anticipated severity of acute food insecurity.
+The classification is based on a convergence of available data and evidence, including indicators related to food consumption, livelihoods, malnutrition and mortality. Food Insecurity is one of the prioritized impacts of droughts in Somalia which is why it is also used for the triggering mechanism, in a population-weighted index.</p>
+<figure class="align-center" id="qgis-ltr-version">
+<a class="reference internal image-reference" href="../../_images/IPC_classes.png"><img alt="../../_images/IPC_classes.png" src="../../_images/IPC_classes.png" style="height: 100px;" /></a>
+</figure>
+<p><strong>IPC Food Security Projection:</strong></p>
+<p>Three times a year (February, June, and October) FEWSNET estimates most likely IPC classes for the upcoming 8 month (near-term and mid-term projection), available from 2019-current. The near-term projection is called ML1 and is a projection for the upcoming 4 month, the mid-term projection is called ML2 and projects the IPC classes for the 4 subsequent months. For the triggering ML1 (near-term) as well as ML2 (mid-term) projections will be considered.</p>
+<p>Outlook updates are produced almost every month and are also taken into account.</p>
+<p><strong>IPC-Population Weighted Index</strong></p>
+<p>To better operationalise the IPC data a simple population-weigthed index was developed. Relative population numbers are weighted based on the respective IPC class they fallin, in order to give the amount of people in a certain IPC class the importance instead of the IPC class only.
+Furthermore, population located in a higher IPC class is more important than population located in a lower class. The index is calculated as follows:</p>
+<p><span class="math notranslate nohighlight">\( IPC\ Index =  Weights \times \frac{District\ Pop\ per\ IPC\ Phase}{Total\ District\ Pop}\)</span></p>
+<p>Where the weights are defined as:</p>
+<p>IPC 1 = 0<br />
+IPC 2 = 0<br />
+IPC 3 = 1<br />
+IPC 4 = 3<br />
+IPC 4 = 6</p>
+<p>The IPC Index represents low-population districts equal to high-population districts. No underrepresentation of high food insecurity of small districts occurs.</p>
+</section>
+<section id="trigger-input-data-download">
+<h3>Trigger Input Data Download<a class="headerlink" href="#trigger-input-data-download" title="Permalink to this heading">#</a></h3>
+<p>The current plans provide that ICPAC will monthly provide the SPI-12 Forcast whereas the IPC data will be pulled from the FEWSNET website. FEWS NET publishes IPC data on its website.
+The main publications plus the updates of the IPC data amount to the publication of new data almost monthly.</p>
+<p><strong>SPI-12 Data</strong></p>
+<p>ICPAC will provide the SPI-12 forecasts on their FTP (File Transfer Protocol). There are different ways to access the FTP-Server. We recommend to install and once set up <a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">FileZilla</a>.</p>
+<p><strong>IPC Data</strong></p>
+<p>The IPC Projection data is provided and regulary updated on the <a class="reference external" href="https://fews.net/">FEWSNET Website</a>.
+On the website you will have to click on Somalia to acess the data. Alternativley, you can  navigate through Data –&gt; Acute Food Insecurity Data and enter „Somalia”. In the menu you will see different dataformats for different timestamps. Once you find out which timestamp is the most current one find the ZIP download. We need the data in shapefile (.shp) format, which is only included in the ZIP file and not provided as single download file.</p>
+<figure class="align-center" id="fewsnet-ipc-download-ipc-projections">
+<a class="reference internal image-reference" href="../../_images/IPC_Projections_website.png"><img alt="../../_images/IPC_Projections_website.png" src="../../_images/IPC_Projections_website.png" style="height: 100px;" /></a>
+</figure>
+<p>Once downloaded the ZIP folder, right click on it and unzip it. You will see various datasets. We are interested in the ML1 and ML2 projections. The filename is composed of “SO” for Somalia, year and month of the report month of the respective projection and _ML1 or _ML2 forn the respective projection. This is what the the dataname for ML1 and ML2 projections published in August would look like:</p>
+<p>“SO_202308_ML1.shp”,
+“SO_202308_ML2.shp”</p>
+<p>You can then copy the respective shapefiles to you folder</p>
+<p>…/Input_Trigger_model/Variable_data/IPC_ML1 and
+…/Input_Trigger_model/Variable_data/IPC_ML2</p>
+<p>Remember that you need to copy over all components that the respective <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geodata_types_wiki.html#vector-data">shapefile</a> is composed of. Most probably it has 5 components: .cpg, .dbf, .prj, .shp, and .shx.</p>
+<figure class="align-center" id="content-of-zip-file-downloaded-containing-ml1-and-ml2-ipc-projections">
+<a class="reference internal image-reference" href="../../_images/IPC_zip.PNG"><img alt="../../_images/IPC_zip.PNG" src="../../_images/IPC_zip.PNG" style="height: 100px;" /></a>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>On the <a class="reference external" href="https://fews.net/">main FEWSNET page</a> you can also sign up for information on latest updates via email. For this option scroll down to the end of the page and click on “Sign up for Emails”. You will then get the option to choose updates only for Somalia.</p>
+<figure class="align-center" id="fewsnet-newsletter">
+<a class="reference internal image-reference" href="../../_images/IPC_Newsletter.png"><img alt="../../_images/IPC_Newsletter.png" src="../../_images/IPC_Newsletter.png" style="height: 100px;" /></a>
+</figure>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+
+<span class="c1"># Making print map</span>
+
+<span class="n">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">easily</span> <span class="n">visualize</span> <span class="n">the</span> <span class="n">outout</span> <span class="n">of</span> <span class="n">the</span> <span class="n">trigger</span> <span class="n">analysis</span> <span class="n">we</span> <span class="n">provide</span> <span class="n">you</span> <span class="k">with</span> <span class="n">a</span> <span class="p">[</span><span class="nb">map</span> <span class="n">template</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">giscience</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">gis</span><span class="o">-</span><span class="n">training</span><span class="o">-</span><span class="n">resource</span><span class="o">-</span><span class="n">center</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">Modul_4</span><span class="o">/</span><span class="n">en_qgis_map_design_2</span><span class="o">.</span><span class="n">html</span><span class="c1">#map-templates) that you can use as a base for your visualization.</span>
+
+<span class="n">Check</span> <span class="p">[</span><span class="n">here</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">giscience</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">gis</span><span class="o">-</span><span class="n">training</span><span class="o">-</span><span class="n">resource</span><span class="o">-</span><span class="n">center</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">Modul_4</span><span class="o">/</span><span class="n">en_qgis_map_design_2</span><span class="o">.</span><span class="n">html</span><span class="c1">#map-templates) how to open templates and how to use them in QGIS.</span>
+
+<span class="n">You</span> <span class="n">can</span> <span class="n">also</span> <span class="n">adapt</span> <span class="n">the</span> <span class="n">template</span> <span class="n">to</span> <span class="n">your</span> <span class="n">needs</span> <span class="ow">and</span> <span class="n">preferences</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">find</span> <span class="n">help</span> <span class="p">[</span><span class="n">here</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">giscience</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">gis</span><span class="o">-</span><span class="n">training</span><span class="o">-</span><span class="n">resource</span><span class="o">-</span><span class="n">center</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">Modul_4</span><span class="o">/</span><span class="n">en_qgis_map_design_2</span><span class="o">.</span><span class="n">html</span><span class="c1">#print-layout).</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -566,9 +702,16 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data">Trigger Input Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-data">Fixed Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-data">Variable Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-standarized-precipitation-index-spi-12">What is the Standarized Precipitation Index (SPI-12)?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ipc-food-security-projection-data">What is IPC Food Security Projection Data?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-input-data-download">Trigger Input Data Download</a></li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>
