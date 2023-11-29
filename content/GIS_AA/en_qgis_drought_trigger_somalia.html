@@ -503,7 +503,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-data">Fixed Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monitoring-data">Monitoring Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-standarized-precipitation-index-spi-12">What is the Standarized Precipitation Index (SPI-12)?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ipc-food-security-projection-data">What is IPC Food Security Projection Data?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ipc-food-security-projection-data">What is IPC Food Security Projection Data?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-food-security-projection">IPC Food Security Projection:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-population-weighted-index">IPC-Population Weighted Index</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-manually">Trigger Workflow Manually</a><ul class="nav section-nav flex-column">
@@ -615,23 +619,73 @@ The Standarized Precipitation Index (SPI-12) compares the total rainfall receive
 <h3>What is IPC Food Security Projection Data?<a class="headerlink" href="#what-is-ipc-food-security-projection-data" title="Permalink to this heading">#</a></h3>
 <p>The IPC is a commonly acceepted measure and classification to describe the current and anticipated severity of acute food insecurity.
 The classification is based on a convergence of available data and evidence, including indicators related to food consumption, livelihoods, malnutrition and mortality. Food Insecurity is one of the prioritized impacts of droughts in Somalia which is why it is also used for the triggering mechanism, in a population-weighted index.</p>
-<figure class="align-center" id="qgis-ltr-version">
-<a class="reference internal image-reference" href="../../_images/IPC_classes.png"><img alt="../../_images/IPC_classes.png" src="../../_images/IPC_classes.png" style="height: 100px;" /></a>
-</figure>
-<p><strong>IPC Food Security Projection:</strong></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Colour</p></th>
+<th class="head"><p>Phase</p></th>
+<th class="head"><p>Descriptions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="" src="../../_images/IPC_Class_1.drawio.svg" /></p></td>
+<td><p>1. Minimal</p></td>
+<td><p>Households are able to meet essential food and non-food needs without engaging in atypical and unsustainable strategies to access food and income.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="../../_images/IPC_Class_2.drawio.svg" /></p></td>
+<td><p>2. Stressed</p></td>
+<td><p>Households have minimally adequate food consumption but are unable to afford some essential non-food expenditures without engaging in stress-coping strategies.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="" src="../../_images/IPC_Class_3.drawio.svg" /></p></td>
+<td><p>3. Crisis</p></td>
+<td><p>Households either have food consumption gaps that are reflected by high or above-usual acute malnutrition <strong>OR</strong> are marginally able to meet minimum food needs but only by depleting essential livelihood assets or through crisis-coping strategies.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="" src="../../_images/IPC_Class_4.drawio.svg" /></p></td>
+<td><p>4. Emergency</p></td>
+<td><p>Households either have large food consumption gaps which are reflected in very high acute malnutrition and excess mortality; <strong>OR</strong> are able to mitigate large food consumption gaps but only by employing emergency livelihood strategies and asset liquidation.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="" src="../../_images/IPC_Class_5.drawio.svg" /></p></td>
+<td><p>5. Famine</p></td>
+<td><p>Households have an extreme lack of food and/or other basic needs even after full employment of coping strategies. Starvation, death, destitution, and extremely critical acute malnutrition levels are evident. (For Famine Classification, area needs to have extreme critical levels of acute malnutrition and mortality.)</p></td>
+</tr>
+</tbody>
+</table>
+<section id="ipc-food-security-projection">
+<h4>IPC Food Security Projection:<a class="headerlink" href="#ipc-food-security-projection" title="Permalink to this heading">#</a></h4>
 <p>Three times a year (February, June, and October) FEWSNET estimates most likely IPC classes for the upcoming 8 month (near-term and mid-term projection), available from 2019-current. The near-term projection is called ML1 and is a projection for the upcoming 4 month, the mid-term projection is called ML2 and projects the IPC classes for the 4 subsequent months. For the triggering ML1 (near-term) as well as ML2 (mid-term) projections will be considered.</p>
 <p>Outlook updates are produced almost every month and are also taken into account.</p>
-<p><strong>IPC-Population Weighted Index</strong></p>
+</section>
+<section id="ipc-population-weighted-index">
+<h4>IPC-Population Weighted Index<a class="headerlink" href="#ipc-population-weighted-index" title="Permalink to this heading">#</a></h4>
 <p>To better operationalise the IPC data a simple population-weigthed index was developed. Relative population numbers are weighted based on the respective IPC class they fallin, in order to give the amount of people in a certain IPC class the importance instead of the IPC class only.
 Furthermore, population located in a higher IPC class is more important than population located in a lower class. The index is calculated as follows:</p>
 <p><span class="math notranslate nohighlight">\( IPC\ Index =  Weights \times \frac{District\ Pop\ per\ IPC\ Phase}{Total\ District\ Pop}\)</span></p>
 <p>Where the weights are defined as:</p>
-<p>IPC 1 = 0<br />
-IPC 2 = 0<br />
-IPC 3 = 1<br />
-IPC 4 = 3<br />
-IPC 4 = 6</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>IPC Pahse</p></th>
+<th class="head"><p>Weight</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IPC 1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPC 2</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>IPC 3</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPC 4</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>IPC 5</p></td>
+<td><p>6</p></td>
+</tr>
+</tbody>
+</table>
 <p>The IPC Index represents low-population districts equal to high-population districts. No underrepresentation of high food insecurity of small districts occurs.</p>
+</section>
 </section>
 </section>
 <section id="trigger-workflow-manually">
@@ -641,13 +695,38 @@ IPC 4 = 6</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_1_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_1_1.png" src="../../_images/Drought_EAP_Worklow_Step_1_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
+<p><strong>Purpose:</strong> In this step we set up the correct folder structure to make the analysis easier and to ensure consitent results.</p>
 <p><strong>Tool:</strong> No special tools or programs are needed</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Instructions</div>
 <ol class="arabic simple">
-<li><p>Open the Folder “FbF_Drought_Monitoring_Trigger”</p></li>
-<li><p>Open the subfolder “Monitoring”</p></li>
-<li><p>Copy the Template folder “TEMPLATE_Year_Month” and change the name to the current year and month. The result could be the folder “2022_05”</p></li>
+<li><p class="sd-card-text">Open the Folder “FbF_Drought_Monitoring_Trigger”</p></li>
+<li><p class="sd-card-text">Open the subfolder “Monitoring”</p></li>
+<li><p class="sd-card-text">Copy the Template folder “TEMPLATE_Year_Month” and change the name to the current year and month. The result could be the folder “2022_05”</p></li>
 </ol>
+<p class="sd-card-text">The Video below shows the process for setting up the folder for decmber 2023.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Folder structure FbF_Drought_Monitoring_Trigger</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Folder_structure_FbF_Drought_Monitoring_Trigger.drawio.svg"><img alt="../../_images/Folder_structure_FbF_Drought_Monitoring_Trigger.drawio.svg" src="../../_images/Folder_structure_FbF_Drought_Monitoring_Trigger.drawio.svg" width="450px" /></a>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_folder_setup.mp4"></video></p>
 </section>
 <section id="step-2-download-of-the-forecast-data">
 <h3>Step 2: Download of the forecast data<a class="headerlink" href="#step-2-download-of-the-forecast-data" title="Permalink to this heading">#</a></h3>
@@ -1053,7 +1132,11 @@ END`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed-data">Fixed Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monitoring-data">Monitoring Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-standarized-precipitation-index-spi-12">What is the Standarized Precipitation Index (SPI-12)?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ipc-food-security-projection-data">What is IPC Food Security Projection Data?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ipc-food-security-projection-data">What is IPC Food Security Projection Data?</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-food-security-projection">IPC Food Security Projection:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-population-weighted-index">IPC-Population Weighted Index</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-manually">Trigger Workflow Manually</a><ul class="nav section-nav flex-column">
