@@ -1032,7 +1032,7 @@ Instructions</div>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_8_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_8_1.png" src="../../_images/Drought_EAP_Worklow_Step_8_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong> In this step we calculating the [IPC-Population Weighted Index](file:///C:/HeiGIT/RCRC_GIS_Training/gis-training-resource-center/_build/html/content/GIS_AA/en_qgis_drought_trigger_somalia.html#ipc-population-weighted-index) per district.</p>
+<p><strong>Purpose:</strong> In this step we calculating the [IPC-Population Weighted Index](file:///C:/HeiGIT/RCRC_GIS_Training/gis-training-resource-center/_build/html/content/GIS_AA/en_qgis_drought_trigger_somalia.html#ipc-population-weighted-index)for every small part of the polygon layer.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
@@ -1062,10 +1062,26 @@ Instructions</div>
 <section id="step-9-calculate-ipc-index-per-district">
 <h3>Step 9.: Calculate IPC Index per District<a class="headerlink" href="#step-9-calculate-ipc-index-per-district" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_9_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_9_1.png" src="../../_images/Drought_EAP_Worklow_Step_9_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
 <p><strong>Tool:</strong></p>
+<ol class="arabic simple">
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attribute</span> <span class="pre">by</span> <span class="pre">location</span> <span class="pre">(summary)</span></code></p></li>
+</ol>
+<ul class="simple">
+<li><p>Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not opne click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “district_pop_som” layer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your layer “Intersection_population_weighted_percentage
+Polygons”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Geometric</span> <span class="pre">predicate</span></code>: Select “Intersection”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">to</span> <span class="pre">summarise</span></code>: Select “Index_per_IPCPolygon_ML1”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Summaries</span> <span class="pre">to</span> <span class="pre">calculate</span></code>: Chose only the option “mean”</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span> <span class="pre">[optional]</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_join” or “ML2_join” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+</ol>
 </section>
 <section id="step-10-join-ml1-and-ml2-i">
 <h3>Step 10.: Join ML1 and ML2 I<a class="headerlink" href="#step-10-join-ml1-and-ml2-i" title="Permalink to this heading">#</a></h3>
