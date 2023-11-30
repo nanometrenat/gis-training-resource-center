@@ -1090,7 +1090,7 @@ Instructions</div>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_10_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_10_1.png" src="../../_images/Drought_EAP_Worklow_Step_10_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong> The purpose of this step is to merge “ML1_join_location” and “ML2_join_location” into one layer so that it can be jointly analysed.</p>
+<p><strong>Purpose:</strong> The purpose of this step is to merge “ML1_join_location” and “ML2_join_location” into one layer so we have the IPC-Index for all districts.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
 <ol class="arabic simple">
 <li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
@@ -1108,7 +1108,10 @@ Instructions</div>
 <li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “IPC_index_district” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
-<p>SRCS_Trigger_step_10_IPC_Index_district.png</p>
+<figure class="align-default">
+<img alt="../../_images/SRCS_Trigger_step_10_IPC_Index_district.png" src="../../_images/SRCS_Trigger_step_10_IPC_Index_district.png" />
+</figure>
+<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_10_join.mp4"></video></p>
 </section>
 <section id="step-11-calculation-of-spi12-mean-per-district">
 <h3>Step 11.: Calculation of SPI12 Mean per District<a class="headerlink" href="#step-11-calculation-of-spi12-mean-per-district" title="Permalink to this heading">#</a></h3>
@@ -1118,12 +1121,23 @@ Instructions</div>
 <p><strong>Purpose:</strong> Calculate the mean value over the SPI-12 values of all pixels that fall within a scertain districts area, in order to have one SPI-12 value for each district.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p>
 <ol class="arabic simple">
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
+</ol>
+<ul class="simple">
+<li><p>Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not opne click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="2">
 <li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: district_pop_som</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Layer</span></code>: SPI Forecast</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">column</span> <span class="pre">prefix</span></code>: Use  “SPI12_”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Statistics</span> <span class="pre">to</span> <span class="pre">calculate</span></code>: “Mean”</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “SPI12_district” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
+<figure class="align-default">
+<img alt="fig/SRCS_Trigger_step_11_IPC_zonal_district.png" src="fig/SRCS_Trigger_step_11_IPC_zonal_district.png" />
+</figure>
+<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_11_zonal_staistics.mp4"></video></p>
 </section>
 <section id="step-12-join-spi12-mean-to-the-ipc-index">
 <h3>Step 12.: Join SPI12 Mean to the IPC Index<a class="headerlink" href="#step-12-join-spi12-mean-to-the-ipc-index" title="Permalink to this heading">#</a></h3>
@@ -1133,13 +1147,24 @@ Instructions</div>
 <p><strong>Purpose:</strong> The purpose of this step is to merge data from two different data sources into one data frame so that it can be jointly analysed.</p>
 <p><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
 <ol class="arabic simple">
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “IPC_index_district_ML2_ML2”</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
+</ol>
+<ul class="simple">
+<li><p>Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not opne click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “IPC_index_district”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your “SPI12_districts”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your “SPI12_district”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)”</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “IPC_index_SPI_12_district” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
+<figure class="align-default">
+<img alt="../../_images/SRCS_Trigger_step_12_IPC_SPI12_join.png" src="../../_images/SRCS_Trigger_step_12_IPC_SPI12_join.png" />
+</figure>
+<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_12_join_IPC_SPI12.mp4"></video></p>
 </section>
 <section id="step-13-evaluate-trigger-activation">
 <h3>Step 13.: Evaluate Trigger Activation<a class="headerlink" href="#step-13-evaluate-trigger-activation" title="Permalink to this heading">#</a></h3>
@@ -1149,10 +1174,10 @@ Instructions</div>
 <p><strong>Purpose:</strong> The purpose of this step is to gain a quick overview of possible trigger activation without having to revise the actual data. Instead we will have a binary column with trigger = yes or no values.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
 <ol class="arabic simple">
-<li><p>Right-click on Intersection_population Polygons layer -&gt; <code class="docutils literal notranslate"><span class="pre">Attribute</span> <span class="pre">Table</span></code>-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" /> to open the field calculator</p></li>
+<li><p>Right-click on “IPC_index_SPI_12_district” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Attribute</span> <span class="pre">Table</span></code>-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" /> to open the field calculator</p></li>
 <li><p>Check <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">field</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">field</span> <span class="pre">name</span></code>: Name the new column “Trigger_activation”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">field</span> <span class="pre">type</span></code>: Text</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">field</span> <span class="pre">type</span></code>: Text (string)</p></li>
 <li><p>Add the code below into the <code class="docutils literal notranslate"><span class="pre">Expression</span></code> field</p></li>
 </ol>
 <table class="table">
@@ -1164,13 +1189,15 @@ Instructions</div>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>`CASE
+<tr class="row-even"><td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>CASE
+
 WHEN &quot;Index_per_IPCPolygon_ML1_mean&quot; &gt;0.7 AND &quot;Index_per_IPCPolygon_ML2_mean&quot; &gt; 0.7
 AND
 &quot;SPI12_mean&quot; &lt; -1
 THEN &#39;yes&#39;
 ELSE &#39;no&#39;
-END`
+
+END
 </pre></div>
 </div>
 </td>
@@ -1179,8 +1206,12 @@ END`
 </table>
 <ol class="arabic simple" start="6">
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">ok</span></code></p></li>
-<li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table</p></li>
+<li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table and end the editing mode by clicking on <img alt="" src="../../_images/mActionToggleEditing.png" /></p></li>
 </ol>
+<figure class="align-default">
+<img alt="../../_images/SRCS_Trigger_step_13_trigger_evaluation.png" src="../../_images/SRCS_Trigger_step_13_trigger_evaluation.png" />
+</figure>
+<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_13_trigger_activation.mp4"></video></p>
 </section>
 <section id="step-14-visualisation-of-results">
 <h3>Step 14.: Visualisation of results<a class="headerlink" href="#step-14-visualisation-of-results" title="Permalink to this heading">#</a></h3>
@@ -1191,7 +1222,7 @@ END`
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_I.html#symbology-for-vector-data">Symbology</a></p>
 <p><strong>Trigger Activation</strong></p>
 <ol class="arabic simple">
-<li><p>Right cklick on the “Trigger_activation” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>Right cklick on the “Trigger_activation” (or “IPC_index_SPI_12_district”) layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
 <li><p>In the drop-down menu on the top choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code></p></li>
 <li><p>In the down left corner click on <code class="docutils literal notranslate"><span class="pre">Style</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
 <li><p>In the new window click on the three points <img alt="" src="../../_images/Three_points.png" />. Navigate to the “FbF_Drought_Monitoring_Trigger/layer_styles” folder and select the file “Style_Trigger_Activation.qml”.</p></li>
