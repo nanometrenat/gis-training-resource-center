@@ -1194,11 +1194,15 @@ END`
 <li><p>Right cklick on the “Trigger_activation” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
 <li><p>In the drop-down menu on the top choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code></p></li>
 <li><p>In the down left corner click on <code class="docutils literal notranslate"><span class="pre">Style</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
-<li><p>In the new window click on the three points <img alt="" src="../../_images/Three_points.png" />. Navigate to the “FbF_Drought_Monitoring_Trigger” folder and select the file “Style_Trigger_Activation.qml”.</p></li>
+<li><p>In the new window click on the three points <img alt="" src="../../_images/Three_points.png" />. Navigate to the “FbF_Drought_Monitoring_Trigger/layer_styles” folder and select the file “Style_Trigger_Activation.qml”.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Open</span></code>. Then click on <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
 <li><p>Back in the “Layer Properties” Window click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
 </ol>
-<p>You will now see all the districts with green or pink outline, depending on a occured trigger activation.</p>
+<p>You will now see districts where no trigger is activated in green and districts with trigger activation in pink.</p>
+<p>The “Style_Trigger_Activation.qml” style layer is configured to show the district names only where the trigger is actually activated. If there is no trigger activation you can activate the admin 1 boundary layer for better map orientation (see <strong>Administrative 2 Boundaries</strong> below)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Map_yes_trigger.PNG"><img alt="../../_images/Map_yes_trigger.PNG" src="../../_images/Map_yes_trigger.PNG" style="width: 1000px;" /></a>
+</figure>
 <p><strong>Risk Assessment</strong></p>
 <p>For the creation of an <strong>Intervention Map</strong> we will have to add the risk assessment data and the respective style file.
 For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Risk_Assessment” the file “risk_assessment_districts.gpkg”. This file is the output of the conducted risk assessment and contains a risk value for each district of Simaliland and Somalia.  In order to visualize it</p>
@@ -1207,28 +1211,53 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 <li><p>Repeat the steps from above for loading the style layer, but choose the “somalia_risk_assessment_style.qml” style layer.</p></li>
 </ol>
 <p>For the final visualization and right overlay of the risk assessment and the Trigger activation, make sure you “Trigger Activation” layer is above the
-“risk_assessment_districts” layer in the Layers Panel.
-You will now see districts where no trigger is activated in green and districts with trigger activation in pink.</p>
+“risk_assessment_districts” layer in the Layers Panel (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_2/en_qgis_geodata_concept.html?highlight=layer#layer-concept">Layer Concept</a>).</p>
+<p><strong>Administrative 2 Boundaries</strong></p>
+<p>For better orientation in the map, especially if no trigger is activated you can optionally load the regions boundaries with regions names:</p>
+<p>Navigate to “…\FbF_Drought_Monitoring_Trigger\Fixed_data\Regions” and load the “Som_Admbnda_Adm1_UNDP.shp” file into your layers panel.</p>
+<ol class="arabic simple">
+<li><p>Right click on the “risk_assessment_districts” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>Repeat the steps from above for loading the style layer, but choose the “somalia_risk_assessment_style.qml” style layer.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Map_no_trigger.PNG"><img alt="../../_images/Map_no_trigger.PNG" src="../../_images/Map_no_trigger.PNG" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Basemap</strong></p>
+<p>Add a basemap to your map in order to have a nice background. We recommend to use OpenStreetMap as a baselayer, but you can also choose another basemap if you prefer.</p>
+<p>Find out <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html?highlight=osm#basemaps">here</a> how to add a basemap.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Remember the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_2/en_qgis_geodata_concept.html?highlight=layer#layer-concept">layer concept</a> and make sure the basemap layer is at the bottom of your layers panel.</p>
+</div>
 </section>
 <section id="step-15-making-print-map">
 <h3>Step 15.: Making print map<a class="headerlink" href="#step-15-making-print-map" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
 </figure>
+<p><strong>Purpose:</strong> Viualization of the map features in a printable map layout</p>
+<p><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=print+layout#print-layout">Print Layout</a></p>
 <p>In order to easily visualize the output of the trigger analysis we provide you with a
-<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">map template</a> that you can be used as a base for your visualization. You can find the template in the following directory: “…/FbF_Drought_Monitoring_Trigger/maps_somalia_template_risk_assessment.qpt”.</p>
+<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">map template</a> that can be used as a base for your visualization. You can find the template in the following directory: “…/FbF_Drought_Monitoring_Trigger/maps_somalia_template_risk_assessment.qpt”.</p>
 <p>Check <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">here</a> how to open templates and how to use them in QGIS.</p>
 <p>You can also adapt the template to your needs and preferences. You can find help <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#print-layout">here</a>.</p>
-<p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Make sure you edit the Map Information on the template, e.g. current date. Also make sure to check the legend items: Remove unnecessary items and eventually change the names to meaning descriptions.</p>
+</div>
 </section>
 <section id="step-16-exporting-map">
 <h3>Step 16.: Exporting Map<a class="headerlink" href="#step-16-exporting-map" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong></p>
+<p><strong>Purpose:</strong> Export the designed and finalized map layout in order tp print it as a pdf or format of your choice.</p>
+<p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=print+layout#print-layout">Print Layout</a></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="fig/map_outputexample2.png"><img alt="fig/map_outputexample2.png" src="fig/map_outputexample2.png" style="width: 1000px;" /></a>
+</figure>
+<p>When you have finished the design of you map you can export it as pdf or image file in different datafromats.</p>
+<p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=export#exporting-the-print-layout">Click here</a> to find the step by step on how to export your map.</p>
 </section>
 </section>
 </section>
