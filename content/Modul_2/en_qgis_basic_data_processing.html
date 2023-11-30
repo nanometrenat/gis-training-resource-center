@@ -604,6 +604,24 @@ Either use the wizard by tiping in <em>amenity=school in Heidelberg</em> or writ
 <span class="k">out</span><span class="p">;</span><span class="w"> </span>
 </pre></div>
 </div>
+<blockquote>
+<div><p><strong>Bounding Box</strong><br />
+To query with a bounding box you need a special format. Specify it like so:</p>
+<ul class="simple">
+<li><p>s (southern limit in decimal degrees, lowest latitude)</p></li>
+<li><p>w (western limit in decimal degrees, lowest longitude)</p></li>
+<li><p>n (northern limit in decimal degrees, highest latitude)</p></li>
+<li><p>e (eastern limit in decimal degrees, highest longitude)</p>
+<ul>
+<li><p>for example:</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="n">node</span><span class="w"> </span><span class="p">[</span><span class="ss">&quot;key&quot;</span><span class="o">=</span><span class="ss">&quot;value&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="k">out</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>For more information on the query language check out the <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">Language Guide</a>.</p>
@@ -693,6 +711,10 @@ If you can't find your new icon for the plugin, select view - toolbars and check
 <p>Having a look into the attribute table can be helpful to get an overview on the data you are working with. It can also be used to select, filter or edit data.</p>
 <section id="open-the-attribute-table">
 <h3>Open the attribute table<a class="headerlink" href="#open-the-attribute-table" title="Permalink to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have multiple layers, only the attribute table of the layer selected in the layer panel on the left will open.</p>
+</div>
 </section>
 <section id="sort-the-information">
 <h3>Sort the information<a class="headerlink" href="#sort-the-information" title="Permalink to this heading">#</a></h3>
@@ -713,16 +735,6 @@ Explanation
 </section>
 <section id="zoom-to-selected-area">
 <h3>Zoom to selected area<a class="headerlink" href="#zoom-to-selected-area" title="Permalink to this heading">#</a></h3>
-<p>öffnen (2 ways)
-sort
-manually select / unselect
-filter
-zoom to selected
-edit change data</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you have multiple layers, only the attribute table of the layer selected in the layer panel on the left will open.</p>
-</div>
 </section>
 </section>
 <section id="feature-selection">
