@@ -500,13 +500,18 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-features-and-attributes">Geo features and attributes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-attribute-table">Open the attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-the-information">Sort the information</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-select">Manually select</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-or-change-data">Edit or change data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-to-selected-area">Zoom to selected area</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-selection">Feature selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-selection">Feature selection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-select">Manually select</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-location">Select by location</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-feature-by-expression">Select feature by expression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-calculator">Field calculator</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemap-selection">Basemap selection</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">OpenStreetMap</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickmapservices">QuickMapServices</a></li>
@@ -574,7 +579,7 @@ GeoPackage import</label><div class="sd-tab-content docutils">
 <h3>overpass turbo<a class="headerlink" href="#overpass-turbo" title="Permalink to this heading">#</a></h3>
 <p>Overpass turbo is a web based data mining tool for OSM. By running a query, you can download the data and import it into your project. You can either run it by writing your query on the left or by using the wizard which will assist you in writing your queries.</p>
 <blockquote>
-<div><p><em>Example</em><br />
+<div><p><em><strong>Example</strong></em><br />
 To search for schools in your bounding box or search area you can either write the query yourself or get it build by the wizard.<br />
 <strong>1. Check Tagging Guidelines</strong><br />
 Search for it in the <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Tags">OSM wiki</a> and/or <a class="reference external" href="https://taginfo.openstreetmap.org">taginfo</a>. In our example it is: <em>amenity=school</em><br />
@@ -711,6 +716,7 @@ If you can't find your new icon for the plugin, select view - toolbars and check
 <p>Having a look into the attribute table can be helpful to get an overview on the data you are working with. It can also be used to select, filter or edit data.</p>
 <section id="open-the-attribute-table">
 <h3>Open the attribute table<a class="headerlink" href="#open-the-attribute-table" title="Permalink to this heading">#</a></h3>
+<p>2 ways</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have multiple layers, only the attribute table of the layer selected in the layer panel on the left will open.</p>
@@ -719,19 +725,11 @@ If you can't find your new icon for the plugin, select view - toolbars and check
 <section id="sort-the-information">
 <h3>Sort the information<a class="headerlink" href="#sort-the-information" title="Permalink to this heading">#</a></h3>
 </section>
-<section id="manually-select">
-<h3>Manually select<a class="headerlink" href="#manually-select" title="Permalink to this heading">#</a></h3>
-<details>
-<summary>How to unselect</summary>
-<br>
-Explanation
-</details>
-</section>
-<section id="filter">
-<h3>Filter<a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h3>
-</section>
 <section id="edit-or-change-data">
 <h3>Edit or change data<a class="headerlink" href="#edit-or-change-data" title="Permalink to this heading">#</a></h3>
+<p>edit
+add column
+delete</p>
 </section>
 <section id="zoom-to-selected-area">
 <h3>Zoom to selected area<a class="headerlink" href="#zoom-to-selected-area" title="Permalink to this heading">#</a></h3>
@@ -739,6 +737,29 @@ Explanation
 </section>
 <section id="feature-selection">
 <h2>Feature selection<a class="headerlink" href="#feature-selection" title="Permalink to this heading">#</a></h2>
+<p><strong>PowerPoint 8-22</strong></p>
+<section id="manually-select">
+<h3>Manually select<a class="headerlink" href="#manually-select" title="Permalink to this heading">#</a></h3>
+<p>select
+save only selected</p>
+<details>
+<summary>How to unselect</summary>
+<br>
+Explanation
+</details>
+</section>
+<section id="select-by-location">
+<h3>Select by location<a class="headerlink" href="#select-by-location" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="filter">
+<h3>Filter<a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="select-feature-by-expression">
+<h3>Select feature by expression<a class="headerlink" href="#select-feature-by-expression" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="field-calculator">
+<h3>Field calculator<a class="headerlink" href="#field-calculator" title="Permalink to this heading">#</a></h3>
+</section>
 </section>
 <section id="basemap-selection">
 <h2>Basemap selection<a class="headerlink" href="#basemap-selection" title="Permalink to this heading">#</a></h2>
@@ -835,13 +856,18 @@ Explanation
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-features-and-attributes">Geo features and attributes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-attribute-table">Open the attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-the-information">Sort the information</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-select">Manually select</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-or-change-data">Edit or change data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-to-selected-area">Zoom to selected area</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-selection">Feature selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-selection">Feature selection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-select">Manually select</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-location">Select by location</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-feature-by-expression">Select feature by expression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-calculator">Field calculator</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemap-selection">Basemap selection</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">OpenStreetMap</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickmapservices">QuickMapServices</a></li>
