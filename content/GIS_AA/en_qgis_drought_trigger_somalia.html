@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/GIS_AA/en_qgis_drought_trigger_somalia';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Risk Assessment QGIS Plugin" href="en_qgis_risk_assessment_plugin.html" />
+    <link rel="next" title="Basic QGIS" href="en_qgis_srcs_basic_ex.html" />
     <link rel="prev" title="And for the second exercise the second task of exercise 4: https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_4?ref_type=heads" href="../Modul_5/en_qgis_non_spatial_tools_ex2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -286,8 +286,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">QGIS Trigger Workflow for Somalia</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_risk_assessment_plugin.html">Risk Assessment QGIS Plugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Anne.html">Drought Trigger Somaliland Somalia</a></li>
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
@@ -1074,30 +1072,41 @@ Instructions</div>
 </ul>
 <ol class="arabic simple" start="2">
 <li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “district_pop_som” layer</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your layer “Intersection_population_weighted_percentage
-Polygons”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select “ML1_join” (or ML2_Join”)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Geometric</span> <span class="pre">predicate</span></code>: Select “Intersection”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">to</span> <span class="pre">summarise</span></code>: Select “Index_per_IPCPolygon_ML1”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">to</span> <span class="pre">summarise</span></code>: Select “Index_per_IPCPolygon_ML1” (or “Index_per_IPCPolygon_ML2” )</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Summaries</span> <span class="pre">to</span> <span class="pre">calculate</span></code>: Chose only the option “mean”</p></li>
-<li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span> <span class="pre">[optional]</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_join” or “ML2_join” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_join_location” or “ML2_join_location” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
+<figure class="align-default">
+<img alt="../../_images/SRCS_Trigger_step_9_join_location.png" src="../../_images/SRCS_Trigger_step_9_join_location.png" />
+</figure>
+<p><strong>Result:</strong> As a result, your two layers “ML1_join_location” and “ML2_join_location” should have the column “Index_per_IPCPolygon_ML1_mean” or “Index_per_IPCPolygon_ML2_mean”. Furthermore, the number of rows should be the exact number of districts in Somalia and the polygons should have the exact shape of the districts.</p>
+<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_9_join_location.mp4"></video></p>
 </section>
 <section id="step-10-join-ml1-and-ml2-i">
 <h3>Step 10.: Join ML1 and ML2 I<a class="headerlink" href="#step-10-join-ml1-and-ml2-i" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_10_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_10_1.png" src="../../_images/Drought_EAP_Worklow_Step_10_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong> The purpose of this step is to merge data from two different data sets into one data frame so that it can be jointly analysed.</p>
+<p><strong>Purpose:</strong> The purpose of this step is to merge “ML1_join_location” and “ML2_join_location” into one layer so that it can be jointly analysed.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “IPC_Index_district” layer for ML 1</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
+</ol>
+<ul class="simple">
+<li><p>Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not opne click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “ML1_join_location” layer</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your “IPC_Index_district” layer for ML 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select your “ML2_join_location” layer</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">2</span> <span class="pre">field</span> <span class="pre">to</span> <span class="pre">copy</span></code>: Click on the three points and  select “Index_per_IPCPolygon_ML2_mean”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_join_location” or “ML2_join_location” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
 </section>
 <section id="step-11-calculation-of-spi12-mean-per-district">
@@ -1224,6 +1233,8 @@ You will now see districts where no trigger is activated in green and districts 
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="trigger-workflow-automated">
 <h1>Trigger Workflow Automated<a class="headerlink" href="#trigger-workflow-automated" title="Permalink to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1266,11 +1277,11 @@ You will now see districts where no trigger is activated in green and districts 
       </div>
     </a>
     <a class="right-next"
-       href="en_qgis_risk_assessment_plugin.html"
+       href="en_qgis_srcs_basic_ex.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Risk Assessment QGIS Plugin</p>
+        <p class="prev-next-title">Basic QGIS</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
