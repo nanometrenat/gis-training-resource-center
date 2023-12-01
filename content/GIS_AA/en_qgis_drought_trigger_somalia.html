@@ -515,15 +515,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-data">IPC Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per  Intersection Polygon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per Intersection Polygon</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6: Weighting of the Population based on IPC-Phase</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-adding-the-total-district-population-to-intersection-polygons">Step 7: Adding the total district population to Intersection Polygons</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8.: Calculation of Population Proportion per Intersection Polygon</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9.: Calculate IPC Index per District</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8: Calculation of Population Proportion per Intersection Polygon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9: Calculate IPC Index per District</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-join-ml1-and-ml2-i">Step 10.: Join ML1 and ML2 I</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-calculation-of-spi12-mean-per-district">Step 11.: Calculation of SPI12 Mean per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi12-mean-to-the-ipc-index">Step 12.: Join SPI12 Mean to the IPC Index</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-evaluate-trigger-activation">Step 13.: Evaluate Trigger Activation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-calculation-of-spi12-mean-per-district">Step 11: Calculation of SPI12 Mean per District</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi12-mean-to-the-ipc-index">Step 12: Join SPI12 Mean to the IPC Index</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-evaluate-trigger-activation">Step 13: Evaluate Trigger Activation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-visualisation-of-results">Step 14.: Visualisation of results</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-making-print-map">Step 15.: Making print map</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-exporting-map">Step 16.: Exporting Map</a></li>
@@ -695,37 +695,41 @@ Furthermore, population located in a higher IPC class is more important than pop
 </figure>
 <p><strong>Purpose:</strong> In this step we set up the correct folder structure to make the analysis easier and to ensure consitent results.</p>
 <p><strong>Tool:</strong> No special tools or programs are needed</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Instructions</div>
-<ol class="arabic simple">
-<li><p class="sd-card-text">Open the Folder “FbF_Drought_Monitoring_Trigger”</p></li>
-<li><p class="sd-card-text">Open the subfolder “Monitoring”</p></li>
-<li><p class="sd-card-text">Copy the Template folder “TEMPLATE_Year_Month” and change the name to the current year and month. The result could be the folder “2022_05”</p></li>
+<table class="table">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instruction</p></th>
+<th class="head"><p>Folder Structure</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Open the Folder “FbF_Drought_Monitoring_Trigger”</p></li>
+<li><p>Open the subfolder “Monitoring”</p></li>
+<li><p>Copy the Template folder “TEMPLATE_Year_Month” and change the name to the current year and month. The result could be the folder “2022_05”</p></li>
 </ol>
-<p class="sd-card-text">The Video below shows the process for setting up the folder for decmber 2023.</p>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Folder structure FbF_Drought_Monitoring_Trigger</div>
-<figure class="align-center">
+</td>
+<td><figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Folder_structure_FbF_Drought_Monitoring_Trigger.drawio.svg"><img alt="../../_images/Folder_structure_FbF_Drought_Monitoring_Trigger.drawio.svg" src="../../_images/Folder_structure_FbF_Drought_Monitoring_Trigger.drawio.svg" width="450px" /></a>
 </figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The Video below shows the process for setting up the folder for decmber 2023.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Setting up folder structure <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_folder_setup.mp4"></video></p>
 </div>
-</div>
-</div>
-</div>
-</div>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_folder_setup.mp4"></video></p>
-</section>
+</details></section>
 <section id="step-2-download-of-the-forecast-data">
 <h3>Step 2: Download of the forecast data<a class="headerlink" href="#step-2-download-of-the-forecast-data" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
@@ -782,15 +786,25 @@ On the website you will have to click on Somalia to acess the data. Alternativle
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_3_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_3_1.png" src="../../_images/Drought_EAP_Worklow_Step_3_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong></p>
+<p><strong>Purpose:</strong> In this step, all the data needed will be loaded into QGIS.</p>
+<p><strong>Tool:</strong> No specific tools are needed, only QGIS.</p>
 <ol class="arabic simple">
 <li><p>Open QGIS and create a <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#step-by-step-setting-up-a-new-qgis-project-from-scratch">new project</a> by clicking on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span></code></p></li>
 <li><p>Once the project is created save the project in the folder you created in Step 1 (e.g. 2022_05). To do that click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code> and navigate to the folder. Give the project the same name as the folder you created (e.g. 2022_05). Then click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
 <li><p>Load all input data in QGIS by <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-raster-data-via-drag-and-drop">drag and drop</a>. Click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
 </ol>
+<p><strong>Result:</strong> QGIS project with all necessary data ready to be analysed.</p>
 <p>This video shows how to setup the QGIS project for April 2022 and how to import all data into the project.</p>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_3.mp4"></video></p>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Loading data into QGIS<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_3.mp4"></video></p>
+</div>
+</details></section>
 <section id="step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">
 <h3>Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons<a class="headerlink" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
@@ -802,64 +816,47 @@ On the website you will have to click on Somalia to acess the data. Alternativle
 <p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
 </div>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#intersection"><code class="docutils literal notranslate"><span class="pre">Intersection</span></code></a></p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Instructions</div>
-<ol class="arabic simple">
-<li><p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Vector</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Geoprocessing</span> <span class="pre">Tools</span></code> -&gt; <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#intersection"><code class="docutils literal notranslate"><span class="pre">Intersection</span></code></a></p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: ML 1 or ML 2</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Overlay</span> <span class="pre">layer</span></code>: district_pop_sum</p></li>
-<li><p class="sd-card-text">Under <code class="docutils literal notranslate"><span class="pre">Intersection</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_Intersection” or “ML2_Intersection” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
-<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+<table class="table">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instruction</p></th>
+<th class="head"><p>Intersection</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Vector</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Geoprocessing</span> <span class="pre">Tools</span></code> -&gt; <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#intersection"><code class="docutils literal notranslate"><span class="pre">Intersection</span></code></a>
+2.<code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: ML 1 or ML 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Overlay</span> <span class="pre">layer</span></code>: district_pop_sum</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Intersection</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_Intersection” or “ML2_Intersection” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
-<p class="sd-card-text"><strong>Result:</strong> After doing this for ML1 and ML2 you should have two polygon layers, each containing all columns of ML1 (or ML2) and district_pop_sum.</p>
-<p class="sd-card-text">The resulting layer can have more rows than the original layers.</p>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Intersection for ML 1</div>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_4_Intersection.png"><img alt="../../_images/SRCS_Trigger_step_4_Intersection.png" src="../../_images/SRCS_Trigger_step_4_Intersection.png" style="width: 500px;" /></a>
+</td>
+<td><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_4_Intersection.png"><img alt="../../_images/SRCS_Trigger_step_4_Intersection.png" src="../../_images/SRCS_Trigger_step_4_Intersection.png" style="width: 450px;" /></a>
 </figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Instructions</div>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_4_Intersection.png"><img alt="../../_images/SRCS_Trigger_step_4_Intersection.png" src="../../_images/SRCS_Trigger_step_4_Intersection.png" style="width: 500px;" /></a>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> After doing this for ML1 and ML2 you should have two polygon layers, each containing all columns of ML1 (or ML2) and district_pop_sum.</p>
+<p>The resulting layer can have more rows than the original layers.</p>
 <p>The video shows the whole process on the example of ML 1.</p>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_4_Intersection.mp4"></video></p>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Intersection of ML 1 &amp; ML 2 data with the district polygons <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_4_Intersection.mp4"></video></p>
+</div>
+</details></section>
 <section id="step-5-calculation-of-population-per-intersection-polygon">
-<h3>Step 5: Calculation of Population per  Intersection Polygon<a class="headerlink" href="#step-5-calculation-of-population-per-intersection-polygon" title="Permalink to this heading">#</a></h3>
+<h3>Step 5: Calculation of Population per Intersection Polygon<a class="headerlink" href="#step-5-calculation-of-population-per-intersection-polygon" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_5_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_5_1.png" src="../../_images/Drought_EAP_Worklow_Step_5_1.png" style="width: 1000px;" /></a>
 </figure>
@@ -869,45 +866,49 @@ Instructions</div>
 <p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
 </div>
 <p><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Instructions</div>
-<ol class="arabic simple">
-<li><p class="sd-card-text">In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
+<table class="table">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instruction</p></th>
+<th class="head"><p>Zonal Statistics</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
 </ol>
 <ul class="simple">
-<li><p class="sd-card-text">Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not opne click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
+<li><p>Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not opne click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
 </ul>
 <ol class="arabic simple" start="2">
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: “ML1_Intersection” or “ML2_Intersection”</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Layer</span></code>: “som_ppp_2020_UNadj_constrained.tif”</p></li>
-<li><p class="sd-card-text">Statistics to calculate: Only <code class="docutils literal notranslate"><span class="pre">Sum</span></code></p></li>
-<li><p class="sd-card-text">Under <code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_zonal_statistic” or “ML2_zonal_statistic” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
-<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: “ML1_Intersection” or “ML2_Intersection”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Layer</span></code>: “som_ppp_2020_UNadj_constrained.tif”</p></li>
+<li><p>Statistics to calculate: Only <code class="docutils literal notranslate"><span class="pre">Sum</span></code></p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_zonal_statistic” or “ML2_zonal_statistic” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Click `Run</p></li>
 </ol>
-<p class="sd-card-text"><strong>Result:</strong> The result should be the “ML1_zonal_statistic” and “ML2_zonal_statistic” polygon layers. These layers should have the same columns in the attribute table <strong>plus</strong> the column “_sum”, which is the number of people living in the single parts of the polygons.</p>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Zonal statistics for ML1</div>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_5_zonal_statistic.png"><img alt="../../_images/SRCS_Trigger_step_5_zonal_statistic.png" src="../../_images/SRCS_Trigger_step_5_zonal_statistic.png" style="width: 1000px;" /></a>
+</td>
+<td><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_5_zonal_statistic.png"><img alt="../../_images/SRCS_Trigger_step_5_zonal_statistic.png" src="../../_images/SRCS_Trigger_step_5_zonal_statistic.png" style="width: 450px;" /></a>
 </figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> The result should be the “ML1_zonal_statistic” and “ML2_zonal_statistic” polygon layers. These layers should have the same columns in the attribute table <strong>plus</strong> the column “_sum”, which is the number of people living in the single parts of the polygons.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video:  Calculation of Population per Intersection Polygon<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_5_zonal_statistic.mp4"></video></p>
 </div>
-</div>
-</div>
-</div>
-</div>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_5_zonal_statistic.mp4"></video></p>
-</section>
+</details></section>
 <section id="step-6-weighting-of-the-population-based-on-ipc-phase">
 <h3>Step 6: Weighting of the Population based on IPC-Phase<a class="headerlink" href="#step-6-weighting-of-the-population-based-on-ipc-phase" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
@@ -968,12 +969,20 @@ END
 </ol>
 <p>Here is the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code> window of how it should look to calculate pop_sum_weighted for ML1.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_6_field_calculator.png"><img alt="../../_images/SRCS_Trigger_step_6_field_calculator.png" src="../../_images/SRCS_Trigger_step_6_field_calculator.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_6_field_calculator.png"><img alt="../../_images/SRCS_Trigger_step_6_field_calculator.png" src="../../_images/SRCS_Trigger_step_6_field_calculator.png" style="width: 500px;" /></a>
 </figure>
 <p><strong>Result:</strong> The two layers “ML1_zonal_statistic” and “ML2_zonal_statistic” should now both have the column “pop_sum_weighted”.</p>
 <p>The video shows the whole process with the the example of ML 1.</p>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_6_field_calculators.mp4"></video></p>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Weighting of the Population based on IPC-Phase<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_6_field_calculators.mp4"></video></p>
+</div>
+</details></section>
 <section id="step-7-adding-the-total-district-population-to-intersection-polygons">
 <h3>Step 7: Adding the total district population to Intersection Polygons<a class="headerlink" href="#step-7-adding-the-total-district-population-to-intersection-polygons" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
@@ -985,52 +994,58 @@ END
 <p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
 </div>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Instructions</div>
-<ol class="arabic simple">
-<li><p class="sd-card-text">In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
+<table class="table">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instruction</p></th>
+<th class="head"><p>Join attributes by field value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span>&#160;&#160; <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
 </ol>
 <ul class="simple">
-<li><p class="sd-card-text">Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not opne click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
+<li><p>Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not opne click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
 </ul>
 <ol class="arabic simple" start="2">
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select “ML1_zonal_statistic” (or “ML2_zonal_statistic”)</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select the layer “district_pop_som”</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">2</span> <span class="pre">field</span> <span class="pre">to</span> <span class="pre">copy</span></code>: Click on the three points <img alt="" src="../../_images/Three_points.png" /> and select “admin2Name” and “districtpo”</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
-<li><p class="sd-card-text">Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span> <span class="pre">[optional]</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_join” or “ML2_join” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
-<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select “ML1_zonal_statistic” (or “ML2_zonal_statistic”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: Select “admin2Name”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select the layer “district_pop_som”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: Select “admin2Name”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">2</span> <span class="pre">field</span> <span class="pre">to</span> <span class="pre">copy</span></code>: Click on the three points <img alt="" src="../../_images/Three_points.png" /> and select “admin2Name” and “districtpo”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">type</span></code>: Select the option “Take attributes of the first matching feature only (one-to-one)</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span> <span class="pre">[optional]</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_join” or “ML2_join” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
-<p class="sd-card-text"><strong>Result:</strong> Now you should have to new polygon layer named “ML1_join” and ML2_Join” containing the column districtpo.</p>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_7_join.png"><img alt="../../_images/SRCS_Trigger_step_7_join.png" src="../../_images/SRCS_Trigger_step_7_join.png" style="width: 500px;" /></a>
+</td>
+<td><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_7_join.png"><img alt="../../_images/SRCS_Trigger_step_7_join.png" src="../../_images/SRCS_Trigger_step_7_join.png" style="width: 450px;" /></a>
 </figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> Now you should have to new polygon layer named “ML1_join” and ML2_Join” containing the column districtpo.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Adding the total district population to Intersection Polygons<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_7_join.mp4"></video></p>
 </div>
-</div>
-</div>
-</div>
-</div>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_7_join.mp4"></video></p>
-</section>
+</details></section>
 <section id="step-8-calculation-of-population-proportion-per-intersection-polygon">
-<h3>Step 8.: Calculation of Population Proportion per Intersection Polygon<a class="headerlink" href="#step-8-calculation-of-population-proportion-per-intersection-polygon" title="Permalink to this heading">#</a></h3>
+<h3>Step 8: Calculation of Population Proportion per Intersection Polygon<a class="headerlink" href="#step-8-calculation-of-population-proportion-per-intersection-polygon" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_8_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_8_1.png" src="../../_images/Drought_EAP_Worklow_Step_8_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong> In this step we calculating the [IPC-Population Weighted Index](file:///C:/HeiGIT/RCRC_GIS_Training/gis-training-resource-center/_build/html/content/GIS_AA/en_qgis_drought_trigger_somalia.html#ipc-population-weighted-index)for every small part of the polygon layer.</p>
+<p><strong>Purpose:</strong> In this step we calculating the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/GIS_AA/en_qgis_drought_trigger_somalia.html#ipc-population-weighted-index">IPC-Population Weighted Index</a> for every small part of the polygon layer.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
@@ -1050,21 +1065,40 @@ Instructions</div>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">ok</span></code></p></li>
 <li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table and end the editing mode by clicking on <img alt="" src="../../_images/mActionToggleEditing.png" /></p></li>
 </ol>
-<figure class="align-default">
-<img alt="../../_images/SRCS_Trigger_step_8_field_calculator.png" src="../../_images/SRCS_Trigger_step_8_field_calculator.png" />
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_8_field_calculator.png"><img alt="../../_images/SRCS_Trigger_step_8_field_calculator.png" src="../../_images/SRCS_Trigger_step_8_field_calculator.png" style="width: 500px;" /></a>
 </figure>
 <p><strong>Result:</strong> Both layer “ML1_join” and ML2_Join” should now have the column “Index_per_IPCPolygon_ML1” or “Index_per_IPCPolygon_ML2”. The numbers in this column have to be smaller than in the “district” column.</p>
-<p>The video shows the whole process with the the example of ML 1.
-<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_TRigger_step_8_field_calculator.mp4"></video></p>
-</section>
+<p>The video shows the whole process with the the example of ML 1.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Calculation of Population Proportion per Intersection Polygon<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_TRigger_step_8_field_calculator.mp4"></video></p>
+</div>
+</details></section>
 <section id="step-9-calculate-ipc-index-per-district">
-<h3>Step 9.: Calculate IPC Index per District<a class="headerlink" href="#step-9-calculate-ipc-index-per-district" title="Permalink to this heading">#</a></h3>
+<h3>Step 9: Calculate IPC Index per District<a class="headerlink" href="#step-9-calculate-ipc-index-per-district" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_9_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_9_1.png" src="../../_images/Drought_EAP_Worklow_Step_9_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong>  The purpose of this step is to calculate a population weighted mean over the IPC classes that fall within a district, in order to give the amount of people living in a certain IPC class more importance than just the area affected by a certain IPC class. The result is a IPC Index value for each district.</p>
-<p><strong>Tool:</strong></p>
-<ol class="arabic simple">
+<p><strong>Tool:</strong> <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attribute</span> <span class="pre">by</span> <span class="pre">location</span> <span class="pre">(summary)</span></code></p>
+<table class="table">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instruction</p></th>
+<th class="head"><p>Join attribute by location (summary)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
 <li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attribute</span> <span class="pre">by</span> <span class="pre">location</span> <span class="pre">(summary)</span></code></p></li>
 </ol>
 <ul class="simple">
@@ -1079,12 +1113,25 @@ Instructions</div>
 <li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “ML1_join_location” or “ML2_join_location” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
-<figure class="align-default">
-<img alt="../../_images/SRCS_Trigger_step_9_join_location.png" src="../../_images/SRCS_Trigger_step_9_join_location.png" />
+</td>
+<td><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_9_join_location.png"><img alt="../../_images/SRCS_Trigger_step_9_join_location.png" src="../../_images/SRCS_Trigger_step_9_join_location.png" style="width: 450px;" /></a>
 </figure>
+</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Result:</strong> As a result, your two layers “ML1_join_location” and “ML2_join_location” should have the column “Index_per_IPCPolygon_ML1_mean” or “Index_per_IPCPolygon_ML2_mean”. Furthermore, the number of rows should be the exact number of districts in Somalia and the polygons should have the exact shape of the districts.</p>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_9_join_location.mp4"></video></p>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Calculate IPC Index per District<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_9_join_location.mp4"></video></p>
+</div>
+</details></section>
 <section id="step-10-join-ml1-and-ml2-i">
 <h3>Step 10.: Join ML1 and ML2 I<a class="headerlink" href="#step-10-join-ml1-and-ml2-i" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
@@ -1092,7 +1139,18 @@ Instructions</div>
 </figure>
 <p><strong>Purpose:</strong> The purpose of this step is to merge “ML1_join_location” and “ML2_join_location” into one layer so we have the IPC-Index for all districts.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
-<ol class="arabic simple">
+<table class="table">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instruction</p></th>
+<th class="head"><p>Join attribute by location (summary)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
 <li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
 </ol>
 <ul class="simple">
@@ -1108,19 +1166,44 @@ Instructions</div>
 <li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “IPC_index_district” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
-<figure class="align-default">
-<img alt="../../_images/SRCS_Trigger_step_10_IPC_Index_district.png" src="../../_images/SRCS_Trigger_step_10_IPC_Index_district.png" />
+</td>
+<td><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_10_IPC_Index_district.png"><img alt="../../_images/SRCS_Trigger_step_10_IPC_Index_district.png" src="../../_images/SRCS_Trigger_step_10_IPC_Index_district.png" style="width: 450px;" /></a>
 </figure>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_10_join.mp4"></video></p>
-</section>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> Layer with the districts of Somalia and the IPC-Index of each district.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Join ML1 and ML2 I<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_10_join.mp4"></video></p>
+</div>
+</details></section>
 <section id="step-11-calculation-of-spi12-mean-per-district">
-<h3>Step 11.: Calculation of SPI12 Mean per District<a class="headerlink" href="#step-11-calculation-of-spi12-mean-per-district" title="Permalink to this heading">#</a></h3>
+<h3>Step 11: Calculation of SPI12 Mean per District<a class="headerlink" href="#step-11-calculation-of-spi12-mean-per-district" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_11_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_11_1.png" src="../../_images/Drought_EAP_Worklow_Step_11_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong> Calculate the mean value over the SPI-12 values of all pixels that fall within a scertain districts area, in order to have one SPI-12 value for each district.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p>
-<ol class="arabic simple">
+<table class="table">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instruction</p></th>
+<th class="head"><p>Zonal Statistics</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
 <li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
 </ol>
 <ul class="simple">
@@ -1132,21 +1215,46 @@ Instructions</div>
 <li><p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">column</span> <span class="pre">prefix</span></code>: Use  “SPI12_”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Statistics</span> <span class="pre">to</span> <span class="pre">calculate</span></code>: “Mean”</p></li>
 <li><p>Under <code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “SPI12_district” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+<li><p>Click `Run``</p></li>
 </ol>
-<figure class="align-default">
-<img alt="fig/SRCS_Trigger_step_11_IPC_zonal_district.png" src="fig/SRCS_Trigger_step_11_IPC_zonal_district.png" />
+</td>
+<td><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_11_IPC_zonal_district.png"><img alt="../../_images/SRCS_Trigger_step_11_IPC_zonal_district.png" src="../../_images/SRCS_Trigger_step_11_IPC_zonal_district.png" style="width: 450px;" /></a>
 </figure>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_11_zonal_staistics.mp4"></video></p>
-</section>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> A layer of all districts of Somalia with the mean SPI-12.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Calculation of SPI12 Mean per District<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_11_zonal_staistics.mp4"></video></p>
+</div>
+</details></section>
 <section id="step-12-join-spi12-mean-to-the-ipc-index">
-<h3>Step 12.: Join SPI12 Mean to the IPC Index<a class="headerlink" href="#step-12-join-spi12-mean-to-the-ipc-index" title="Permalink to this heading">#</a></h3>
+<h3>Step 12: Join SPI12 Mean to the IPC Index<a class="headerlink" href="#step-12-join-spi12-mean-to-the-ipc-index" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_12_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_12_1.png" src="../../_images/Drought_EAP_Worklow_Step_12_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong> The purpose of this step is to merge data from two different data sources into one data frame so that it can be jointly analysed.</p>
 <p><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p>
-<ol class="arabic simple">
+<table class="table">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instruction</p></th>
+<th class="head"><p>Join attributes by field value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
 <li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html#join-attributes-by-field-value"><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code></a></p></li>
 </ol>
 <ul class="simple">
@@ -1161,15 +1269,29 @@ Instructions</div>
 <li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder [Year_Month]. Give the output the name “IPC_index_SPI_12_district” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
-<figure class="align-default">
-<img alt="../../_images/SRCS_Trigger_step_12_IPC_SPI12_join.png" src="../../_images/SRCS_Trigger_step_12_IPC_SPI12_join.png" />
+</td>
+<td><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_12_IPC_SPI12_join.png"><img alt="../../_images/SRCS_Trigger_step_12_IPC_SPI12_join.png" src="../../_images/SRCS_Trigger_step_12_IPC_SPI12_join.png" style="width: 450px;" /></a>
 </figure>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_12_join_IPC_SPI12.mp4"></video></p>
-</section>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong> The result will be a layer of all districts of Somalia with the mean SPI-12 and the IPC-Index of each district.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Join SPI12 Mean to the IPC Index<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_12_join_IPC_SPI12.mp4"></video></p>
+</div>
+</details></section>
 <section id="step-13-evaluate-trigger-activation">
-<h3>Step 13.: Evaluate Trigger Activation<a class="headerlink" href="#step-13-evaluate-trigger-activation" title="Permalink to this heading">#</a></h3>
+<h3>Step 13: Evaluate Trigger Activation<a class="headerlink" href="#step-13-evaluate-trigger-activation" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="fig/Drought_EAP_Worklow_Step_13_1.png"><img alt="fig/Drought_EAP_Worklow_Step_13_1.png" src="fig/Drought_EAP_Worklow_Step_13_1.png" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_13_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_13_1.png" src="../../_images/Drought_EAP_Worklow_Step_13_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong> The purpose of this step is to gain a quick overview of possible trigger activation without having to revise the actual data. Instead we will have a binary column with trigger = yes or no values.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
@@ -1208,15 +1330,24 @@ END
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">ok</span></code></p></li>
 <li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table and end the editing mode by clicking on <img alt="" src="../../_images/mActionToggleEditing.png" /></p></li>
 </ol>
-<figure class="align-default">
-<img alt="../../_images/SRCS_Trigger_step_13_trigger_evaluation.png" src="../../_images/SRCS_Trigger_step_13_trigger_evaluation.png" />
+<p><strong>Result:</strong> A layer with all districts of Somalia with a column of “Yes” and “No” values indicating whether the trigger levels have been reached or not.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/SRCS_Trigger_step_13_trigger_evaluation.png"><img alt="../../_images/SRCS_Trigger_step_13_trigger_evaluation.png" src="../../_images/SRCS_Trigger_step_13_trigger_evaluation.png" style="width: 500px;" /></a>
 </figure>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_13_trigger_activation.mp4"></video></p>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Evaluate Trigger Activation <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_13_trigger_activation.mp4"></video></p>
+</div>
+</details></section>
 <section id="step-14-visualisation-of-results">
 <h3>Step 14.: Visualisation of results<a class="headerlink" href="#step-14-visualisation-of-results" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="fig/Drought_EAP_Worklow_Step_14_1.png"><img alt="fig/Drought_EAP_Worklow_Step_14_1.png" src="fig/Drought_EAP_Worklow_Step_14_1.png" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_14_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_14_1.png" src="../../_images/Drought_EAP_Worklow_Step_14_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong> Definition of how features are represented visually on the map.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_I.html#symbology-for-vector-data">Symbology</a></p>
@@ -1264,7 +1395,7 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 <section id="step-15-making-print-map">
 <h3>Step 15.: Making print map<a class="headerlink" href="#step-15-making-print-map" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_15_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_15_1.png" src="../../_images/Drought_EAP_Worklow_Step_15_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong> Viualization of the map features in a printable map layout</p>
 <p><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=print+layout#print-layout">Print Layout</a></p>
@@ -1280,12 +1411,12 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 <section id="step-16-exporting-map">
 <h3>Step 16.: Exporting Map<a class="headerlink" href="#step-16-exporting-map" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/fig"><img alt="../../_images/fig" src="../../_images/fig" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_16_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_16_1.png" src="../../_images/Drought_EAP_Worklow_Step_16_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong> Export the designed and finalized map layout in order tp print it as a pdf or format of your choice.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=print+layout#print-layout">Print Layout</a></p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="fig/map_outputexample2.png"><img alt="fig/map_outputexample2.png" src="fig/map_outputexample2.png" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/map_output_example2.png"><img alt="../../_images/map_output_example2.png" src="../../_images/map_output_example2.png" style="width: 1000px;" /></a>
 </figure>
 <p>When you have finished the design of you map you can export it as pdf or image file in different datafromats.</p>
 <p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=export#exporting-the-print-layout">Click here</a> to find the step by step on how to export your map.</p>
@@ -1382,15 +1513,15 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-data">IPC Data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per  Intersection Polygon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per Intersection Polygon</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6: Weighting of the Population based on IPC-Phase</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-adding-the-total-district-population-to-intersection-polygons">Step 7: Adding the total district population to Intersection Polygons</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8.: Calculation of Population Proportion per Intersection Polygon</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9.: Calculate IPC Index per District</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8: Calculation of Population Proportion per Intersection Polygon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9: Calculate IPC Index per District</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-join-ml1-and-ml2-i">Step 10.: Join ML1 and ML2 I</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-calculation-of-spi12-mean-per-district">Step 11.: Calculation of SPI12 Mean per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi12-mean-to-the-ipc-index">Step 12.: Join SPI12 Mean to the IPC Index</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-evaluate-trigger-activation">Step 13.: Evaluate Trigger Activation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-calculation-of-spi12-mean-per-district">Step 11: Calculation of SPI12 Mean per District</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi12-mean-to-the-ipc-index">Step 12: Join SPI12 Mean to the IPC Index</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-evaluate-trigger-activation">Step 13: Evaluate Trigger Activation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-visualisation-of-results">Step 14.: Visualisation of results</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-making-print-map">Step 15.: Making print map</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-exporting-map">Step 16.: Exporting Map</a></li>
