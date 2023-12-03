@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Exercise 1: Somalia healthcare and accessibility &#8212; GIS Resource Training Center</title>
+    <title>QGIS Basic Exercise SRCS &#8212; GIS Resource Training Center</title>
   
   
   
@@ -281,7 +281,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">GIS in Anticipatory Action</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise 1: Somalia healthcare and accessibility</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">QGIS Basic Exercise SRCS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_drought_trigger_somalia.html">QGIS Trigger Workflow for Somalia</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_risk_assessment_plugin.html">Risk Assessment QGIS Plugin</a></li>
@@ -483,7 +483,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Exercise 1: Somalia healthcare and accessibility</h1>
+    <h1>QGIS Basic Exercise SRCS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -500,10 +500,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-layer-concept">Task 4: Layer concept</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-attribute-tables">Task 5: Attribute tables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-basic-data-visualization">Task 6: Basic Data visualization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization-categorized-classification-of-lines">Data visualization - Categorized classification of lines</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clipping-and-extract-by-location">Clipping and Extract by location</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization-categorized-classification-of-points">Data visualization- Categorized classification of Points</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-7-clipping-and-extract-by-location">Task 7: Clipping and Extract by location</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-8-data-visualization-categorized-classification-of-points">Task 8: Data visualization- Categorized classification of Points</a></li>
 </ul>
 </li>
 </ul>
@@ -517,20 +515,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="exercise-1-somalia-healthcare-and-accessibility">
-<h1>Exercise 1: Somalia healthcare and accessibility<a class="headerlink" href="#exercise-1-somalia-healthcare-and-accessibility" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="qgis-basic-exercise-srcs">
+<h1>QGIS Basic Exercise SRCS<a class="headerlink" href="#qgis-basic-exercise-srcs" title="Permalink to this heading">#</a></h1>
 <section id="aim-of-exercise">
 <h2>Aim of exercise<a class="headerlink" href="#aim-of-exercise" title="Permalink to this heading">#</a></h2>
 <p>The goal of the exercise is to get to know the basic functionality of QGIS and how to handle geodata.</p>
-<p>As an example, we will create a map which shows the position of hospitals and the population of districts in Somalia.</p>
-<p><strong>Data:</strong>
-You find all of the data in the training folder: <em>GIS_Trainig_Data/Exercise_1</em></p>
-<p>Somalia_country.shp
-Somalia_health_facilities_WHO.shp
-Somalia_Districts.gpkg
-Somalia_District_Pop.gpkg
-Somalia_roads.gpkg
-Somalia_airports.csv</p>
+<p></p>
 </section>
 <section id="task-1-folder-and-data-structure">
 <h2>Task 1: Folder and data structure<a class="headerlink" href="#task-1-folder-and-data-structure" title="Permalink to this heading">#</a></h2>
@@ -551,10 +541,30 @@ The standard folder structure used makes certain that you never lose any data. Y
 <ol class="arabic simple">
 <li><p>Open QGIS and create a new project by cliking  on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Project</span></code> (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html">Wiki</a>).</p></li>
 <li><p>To give the project a name Click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">As</span></code>. Navigate to “Exercise_1” and open the “project” folder. Give your project the name “Exercise_1” and click on <code class="docutils literal notranslate"><span class="pre">Save</span></code>. Now you should see the name of your project in the upper left corner of your QGIS.</p></li>
-<li><p>Open the file <strong>“Somalia_country.shp”</strong> in QGIS. Click on the <code class="docutils literal notranslate"><span class="pre">Layer</span></code> Tab in the upper left corner -&gt; <code class="docutils literal notranslate"><span class="pre">Vector</span></code>. Select <strong>“Somalia_country.shp”</strong>. Click <code class="docutils literal notranslate"><span class="pre">Add</span></code> (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-vector-data-via-layer-tab">Wiki Import Vector layer</a>)
-<video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_vector.mp4"></video></p></li>
-<li><p>Open the file <strong>Somalia_District_pop.gpkg</strong> in QGIS. Use the drag-and-drop method. Click on the file and pull the file directly into your Layers window.
-<video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_vector_d_d.mp4"></video></p></li>
+<li><p>Open the file <strong>“Somalia_country.shp”</strong> in QGIS. Click on the <code class="docutils literal notranslate"><span class="pre">Layer</span></code> Tab in the upper left corner -&gt; <code class="docutils literal notranslate"><span class="pre">Vector</span></code>. Select <strong>“Somalia_country.shp”</strong>. Click <code class="docutils literal notranslate"><span class="pre">Add</span></code> (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-vector-data-via-layer-tab">Wiki Import Vector layer</a>)</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Import Vector data<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_vector.mp4"></video></p>
+</div>
+</details><ol class="arabic simple" start="4">
+<li><p>Open the file <strong>Somalia_District_pop.gpkg</strong> in QGIS. Use the drag-and-drop method. Click on the file and pull the file directly into your Layers window.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Import data by drag and dop<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_vector_d_d.mp4"></video></p>
+</div>
+</details><ol class="arabic simple" start="5">
 <li><p>Open the files <strong>“Somalia_District_pop.gpkg”</strong> and <strong>Somalia_airports.gpkg</strong> with either drag and drop or via <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Vector</span></code>.</p></li>
 <li><p>Save your project by clicking on the “Save Project” button (small disc in the upper left corner).</p></li>
 </ol>
@@ -573,21 +583,57 @@ The standard folder structure used makes certain that you never lose any data. Y
 <li><p><strong>Side Toolbar</strong>. You may see a <strong>side toolbar</strong>. This is another way to easily open vector and raster files in QGIS.</p></li>
 <li><p><strong>Locator bar</strong>. Here you can <strong>search for tools and layers</strong>. If you don’t know where to find a tool, you can try here.</p></li>
 </ol>
-<p><strong>Offical QGIS Documentation: <a class="reference external" href="https://docs.qgis.org/3.4/de/docs/training_manual/introduction/overview.html">An Overview of the Interface</a></strong></p>
 </section>
-<hr class="docutils" />
 <section id="task-4-layer-concept">
 <h2>Task 4: Layer concept<a class="headerlink" href="#task-4-layer-concept" title="Permalink to this heading">#</a></h2>
-<p><strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html#layer-concept">Layer concept</a></strong></p>
 <p>In this task, we familiarise ourselves with the layer window (Layer List). The concept means that a map in GIS is always a combination of multiple layers. We can combine the layers in many different ways and thus get different results.</p>
+<p>You can find more infos in the <strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html#layer-concept">Wiki Layer concept</a></strong>.</p>
 <ol class="arabic simple">
-<li><p>Switch off the Somalia_country layer by removing the check on the layer panel ([Wiki](file:///C:/HeiGIT/RCRC_GIS_Training/gis-training-resource-center/_build/html/content/Wiki/en_qgis_layer_concept_wiki.html#hide-and-show-layers)).
-<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_show_hide_layer.mp4"></video></p></li>
-<li><p>Change the hierarchy of your layers so that Somalia_airports is at the top, followed by Somalia_District_pop. Move the layer up and down in the Layer panel by drag-and-drop [Wiki](file:///C:/HeiGIT/RCRC_GIS_Training/gis-training-resource-center/_build/html/content/Wiki/en_qgis_layer_concept_wiki.html#move-layers-in-the-hierarchy).
-<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_layer_hierarchy.mp4"></video></p></li>
+<li><p>Switch off the Somalia_country layer by removing the check on the layer panel (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html#hide-and-show-layers">Wiki</a>).</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Show and hide layers<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_show_hide_layer.mp4"></video></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ol class="arabic simple" start="2">
+<li><p class="sd-card-text">Change the hierarchy of your layers so that Somalia_airports is at the top, followed by Somalia_District_pop. Move the layer up and down in the Layer panel by drag-and-drop <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html#move-layers-in-the-hierarchy">Wiki</a>.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Import data by drag-and-drop<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_layer_hierarchy.mp4"></video></p>
+</div>
+</details></div>
+</details></div>
+</details><ol class="arabic simple" start="3">
 <li><p>Move th Somalia_country layer to the top and switch it on. What happens?</p></li>
-<li><p>Change the name of the layer Somalia_airports to Airports by right click on your layer –&gt; <code class="docutils literal notranslate"><span class="pre">Rename</span> <span class="pre">Layer</span></code>
-<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_rename_layer.mp4"></video></p></li>
+<li><p>Change the name of the layer Somalia_airports to Airports by right click on your layer –&gt; <code class="docutils literal notranslate"><span class="pre">Rename</span> <span class="pre">Layer</span></code></p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Change Layer Name<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_rename_layer.mp4"></video></p>
+</div>
+</details><ol class="arabic simple" start="5">
 <li><p>To the properties of a layer right click on your layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properies</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Information</span></code>.
 5.1 When were the layer Somaliland:district_pop last modified?
 5.2 How many features does the airport layer have?
@@ -596,26 +642,56 @@ The standard folder structure used makes certain that you never lose any data. Y
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>If you have “lost” your layer right click on your layer -&gt; <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">layer(s)</span></code></p>
-<p>(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html#have-you-lost-your-layer">Wiki Video</a>)</p>
+<p><strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html#have-you-lost-your-layer">Wiki Video</a></strong></p>
 </div>
 </section>
 <section id="task-5-attribute-tables">
 <h2>Task 5: Attribute tables<a class="headerlink" href="#task-5-attribute-tables" title="Permalink to this heading">#</a></h2>
 <p>The attribute table, a core component of Geographic Information Systems (GIS), organizes and presents detailed information about features in a selected layer. Each row in the table represents a feature, while columns store specific attributes. This table facilitates searching, selection, sorting, filtering, and editing of features.</p>
-<p><strong>Example</strong></p>
+<p><strong>Example of an attribute table</strong></p>
 <p><img alt="Example of an attribute table" src="../../_images/attribute_table.png" /></p>
-<p>__[Wiki Attribute Table](file:///C:/HeiGIT/RCRC_GIS_Training/gis-training-resource-center/_build/html/content/Wiki/en_qgis_attribute_table_wiki.html#attribute-table-in-qgis)</p>
+<p>__<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.html#attribute-table-in-qgis">Wiki Attribute Table</a></p>
 <ol class="arabic simple">
-<li><p>Open the attribute table of Somaliliand_district_pop. Right-click on Somaliliand_district_pop –&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code> (<span class="xref myst">Wiki</span>)
-<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_show_attribute_table.mp4"></video></p></li>
+<li><p>Open the attribute table of Somaliliand_district_pop. Right-click on Somaliliand_district_pop –&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code> (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.html">Wiki</a>)</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Open attribute Table<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_show_attribute_table.mp4"></video></p>
+</div>
+</details><ol class="arabic simple" start="2">
 <li><p>Sort by “Population” by clicking on the column header.</p></li>
-<li><p>In the attribute table select the feature “Berbera” by clicking on the left edge of the row.
-<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_select.mp4"></video></p></li>
+<li><p>In the attribute table select the feature “Berbera” by clicking on the left edge of the row.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Select features in Attribute Table<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_select.mp4"></video></p>
+</div>
+</details><ol class="arabic simple" start="4">
 <li><p>To select more features press <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> and click on the features.</p></li>
 <li><p>To only see selected features click in the down left corner of the attribute table on the drop-down menu and select <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">selected</span> <span class="pre">features</span></code>. To show again all features click on <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">all</span> <span class="pre">features</span></code>.</p></li>
 <li><p>To only show unselect features and click on <img alt="" src="../../_images/mActionInvertSelection.png" /> in the attribute table.</p></li>
-<li><p>To unselect all features click on <img alt="" src="../../_images/mActionDeselectActiveLayer.png" /> in the attribute table
-<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_unselect.mp4"></video></p></li>
+<li><p>To unselect all features click on <img alt="" src="../../_images/mActionDeselectActiveLayer.png" /> in the attribute table</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Unselect features<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_unselect.mp4"></video></p>
+</div>
+</details><ol class="arabic simple" start="8">
 <li><p>To zoom to one feature right click on your feature –&gt; <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">To</span> <span class="pre">Feature</span></code></p></li>
 </ol>
 </section>
@@ -666,54 +742,90 @@ Video: Adding basemap<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Add_basemap_OSM.mp4"></video></p>
 </div>
-</details><section id="data-visualization-categorized-classification-of-lines">
-<h3>Data visualization - Categorized classification of lines<a class="headerlink" href="#data-visualization-categorized-classification-of-lines" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple" start="18">
-<li><p>Open the file <strong>Somalia_roads.gpkg</strong> in QGIS.</p></li>
-<li><p>As you can see the road network layer like this is not very useful. We only want to identify the important roads.
-First, let’s have a look at the attribute table. As you can see in the column “highway” the different types of roads are listed. We can the info from this column to only show important roads. To do so close the attribute table and open the Layers styling panel.
-Select the layer <strong>Somalia_roads</strong>. Instead of Single Symbols choose <em>Categorized</em>. In the <em>Value</em> drop-down menu select the column <em>“highway”</em>. Then click on <em>classify</em>.
-Now uncheck all boxes except “secondary”, “secondary_link”, “tertiary”, “trunk” and “trunk_link”.</p></li>
+</details><section id="task-7-clipping-and-extract-by-location">
+<h3>Task 7: Clipping and Extract by location<a class="headerlink" href="#task-7-clipping-and-extract-by-location" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Import the file <strong>Sub_Saharan_health_facilities_OSM.gpkg</strong> in QGIS.</p></li>
 </ol>
-<p><img alt="Figure" src="fig/QGIS_basics_Fig9.png" /></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Import data by drag and drop<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_vector_d_d.mp4"></video></p>
+</div>
+</details><ol class="arabic simple" start="2">
+<li><p>The layer <strong>Sub_Saharan_health_facilities_OSM</strong> includes health facilities in Somaliland and Somalia. We only want to use the facilities in Somaliland. To cut the layer to the size of Somaliland we will use the tool __<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#clip">clip</a>. Open the <code class="docutils literal notranslate"><span class="pre">Porcessing</span> <span class="pre">Toolbox</span></code> by cliking on <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; search for “Clip”</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Open <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">toolbox</span></code><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_toolbars.mp4"></video></p>
+</div>
+</details><ol class="arabic simple" start="3">
+<li><p>In the window of the Clip tool…</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: “Somalia_health_facilities_OSM”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Overlay</span> <span class="pre">Layer</span></code>: “Somaliland_country”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Clipped</span></code>: Click on the three points  <img alt="" src="../../_images/Three_points.png" /> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> -&gt; search for your “temp” folder -&gt; give the result layer the name “Somaliland_health_facilities_OSM” and click on <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+</ol>
+</li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/QGIS_basics_Fig11.png"><img alt="../../_images/QGIS_basics_Fig11.png" src="../../_images/QGIS_basics_Fig11.png" style="width: 400px;" /></a>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Clip example<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_clip_wiki.mp4"></video></p>
+</div>
+</details><ol class="arabic simple" start="4">
+<li><p>Now you should have a new point layer with all health facilities in Somaliland. Delete the old “Sub_Saharan_health_facilities_OSM” layer by right-click on the layer -&gt; <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">layer</span></code></p></li>
+</ol>
 </section>
-<section id="clipping-and-extract-by-location">
-<h3>Clipping and Extract by location<a class="headerlink" href="#clipping-and-extract-by-location" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple" start="20">
-<li><p>Open the file <strong>Sub_Saharan_health_facilities_OSM.gpkg</strong> in QGIS</p></li>
-<li><p>The layer <strong>Sub_Saharan_health_facilities_OSM</strong> includes health facilities in Somalia and Somalia. We only want to use the facilities in Somalia.
-There are two methods for cutting the data to our area of interest, the Extract by location method and the Clip method.</p></li>
+<section id="task-8-data-visualization-categorized-classification-of-points">
+<h3>Task 8: Data visualization- Categorized classification of Points<a class="headerlink" href="#task-8-data-visualization-categorized-classification-of-points" title="Permalink to this heading">#</a></h3>
+<p>Categorized classification in QGIS groups spatial data into distinct categories based on specific attributes. This classification enhances the organization and interpretation of geospatial information for clearer insights.</p>
+<ol class="arabic simple">
+<li><p>Open the attribute table of “Somaliland_health_facilities_OSM” by right click on “Somaliland_health_facilities_OSM” -&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code></p></li>
+<li><p>Check out the column “Facility t”. This column has the data on the type of the health facility. As you can see there are not just hospitals but many different typs of facilities like Health posts.</p></li>
+<li><p>To categorise all facilities by type on the map, open the symbology window. Right-click on the “Somaliland_health_facilities_OSM” layer -&gt; <code class="docutils literal notranslate"><span class="pre">properties</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">symbology</span></code></p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Categorized</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Value</span></code>: “Facility t”.
+Further down the window click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  Now you should see all unique values or attributes of the selected “Facility t” column.</p></li>
+<li><p>We only want to see the hospitals, so uncheck Maternal &amp; Child Health Centre, Health Post and Health Center.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code></p></li>
 </ol>
-<ul class="simple">
-<li><p><strong>Extract by location</strong>: <em>Processing Toolbox -&gt; search for “Extract by location”</em>. Extract feature from: <strong>Sub_Saharan_health_facilities_OSM</strong> By comparing to the features from <strong>Somalia_country</strong>.
-Extracted (location): <strong>Somalia_health_facilities_WHO</strong>
-Click <em>Run</em></p></li>
-</ul>
-<p><img alt="Figure" src="fig/QGIS_basics_Fig10.png" /></p>
-<ul class="simple">
-<li><p>Clip: Porcessing *Toolbox -&gt; search for “Clip”*x
-Input Layer: <strong>Sub_Saharan_health_facilities_OSM</strong>
-Overlay Layer: <strong>Somalia_country</strong>
-Clipped: <strong>Somalia_health_facilities_OSM</strong>
-Click <em>Run</em></p></li>
-</ul>
-<p><img alt="Figure" src="fig/QGIS_basics_Fig11.png" /></p>
-</section>
-<section id="data-visualization-categorized-classification-of-points">
-<h3>Data visualization- Categorized classification of Points<a class="headerlink" href="#data-visualization-categorized-classification-of-points" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple" start="22">
-<li><p>If you check the attribute table of your new <strong>Somalia_health_facilities_WHO</strong> layer you can see in the “Facility t” column that there are different types of health facilities. We only want to show the hospitals on our map. To do so you can use the same workflow as with the roads.</p></li>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/QGIS_basics_Fig12.png"><img alt="../../_images/QGIS_basics_Fig12.png" src="../../_images/QGIS_basics_Fig12.png" style="width: 400px;" /></a>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Categorized classification Example <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Classify_by_categorized.mp4"></video></p>
+</div>
+</details><ol class="arabic simple" start="7">
+<li><p>To use a prearranged style for the hospitals go to the Symbology window. In the down left corner click on <code class="docutils literal notranslate"><span class="pre">Style</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
+<li><p>In the new window click on the three points <img alt="" src="../../_images/Three_points.png" />. Navigate to the “Project” folder -&gt; “Style” folder and select the file “Hospital_style_training.qml. (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_I.html#exporting-and-importing-styles">Wiki</a>)</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Open</span></code>. Then click on <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
+<li><p>Back in the “Layer Properties” Window click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
 </ol>
-<p><img alt="Figure" src="fig/QGIS_basics_Fig12.png" /></p>
-</section>
-<section id="labels">
-<h3>Labels<a class="headerlink" href="#labels" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple" start="23">
-<li><p>To add the names of the districts to the map use the Layers Styling Panel. Select the <strong>Somalia_District_pop</strong> layer and click on <em>Labels</em>.
-Use the select <em>Single labels</em> and in the value drop-down menu select “admin2Name”.
-Add buffer around the names of the districts by clicking on <em>Buffer</em> and checking the box <em>Draw text buffer</em>.</p></li>
-</ol>
-<p><img alt="Figure" src="fig/QGIS_basics_Fig13.png" /></p>
+<p><img alt="Figure" src="../../_images/QGIS_basics_Fig12.png" /></p>
 </section>
 </section>
 </section>
@@ -788,10 +900,8 @@ Add buffer around the names of the districts by clicking on <em>Buffer</em> and 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-layer-concept">Task 4: Layer concept</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-attribute-tables">Task 5: Attribute tables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-basic-data-visualization">Task 6: Basic Data visualization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization-categorized-classification-of-lines">Data visualization - Categorized classification of lines</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clipping-and-extract-by-location">Clipping and Extract by location</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization-categorized-classification-of-points">Data visualization- Categorized classification of Points</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-7-clipping-and-extract-by-location">Task 7: Clipping and Extract by location</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-8-data-visualization-categorized-classification-of-points">Task 8: Data visualization- Categorized classification of Points</a></li>
 </ul>
 </li>
 </ul>
