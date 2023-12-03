@@ -521,9 +521,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-adding-the-total-district-population-to-intersection-polygons">Step 7: Adding the total district population to Intersection Polygons</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8: Calculation of Population Proportion per Intersection Polygon</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9: Calculate IPC Index per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-join-ml1-and-ml2-i">Step 10.: Join ML1 and ML2 I</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-calculation-of-spi12-mean-per-district">Step 11: Calculation of SPI12 Mean per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi12-mean-to-the-ipc-index">Step 12: Join SPI12 Mean to the IPC Index</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-join-ml1-and-ml2">Step 10.: Join ML1 and ML2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-calculation-of-spi-12-mean-per-district">Step 11: Calculation of SPI-12 Mean per District</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi-12-mean-to-the-ipc-index">Step 12: Join SPI-12 Mean to the IPC Index</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-evaluate-trigger-activation">Step 13: Evaluate Trigger Activation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-visualisation-of-results">Step 14.: Visualisation of results</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-making-print-map">Step 15.: Making print map</a></li>
@@ -738,12 +738,12 @@ Video: Setting up folder structure <div class="sd-summary-down docutils">
 <section id="step-2-download-of-the-forecast-data">
 <h3>Step 2: Download of the forecast data<a class="headerlink" href="#step-2-download-of-the-forecast-data" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_2_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_2_1.png" src="../../_images/Drought_EAP_Worklow_Step_2_1.png" style="width: 1000px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_2_2.png"><img alt="../../_images/Drought_EAP_Worklow_Step_2_2.png" src="../../_images/Drought_EAP_Worklow_Step_2_2.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong></p>
-<p><strong>Tool:</strong> FileZilla</p>
-<p>The current plans provide that ICPAC will monthly provide the SPI-12 Forcast whereas the IPC data will be pulled from the FEWSNET website. FEWS NET publishes IPC data on its website.
-The main publications plus the updates of the IPC data amount to the publication of new data almost monthly.</p>
+<p><strong>Tool:</strong> FileZilla and Interent Browser</p>
+<p>The current plans provide that ICPAC will monthly provide the SPI-12 forcast whereas the IPC data will be pulled from the FEWSNET website. FEWS NET publishes IPC data on its website.
+The main data publications plus the updates of the IPC data amount to the publication of new data almost monthly.</p>
 </section>
 <section id="spi-12-data">
 <h3>SPI-12 Data<a class="headerlink" href="#spi-12-data" title="Permalink to this heading">#</a></h3>
@@ -752,7 +752,7 @@ The main publications plus the updates of the IPC data amount to the publication
 <li><p>Download Filezilla <a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">here</a>.</p></li>
 <li><p>Install the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file you have downloaded</p></li>
 <li><p>Open FileZilla</p></li>
-<li><p>Establish a connection to the FTP Server by insterting the credentials you have been passed (Host, Username and Password) and clicking “Quickconnect”.</p></li>
+<li><p>Establish a connection to the FTP Server by insterting the credentials you have been passed (Host, Username and Password) and clicking <code class="docutils literal notranslate"><span class="pre">Quickconnect</span></code>.</p></li>
 </ol>
 <p>In FileZilla you have four windows. On the left hand side you will see the folder on your computer in the upper window. By clicking on a folder, the documents in the folder will be shown in the lower left window.
 On the right hand side, you will see in the upper window the FTP data folder and by clicking on it, the data will be shown in the lower right window.</p>
@@ -848,7 +848,10 @@ Video: Loading data into QGIS<div class="sd-summary-down docutils">
 </tbody>
 </table>
 <p><strong>Result:</strong> After doing this for ML1 and ML2 you should have two polygon layers, each containing all columns of ML1 (or ML2) and district_pop_sum.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The resulting layer can have more rows than the original layers.</p>
+</div>
 <p>The video shows the whole process on the example of ML 1.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -919,7 +922,7 @@ Video:  Calculation of Population per Intersection Polygon<div class="sd-summary
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_6_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_6_1.png" src="../../_images/Drought_EAP_Worklow_Step_6_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong> The purpose of this step is the weighting of the population ins the five IPC pahses as discribt in [IPC Data](file:///C:/HeiGIT/RCRC_GIS_Training/gis-training-resource-center/_build/html/content/GIS_AA/en_qgis_drought_trigger_somalia.html#ipc-data).</p>
+<p><strong>Purpose:</strong> The purpose of this step is the weighting of the population in the five IPC phases as described in <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/GIS_AA/en_qgis_drought_trigger_somalia.html#ipc-population-weighted-index">IPC Data</a>.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>You need to perform this step two times. One time for ML 1 and a second time for ML 2.</p>
@@ -1058,10 +1061,10 @@ Video: Adding the total district population to Intersection Polygons<div class="
 <p><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
 <ol class="arabic simple">
 <li><p>Right-click on Intersection_population Polygons layer -&gt; “Attribute Table”-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" />to open the field calculator</p></li>
-<li><p>Check “Create new field”</p></li>
-<li><p>“Output field name”: Name the new column “Index_per_IPCPolygon_ML1” (or “Index_per_IPCPolygon_ML2”)</p></li>
-<li><p>“Result field type”: Decimal number (real)</p></li>
-<li><p>Add the codeinto the <code class="docutils literal notranslate"><span class="pre">Expression</span></code> field</p></li>
+<li><p>Check <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">field</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">field</span> <span class="pre">name</span></code>: Name the new column “Index_per_IPCPolygon_ML1” (or “Index_per_IPCPolygon_ML2”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">field</span> <span class="pre">type</span></code>: Decimal number (real)</p></li>
+<li><p>Add the code into the <code class="docutils literal notranslate"><span class="pre">Expression</span></code> field</p></li>
 </ol>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>&quot;pop_sum_weighted&quot;/&quot;districtpo&quot;
 </pre></div>
@@ -1137,8 +1140,8 @@ Video: Calculate IPC Index per District<div class="sd-summary-down docutils">
 <p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_9_join_location.mp4"></video></p>
 </div>
 </details></section>
-<section id="step-10-join-ml1-and-ml2-i">
-<h3>Step 10.: Join ML1 and ML2 I<a class="headerlink" href="#step-10-join-ml1-and-ml2-i" title="Permalink to this heading">#</a></h3>
+<section id="step-10-join-ml1-and-ml2">
+<h3>Step 10.: Join ML1 and ML2<a class="headerlink" href="#step-10-join-ml1-and-ml2" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_10_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_10_1.png" src="../../_images/Drought_EAP_Worklow_Step_10_1.png" style="width: 1000px;" /></a>
 </figure>
@@ -1190,8 +1193,8 @@ Video: Join ML1 and ML2 I<div class="sd-summary-down docutils">
 <p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_10_join.mp4"></video></p>
 </div>
 </details></section>
-<section id="step-11-calculation-of-spi12-mean-per-district">
-<h3>Step 11: Calculation of SPI12 Mean per District<a class="headerlink" href="#step-11-calculation-of-spi12-mean-per-district" title="Permalink to this heading">#</a></h3>
+<section id="step-11-calculation-of-spi-12-mean-per-district">
+<h3>Step 11: Calculation of SPI-12 Mean per District<a class="headerlink" href="#step-11-calculation-of-spi-12-mean-per-district" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_11_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_11_1.png" src="../../_images/Drought_EAP_Worklow_Step_11_1.png" style="width: 1000px;" /></a>
 </figure>
@@ -1212,7 +1215,7 @@ Video: Join ML1 and ML2 I<div class="sd-summary-down docutils">
 <li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code></a></p></li>
 </ol>
 <ul class="simple">
-<li><p>Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not opne click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
+<li><p>Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not open click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
 </ul>
 <ol class="arabic simple" start="2">
 <li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: district_pop_som</p></li>
@@ -1241,8 +1244,8 @@ Video: Calculation of SPI12 Mean per District<div class="sd-summary-down docutil
 <p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_11_zonal_staistics.mp4"></video></p>
 </div>
 </details></section>
-<section id="step-12-join-spi12-mean-to-the-ipc-index">
-<h3>Step 12: Join SPI12 Mean to the IPC Index<a class="headerlink" href="#step-12-join-spi12-mean-to-the-ipc-index" title="Permalink to this heading">#</a></h3>
+<section id="step-12-join-spi-12-mean-to-the-ipc-index">
+<h3>Step 12: Join SPI-12 Mean to the IPC Index<a class="headerlink" href="#step-12-join-spi-12-mean-to-the-ipc-index" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_12_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_12_1.png" src="../../_images/Drought_EAP_Worklow_Step_12_1.png" style="width: 1000px;" /></a>
 </figure>
@@ -1298,7 +1301,7 @@ Video: Join SPI12 Mean to the IPC Index<div class="sd-summary-down docutils">
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_13_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_13_1.png" src="../../_images/Drought_EAP_Worklow_Step_13_1.png" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Purpose:</strong> The purpose of this step is to gain a quick overview of possible trigger activation without having to revise the actual data. Instead we will have a binary column with trigger = yes or no values.</p>
+<p><strong>Purpose:</strong> The purpose of this step is to gain a quick overview of possible trigger activation without having to revise the actual data. Instead we will have a binary column with trigger = yes or trigger=no values.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
 <ol class="arabic simple">
 <li><p>Right-click on “IPC_index_SPI_12_district” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Attribute</span> <span class="pre">Table</span></code>-&gt; click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" /> to open the field calculator</p></li>
@@ -1489,7 +1492,7 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 <li><p>ML2_ML1_Indices_joined (interim result: values of ML1 and ML2 indices in together)</p></li>
 <li><p>SPI12_mean_IPC_Indices_joined (interim result: SPI 12 forecast mean per district)</p></li>
 </ol>
-<p>For each output you click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder “FbF_Drought_Monitoring_Trigger\Monitoring\Year_Month”. Give the output the respective name (“Trigger_activation”, “ML2_ML1_Indices_joined” or “SPI12_mean_IPC_Indices_joined” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p>
+<p>For each output you click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder “FbF_Drought_Monitoring_Trigger\Monitoring\Year_Month\Model_Results”. Give the output the respective name (“Trigger_activation”, “ML2_ML1_Indices_joined” or “SPI12_mean_IPC_Indices_joined” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you check the checkbox for <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Output</span> <span class="pre">file</span> <span class="pre">after</span> <span class="pre">running</span> <span class="pre">algorithm</span></code> the results will be automatically loaded to your layers panel.</p>
@@ -1593,9 +1596,9 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-adding-the-total-district-population-to-intersection-polygons">Step 7: Adding the total district population to Intersection Polygons</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8: Calculation of Population Proportion per Intersection Polygon</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9: Calculate IPC Index per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-join-ml1-and-ml2-i">Step 10.: Join ML1 and ML2 I</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-calculation-of-spi12-mean-per-district">Step 11: Calculation of SPI12 Mean per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi12-mean-to-the-ipc-index">Step 12: Join SPI12 Mean to the IPC Index</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-join-ml1-and-ml2">Step 10.: Join ML1 and ML2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-calculation-of-spi-12-mean-per-district">Step 11: Calculation of SPI-12 Mean per District</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi-12-mean-to-the-ipc-index">Step 12: Join SPI-12 Mean to the IPC Index</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-evaluate-trigger-activation">Step 13: Evaluate Trigger Activation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-visualisation-of-results">Step 14.: Visualisation of results</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-making-print-map">Step 15.: Making print map</a></li>
