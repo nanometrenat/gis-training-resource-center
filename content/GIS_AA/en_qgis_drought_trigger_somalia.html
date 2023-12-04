@@ -509,12 +509,25 @@ document.write(`
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-automated">Trigger Workflow Automated</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12-data">SPI-12 Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-data">IPC Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-load-the-model-in-the-qgis-model-designer">Step 4: Load the model in the QGIS Model Designer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-run-the-model">Step 5: Run the model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-visualisation-of-results">Step 6.: Visualisation of results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-making-print-map">Step 7: Making print map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-exporting-map">Step 8.: Exporting Map</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-manually">Trigger Workflow Manually</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12-data">SPI-12 Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-data">IPC Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Step 1: Setting up folder structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Step 2: Download of the forecast data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">SPI-12 Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">IPC Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Step 3: Loading data into QGIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per Intersection Polygon</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6: Weighting of the Population based on IPC-Phase</a></li>
@@ -530,11 +543,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-exporting-map">Step 16.: Exporting Map</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-automated">Trigger Workflow Automated</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-model-in-the-qgis-model-designer">Load the model in the QGIS Model Designer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-model">Run the model</a></li>
 </ul>
 </li>
 </ul>
@@ -691,10 +699,13 @@ Furthermore, population located in a higher IPC class is more important than pop
 </section>
 </section>
 </section>
-<section id="trigger-workflow-manually">
-<h2>Trigger Workflow Manually<a class="headerlink" href="#trigger-workflow-manually" title="Permalink to this heading">#</a></h2>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="trigger-workflow-automated">
+<h1>Trigger Workflow Automated<a class="headerlink" href="#trigger-workflow-automated" title="Permalink to this heading">#</a></h1>
+<p>As explained in the beginning of this <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/GIS_AA/en_qgis_drought_trigger_somalia.html#qgis-trigger-workflow-for-somalia">chapter</a>, the 9 main steps of the developed trigger workflow are done automatically by a QGIS model. In the previous chapters you have learned the purpose and needed tools of each step and how to perform them manually. In this chapter it is explained how to run the automated model.</p>
+<p>The <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_automatisation_wiki.html#the-qgis-model-designer">QGIS Model Designer</a> is a visual tool that allows users to create and edit a workflow with all tools available in QGIS that can be used repeatedly in a simple and time-efficient manner. It provides a graphical interface to build workflows by connecting geoprocessing tools and algorithms. The user can define inputs, outputs, and the flow of data between different processing steps.</p>
 <section id="step-1-setting-up-folder-structure">
-<h3>Step 1: Setting up folder structure<a class="headerlink" href="#step-1-setting-up-folder-structure" title="Permalink to this heading">#</a></h3>
+<h2>Step 1: Setting up folder structure<a class="headerlink" href="#step-1-setting-up-folder-structure" title="Permalink to this heading">#</a></h2>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_1_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_1_1.png" src="../../_images/Drought_EAP_Worklow_Step_1_1.png" style="width: 1000px;" /></a>
 </figure>
@@ -736,7 +747,7 @@ Video: Setting up folder structure <div class="sd-summary-down docutils">
 </div>
 </details></section>
 <section id="step-2-download-of-the-forecast-data">
-<h3>Step 2: Download of the forecast data<a class="headerlink" href="#step-2-download-of-the-forecast-data" title="Permalink to this heading">#</a></h3>
+<h2>Step 2: Download of the forecast data<a class="headerlink" href="#step-2-download-of-the-forecast-data" title="Permalink to this heading">#</a></h2>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_2_2.png"><img alt="../../_images/Drought_EAP_Worklow_Step_2_2.png" src="../../_images/Drought_EAP_Worklow_Step_2_2.png" style="width: 1000px;" /></a>
 </figure>
@@ -746,7 +757,7 @@ Video: Setting up folder structure <div class="sd-summary-down docutils">
 The main data publications plus the updates of the IPC data amount to the publication of new data almost monthly.</p>
 </section>
 <section id="spi-12-data">
-<h3>SPI-12 Data<a class="headerlink" href="#spi-12-data" title="Permalink to this heading">#</a></h3>
+<h2>SPI-12 Data<a class="headerlink" href="#spi-12-data" title="Permalink to this heading">#</a></h2>
 <p>ICPAC will provide the SPI-12 forecasts on their FTP (File Transfer Protocol). There are different ways to access the FTP-Server. We recommend to install and once set up <a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">FileZilla</a>. This will make your work easily repeatable on a monthly basis.</p>
 <ol class="arabic simple">
 <li><p>Download Filezilla <a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">here</a>.</p></li>
@@ -762,7 +773,7 @@ On the right hand side, you will see in the upper window the FTP data folder and
 </figure>
 </section>
 <section id="ipc-data">
-<h3>IPC Data<a class="headerlink" href="#ipc-data" title="Permalink to this heading">#</a></h3>
+<h2>IPC Data<a class="headerlink" href="#ipc-data" title="Permalink to this heading">#</a></h2>
 <p>The IPC Projection data is provided and regulary updated on the <a class="reference external" href="https://fews.net/">FEWSNET Website</a>.
 On the website you will have to click on Somalia to acess the data. Alternativley, you can  navigate through <code class="docutils literal notranslate"><span class="pre">Data</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Acute</span> <span class="pre">Food</span> <span class="pre">Insecurity</span> <span class="pre">Data</span></code> and enter „Somalia”. In the menu you will see different dataformats for different timestamps. Once you find out which timestamp is the most current one find the ZIP download. We need the data in shapefile (.shp) format, which is only included in the ZIP file and not provided as single download file.</p>
 <figure class="align-center" id="fewsnet-ipc-download-ipc-projections">
@@ -787,7 +798,279 @@ On the website you will have to click on Somalia to acess the data. Alternativle
 </div>
 </section>
 <section id="step-3-loading-data-into-qgis">
-<h3>Step 3: Loading data into QGIS<a class="headerlink" href="#step-3-loading-data-into-qgis" title="Permalink to this heading">#</a></h3>
+<h2>Step 3: Loading data into QGIS<a class="headerlink" href="#step-3-loading-data-into-qgis" title="Permalink to this heading">#</a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_3_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_3_1.png" src="../../_images/Drought_EAP_Worklow_Step_3_1.png" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Purpose:</strong> In this step, all the data needed will be loaded into QGIS.</p>
+<p><strong>Tool:</strong> No specific tools are needed, only QGIS.</p>
+<ol class="arabic simple">
+<li><p>Open QGIS and create a <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#step-by-step-setting-up-a-new-qgis-project-from-scratch">new project</a> by clicking on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span></code></p></li>
+<li><p>Once the project is created save the project in the folder you created in Step 1 (e.g. 2022_05). To do that click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code> and navigate to the folder. Give the project the same name as the folder you created (e.g. 2022_05). Then click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Load all input data in QGIS by <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-raster-data-via-drag-and-drop">drag and drop</a>. Click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+</ol>
+<p><strong>Result:</strong> QGIS project with all necessary data ready to be analysed.</p>
+<p>This video shows how to setup the QGIS project for April 2022 and how to import all data into the project.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Loading data into QGIS<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_3.mp4"></video></p>
+</div>
+</details></section>
+<section id="step-4-load-the-model-in-the-qgis-model-designer">
+<h2>Step 4: Load the model in the QGIS Model Designer<a class="headerlink" href="#step-4-load-the-model-in-the-qgis-model-designer" title="Permalink to this heading">#</a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_4_1_automated_model.png"><img alt="../../_images/Drought_EAP_Worklow_Step_4_1_automated_model.png" src="../../_images/Drought_EAP_Worklow_Step_4_1_automated_model.png" style="width: 1000px;" /></a>
+</figure>
+<ol class="arabic simple">
+<li><p>Open the tool under <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Graphical</span> <span class="pre">Modeler</span></code></p></li>
+<li><p>In the upper panel click <code class="docutils literal notranslate"><span class="pre">Model</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Model</span></code> and naviageto your folder “FbF_Drought_Monitoring_Trigger”, mark the “Triggermodel_Somalia.model3” file an click on <code class="docutils literal notranslate"><span class="pre">Open</span></code>. The model will open and you will see yellow, white and green boxes.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Model_Designer.PNG"><img alt="../../_images/Model_Designer.PNG" src="../../_images/Model_Designer.PNG" style="width: 700px;" /></a>
+</figure>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Box</p></th>
+<th class="head"><p>Significance</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Yellow</p></td>
+<td><p>Model Input</p></td>
+<td><p>Definition of the Inut data for the model the model will perform on</p></td>
+</tr>
+<tr class="row-odd"><td><p>White</p></td>
+<td><p>Algorithms</p></td>
+<td><p>Algorithms or Tools are specific geoprocessing steps that perform specific tasks, such as clipping, reprojecting or buffering.</p></td>
+</tr>
+<tr class="row-even"><td><p>Green</p></td>
+<td><p>Model Output</p></td>
+<td><p>The results created by the model (Output layers) are automatically added to your layers panel in your QGIS project interface</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="step-5-run-the-model">
+<h2>Step 5: Run the model<a class="headerlink" href="#step-5-run-the-model" title="Permalink to this heading">#</a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_5_1_automated_model.png"><img alt="../../_images/Drought_EAP_Worklow_Step_5_1_automated_model.png" src="../../_images/Drought_EAP_Worklow_Step_5_1_automated_model.png" style="width: 1000px;" /></a>
+</figure>
+<ol class="arabic simple">
+<li><p>In the upper panel click on <code class="docutils literal notranslate"><span class="pre">Model</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">Model</span></code>. A window will open where you need to define the model input and output.</p></li>
+</ol>
+<p><strong>Model Input</strong></p>
+<p>The model needs the follow 5 inputs:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IPC_Projection_ML1</span></code> (IPC short-term procetion data): ML 1 data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IPC_Projection_ML2</span></code> (IPC long term projection data): ML 2 data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Pop_per_district</span></code> (district boundaries and population numbers per district): district_pop_sum</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPI12</span></code> (SPI12 forecast): SPI-12 data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Worldpop</span></code> (Population Raster data): Worldpop data</p></li>
+</ol>
+<p>For each of these mandatory inputs, you click on the dropdown arrow and choose the respective file.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>In the dropdown list, only layers that are currently loaded in your QGIS Project will be displayed.</p>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/SRCS_Model_input.png"><img alt="../../_images/SRCS_Model_input.png" src="../../_images/SRCS_Model_input.png" style="width: 500px;" /></a>
+</figure>
+<p><strong>Model Output</strong></p>
+<p>The model outputs 3 results:</p>
+<ol class="arabic simple">
+<li><p>Trigger_activation (binary information if trigger is activated or not)</p></li>
+<li><p>ML2_ML1_Indices_joined (interim result: values of ML1 and ML2 indices in together)</p></li>
+<li><p>SPI12_mean_IPC_Indices_joined (interim result: SPI 12 forecast mean per district)</p></li>
+</ol>
+<p>For each output you click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder <code class="docutils literal notranslate"><span class="pre">FbF_Drought_Monitoring_Trigger\Monitoring\Year_Month\Model_Results</span></code>. Give the output the respective name (“Trigger_activation”, “ML2_ML1_Indices_joined” or “SPI12_mean_IPC_Indices_joined”) and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you check the checkbox for <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Output</span> <span class="pre">file</span> <span class="pre">after</span> <span class="pre">running</span> <span class="pre">algorithm</span></code> the results will be automatically loaded to your layers panel.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+</ol>
+</section>
+<section id="step-6-visualisation-of-results">
+<h2>Step 6.: Visualisation of results<a class="headerlink" href="#step-6-visualisation-of-results" title="Permalink to this heading">#</a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_14_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_14_1.png" src="../../_images/Drought_EAP_Worklow_Step_14_1.png" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Purpose:</strong> Definition of how features are represented visually on the map.</p>
+<p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_I.html#symbology-for-vector-data">Symbology</a></p>
+<p><strong>Trigger Activation</strong></p>
+<ol class="arabic simple">
+<li><p>Right cklick on the “Trigger_activation” (or “IPC_index_SPI_12_district”) layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>In the drop-down menu on the top choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code></p></li>
+<li><p>In the down left corner click on <code class="docutils literal notranslate"><span class="pre">Style</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
+<li><p>In the new window click on the three points <img alt="" src="../../_images/Three_points.png" />. Navigate to the “FbF_Drought_Monitoring_Trigger/layer_styles” folder and select the file “Style_Trigger_Activation.qml”.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Open</span></code>. Then click on <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
+<li><p>Back in the “Layer Properties” Window click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
+</ol>
+<p>You will now see districts where no trigger is activated in green and districts with trigger activation in pink.</p>
+<p>The “Style_Trigger_Activation.qml” style layer is configured to show the district names only where the trigger is actually activated. If there is no trigger activation you can activate the admin 1 boundary layer for better map orientation (see <strong>Administrative 2 Boundaries</strong> below)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Map_yes_trigger.PNG"><img alt="../../_images/Map_yes_trigger.PNG" src="../../_images/Map_yes_trigger.PNG" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Risk Assessment</strong></p>
+<p>For the creation of an <strong>Intervention Map</strong> we will have to add the risk assessment data and the respective style file.
+For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Risk_Assessment” the file “risk_assessment_districts.gpkg”. This file is the output of the conducted risk assessment and contains a risk value for each district of Simaliland and Somalia.  In order to visualize it</p>
+<ol class="arabic simple">
+<li><p>Right click on the “risk_assessment_districts” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>Repeat the steps from above for loading the style layer, but choose the “somalia_risk_assessment_style.qml” style layer.</p></li>
+</ol>
+<p>For the final visualization and right overlay of the risk assessment and the Trigger activation, make sure you “Trigger Activation” layer is above the
+“risk_assessment_districts” layer in the Layers Panel (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_2/en_qgis_geodata_concept.html?highlight=layer#layer-concept">Layer Concept</a>).</p>
+<p><strong>Administrative 2 Boundaries</strong></p>
+<p>For better orientation in the map, especially if no trigger is activated you can optionally load the regions boundaries with regions names:</p>
+<p>Navigate to “…\FbF_Drought_Monitoring_Trigger\Fixed_data\Regions” and load the “Som_Admbnda_Adm1_UNDP.shp” file into your layers panel.</p>
+<ol class="arabic simple">
+<li><p>Right click on the “risk_assessment_districts” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>Repeat the steps from above for loading the style layer, but choose the “somalia_risk_assessment_style.qml” style layer.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Map_no_trigger.PNG"><img alt="../../_images/Map_no_trigger.PNG" src="../../_images/Map_no_trigger.PNG" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Basemap</strong></p>
+<p>Add a basemap to your map in order to have a nice background. We recommend to use OpenStreetMap as a baselayer, but you can also choose another basemap if you prefer.</p>
+<p>Find out <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html?highlight=osm#basemaps">here</a> how to add a basemap.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Remember the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_2/en_qgis_geodata_concept.html?highlight=layer#layer-concept">layer concept</a> and make sure the basemap layer is at the bottom of your layers panel.</p>
+</div>
+</section>
+<section id="step-7-making-print-map">
+<h2>Step 7: Making print map<a class="headerlink" href="#step-7-making-print-map" title="Permalink to this heading">#</a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_15_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_15_1.png" src="../../_images/Drought_EAP_Worklow_Step_15_1.png" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Purpose:</strong> Viualization of the map features in a printable map layout</p>
+<p><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=print+layout#print-layout">Print Layout</a></p>
+<p>In order to easily visualize the output of the trigger analysis we provide you with a
+<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">map template</a> that can be used as a base for your visualization. You can find the template in the following directory: “…/FbF_Drought_Monitoring_Trigger/maps_somalia_template_risk_assessment.qpt”.</p>
+<p>Check <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">here</a> how to open templates and how to use them in QGIS.</p>
+<p>You can also adapt the template to your needs and preferences. You can find help <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#print-layout">here</a>.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Make sure you edit the Map Information on the template, e.g. current date. Also make sure to check the legend items: Remove unnecessary items and eventually change the names to meaning descriptions.</p>
+</div>
+</section>
+<section id="step-8-exporting-map">
+<h2>Step 8.: Exporting Map<a class="headerlink" href="#step-8-exporting-map" title="Permalink to this heading">#</a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_16_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_16_1.png" src="../../_images/Drought_EAP_Worklow_Step_16_1.png" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Purpose:</strong> Export the designed and finalized map layout in order tp print it as a pdf or format of your choice.</p>
+<p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=print+layout#print-layout">Print Layout</a></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/map_output_example2.png"><img alt="../../_images/map_output_example2.png" src="../../_images/map_output_example2.png" style="width: 1000px;" /></a>
+</figure>
+<p>When you have finished the design of you map you can export it as pdf or image file in different datafromats.</p>
+<p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=export#exporting-the-print-layout">Click here</a> to find the step by step on how to export your map.</p>
+</section>
+<section id="trigger-workflow-manually">
+<h2>Trigger Workflow Manually<a class="headerlink" href="#trigger-workflow-manually" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3>Step 1: Setting up folder structure<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_1_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_1_1.png" src="../../_images/Drought_EAP_Worklow_Step_1_1.png" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Purpose:</strong> In this step we set up the correct folder structure to make the analysis easier and to ensure consitent results.</p>
+<p><strong>Tool:</strong> No special tools or programs are needed</p>
+<table class="table">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instruction</p></th>
+<th class="head"><p>Folder Structure</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Open the Folder “FbF_Drought_Monitoring_Trigger”</p></li>
+<li><p>Open the subfolder “Monitoring”</p></li>
+<li><p>Copy the Template folder “TEMPLATE_Year_Month” and change the name to the current year and month. The result could be the folder “2022_05”</p></li>
+</ol>
+</td>
+<td><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Folder_structure_FbF_Drought_Monitoring_Trigger.drawio.svg"><img alt="../../_images/Folder_structure_FbF_Drought_Monitoring_Trigger.drawio.svg" src="../../_images/Folder_structure_FbF_Drought_Monitoring_Trigger.drawio.svg" width="450px" /></a>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The Video below shows the process for setting up the folder for decmber 2023.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Setting up folder structure <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_folder_setup.mp4"></video></p>
+</div>
+</details></section>
+<section id="id2">
+<h3>Step 2: Download of the forecast data<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_2_2.png"><img alt="../../_images/Drought_EAP_Worklow_Step_2_2.png" src="../../_images/Drought_EAP_Worklow_Step_2_2.png" style="width: 1000px;" /></a>
+</figure>
+<p><strong>Purpose:</strong></p>
+<p><strong>Tool:</strong> FileZilla and Interent Browser</p>
+<p>The current plans provide that ICPAC will monthly provide the SPI-12 forcast whereas the IPC data will be pulled from the FEWSNET website. FEWS NET publishes IPC data on its website.
+The main data publications plus the updates of the IPC data amount to the publication of new data almost monthly.</p>
+</section>
+<section id="id3">
+<h3>SPI-12 Data<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>ICPAC will provide the SPI-12 forecasts on their FTP (File Transfer Protocol). There are different ways to access the FTP-Server. We recommend to install and once set up <a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">FileZilla</a>. This will make your work easily repeatable on a monthly basis.</p>
+<ol class="arabic simple">
+<li><p>Download Filezilla <a class="reference external" href="https://filezilla-project.org/download.php?platform=win64">here</a>.</p></li>
+<li><p>Install the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file you have downloaded</p></li>
+<li><p>Open FileZilla</p></li>
+<li><p>Establish a connection to the FTP Server by insterting the credentials you have been passed (Host, Username and Password) and clicking <code class="docutils literal notranslate"><span class="pre">Quickconnect</span></code>.</p></li>
+</ol>
+<p>In FileZilla you have four windows. On the left hand side you will see the folder on your computer in the upper window. By clicking on a folder, the documents in the folder will be shown in the lower left window.
+On the right hand side, you will see in the upper window the FTP data folder and by clicking on it, the data will be shown in the lower right window.</p>
+<p>In order to pass the data from the FTP Server to your own machine you can simply drag and drop the folder or data from the righthandside windows (FTP-Server) to the lefthandside windows (your Computer). To do so, firstly navigate to your folder where you wneed the latest SPI-12 data to be located <code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template/SPI_12</span></code>. Then drag and drop the latest SPI-12 into the folder.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/FileZilla.PNG"><img alt="../../_images/FileZilla.PNG" src="../../_images/FileZilla.PNG" style="height: 400px;" /></a>
+</figure>
+</section>
+<section id="id5">
+<h3>IPC Data<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p>The IPC Projection data is provided and regulary updated on the <a class="reference external" href="https://fews.net/">FEWSNET Website</a>.
+On the website you will have to click on Somalia to acess the data. Alternativley, you can  navigate through <code class="docutils literal notranslate"><span class="pre">Data</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Acute</span> <span class="pre">Food</span> <span class="pre">Insecurity</span> <span class="pre">Data</span></code> and enter „Somalia”. In the menu you will see different dataformats for different timestamps. Once you find out which timestamp is the most current one find the ZIP download. We need the data in shapefile (.shp) format, which is only included in the ZIP file and not provided as single download file.</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/IPC_Projections_website.png"><img alt="../../_images/IPC_Projections_website.png" src="../../_images/IPC_Projections_website.png" style="height: 400px;" /></a>
+</figure>
+<p>Once downloaded the ZIP folder, right click on it and unzip it. You will see various datasets. We are interested in the ML1 and ML2 projections. The filename is composed of “SO” for Somalia, year and month of the report month of the respective projection and _ML1 or _ML2 forn the respective projection. This is what the the dataname for ML1 and ML2 projections published in August would look like:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;SO_202308_ML1.shp&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;SO_202308_ML2.shp&quot;</span></code></p>
+<p>You can then copy the respective shapefiles to you folder</p>
+<p><code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template/IPC_ML1</span></code> and
+<code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template//IPC_ML2</span></code></p>
+<p>Remember that you need to copy over all components that the respective <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geodata_types_wiki.html#vector-data">shapefile</a> is composed of. Most probably it has 5 components: .cpg, .dbf, .prj, .shp, and .shx.</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/IPC_zip.PNG"><img alt="../../_images/IPC_zip.PNG" src="../../_images/IPC_zip.PNG" style="height: 400px;" /></a>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>On the <a class="reference external" href="https://fews.net/">main FEWSNET page</a> you can also sign up for information on latest updates via email. For this option scroll down to the end of the page and click on <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">up</span> <span class="pre">for</span> <span class="pre">Emails</span></code>. You will then get the option to choose updates only for Somalia.</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/IPC_Newsletter.png"><img alt="../../_images/IPC_Newsletter.png" src="../../_images/IPC_Newsletter.png" style="height: 60px;" /></a>
+</figure>
+</div>
+</section>
+<section id="id9">
+<h3>Step 3: Loading data into QGIS<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_3_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_3_1.png" src="../../_images/Drought_EAP_Worklow_Step_3_1.png" style="width: 1000px;" /></a>
 </figure>
@@ -1430,79 +1713,6 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 <p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=export#exporting-the-print-layout">Click here</a> to find the step by step on how to export your map.</p>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="trigger-workflow-automated">
-<h1>Trigger Workflow Automated<a class="headerlink" href="#trigger-workflow-automated" title="Permalink to this heading">#</a></h1>
-<p>As explained in the beginning of this <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/GIS_AA/en_qgis_drought_trigger_somalia.html#qgis-trigger-workflow-for-somalia">chapter</a>, the 9 main steps of the developed trigger workflow are done automatically by a QGIS model. In the previous chapters you have learned the purpose and needed tools of each step and how to perform them manually. In this chapter it is explained how to run the automated model.</p>
-<p>The <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_automatisation_wiki.html#the-qgis-model-designer">QGIS Model Designer</a> is a visual tool that allows users to create and edit a workflow with all tools available in QGIS that can be used repeatedly in a simple and time-efficient manner. It provides a graphical interface to build workflows by connecting geoprocessing tools and algorithms. The user can define inputs, outputs, and the flow of data between different processing steps.</p>
-<section id="load-the-model-in-the-qgis-model-designer">
-<h2>Load the model in the QGIS Model Designer<a class="headerlink" href="#load-the-model-in-the-qgis-model-designer" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Open the tool under <code class="docutils literal notranslate"><span class="pre">Processing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Graphical</span> <span class="pre">Modeler</span></code></p></li>
-<li><p>In the upper panel click <code class="docutils literal notranslate"><span class="pre">Model</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Model</span></code> and naviageto your folder “FbF_Drought_Monitoring_Trigger”, mark the “Triggermodel_Somalia.model3” file an click on <code class="docutils literal notranslate"><span class="pre">Open</span></code>. The model will open and you will see yellow, white and green boxes.</p></li>
-</ol>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/Model_Designer.PNG"><img alt="../../_images/Model_Designer.PNG" src="../../_images/Model_Designer.PNG" style="width: 700px;" /></a>
-</figure>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Box</p></th>
-<th class="head"><p>Significance</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Yellow</p></td>
-<td><p>Model Input</p></td>
-<td><p>Definition of the Inut data for the model the model will perform on</p></td>
-</tr>
-<tr class="row-odd"><td><p>White</p></td>
-<td><p>Algorithms</p></td>
-<td><p>Algorithms or Tools are specific geoprocessing steps that perform specific tasks, such as clipping, reprojecting or buffering.</p></td>
-</tr>
-<tr class="row-even"><td><p>Green</p></td>
-<td><p>Model Output</p></td>
-<td><p>The results created by the model (Output layers) are automatically added to your layers panel in your QGIS project interface</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="run-the-model">
-<h2>Run the model<a class="headerlink" href="#run-the-model" title="Permalink to this heading">#</a></h2>
-<ol class="arabic">
-<li><p>In the upper panel click on <code class="docutils literal notranslate"><span class="pre">Model</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">Model</span></code>. A window will open where you need to define the model input and output.</p>
-<p><strong>Model Input</strong></p>
-<p>The model needs the follow 5 inputs:</p>
-<ol class="arabic simple">
-<li><p>IPC_Projection_ML1 (IPC short-term procetion data)</p></li>
-<li><p>IPC_Projection_ML2(IPC long term projection data)</p></li>
-<li><p>Pop_per_district (district boundaries and population numbers per district)</p></li>
-<li><p>SPI12 (SPI12 forecast)</p></li>
-<li><p>Worldpop (Population Raster data)</p></li>
-</ol>
-<p>For each of these mandatory inputs, you click on the dropdown arrow and choose the respective file.</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>In the dropdown list, only layers that are currently loaded in your QGIS Project will be displayed.</p>
-</div>
-<p><strong>Model Output</strong></p>
-<p>The model outputs 3 results:</p>
-<ol class="arabic simple">
-<li><p>Trigger_activation (binary information if trigger is activated or not)</p></li>
-<li><p>ML2_ML1_Indices_joined (interim result: values of ML1 and ML2 indices in together)</p></li>
-<li><p>SPI12_mean_IPC_Indices_joined (interim result: SPI 12 forecast mean per district)</p></li>
-</ol>
-<p>For each output you click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you monitoring folder “FbF_Drought_Monitoring_Trigger\Monitoring\Year_Month\Model_Results”. Give the output the respective name (“Trigger_activation”, “ML2_ML1_Indices_joined” or “SPI12_mean_IPC_Indices_joined” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you check the checkbox for <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Output</span> <span class="pre">file</span> <span class="pre">after</span> <span class="pre">running</span> <span class="pre">algorithm</span></code> the results will be automatically loaded to your layers panel.</p>
-</div>
-<ol class="arabic simple" start="5">
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
-</ol>
-</li>
-</ol>
-</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -1584,12 +1794,25 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-automated">Trigger Workflow Automated</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12-data">SPI-12 Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-data">IPC Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-load-the-model-in-the-qgis-model-designer">Step 4: Load the model in the QGIS Model Designer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-run-the-model">Step 5: Run the model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-visualisation-of-results">Step 6.: Visualisation of results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-making-print-map">Step 7: Making print map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-exporting-map">Step 8.: Exporting Map</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-manually">Trigger Workflow Manually</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setting-up-folder-structure">Step 1: Setting up folder structure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-download-of-the-forecast-data">Step 2: Download of the forecast data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-12-data">SPI-12 Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ipc-data">IPC Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-loading-data-into-qgis">Step 3: Loading data into QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Step 1: Setting up folder structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Step 2: Download of the forecast data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">SPI-12 Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">IPC Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Step 3: Loading data into QGIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-intersection-of-ml-1-ml-2-data-with-the-district-polygons">Step 4: Intersection of ML 1 &amp; ML 2 data with the district polygons</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculation-of-population-per-intersection-polygon">Step 5: Calculation of Population per Intersection Polygon</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6: Weighting of the Population based on IPC-Phase</a></li>
@@ -1605,11 +1828,6 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-exporting-map">Step 16.: Exporting Map</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-workflow-automated">Trigger Workflow Automated</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-model-in-the-qgis-model-designer">Load the model in the QGIS Model Designer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-model">Run the model</a></li>
 </ul>
 </li>
 </ul>
