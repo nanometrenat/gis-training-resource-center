@@ -244,7 +244,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 3- Basic GIS operations</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation.html">Digitalisation</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation.html">Digitalisation</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_3/en_qgis_digitalisation_ex1.html">Digitalisation Exercise 1</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_data_classification.html">Geodata Classification</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -493,7 +494,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-exercise">Aim of exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-in-qgis">CSV in QGIS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-exercise">Aim of exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-load-data-in-qgis">Task 1: Load data in QGIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-counting-water-sources-per-district">Task 2: Counting water sources per district</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-calculating-water-sources-per-10-000-people">Task 3: Calculating water sources per 10.000 people</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-intro">QGIS Intro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Aim of exercise</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-folder-and-data-structure">Task 1: Folder and data structure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-data-import-into-qgis">Task 2: Data import into QGIS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-interface">Task 3: Interface</a></li>
@@ -515,10 +526,90 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="qgis-basic-exercise-srcs">
 <h1>QGIS Basic Exercise SRCS<a class="headerlink" href="#qgis-basic-exercise-srcs" title="Permalink to this heading">#</a></h1>
+<section id="csv-in-qgis">
+<h2>CSV in QGIS<a class="headerlink" href="#csv-in-qgis" title="Permalink to this heading">#</a></h2>
 <section id="aim-of-exercise">
-<h2>Aim of exercise<a class="headerlink" href="#aim-of-exercise" title="Permalink to this heading">#</a></h2>
+<h3>Aim of exercise<a class="headerlink" href="#aim-of-exercise" title="Permalink to this heading">#</a></h3>
+<p>In this task, we will load a CSV file in QGIS and do some analysis.</p>
+</section>
+</section>
+<section id="task-1-load-data-in-qgis">
+<h2>Task 1: Load data in QGIS<a class="headerlink" href="#task-1-load-data-in-qgis" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open the folder “Exercise 2”. Go into the “data” folder and copy all data from the “input” folder into the “temp” folder</p></li>
+<li><p>To load the file “Water_sources.csv” into QGIS click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Delimited</span> <span class="pre">Text</span> <span class="pre">Layer</span></code>. Next to <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">name</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to your “temp” folder. Her select the file “water_sources.csv”.</p></li>
+<li><p>Use the setings like in the image below.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/add_csv.png"><img alt="../../_images/add_csv.png" src="../../_images/add_csv.png" style="width: 400px;" /></a>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Add</span></code></p></li>
+<li><p>Load the file “district_pop_som.shp” into QGIS</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To directly load .csv or EXCEL data into QGIS, the datasets need to have columns containing geometry in the form of latitude (Y-field) and longitude (X-field).</p>
+</div>
+</section>
+<section id="task-2-counting-water-sources-per-district">
+<h2>Task 2: Counting water sources per district<a class="headerlink" href="#task-2-counting-water-sources-per-district" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code>-&gt; Search for <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attribute</span> <span class="pre">by</span> <span class="pre">location</span> <span class="pre">(summary)</span></code></p>
+<ul class="simple">
+<li><p>Tip: If the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> is not opne click <code class="docutils literal notranslate"><span class="pre">Processing</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “district_pop_som” layer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select “Water_sources”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Geometric</span> <span class="pre">predicate</span></code>: Select “Intersection”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">to</span> <span class="pre">summarise</span></code>: Select “fid”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Summaries</span> <span class="pre">to</span> <span class="pre">calculate</span></code>: Chose only the option “count”</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Layer</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to your “temp” folder. Give the output the name “district_watersources” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Join_layer_summary_watersources.png"><img alt="../../_images/Join_layer_summary_watersources.png" src="../../_images/Join_layer_summary_watersources.png" style="width: 450px;" /></a>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: impoering .csv<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_textfile.mp4"></video></p>
+</div>
+</details></section>
+<section id="task-3-calculating-water-sources-per-10-000-people">
+<h2>Task 3: Calculating water sources per 10.000 people<a class="headerlink" href="#task-3-calculating-water-sources-per-10-000-people" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open the Attribute Table of “district_watersources”</p></li>
+<li><p>Click on  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a> <img alt="" src="../../_images/mActionCalculateField.png" />to open the field calculator</p></li>
+<li><p>Check <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">field</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">field</span> <span class="pre">name</span></code>: Name the new column “Watersources_pop”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">field</span> <span class="pre">type</span></code>: Decimal number (real)</p></li>
+<li><p>Add the code into the <code class="docutils literal notranslate"><span class="pre">Expression</span></code> field</p></li>
+</ol>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>( &quot;fid_count&quot;  /  &quot;districtpo&quot;  )  * 10000
+</pre></div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/watersources_per_pop_field_calculator.png"><img alt="../../_images/watersources_per_pop_field_calculator.png" src="../../_images/watersources_per_pop_field_calculator.png" style="width: 600px;" /></a>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">ok</span></code></p></li>
+<li><p>Save the new column by clicking on <img alt="" src="../../_images/mActionSaveEdits.png" /> in the attribute table and end the editing mode by clicking on <img alt="" src="../../_images/mActionToggleEditing.png" /></p></li>
+<li><p>Sorte the new column “Watersources_pop” and finde out wich districts have the highest and lowest number of water sources per 10.000 people</p></li>
+</ol>
+</section>
+<section id="qgis-intro">
+<h2>QGIS Intro<a class="headerlink" href="#qgis-intro" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3>Aim of exercise<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <p>The goal of the exercise is to get to know the basic functionality of QGIS and how to handle geodata.</p>
 <p></p>
+</section>
 </section>
 <section id="task-1-folder-and-data-structure">
 <h2>Task 1: Folder and data structure<a class="headerlink" href="#task-1-folder-and-data-structure" title="Permalink to this heading">#</a></h2>
@@ -894,7 +985,17 @@ Video: Categorized classification Example <div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-exercise">Aim of exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-in-qgis">CSV in QGIS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-exercise">Aim of exercise</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-load-data-in-qgis">Task 1: Load data in QGIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-counting-water-sources-per-district">Task 2: Counting water sources per district</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-calculating-water-sources-per-10-000-people">Task 3: Calculating water sources per 10.000 people</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-intro">QGIS Intro</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Aim of exercise</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-folder-and-data-structure">Task 1: Folder and data structure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-data-import-into-qgis">Task 2: Data import into QGIS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-interface">Task 3: Interface</a></li>
