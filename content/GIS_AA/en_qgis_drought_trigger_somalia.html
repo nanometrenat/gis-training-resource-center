@@ -540,7 +540,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi-12-mean-to-the-ipc-index">Step 12: Join SPI-12 Mean to the IPC Index</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-evaluate-trigger-activation">Step 13: Evaluate Trigger Activation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-visualisation-of-results">Step 14.: Visualisation of results</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-making-print-map">Step 15.: Making print map</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-making-print-map">Step 15: Making print map</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-exporting-map">Step 16.: Exporting Map</a></li>
 </ul>
 </li>
@@ -1113,11 +1113,27 @@ Video: Making print map<div class="sd-summary-down docutils">
 </figure>
 <p><strong>Purpose:</strong> Export the designed and finalized map layout in order tp print it as a pdf or format of your choice.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=print+layout#print-layout">Print Layout</a></p>
+<p>When you have finished the design of you map you can export it as pdf or image file in different datafromats.</p>
+<p><strong>Export as Image</strong></p>
+<ol class="arabic simple">
+<li><p>In the print layout click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">as</span> <span class="pre">Image</span></code></p></li>
+<li><p>Chose the <strong>Result</strong> folder in the folder you have created in step 1. Give the file the name of the project e.g 2022_04</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>The window “Image Export Options” will appear. Click <code class="docutils literal notranslate"><span class="pre">Save</span></code>
+Now the image can be found in the result folder in the folder you created in Step 1</p></li>
+</ol>
+<p><strong>Export as PDF</strong></p>
+<ol class="arabic simple">
+<li><p>In the print layout click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">as</span> <span class="pre">PDF</span></code></p></li>
+<li><p>Chose the <strong>Result</strong> folder in the folder you have created in step 1. Give the file the name of the project e.g 2022_04</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>The window “PDF Export Options” will appear.  For the best results, select the <code class="docutils literal notranslate"><span class="pre">lossless</span></code> image compression.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Save</span></code>
+Now the image can be found in the result folder in the folder you created in Step 1</p></li>
+</ol>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/map_output_example2.png"><img alt="../../_images/map_output_example2.png" src="../../_images/map_output_example2.png" style="width: 1000px;" /></a>
 </figure>
-<p>When you have finished the design of you map you can export it as pdf or image file in different datafromats.</p>
-<p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=export#exporting-the-print-layout">Click here</a> to find the step by step on how to export your map.</p>
 </section>
 <section id="trigger-workflow-manually">
 <h2>Trigger Workflow Manually<a class="headerlink" href="#trigger-workflow-manually" title="Permalink to this heading">#</a></h2>
@@ -1193,19 +1209,45 @@ On the right hand side, you will see in the upper window the FTP data folder and
 <h3>IPC Data<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>The IPC Projection data is provided and regulary updated on the <a class="reference external" href="https://fews.net/">FEWSNET Website</a>.
 On the website you will have to click on Somalia to acess the data. Alternativley, you can  navigate through <code class="docutils literal notranslate"><span class="pre">Data</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Acute</span> <span class="pre">Food</span> <span class="pre">Insecurity</span> <span class="pre">Data</span></code> and enter „Somalia”. In the menu you will see different dataformats for different timestamps. Once you find out which timestamp is the most current one find the ZIP download. We need the data in shapefile (.shp) format, which is only included in the ZIP file and not provided as single download file.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The FEWSNET pages change often !</p>
+</div>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="https://fews.net/">FEWSNET Website</a>. Click on <code class="docutils literal notranslate"><span class="pre">Data</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Acute</span> <span class="pre">Food</span> <span class="pre">Insecurity</span></code>.</p></li>
+<li><p>Scroll down. In <code class="docutils literal notranslate"><span class="pre">Geograhic</span> <span class="pre">Area</span></code> typ in “Somalia” and click <code class="docutils literal notranslate"><span class="pre">Apply</span></code></p></li>
+<li><p>Choose the newest dataset.</p></li>
+</ol>
 <figure class="align-center" id="id6">
-<a class="reference internal image-reference" href="../../_images/IPC_Projections_website.png"><img alt="../../_images/IPC_Projections_website.png" src="../../_images/IPC_Projections_website.png" style="height: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IPC_Projections_website.png"><img alt="../../_images/IPC_Projections_website.png" src="../../_images/IPC_Projections_website.png" style="height: 250px;" /></a>
 </figure>
-<p>Once downloaded the ZIP folder, right click on it and unzip it. You will see various datasets. We are interested in the ML1 and ML2 projections. The filename is composed of “SO” for Somalia, year and month of the report month of the respective projection and _ML1 or _ML2 forn the respective projection. This is what the the dataname for ML1 and ML2 projections published in August would look like:</p>
-<p><code class="docutils literal notranslate"><span class="pre">&quot;SO_202308_ML1.shp&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;SO_202308_ML2.shp&quot;</span></code></p>
-<p>You can then copy the respective shapefiles to you folder</p>
-<p><code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template/IPC_ML1</span></code> and
-<code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template//IPC_ML2</span></code></p>
+<ol class="arabic simple" start="4">
+<li><p>Download the one with the <strong>ZIP</strong> Data</p></li>
+<li><p>When you have downloaded the data, right-click on the file and click on <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">all</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Extract</span></code></p></li>
+<li><p>Open the extracted folder and copy the ML1 data in the IPC_ML1 folder you have created in step 1.</p></li>
+</ol>
+<ul class="simple">
+<li><p>The filename is composed of “SO” for Somalia, year and month of the report month e.g <code class="docutils literal notranslate"><span class="pre">SO_202308_ML1.shp</span></code>
+Example path: <code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template/IPC_ML1</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="7">
+<li><p>Copy the ML2 data into IPC_ML2 folder you have created in step 1.</p></li>
+</ol>
+<ul class="simple">
+<li><p>The filename is composed of “SO” for Somalia, year and month of the report month e.g <code class="docutils literal notranslate"><span class="pre">SO_202308_ML2.shp</span></code>
+Example path: <code class="docutils literal notranslate"><span class="pre">.../FbF_Drought_Monitoring_Trigger/Monitoring/Year_Month_template/IPC_ML2</span></code></p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure to not use the ML1_IDP data which comes in the .zip folder as well!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Remember that you need to copy over all components that the respective <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geodata_types_wiki.html#vector-data">shapefile</a> is composed of. Most probably it has 5 components: .cpg, .dbf, .prj, .shp, and .shx.</p>
 <figure class="align-center" id="id7">
-<a class="reference internal image-reference" href="../../_images/IPC_zip.PNG"><img alt="../../_images/IPC_zip.PNG" src="../../_images/IPC_zip.PNG" style="height: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/IPC_zip.PNG"><img alt="../../_images/IPC_zip.PNG" src="../../_images/IPC_zip.PNG" style="height: 300px;" /></a>
 </figure>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>On the <a class="reference external" href="https://fews.net/">main FEWSNET page</a> you can also sign up for information on latest updates via email. For this option scroll down to the end of the page and click on <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">up</span> <span class="pre">for</span> <span class="pre">Emails</span></code>. You will then get the option to choose updates only for Somalia.</p>
@@ -1226,6 +1268,23 @@ On the website you will have to click on Somalia to acess the data. Alternativle
 <li><p>Once the project is created save the project in the folder you created in Step 1 (e.g. 2022_05). To do that click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code> and navigate to the folder. Give the project the same name as the folder you created (e.g. 2022_05). Then click <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
 <li><p>Load all input data in QGIS by <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-raster-data-via-drag-and-drop">drag and drop</a>. Click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
 </ol>
+<ul class="simple">
+<li><p>From the folder you created in step 1</p>
+<ul>
+<li><p>ML1</p></li>
+<li><p>ML2</p></li>
+<li><p>SPI-12</p></li>
+</ul>
+</li>
+<li><p>From the <code class="docutils literal notranslate"><span class="pre">Fixes_data</span></code> folder:</p>
+<ul>
+<li><p>district_pop_som</p></li>
+<li><p>Regions</p></li>
+<li><p>risk_assessment.gpkg</p></li>
+<li><p>WorldPop_som.tif</p></li>
+</ul>
+</li>
+</ul>
 <p><strong>Result:</strong> QGIS project with all necessary data ready to be analysed.</p>
 <p>This video shows how to setup the QGIS project for April 2022 and how to import all data into the project.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1789,55 +1848,131 @@ Video: Evaluate Trigger Activation <div class="sd-summary-down docutils">
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_I.html#symbology-for-vector-data">Symbology</a></p>
 <p><strong>Trigger Activation</strong></p>
 <ol class="arabic simple">
-<li><p>Right cklick on the “Trigger_activation” (or “IPC_index_SPI_12_district”) layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
-<li><p>In the drop-down menu on the top choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code></p></li>
+<li><p>Right cklick on the “Trigger_activation” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
 <li><p>In the down left corner click on <code class="docutils literal notranslate"><span class="pre">Style</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
-<li><p>In the new window click on the three points <img alt="" src="../../_images/Three_points.png" />. Navigate to the “FbF_Drought_Monitoring_Trigger/layer_styles” folder and select the file “Style_Trigger_Activation.qml”.</p></li>
+<li><p>In the new window click on the three points <img alt="" src="../../_images/Three_points.png" />. Navigate to the “FbF_Drought_Monitoring_Trigger/layer_styles” folder and select the file <strong>“Style_Trigger_Activation.qml”</strong>.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Open</span></code>. Then click on <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
 <li><p>Back in the “Layer Properties” Window click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
 </ol>
-<p>You will now see districts where no trigger is activated in green and districts with trigger activation in pink.</p>
-<p>The “Style_Trigger_Activation.qml” style layer is configured to show the district names only where the trigger is actually activated. If there is no trigger activation you can activate the admin 1 boundary layer for better map orientation (see <strong>Administrative 2 Boundaries</strong> below)</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Info: Trigger Activation Layer<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You will now see districts where no trigger is activated in green and districts with trigger activation in pink.</p>
+<p class="sd-card-text">The “Style_Trigger_Activation.qml” style layer is configured to show the district names only where the trigger is actually activated. If there is no trigger activation you can activate the admin 1 boundary layer for better map orientation (see <strong>Administrative 2 Boundaries</strong> below)</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Map_yes_trigger.PNG"><img alt="../../_images/Map_yes_trigger.PNG" src="../../_images/Map_yes_trigger.PNG" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Risk Assessment</strong></p>
-<p>For the creation of an <strong>Intervention Map</strong> we will have to add the risk assessment data and the respective style file.
+</div>
+</details><p><strong>Risk Assessment</strong></p>
+<ol class="arabic simple" start="7">
+<li><p>Right click on the “risk_assessment_districts” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>In the down left corner click on <code class="docutils literal notranslate"><span class="pre">Style</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
+<li><p>In the new window click on the three points <img alt="" src="../../_images/Three_points.png" />. Navigate to the “FbF_Drought_Monitoring_Trigger/layer_styles” folder and select the file <strong>“somalia_risk_assessment_style.qml”</strong> style layer.</p></li>
+<li><p>Move the “risk_assessment_district” layer <strong>below</strong> “Trigger_Activation” layer (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_2/en_qgis_geodata_concept.html?highlight=layer#layer-concept">Layer Concept</a>).</p></li>
+<li><p>Back in the “Layer Properties” Window click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Info: Risk Assessment Layer<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">For the creation of an <strong>Intervention Map</strong> we will have to add the risk assessment data and the respective style file.
 For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Risk_Assessment” the file “risk_assessment_districts.gpkg”. This file is the output of the conducted risk assessment and contains a risk value for each district of Simaliland and Somalia.  In order to visualize it</p>
-<ol class="arabic simple">
-<li><p>Right click on the “risk_assessment_districts” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
-<li><p>Repeat the steps from above for loading the style layer, but choose the “somalia_risk_assessment_style.qml” style layer.</p></li>
+</div>
+</details><p><strong>Administrative 2 Boundaries (Regions)</strong></p>
+<ol class="arabic simple" start="12">
+<li><p>Right click on the “Som_Admbnda_Adm1_UNDP” (Regiond) layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
+<li><p>In the down left corner click on <code class="docutils literal notranslate"><span class="pre">Style</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
+<li><p>In the new window click on the three points <img alt="" src="../../_images/Three_points.png" />. Navigate to the “FbF_Drought_Monitoring_Trigger/layer_styles” folder and select the file <strong>“somalia_risk_assessment_style.qml”</strong>.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Open</span></code>. Then click on <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
+<li><p>Back in the “Layer Properties” Window click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code></p></li>
+<li><p>Add a the OpenStreetMap basemap by clicking on <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">XYZ</span> <span class="pre">layer...</span></code> -&gt; Select the OpenStreetMap. Click <code class="docutils literal notranslate"><span class="pre">Add</span></code>. (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html?highlight=osm#basemaps">Wiki basemap</a>)</p></li>
+<li><p>Place the OpenStreetMap basemap on the bottom.</p></li>
+<li><p>Delet all layers exept:</p>
+<ul class="simple">
+<li><p>Trigger_activation</p></li>
+<li><p>risk_assessment_districts</p></li>
+<li><p>Som_Admbnda_Adm1_UNDP</p></li>
+<li><p>OpenStreetMap</p></li>
+</ul>
+</li>
 </ol>
-<p>For the final visualization and right overlay of the risk assessment and the Trigger activation, make sure you “Trigger Activation” layer is above the
-“risk_assessment_districts” layer in the Layers Panel (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_2/en_qgis_geodata_concept.html?highlight=layer#layer-concept">Layer Concept</a>).</p>
-<p><strong>Administrative 2 Boundaries</strong></p>
-<p>For better orientation in the map, especially if no trigger is activated you can optionally load the regions boundaries with regions names:</p>
-<p>Navigate to “…\FbF_Drought_Monitoring_Trigger\Fixed_data\Regions” and load the “Som_Admbnda_Adm1_UNDP.shp” file into your layers panel.</p>
-<ol class="arabic simple">
-<li><p>Right click on the “risk_assessment_districts” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
-<li><p>Repeat the steps from above for loading the style layer, but choose the “somalia_risk_assessment_style.qml” style layer.</p></li>
-</ol>
-<figure class="align-center">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Visualisation of results<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Trigger_model_style.mp4"></video></p>
+</div>
+</details><table class="table">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Intervention Map <strong>without</strong> Trigger activation</p></th>
+<th class="head"><p>Intervention Map <strong>with</strong> Trigger activation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Map_no_trigger.PNG"><img alt="../../_images/Map_no_trigger.PNG" src="../../_images/Map_no_trigger.PNG" style="width: 1000px;" /></a>
 </figure>
-<p><strong>Basemap</strong></p>
-<p>Add a basemap to your map in order to have a nice background. We recommend to use OpenStreetMap as a baselayer, but you can also choose another basemap if you prefer.</p>
-<p>Find out <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html?highlight=osm#basemaps">here</a> how to add a basemap.</p>
+</td>
+<td><figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Map_yes_trigger.PNG"><img alt="../../_images/Map_yes_trigger.PNG" src="../../_images/Map_yes_trigger.PNG" style="width: 450px;" /></a>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Remember the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_2/en_qgis_geodata_concept.html?highlight=layer#layer-concept">layer concept</a> and make sure the basemap layer is at the bottom of your layers panel.</p>
 </div>
 </section>
 <section id="step-15-making-print-map">
-<h3>Step 15.: Making print map<a class="headerlink" href="#step-15-making-print-map" title="Permalink to this heading">#</a></h3>
+<h3>Step 15: Making print map<a class="headerlink" href="#step-15-making-print-map" title="Permalink to this heading">#</a></h3>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Drought_EAP_Worklow_Step_15_1.png"><img alt="../../_images/Drought_EAP_Worklow_Step_15_1.png" src="../../_images/Drought_EAP_Worklow_Step_15_1.png" style="width: 1000px;" /></a>
 </figure>
 <p><strong>Purpose:</strong> Viualization of the map features in a printable map layout</p>
 <p><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=print+layout#print-layout">Print Layout</a></p>
+<ol class="arabic simple">
+<li><p>If not done before, delet all layers expect <strong>Trigger_activation</strong>, <strong>risk_assessment_districts</strong> and <strong>OpenStreetMap</strong></p></li>
+<li><p>Open a new print layout by clicking on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Print</span> <span class="pre">Layout</span></code> -&gt; enter the name of your current Project e.g “2022_04”.</p></li>
+<li><p>Go the the <strong>FbF_Drought_Monitoring_Trigger</strong><code class="docutils literal notranslate"><span class="pre">folder</span> <span class="pre">and</span> <span class="pre">drag</span> <span class="pre">and</span> <span class="pre">drop</span> <span class="pre">the</span> <span class="pre">file</span></code>Trigger_activation_Intervention_map.qpt` in the print layout</p></li>
+<li><p>Change the date to the current date by clicking on “Further map info…” in the items panel. Click on the <code class="docutils literal notranslate"><span class="pre">Item</span> <span class="pre">Properties</span></code> tab and scroll down. Here you can change the date in the <code class="docutils literal notranslate"><span class="pre">Main</span> <span class="pre">Properties</span></code> field.</p></li>
+<li><p>Adjust the Lgend by clicking on the legend in the  <code class="docutils literal notranslate"><span class="pre">Item</span> <span class="pre">Properties</span></code> tab and scroll down until you see the <code class="docutils literal notranslate"><span class="pre">Legend</span> <span class="pre">items</span></code> field. If it is not there check if you have to open the dropdown. Make sure <code class="docutils literal notranslate"><span class="pre">Auto</span> <span class="pre">update</span></code> is not checked.</p>
+<ul class="simple">
+<li><p>Remove all itemes in the legend be clicking on the item and then on the red minus icon below.</p></li>
+<li><p>Add <strong>Trigger_activation</strong> and <strong>risk_assessment_districts</strong> to the legend by clicking on the green plus and click on the layer and click <code class="docutils literal notranslate"><span class="pre">ok</span></code></p></li>
+</ul>
+</li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Making print map<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_print_map.mp4"></video></p>
+</div>
+</details><div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Make sure you edit the Map Information on the template, e.g. current date. Also make sure to check the legend items: Remove unnecessary items and eventually change the names to meaning descriptions.</p>
+</div>
 <p>In order to easily visualize the output of the trigger analysis we provide you with a
 <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">map template</a> that can be used as a base for your visualization. You can find the template in the following directory: “…/FbF_Drought_Monitoring_Trigger/maps_somalia_template_risk_assessment.qpt”.</p>
-<p>Check <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#map-templates">here</a> how to open templates and how to use them in QGIS.</p>
 <p>You can also adapt the template to your needs and preferences. You can find help <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html#print-layout">here</a>.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -1851,11 +1986,27 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 </figure>
 <p><strong>Purpose:</strong> Export the designed and finalized map layout in order tp print it as a pdf or format of your choice.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=print+layout#print-layout">Print Layout</a></p>
+<p>When you have finished the design of you map you can export it as pdf or image file in different datafromats.</p>
+<p><strong>Export as Image</strong></p>
+<ol class="arabic simple">
+<li><p>In the print layout click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">as</span> <span class="pre">Image</span></code></p></li>
+<li><p>Chose the <strong>Result</strong> folder in the folder you have created in step 1. Give the file the name of the project e.g 2022_04</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>The window “Image Export Options” will appear. Click <code class="docutils literal notranslate"><span class="pre">Save</span></code>
+Now the image can be found in the result folder in the folder you created in Step 1</p></li>
+</ol>
+<p><strong>Export as PDF</strong></p>
+<ol class="arabic simple">
+<li><p>In the print layout click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">as</span> <span class="pre">PDF</span></code></p></li>
+<li><p>Chose the <strong>Result</strong> folder in the folder you have created in step 1. Give the file the name of the project e.g 2022_04</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p>The window “PDF Export Options” will appear.  For the best results, select the <code class="docutils literal notranslate"><span class="pre">lossless</span></code> image compression.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Save</span></code>
+Now the image can be found in the result folder in the folder you created in Step 1</p></li>
+</ol>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/map_output_example2.png"><img alt="../../_images/map_output_example2.png" src="../../_images/map_output_example2.png" style="width: 1000px;" /></a>
 </figure>
-<p>When you have finished the design of you map you can export it as pdf or image file in different datafromats.</p>
-<p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=export#exporting-the-print-layout">Click here</a> to find the step by step on how to export your map.</p>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -1969,7 +2120,7 @@ For this first of all load from “FbF_Drought_Monitoring_Trigger/Fixed_data/Ris
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-join-spi-12-mean-to-the-ipc-index">Step 12: Join SPI-12 Mean to the IPC Index</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-evaluate-trigger-activation">Step 13: Evaluate Trigger Activation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-visualisation-of-results">Step 14.: Visualisation of results</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-making-print-map">Step 15.: Making print map</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-making-print-map">Step 15: Making print map</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-exporting-map">Step 16.: Exporting Map</a></li>
 </ul>
 </li>
