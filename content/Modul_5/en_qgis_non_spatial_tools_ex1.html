@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Exercise &#8212; GIS Resource Training Center</title>
+    <title>Exercise on Non-Spatial Geodataprocessing &#8212; GIS Resource Training Center</title>
   
   
   
@@ -274,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_spatial_tools.html">Spatial Geodataprocessing</a></li>
 
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercise</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercise on Non-Spatial Geodataprocessing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_non_spatial_tools_ex2.html">And for the second exercise the second task of exercise 4: https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_4?ref_type=heads</a></li>
 
 </ul>
@@ -484,7 +484,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Exercise</h1>
+    <h1>Exercise on Non-Spatial Geodataprocessing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -509,24 +509,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>I plan on using this exercise: <a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_4?ref_type=heads">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_4?ref_type=heads</a>
-Exercise 4 with a few adaptions</p>
-<section id="exercise">
-<h1>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h1>
+  <section id="exercise-on-non-spatial-geodataprocessing">
+<h1>Exercise on Non-Spatial Geodataprocessing<a class="headerlink" href="#exercise-on-non-spatial-geodataprocessing" title="Permalink to this heading">#</a></h1>
 <section id="aim-of-the-exercise">
 <h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
-<p>Becoming familiar with different types of spatial and non-spatial analysis and geoprocessing tools. Understand the process of discovering relationships and connections between features in spatial data.</p>
+<p>Becoming familiar with different types of non-spatial analysis and geoprocessing tools. Understand the process of discovering relationships and connections between features in spatial data.</p>
 </section>
 <section id="links-to-wiki-articles">
 <h2>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h2>
+<p>will be done when Wiki is finished</p>
 </section>
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
-<p>Download all datasets and save the folder on your computer and unzip the file.  The zip folder includes:</p>
+<p>Download all datasets and save the folder on your computer and unzip the file. The zip folder includes:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">sen_healthsites.shp</span></code>: <a class="reference external" href="https://data.humdata.org/dataset/senegal-healthsites">Senegal healthsites data</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sen_admbnda_adm1_1m_gov_ocha_20190426.shp</span></code>: <a class="reference external" href="https://data.humdata.org/dataset/senegal-administrative-boundaries">Senegal boundary data (Admin level 1)</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">EO4SD_SAINT_LOUIS_FLOOD_2018.shp</span></code>: <a class="reference external" href="https://wbwaterdata.org/dataset/saint-louis-senegal-flood-risk-map-esa-eo4sd-urban">Saint Louis flood extend data</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">DI_Stat924.xls</span></code>: <a class="reference external" href="https://www.desinventar.net/DesInventar/profiletab.jsp?countrycode=sen">Senegal Desinventar Sendai data</a> showing effects of disasters in Senegal regions</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sen_admpop_adm1_2020.csv</span></code>: Senegal administrative level 1 (région) 2019 <a class="reference external" href="https://data.humdata.org/dataset/senegal-population-statistics">projection population statistics</a></p></li>
 </ul>
@@ -540,17 +537,124 @@ Exercise 4 with a few adaptions</p>
 <p>Create an overview of the effects of disasters in different regions of Senegal. Use non-spatial joins, table functions and different symbology.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>The projected coordinate system for Senegal is <code class="docutils literal notranslate"><span class="pre">EPSG:32628-WGS</span> <span class="pre">84/UTM</span> <span class="pre">zone</span> <span class="pre">28N</span></code></p>
+<p>The projected coordinate system for Senegal is <code class="docutils literal notranslate"><span class="pre">EPSG:32628</span> <span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">UTM</span> <span class="pre">zone</span> <span class="pre">28N</span></code></p>
 </div>
 <ol class="arabic simple">
-<li><p>Load the Senegal administrative boundary layer (.shp), as well as population per subnational unit and the Desinventar Sendai data of Senegal into QGIS.</p></li>
+<li><p>Load the Senegal administrative boundary layer (<code class="docutils literal notranslate"><span class="pre">sen_admbnda_adm1_1m_gov_ocha_20190426.shp</span></code>), as well as population per subnational unit (<code class="docutils literal notranslate"><span class="pre">sen_admpop_adm1_2020.csv</span></code>) and the Desinventar Sendai data of Senegal (<code class="docutils literal notranslate"><span class="pre">DI_Stat924.xls</span></code>) into QGIS.</p></li>
 <li><p>Make sure to reproject the dataset with the administrative boundaries into UTM zone 28N. See the Wiki entry on <strong>Projections</strong> for further information.</p></li>
-<li><p>Conduct non-spatial joins based on regions listed in two datasets and the PCODE listed in these same sets. See the Wiki entry on <strong>Non-spatial joins</strong> for further information.</p>
+<li><p>Conduct non-spatial joins based on regions listed in two datasets and the PCODE listed in these same sets. See the Wiki entry on <strong>Non-spatial joins</strong> for further information.</p></li>
+</ol>
+<figure class="align-default" id="attributes-all">
+<a class="reference internal image-reference" href="../../_images/en_ex1_AT_admin_pop_sen.png"><img alt="../../_images/en_ex1_AT_admin_pop_sen.png" src="../../_images/en_ex1_AT_admin_pop_sen.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 70 </span><span class="caption-text">Screenshot of the different attribute tables with the corresponding columns highlighted</span><a class="headerlink" href="#attributes-all" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>First, add the total population of each administrative area to the shapefiles. Select the correct column that should be added (Hint: search for the column named <code class="docutils literal notranslate"><span class="pre">Total</span></code>).</p></li>
+<li><p>Then add the number of directly and indirectly affected people. Also select the correct columns that should be added (Hint: search for the column names <code class="docutils literal notranslate"><span class="pre">Directly</span> <span class="pre">affected</span></code> and <code class="docutils literal notranslate"><span class="pre">Indirectly</span> <span class="pre">Affected</span></code>).</p></li>
+</ol>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Screenshot for task 4</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="join-field">
+<a class="reference internal image-reference" href="../../_images/en_ex1_Join_field.png"><img alt="../../_images/en_ex1_Join_field.png" src="../../_images/en_ex1_Join_field.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 71 </span><span class="caption-text">Screenshot of the tool Join Attributes by Field Value for the total population</span><a class="headerlink" href="#join-field" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Screenshot for task 5</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="fig/en_ex1_Join_field_2.png"><img alt="fig/en_ex1_Join_field_2.png" src="fig/en_ex1_Join_field_2.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 72 </span><span class="caption-text">Screenshot of the tool Join Attributes by Field Value for the directly and indirectly affected people</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Use the table functions to calculate the area of each region in square kilometers and the density of the population. See the Wiki entry on <strong>Table functions</strong> for further information.</p>
 <ul class="simple">
-<li><p>First, add the total population of each administrative area to the shapefiles. Select a suitable field name and field data type.</p></li>
-<li><p>Then add the number of directly and indirectly affected people. Choose a suitable field name and field data type.</p></li>
+<li><p>Create a new column/field named <code class="docutils literal notranslate"><span class="pre">&quot;area_sqkm&quot;</span></code> using the field calculator. Ensure decimal numbers are used as the field type. For the calculation use the expression: <code class="docutils literal notranslate"><span class="pre">$area</span> <span class="pre">/</span> <span class="pre">(1000</span> <span class="pre">*</span> <span class="pre">1000)</span></code></p></li>
+<li><p>Create another column/field named <code class="docutils literal notranslate"><span class="pre">&quot;pop_per_sqkm&quot;</span></code> with decimal numbers as field type. Use the expression: <code class="docutils literal notranslate"><span class="pre">&quot;Total&quot;</span> <span class="pre">/</span> <span class="pre">&quot;area_sqkm&quot;</span></code> for the calculation.</p></li>
 </ul>
 </li>
+</ol>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Screenshot calculation <code class="docutils literal notranslate"><span class="pre">&quot;area_sqkm&quot;</span></code></label><div class="sd-tab-content docutils">
+<figure class="align-default" id="field-calculator">
+<a class="reference internal image-reference" href="../../_images/en_ex1_area_sqkm.png"><img alt="../../_images/en_ex1_area_sqkm.png" src="../../_images/en_ex1_area_sqkm.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 73 </span><span class="caption-text">Screenshot of the area calculation using the field calculator</span><a class="headerlink" href="#field-calculator" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Screenshot calculation <code class="docutils literal notranslate"><span class="pre">&quot;pop_per_sqkm&quot;</span></code></label><div class="sd-tab-content docutils">
+<figure class="align-default" id="field-calculator-2">
+<a class="reference internal image-reference" href="../../_images/en_ex1_pop_per_sqkm.png"><img alt="../../_images/en_ex1_pop_per_sqkm.png" src="../../_images/en_ex1_pop_per_sqkm.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Screenshot of the population per square km calculation using the field calculator</span><a class="headerlink" href="#field-calculator-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>We now need to rename the <code class="docutils literal notranslate"><span class="pre">Indirectly</span> <span class="pre">Affected</span></code> and <code class="docutils literal notranslate"><span class="pre">Directly</span> <span class="pre">Affected</span></code> columns so that they don’t contain spaces. This ensures that the field calculator works properly. For this task we will use the tool <code class="docutils literal notranslate"><span class="pre">Rename</span> <span class="pre">field</span></code>.</p></li>
+</ol>
+<figure class="align-default" id="rename-field">
+<a class="reference internal image-reference" href="../../_images/en_ex1_Rename_field.PNG"><img alt="../../_images/en_ex1_Rename_field.PNG" src="../../_images/en_ex1_Rename_field.PNG" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Screenshot of the Rename field tool</span><a class="headerlink" href="#rename-field" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>Let us now determine the proportion of the population directly or indirectly affected in relation to the total population per region.</p>
+<ul class="simple">
+<li><p>Use the field calculator. Use the expression: <code class="docutils literal notranslate"><span class="pre">&quot;Indirectly</span> <span class="pre">Affected&quot;</span> <span class="pre">/</span> <span class="pre">(&quot;Total&quot;/100)</span></code></p></li>
+<li><p>Use the field calculator. Use the expression:  <code class="docutils literal notranslate"><span class="pre">&quot;Directly</span> <span class="pre">Affected&quot;</span> <span class="pre">/</span> <span class="pre">(&quot;Total&quot;/100)</span></code></p></li>
+</ul>
+</li>
+</ol>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Screenshot indirectly affected</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="per-indirect-affected">
+<a class="reference internal image-reference" href="fig/en_ex1_per_indirect_affected.png"><img alt="fig/en_ex1_per_indirect_affected.png" src="fig/en_ex1_per_indirect_affected.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Screenshot of the calculation of the proportion of the indirectly affected population relative to the total population within each region.</span><a class="headerlink" href="#per-indirect-affected" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Screenshot directly affected</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="per-direct-affected">
+<a class="reference internal image-reference" href="fig/en_ex1_per_direct_affected.png"><img alt="fig/en_ex1_per_direct_affected.png" src="fig/en_ex1_per_direct_affected.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Screenshot of the calculation of the proportion of the directly affected population relative to the total population within each region.</span><a class="headerlink" href="#per-direct-affected" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Select a color scheme using the <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> to visualize the share of people directly affected in the different regions (Hint: <code class="docutils literal notranslate"><span class="pre">Categorized</span></code>).</p>
+<ul class="simple">
+<li><p>Play around with different modes to find a useful color/categorization scheme for the visualization.</p></li>
+<li><p>Which regions are more and which are less directly affected? Are there any data gaps?</p></li>
+</ul>
+</li>
+<li><p>Export the map as a png (Hint: <code class="docutils literal notranslate"><span class="pre">Project,</span> <span class="pre">Import/Export,</span> <span class="pre">Export</span> <span class="pre">map</span> <span class="pre">to</span> <span class="pre">Image</span></code>).</p></li>
+<li><p>Repeat the previous steps, but this time visualize the indirectly affected people in each region (Hint: <code class="docutils literal notranslate"><span class="pre">Categorized</span></code>, column <code class="docutils literal notranslate"><span class="pre">Indirectly</span> <span class="pre">affected</span></code>).</p></li>
+<li><p>What differences can be observed between the regions directly affected and those indirectly affected?</p></li>
 </ol>
 </section>
 </section>
