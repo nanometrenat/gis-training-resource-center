@@ -861,6 +861,47 @@ To deselect the objects, you can simply click on this symbol on the top bar. In 
 </section>
 <section id="select-feature-by-expression">
 <h3>Select feature by expression<a class="headerlink" href="#select-feature-by-expression" title="Permalink to this heading">#</a></h3>
+<p>If you have more or more complex conditions on which the selection should base, you can use the <em>select by expression</em> tool.</p>
+<figure class="align-default" id="select-by-expression">
+<a class="reference internal image-reference" href="../../_images/en_select_by_expression.png"><img alt="../../_images/en_select_by_expression.png" src="../../_images/en_select_by_expression.png" style="height: 100px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Screenshot of how to select by expression.</span><a class="headerlink" href="#select-by-expression" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A window will open, on the left you can type in your expression, on the right are different drowdowns. Under <em>field and values</em> you can select the columns name.</p>
+<figure class="align-default" id="select-by-expression-the-opened-window">
+<a class="reference internal image-reference" href="../../_images/en_view_expression.png"><img alt="../../_images/en_view_expression.png" src="../../_images/en_view_expression.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Screenshot of the window to select by expression.</span><a class="headerlink" href="#select-by-expression-the-opened-window" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Next, you can choose from different operators:</p>
+<ul class="simple">
+<li><p>Arithmetic operators: &gt;, &lt; , =, !=</p></li>
+<li><p>String operators: LIKE, IS, BETWEEN, IN, …</p></li>
+<li><p>Logical operators: AND, OR</p></li>
+</ul>
+<p>To build your expression, you can double click on the chosen column and then on <em>All Unique</em> to get all unique values of this column shown. By double clicking them, you are adding them into your expression.</p>
+<figure class="align-default" id="select-by-expression-unique-values">
+<a class="reference internal image-reference" href="../../_images/en_unique_values.png"><img alt="../../_images/en_unique_values.png" src="../../_images/en_unique_values.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Screenshot of the window to select by expression and show the unique values.</span><a class="headerlink" href="#select-by-expression-unique-values" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For example, to build an expression which will select all <em>highways</em> that are <em>pedestrian</em> or <em>cycleway</em>, you can do so:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="k">IS</span><span class="w">  </span><span class="s1">&#39;cycleway&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w">  </span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="k">IS</span><span class="w">  </span><span class="s1">&#39;pedestrian&#39;</span><span class="w"> </span>
+</pre></div>
+</div>
+<p>or by using arithmetical operators:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;cycleway&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w">  </span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;pedestrian&#39;</span><span class="w"> </span>
+</pre></div>
+</div>
+<p>The logical “OR” combines the two criterias.</p>
+<p>The logical “AND” selects only the objects, where both criteria are true/applicable.</p>
+<p>For example, if you are looking for a smooth cyleway for a biketour:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;cycleway&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w">  </span><span class="ss">&quot;smoothness&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;excellent&#39;</span><span class="w"> </span>
+</pre></div>
+</div>
 </section>
 <section id="zoom-to-selected-area">
 <h3>Zoom to selected area<a class="headerlink" href="#zoom-to-selected-area" title="Permalink to this heading">#</a></h3>
@@ -880,7 +921,7 @@ To deselect the objects, you can simply click on this symbol on the top bar. In 
 <figure class="align-default" id="add-osm-basemap">
 <a class="reference internal image-reference" href="../../_images/en_add_osm_basemap.png"><img alt="../../_images/en_add_osm_basemap.png" src="../../_images/en_add_osm_basemap.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Screenshot of how to add OSM basemap</span><a class="headerlink" href="#add-osm-basemap" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Screenshot of how to add OSM basemap</span><a class="headerlink" href="#add-osm-basemap" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
