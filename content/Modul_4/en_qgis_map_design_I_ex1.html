@@ -502,8 +502,13 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-datasets">Available Datasets</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-preparing-the-layers">Step 1: Preparing the layers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-the-symbology-for-the-individual-layers">Step 2: Set the symbology for the individual layers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-starting-the-print-layout">Step 2: Starting the Print Layout</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-setting-up-the-overview-map">Step 3: Setting up the Overview Map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-adding-the-other-elements-of-a-map">Step 5: Adding the other elements of a map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-exporting-the-map">Step 6: Exporting the map</a></li>
 </ul>
             </nav>
         </div>
@@ -535,13 +540,20 @@ IDMC (International Displacement Monitoring Centre). (2022). Cambodia - Internal
 </div>
 </details><section id="objectives">
 <h2>Objectives<a class="headerlink" href="#objectives" title="Permalink to this heading">#</a></h2>
-<p>The data provided contains a shapefiles detailing the flood extent in October 2023, the road network, administrative boundaries, the Mekong and Tonle Sap Systems, as well as healthsites and airports. The goal will be to</p>
+<p>The data provided contains a shapefiles detailing the flood extent in October 2023, the road network, administrative boundaries, the Mekong and Tonle Sap Systems, as well as healthsites and airports. The goal will be to design a map where the flood extent, the road accessibility and important landmarks such as healthsites, settlements, and airports are visible.</p>
 </section>
+<section id="available-datasets">
+<h2>Available Datasets<a class="headerlink" href="#available-datasets" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you need inspiration on how to style certain elements of your map, make sure to check out the chapter <span class="xref myst">Examples for Food Map Design</span></p>
+</div>
+</section>
 <section id="step-1-preparing-the-layers">
 <h2>Step 1: Preparing the layers<a class="headerlink" href="#step-1-preparing-the-layers" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Load the layers into QGIS and arrange them so you can see the road network on top of the flood extent.</p></li>
+<li><p>Load the layers into QGIS and make yourself familiar with the data by opening the attribute table ()</p></li>
 <li><p>Arrange them in a way that no layer is blocking</p></li>
 </ol>
 </section>
@@ -549,13 +561,61 @@ IDMC (International Displacement Monitoring Centre). (2022). Cambodia - Internal
 <h2>Step 2: Set the symbology for the individual layers<a class="headerlink" href="#step-2-set-the-symbology-for-the-individual-layers" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>First, let’s style the administrative boundaries. We want to keep it simple and keep the polygon of the adm1 with a transparent filling, but with a thicker outline. On top of that layer, we want to see the adm2 boundaries, but with a thinner (or even dashed) outline</p></li>
-<li><p>The flood extent needs to be immediatly recognizable. Choose a colour and filling style (Simple Fill or )</p></li>
-<li></li>
+<li><p>The flood extent needs to be immediatly recognizable. Choose a colour and filling style (Simple Fill or hashed line fill)</p></li>
+<li><p>The river system and lake should be symbolized with a associative colour to be immediatly recognizable.</p></li>
+<li><p>The road network shapefile has the attribute <code class="docutils literal notranslate"><span class="pre">Flooded</span></code> with the Value <code class="docutils literal notranslate"><span class="pre">Y</span></code> if the extent of the flood crosses the road. Set the symbology of the road network so roads are easily distinguishable and that the reader can identify which roads are potentially flooded.</p></li>
+<li><p>Decide how you want to display settlements and health facilities (link to SVG-symbols)</p></li>
+<li><p>Set up the labels for the settlements and administrative districts</p></li>
+<li><p>Set up the background to make the area of focus stand out.</p></li>
+<li><p>In mountainous areas, it can be helpful to add a hillshade to determine the accessibility and travel time by car.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Saving the styles
+If you are happy with the styles you have set up for your layers, you can save the style and add it to your style library.</p>
+</div>
+</section>
+<section id="step-2-starting-the-print-layout">
+<h2>Step 2: Starting the Print Layout<a class="headerlink" href="#step-2-starting-the-print-layout" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Add your Map to the Print Layout. Make sure to leave some space for the other map elements such as sources, legend, overview map, logo, etc.</p></li>
+<li><p>Adjust the Scale of the Map in the Item properties (if possible to a round number)</p></li>
+<li><p>Add a scale bar</p></li>
+<li><p>Add a title. The title should make clear what the map displays.</p></li>
+<li><p>Add a legend. Make sure to remove layers which are not visible on the map and rename the elements accordingly.</p></li>
+<li><p>Add an orientation.</p></li>
+</ol>
+</section>
+<section id="step-3-setting-up-the-overview-map">
+<h2>Step 3: Setting up the Overview Map<a class="headerlink" href="#step-3-setting-up-the-overview-map" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Once you are done with the main map, <strong>make sure to lock the layer and the styles for your main map (<code class="docutils literal notranslate"><span class="pre">Map</span> <span class="pre">1</span></code>)</strong>. Otherwise the map will update when setting up the overview map.</p></li>
+<li><p>Navigate back to the main QGIS-Window.</p></li>
+<li><p>Copy the layers for the overview map. In this case, the <code class="docutils literal notranslate"><span class="pre">Adm1</span></code>-layer. This way, you will not loose the style for the layers on your main map. Adjust the style on the copied layer for your overview map.</p></li>
+<li><p>Navigate back to the print layout.</p></li>
+<li><p>Add a second map as your overview map (preferrably somewhere in the corner)</p></li>
+<li><p>Set it up as an overview map.</p></li>
+<li><p>Lock the layers and lock the styles.</p></li>
+</ol>
+</section>
+<section id="step-5-adding-the-other-elements-of-a-map">
+<h2>Step 5: Adding the other elements of a map<a class="headerlink" href="#step-5-adding-the-other-elements-of-a-map" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Add the sources of the datasets</p></li>
+<li><p>Add a text to describe what the map shows.</p></li>
 <li></li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If you need inspiration on how to style certain elements of your map, make sure to check out the chapter <span class="xref myst">Examples for Food Map Design</span></p>
+<p>If you are happy with the layout of your print layout, don’t forget to save it as a preset for future use.</p>
+</div>
+</section>
+<section id="step-6-exporting-the-map">
+<h2>Step 6: Exporting the map<a class="headerlink" href="#step-6-exporting-the-map" title="Permalink to this heading">#</a></h2>
+<p>Once you are happy with the print layout, it is time to export the map as a PDF-file (link). Once exported, open the file in your PDF viewer and check if everything looks as intended. In QGIS, some elements of the map might change slightly, in the exporting process, so it is important to check before sending the map to your colleagues or publishing it.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To avoid too many changes when exporting the map, set the</p>
 </div>
 <hr class="docutils" />
 </section>
@@ -625,8 +685,13 @@ IDMC (International Displacement Monitoring Centre). (2022). Cambodia - Internal
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-datasets">Available Datasets</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-preparing-the-layers">Step 1: Preparing the layers</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-set-the-symbology-for-the-individual-layers">Step 2: Set the symbology for the individual layers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-starting-the-print-layout">Step 2: Starting the Print Layout</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-setting-up-the-overview-map">Step 3: Setting up the Overview Map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-adding-the-other-elements-of-a-map">Step 5: Adding the other elements of a map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-exporting-the-map">Step 6: Exporting the map</a></li>
 </ul>
   </nav></div>
 
