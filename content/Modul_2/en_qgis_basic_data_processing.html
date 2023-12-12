@@ -516,7 +516,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-manually">Select manually</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-location">Select by location</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-feature-by-expression">Select feature by expression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-features-by-expression">Select features by expression</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-to-selected-area">Zoom to selected area</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-only-selected">Save only selected</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-calculator">Field calculator</a></li>
@@ -859,8 +859,8 @@ To deselect the objects, you can simply click on this symbol on the top bar. In 
 </figure>
 <p>To return to the view as a table, click on the bottom right corner.</p>
 </section>
-<section id="select-feature-by-expression">
-<h3>Select feature by expression<a class="headerlink" href="#select-feature-by-expression" title="Permalink to this heading">#</a></h3>
+<section id="select-features-by-expression">
+<h3>Select features by expression<a class="headerlink" href="#select-features-by-expression" title="Permalink to this heading">#</a></h3>
 <p>If you have more or more complex conditions on which the selection should base, you can use the <em>select by expression</em> tool.</p>
 <figure class="align-default" id="select-by-expression">
 <a class="reference internal image-reference" href="../../_images/en_select_by_expression.png"><img alt="../../_images/en_select_by_expression.png" src="../../_images/en_select_by_expression.png" style="height: 100px;" /></a>
@@ -902,6 +902,7 @@ To deselect the objects, you can simply click on this symbol on the top bar. In 
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;cycleway&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w">  </span><span class="ss">&quot;smoothness&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;excellent&#39;</span><span class="w"> </span>
 </pre></div>
 </div>
+<p>This will only show the features where both criteria are true.</p>
 </section>
 <section id="zoom-to-selected-area">
 <h3>Zoom to selected area<a class="headerlink" href="#zoom-to-selected-area" title="Permalink to this heading">#</a></h3>
@@ -913,7 +914,7 @@ To deselect the objects, you can simply click on this symbol on the top bar. In 
 </figcaption>
 </figure>
 <figure class="align-default" id="zoom-to-selection-right-click">
-<a class="reference internal image-reference" href="../../_images/en_zoom_to_selection_2.png"><img alt="../../_images/en_zoom_to_selection_2.png" src="../../_images/en_zoom_to_selection_2.png" style="height: 150px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_zoom_to_selection_2.png"><img alt="../../_images/en_zoom_to_selection_2.png" src="../../_images/en_zoom_to_selection_2.png" style="height: 250px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 27 </span><span class="caption-text">Screenshot of how to zoom to Selection by clicking right.</span><a class="headerlink" href="#zoom-to-selection-right-click" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -932,6 +933,20 @@ To deselect the objects, you can simply click on this symbol on the top bar. In 
 </section>
 <section id="field-calculator">
 <h3>Field calculator<a class="headerlink" href="#field-calculator" title="Permalink to this heading">#</a></h3>
+<p>The field calculator allows you that create a new field or update an existing one. You can perform calculations whether with existing attribute values or by using defined functions.</p>
+<p>As example, we can calculate the population per km²:</p>
+<figure class="align-default" id="calculate-area">
+<a class="reference internal image-reference" href="../../_images/en_calculate_area.png"><img alt="../../_images/en_calculate_area.png" src="../../_images/en_calculate_area.png" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Screenshot of calculating the area in the field calculator.</span><a class="headerlink" href="#calculate-area" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We create a new field and divide the area by 1.000.000 to get km² instead of m². You have to choose the output field name and type.</p>
+<p>You can also tick the box to only calculate with the Selection.
+Now we have a new column with the calculated area. Next we need to divide the population by the area to get the density.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;population&quot;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="ss">&quot;area_km&quot;</span>
+</pre></div>
+</div>
 </section>
 </section>
 <section id="basemap-selection">
@@ -942,7 +957,7 @@ To deselect the objects, you can simply click on this symbol on the top bar. In 
 <figure class="align-default" id="add-osm-basemap">
 <a class="reference internal image-reference" href="../../_images/en_add_osm_basemap.png"><img alt="../../_images/en_add_osm_basemap.png" src="../../_images/en_add_osm_basemap.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Screenshot of how to add OSM basemap</span><a class="headerlink" href="#add-osm-basemap" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Screenshot of how to add OSM basemap</span><a class="headerlink" href="#add-osm-basemap" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1036,7 +1051,7 @@ To deselect the objects, you can simply click on this symbol on the top bar. In 
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-manually">Select manually</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-location">Select by location</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-feature-by-expression">Select feature by expression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-features-by-expression">Select features by expression</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-to-selected-area">Zoom to selected area</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-only-selected">Save only selected</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-calculator">Field calculator</a></li>
