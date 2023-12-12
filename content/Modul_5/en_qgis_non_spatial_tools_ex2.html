@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; GIS Resource Training Center</title>
+    <title>Exercise 2: Part 2: Calculate vulnerability index &#8212; GIS Resource Training Center</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Qgis Data analysis" href="../Modul_6/en_qgis_data_analysis_theorie.html" />
-    <link rel="prev" title="Exercise on Non-Spatial Geodataprocessing" href="en_qgis_non_spatial_tools_ex1.html" />
+    <link rel="prev" title="Exercise 1: Disaster effects in different regions of Senegal" href="en_qgis_non_spatial_tools_ex1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -270,13 +270,15 @@ const thebe_selector_output = ".output, .cell_output"
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="en_qgis_spatial_tools.html">Spatial Geodataprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_spatial_tools_ex1.html">Exercise on Spatial Geodataprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_spatial_tools_ex1.html">Exercise 1: Healthsite distribution in Saint Louis region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_spatial_tools_ex2.html">Exercise 2: Part 1: Calculate vulnerability index</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_non_spatial_tools_ex1.html">Exercise on Non-Spatial Geodataprocessing</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="en_qgis_non_spatial_tools.html">Non-Spatial Geodataprocessing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_non_spatial_tools_ex1.html">Exercise 1: Disaster effects in different regions of Senegal</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercise 2: Part 2: Calculate vulnerability index</a></li>
 </ul>
 </li>
 </ul>
@@ -491,7 +493,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Exercise 2: Part 2: Calculate vulnerability index</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -500,9 +502,12 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-wiki-articles">Links to Wiki articles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -513,7 +518,35 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-2-part-2-calculate-vulnerability-index">
+<h1>Exercise 2: Part 2: Calculate vulnerability index<a class="headerlink" href="#exercise-2-part-2-calculate-vulnerability-index" title="Permalink to this heading">#</a></h1>
+<section id="aim-of-the-exercise">
+<h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
+<p>Becoming familiar with different types of non-spatial analysis and geoprocessing tools. Understand the process of discovering relationships and connections between features in spatial data.</p>
+</section>
+<section id="links-to-wiki-articles">
+<h2>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h2>
+<p>will be done when Wiki is finished</p>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<p>Download all datasets and save the folder on your computer and unzip the file. The zip folder includes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sen_admbnda_adm1_1m_gov_ocha_20190426.shp</span></code>: <a class="reference external" href="https://data.humdata.org/dataset/senegal-administrative-boundaries">Senegal boundary data (Admin level 1)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DI_Stat924.xls</span></code>: <a class="reference external" href="https://www.desinventar.net/DesInventar/profiletab.jsp?countrycode=sen">Senegal Desinventar Sendai data</a> showing effects of disasters in Senegal regions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sen_admpop_adm1_2020.csv</span></code>: Senegal administrative level 1 (région) 2019 <a class="reference external" href="https://data.humdata.org/dataset/senegal-population-statistics">projection population statistics</a></p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>All files still have their original names. However, feel free to modify their names if necessary to identify them more easily.</p>
+</div>
+</section>
+<section id="task">
+<h2>Task<a class="headerlink" href="#task" title="Permalink to this heading">#</a></h2>
+<p>Create an overview of the effects of disasters in different regions of Senegal. Use non-spatial joins, table functions and different symbology.</p>
+</section>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -550,7 +583,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercise on Non-Spatial Geodataprocessing</p>
+        <p class="prev-next-title">Exercise 1: Disaster effects in different regions of Senegal</p>
       </div>
     </a>
     <a class="right-next"
@@ -576,9 +609,12 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-wiki-articles">Links to Wiki articles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
