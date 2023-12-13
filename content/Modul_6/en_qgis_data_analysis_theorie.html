@@ -519,6 +519,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-analysis-with-qgis">
 <h1>Data Analysis with QGIS<a class="headerlink" href="#data-analysis-with-qgis" title="Permalink to this heading">#</a></h1>
+<p>🚧This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
 <p><strong>Competences</strong>:</p>
 <p>In this Module you will learn:</p>
 <ul class="simple">
@@ -558,8 +559,15 @@ document.write(`
 </ul>
 </li>
 </ol>
-<p>~~(* The purpose of spatial analysis in humanitarian IM is usually to describe a changing situation or toorient people to a new crisis)~~</p>
-<p>We are usually looking for ways to <strong>describe</strong> our data to an audience in some ways. Sometimes spatial analysis will be used to provide recommendations for activities.</p>
+<p>We are usually looking for ways to <strong>describe</strong> our data to an audience in some ways. Sometimes spatial analysis will be used to provide recommendations for activities. Considering the amount of data available online, it is always important to take a step back and gain perspective when facing this knowledge, these capacities, as well as the data itself before rushing in to manipulate it:</p>
+<ul class="simple">
+<li><p>Reliability: Can I trust this data?</p></li>
+<li><p>Interest: Do I need this data?</p></li>
+<li><p>Usage: Am I able to use this data?</p></li>
+<li><p>Comprehensiveness: Is this data complete?</p></li>
+<li><p>Date: How old is this data?</p></li>
+<li><p>Sensitivity: Is this data sensitive?</p></li>
+</ul>
 <blockquote>
 <div><p>Insert Map example?</p>
 </div></blockquote>
@@ -578,14 +586,28 @@ document.write(`
 There are some spatial analysis problems that are difficult to avoid completely. For example the <strong>Modifiable Areal Unit Problem</strong> (pictured below), where the results look different depending on the unit of analysis.<br />
 <img alt="Modifiale Areal Unit Problem Example" src="../../fig/en_modifiable_areal_unit_problem_example.png" /></p>
 </div>
-<p>Considering the amount of data available online, it is always important to take a step back and gain perspective when facing this knowledge, these capacities, as well as the data itself before rushing in to manipulate it:</p>
+<p><strong>There are two main types of data analysis</strong>:</p>
 <ul class="simple">
-<li><p>Reliability: Can I trust this data?</p></li>
-<li><p>Interest: Do I need this data?</p></li>
-<li><p>Usage: Am I able to use this data?</p></li>
-<li><p>Comprehensiveness: Is this data complete?</p></li>
-<li><p>Date: How old is this data?</p></li>
-<li><p>Sensitivity: Is this data sensitive?</p></li>
+<li><p><strong>Thematic analyses</strong> focus on visual variation according to a given attribute of the data (one of its characteristics). They are performed on a specific field of the attribute table for the layer, whether textual or numerical. The graphical representation (symbology) changes according to the attribute.</p></li>
+</ul>
+<figure class="align-default" id="thematic-analysis-example">
+<a class="reference internal image-reference" href="../../_images/en_thematic_analysis.png"><img alt="../../_images/en_thematic_analysis.png" src="../../_images/en_thematic_analysis.png" style="width: 500px;" /></a>
+</figure>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/thematic_analysis_map_example.png"><img alt="../../_images/thematic_analysis_map_example.png" src="../../_images/thematic_analysis_map_example.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 104 </span><span class="caption-text">Thematic analysis using different colours for the roads to discern health accessibility (Source: WFP)</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* For instance: variations in size depending on population numbers in a refugee camp area.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Spatial analyses</strong> are performed on spatialized phenomena such as: presence/absence of the phenomenon, its relationship with other phenomena or entities, distribution in space.</p>
+<ul>
+<li><p>For example: crossing two satellite images to extract flooded areas between two dates; or crossing latrine and water catchment areas in a refugee camp.</p></li>
+</ul>
+</li>
 </ul>
 </section>
 </section>
