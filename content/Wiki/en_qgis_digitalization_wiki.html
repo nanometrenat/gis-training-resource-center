@@ -510,14 +510,16 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-layer">Create a new layer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-geometries-to-a-layer">Add geometries to a layer</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-point-data">Creation of point data</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-line-data">Creation of line data</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-polygon-data">Creation of polygon data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-point-data">Creation of point data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-line-data">Creation of line data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-polygon-data">Creation of polygon data</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-existing-geometries-in-the-layer">Modify existing geometries in the layer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-ring-to-existing-polygon-layer">Adding Ring to existing polygon layer</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-existing-geometries-in-the-layer">Modify existing geometries in the layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-resources">Further resources</a></li>
 </ul>
             </nav>
         </div>
@@ -572,8 +574,9 @@ To digitize data for a new dataset you always have to start with creating the da
 <figure class="align-center" id="point-creation">
 <a class="reference internal image-reference" href="../../_images/point_creation.png"><img alt="../../_images/point_creation.png" src="../../_images/point_creation.png" style="width: 500px;" /></a>
 </figure>
+</section>
 <section id="creation-of-line-data">
-<h4>Creation of line data<a class="headerlink" href="#creation-of-line-data" title="Permalink to this heading">#</a></h4>
+<h3>Creation of line data<a class="headerlink" href="#creation-of-line-data" title="Permalink to this heading">#</a></h3>
 <p>The  method  is  similar  to  digitising  a  point  (see  above). First you have to created a new line layer or use an existing one.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -591,7 +594,7 @@ To digitize data for a new dataset you always have to start with creating the da
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Creat_line_feature.mp4"></video></p>
 </section>
 <section id="creation-of-polygon-data">
-<h4>Creation of polygon data<a class="headerlink" href="#creation-of-polygon-data" title="Permalink to this heading">#</a></h4>
+<h3>Creation of polygon data<a class="headerlink" href="#creation-of-polygon-data" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Open a new <code class="docutils literal notranslate"><span class="pre">polygone</span> <span class="pre">layer</span></code>.</p></li>
 <li><p>Clicking on <img alt="" src="../../_images/mActionToggleEditing.png" /> start <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code> and Add Feature: <code class="docutils literal notranslate"><span class="pre">Capture</span> <span class="pre">Polygone</span></code><img alt="" src="../../_images/mActionCapturePolygon.png" />|.</p></li>
@@ -599,14 +602,6 @@ To digitize data for a new dataset you always have to start with creating the da
 <li><p>Save edits <img alt="" src="../../_images/mActionSaveEdits.png" /> , exit <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code>.</p></li>
 </ul>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_digitize_add_feature.mp4"></video></p>
-<ul class="simple">
-<li><p>Clicking on <img alt="" src="../../_images/mActionToggleEditing.png" /> start <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code>.</p></li>
-<li><p>Add Feature: <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Ring</span></code><img alt="" src="../../_images/mActionAddRing.png" /> (e.g. map the inner courtyard of a building, or -  as shown in the video - create a cercle to mark an isle in the lake).</p></li>
-<li><p>To open the <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Digitizing</span> <span class="pre">Toolbar</span></code> go to <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&gt;</span> <span class="pre">Toolboxes</span> <span class="pre">&gt;</span> <span class="pre">Advanced</span> <span class="pre">Digitizing</span> <span class="pre">Toolbar</span></code>.</p></li>
-<li><p>To add rectangles ‘automatically’ go to <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&gt;</span> <span class="pre">Toolbars</span> <span class="pre">&gt;</span> <span class="pre">Shape</span> <span class="pre">Digitizing</span> <span class="pre">Toolbar</span></code>.</p></li>
-</ul>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_digitize_add_ring.mp4"></video></p>
-</section>
 </section>
 </section>
 <section id="modify-existing-geometries-in-the-layer">
@@ -617,8 +612,21 @@ To digitize data for a new dataset you always have to start with creating the da
 <li><p>Save edits <img alt="" src="../../_images/mActionSaveEdits.png" />, exit <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code>.</p></li>
 </ul>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_digitize_move_vertices.mp4"></video></p>
-<p><strong>Further resources:</strong></p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=Zer558SnKX4"><img alt="Digitizing shapefile QGIS" src="../../_images/en_digitizing_shapefiles.png" /></a></p>
+<section id="adding-ring-to-existing-polygon-layer">
+<h3>Adding Ring to existing polygon layer<a class="headerlink" href="#adding-ring-to-existing-polygon-layer" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Clicking on <img alt="" src="../../_images/mActionToggleEditing.png" /> start <code class="docutils literal notranslate"><span class="pre">edit</span> <span class="pre">mode</span></code>.</p></li>
+<li><p>Add Feature: <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Ring</span></code><img alt="" src="../../_images/mActionAddRing.png" /> (e.g. map the inner courtyard of a building, or -  as shown in the video - create a cercle to mark an isle in the lake).</p></li>
+<li><p>To open the <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Digitizing</span> <span class="pre">Toolbar</span></code> go to <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&gt;</span> <span class="pre">Toolboxes</span> <span class="pre">&gt;</span> <span class="pre">Advanced</span> <span class="pre">Digitizing</span> <span class="pre">Toolbar</span></code>.</p></li>
+<li><p>To add rectangles ‘automatically’ go to <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">&gt;</span> <span class="pre">Toolbars</span> <span class="pre">&gt;</span> <span class="pre">Shape</span> <span class="pre">Digitizing</span> <span class="pre">Toolbar</span></code>.</p></li>
+</ul>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_digitize_add_ring.mp4"></video></p>
+</section>
+</section>
+<section id="further-resources">
+<h2>Further resources<a class="headerlink" href="#further-resources" title="Permalink to this heading">#</a></h2>
+<p>The YouTube Video below shows the whole process of digitizing polygons in QGIS in some more detail. Note that the YouTuber is using an older version of QGIS, so things might be different in your version.</p>
+<p><video width="100%" controls src="https://www.youtube.com/watch?v=Zer558SnKX4"></video></p>
 </section>
 </section>
 
@@ -687,14 +695,16 @@ To digitize data for a new dataset you always have to start with creating the da
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-layer">Create a new layer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-geometries-to-a-layer">Add geometries to a layer</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-point-data">Creation of point data</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-line-data">Creation of line data</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-polygon-data">Creation of polygon data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-point-data">Creation of point data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-line-data">Creation of line data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-polygon-data">Creation of polygon data</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-existing-geometries-in-the-layer">Modify existing geometries in the layer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-ring-to-existing-polygon-layer">Adding Ring to existing polygon layer</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-existing-geometries-in-the-layer">Modify existing geometries in the layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-resources">Further resources</a></li>
 </ul>
   </nav></div>
 
