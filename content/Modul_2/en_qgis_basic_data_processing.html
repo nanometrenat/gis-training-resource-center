@@ -518,33 +518,26 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-import">Data import</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-turbo">overpass turbo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-osm-plugin">Quick OSM plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-mananagemnet">Geodata mananagemnet</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-folder-structure">Standard Folder Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-naming">Geodata naming</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-import">Data import</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-features-and-attributes">Geo features and attributes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-attribute-table">Open the attribute table</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-the-information">Sort the information</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-or-change-data">Edit or change data</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-selection">Feature selection</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-manually">Select manually</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-location">Select by location</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-features-by-expression">Select features by expression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-the-attribute-table">Sort the attribute table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-in-on-a-specific-feature-via-attribute-table">Zoom in on a specific feature via attribute table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-select-features-in-the-attribute-table">Manually select features in the attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-to-selected-area">Zoom to selected area</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-only-selected">Save only selected</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-calculator">Field calculator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-only-selected-features-as-a-new-file">Save only selected features as a new file</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemap-selection">Basemap selection</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">OpenStreetMap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-maps">Base maps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-qgis-basemaps">Standard QGIS Basemaps</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickmapservices">QuickMapServices</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-organization">Data organization</a></li>
 </ul>
             </nav>
         </div>
@@ -566,435 +559,410 @@ document.write(`
 <li><p>Feature selection</p></li>
 <li><p>Basemap selection</p></li>
 </ul>
+<p>In this chapter, we will have a close look at how to work with geodata in QGIS. Since vector data is the primer geodata type you will work with at the beginning of your GIS carrier, we will focus on vector geodata.</p>
+<section id="geodata-mananagemnet">
+<h2>Geodata mananagemnet<a class="headerlink" href="#geodata-mananagemnet" title="Permalink to this heading">#</a></h2>
+<p>Working with geodata is unlike working with data in programs like Excel or MS Word. Whenever you load an image in a Word file, the file will contain the image. When you delete the image on your computer, the Word file will still contain a copy of the image.</p>
+<p>This is not the case in QGIS! When you load geodata into QGIS, the system only establishes a path to the location where your geodata is stored on your computer. This means your QGIS project <strong>does not contain</strong> the geodata, it only links to the data on your computer. Once you have loaded the geodata in your QGIS project and you change the location of the geodata or delete it on your computer, the data is no longer available in your QGIS project.</p>
+<p>Ok, QGIS projects only link to geodata, they do not contain the data. This means that whenever you edit geodata, the changes persistent and can not be reversed.</p>
+<p>These circumstances make working with geodata special. To handle this, the only solution is good data management practices!</p>
+<section id="standard-folder-structure">
+<h3>Standard Folder Structure<a class="headerlink" href="#standard-folder-structure" title="Permalink to this heading">#</a></h3>
+<p>The single most important geodata management practice is to use a standardized folder structure that contains all elements of the particular QGIS project.
+The paths from a QGIS project to the geodata are by default relative. That means when the data and the project are in a fixed folder structure, you can move the whole structure without impacting the QGIS project or the paths to the geodata.
+The version of a standardized folder structure, that is used for all exercises in this training is explained below. A template of the folder structure can be downloaded <a class="reference external" href="https://github.com/GIScience/gis-training-resource-center/blob/main/fig/GIS_Project_folder_template.zip"><strong>here</strong></a>.</p>
+<p>A standard folder structure has two principal advantages:</p>
+<ol class="arabic simple">
+<li><p>By sharing the whole project folder, we can be certain that the project will run without problems on a different computer.</p></li>
+<li><p>The folder structure supports the proper organization of geodata and supports the stable function of a QGIS project.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Standard_project_folder_structure.drawio.svg"><img alt="../../_images/Standard_project_folder_structure.drawio.svg" src="../../_images/Standard_project_folder_structure.drawio.svg" width="600px" /></a>
+</figure>
+</section>
+<section id="geodata-naming">
+<h3>Geodata naming<a class="headerlink" href="#geodata-naming" title="Permalink to this heading">#</a></h3>
+<p>There are some basic principles when it comes to naming geodata that you produce or manipulate:</p>
+<ul class="simple">
+<li><p>Do not use special characters like <code class="docutils literal notranslate"><span class="pre">!</span></code>,<code class="docutils literal notranslate"><span class="pre">?</span></code> etc., slash or dash <code class="docutils literal notranslate"><span class="pre">/</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p></li>
+<li><p>Do not use blank spaces, use underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p></li>
+<li><p>Make sure you can relate every output / intermediate result to a step in your workflow. Below you can see a geodata set representing the borders of a country evolving during geodata processing. It is not apparent what was done with the original dataset.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">adm0</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_temp</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_temp2</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_temp3</span> <span class="pre">&gt;&gt;</span> <span class="pre">facilities_final</span></code></p>
+<p>In the version below, it is clear what was done. In this way, other people can understand the process behind a final result like a map.</p>
+<p><code class="docutils literal notranslate"><span class="pre">adm0</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM_clipUrban</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM_clipUrban_intersectFacilities</span> <span class="pre">&gt;&gt;</span> <span class="pre">facilities_processe</span></code></p>
+</section>
+</section>
 <section id="data-import">
 <h2>Data import<a class="headerlink" href="#data-import" title="Permalink to this heading">#</a></h2>
-<p>Before you can start visualizing and analysing in QGIS, you need to import your data. <a class="reference internal" href="en_data_sources.html"><span class="doc std std-doc">Here</span></a> you can look up, where to find different data sources.
-Depending on which file format you want to import, the process differs slightly.</p>
+<p>Before you can start visualizing and analysing in QGIS, you need to import your data.</p>
+<p>Depending on which file format you want to import, the process differs slightly.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 Vector data import</label><div class="sd-tab-content docutils">
-<p>The possible data formats are listed <a class="reference internal" href="en_qgis_geodata_concept.html"><span class="doc std std-doc">here</span></a>.
-Go to the data source manager and choose vector on the right. By clicking on the three dots you can browse your files and choose the ones you want to import.</p>
-<p><img alt="datasource manager" src="../../_images/en_datasourcemanager_qgis.png" /></p>
-<p><img alt="import vector data" src="../../_images/en_import_vector.png" /></p>
+<p>Typical vector data formats are Shapefile and GeoPackage. The process of importing vector data in either of the two formats is the same.
+<a class="reference internal" href="en_qgis_geodata_concept.html"><span class="doc std std-doc">Here</span></a> is a list of possible vector data formats.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>GeoPackage file can contain multiple files and even whole QGIS projects. When you load such a file in QGIS a window will appear in which you have to select the files you want to load in your QGIS project.</p>
+</div>
+<p>There are two ways how to load vector data in QGIS. Via the <code class="docutils literal notranslate"><span class="pre">Layer</span></code> tab or via drag-and-drop.</p>
+<p class="rubric">Open vector data via Layer Tab</p>
+<ol class="arabic simple">
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Vector</span> <span class="pre">Layer</span></code>.</p></li>
+<li><p>Click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to your vector file.</p></li>
+<li><p>Select the file and click <code class="docutils literal notranslate"><span class="pre">Open</span></code></p></li>
+<li><p>Back in QGIS click <code class="docutils literal notranslate"><span class="pre">Add</span></code></p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_vector.mp4"></video></p>
+<p class="rubric">Open vector data via drag-and-drop</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_vector_d_d.mp4"></video></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
-Raster data import</label><div class="sd-tab-content docutils">
-<p>Go to the data source manager and choose vector on the right. By clicking on the three dots you can browse your files and choose the ones you want to import.</p>
-<p><img alt="datasource manager" src="../../_images/en_datasourcemanager_qgis.png" /></p>
-<p><img alt="import raster data" src="../../_images/en_import_raster.png" /></p>
+Delimited text import</label><div class="sd-tab-content docutils">
+<p class="rubric">Open  Delimited Text Layer (.csv, .txt)</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To directly load .csv or EXCEL data into QGIS, the datasets need to have columns containing geometry in the form of latitude (Y-field) and longitude (X-field).</p>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/en_import_delimeted_text.png"><img alt="../../_images/en_import_delimeted_text.png" src="../../_images/en_import_delimeted_text.png" style="width: 600px;" /></a>
+</figure>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt;<code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Delimited</span> <span class="pre">Text</span> <span class="pre">Layer</span></code>.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">name</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to your csv. file and click <code class="docutils literal notranslate"><span class="pre">Open</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Format</span></code>: Here you can specify which delimiter is used in the file you want to import. In a standard .csv file commas <code class="docutils literal notranslate"><span class="pre">,</span></code> is used. If this is not the case, select <code class="docutils literal notranslate"><span class="pre">Costume</span> <span class="pre">delimiters</span></code>. Here you can choose the exact delimiter used in your file.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To find out which delimiter is used you can open your .csv file in Notepad or Excel. There you can check which delimiter is used to separate the information.</p>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/en_delimited_text_fileformat.png"><img alt="../../_images/en_delimited_text_fileformat.png" src="../../_images/en_delimited_text_fileformat.png" style="width: 600px;" /></a>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">definition</span></code>: In this section, you specify which columns of the file contain the spatial information to geo-referenced the data on the map. If the file has a column containing <strong>latitude</strong> and another with <strong>longitude</strong> data, you can use them to georeferenced the data. Check <code class="docutils literal notranslate"><span class="pre">Point</span> <span class="pre">Coordinates</span></code>. Select for <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">field</span></code> “LONGITUDE” and for <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">field</span></code> “LATITUDE”.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">CRS</span></code>select the coordinate reference system (CRS). By default, QGIS will select the CRS of the project.
+If the file does not have spatial information choose the option <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">geometry</span> <span class="pre">(attribute</span> <span class="pre">only</span> <span class="pre">table)</span></code>.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Add</span></code></p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_textfile.mp4"></video></p>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
-Delimited text import</label><div class="sd-tab-content docutils">
-<p>Go to the data source manager and choose vector on the right. By clicking on the three dots you can browse your files and choose the ones you want to import. Next, choose your file format and expand the geometry definition section to select <strong>latitude (Y field)</strong> and <strong>longitude (X field)</strong>. Usually there is one column each that contains the geometry ot coordinates.<br />
-Click on Geometry CRS (5) and select the Project CRS.
-<img alt="import text data" src="../../_images/en_import_delimeted_text.png" />
-When you choose custom delimiters in the file format (3 &amp; 3.1), you can change the delimiters.
-<img alt="file format" src="../../_images/en_delimited_text_fileformat.png" /></p>
+Raster data import</label><div class="sd-tab-content docutils">
+<p>There are two ways how to load vector data in QGIS. Via the <code class="docutils literal notranslate"><span class="pre">Raster</span></code> tab or via drag-and-drop.</p>
+<p class="rubric">Open raster data via Layer Tab</p>
+<ol class="arabic simple">
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Raster</span> <span class="pre">Layer</span></code>.</p></li>
+<li><p>Click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to your raster file.</p></li>
+<li><p>Select the file and click <code class="docutils literal notranslate"><span class="pre">Open</span></code></p></li>
+<li><p>Back in QGIS click <code class="docutils literal notranslate"><span class="pre">Add</span></code></p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_raster.mp4"></video></p>
+<p class="rubric">Open raster data via drag-and-drop</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_raster_d_d.mp4"></video></p>
 </div>
-<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
-GeoPackage import</label><div class="sd-tab-content docutils">
-<p>Go to the data source manager and choose GeoPackage on the right. Click on New to add a connection. Browse through your data to the Geopackage and add. By clicking on Connect and Add you can add the data to your project.</p>
-<p><img alt="datasource manager" src="../../_images/en_datasourcemanager_qgis.png" />
-<img alt="import gpkg" src="../../_images/en_import_gpkg.png" /></p>
-</div>
-</div>
-<section id="overpass-turbo">
-<h3>overpass turbo<a class="headerlink" href="#overpass-turbo" title="Permalink to this heading">#</a></h3>
-<p><a class="reference external" href="https://overpass-turbo.eu">Overpass turbo</a> is a web based data mining tool for OSM. By running a query, you can download the data and import it into your project. You can either run it by writing your query on the left or by using the wizard which will assist you in writing your queries.</p>
-<blockquote>
-<div><p><em><strong>Example</strong></em><br />
-To search for schools in your bounding box or search area you can either write the query yourself or get it build by the wizard.<br />
-<strong>1. Check Tagging Guidelines</strong><br />
-Search for it in the <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Tags">OSM wiki</a> and/or <a class="reference external" href="https://taginfo.openstreetmap.org">taginfo</a>. In our example it is: <em>amenity=school</em><br />
-<strong>2.  Write or build the query</strong><br />
-Either use the wizard by tiping in <em>amenity=school in Heidelberg</em> or write your own query (f. e. for your bounding box):</p>
-<blockquote>
-<div><p><strong>Wizard:</strong></p>
-<figure class="align-default" id="overpass-turbo-wizard">
-<a class="reference internal image-reference" href="../../_images/en_wizard_overpassturbo.png"><img alt="../../_images/en_wizard_overpassturbo.png" src="../../_images/en_wizard_overpassturbo.png" style="height: 250px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Screenshot of the Wizard in overpass turbo</span><a class="headerlink" href="#overpass-turbo-wizard" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="overpass-turbo-wizard-result">
-<a class="reference internal image-reference" href="../../_images/en_wizard_result.png"><img alt="../../_images/en_wizard_result.png" src="../../_images/en_wizard_result.png" style="height: 250px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Screenshot of the result</span><a class="headerlink" href="#overpass-turbo-wizard-result" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p><strong>Query:</strong></p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">out</span><span class="p">:</span><span class="n">json</span><span class="p">];</span><span class="w">  </span>
-<span class="p">(</span><span class="w">  </span>
-<span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="p">[</span><span class="ss">&quot;amenity&quot;</span><span class="o">=</span><span class="ss">&quot;school&quot;</span><span class="p">](</span><span class="mi">49</span><span class="p">.</span><span class="mi">35</span><span class="p">,</span><span class="mi">8</span><span class="p">.</span><span class="mi">553</span><span class="p">,</span><span class="mi">49</span><span class="p">.</span><span class="mi">481</span><span class="p">,</span><span class="mi">8</span><span class="p">.</span><span class="mi">756</span><span class="p">);</span>
-<span class="w"> </span><span class="n">way</span><span class="w"> </span><span class="p">[</span><span class="ss">&quot;amenity&quot;</span><span class="o">=</span><span class="ss">&quot;school&quot;</span><span class="p">](</span><span class="mi">49</span><span class="p">.</span><span class="mi">35</span><span class="p">,</span><span class="mi">8</span><span class="p">.</span><span class="mi">553</span><span class="p">,</span><span class="mi">49</span><span class="p">.</span><span class="mi">481</span><span class="p">,</span><span class="mi">8</span><span class="p">.</span><span class="mi">756</span><span class="p">);</span>
-<span class="w"> </span><span class="n">relation</span><span class="w"> </span><span class="p">[</span><span class="ss">&quot;amenity&quot;</span><span class="o">=</span><span class="ss">&quot;school&quot;</span><span class="p">](</span><span class="mi">49</span><span class="p">.</span><span class="mi">35</span><span class="p">,</span><span class="mi">8</span><span class="p">.</span><span class="mi">553</span><span class="p">,</span><span class="mi">49</span><span class="p">.</span><span class="mi">481</span><span class="p">,</span><span class="mi">8</span><span class="p">.</span><span class="mi">756</span><span class="p">);</span>
-<span class="p">);</span>
-<span class="k">out</span><span class="p">;</span><span class="w"> </span>
-</pre></div>
-</div>
-<blockquote>
-<div><p><strong>Bounding Box</strong><br />
-To query with a bounding box you need a special format. Specify it like so:</p>
-<ul class="simple">
-<li><p>s (southern limit in decimal degrees, lowest latitude)</p></li>
-<li><p>w (western limit in decimal degrees, lowest longitude)</p></li>
-<li><p>n (northern limit in decimal degrees, highest latitude)</p></li>
-<li><p>e (eastern limit in decimal degrees, highest longitude)</p>
-<ul>
-<li><p>for example:</p></li>
-</ul>
-</li>
-</ul>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="w">        </span><span class="n">node</span><span class="w"> </span><span class="p">[</span><span class="ss">&quot;key&quot;</span><span class="o">=</span><span class="ss">&quot;value&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">);</span>
-<span class="w">        </span><span class="k">out</span><span class="p">;</span>
-</pre></div>
-</div>
-</div></blockquote>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>For more information on the query language check out the <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide">Language Guide</a>.</p>
-</div>
-</div></blockquote>
-<p><strong>3. Download the data</strong><br />
-One can export the results in various ways.</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
-Data</label><div class="sd-tab-content docutils">
-<p>By exporting the data as f.e. GeoJSON you can later on import them in your QGIS project.</p>
-<figure class="align-default" id="overpass-turbo-data">
-<a class="reference internal image-reference" href="../../_images/en_overpass_turbo_data.png"><img alt="../../_images/en_overpass_turbo_data.png" src="../../_images/en_overpass_turbo_data.png" style="height: 250px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Screenshot of how to export data in overpassturbo</span><a class="headerlink" href="#overpass-turbo-data" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</div>
-<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
-Map</label><div class="sd-tab-content docutils">
-<p>By exporting the query as map, you can share your current view as link or image.</p>
-<figure class="align-default" id="overpass-turbo-map">
-<a class="reference internal image-reference" href="../../_images/en_overpass_turbo_map.png"><img alt="../../_images/en_overpass_turbo_map.png" src="../../_images/en_overpass_turbo_map.png" style="height: 150px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Screenshot of how to export map in overpassturbo</span><a class="headerlink" href="#overpass-turbo-map" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</div>
-<input id="sd-tab-item-6" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-6">
-Query</label><div class="sd-tab-content docutils">
-<p>By exporting your query you can get the text or convert it to an OverpassXML or OverpassQL formated query.</p>
-<figure class="align-default" id="overpass-turbo-query">
-<a class="reference internal image-reference" href="../../_images/en_overpass_turbo_query.png"><img alt="../../_images/en_overpass_turbo_query.png" src="../../_images/en_overpass_turbo_query.png" style="height: 250px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Screenshot of how to export query in overpassturbo</span><a class="headerlink" href="#overpass-turbo-query" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</div>
-</div>
-</div></blockquote>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>For more information, check out the <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Overpass_turbo">wiki</a>.</p>
 </div>
 </section>
-<section id="quick-osm-plugin">
-<h3>Quick OSM plugin<a class="headerlink" href="#quick-osm-plugin" title="Permalink to this heading">#</a></h3>
-<p>By installing the QuickOSM plugin you can run the query directly in QGIS to download data from OpenStreetMap.
-First download the plugin by following the steps:</p>
-<p><img alt="install plugin" src="../../_images/en_install_plugin.png" /></p>
-<figure class="align-default" id="search-plugin">
-<a class="reference internal image-reference" href="../../_images/en_search_plugin.png"><img alt="../../_images/en_search_plugin.png" src="../../_images/en_search_plugin.png" style="height: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Screenshot of how to search for plugins</span><a class="headerlink" href="#search-plugin" title="Permalink to this image">#</a></p>
-</figcaption>
+<section id="geo-features-and-attributes">
+<h2>Geo features and attributes<a class="headerlink" href="#geo-features-and-attributes" title="Permalink to this heading">#</a></h2>
+<p>Each vector layer consists of geometric elements (points, lines or polygons) and an <strong>attribute table</strong>. The attribute table contains information on each element of the layer. The information is stored in rows and columns in the attribute table. Each <strong>row</strong> in the table represents a <strong>feature</strong>, while <strong>columns</strong> store specific <strong>attributes</strong>. This table facilitates searching, selection, sorting, filtering, and editing of features.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/en_vector_data_overview.drawio.png"><img alt="../../_images/en_vector_data_overview.drawio.png" src="../../_images/en_vector_data_overview.drawio.png" style="width: 600px;" /></a>
 </figure>
-<p>You will see a new icon on your toolbar on the top. Now it is possible to search for your key:value in a given location and run the query. When the download is complete, you will get a notification. The result will be loaded in three temporary layers, one for nodes, ways and relations.</p>
-<figure class="align-default" id="quickosmplugin">
-<a class="reference internal image-reference" href="../../_images/en_quickosmplugin.png"><img alt="../../_images/en_quickosmplugin.png" src="../../_images/en_quickosmplugin.png" style="height: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Screenshot of the QuickOSM plugin</span><a class="headerlink" href="#quickosmplugin" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you are unsure which key and value are used, take a look in the <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Tags">OSM wiki</a> or <a class="reference external" href="https://taginfo.openstreetmap.org">taginfo</a>.</p>
-</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-What do i do if there is no new icon?<div class="sd-summary-down docutils">
+Buttons of Attribute Table<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">If you can’t find your new icon for the plugin, select view - toolbars and check that the QuickOSM plugin has a tick to be shown.</p>
-<figure class="align-default" id="no-new-icon">
-<a class="reference internal image-reference" href="../../_images/en_no_new_icon.png"><img alt="../../_images/en_no_new_icon.png" src="../../_images/en_no_new_icon.png" style="height: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Screenshot of how to add a new icon</span><a class="headerlink" href="#no-new-icon" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Icon</p></th>
+<th class="head"><p class="sd-card-text">Description</p></th>
+<th class="head"><p class="sd-card-text">Purpose</p></th>
+<th class="head"><p class="sd-card-text">Shortcut</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionToggleEditing.png" /></p></td>
+<td><p class="sd-card-text">Toggle editing mode</p></td>
+<td><p class="sd-card-text">Enable editing functionalities</p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+E</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionMultiEdit.png" /></p></td>
+<td><p class="sd-card-text">Toggle multi-edit mode</p></td>
+<td><p class="sd-card-text">Update multiple fields of many features</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionSaveEdits.png" /></p></td>
+<td><p class="sd-card-text">Save edits</p></td>
+<td><p class="sd-card-text">Save current modifications</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionRefresh.png" /></p></td>
+<td><p class="sd-card-text">Reload the table</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionNewTableRow.png" /></p></td>
+<td><p class="sd-card-text">Add feature</p></td>
+<td><p class="sd-card-text">Add new geometryless feature</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionDeleteSelectedFeatures.png" /></p></td>
+<td><p class="sd-card-text">Delete selected features</p></td>
+<td><p class="sd-card-text">Remove selected features from the layer</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionEditCut.png" /></p></td>
+<td><p class="sd-card-text">Cut selected features to clipboard</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+X</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionCopySelected.png" /></p></td>
+<td><p class="sd-card-text">Copy selected features to clipboard</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionEditPaste.png" /></p></td>
+<td><p class="sd-card-text">Paste features from clipboard</p></td>
+<td><p class="sd-card-text">Insert new features from copied ones</p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+V</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mIconExpressionSelect.png" /></p></td>
+<td><p class="sd-card-text">Select features using an Expression</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionSelectAll.png" /></p></td>
+<td><p class="sd-card-text">Select All</p></td>
+<td><p class="sd-card-text">Select all features in the layer</p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+A</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionInvertSelection.png" /></p></td>
+<td><p class="sd-card-text">Invert selection</p></td>
+<td><p class="sd-card-text">Invert the current selection in the layer</p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+R</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionDeselectActiveLayer.png" /></p></td>
+<td><p class="sd-card-text">Deselect all</p></td>
+<td><p class="sd-card-text">Deselect all features in the current layer</p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+A</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionFilterMap.png" /></p></td>
+<td><p class="sd-card-text">Filter/Select features using form</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+F</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionSelectedToTop.png" /></p></td>
+<td><p class="sd-card-text">Move selected to top</p></td>
+<td><p class="sd-card-text">Move selected rows to the top of the table</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionPanToSelected.png" /></p></td>
+<td><p class="sd-card-text">Pan map to the selected rows</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+P</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionZoomToSelected.png" /></p></td>
+<td><p class="sd-card-text">Zoom map to the selected rows</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+J</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionNewAttribute.png" /></p></td>
+<td><p class="sd-card-text">New field</p></td>
+<td><p class="sd-card-text">Add a new field to the data source</p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+W</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionDeleteAttribute.png" /></p></td>
+<td><p class="sd-card-text">Delete field</p></td>
+<td><p class="sd-card-text">Remove a field from the data source</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionEditTable.png" /></p></td>
+<td><p class="sd-card-text">Organize columns</p></td>
+<td><p class="sd-card-text">Show/hide fields from the attribute table</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionCalculateField.png" /></p></td>
+<td><p class="sd-card-text">Open field calculator</p></td>
+<td><p class="sd-card-text">Update field for many features in a row</p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Ctrl+I</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mActionConditionalFormatting.png" /></p></td>
+<td><p class="sd-card-text">Conditional formatting</p></td>
+<td><p class="sd-card-text">Enable table formatting</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><img alt="" src="../../_images/dock.png" /></p></td>
+<td><p class="sd-card-text">Dock attribute table</p></td>
+<td><p class="sd-card-text">Allows to dock/undock the attribute table</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><img alt="" src="../../_images/mAction.png" /></p></td>
+<td><p class="sd-card-text">Actions</p></td>
+<td><p class="sd-card-text">Lists the actions related to the layer</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
 </div>
-</details></section>
-</section>
-<section id="geo-features-and-attributes">
-<h2>Geo features and attributes<a class="headerlink" href="#geo-features-and-attributes" title="Permalink to this heading">#</a></h2>
-<p>Each layer consists of geometric elements (points, lines or polygons) and an attribute table. The attribute table contains information on each element of the layer, which is stored in a table as rows and columns. Each row corresponds to an element and each column to an attribute. Atrributes can be for example: ID, name, postal code, street name, …</p>
-<p>Having a look into the attribute table can be helpful to get an overview on the data you are working with. It can also be used to select, filter or edit data.</p>
+</details><p>Having a look into the attribute table can be helpful to get an overview on the data you are working with. It can also be used to select, filter or edit data.</p>
 <section id="open-the-attribute-table">
 <h3>Open the attribute table<a class="headerlink" href="#open-the-attribute-table" title="Permalink to this heading">#</a></h3>
-<p>One can open the attribute table in two ways. Either click right on the chosen layer and select <em>open attribute table</em> or click on the symbol on the top.</p>
+<p>One can open the attribute table in two ways. Either click right on the chosen layer and select <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">attribute</span> <span class="pre">table</span></code> or click on the symbol on the top.</p>
 <figure class="align-default" id="open-attribute-table-with-right-click">
-<a class="reference internal image-reference" href="../../_images/en_attributetable_right_click.png"><img alt="../../_images/en_attributetable_right_click.png" src="../../_images/en_attributetable_right_click.png" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_attributetable_right_click.png"><img alt="../../_images/en_attributetable_right_click.png" src="../../_images/en_attributetable_right_click.png" style="height: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Screenshot of Opening the Attribute Table with right click</span><a class="headerlink" href="#open-attribute-table-with-right-click" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="open-attribute-table-top-right">
-<a class="reference internal image-reference" href="../../_images/en_attributetable_top_right.png"><img alt="../../_images/en_attributetable_top_right.png" src="../../_images/en_attributetable_top_right.png" style="height: 250px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Screenshot of Opening the Attribute Table</span><a class="headerlink" href="#open-attribute-table-top-right" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Screenshot of Opening the Attribute Table with right click</span><a class="headerlink" href="#open-attribute-table-with-right-click" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have multiple layers, only the attribute table of the layer selected in the layer panel on the left will open.</p>
 </div>
+<figure class="align-default" id="open-attribute-table-top-right">
+<a class="reference internal image-reference" href="../../_images/en_attributetable_top_right.png"><img alt="../../_images/en_attributetable_top_right.png" src="../../_images/en_attributetable_top_right.png" style="height: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Screenshot of Opening the Attribute Table</span><a class="headerlink" href="#open-attribute-table-top-right" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
-<section id="sort-the-information">
-<h3>Sort the information<a class="headerlink" href="#sort-the-information" title="Permalink to this heading">#</a></h3>
+<section id="sort-the-attribute-table">
+<h3>Sort the attribute table<a class="headerlink" href="#sort-the-attribute-table" title="Permalink to this heading">#</a></h3>
 <p>Now that the attribute table is opened, it is possible to sort the data within. By clicking on the tab of the column, you can sort the data (alphabetically) in ascending or descending order.
 The small arrow indicates whether it is sorted ascending or descending.</p>
+<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_show_attribute_table.mp4"></video></p>
 <table class="table">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
-<tr class="row-odd"><th class="head text-center"><p><img alt="sorted ascending" src="../../_images/en_ascending.png" /></p></th>
-<th class="head text-center"><p><img alt="sorted descending" src="../../_images/en_descending.png" /></p></th>
+<tr class="row-odd"><th class="head"><p>Sorted ascending</p></th>
+<th class="head"><p>Sorted descending</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-center"><p>The data is sorted ascending.</p></td>
-<td class="text-center"><p>The data is sorted descending.</p></td>
+<tr class="row-even"><td><figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/en_ascending.png"><img alt="../../_images/en_ascending.png" src="../../_images/en_ascending.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">The data is sorted ascending.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/en_descending.png"><img alt="../../_images/en_descending.png" src="../../_images/en_descending.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">The data is sorted descending.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="edit-or-change-data">
-<h3>Edit or change data<a class="headerlink" href="#edit-or-change-data" title="Permalink to this heading">#</a></h3>
-<p>If you have to edit or change data in the attribute table, you can do so by clicking on the pencil on the top left. This could be the case, for example, because special characters like ‘ü’ or ‘ä’ are displayed wrong.</p>
-<figure class="align-default" id="editing-mode-in-the-attribute-table">
-<a class="reference internal image-reference" href="../../_images/en_editing_mode.png"><img alt="../../_images/en_editing_mode.png" src="../../_images/en_editing_mode.png" style="height: 100px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Screenshot of the editing mode</span><a class="headerlink" href="#editing-mode-in-the-attribute-table" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>In the editing mode, you can also add or delete columns.</p>
-<figure class="align-default" id="add-column-in-the-attribute-table">
-<a class="reference internal image-reference" href="../../_images/en_add_column.png"><img alt="../../_images/en_add_column.png" src="../../_images/en_add_column.png" style="height: 100px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Screenshot of adding a column</span><a class="headerlink" href="#add-column-in-the-attribute-table" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
-<section id="feature-selection">
-<h2>Feature selection<a class="headerlink" href="#feature-selection" title="Permalink to this heading">#</a></h2>
-<p>In QGIS you have many ways to select features, whether that´s in the attribute table or directly in the map canvas.</p>
-<section id="select-manually">
-<h3>Select manually<a class="headerlink" href="#select-manually" title="Permalink to this heading">#</a></h3>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-7">
-Select manually in the attribute table </label><div class="sd-tab-content docutils">
-<p>Open the attribute table and click on the number of the row you want to select, so that the row turns blue.</p>
-<figure class="align-default" id="select-row-manually">
-<a class="reference internal image-reference" href="../../_images/en_select_row.png"><img alt="../../_images/en_select_row.png" src="../../_images/en_select_row.png" style="height: 150px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Screenshot of how to select a row manually.</span><a class="headerlink" href="#select-row-manually" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Selected features are highlighted blue in the attribute table.</p>
-</div>
-</div>
-<input id="sd-tab-item-8" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-8">
-Select manually in the map canvas</label><div class="sd-tab-content docutils">
-<p>To select on the map directly, click on the marked symbol on the top. Now you can either click directly onto objects you want to select or by choosing in the dropdown, you can select all objects within a polygon or by radius.</p>
-<figure class="align-default" id="select-on-map-manually">
-<a class="reference internal image-reference" href="../../_images/en_select_map.png"><img alt="../../_images/en_select_map.png" src="../../_images/en_select_map.png" style="height: 110px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Screenshot of how to select objects in the map.</span><a class="headerlink" href="#select-on-map-manually" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Selected features are highlighted yellow in the map.</p>
-</div>
-</div>
-</div>
-<details>
-<summary>How to deselect features</summary>
-<br>
-To deselect the objects, you can simply click on this symbol on the top bar. In the dropdown, you can choose whether this should deselect all objects from all layers or only from the active one.
-<figure class="align-default" id="deselect-features">
-<a class="reference internal image-reference" href="../../_images/en_unselect.png"><img alt="../../_images/en_unselect.png" src="../../_images/en_unselect.png" style="height: 50px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Screenshot of how to desselect objects.</span><a class="headerlink" href="#deselect-features" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</details>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>To get all selected objects to the top of the attribute table, you can sort for them like so:</p>
-<p><img alt="Move selection to top" src="../../_images/en_sort_selected.png" /></p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>It is also possible to invert your selection, like so:</p>
-<p><img alt="Move selection to top" src="../../_images/en_invert_selection.png" /></p>
-</div>
-</section>
-<section id="select-by-location">
-<h3>Select by location<a class="headerlink" href="#select-by-location" title="Permalink to this heading">#</a></h3>
-<p><strong>here or Modul 5?</strong></p>
-</section>
-<section id="filter">
-<h3>Filter<a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h3>
-<p>To filter for certain attributes, you can click on <em>filter for features</em> and type the chosen expression that is contained in this column.</p>
-<figure class="align-default" id="filter-features">
-<a class="reference internal image-reference" href="../../_images/en_filter_features.png"><img alt="../../_images/en_filter_features.png" src="../../_images/en_filter_features.png" style="height: 100px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Screenshot of how to filter features.</span><a class="headerlink" href="#filter-features" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="filter-features-and-get-back-to-the-table-view">
-<a class="reference internal image-reference" href="../../_images/en_filter_back_table.png"><img alt="../../_images/en_filter_back_table.png" src="../../_images/en_filter_back_table.png" style="height: 300px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Screenshot of how to filter features and get back to the table view.</span><a class="headerlink" href="#filter-features-and-get-back-to-the-table-view" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>To return to the view as a table, click on the bottom right corner.</p>
-</section>
-<section id="select-features-by-expression">
-<h3>Select features by expression<a class="headerlink" href="#select-features-by-expression" title="Permalink to this heading">#</a></h3>
-<p>If you have more or more complex conditions on which the selection should base, you can use the <em>select by expression</em> tool.</p>
-<figure class="align-default" id="select-by-expression">
-<a class="reference internal image-reference" href="../../_images/en_select_by_expression.png"><img alt="../../_images/en_select_by_expression.png" src="../../_images/en_select_by_expression.png" style="height: 100px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Screenshot of how to select by expression.</span><a class="headerlink" href="#select-by-expression" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>A window will open, on the left you can type in your expression, on the right are different drowdowns. Under <em>field and values</em> you can select the columns name.</p>
-<figure class="align-default" id="select-by-expression-the-opened-window">
-<a class="reference internal image-reference" href="../../_images/en_view_expression.png"><img alt="../../_images/en_view_expression.png" src="../../_images/en_view_expression.png" style="height: 300px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Screenshot of the window to select by expression.</span><a class="headerlink" href="#select-by-expression-the-opened-window" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Next, you can choose from different operators:</p>
+<section id="zoom-in-on-a-specific-feature-via-attribute-table">
+<h3>Zoom in on a specific feature via attribute table<a class="headerlink" href="#zoom-in-on-a-specific-feature-via-attribute-table" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Arithmetic operators: &gt;, &lt; , =, !=</p></li>
-<li><p>String operators: LIKE, IS, BETWEEN, IN, …</p></li>
-<li><p>Logical operators: AND, OR</p></li>
+<li><p><strong>Zoom:</strong> Right click on your feature –&gt; <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">To</span> <span class="pre">Feature</span></code></p></li>
 </ul>
-<p>To build your expression, you can double click on the chosen column and then on <em>All Unique</em> to get all unique values of this column shown. By double clicking them, you are adding them into your expression.</p>
-<figure class="align-default" id="select-by-expression-unique-values">
-<a class="reference internal image-reference" href="../../_images/en_unique_values.png"><img alt="../../_images/en_unique_values.png" src="../../_images/en_unique_values.png" style="height: 300px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Screenshot of the window to select by expression and show the unique values.</span><a class="headerlink" href="#select-by-expression-unique-values" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>For example, to build an expression which will select all <em>highways</em> that are <em>pedestrian</em> or <em>cycleway</em>, you can do so:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="k">IS</span><span class="w">  </span><span class="s1">&#39;cycleway&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w">  </span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="k">IS</span><span class="w">  </span><span class="s1">&#39;pedestrian&#39;</span><span class="w"> </span>
-</pre></div>
-</div>
-<p>or by using arithmetical operators:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;cycleway&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w">  </span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;pedestrian&#39;</span><span class="w"> </span>
-</pre></div>
-</div>
-<p>The logical “OR” combines the two criterias.</p>
-<p>The logical “AND” selects only the objects, where both criteria are true/applicable.</p>
-<p>For example, if you are looking for a smooth cyleway for a biketour:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;highway&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;cycleway&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w">  </span><span class="ss">&quot;smoothness&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;excellent&#39;</span><span class="w"> </span>
-</pre></div>
-</div>
-<p>This will only show the features where both criteria are true.</p>
+<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom_to_feature.mp4"></video></p>
+</section>
+<section id="manually-select-features-in-the-attribute-table">
+<h3>Manually select features in the attribute table<a class="headerlink" href="#manually-select-features-in-the-attribute-table" title="Permalink to this heading">#</a></h3>
+<p>To interact with features in a layer you have to select these features. One way to select features is via the attribute table.</p>
+<ul class="simple">
+<li><p><strong>Select:</strong> Click on the lines of the features.</p></li>
+<li><p><strong>Multi Select:</strong> To select multiple features press <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> and select <code class="docutils literal notranslate"><span class="pre">features</span></code>.</p></li>
+<li><p><strong>Show only selected features:</strong> In the bottom left of the attribute table open the dropdown menu and select <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">selected</span> <span class="pre">features</span></code>. To show again all features click on <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">all</span> <span class="pre">features</span></code>.</p></li>
+<li><p><strong>Only show unselected features</strong> Select features and click on <img alt="" src="../../_images/mActionInvertSelection.png" /></p></li>
+</ul>
+<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_select.mp4"></video></p>
 </section>
 <section id="zoom-to-selected-area">
 <h3>Zoom to selected area<a class="headerlink" href="#zoom-to-selected-area" title="Permalink to this heading">#</a></h3>
-<p>Now that you learned different ways to select features, you can zoom onto your area of interest. To do so you can click on the symbol on the top pannel or click right on the layer and select <em>Zoom to Selection</em></p>
+<p>Now that you learned how to select features, you can zoom onto your area of interest. To do so you can click on the symbol on the top pannel or click right on the layer and select <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Selection</span></code></p>
 <figure class="align-default" id="zoom-to-selection-top-pannel">
-<a class="reference internal image-reference" href="../../_images/en_zoom_to_selection_1.png"><img alt="../../_images/en_zoom_to_selection_1.png" src="../../_images/en_zoom_to_selection_1.png" style="height: 50px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_zoom_to_selection_1.png"><img alt="../../_images/en_zoom_to_selection_1.png" src="../../_images/en_zoom_to_selection_1.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Screenshot of how to zoom to Selection on the top.</span><a class="headerlink" href="#zoom-to-selection-top-pannel" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Screenshot of how to zoom to Selection on the top.</span><a class="headerlink" href="#zoom-to-selection-top-pannel" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="zoom-to-selection-right-click">
-<a class="reference internal image-reference" href="../../_images/en_zoom_to_selection_2.png"><img alt="../../_images/en_zoom_to_selection_2.png" src="../../_images/en_zoom_to_selection_2.png" style="height: 250px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_zoom_to_selection_2.png"><img alt="../../_images/en_zoom_to_selection_2.png" src="../../_images/en_zoom_to_selection_2.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Screenshot of how to zoom to Selection by clicking right.</span><a class="headerlink" href="#zoom-to-selection-right-click" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Screenshot of how to zoom to Selection by clicking right.</span><a class="headerlink" href="#zoom-to-selection-right-click" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-<section id="save-only-selected">
-<h3>Save only selected<a class="headerlink" href="#save-only-selected" title="Permalink to this heading">#</a></h3>
-<p>After you selected your data, you might want to proceed with only the Selection. It is possible to save your Selection as new layer. To do so click right on the layer - <em>Export</em> - <em>Save selected features as</em>.</p>
-<figure class="align-default" id="save-selection-right-click">
-<a class="reference internal image-reference" href="../../_images/en_save_selection.png"><img alt="../../_images/en_save_selection.png" src="../../_images/en_save_selection.png" style="height: 200px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Screenshot of how to save only selected features.</span><a class="headerlink" href="#save-selection-right-click" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<section id="save-only-selected-features-as-a-new-file">
+<h3>Save only selected features as a new file<a class="headerlink" href="#save-only-selected-features-as-a-new-file" title="Permalink to this heading">#</a></h3>
+<p>After you selected your data, you might want to proceed with only the Selection. It is possible to save your Selection as new layer. To do so click right on the layer -<code class="docutils literal notranslate"><span class="pre">Export</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">only</span> <span class="pre">selected</span> <span class="pre">features</span></code></p>
 <p>You can then choose the format, layername and crs.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If you are unsure which format is best, check out the wiki <a class="reference internal" href="../Wiki/en_qgis_geodata_types_wiki.html"><span class="doc std std-doc">Geodata types</span></a></p>
+<p>Use GeoPackage (.gpkg) instead of Shapefile (.shp)!
+If you are unsure which format is best, check out the wiki <a class="reference internal" href="../Wiki/en_qgis_geodata_types_wiki.html"><span class="doc std std-doc">Geodata types</span></a></p>
 </div>
-</section>
-<section id="field-calculator">
-<h3>Field calculator<a class="headerlink" href="#field-calculator" title="Permalink to this heading">#</a></h3>
-<p>The field calculator allows you that create a new field or update an existing one. You can perform calculations whether with existing attribute values or by using defined functions.</p>
-<p>As example, we can calculate the population per km²:</p>
-<figure class="align-default" id="calculate-area">
-<a class="reference internal image-reference" href="../../_images/en_calculate_area.png"><img alt="../../_images/en_calculate_area.png" src="../../_images/en_calculate_area.png" style="height: 250px;" /></a>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_select_export_wiki.mp4"></video></p>
+<figure class="align-default" id="save-selection-right-click">
+<a class="reference internal image-reference" href="../../_images/en_save_selection.png"><img alt="../../_images/en_save_selection.png" src="../../_images/en_save_selection.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Screenshot of calculating the area in the field calculator.</span><a class="headerlink" href="#calculate-area" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Screenshot of how to save only selected features.</span><a class="headerlink" href="#save-selection-right-click" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>We create a new field and divide the area by 1.000.000 to get km² instead of m². You have to choose the output field name and type.</p>
-<p>You can also tick the box to only calculate with the Selection.
-Now we have a new column with the calculated area. Next we need to divide the population by the area to get the density.</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;population&quot;</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="ss">&quot;area_km&quot;</span>
-</pre></div>
+</section>
+</section>
+<section id="base-maps">
+<h2>Base maps<a class="headerlink" href="#base-maps" title="Permalink to this heading">#</a></h2>
+<p>Basemaps are background maps. They are often very practical since they are easy to use, allow easy orientation on the map canvas and are diverse. QGIS offers OpenStreetMap and some other base maps by default.</p>
+<p>However, there is a wide range of base maps that can be used via extra plugins or XYZ Connections.</p>
+<p>Here we give you an overview of ways to access base maps in QGIS.</p>
+<section id="standard-qgis-basemaps">
+<h3>Standard QGIS Basemaps<a class="headerlink" href="#standard-qgis-basemaps" title="Permalink to this heading">#</a></h3>
+<p>You can always add the standard OpenStreetMap as a basemap to your map canvas.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In the <a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html"><span class="doc std std-doc">wiki article on base maps</span></a>, you can find a tutorial to add more base maps e.g. from google to the standard base map list of your QGIS.</p>
 </div>
-</section>
-</section>
-<section id="basemap-selection">
-<h2>Basemap selection<a class="headerlink" href="#basemap-selection" title="Permalink to this heading">#</a></h2>
-<p>A basemap can be added into your QGIS to provide context for your other layers.</p>
-<section id="openstreetmap">
-<h3>OpenStreetMap<a class="headerlink" href="#openstreetmap" title="Permalink to this heading">#</a></h3>
-<p>If you are using version 3.4 or higher in QGIS, it is by default possible to add the OSM base map to your project. Unfold the XYZ tiles, right-click on OpenStreetMap and select add layer to project.</p>
-<figure class="align-default" id="add-osm-basemap">
-<a class="reference internal image-reference" href="../../_images/en_add_osm_basemap.png"><img alt="../../_images/en_add_osm_basemap.png" src="../../_images/en_add_osm_basemap.png" style="height: 500px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Screenshot of how to add OSM basemap</span><a class="headerlink" href="#add-osm-basemap" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p>There are two ways to add the OpenStreetMap as a basemap.</p>
+<p><strong>Option 1:</strong> Find in the <code class="docutils literal notranslate"><span class="pre">Browser</span></code> panel <code class="docutils literal notranslate"><span class="pre">XYZ</span> <span class="pre">Tiles</span></code>. Open the dropdown by clicking on it and select OpenStreetMap or another basemap.</p>
+<p><strong>Option 2:</strong> <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">XYZ</span> <span class="pre">layer...</span></code> -&gt; Select the OpenStreetMap or another basemap.</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Add_basemap_OSM.mp4"></video></p>
 </section>
 <section id="quickmapservices">
 <h3>QuickMapServices<a class="headerlink" href="#quickmapservices" title="Permalink to this heading">#</a></h3>
-<p>BRC exc 1.3</p>
+<p>There are numerous extensions for QGIS, also called plugins, which provide extended functionalities. In the wiki article about plugins, you can learn all about them.
+One of the most important plugins is the <a class="reference external" href="https://nextgis.com/blog/quickmapservices/">QuickMapServices</a> plugin.</p>
+<p>The QuickMapServices Plugin allows to access a wide range of basemaps.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Installation of plugins<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">To install a plugin <code class="docutils literal notranslate"><span class="pre">Plugins</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins…</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span></code> -&gt; Search for the plugin -&gt; <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Plugin</span></code></p>
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_plugins.mp4"></video></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p class="sd-card-text">If you cannot find a specific extension, check your capitalisation and correct use of spaces. If you still cannot find an extension, you may need to allow the experimental extensions in the options (see below).</p>
+</div>
+</div>
+</details><p><code class="docutils literal notranslate"><span class="pre">Web</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">QuickMapServices</span></code> -&gt; select provider e.g. NASA -&gt; select basemap</p>
+<p><strong>Functionality of QuickMapServices Plugin</strong>
+<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/add_basemap_quickmapservice.mp4"></video></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There can be problems when printing some basemaps from the QuickMapServices!</p>
+</div>
 </section>
-</section>
-<section id="data-organization">
-<h2>Data organization<a class="headerlink" href="#data-organization" title="Permalink to this heading">#</a></h2>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -1063,33 +1031,26 @@ Now we have a new column with the calculated area. Next we need to divide the po
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-import">Data import</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-turbo">overpass turbo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-osm-plugin">Quick OSM plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-mananagemnet">Geodata mananagemnet</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-folder-structure">Standard Folder Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-naming">Geodata naming</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-import">Data import</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-features-and-attributes">Geo features and attributes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-attribute-table">Open the attribute table</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-the-information">Sort the information</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-or-change-data">Edit or change data</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-selection">Feature selection</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-manually">Select manually</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-location">Select by location</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filter">Filter</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-features-by-expression">Select features by expression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-the-attribute-table">Sort the attribute table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-in-on-a-specific-feature-via-attribute-table">Zoom in on a specific feature via attribute table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-select-features-in-the-attribute-table">Manually select features in the attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-to-selected-area">Zoom to selected area</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-only-selected">Save only selected</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-calculator">Field calculator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-only-selected-features-as-a-new-file">Save only selected features as a new file</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemap-selection">Basemap selection</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">OpenStreetMap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-maps">Base maps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-qgis-basemaps">Standard QGIS Basemaps</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickmapservices">QuickMapServices</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-organization">Data organization</a></li>
 </ul>
   </nav></div>
 

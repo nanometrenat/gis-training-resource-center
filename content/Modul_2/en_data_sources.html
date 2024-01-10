@@ -495,7 +495,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -511,6 +513,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">OpenStreetMap</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -523,7 +533,16 @@ document.write(`
   <p>🚧 This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
 <section class="tex2jax_ignore mathjax_ignore" id="data-sources">
 <h1>Data Sources<a class="headerlink" href="#data-sources" title="Permalink to this heading">#</a></h1>
-<p>override turbo</p>
+<section id="openstreetmap">
+<h2>OpenStreetMap<a class="headerlink" href="#openstreetmap" title="Permalink to this heading">#</a></h2>
+<p>If you are using version 3.4 or higher in QGIS, it is by default possible to add the OSM base map to your project. Unfold the XYZ tiles, right-click on OpenStreetMap and select add layer to project.</p>
+<figure class="align-default" id="add-osm-basemap">
+<a class="reference internal image-reference" href="../../_images/en_add_osm_basemap.png"><img alt="../../_images/en_add_osm_basemap.png" src="../../_images/en_add_osm_basemap.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Screenshot of how to add OSM basemap</span><a class="headerlink" href="#add-osm-basemap" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -582,6 +601,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">OpenStreetMap</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
