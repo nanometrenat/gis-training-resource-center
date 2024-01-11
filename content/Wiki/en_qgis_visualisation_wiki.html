@@ -502,7 +502,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -518,6 +520,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisation-of-vector-data">Visualisation of Vector data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology">Symbology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisation-of-raster-data">Visualisation of Raster data</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -529,6 +544,87 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="visualisation">
 <h1>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this heading">#</a></h1>
+<p>🚧This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
+<section id="visualisation-of-vector-data">
+<h2>Visualisation of Vector data<a class="headerlink" href="#visualisation-of-vector-data" title="Permalink to this heading">#</a></h2>
+<section id="symbology">
+<h3>Symbology<a class="headerlink" href="#symbology" title="Permalink to this heading">#</a></h3>
+<p>QGIS offers various ways to visualize vector data. In the Symbology Tab, you can select between various symbolization methods</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Single-Symbol</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Assigns one symbol to every feature of the dataset, no matter if the attributes are different.</p></li>
+</ul>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Categorized</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Classifies features into categories using an attribute (<code class="docutils literal notranslate"><span class="pre">Value</span></code>).</p></li>
+<li><p>A category is created for each unique value of this attribute.</p></li>
+<li><p>Each category can be assigned to a different symbol.</p></li>
+<li><p>This can be used for nominal as well as ordinal data.</p></li>
+</ul>
+<p><strong>For example</strong>, assign a different symbol for each type of building (industrial, commercial, public, residential,…)</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Graduated</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Creates classes for numerical data.</p></li>
+<li><p>A colour gradient can be selected to represent the distribution of the data</p></li>
+</ul>
+<p><strong>For example</strong>, create 6 classes of population sizes and assign a color gradient from white to red to indicate the population size in a district.</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Rule-based</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Create rules using an expression and assign a symbol for the features where the rule applies.</p></li>
+<li><p>You can specify more accurately the features you want to symbolize.</p></li>
+<li><p>You can use values from different attributes (e.g. building type and city district).</p></li>
+<li><p>The expression builder helps you create rules by displaying the available values, fields, operators, etc…</p></li>
+</ul>
+<p><strong>For example</strong>, select a symbol for every health facility that is a hospital and has exceeded it’s capacity.</p>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="labels">
+<h3>Labels<a class="headerlink" href="#labels" title="Permalink to this heading">#</a></h3>
+<p>Labels can display information or value of the data. In QGIS, you can either select <strong>Single Labels</strong> or <strong>Rule-based Labelling</strong>. For each option, an attribute (<code class="docutils literal notranslate"><span class="pre">value</span></code>) that will be displayed on the map. Additionally, you can <strong>change the font, font size, colour and some other styling options</strong> for the label text.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Single Labels</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Creates a single label style for every feature in the layer.</p></li>
+</ul>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Rule-based Labelling</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p>Create rules using expressions to select accurately which features are to be labeled.</p></li>
+<li><p>Each rule can have a different text formatting</p></li>
+</ul>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Label rendering</p>
+<p>Sometimes the labels can obstruct other symbols. In that case, you can either adjust the placement of the labels in the <strong>Label tab</strong>, or use the <code class="docutils literal notranslate"><span class="pre">Move</span> <span class="pre">a</span> <span class="pre">Label,</span> <span class="pre">Diagram,</span> <span class="pre">or</span> <span class="pre">Callout</span></code>-tool in <strong>Label toolbar</strong></p>
+<p>By default, QGIS renders the labels in such a way that they don’t overlap with other labels. This means that not all the labels will be visible if the data is dense or rendered close to each other. You can optimize the rendering under the rendering option.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="visualisation-of-raster-data">
+<h2>Visualisation of Raster data<a class="headerlink" href="#visualisation-of-raster-data" title="Permalink to this heading">#</a></h2>
+<p>Raster data is visualised differently from</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -585,6 +681,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisation-of-vector-data">Visualisation of Vector data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology">Symbology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisation-of-raster-data">Visualisation of Raster data</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
