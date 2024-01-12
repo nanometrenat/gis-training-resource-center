@@ -260,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_data_classification.html">Geodata Classification</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Modul_3/en_qgis_classification_ex1.html">Geodata Classification Exercise 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_3/en_qgis_classification_ex1.html">Geodata Classification Exercise 1: Overview map of the prevalence of stunting in Sierra Leone</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_3/en_qgis_data_queries.html">Geodata Selection and Queries</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -502,7 +502,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -518,6 +520,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-wiki-articles">Links to Wiki articles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -529,10 +542,76 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geodata-concept-exercise-1">
 <h1>Geodata Concept Exercise 1<a class="headerlink" href="#geodata-concept-exercise-1" title="Permalink to this heading">#</a></h1>
-<p>Now it’s your turn!</p>
-<p>You can apply your knowledge on this excercise by getting used to the interface and changing the projections.</p>
-<p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_1">Exercise 1</a>
-–&gt; in future link to HeiCloud</p>
+<section id="aim-of-the-exercise">
+<h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
+<p>The objective of this exercise is to make your first steps in QGIS. Understand the user interface and get to know the layer concept. Display vector data in QGIS and view the attributes of the data. Reproject the vector data (i.e. by changing the projection of the data).</p>
+</section>
+<section id="links-to-wiki-articles">
+<h2>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h2>
+<p>will be done when Wiki is finished</p>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<p>Download all datasets and save the folder on your computer and unzip the file. The zip folder includes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Sierra_leone_borders.gpkg</span></code> (MultiLineString) GeoPackage</p>
+<ul>
+<li><p>Sierra Leone national boders (Lines)</p></li>
+<li><p>Sierra Leone provinces (Lines)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sierra_leone_health_HOT.shp</span></code> (Points) Shapefile</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sl-airports.csv</span></code> (CSV)</p></li>
+</ul>
+</section>
+<section id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open QGIS and familiarise yourself with the user interface.</p></li>
+<li><p>Open the aforementioned files in QGIS. Load the vector layers into the program. To load the CSV file, select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">delimited</span> <span class="pre">text</span></code>.</p></li>
+</ol>
+<figure class="align-default" id="delimited-text">
+<a class="reference internal image-reference" href="../../_images/en_delimited_text_screenshot.PNG"><img alt="../../_images/en_delimited_text_screenshot.PNG" src="../../_images/en_delimited_text_screenshot.PNG" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Screenshot of Data Source Manager - Delimited Text to load a CSV file</span><a class="headerlink" href="#delimited-text" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>Interact with the map and explore the datasets. Use the zoom tool and move the map. Take note of the status bar at the bottom of the screen and observe how it changes.</p></li>
+<li><p>Familiarise yourself with the layer window (layer list). Show and hide different layers and move layers around in the hierarchy. Give the data layer a meaningful name.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to note that renaming the layer does not affect the data sources, such as file names or storage location.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Check out the attribute data of the layers by examining the attribute table.</p></li>
+<li><p>Change the projection in the map view to <code class="docutils literal notranslate"><span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">Pseudo-Mercator</span> <span class="pre">EPSG:3857</span></code>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that this does not change the projection (coordinates) of the files, only the projection of the map view. Verify this by looking at the properties of the point layer. What projection is shown there?</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can use the search bar on the top left.</p>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Now save the health layer in the projection <code class="docutils literal notranslate"><span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">Pseudo-Mercator</span> <span class="pre">EPSG:3857</span></code>. This changes the projection of the file. Verify this by looking at the properties of the newly created layer.</p></li>
+<li><p>Save your project.</p></li>
+<li><p>Optional: You can add the OpenStreetMap base map via the browser window –&gt; XYZ Tiles.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that online base maps can cause projection issues with different layers. It is important to remove the base map before saving the project.</p>
+</div>
+<figure class="align-default" id="en-result-geodata-concept-exercise">
+<a class="reference internal image-reference" href="../../_images/en_result_geodata_concept_exercise.png"><img alt="../../_images/en_result_geodata_concept_exercise.png" src="../../_images/en_result_geodata_concept_exercise.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">This is how your output could look like in the end</span><a class="headerlink" href="#en-result-geodata-concept-exercise" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -589,6 +668,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-wiki-articles">Links to Wiki articles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
