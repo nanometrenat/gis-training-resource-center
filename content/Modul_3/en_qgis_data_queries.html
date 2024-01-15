@@ -529,26 +529,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries">Spatial queries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-click">Spatial queries: select by click</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-selection">Manual Selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-based-selection">Attribute based selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-based-spatial-selection">Layer based Spatial Selection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-dive-on-geo-metric-operators">Deep dive on geo metric operators</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-queries">Geodata queries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Spatial queries: select by click</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-polygon">Spatial queries: select by polygon</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-location">Spatial queries: select by location</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-queries">Non-spatial queries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-selection">Manual selection</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression">Select by Expression</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression-arithmetic-operators-integer-float-fields">Select by Expression- Arithmetic operators (integer, float fields)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression-string-operators-text-fields-e-g-like">Select by Expression- String operators (text fields e.g “Like”)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression-placeholder-e-g">Select by Expression- Placeholder (e.g %)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression-logical-operators-and-or">Select by Expression- Logical operators (AND, OR)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#save-selected-features">Save selected features</a></li>
 </ul>
             </nav>
         </div>
@@ -562,167 +548,127 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geodata-selection-and-queries">
 <h1>Geodata Selection and Queries<a class="headerlink" href="#geodata-selection-and-queries" title="Permalink to this heading">#</a></h1>
-<p>Geodata selection and non-spatial queries in QGIS involve the targeted extraction of specific information from spatial datasets. This process enables users to choose and analyze relevant geographic features based on defined criteria. Imagine you have a large dataset but you only want to work with specific data from that dataset. For example all villages in a district or all villages with a health station.</p>
-<p>In general, there are two ways to select features in QGIS.</p>
-<ol class="arabic simple">
-<li><p>Based on the location of the feature 	-&gt; Spatial Queries</p></li>
-</ol>
-<p>OR</p>
-<ol class="arabic simple" start="2">
-<li><p>Based on criteria you can specify	-&gt; Non-spatial Queries</p></li>
-</ol>
-<section id="spatial-queries">
-<h2>Spatial queries<a class="headerlink" href="#spatial-queries" title="Permalink to this heading">#</a></h2>
-<p>Spatial queries are all methods you use to select features based on their location. Here we will start explaining the easier methods and then move to the more complex ones.</p>
-<section id="spatial-queries-select-by-click">
-<h3>Spatial queries: select by click<a class="headerlink" href="#spatial-queries-select-by-click" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Select the layer you want to query from.</p></li>
-<li><p>Click on at <img alt="" src="../../_images/mActionSelectRectangle.png" /> the toolbar.</p></li>
-<li><p>No click on the features you want to select. To select multiple features press and hold <code class="docutils literal notranslate"><span class="pre">Shift</span></code> on your keyboard.The features you selected will turn yellow.</p></li>
-<li><p><em>Optional</em>: Open the attribute table. Here the selected features will be marked in blue. To only see selected features click in the down left corner on the dropdown menu and select <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">selected</span> <span class="pre">Features</span></code>.</p></li>
-<li></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To deselect features click on in the toolbar.</p>
-</div>
-<p>This section demonstrate how to select an area or location by just a click and view its spatial features. Below is a map of Nigeria. Click on the icon number 1 which is the select feature and click on any part of the map that you want to select. See point number 2 which has already shown yellow as the selected area. Open the attribute table through the layer pannel, number 3 and click on number 4 to just view the feature of the selected part by clicking on selected features, then you arrive at number 6 which display only selected features.</p>
-<p><img alt="" src="../../_images/Select_by_click.png" /></p>
-<p>See video of select by click</p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Select_by_click.mp4"></video></p>
-</section>
-</section>
-<section id="geodata-queries">
-<h2>Geodata queries<a class="headerlink" href="#geodata-queries" title="Permalink to this heading">#</a></h2>
-<p>Spatial queries allows you to select features in layers by their spatial relationships (intersect, contain, touch etc.) with features from another layer. In Qgis, this functionality is available via the selection by location and extract by location processing tools.</p>
-<section id="id1">
-<h3>Spatial queries: select by click<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<p>This section demonstrate how to select an area or location by just a click and view its spatial features. Below is a map of Nigeria. Click on the icon number 1 which is the select feature and click on any part of the map that you want to select. See point number 2 which has already shown yellow as the selected area. Open the attribute table through the layer pannel, number 3 and click on number 4 to just view the feature of the selected part by clicking on selected features, then you arrive at number 6 which display only selected features.</p>
-<p><img alt="" src="../../_images/Select_by_click.png" /></p>
-<p>See video of select by click</p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Select_by_click.mp4"></video></p>
-</section>
-<section id="spatial-queries-select-by-polygon">
-<h3>Spatial queries: select by polygon<a class="headerlink" href="#spatial-queries-select-by-polygon" title="Permalink to this heading">#</a></h3>
-<p>This section is similar to selection by click. Only that you will select features by polygon from number 1 and draw the polygon on the area you want to cover or view and then right click. you will see that the polygon area will be selected in yellow color just like number 3. View the attribute table and click on number 6 to show only selected features in the polygon that you have created. You can use icon number 7 to deselect features.</p>
-<p><img alt="" src="../../_images/Select_by_polygon.png" /></p>
-<p>See video of select by radius</p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Select_by_radius.mp4"></video></p>
-</section>
-<section id="spatial-queries-select-by-location">
-<h3>Spatial queries: select by location<a class="headerlink" href="#spatial-queries-select-by-location" title="Permalink to this heading">#</a></h3>
-<p>This section can not only be used to show the features but also to get visual idea of the spatial relationship of different areas together. It has several spatial query operations which includes intersect, contain, disjoint, equal, touch, overlap, are within and cross.</p>
-<ul class="simple">
-<li><p>Example below shows how to select by location by intersect. We want to see the spatial relationship between Nigeria and its neighboring countries in term of intersect by location.</p></li>
-<li><p>Click on icon number 1 and select by location. You will select features from which area or shapefile you want from icon 3 and icon 5 as the shapefile you want to intersect with. Icon 4 shows the various operations that can be down with select by location. Then click on run - icon 6, and and close to see the intersect on display.</p></li>
-</ul>
-<p><img alt="" src="../../_images/Select_by_location_intersect.png" /></p>
-<ul class="simple">
-<li><p>The below screenshot shows the four countries that intersect Nigeria in yellow color. You can as well check the features of these four countries by opeing attribute table and view selected features.</p></li>
-</ul>
-<p><img alt="" src="../../_images/Select_by_location_intersect_output.png" /></p>
-<p>See video of select by location with intersect</p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Select_by_location_intersect.mp4"></video></p>
-<p>Additionally, you can play around all the geometric predictions of the features to be familiar with them. The example below shows selection by location by disjoint. We loaded neighboring countires to be disjointed from Nigerian map and now you can see all the disjointed countries in yellow color.</p>
-<p><img alt="" src="../../_images/Select_by_location_disjoint.png" /></p>
-<p>You can see the features of those countries by attribute table and show selected features.</p>
-</section>
-</section>
-<section id="non-spatial-queries">
-<h2>Non-spatial queries<a class="headerlink" href="#non-spatial-queries" title="Permalink to this heading">#</a></h2>
-<p>Non-spatial queries describe characteristics of the features and this query show a place or feature irrespective of its location i.e. <strong>what</strong> instead of <strong>where</strong>. It is totally independent of geographic location and not relating to, occupying, or having the character of space. Non-spatial queries are crucial for analyzing and understanding the data associated with the spatial features in a GIS project, providing insights and facilitating decision-making based on non-spatial attributes. Non-spatial data is also known as attribute data.</p>
-<p>There are two ways by which you can select and show the features of non-spatial data. Among which are manual selection or just by click and select by expression (arithmetic operators, string operators, logical operator etc.).</p>
+<p>Geodata selection and queries in QGIS allow a targeted selection of parts of geospatial datasets. This can be utilized for filtering and analyzing geospatial information, which are essential tasks when working with spatial data.
+<br />
+<br />
+Three general types of selection/queries in QGIS that will cover the majority of your need include:
+<strong>1. Manual Selection:</strong> Selection by manually choosing features with one of various selection tools offered by QGIS.</p>
+<p><strong>2. Attribute based Selection:</strong> Selection based on attribute values stored in the attribute table.</p>
+<p><strong>3. Layer based spatial Selection:</strong> Selecting features in one layer based on specified geometric relationships with features in another layer.</p>
 <section id="manual-selection">
-<h3>Manual selection<a class="headerlink" href="#manual-selection" title="Permalink to this heading">#</a></h3>
-<p>We want to manually select three regions in the below vector layer through the attribute table. Open the attribute table, select any of the place you would like to select, press control bottom on your PC and click on any other features you would like to select. Then, you can click on show selected features and it will be automatically highlighted in yellow color on the Qgis display panel.</p>
-<p><img alt="" src="../../_images/Manual_select_by_attribute_table.png" /></p>
-<p>See video
-<video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Manual_selection.mp4"></video></p>
-</section>
-<section id="select-by-expression">
-<h3>Select by Expression<a class="headerlink" href="#select-by-expression" title="Permalink to this heading">#</a></h3>
-<p>You can use the “Select by expression” option in the <strong>layer properties</strong> (see icon 1) or through the <strong>Select</strong> menu in the attribute table (see icon 2) to apply an expression to a layer. Sometimes, you can also find the icon of select by expression at (see icon 3) by click on it and choose select features by expression or just by Ctrl plus F3 on your key board. This option can be used to select features based on attribute data. Icon 4 is the select by expression command prompt where your expression will be written.</p>
-<p><img alt="" src="../../_images/Opening_Select_by_Expression.png" /></p>
-</section>
-<section id="select-by-expression-arithmetic-operators-integer-float-fields">
-<h3>Select by Expression- Arithmetic operators (integer, float fields)<a class="headerlink" href="#select-by-expression-arithmetic-operators-integer-float-fields" title="Permalink to this heading">#</a></h3>
-<p>•	&gt;, &lt;, =, !=</p>
-<p>•	Note that your command in the select by expression depend on the attribute features on the shape file you want express.</p>
-<p>•	For example, imagine that you want to show the State that has more than 10 million <strong>shape-length</strong> in the below map of Nigeria showing its 37 States.</p>
+<h2>Manual Selection<a class="headerlink" href="#manual-selection" title="Permalink to this heading">#</a></h2>
+<p>Manual selection is done mostly using one of the click based selection tools available under   in your project toolbar (alternative: <code class="docutils literal notranslate"><span class="pre">Edit</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Select</span></code>). These include <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Feature(s)</span></code>, <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Feature</span> <span class="pre">by</span> <span class="pre">Polygon</span></code>, <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Feature</span> <span class="pre">by</span> <span class="pre">Freehand</span></code> and <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Feature</span> <span class="pre">by</span> <span class="pre">Radius</span></code>.
+<br />
+<br />
+Example: <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Feature(s)</span></code></p>
 <ol class="arabic simple">
-<li><p>Firstly, select your file from the layer panel, open the select by expression table, click on Fields and Values (don’t forget that these fields and values depends on the characteristics of the file you are opening).</p></li>
-<li><p>Scroll down to shape length and double click on it, you can then see it at the expression layer display.</p></li>
-<li><p>Go back to the search bar layer by click on the operators to select the arithmetic command you would like to use. In this case, we are using &gt; sign because we want to figure out the state that has more than 10 million for instance.</p></li>
-<li><p>After double click on the greater than sign, then input the numeric command that you want to use. In this case we enter 10.</p></li>
-<li><p>Lastly, click on select features. It will automatically select all the states that have more than 10 million in its shape length. You can as well see the number of selected features at the top of the select by expression command prompt layer. Then open the attribute table to see the selected features.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Feature(s)</span></code> in the drop down menu of <img alt="" src="../../_images/mActionSelectRectangle.png" /></p></li>
+<li><p>Select features by clicking on the or drawing a rectangle overlapping them</p></li>
+<li><p>Use the tool outside of selectable features to end your selection</p></li>
 </ol>
-<p><img alt="" src="../../_images/Select_by_Expression_greater_a.png" /></p>
-<p>The below are the thelve features selected.</p>
-<p><img alt="" src="../../_images/Select_by_Expression_greater_b.png" /></p>
-<p>See video</p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Select_by_expression_arithmetic_operators.mp4"></video></p>
+<p>Tip: Holding down “Shift” during click based selction allows for selection of multiple features</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Example: Manually select country polygons by click<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_select_features_by_click_wiki.mp4"></video></p>
+</div>
+</details><p>The other options of <img alt="" src="../../_images/mActionSelectRectangle.png" /> function in a similar way selecting all features overlapping with the respective geometry generated by the tools.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Example: Manually select countrys by drawing a polygon<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_select_features_by_polygon.mp4"></video></p>
+</div>
+</details><p>Selected features are highlighted in bright yellow in the geospatial view and blue in the attribute table.</p>
 </section>
-<section id="select-by-expression-string-operators-text-fields-e-g-like">
-<h3>Select by Expression- String operators (text fields e.g “Like”)<a class="headerlink" href="#select-by-expression-string-operators-text-fields-e-g-like" title="Permalink to this heading">#</a></h3>
-<p>•	Imagine you want to select a country like Nigeria.</p>
-<p><img alt="" src="../../_images/Select_by_Expression_like.png" /></p>
-<p>To select by expression by like, please follow this steps:</p>
+<section id="attribute-based-selection">
+<h2>Attribute based selection<a class="headerlink" href="#attribute-based-selection" title="Permalink to this heading">#</a></h2>
+<p>A query based on specific Attributes can be done utilizing the <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Features</span> <span class="pre">by</span> <span class="pre">Expression</span></code> tool available under <img alt="" src="../../_images/mActionSelectbyExpression.png" /> in the project toolbar and the attribute table (alternative: <code class="docutils literal notranslate"><span class="pre">Edit</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Select</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Select</span></code> Features by Expression).</p>
 <ol class="arabic simple">
-<li><p>Select the file you would like to run</p></li>
-<li><p>Click on select by expression</p></li>
-<li><p>Click on Fields and Values</p></li>
-<li><p>Select admin0Name (This means names of the countries according to the attribute table fields names)</p></li>
-<li><p>Click on Operators to select the command you would like to use</p></li>
-<li><p>Select ‘Like’</p></li>
-<li><p>Click again on the Fields and Values</p></li>
-<li><p>Click on All Unique</p></li>
-<li><p>Select Nigeria i.e. we want to express to select a country like Nigeria</p></li>
-<li><p>Click on select features</p></li>
-<li><p>You call all see the expression command here</p></li>
-<li><p>A country like Nigeria has been selected and you can open the attribute table to see the selected feature(s).</p></li>
+<li><p>In the tool interface expand <code class="docutils literal notranslate"><span class="pre">Fields</span> <span class="pre">and</span> <span class="pre">Values</span></code> in the right hand panel</p></li>
+<li><p>Choose the field you want to base your selection on by double clicking it (it now should appear in the expression panel on the left hand side)</p></li>
+<li><p>Use a expression utilizing specific operators (see <strong>WIKI</strong>) to specify your selection in the left hand panel (e.g “”continent”  LIKE  ‘Asia’” to select all features with the value “Asia” in the field “continent” )</p></li>
 </ol>
-</section>
-<section id="select-by-expression-placeholder-e-g">
-<h3>Select by Expression- Placeholder (e.g %)<a class="headerlink" href="#select-by-expression-placeholder-e-g" title="Permalink to this heading">#</a></h3>
-<p>•	Imagine you want to select all the countries that ends with <strong>’a’</strong></p>
-<p><img alt="" src="../../_images/Select_by_Expression_placeholder.png" /></p>
+<p>Tip: Click on “Show Values” in the top right corner when a field is selected to get a overview over the different values of the respective field by clicking “All Unique”/”10 Samples”. Double click values to use them in the expression panel on the left.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Example: Select all country polygons that share the value “Asia” in the field “continent”<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_select_by_expression_like_wiki.mp4"></video></p>
+</div>
+</details></section>
+<section id="layer-based-spatial-selection">
+<h2>Layer based Spatial Selection<a class="headerlink" href="#layer-based-spatial-selection" title="Permalink to this heading">#</a></h2>
+<p>Spatial selection of features allows to select parts of a layer based on their relationship with features in another geospatial layer (e.g. the selection of all point features in layer A that are located within a polygon feature in Layer B). It can be achieved by using the tool “Select by Location” available under <img alt="" src="../../_images/mActionSelectbyLocation.png" /> in the project toolbar or (alternative: <code class="docutils literal notranslate"><span class="pre">Vector</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Research</span> <span class="pre">Tools</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">by</span> <span class="pre">Location</span></code>)</p>
 <ol class="arabic simple">
-<li><p>Follow the previous steps.</p></li>
-<li><p>You have three input to express here. Click on Fields and Values to select admin0RefName (Name of the countries title as per the attribute table)</p></li>
-<li><p>Go to operators to select Like</p></li>
-<li><p>You can enter manually at the expression layer ‘%a’ (i.e. the countries that ends with a)</p></li>
-<li><p>Click on Select features to see all the countries that ends with <strong>a</strong>.</p></li>
-</ol>
-</section>
-<section id="select-by-expression-logical-operators-and-or">
-<h3>Select by Expression- Logical operators (AND, OR)<a class="headerlink" href="#select-by-expression-logical-operators-and-or" title="Permalink to this heading">#</a></h3>
-<p>This selection adds one or two command expression together. For example, you want to select the state that has more than 12 million in shape length AND that has more than 3 million shape area simultaneously from the map of 37 States of Nigeria. Then this command holds: <strong>“Shape Length” &gt; 12 AND  “Shape_Area” &gt; 3</strong> .</p>
-<p><img alt="" src="../../_images/Select_by_Expression_AND.png" /></p>
-<p>You can get it down by a click on Fields and Values, proceed to click on Shape length and input your arithmetic operator &gt; with the figure of your choice via Operators, then add the connector which is <strong>AND</strong> and go back to Fields and Values to input the second command of Shape area and add the arithmetic operator of &gt; with the figure you want. Lastly, click on select features to see the states that have shape length of more than 12 million and at the same time having shape area of more than 3 million. Visit the attribute table to see the selected features.</p>
-</section>
-</section>
-<section id="save-selected-features">
-<h2>Save selected features<a class="headerlink" href="#save-selected-features" title="Permalink to this heading">#</a></h2>
-<p>How to save selected features as a new file?</p>
-<p>You can save the selected features as a new shape file.</p>
+<li><p>In the tool interface select the vector choose the vector layer you want to select features from under “Select features from” and the layer you want to base the selection on under “By comparing to the features from”.</p></li>
+<li><p>Choose the geometric operator that will be utilized for the selection of features (see bottom paragraph)</p></li>
+<li><p>In the bottom promt choose how you want to procede with the newly selected features. The option include:</p>
 <ol class="arabic simple">
-<li><p>Click on Layer properties</p></li>
-<li><p>Click on Export</p></li>
-<li><p>Save only selected features</p></li>
+<li><p>Creating a new selection</p></li>
+<li><p>Adding to the current selection</p></li>
+<li><p>Select within the current selection</p></li>
+<li><p>Removing from the current selection</p></li>
 </ol>
-<p><img alt="" src="../../_images/Save_selected_features_by_export.png" /></p>
-<p>•	Right click on the shape file you want to save the selected features from in the Layers panel
-•	Click on export
-•	Save selected features as
-•	A save vector layer will pump up and you can change the Format if you want but in this case we are using GeoPackage format
-•	Click on file name to properly save it in the folder of your choice on your PC
-•	Click on save only selected features
-•	Click on Ok.
-•	Then, it will automatically appear on your Layer panel as seen below.</p>
-<p><img alt="" src="../../_images/Save_selected_features_by_export_a.png" /></p>
-<p>The video below shows how to export and save selected features.</p>
-<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Saved_selected_features.mp4"></video></p>
+</li>
+</ol>
+<p>Selected features are again highlighted in bright yellow in. your geospatial interface.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Example: Select Cities (Point fatures) that intersect with the polygon “China”<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_select_by_location_intersect_wiki.mp4"></video></p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Example 2: Selct all country polygons that touch the polygon “China”<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_select_by_location_touch_wiki.mp4"></video></p>
+</div>
+</details><section id="deep-dive-on-geo-metric-operators">
+<h3>Deep dive on geo metric operators<a class="headerlink" href="#deep-dive-on-geo-metric-operators" title="Permalink to this heading">#</a></h3>
+<p>The geometric operators define the conditions of the relationship bewteen your source and target layer that the selection will be based on. There are eight total options:</p>
+<p><strong>1. Intersect</strong><br />
+Features from the target layer are selected if they intersect with any features in the source layer.<br />
+<strong>Example:</strong> Selecting all roads that cross a polygon representing a national park.</p>
+<p><strong>2. Contain</strong><br />
+Features from the target layer are selected if they completely contain features in the source layer.<br />
+<strong>Example:</strong> Selecting a country polygon that completely contains smaller polygons representing cities.</p>
+<p><strong>3. Disjoint</strong><br />
+Features are disjoint if they do not share any common point or area; they have no spatial intersection.<br />
+<strong>Example:</strong> Selecting administrative districts that do not share any common boundary or area.</p>
+<p><strong>4. Equal</strong><br />
+Features are equal if their geometries are identical, meaning they have the same shape, size, and spatial orientation.<br />
+<strong>Example:</strong> Selecting two line segments with the exact same set of coordinates.</p>
+<p><strong>5. Touch</strong><br />
+Features from the target layer are selected if they touch (share a boundary with) features in the source layer.<br />
+<strong>Example:</strong> Selecting parks that touch a specific road.</p>
+<p><strong>6. Overlap</strong><br />
+Features from the target layer are selected if they share any common spac with features in the source layer.<br />
+<strong>Example:</strong> Selecting land parcels that overlap with a proposed construction zone.</p>
+<p><strong>7. Are within</strong><br />
+Features from the target layer are selected if they are completely within features in the source layer.<br />
+<strong>Example:</strong> Selecting building polygons that are entirely within a polygon representing a city boundary.</p>
+<p><strong>8. Cross</strong><br />
+Features from the target layer are selected if they cross (have a line segment that crosses) features in the source layer.<br />
+<strong>Example:</strong> Selecting rivers that cross a road.</p>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -791,26 +737,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries">Spatial queries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-click">Spatial queries: select by click</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-selection">Manual Selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute-based-selection">Attribute based selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-based-spatial-selection">Layer based Spatial Selection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-dive-on-geo-metric-operators">Deep dive on geo metric operators</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-queries">Geodata queries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Spatial queries: select by click</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-polygon">Spatial queries: select by polygon</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-queries-select-by-location">Spatial queries: select by location</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-spatial-queries">Non-spatial queries</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manual-selection">Manual selection</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression">Select by Expression</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression-arithmetic-operators-integer-float-fields">Select by Expression- Arithmetic operators (integer, float fields)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression-string-operators-text-fields-e-g-like">Select by Expression- String operators (text fields e.g “Like”)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression-placeholder-e-g">Select by Expression- Placeholder (e.g %)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-by-expression-logical-operators-and-or">Select by Expression- Logical operators (AND, OR)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#save-selected-features">Save selected features</a></li>
 </ul>
   </nav></div>
 
