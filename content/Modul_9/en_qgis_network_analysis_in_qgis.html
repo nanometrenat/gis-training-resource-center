@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Data Analysis Exercise 1 &#8212; GIS Resource Training Center</title>
+    <title>Network Analysis in QGIS &#8212; GIS Resource Training Center</title>
   
   
   
@@ -62,11 +62,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_6/en_qgis_data_analysis_ex1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_9/en_qgis_network_analysis_in_qgis';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="QGIS Trigger Workflow for Somalia" href="../GIS_AA/en_qgis_drought_trigger_somalia.html" />
-    <link rel="prev" title="Data Analysis with QGIS" href="en_qgis_data_analysis_theorie.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -304,9 +302,9 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 6- Data analysis with QGIS</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="en_qgis_data_analysis_theorie.html">Data Analysis with QGIS</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Data Analysis Exercise 1</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Modul_6/en_qgis_data_analysis_theorie.html">Data Analysis with QGIS</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Modul_6/en_qgis_data_analysis_ex1.html">Data Analysis Exercise 1</a></li>
 </ul>
 </li>
 </ul>
@@ -406,7 +404,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/GIScience/gis-training-resource-center/issues/new?title=Issue%20on%20page%20%2Fcontent/Modul_6/en_qgis_data_analysis_ex1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/GIScience/gis-training-resource-center/issues/new?title=Issue%20on%20page%20%2Fcontent/Modul_9/en_qgis_network_analysis_in_qgis.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -436,7 +434,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/content/Modul_6/en_qgis_data_analysis_ex1.md" target="_blank"
+      <li><a href="../../_sources/content/Modul_9/en_qgis_network_analysis_in_qgis.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -518,7 +516,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data Analysis Exercise 1</h1>
+    <h1>Network Analysis in QGIS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -532,15 +530,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-analysis-exercise-1">
-<h1>Data Analysis Exercise 1<a class="headerlink" href="#data-analysis-exercise-1" title="Permalink to this heading">#</a></h1>
-<p>Actually we have plenty of exercises available</p>
-<p>rather old:
-<a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_9">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/tree/main/Exercise_9</a></p>
-<p>bit less old:
-<a class="reference external" href="https://drive.google.com/drive/folders/1mJiYBWNHsxgFMse9iprS0wV50J-veRQ9?usp=sharing">https://drive.google.com/drive/folders/1mJiYBWNHsxgFMse9iprS0wV50J-veRQ9?usp=sharing</a></p>
-<p>rather new:
-<a class="reference external" href="https://giscience.github.io/openrouteservice-workshop/workshop/qgis.html">https://giscience.github.io/openrouteservice-workshop/workshop/qgis.html</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="network-analysis-in-qgis">
+<h1>Network Analysis in QGIS<a class="headerlink" href="#network-analysis-in-qgis" title="Permalink to this heading">#</a></h1>
+<p>Basic network capabilities within QGIS</p>
+<p><a class="reference external" href="https://docs.qgis.org/3.34/en/docs/user_manual/processing_algs/qgis/networkanalysis.html?highlight=network">https://docs.qgis.org/3.34/en/docs/user_manual/processing_algs/qgis/networkanalysis.html?highlight=network</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -556,7 +549,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./content/Modul_6"
+            path: "./content/Modul_9"
         },
         predefinedOutput: true
     }
@@ -573,24 +566,6 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="en_qgis_data_analysis_theorie.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Data Analysis with QGIS</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="../GIS_AA/en_qgis_drought_trigger_somalia.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">QGIS Trigger Workflow for Somalia</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
