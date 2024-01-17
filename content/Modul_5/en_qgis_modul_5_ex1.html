@@ -507,7 +507,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -523,6 +525,24 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-indicator-processing">Part 1: Indicator Processing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Part 1: Indicator Processing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Task</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -535,6 +555,135 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="risk-assessment">
 <h1>Risk Assessment<a class="headerlink" href="#risk-assessment" title="Permalink to this heading">#</a></h1>
 <p><strong>🔙<a class="reference internal" href="../intro.html"><span class="doc std std-doc">Back to Homepage</span></a></strong></p>
+<section id="aim-of-the-exercise">
+<h2>Aim of the exercise:<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
+<p>In this exercise, you will learn how to digitise the positions of settlements by creating new datasets. Furthermore, you will learn how to enrich the simple geodata set with additional information.</p>
+</section>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<p>Download all datasets and save the folder on your computer and unzip the file. The zip folder includes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">som_admbnda_adm2_ocha_20230308.shp</span></code>: <a class="reference external" href="https://data.humdata.org/dataset/cod-ab-som">Somalia district boundaries (Admin level 2)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WHO_health_sites.shp</span></code>: <a class="reference external" href="https://data.humdata.org/dataset/somalia-health-facilities-data">Healthsites Somalia</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">som_ppp_2020_UNadj_constrained.tif</span></code> : <a class="reference external" href="https://hub.worldpop.org/geodata/summary?id=28892">Worldpop Population Counts Somalia </a></p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>All files still have their original names. However, feel free to modify their names if necessary to identify them more easily.</p>
+</div>
+</section>
+<section id="part-1-indicator-processing">
+<h2>Part 1: Indicator Processing<a class="headerlink" href="#part-1-indicator-processing" title="Permalink to this heading">#</a></h2>
+<section id="task">
+<h3>Task<a class="headerlink" href="#task" title="Permalink to this heading">#</a></h3>
+<p>This first part of the exercise will prepare the data in order to serve as indicator values. We will work on vulnerability indicators and to calculate the vulnerability index, we will finally join all the relevant data using spatial geodataprocessing into a single vector layer.</p>
+<ol class="arabic simple">
+<li><p>Load the Somalia district boundaries (admin level 2) (<code class="docutils literal notranslate"><span class="pre">som_admbnda_adm2_ocha_20230308.shp</span></code>) and the Healhsites Somalia (`WHO_health_sites.shp)  into QGIS.</p></li>
+<li><p>Make sure to that both datasets are in the same projection. In this case we have two different projections and we will reproject the <strong>Healthsites Somalia</strong> into EPSG 4326. Use the tool <code class="docutils literal notranslate"><span class="pre">Reproject</span> <span class="pre">layer</span></code> for this process. See the Wiki entry on <strong>Projections</strong> for further information.</p></li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Before you start doing any GIS operations, <strong>always explore the data</strong>. Always check if the projections of the different layers are the same.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>In order to bring the information of the healthsites point layer into a usable indicator value we can now count the healthsites per district. We can use the tool <strong>Count points in polygon</strong> from the Processing Toolbox. Take a look on the tools description and the further features it brings. For our task we only have to specify polygon and point input layer, the count field name (e.g. <strong>Num_healtsites</strong>) and choose name and directory of the output layer. Explore the output.</p></li>
+</ol>
+<figure class="align-default" id="count-points-polygon">
+<a class="reference internal image-reference" href="../../_images/Count_points_polygon.PNG"><img alt="../../_images/Count_points_polygon.PNG" src="../../_images/Count_points_polygon.PNG" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 102 </span><span class="caption-text">Screenshot of different sizes of the attribute tables</span><a class="headerlink" href="#count-points-polygon" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Now we have the number of healthsites per district. Nevertheless, it would be interesting to know how mnay healthsites exist per 10.000 people. For this task we firstly need to know how many inhabitants has each district. We can proces this information by using the <strong>Zonal statistics</strong> tool from the Processing Toolbox. See the Wiki entry for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html?highlight=zonal+statistics#basic-raster-operations">Zonal Statistics</a> fur further information. Specify your inout layer (Output of step 3 e.g. <strong>Num_healtsites</strong>) and your raster layer (Worldpop Raster), specify the column prefix (e.g. _<strong>wpop</strong>) and select the statistics to caclulate (<strong>sum</strong>). For each distrcit all pixel values of the Worldpop Raster that fall inside of it will be summed up. Explore the output.</p></li>
+</ol>
+<figure class="align-default" id="czonal-statistics">
+<a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_zonal_statistics.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_zonal_statistics.PNG" src="../../_images/en_qgis_modul_5_ex1_zonal_statistics.PNG" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 103 </span><span class="caption-text">Screenshot of different sizes of the attribute tables</span><a class="headerlink" href="#czonal-statistics" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic" start="5">
+<li><p>Now we know the numbers of healthsites and the number of population per district. We are ready to caclulate our final indicator __Number of healthsites per 10.000 inhabitants.
+*Open the attribute table of “Num_healthsites_wpop” (Output of step 4) and Open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code> by clicking on the button <img alt="" src="../../_images/mActionCalculateField.png" />. By checkin the box for <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">field</span></code> we can conduct calculation and saving them right away in a new attribute column.
+*define the output field name as “healthsites_10000” and set the <code class="docutils literal notranslate"><span class="pre">Type</span></code> to <code class="docutils literal notranslate"><span class="pre">Decimal</span> <span class="pre">Number(real)</span></code>.
+*Now we will caclulate in the expression field the number of healthsites per 10.000 inhabitants:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">(&quot;Num_healthsites&quot;/&quot;_wpopsum&quot;)*10000</span></code></p>
+</div></blockquote>
+<p>*When you are down click <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits and switch off the editing mode by again clicking on <img alt="" src="../../_images/mActionToggleEditing.png" />(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.html#attribute-table-data-editing">Wiki Video</a>).</p>
+</li>
+</ol>
+<figure class="align-default" id="field-calculator">
+<a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_field_calc.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_field_calc.PNG" src="../../_images/en_qgis_modul_5_ex1_field_calc.PNG" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 104 </span><span class="caption-text">Screenshot of different sizes of the attribute tables</span><a class="headerlink" href="#field-calculator" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="6">
+<li><p>Land Degradation</p></li>
+</ol>
+<p>A very important factor of areas vulnerable to drought is the siuation with regards to land degradation. It is an important factor not only for agriculture but also livestock herds, both as main sources of livelihood. We will try to add this information to our dataset:</p>
+<p>-<a class="reference external" href="https://spatial.faoswalim.org/layers/geonode:SOM_Land_Degradation_FAOSWALIM#/">Somalia Land degradation</a></p>
+<p>You will see that we can only download the information as image. This is a very common case when working with open data. We would have to digitize the information in order to be able to use it for further processing. Find the digitized version here.</p>
+<p>Explore the data. We have a column “LandD_CLas” which indicators the severity of land degradation from 0 to 3. We now want to join the respective land degradation class to its belongig district by considering the largest overlapping area.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*Open the tool `Join attributes by location` from the Processing Toolbox.
+*define `Input Layer` (layer you want to enrich) and `Join Layer` (dataset with the additional information)
+*select `ìnteresects` as geometric predicate and add only the `LandD_class` as field to add to our base layer.
+*as `Join Type` set `Take attributes of the feature with largest overlap only (one-to-one)`
+*Save as Layer
+</pre></div>
+</div>
+<p>See the Wiki entrey <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_spatial_joins_wiki.html#spatial-joins">Spatial Joins </a> for further information.</p>
+<figure class="align-default" id="join-attributes-by-location">
+<a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_join.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_join.PNG" src="../../_images/en_qgis_modul_5_ex1_join.PNG" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 105 </span><span class="caption-text">Screenshot of Join attribute to location s</span><a class="headerlink" href="#join-attributes-by-location" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="7">
+<li><p>Malnutrition</p></li>
+</ol>
+<p>Another very important indicator to describe vulnerability in a distrcit is the acute malnutirion, especially in children under 5 years old.</p>
+<p>Dowload the data we need:
+<code class="docutils literal notranslate"><span class="pre">Somalia_malnutrion_district_2022_2023.xlsx</span></code>:<a class="reference external" href="https://data.humdata.org/dataset/somalia-acute-malnutrition-burden-and-prevalence?">Somalia: Acute Malnutrition</a></p>
+<p>Explore the data. In which resolution is the data avalaible? DO you have ideas how we can add it to our indicator dataset?</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>*Save the Excel file as csv by clicking on `Save file as` and choosing `csv (delimiter-separated)`
+*Load the csv-file into you QGIS by drag and drop
+*Open the tool `Join attributes by field value` from the Processing Toolbox
+*specify our two datasets we want to join as well as the common field available for joining (`ADM2_EN` and `adm2name`)
+*as `join type` set `Take attributes of the first matching feature only (one-to-one)`
+*Save the Layer to File
+</pre></div>
+</div>
+<figure class="align-default" id="join-attributes-by-field-value">
+<a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_joinbyvalue.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_joinbyvalue.PNG" src="../../_images/en_qgis_modul_5_ex1_joinbyvalue.PNG" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 106 </span><span class="caption-text">Screenshot of Join attributes by field value</span><a class="headerlink" href="#join-attributes-by-field-value" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the Log file you will get ba message: “6 feature(s) from input layer could not be matched”</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/en_qgis_module_5_ex1_error.PNG"><img alt="../../_images/en_qgis_module_5_ex1_error.PNG" src="../../_images/en_qgis_module_5_ex1_error.PNG" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 107 </span><span class="caption-text">Screenshot of Join attributes by field value</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Open the attribute tables from both, your output layer and the csv file in order to find out the roots of the problem. In the output layer doble-click on <code class="docutils literal notranslate"><span class="pre">affunderfive</span></code> and bring <code class="docutils literal notranslate"><span class="pre">NULL</span></code> Values to the top. Check the joining attribute “ADM2_EN” and compare it with the joining attribute “adm2name” from the csv-file.
+The Spelling of the distrcit anmes differs. Since we take the admin-2-boundaries as base layer for all indicators we can now adapt the names in the csv file.
+You can edit the names in 6 cases in the Attribute Table of the csv-file by toggling editing mode, or you can simply edit the csv file in excel an load it again into QGIS.</p>
+</section>
+</section>
+<section id="id2">
+<h2>Part 1: Indicator Processing<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="id3">
+<h3>Task<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>In the second part of the exercise we will showcase the steps how to come from indicators to a risk analysis.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -591,6 +740,30 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-indicator-processing">Part 1: Indicator Processing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Part 1: Indicator Processing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Task</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
