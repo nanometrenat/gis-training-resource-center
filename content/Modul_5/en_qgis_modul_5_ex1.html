@@ -737,7 +737,7 @@ You can edit the names in 6 cases in the Attribute Table of the csv-file by togg
 <h3>Task<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p>In the second part of the exercise we will showcase the steps how to come from indicators to a risk analysis.</p>
 <p>You can find all the data for the second part of the exercise in the “Modul_5_Ex1_Part_2”.
-Download the data folder for the second part of the exercise: “Modul_5_Ex1_Part_2”. We prepared the vulnerabilty layer, simplified exposure and lack of coping capacity layers have been prepared for this exercise. Theses layer have only 3 to 4 indicators for complexity reasons. See below an example of indicators that were used for Somnalia:</p>
+Download the data folder for the second part of the exercise: “Modul_5_Ex1_Part_2”. We processed the vulnerabilty layer in the first part of the exercise; simplified exposure and lack of coping capacity layers have been prepared in advance for this exercise. These layers have only 3 to 4 indicators for complexity reasons. See below an example of indicators that were used for Somnlia:</p>
 <figure class="align-default" id="indicators-risk-assessment">
 <a class="reference internal image-reference" href="../../_images/Indicators_Rsik_Assessment_Somalia.png"><img alt="../../_images/Indicators_Rsik_Assessment_Somalia.png" src="../../_images/Indicators_Rsik_Assessment_Somalia.png" style="width: 80%;" /></a>
 <figcaption>
@@ -754,7 +754,7 @@ Download the data folder for the second part of the exercise: “Modul_5_Ex1_Par
 <li><p>define the output field name as “LandD_class_norm” and set the <code class="docutils literal notranslate"><span class="pre">Type</span></code> to <code class="docutils literal notranslate"><span class="pre">Decimal</span> <span class="pre">Number(real)</span></code>.</p></li>
 <li><p>Now we will caclulate in the expression field the normalization of the indicator:</p></li>
 </ul>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>(&quot;LandD_Clas&quot;  -  minimum(  &quot;LandD_Clas&quot; ))/( maximum(  &quot;LandD_Clas&quot;) - minimum(  &quot;LandD_Clas&quot; ))
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>(&quot;LandD_Clas&quot; - minimum( &quot;LandD_Clas&quot; ))/( maximum( &quot;LandD_Clas&quot;) - minimum( &quot;LandD_Clas&quot; ))
 </pre></div>
 </div>
 <ul class="simple">
@@ -893,9 +893,7 @@ Download the data folder for the second part of the exercise: “Modul_5_Ex1_Par
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The geometric mean is a specific type of average that is calculated by multiplying together all the values in a dataset and then taking the nth root of the product, where n is the number of values. For two values, the geometric mean is the square root of their product. For three values, it&#39;s the cube root, and so on.
-</pre></div>
-</div>
+<p>The geometric mean is a specific type of average that is calculated by multiplying together all the values in a dataset and then taking the nth root of the product, where n is the number of values. For two values, the geometric mean is the square root of their product. For three values, it’s the cube root, and so on.</p>
 </div>
 </section>
 <section id="visualization-of-the-results">
