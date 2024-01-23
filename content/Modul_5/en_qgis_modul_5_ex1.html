@@ -301,9 +301,6 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="en_qgis_modul_5_exercises.html">Exercises Modul 5- Intermediate GIS operations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Risk Assessment</a></li>
-
-
-
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_modul_5_ex2.html">Trigger &amp; Intervention Map for Forecast-based-Action</a></li>
 </ul>
 </li>
@@ -547,42 +544,32 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Risk Assessment</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-indicator-processing">Part 1: Indicator Processing</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#land-degradation">6. Land Degradation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#malnutrition">7. Malnutrition</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#head-download-the-data-folder-for-modul-5-exercise2-drought-monitoring-trigger-zip-here-in-the-folder-you-can-find-two-folders-one-for-the-first-part-modul-5-ex1-part-1-of-the-exercise-and-one-for-the-second-part-modul-5-ex1-part-2">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Download the data folder for “Modul_5_Exercise2_Drought_Monitoring_Trigger.zip” <strong>Here</strong>. In the folder, you can find two folders. One for the first part (“Modul_5_Ex1_Part_1”) of the exercise and one for the second part (“Modul_5_Ex1_Part_2”).</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#head-4-now-we-have-the-number-of-healthsites-per-district-nevertheless-it-would-be-interesting-to-know-how-mnay-healthsites-exist-per-10-000-people-for-this-task-we-firstly-need-to-know-how-many-inhabitants-has-each-district-we-can-proces-this-information-by-using-the-zonal-statistics-tool-from-the-processing-toolbox-see-the-wiki-entry-for-zonal-statistics-fur-further-information-specify-your-input-layer-output-of-step-3-e-g-num-healtsites-and-your-raster-layer-worldpop-raster-specify-the-column-prefix-e-g-wpop-and-select-the-statistics-to-caclulate-sum-for-each-distrcit-all-pixel-values-of-the-worldpop-raster-that-fall-inside-of-it-will-be-summed-up-explore-the-output">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-4. Now we have the number of healthsites per district. Nevertheless, it would be interesting to know how mnay healthsites exist per 10.000 people. For this task we firstly need to know how many inhabitants has each district. We can proces this information by using the <strong>Zonal statistics</strong> tool from the Processing Toolbox. See the Wiki entry for Zonal Statistics fur further information. Specify your input layer (Output of step 3 e.g. <strong>Num_healtsites</strong>) and your raster layer (Worldpop Raster), specify the column prefix (e.g. _<strong>wpop</strong>) and select the statistics to caclulate (<strong>sum</strong>). For each distrcit all pixel values of the Worldpop Raster that fall inside of it will be summed up. Explore the output.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#land-degradation">6. Land Degradation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#malnutrition">7. Malnutrition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-risk-caclulation">Part 2: Risk Caclulation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Task</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Task</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#normalization">1. Normalization</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#directions">2. Directions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#weighting-of-indicators">3. Weighting of Indicators</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-score-index">4. Vulnerability Score / Index</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-risk-assessment">5. Prepare Risk Assessment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-calculation">6. Risk Calculation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-the-results">6. Visualization of the Results</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#automatization-of-the-process">7. Automatization of the Process</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#head-you-can-find-all-the-data-for-the-second-part-of-the-exercise-in-the-modul-5-ex1-part-2">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-You can find all the data for the second part of the exercise in the “Modul_5_Ex1_Part_2”.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalization">1. Normalization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions">2. Directions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weighting-of-indicators">3. Weighting of Indicators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-score-index">4. Vulnerability Score / Index</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-risk-assessment">5. Prepare Risk Assessment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-calculation">6. Risk Calculation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-the-results">6. Visualization of the Results</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automatization-of-the-process">7. Automatization of the Process</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -615,33 +602,14 @@ The collection and processing of this information varies throughout different co
 </section>
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="head-download-the-data-folder-for-modul-5-exercise2-drought-monitoring-trigger-zip-here-in-the-folder-you-can-find-two-folders-one-for-the-first-part-modul-5-ex1-part-1-of-the-exercise-and-one-for-the-second-part-modul-5-ex1-part-2">
-<h1>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Download the data folder for “Modul_5_Exercise2_Drought_Monitoring_Trigger.zip” <strong><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_5/Modul_5_Exercise1_Risk_Assessment/Modul_5_Exercise1_Risk_Assessment.zip">Here</a></strong>. In the folder, you can find two folders. One for the first part (“Modul_5_Ex1_Part_1”) of the exercise and one for the second part (“Modul_5_Ex1_Part_2”).<a class="headerlink" href="#head-download-the-data-folder-for-modul-5-exercise2-drought-monitoring-trigger-zip-here-in-the-folder-you-can-find-two-folders-one-for-the-first-part-modul-5-ex1-part-1-of-the-exercise-and-one-for-the-second-part-modul-5-ex1-part-2" title="Permalink to this heading">#</a></h1>
+<p>Download the data folder for “Modul_5_Exercise2_Drought_Monitoring_Trigger.zip” <strong><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_5/Modul_5_Exercise1_Risk_Assessment/Modul_5_Exercise1_Risk_Assessment.zip">Here</a></strong>. In the folder, you can find two folders. One for the first part (“Modul_5_Ex1_Part_1”) of the exercise and one for the second part (“Modul_5_Ex1_Part_2”).</p>
 <p>Download the data folder for the first part of the exercise: “Modul_5_Ex1_Part_1”.</p>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><p>c8662df (hj)</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
 <p>Download all datasets and save the folder on your computer and unzip the file. The zip folder includes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">som_admbnda_adm2_ocha_20230308.shp</span></code>: <a class="reference external" href="https://data.humdata.org/dataset/cod-ab-som">Somalia district boundaries (Admin level 2)</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">WHO_health_sites.shp</span></code>: <a class="reference external" href="https://data.humdata.org/dataset/somalia-health-facilities-data">Healthsites Somalia</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">som_ppp_2020_UNadj_constrained.tif</span></code> : <a class="reference external" href="https://hub.worldpop.org/geodata/summary?id=28892">Worldpop Population Counts Somalia </a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">omalia_malnutrion_district_2022_2023.xlsx</span></code>:<a class="reference external" href="https://data.humdata.org/dataset/somalia-acute-malnutrition-burden-and-prevalence?">Somalia: Acute Malnutrition</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Somalia_malnutrion_district_2022_2023.xlsx</span></code>:<a class="reference external" href="https://data.humdata.org/dataset/somalia-acute-malnutrition-burden-and-prevalence?">Somalia: Acute Malnutrition</a></p></li>
 </ul>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
@@ -664,28 +632,9 @@ Download the data folder for “Modul_5_Exercise2_Drought_Monitoring_Trigger.zip
 <p><span class="caption-number">Fig. 100 </span><span class="caption-text">Count healthsites per district</span><a class="headerlink" href="#count-points-polygon" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="head-4-now-we-have-the-number-of-healthsites-per-district-nevertheless-it-would-be-interesting-to-know-how-mnay-healthsites-exist-per-10-000-people-for-this-task-we-firstly-need-to-know-how-many-inhabitants-has-each-district-we-can-proces-this-information-by-using-the-zonal-statistics-tool-from-the-processing-toolbox-see-the-wiki-entry-for-zonal-statistics-fur-further-information-specify-your-input-layer-output-of-step-3-e-g-num-healtsites-and-your-raster-layer-worldpop-raster-specify-the-column-prefix-e-g-wpop-and-select-the-statistics-to-caclulate-sum-for-each-distrcit-all-pixel-values-of-the-worldpop-raster-that-fall-inside-of-it-will-be-summed-up-explore-the-output">
-<h1>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-4. Now we have the number of healthsites per district. Nevertheless, it would be interesting to know how mnay healthsites exist per 10.000 people. For this task we firstly need to know how many inhabitants has each district. We can proces this information by using the <strong>Zonal statistics</strong> tool from the Processing Toolbox. See the Wiki entry for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html?highlight=zonal+statistics#basic-raster-operations">Zonal Statistics</a> fur further information. Specify your input layer (Output of step 3 e.g. <strong>Num_healtsites</strong>) and your raster layer (Worldpop Raster), specify the column prefix (e.g. _<strong>wpop</strong>) and select the statistics to caclulate (<strong>sum</strong>). For each distrcit all pixel values of the Worldpop Raster that fall inside of it will be summed up. Explore the output.<a class="headerlink" href="#head-4-now-we-have-the-number-of-healthsites-per-district-nevertheless-it-would-be-interesting-to-know-how-mnay-healthsites-exist-per-10-000-people-for-this-task-we-firstly-need-to-know-how-many-inhabitants-has-each-district-we-can-proces-this-information-by-using-the-zonal-statistics-tool-from-the-processing-toolbox-see-the-wiki-entry-for-zonal-statistics-fur-further-information-specify-your-input-layer-output-of-step-3-e-g-num-healtsites-and-your-raster-layer-worldpop-raster-specify-the-column-prefix-e-g-wpop-and-select-the-statistics-to-caclulate-sum-for-each-distrcit-all-pixel-values-of-the-worldpop-raster-that-fall-inside-of-it-will-be-summed-up-explore-the-output" title="Permalink to this heading">#</a></h1>
 <ol class="arabic simple" start="4">
-<li><p>Now we have the number of healthsites per district. Nevertheless, it would be interesting to know how many healthsites exist per 10.000 people. For this task we firstly need to know how many inhabitants has each district. We can proces this information by using the <strong>Zonal statistics</strong> tool from the Processing Toolbox. See the Wiki entry for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html?highlight=zonal+statistics#basic-raster-operations">Zonal Statistics</a> fur further information. Specify your inout layer (Output of step 3 e.g. <strong>Num_healtsites</strong>) and your raster layer (Worldpop Raster), specify the column prefix (e.g. _<strong>wpop</strong>) and select the statistics to caclulate (<strong>sum</strong>). For each distrcit all pixel values of the Worldpop Raster that fall inside of it will be summed up. Explore the output.</p></li>
+<li><p>Now we have the number of healthsites per district. Nevertheless, it would be interesting to know how many healthsites exist per 10.000 people. For this task we firstly need to know how many inhabitants has each district. We can proces this information by using the <strong>Zonal statistics</strong> tool from the Processing Toolbox. See the Wiki entry for <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html?highlight=zonal+statistics#basic-raster-operations">Zonal Statistics</a> for further information. Specify your inout layer (Output of step 3 e.g. <strong>Num_healtsites</strong>) and your raster layer (Worldpop Raster), specify the column prefix (e.g. _<strong>wpop</strong>) and select the statistics to caclulate (<strong>sum</strong>). For each distrcit all pixel values of the Worldpop Raster that fall inside of it will be summed up. Explore the output.</p></li>
 </ol>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><p>c8662df (hj)</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
 <figure class="align-default" id="czonal-statistics">
 <a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_zonal_statistics.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_zonal_statistics.PNG" src="../../_images/en_qgis_modul_5_ex1_zonal_statistics.PNG" style="width: 100%;" /></a>
 <figcaption>
@@ -714,7 +663,7 @@ Download the data folder for “Modul_5_Exercise2_Drought_Monitoring_Trigger.zip
 </figcaption>
 </figure>
 <section id="land-degradation">
-<h2>6. Land Degradation<a class="headerlink" href="#land-degradation" title="Permalink to this heading">#</a></h2>
+<h3>6. Land Degradation<a class="headerlink" href="#land-degradation" title="Permalink to this heading">#</a></h3>
 <p>A very important factor of areas vulnerable to drought is the siuation with regards to land degradation. It is an important factor not only for agriculture but also livestock herds, both as main sources of livelihood. We will try to add this information to our dataset:</p>
 <p>-<a class="reference external" href="https://spatial.faoswalim.org/layers/geonode:SOM_Land_Degradation_FAOSWALIM#/">Somalia Land degradation</a></p>
 <figure class="align-default" id="id1">
@@ -741,7 +690,7 @@ Download the data folder for “Modul_5_Exercise2_Drought_Monitoring_Trigger.zip
 </figure>
 </section>
 <section id="malnutrition">
-<h2>7. Malnutrition<a class="headerlink" href="#malnutrition" title="Permalink to this heading">#</a></h2>
+<h3>7. Malnutrition<a class="headerlink" href="#malnutrition" title="Permalink to this heading">#</a></h3>
 <p>Another very important indicator to describe vulnerability in a district is the acute malnutirion, especially in children under 5 years old.</p>
 <p>Dowload the data we need:
 <code class="docutils literal notranslate"><span class="pre">Somalia_malnutrion_district_2022_2023.xlsx</span></code>:<a class="reference external" href="https://data.humdata.org/dataset/somalia-acute-malnutrition-burden-and-prevalence?">Somalia: Acute Malnutrition</a></p>
@@ -776,41 +725,22 @@ You can edit the names in 6 cases in the Attribute Table of the csv-file by togg
 <li><p>Make sure to call your final layer “vulnerability_districts”.</p></li>
 </ul>
 </section>
+</section>
 <section id="part-2-risk-caclulation">
 <h2>Part 2: Risk Caclulation<a class="headerlink" href="#part-2-risk-caclulation" title="Permalink to this heading">#</a></h2>
 <section id="id3">
 <h3>Task<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p>In the second part of the exercise we will showcase the steps how to come from indicators to a risk analysis.</p>
-</section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="head-you-can-find-all-the-data-for-the-second-part-of-the-exercise-in-the-modul-5-ex1-part-2">
-<h1>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-You can find all the data for the second part of the exercise in the “Modul_5_Ex1_Part_2”.<a class="headerlink" href="#head-you-can-find-all-the-data-for-the-second-part-of-the-exercise-in-the-modul-5-ex1-part-2" title="Permalink to this heading">#</a></h1>
-<p>Download the data folder for the second part of the exercise: “Modul_5_Ex1_Part_2”. We prepared the vulnerabilty layer, simplified exposure and lack of coping capacity layers have been prepared for this exercise. Theses layer have only 3 to 4 indicators for complexity reasons. See below an example of indicators that were used for Somnalia:</p>
+<p>You can find all the data for the second part of the exercise in the “Modul_5_Ex1_Part_2”.
+Download the data folder for the second part of the exercise: “Modul_5_Ex1_Part_2”. We prepared the vulnerabilty layer, simplified exposure and lack of coping capacity layers have been prepared for this exercise. Theses layer have only 3 to 4 indicators for complexity reasons. See below an example of indicators that were used for Somnalia:</p>
 <figure class="align-default" id="indicators-risk-assessment">
 <a class="reference internal image-reference" href="../../_images/Indicators_Rsik_Assessment_Somalia.png"><img alt="../../_images/Indicators_Rsik_Assessment_Somalia.png" src="../../_images/Indicators_Rsik_Assessment_Somalia.png" style="width: 80%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 107 </span><span class="caption-text">Indicators Risk Assessment</span><a class="headerlink" href="#indicators-risk-assessment" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><p>c8662df (hj)</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
 <section id="normalization">
-<h2>1. Normalization<a class="headerlink" href="#normalization" title="Permalink to this heading">#</a></h2>
+<h4>1. Normalization<a class="headerlink" href="#normalization" title="Permalink to this heading">#</a></h4>
 <p>For further caclulations with the indicators we need to make them comparable. For this reason we normalize them to a range of 0-1.</p>
 <p><span class="math notranslate nohighlight">\( Normalized\ Value\ = \frac{value\ -\ min value}{max\ value \ - \ min } \)</span></p>
 <ul class="simple">
@@ -819,13 +749,7 @@ You can find all the data for the second part of the exercise in the “Modul_5_
 <li><p>define the output field name as “LandD_class_norm” and set the <code class="docutils literal notranslate"><span class="pre">Type</span></code> to <code class="docutils literal notranslate"><span class="pre">Decimal</span> <span class="pre">Number(real)</span></code>.</p></li>
 <li><p>Now we will caclulate in the expression field the normalization of the indicator:</p></li>
 </ul>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>CASE
-
-(&quot;LandD_Clas&quot;  -  minimum( &quot;LandD_Clas&quot; ))/
-( maximum(  &quot;LandD_Clas&quot;) - 
-minimum(  &quot;LandD_Clas&quot; ))
-
-END
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>(&quot;LandD_Clas&quot;  -  minimum(  &quot;LandD_Clas&quot; ))/( maximum(  &quot;LandD_Clas&quot;) - minimum(  &quot;LandD_Clas&quot; ))
 </pre></div>
 </div>
 <ul class="simple">
@@ -843,13 +767,18 @@ END
 </ul>
 </section>
 <section id="directions">
-<h2>2. Directions<a class="headerlink" href="#directions" title="Permalink to this heading">#</a></h2>
+<h4>2. Directions<a class="headerlink" href="#directions" title="Permalink to this heading">#</a></h4>
 <p>The direction indicates if an indicator follows the predefined logic: “the higher the value, the worse the circumstances” meaning that higher values would result in a higher risk. The logic is adapted for all three dimensions, since it is generally logical to think about high values = high risk. If a respective indicator follows the logic the direction would be 1, if it does not, the direction would be = -1.</p>
 <ul class="simple">
-<li><p>In order to understand the directions of our indicators we first have to addign them to one of the dimensions (exposure, vulnerability, coping capacity).</p></li>
+<li><p>In order to understand the directions of our indicators we first have to assign them to one of the dimensions (exposure, vulnerability, coping capacity).</p></li>
 <li><p>To which dimension would you assign the processed indicators and what are their direction?</p></li>
 </ul>
 <p>Depending on the direction the next step will vary:</p>
+<p>If the <strong>direction is 1</strong> (indicating a positive weight), the formula is straightforward:</p>
+<p><span class="math notranslate nohighlight">\( weighted=   value  \times weight \)</span></p>
+<p>If the <strong>direction is -1</strong> (indicating a negative weight), the formula adjusts the value by subtracting it from 1 before applying the weight:</p>
+<p><span class="math notranslate nohighlight">\( weighted=   (1 - value)  \times weight \)</span></p>
+<p>The second formula inverts the value <span class="math notranslate nohighlight">\((1 - value)\)</span> before applying the weight, resulting in a different calculation for variables with negative weights.</p>
 <p>We will not go further into this in this training but you can find more information <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/GIS_AA/en_qgis_risk_assessment_plugin.html#risk">here</a>.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
@@ -857,7 +786,7 @@ END
 </div>
 </section>
 <section id="weighting-of-indicators">
-<h2>3. Weighting of Indicators<a class="headerlink" href="#weighting-of-indicators" title="Permalink to this heading">#</a></h2>
+<h4>3. Weighting of Indicators<a class="headerlink" href="#weighting-of-indicators" title="Permalink to this heading">#</a></h4>
 <p>In the next step we can weight the indicators based on their relevance to our risk assessment. It is recommended to do surveys or workshops with the local staff in oder to find out the importance of the respective indicators.</p>
 <p>We have used so far the following weighting scale:</p>
 <table class="table">
@@ -885,17 +814,16 @@ END
 </tbody>
 </table>
 <ul class="simple">
-<li><p>In the attribute table of your layer we can calculate the weighted indicators for each normalized indicators, respectively. FOr this we have to follow the same steps as above: Open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code> by clicking on the button <img alt="" src="../../_images/mActionCalculateField.png" />, create a new field with the suffix “_weighted” and in the expression field:</p></li>
+<li><p>In the attribute table of your layer we can calculate the weighted indicators for each normalized indicators, respectively. FOr this we have to follow the same steps as above: Open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code> by clicking on the button <img alt="" src="../../_images/mActionCalculateField.png" />, create a new field with the suffix “_weighted” and in the expression field.</p></li>
 </ul>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>    CASE
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>    
 
-    &quot;LandD_clas_norm&quot; * m0.75
+    &quot;LandD_clas_norm&quot; * 0.75
 
-    END
+    
 ´´´
 
-
-<span class="gu">```{figure} /fig/en_qgis_moudl_5_ex1_part2_weigthed.PNG</span>
+<span class="gu">```{figure} /fig/en_qgis_module_5_ex1_part2_weigthed.PNG</span>
 <span class="gu">---</span>
 width: 80%
 <span class="gu">name: Add new field to weight indicators</span>
@@ -914,7 +842,7 @@ Add new field to weight indicators
 </figure>
 </section>
 <section id="vulnerability-score-index">
-<h2>4. Vulnerability Score / Index<a class="headerlink" href="#vulnerability-score-index" title="Permalink to this heading">#</a></h2>
+<h4>4. Vulnerability Score / Index<a class="headerlink" href="#vulnerability-score-index" title="Permalink to this heading">#</a></h4>
 <p>We are now ready to calculate the vulnerability score for each distrcit:</p>
 <ul class="simple">
 <li><p>Open the attribute table -&gt; open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code><img alt="" src="../../_images/mActionCalculateField.png" /> and creat a new field with the name “vulnerability_score” and field type “Decimal Numnber (real)”. In the expression window sum up all weighted indicator values:</p></li>
@@ -924,7 +852,7 @@ Add new field to weight indicators
 </div></blockquote>
 </section>
 <section id="prepare-risk-assessment">
-<h2>5. Prepare Risk Assessment<a class="headerlink" href="#prepare-risk-assessment" title="Permalink to this heading">#</a></h2>
+<h4>5. Prepare Risk Assessment<a class="headerlink" href="#prepare-risk-assessment" title="Permalink to this heading">#</a></h4>
 <p>In order to calculate the risk we have to bring our 3 dimension exposure, vulnerability and coping capacity together.</p>
 <ul class="simple">
 <li><p>Right click om one of the layer and select <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; Go the<code class="docutils literal notranslate"><span class="pre">Joins</span></code> tab</p></li>
@@ -948,18 +876,14 @@ Add new field to weight indicators
 </figure>
 </section>
 <section id="risk-calculation">
-<h2>6. Risk Calculation<a class="headerlink" href="#risk-calculation" title="Permalink to this heading">#</a></h2>
+<h4>6. Risk Calculation<a class="headerlink" href="#risk-calculation" title="Permalink to this heading">#</a></h4>
 <p>Finally, the risk is calculated by the geometric mean of the dimensions Exposure and Susceptibility, while Susceptibility is defined by the geometric mean of Vulnerability and the Lack of Coping Capacity. The geometric mean is chosen since it offers the advantage of rewarding balanced developments and equal reduction of deficits at all levels of the model:</p>
 <p><span class="math notranslate nohighlight">\( susceptibility =   \sqrt vulnerability  \times lack\ of\ coping\ capacity \)</span></p>
 <p><span class="math notranslate nohighlight">\( risk=   \sqrt exposure  \times susceptibility \)</span></p>
 <ul class="simple">
 <li><p>Open the Attribute table -&gt; <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code><img alt="" src="../../_images/mActionCalculateField.png" /> and create a field “Susceptibility” and type in the formula. Do the same creating a field named “risk” and the respective expression.</p></li>
 </ul>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>CASE
-
-sqrt(&quot;Susceptibility&quot; * &quot;exposure_norm&quot;)
-
-END
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>sqrt(&quot;Susceptibility&quot; * &quot;exposure_norm&quot;)
 </pre></div>
 </div>
 <figure class="align-default" id="calculate-risk">
@@ -976,7 +900,7 @@ END
 </div>
 </section>
 <section id="visualization-of-the-results">
-<h2>6. Visualization of the Results<a class="headerlink" href="#visualization-of-the-results" title="Permalink to this heading">#</a></h2>
+<h4>6. Visualization of the Results<a class="headerlink" href="#visualization-of-the-results" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Right cklick on the “risk” layer -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
 <li><p>In the down left corner click on <code class="docutils literal notranslate"><span class="pre">Style</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Style</span></code></p></li>
@@ -1000,10 +924,12 @@ END
 </figure>
 </section>
 <section id="automatization-of-the-process">
-<h2>7. Automatization of the Process<a class="headerlink" href="#automatization-of-the-process" title="Permalink to this heading">#</a></h2>
+<h4>7. Automatization of the Process<a class="headerlink" href="#automatization-of-the-process" title="Permalink to this heading">#</a></h4>
 <p>HeiGIT has developed a a QGIS Risk Assessment Plugin in order to simplify this process and safe time.
 You can find more information about the risk methodology and the usage of the plugin <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/GIS_AA/en_qgis_risk_assessment_plugin.html#risk-assessment-qgis-plugin">here</a>.</p>
 <p>In order to try out the plugin and see the result, use the provided input data in your folder: “Modul_5_Ex1_Part_2\Input data\QGIS Plugin Risk Assessment\input”</p>
+</section>
+</section>
 </section>
 </section>
 
@@ -1070,42 +996,32 @@ You can find more information about the risk methodology and the usage of the pl
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Risk Assessment</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-indicator-processing">Part 1: Indicator Processing</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#land-degradation">6. Land Degradation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#malnutrition">7. Malnutrition</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#head-download-the-data-folder-for-modul-5-exercise2-drought-monitoring-trigger-zip-here-in-the-folder-you-can-find-two-folders-one-for-the-first-part-modul-5-ex1-part-1-of-the-exercise-and-one-for-the-second-part-modul-5-ex1-part-2">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Download the data folder for “Modul_5_Exercise2_Drought_Monitoring_Trigger.zip” <strong>Here</strong>. In the folder, you can find two folders. One for the first part (“Modul_5_Ex1_Part_1”) of the exercise and one for the second part (“Modul_5_Ex1_Part_2”).</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#head-4-now-we-have-the-number-of-healthsites-per-district-nevertheless-it-would-be-interesting-to-know-how-mnay-healthsites-exist-per-10-000-people-for-this-task-we-firstly-need-to-know-how-many-inhabitants-has-each-district-we-can-proces-this-information-by-using-the-zonal-statistics-tool-from-the-processing-toolbox-see-the-wiki-entry-for-zonal-statistics-fur-further-information-specify-your-input-layer-output-of-step-3-e-g-num-healtsites-and-your-raster-layer-worldpop-raster-specify-the-column-prefix-e-g-wpop-and-select-the-statistics-to-caclulate-sum-for-each-distrcit-all-pixel-values-of-the-worldpop-raster-that-fall-inside-of-it-will-be-summed-up-explore-the-output">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-4. Now we have the number of healthsites per district. Nevertheless, it would be interesting to know how mnay healthsites exist per 10.000 people. For this task we firstly need to know how many inhabitants has each district. We can proces this information by using the <strong>Zonal statistics</strong> tool from the Processing Toolbox. See the Wiki entry for Zonal Statistics fur further information. Specify your input layer (Output of step 3 e.g. <strong>Num_healtsites</strong>) and your raster layer (Worldpop Raster), specify the column prefix (e.g. _<strong>wpop</strong>) and select the statistics to caclulate (<strong>sum</strong>). For each distrcit all pixel values of the Worldpop Raster that fall inside of it will be summed up. Explore the output.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#land-degradation">6. Land Degradation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#malnutrition">7. Malnutrition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-risk-caclulation">Part 2: Risk Caclulation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Task</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Task</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#normalization">1. Normalization</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#directions">2. Directions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#weighting-of-indicators">3. Weighting of Indicators</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-score-index">4. Vulnerability Score / Index</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-risk-assessment">5. Prepare Risk Assessment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-calculation">6. Risk Calculation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-the-results">6. Visualization of the Results</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#automatization-of-the-process">7. Automatization of the Process</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#head-you-can-find-all-the-data-for-the-second-part-of-the-exercise-in-the-modul-5-ex1-part-2">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-You can find all the data for the second part of the exercise in the “Modul_5_Ex1_Part_2”.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalization">1. Normalization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions">2. Directions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weighting-of-indicators">3. Weighting of Indicators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-score-index">4. Vulnerability Score / Index</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-risk-assessment">5. Prepare Risk Assessment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-calculation">6. Risk Calculation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-the-results">6. Visualization of the Results</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automatization-of-the-process">7. Automatization of the Process</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
