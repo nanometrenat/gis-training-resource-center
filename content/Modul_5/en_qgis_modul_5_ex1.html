@@ -645,21 +645,24 @@ The collection and processing of this information varies throughout different co
 <p class="admonition-title">Hint</p>
 <p>Throughout the indicator processing process you will have several interim results. Make sure to save them in a “temp” folder.</p>
 </div>
-<ol class="arabic" start="5">
-<li><p>Now we know the numbers of healthsites and the number of population per district. We are ready to caclulate our final indicator __Number of healthsites per 10.000 inhabitants.
-*Open the attribute table of “Num_healthsites_wpop” (Output of step 4) and Open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code> by clicking on the button <img alt="" src="../../_images/mActionCalculateField.png" />. By checkin the box for <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">field</span></code> we can conduct calculation and saving them right away in a new attribute column.
-*define the output field name as “healthsites_10000” and set the <code class="docutils literal notranslate"><span class="pre">Type</span></code> to <code class="docutils literal notranslate"><span class="pre">Decimal</span> <span class="pre">Number(real)</span></code>.
-*Now we will caclulate in the expression field the number of healthsites per 10.000 inhabitants:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">(&quot;Num_healthsites&quot;/&quot;_wpopsum&quot;)*10000</span></code></p>
-</div></blockquote>
-<p>*When you are down click <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits and switch off the editing mode by again clicking on <img alt="" src="../../_images/mActionToggleEditing.png" />(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.html#attribute-table-data-editing">Wiki Video</a>).</p>
-</li>
+<ol class="arabic simple" start="5">
+<li><p>Now we know the numbers of healthsites and the number of population per district. We are ready to caclulate our final indicator __Number of healthsites per 10.000 inhabitants.</p></li>
 </ol>
+<ul class="simple">
+<li><p>Open the attribute table of “Num_healthsites_wpop” (Output of step 4) and Open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code> by clicking on the button <img alt="" src="../../_images/mActionCalculateField.png" />. By checkin the box for <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">field</span></code> we can conduct calculation and saving them right away in a new attribute column.</p></li>
+<li><p>define the output field name as “healthsites_10000” and set the <code class="docutils literal notranslate"><span class="pre">Type</span></code> to <code class="docutils literal notranslate"><span class="pre">Decimal</span> <span class="pre">Number(real)</span></code>.</p></li>
+<li><p>Now we will caclulate in the expression field the number of healthsites per 10.000 inhabitants:</p></li>
+</ul>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>(&quot;Num_healthsites&quot;/&quot;_wpopsum&quot;)*10000
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>When you are down click <img alt="" src="../../_images/mActionSaveEdits.png" /> to save your edits and switch off the editing mode by again clicking on <img alt="" src="../../_images/mActionToggleEditing.png" />(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.html#attribute-table-data-editing">Wiki Video</a>).</p></li>
+</ul>
 <figure class="align-default" id="field-calculator">
-<a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_field_calc.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_field_calc.PNG" src="../../_images/en_qgis_modul_5_ex1_field_calc.PNG" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_field_calc.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_field_calc.PNG" src="../../_images/en_qgis_modul_5_ex1_field_calc.PNG" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 102 </span><span class="caption-text">Calculate healthsites pero 10000 inhabitants</span><a class="headerlink" href="#field-calculator" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 102 </span><span class="caption-text">Calculate healthsites per 10000 inhabitants</span><a class="headerlink" href="#field-calculator" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="land-degradation">
@@ -696,11 +699,13 @@ The collection and processing of this information varies throughout different co
 <code class="docutils literal notranslate"><span class="pre">Somalia_malnutrion_district_2022_2023.xlsx</span></code>:<a class="reference external" href="https://data.humdata.org/dataset/somalia-acute-malnutrition-burden-and-prevalence?">Somalia: Acute Malnutrition</a></p>
 <p>Explore the data. In which resolution is the data avalaible? Do you have ideas how we can add it to our indicator dataset?</p>
 <p>*Save the Excel file as csv by clicking on <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">file</span> <span class="pre">as</span></code> and choosing <code class="docutils literal notranslate"><span class="pre">csv</span> <span class="pre">(delimiter-separated)</span></code></p>
-<p>*Load the csv-file into you QGIS by drag and drop
-*Open the tool <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code> from the Processing Toolbox
-*specify our two datasets we want to join as well as the common field available for joining (<code class="docutils literal notranslate"><span class="pre">ADM2_EN</span></code> and <code class="docutils literal notranslate"><span class="pre">adm2name</span></code>)
-*as <code class="docutils literal notranslate"><span class="pre">join</span> <span class="pre">type</span></code> set <code class="docutils literal notranslate"><span class="pre">Take</span> <span class="pre">attributes</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">matching</span> <span class="pre">feature</span> <span class="pre">only</span> <span class="pre">(one-to-one)</span></code>
-*Save the Layer to File</p>
+<ul class="simple">
+<li><p>Load the csv-file into you QGIS by drag and drop</p></li>
+<li><p>Open the tool <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code> from the Processing Toolbox</p></li>
+<li><p>specify our two datasets we want to join as well as the common field available for joining (<code class="docutils literal notranslate"><span class="pre">ADM2_EN</span></code> and <code class="docutils literal notranslate"><span class="pre">adm2name</span></code>)</p></li>
+<li><p>as <code class="docutils literal notranslate"><span class="pre">join</span> <span class="pre">type</span></code> set <code class="docutils literal notranslate"><span class="pre">Take</span> <span class="pre">attributes</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">matching</span> <span class="pre">feature</span> <span class="pre">only</span> <span class="pre">(one-to-one)</span></code></p></li>
+<li><p>Save the Layer to File</p></li>
+</ul>
 <figure class="align-default" id="join-attributes-by-field-value">
 <a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_joinbyvalue.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_joinbyvalue.PNG" src="../../_images/en_qgis_modul_5_ex1_joinbyvalue.PNG" style="width: 100%;" /></a>
 <figcaption>
