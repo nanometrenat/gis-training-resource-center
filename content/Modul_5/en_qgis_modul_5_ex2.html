@@ -565,11 +565,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6: Weighting of the Population based on IPC-Phase</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8: Calculation of Population Proportion per Intersection Polygon</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9: Calculate IPC Index per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-evaluate-trigger-activation">Step 10: Evaluate Trigger Activation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-visualisation-of-results">Step 11.: Visualisation of results</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-making-print-map">Step 12: Making print map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-calculation-of-population-proportion-per-intersection-polygon">Step 7: Calculation of Population Proportion per Intersection Polygon</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculate-ipc-index-per-district">Step 8: Calculate IPC Index per District</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-evaluate-trigger-activation">Step 9: Evaluate Trigger Activation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-visualisation-of-results">Step 10.: Visualisation of results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-making-print-map">Step 11: Making print map</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-exporting-map">Step 13.: Exporting Map</a></li>
 </ul>
 </li>
@@ -987,8 +987,8 @@ END
 </ol>
 </section>
 </section>
-<section id="step-8-calculation-of-population-proportion-per-intersection-polygon">
-<h2>Step 8: Calculation of Population Proportion per Intersection Polygon<a class="headerlink" href="#step-8-calculation-of-population-proportion-per-intersection-polygon" title="Permalink to this heading">#</a></h2>
+<section id="step-7-calculation-of-population-proportion-per-intersection-polygon">
+<h2>Step 7: Calculation of Population Proportion per Intersection Polygon<a class="headerlink" href="#step-7-calculation-of-population-proportion-per-intersection-polygon" title="Permalink to this heading">#</a></h2>
 <p><strong>Purpose:</strong> In this step we calculating the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/GIS_AA/en_qgis_drought_trigger_somalia.html#ipc-population-weighted-index">IPC-Population Weighted Index</a> for every small part of the polygon layer.</p>
 <p><strong>Tool:</strong><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
 <ol class="arabic simple">
@@ -1018,8 +1018,8 @@ Video: Calculation of Population Proportion per Intersection Polygon<div class="
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_TRigger_step_8_field_calculator.mp4"></video></p>
 </div>
-</details><section id="step-9-calculate-ipc-index-per-district">
-<h3>Step 9: Calculate IPC Index per District<a class="headerlink" href="#step-9-calculate-ipc-index-per-district" title="Permalink to this heading">#</a></h3>
+</details><section id="step-8-calculate-ipc-index-per-district">
+<h3>Step 8: Calculate IPC Index per District<a class="headerlink" href="#step-8-calculate-ipc-index-per-district" title="Permalink to this heading">#</a></h3>
 <p><strong>Purpose:</strong> The purpose of this step is to calculate a population-weighted mean over the IPC classes per district. In this way, the amount of people living in a certain IPC class will be given more importance than just the area affected by a certain IPC class. The result is an IPC Index value for each district.</p>
 <p><strong>Tool:</strong> <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attribute</span> <span class="pre">by</span> <span class="pre">location</span> <span class="pre">(summary)</span></code></p>
 <table class="table">
@@ -1041,7 +1041,7 @@ Video: Calculation of Population Proportion per Intersection Polygon<div class="
 </ul>
 <ol class="arabic simple" start="2">
 <li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: Select your “district_pop_som” layer</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select “ML1_join”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: Select “ML1_zonal_statistic”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Geometric</span> <span class="pre">predicate</span></code>: Select “Intersection”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">to</span> <span class="pre">summarise</span></code>: Select “Index_per_IPCPolygon_ML1”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Summaries</span> <span class="pre">to</span> <span class="pre">calculate</span></code>: Chose only the option “mean”</p></li>
@@ -1067,8 +1067,8 @@ Video: Calculate IPC Index per District<div class="sd-summary-down docutils">
 <p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_9_join_location.mp4"></video></p>
 </div>
 </details></section>
-<section id="step-10-evaluate-trigger-activation">
-<h3>Step 10: Evaluate Trigger Activation<a class="headerlink" href="#step-10-evaluate-trigger-activation" title="Permalink to this heading">#</a></h3>
+<section id="step-9-evaluate-trigger-activation">
+<h3>Step 9: Evaluate Trigger Activation<a class="headerlink" href="#step-9-evaluate-trigger-activation" title="Permalink to this heading">#</a></h3>
 <p><strong>Purpose:</strong> The purpose of this step is to gain a quick overview of possible trigger activation without having to revise the actual data. Instead we will have a binary column with trigger = yes or trigger=no values.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#calculate-field"><code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code></a></p>
 <ol class="arabic simple">
@@ -1119,8 +1119,8 @@ Video: Evaluate Trigger Activation <div class="sd-summary-down docutils">
 <p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/SRCS_Trigger_step_13_trigger_activation.mp4"></video></p>
 </div>
 </details></section>
-<section id="step-11-visualisation-of-results">
-<h3>Step 11.: Visualisation of results<a class="headerlink" href="#step-11-visualisation-of-results" title="Permalink to this heading">#</a></h3>
+<section id="step-10-visualisation-of-results">
+<h3>Step 10.: Visualisation of results<a class="headerlink" href="#step-10-visualisation-of-results" title="Permalink to this heading">#</a></h3>
 <p><strong>Purpose:</strong> Definition of how features are represented visually on the map.</p>
 <p><strong>Tool:</strong> <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_I.html#symbology-for-vector-data">Symbology</a></p>
 <p><strong>Trigger Activation</strong></p>
@@ -1197,8 +1197,8 @@ Video: Visualisation of results<div class="sd-summary-down docutils">
 <p>Remember the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_2/en_qgis_geodata_concept.html?highlight=layer#layer-concept">layer concept</a> and make sure the basemap layer is at the bottom of your layers panel.</p>
 </div>
 </section>
-<section id="step-12-making-print-map">
-<h3>Step 12: Making print map<a class="headerlink" href="#step-12-making-print-map" title="Permalink to this heading">#</a></h3>
+<section id="step-11-making-print-map">
+<h3>Step 11: Making print map<a class="headerlink" href="#step-11-making-print-map" title="Permalink to this heading">#</a></h3>
 <p><strong>Purpose:</strong> Viualization of the map features in a printable map layout</p>
 <p><strong>Tool:</strong>  <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html?highlight=print+layout#print-layout">Print Layout</a></p>
 <ol class="arabic simple">
@@ -1346,11 +1346,11 @@ Now the image can be found in the result folder in the folder you created in Ste
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-weighting-of-the-population-based-on-ipc-phase">Step 6: Weighting of the Population based on IPC-Phase</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculation-of-population-proportion-per-intersection-polygon">Step 8: Calculation of Population Proportion per Intersection Polygon</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-calculate-ipc-index-per-district">Step 9: Calculate IPC Index per District</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-evaluate-trigger-activation">Step 10: Evaluate Trigger Activation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-visualisation-of-results">Step 11.: Visualisation of results</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-making-print-map">Step 12: Making print map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-calculation-of-population-proportion-per-intersection-polygon">Step 7: Calculation of Population Proportion per Intersection Polygon</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-calculate-ipc-index-per-district">Step 8: Calculate IPC Index per District</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-evaluate-trigger-activation">Step 9: Evaluate Trigger Activation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-visualisation-of-results">Step 10.: Visualisation of results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-making-print-map">Step 11: Making print map</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-exporting-map">Step 13.: Exporting Map</a></li>
 </ul>
 </li>
