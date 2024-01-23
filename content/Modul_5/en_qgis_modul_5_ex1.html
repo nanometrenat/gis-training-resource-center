@@ -814,30 +814,24 @@ Download the data folder for the second part of the exercise: “Modul_5_Ex1_Par
 </tbody>
 </table>
 <ul class="simple">
-<li><p>In the attribute table of your layer we can calculate the weighted indicators for each normalized indicators, respectively. FOr this we have to follow the same steps as above: Open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code> by clicking on the button <img alt="" src="../../_images/mActionCalculateField.png" />, create a new field with the suffix “_weighted” and in the expression field.</p></li>
+<li><p>In the attribute table of your layer we can calculate the weighted indicators for each normalized indicators, respectively. For this we have to follow the same steps as above: Open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code> by clicking on the button <img alt="" src="../../_images/mActionCalculateField.png" />, create a new field with the suffix “_weighted” and in the expression field.</p></li>
 </ul>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>    
-
-    &quot;LandD_clas_norm&quot; * 0.75
-
-    
-´´´
-
-<span class="gu">```{figure} /fig/en_qgis_module_5_ex1_part2_weigthed.PNG</span>
-<span class="gu">---</span>
-width: 80%
-<span class="gu">name: Add new field to weight indicators</span>
-<span class="gu">---</span>
-Add new field to weight indicators
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>&quot;LandD_clas_norm&quot; * 0.75
 </pre></div>
 </div>
+<figure class="align-default" id="add-new-field-to-weight-indicators">
+<a class="reference internal image-reference" href="../../_images/en_qgis_module_5_ex1_part2_weigthed.PNG"><img alt="../../_images/en_qgis_module_5_ex1_part2_weigthed.PNG" src="../../_images/en_qgis_module_5_ex1_part2_weigthed.PNG" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 109 </span><span class="caption-text">Add new field to weight indicators</span><a class="headerlink" href="#add-new-field-to-weight-indicators" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>For each indicator we now have the normalized and weighted version:</p></li>
 </ul>
 <figure class="align-default" id="attribute-table-with-norm-and-weighted-indicators">
 <a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_part2_weighted_attribute.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_part2_weighted_attribute.PNG" src="../../_images/en_qgis_modul_5_ex1_part2_weighted_attribute.PNG" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 109 </span><span class="caption-text">Attribute Table with “_norm” and “_weighted” indicators</span><a class="headerlink" href="#attribute-table-with-norm-and-weighted-indicators" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 110 </span><span class="caption-text">Attribute Table with “_norm” and “_weighted” indicators</span><a class="headerlink" href="#attribute-table-with-norm-and-weighted-indicators" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -845,11 +839,11 @@ Add new field to weight indicators
 <h4>4. Vulnerability Score / Index<a class="headerlink" href="#vulnerability-score-index" title="Permalink to this heading">#</a></h4>
 <p>We are now ready to calculate the vulnerability score for each distrcit:</p>
 <ul class="simple">
-<li><p>Open the attribute table -&gt; open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code><img alt="" src="../../_images/mActionCalculateField.png" /> and creat a new field with the name “vulnerability_score” and field type “Decimal Numnber (real)”. In the expression window sum up all weighted indicator values:</p></li>
+<li><p>Open the attribute table -&gt; open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">Calculator</span></code><img alt="" src="../../_images/mActionCalculateField.png" /> and create a new field with the name “vulnerability_score” and field type “Decimal Numnber (real)”. In the expression window sum up all weighted indicator values:</p></li>
 </ul>
-<blockquote>
-<div><p>(“LandD_clas_weigthed”  +  “perc_elderly_weighted”  +  “affunderfive_weighted”) 3</p>
-</div></blockquote>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>(&quot;LandD_clas_weigthed&quot;  +  &quot;perc_elderly_weighted&quot;  +  &quot;affunderfive_weighted&quot;) / 3 
+</pre></div>
+</div>
 </section>
 <section id="prepare-risk-assessment">
 <h4>5. Prepare Risk Assessment<a class="headerlink" href="#prepare-risk-assessment" title="Permalink to this heading">#</a></h4>
@@ -861,7 +855,7 @@ Add new field to weight indicators
 <figure class="align-default" id="join-layers">
 <a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_part2_join_risk.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_part2_join_risk.PNG" src="../../_images/en_qgis_modul_5_ex1_part2_join_risk.PNG" style="width: 90%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 110 </span><span class="caption-text">Join Layers by Join Field</span><a class="headerlink" href="#join-layers" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 111 </span><span class="caption-text">Join Layers by Join Field</span><a class="headerlink" href="#join-layers" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -871,7 +865,7 @@ Add new field to weight indicators
 <figure class="align-default" id="risk-layer-attribute-table-normalized-scores">
 <a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_part2_risklayer_attributetable.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_part2_risklayer_attributetable.PNG" src="../../_images/en_qgis_modul_5_ex1_part2_risklayer_attributetable.PNG" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 111 </span><span class="caption-text">Risk Layer Attribute Table normalized Scores</span><a class="headerlink" href="#risk-layer-attribute-table-normalized-scores" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 112 </span><span class="caption-text">Risk Layer Attribute Table normalized Scores</span><a class="headerlink" href="#risk-layer-attribute-table-normalized-scores" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -889,7 +883,7 @@ Add new field to weight indicators
 <figure class="align-default" id="calculate-risk">
 <a class="reference internal image-reference" href="../../_images/en_qgis_modul_5_ex1_part2_risk.PNG"><img alt="../../_images/en_qgis_modul_5_ex1_part2_risk.PNG" src="../../_images/en_qgis_modul_5_ex1_part2_risk.PNG" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 112 </span><span class="caption-text">Risk Calculation</span><a class="headerlink" href="#calculate-risk" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 113 </span><span class="caption-text">Risk Calculation</span><a class="headerlink" href="#calculate-risk" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -919,7 +913,7 @@ Add new field to weight indicators
 <figure class="align-default" id="possible-map-result">
 <a class="reference internal image-reference" href="../../_images/en_qgis_mondul_5_ex1_possible_result.PNG"><img alt="../../_images/en_qgis_mondul_5_ex1_possible_result.PNG" src="../../_images/en_qgis_mondul_5_ex1_possible_result.PNG" style="width: 90%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 113 </span><span class="caption-text">Possible Map Result</span><a class="headerlink" href="#possible-map-result" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 114 </span><span class="caption-text">Possible Map Result</span><a class="headerlink" href="#possible-map-result" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
