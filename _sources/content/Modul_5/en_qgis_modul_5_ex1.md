@@ -27,6 +27,7 @@ Download the data folder for "Modul_5_Exercise2_Drought_Monitoring_Trigger.zip" 
 Download the data folder for the first part of the exercise: "Modul_5_Ex1_Part_1".
 
 
+
 Download all datasets and save the folder on your computer and unzip the file. The zip folder includes:
 - `som_admbnda_adm2_ocha_20230308.shp`: [Somalia district boundaries (Admin level 2)](https://data.humdata.org/dataset/cod-ab-som)
 - `WHO_health_sites.shp`: [Healthsites Somalia](https://data.humdata.org/dataset/somalia-health-facilities-data )
