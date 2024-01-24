@@ -565,21 +565,58 @@ document.write(`
 </section>
 <section id="task-1">
 <h2>Task 1<a class="headerlink" href="#task-1" title="Permalink to this heading">#</a></h2>
-<p>There has been a controversial Nigerian Naira Notes Redesign Policy in Nigeria. The government began this policy on the 26th of October, 2022. This policy has caused many problems for the people of Nigeria not only in the business or health sector but in all works of life. See the article about how businesses groan as cash crunch hits Banks in Abuja, the capital city of Nigeria. <a class="reference external" href="https://businessday.ng/news/article/business-groan-as-cash-crunch-hits-banks-in-abuja/">No cash article in Abuja</a>.</p>
-<p>Our goal is to create a point layers at the three Banks closed to each other in the Central Business District (CBD) of Abuja in Nigeria.This is to let people easily identify the banks in the CBD of Abuja for their transaction purposes. To this end, we will visualize the digitisation of the First Bank, Bank of Industrie Building and Zenith Bank Abuja.</p>
+<p>There is a new policy of Nigerian Naira Notes Redesign in Nigeria. The new policy became effective on the 26th of October, 2022 and it has caused many problems for the people of Nigeria not only in the business or health sector but in all works of life. See the article about how businesses groan as cash crunch hits Banks in Abuja, the capital city of Nigeria. <a class="reference external" href="https://businessday.ng/news/article/business-groan-as-cash-crunch-hits-banks-in-abuja/">No cash article in Abuja</a>.</p>
+<p>Our goal is to create a point layers at the three Banks closed to each other in the Central Business District (CBD) of Abuja in Nigeria.This is to let people easily identify the banks in the CBD of Abuja for their transaction purposes.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_digitalization_wiki.html#add-geometries-to-a-layer">Digitization- Point data</a></p></li>
+</ul>
+<p>To this end, we will visualize the digitisation of the First Bank, Bank of Industrie Building and Zenith Bank Abuja.</p>
 <ol class="arabic simple">
 <li><p>Open QGIS, on the browser layer move to XYZ Tiles and doulble click on OpenStreetMap. It will automatically loaded into the display layer of QGIS.</p></li>
+</ol>
+<ul>
+<li><p>To add the OSM as a base map click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">XYZ</span> <span class="pre">Layer…</span></code>. Choose <code class="docutils literal notranslate"><span class="pre">OpenStreetMap</span></code> and click <code class="docutils literal notranslate"><span class="pre">Add</span></code>.
+Arrange your layer in the <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Panel</span></code> so the OSM is at the bottom (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html">Wiki Video</a>)</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can not interact with a base map!</p>
+</div>
+<ul class="simple">
+<li><p>To add the plugin <code class="docutils literal notranslate"><span class="pre">OSM</span> <span class="pre">Place</span> <span class="pre">Search</span></code>, click on <code class="docutils literal notranslate"><span class="pre">Plugins</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins…</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span></code> and search for <code class="docutils literal notranslate"><span class="pre">OSM</span> <span class="pre">Place</span> <span class="pre">Search</span></code>. Once you have found it click on it and click <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Plugin</span></code>. You can open the <code class="docutils literal notranslate"><span class="pre">OSM</span> <span class="pre">Place</span> <span class="pre">Search</span> <span class="pre">Panel</span></code> like every other panel by clicking on <code class="docutils literal notranslate"><span class="pre">View</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Panels</span></code> and checking <code class="docutils literal notranslate"><span class="pre">OSM</span> <span class="pre">Place</span> <span class="pre">Search</span> <span class="pre">Panel</span></code>(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_plugins_wiki.html#installation-of-plugins">Wiki Video</a>).</p></li>
+<li><p>In the panel, you can search for places on the OpenStreetMap by typing the name of the place in the search bar. Often it makes sense to add additional information like the name of the country. Try for example “Abuja, Nigeria”.</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple" start="2">
 <li><p>Search Abuja via the OSM Place Search in QGIS and choose Abuja Municipality Area council, City. Zoom to the Central Business District and create a point on each of the three banks in the CBD of Abuja.</p></li>
 </ol>
+<p>This is how your result should look like. <img alt="" src="../../_images/Abuja_Banks_Point_Layers.png" /></p>
 </section>
 <section id="task-2">
 <h2>Task 2<a class="headerlink" href="#task-2" title="Permalink to this heading">#</a></h2>
-<p>A business man named Mr John who droves all the way from the North of Herbert Macauley Way in the CBD of Abuja to do transaction at the Bank of Indusrie on Monday morning. Unfortunately, he found out that the networt server of the bank is down and needed to proceed to the Zenith Bank as the only functioning Bank. He later discovered that there is an heavy road blocked at the junction of Indepence avenue and Tafawa Balewa way due to road construction.</p>
-<p>##Please## create a road line layer for Mr John that will allow him to get to Zenith Bank easily.</p>
+<p>A business man named Mr John who droves all the way from the North of Herbert Macauley Way in the CBD of Abuja to do transaction at the Bank of Indusrie on Monday morning. Unfortunately, he found out that the network server of the bank is down and needed to proceed to the Zenith Bank as the only functioning Bank. He later discovered that there is an heavy road blocked at the junction of Indepence avenue and Tafawa Balewa way due to road construction.</p>
+<p>‘Please’ create a road line layer for Mr John that will allow him to get to Zenith Bank easily.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_digitalization_wiki.html#creation-of-line-data">Digitization- Line data</a></p></li>
+</ul>
+<p>This is how your result should look like. <img alt="" src="../../_images/Abuja_Banks_Lines_Layers.png" /></p>
 </section>
 <section id="task-3">
 <h2>Task 3<a class="headerlink" href="#task-3" title="Permalink to this heading">#</a></h2>
-<p>Create a polygon layer covering the entire area of the Nigerian nationational Petroleum Cooperation Towers of the CBD of Abuja</p>
+<p>Now that you have created both point and line data. It is time to create a polygon layer.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_digitalization_wiki.html#creation-of-polygon-data">Digitization- Polygon data</a></p></li>
+</ul>
+<p>Create a polygon layer covering the entire area of the First bank, Zenith bank and Industrie bank in the CBD of Abuja.</p>
+<p>This is how your result should look like. <img alt="" src="../../_images/Abuja_Banks_Polygons_Layers.png" /></p>
+<ul>
+<li><p>Follow this step if you want to show the name of the data created.
+<img alt="" src="../../_images/Show_label_name.png" /></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> Right click on the data created on the layer panel, then click on show labels and the name of the data created will be showned either point, line or polygon data.
+</pre></div>
+</div>
+</li>
+</ul>
 </section>
 </section>
 
