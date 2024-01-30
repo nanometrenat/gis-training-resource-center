@@ -582,48 +582,42 @@ document.write(`
 <p>Here we are collecting common QGIS errors and issues as general QGIS training support.</p>
 <section id="different-qgis-versions">
 <h2>Different QGIS versions<a class="headerlink" href="#different-qgis-versions" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Main items (to add for example different displays)</p></li>
-</ul>
+<p><strong>Main items</strong> (to add for example different screen views)</p>
 </section>
 <section id="a-layer-is-not-displayed-in-qgis">
 <h2>A layer is not displayed in QGIS<a class="headerlink" href="#a-layer-is-not-displayed-in-qgis" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Solution:</p></li>
-</ul>
+<p><strong>Solution:</strong></p>
 <ol class="arabic simple">
 <li><p>Right click on the corresponding layer</p></li>
 <li><p>Activate the <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Layer</span></code> function in the pop-up window.</p></li>
 </ol>
-<figure class="align-default" id="en-layer-display-png">
-<a class="reference internal image-reference" href="../../_images/en_layer_display.png"><img alt="../../_images/en_layer_display.png" src="../../_images/en_layer_display.png" style="width: 65%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Screenshot of Zoom to Layer</span><a class="headerlink" href="#en-layer-display-png" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>
+<span class="n">width</span><span class="p">:</span> <span class="mi">65</span><span class="o">%</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">en_layer_display</span><span class="o">.</span><span class="n">png</span>
+<span class="o">---</span>
+
+</pre></div>
+</div>
 </section>
 <section id="a-layer-window-has-disappeared-in-qgis">
 <h2>A layer window has disappeared in QGIS<a class="headerlink" href="#a-layer-window-has-disappeared-in-qgis" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Solution:</p></li>
-</ul>
+<p><strong>Solution:</strong></p>
 <ol class="arabic simple">
 <li><p>Open in the main tab <code class="docutils literal notranslate"><span class="pre">View</span></code>,</p></li>
 <li><p>In the pop-up window select <code class="docutils literal notranslate"><span class="pre">Panels</span></code></p></li>
 <li><p>In the sub-window hook the case <code class="docutils literal notranslate"><span class="pre">Layers</span></code>.</p></li>
 </ol>
-<figure class="align-default" id="en-closed-layer-view-png">
-<a class="reference internal image-reference" href="../../_images/en_closed_layer_view.png"><img alt="../../_images/en_closed_layer_view.png" src="../../_images/en_closed_layer_view.png" style="width: 75%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Screenshot of Closed Layer</span><a class="headerlink" href="#en-closed-layer-view-png" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>
+<span class="n">width</span><span class="p">:</span> <span class="mi">75</span><span class="o">%</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">en_closed_layer_view</span><span class="o">.</span><span class="n">png</span>
+<span class="o">---</span>
+
+</pre></div>
+</div>
 </section>
 <section id="layers-that-should-actually-be-in-the-same-position-are-not-on-top-of-each-other">
 <h2>Layers that should actually be in the same position are not on top of each other<a class="headerlink" href="#layers-that-should-actually-be-in-the-same-position-are-not-on-top-of-each-other" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Solution:</p></li>
-</ul>
+<p><strong>Solution:</strong></p>
 <p>These sort of problems are usually due to a) <em>mismatching KBS in layers and project</em>, or b) an <em>incorrect reprojection</em>.</p>
 <p>a)</p>
 <ol class="arabic simple">
@@ -634,46 +628,34 @@ document.write(`
 <li><p>Correct any discrepancies by reprojecting the layers or changing the setting of the KBS/CRS project.</p></li>
 </ol>
 <p>b)</p>
-<p>When reprojecting, follow exactly the procedure described in the Wiki under <em>Projections</em> (ergänzen). Errors often occur if KBS is set and no reprojection tool is used. If you suspect that your reprojection has gone wrong, delete all affected layers from GIS, reload the data and then reproject.</p>
+<p>When reprojecting, follow exactly the procedure described in the Wiki under <em>Projections</em> (to add). Errors often occur if KBS is set and no reprojection tool is used. If you suspect that your reprojection has gone wrong, delete all affected layers from GIS, reload the data and then reproject.</p>
 <figure class="align-default" id="en-crs-projection-check-png">
 <a class="reference internal image-reference" href="../../_images/en_CRS_projection_check.png"><img alt="../../_images/en_CRS_projection_check.png" src="../../_images/en_CRS_projection_check.png" style="width: 85%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Screenshot of CRS Projection  Check</span><a class="headerlink" href="#en-crs-projection-check-png" title="Permalink to this image">#</a></p>
-</figcaption>
 </figure>
 </section>
 <section id="missing-processing-tools-in-the-panels-tool-and-incomplete-vector-tab">
 <h2>Missing processing tools in the panels tool and incomplete vector tab<a class="headerlink" href="#missing-processing-tools-in-the-panels-tool-and-incomplete-vector-tab" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Solution:</p></li>
-</ul>
+<p><strong>Solution:</strong></p>
 <ol class="arabic simple">
 <li><p>Activate the <code class="docutils literal notranslate"><span class="pre">processing</span> <span class="pre">tools</span></code> by going to <code class="docutils literal notranslate"><span class="pre">Plugins</span></code> &gt;
 <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">install</span> <span class="pre">Plugins</span></code></p></li>
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">All</span></code> and rehook the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">function</span></code> in the corresponding list.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">All</span></code></p></li>
+<li><p>Rehook the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">function</span></code> in the corresponding list.</p></li>
 </ol>
 <figure class="align-default" id="en-missing-processing-tools-png">
 <a class="reference internal image-reference" href="../../_images/en_missing_processing_tools.png"><img alt="../../_images/en_missing_processing_tools.png" src="../../_images/en_missing_processing_tools.png" style="width: 85%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Screenshot of Missing Processing Tools</span><a class="headerlink" href="#en-missing-processing-tools-png" title="Permalink to this image">#</a></p>
-</figcaption>
 </figure>
 </section>
 <section id="missing-toolbox">
 <h2>Missing toolbox<a class="headerlink" href="#missing-toolbox" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Solution:</p></li>
-</ul>
+<p><strong>Solution:</strong></p>
 <ol class="arabic simple">
-<li><p>To reactivate the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> (small gear wheel, icon ergänzen) click on the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Tab</span></code></p></li>
+<li><p>To reactivate the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> <img alt="" src="fig/gear_wheel.png" /> click on the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Tab</span></code></p></li>
 <li><p>Select in the pop-up window <code class="docutils literal notranslate"><span class="pre">Panels</span></code></p></li>
 <li><p>Set in the following pop-up window a hook for the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code>.</p></li>
 </ol>
 <figure class="align-default" id="en-missing-toolbox-png">
 <a class="reference internal image-reference" href="../../_images/en_missing_toolbox.png"><img alt="../../_images/en_missing_toolbox.png" src="../../_images/en_missing_toolbox.png" style="width: 75%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Screenshot of Missing Toolbox</span><a class="headerlink" href="#en-missing-toolbox-png" title="Permalink to this image">#</a></p>
-</figcaption>
 </figure>
 </section>
 <section id="qgis-training-support">
