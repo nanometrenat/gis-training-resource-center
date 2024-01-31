@@ -550,22 +550,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-that-should-actually-be-in-the-same-position-are-not-on-top-of-each-other">Layers that should actually be in the same position are not on top of each other</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-processing-tools-in-the-panels-tool-and-incomplete-vector-tab">Missing processing tools in the panels tool and incomplete vector tab</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-toolbox">Missing toolbox</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-training-support">QGIS training support</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modul-3-basic-gis-operations">Modul 3 - Basic GIS operations</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nigeria-floods-exercise">Nigeria Floods Exercise:</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modul-4">Modul 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ghana-map-making-exercise">(Ghana) Map making Exercise:</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modul-5">Modul 5</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-intervention-map-for-forecast-based-action-exercise">Trigger &amp; Intervention Map for Forecast-based-Action Exercise:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-north-arrow-is-not-syncing-with-the-corresponding-map">The North arrow is not syncing with the corresponding map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
 </ul>
             </nav>
         </div>
@@ -588,8 +574,8 @@ document.write(`
 <h2>A layer is not displayed in QGIS<a class="headerlink" href="#a-layer-is-not-displayed-in-qgis" title="Permalink to this heading">#</a></h2>
 <p><strong>Solution:</strong></p>
 <ol class="arabic simple">
-<li><p>Right click on the corresponding layer</p></li>
-<li><p>Activate the <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Layer</span></code> function in the pop-up window</p></li>
+<li><p>Right click on the corresponding layer.</p></li>
+<li><p>Activate the <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Layer</span></code> function in the pop-up window.</p></li>
 </ol>
 <figure class="align-default" id="en-layer-display-png">
 <a class="reference internal image-reference" href="../../_images/en_layer_display.png"><img alt="../../_images/en_layer_display.png" src="../../_images/en_layer_display.png" style="width: 65%;" /></a>
@@ -599,9 +585,9 @@ document.write(`
 <h2>A layer window has disappeared in QGIS<a class="headerlink" href="#a-layer-window-has-disappeared-in-qgis" title="Permalink to this heading">#</a></h2>
 <p><strong>Solution:</strong></p>
 <ol class="arabic simple">
-<li><p>Open in the main tab <code class="docutils literal notranslate"><span class="pre">View</span></code>,</p></li>
-<li><p>In the pop-up window select <code class="docutils literal notranslate"><span class="pre">Panels</span></code></p></li>
-<li><p>In the sub-window hook the case <code class="docutils literal notranslate"><span class="pre">Layers</span></code></p></li>
+<li><p>Open in the main tab <code class="docutils literal notranslate"><span class="pre">View</span></code>.</p></li>
+<li><p>In the pop-up window select <code class="docutils literal notranslate"><span class="pre">Panels</span></code>.</p></li>
+<li><p>In the sub-window hook the case <code class="docutils literal notranslate"><span class="pre">Layers</span></code>.</p></li>
 </ol>
 <figure class="align-default" id="en-closed-layer-view-png">
 <a class="reference internal image-reference" href="../../_images/en_closed_layer_view.png"><img alt="../../_images/en_closed_layer_view.png" src="../../_images/en_closed_layer_view.png" style="width: 75%;" /></a>
@@ -613,9 +599,9 @@ document.write(`
 <p>These sort of problems are usually due to a) <em>mismatching KBS in layers and project</em>, or b) an <em>incorrect reprojection</em>.</p>
 <p>a)</p>
 <ol class="arabic simple">
-<li><p>Check the layer properties (right-click on the corresponding layer)</p></li>
-<li><p>Select in the pop-up window <code class="docutils literal notranslate"><span class="pre">Properties</span></code></p></li>
-<li><p>In the next pop-up-window select <code class="docutils literal notranslate"><span class="pre">Information</span></code> and check which projection is defined there under the entry <code class="docutils literal notranslate"><span class="pre">Coordinate</span> <span class="pre">Reference</span> <span class="pre">System</span> <span class="pre">(CRS)</span></code></p></li>
+<li><p>Check the layer properties (right-click on the corresponding layer).</p></li>
+<li><p>Select in the pop-up window <code class="docutils literal notranslate"><span class="pre">Properties</span></code>.</p></li>
+<li><p>In the next pop-up-window select <code class="docutils literal notranslate"><span class="pre">Information</span></code> and check which projection is defined there under the entry <code class="docutils literal notranslate"><span class="pre">Coordinate</span> <span class="pre">Reference</span> <span class="pre">System</span> <span class="pre">(CRS)</span></code>.</p></li>
 <li><p>And additionally check if the same projection is set in the status bar at the bottom right.</p></li>
 <li><p>Correct any discrepancies by reprojecting the layers or changing the setting of the KBS/CRS project.</p></li>
 </ol>
@@ -630,68 +616,44 @@ document.write(`
 <p><strong>Solution:</strong></p>
 <ol class="arabic simple">
 <li><p>Activate the <code class="docutils literal notranslate"><span class="pre">processing</span> <span class="pre">tools</span></code> by going to <code class="docutils literal notranslate"><span class="pre">Plugins</span></code> &gt;
-<code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">install</span> <span class="pre">Plugins</span></code></p></li>
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">All</span></code></p></li>
-<li><p>Rehook the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">function</span></code> in the corresponding list</p></li>
+<code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">install</span> <span class="pre">Plugins</span></code>.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p></li>
+<li><p>Rehook the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">function</span></code> in the corresponding list.</p></li>
 </ol>
 <figure class="align-default" id="en-missing-processing-tools-png">
 <a class="reference internal image-reference" href="../../_images/en_missing_processing_tools.png"><img alt="../../_images/en_missing_processing_tools.png" src="../../_images/en_missing_processing_tools.png" style="width: 85%;" /></a>
 </figure>
+<p>See also: Geographic Information Systems
+<a class="reference external" href="https://gis.stackexchange.com/questions/202111/missing-processing-tools-in-vector-menu-of-qgis">https://gis.stackexchange.com/questions/202111/missing-processing-tools-in-vector-menu-of-qgis</a></p>
 </section>
 <section id="missing-toolbox">
 <h2>Missing toolbox<a class="headerlink" href="#missing-toolbox" title="Permalink to this heading">#</a></h2>
 <p><strong>Solution:</strong></p>
 <ol class="arabic simple">
-<li><p>To reactivate the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> <img alt="" src="../../_images/mAction.png" /> click on the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Tab</span></code></p></li>
-<li><p>Select in the pop-up window <code class="docutils literal notranslate"><span class="pre">Panels</span></code></p></li>
-<li><p>Set in the following pop-up window a hook for the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code></p></li>
+<li><p>To reactivate the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> <img alt="" src="../../_images/mAction.png" /> click on the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Tab</span></code>.</p></li>
+<li><p>Select in the pop-up window <code class="docutils literal notranslate"><span class="pre">Panels</span></code>.</p></li>
+<li><p>Set in the following pop-up window a hook for the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code>.</p></li>
 </ol>
 <figure class="align-default" id="en-missing-toolbox-png">
 <a class="reference internal image-reference" href="../../_images/en_missing_toolbox.png"><img alt="../../_images/en_missing_toolbox.png" src="../../_images/en_missing_toolbox.png" style="width: 75%;" /></a>
 </figure>
 </section>
-<section id="qgis-training-support">
-<h2>QGIS training support<a class="headerlink" href="#qgis-training-support" title="Permalink to this heading">#</a></h2>
-<p>(Will be added to Feedback Online Training: <a class="reference external" href="https://heigit.atlassian.net/wiki/spaces/RCARCQT/pages/322043980/Feedback+Online+Training">https://heigit.atlassian.net/wiki/spaces/RCARCQT/pages/322043980/Feedback+Online+Training</a>)</p>
-<section id="modul-3-basic-gis-operations">
-<h3>Modul 3 - Basic GIS operations<a class="headerlink" href="#modul-3-basic-gis-operations" title="Permalink to this heading">#</a></h3>
-<section id="nigeria-floods-exercise">
-<h4>Nigeria Floods Exercise:<a class="headerlink" href="#nigeria-floods-exercise" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p>Sometimes the reference is not really clear in the exercise text: goes it to the attribute table of the layer or to the PDF table concerning the areas affected by the flood.</p></li>
-<li><p>After each important exercise step a visualization of the result may be helpful, f. ex. for visualizing the mentioned point layer.</p></li>
-</ul>
-</section>
-</section>
-<section id="modul-4">
-<h3>Modul 4<a class="headerlink" href="#modul-4" title="Permalink to this heading">#</a></h3>
-<section id="ghana-map-making-exercise">
-<h4>(Ghana) Map making Exercise:<a class="headerlink" href="#ghana-map-making-exercise" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p>The North arrow ist not syncing with the corresponding map.</p></li>
-</ul>
+<section id="the-north-arrow-is-not-syncing-with-the-corresponding-map">
+<h2>The North arrow is not syncing with the corresponding map<a class="headerlink" href="#the-north-arrow-is-not-syncing-with-the-corresponding-map" title="Permalink to this heading">#</a></h2>
+<p><strong>Solution:</strong></p>
 <p>There are two places where you have to define with which map the N arrow should rotate with.</p>
 <ol class="arabic simple">
 <li><p>In the <code class="docutils literal notranslate"><span class="pre">Layout</span> <span class="pre">Tab</span></code> for the image under <code class="docutils literal notranslate"><span class="pre">General</span> <span class="pre">Settings</span></code> make sure that the reference map has the right map selected.</p></li>
 <li><p>Go to <code class="docutils literal notranslate"><span class="pre">Properties</span></code>, expand <code class="docutils literal notranslate"><span class="pre">Image</span> <span class="pre">Rotation</span></code>, select the <code class="docutils literal notranslate"><span class="pre">Sync</span> <span class="pre">with</span> <span class="pre">map</span> <span class="pre">option</span></code> and define here which map it should be.</p></li>
 </ol>
-</section>
-</section>
-<section id="modul-5">
-<h3>Modul 5<a class="headerlink" href="#modul-5" title="Permalink to this heading">#</a></h3>
-<section id="trigger-intervention-map-for-forecast-based-action-exercise">
-<h4>Trigger &amp; Intervention Map for Forecast-based-Action Exercise:<a class="headerlink" href="#trigger-intervention-map-for-forecast-based-action-exercise" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p>I could make sense to place the reference to the coding a little bit earlier in the text to avoid that it is not overlooked or “forgotten” during the exercise.</p></li>
-<li><p>There are two variants of <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">location</span></code> in the toolbox, so may help to enter a note here.</p></li>
-<li><p>When converting tables to csv, it could make sense to add a note in the text whether you are converting for Mac or Win computers and that from a multi-page Excel only the first page will be read out.</p></li>
-</ul>
+<p>See also: Geographic Information Systems
+<a class="reference external" href="https://gis.stackexchange.com/questions/265095/north-arrow-not-syncing-with-map-qgis-2-18#:~:text=1%20Answer&amp;amp;text=2-,There%20are%20TWO%20places%20where%20you%20have%20to%20tell%20it,and%20tell%20it%20which%20map">https://gis.stackexchange.com/questions/265095/north-arrow-not-syncing-with-map-qgis-2-18#:~:text=1 Answer&amp;text=2-,There are TWO places where you have to tell it,and tell it which map</a></p>
 </section>
 <section id="invalid-geometry">
-<h4>Invalid Geometry<a class="headerlink" href="#invalid-geometry" title="Permalink to this heading">#</a></h4>
-<p>If the error message <code class="docutils literal notranslate"><span class="pre">Invalid</span> <span class="pre">Geometries</span></code> appears, it may be that vector files have “slipped” during the processing or downloading process (e.g. the lines of polygons no longer fit together exactly). These errors in the geometries can be corrected by selecting <code class="docutils literal notranslate"><span class="pre">Fix</span> <span class="pre">Geometries</span></code> in the Processing Toolbox.</p>
-</section>
-</section>
+<h2>Invalid Geometry<a class="headerlink" href="#invalid-geometry" title="Permalink to this heading">#</a></h2>
+<p>If the error message <code class="docutils literal notranslate"><span class="pre">Invalid</span> <span class="pre">Geometries</span></code> appears, it may be that vector files have “slipped” during the processing or downloading process (e.g. the lines of polygons no longer fit together exactly).</p>
+<p><strong>Solution:</strong></p>
+<p>These errors in the geometries can be corrected by selecting <code class="docutils literal notranslate"><span class="pre">Fix</span> <span class="pre">Geometries</span></code> in the Processing Toolbox.</p>
 </section>
 </section>
 
@@ -764,22 +726,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layers-that-should-actually-be-in-the-same-position-are-not-on-top-of-each-other">Layers that should actually be in the same position are not on top of each other</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-processing-tools-in-the-panels-tool-and-incomplete-vector-tab">Missing processing tools in the panels tool and incomplete vector tab</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-toolbox">Missing toolbox</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis-training-support">QGIS training support</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modul-3-basic-gis-operations">Modul 3 - Basic GIS operations</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nigeria-floods-exercise">Nigeria Floods Exercise:</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modul-4">Modul 4</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ghana-map-making-exercise">(Ghana) Map making Exercise:</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modul-5">Modul 5</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#trigger-intervention-map-for-forecast-based-action-exercise">Trigger &amp; Intervention Map for Forecast-based-Action Exercise:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-north-arrow-is-not-syncing-with-the-corresponding-map">The North arrow is not syncing with the corresponding map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
 </ul>
   </nav></div>
 
