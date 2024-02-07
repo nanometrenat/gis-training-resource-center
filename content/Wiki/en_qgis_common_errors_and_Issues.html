@@ -559,6 +559,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-north-arrow-is-not-syncing-with-the-corresponding-map">The North arrow is not syncing with the corresponding map</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrong-data-results-or-missing-data">Wrong data results or missing data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-management-issues">File Management Issues</a></li>
 </ul>
             </nav>
         </div>
@@ -714,6 +715,28 @@ document.write(`
 <h2>Wrong data results or missing data<a class="headerlink" href="#wrong-data-results-or-missing-data" title="Permalink to this heading">#</a></h2>
 <p>When you get wrong data results or missing data, please check your file names. You should not use file names with capitals, special characters or empty spaces. Always use underscores between the words for the file name.</p>
 </section>
+<section id="file-management-issues">
+<h2>File Management Issues<a class="headerlink" href="#file-management-issues" title="Permalink to this heading">#</a></h2>
+<p>There may me different reasons, f. ex. reopening your QGIS project, not all files will be displayed correctly because some got lost or were stored on different places, in any case, there is a solution: a clear folder structure.</p>
+<p><strong>Solution:</strong></p>
+<p>Recommended standard folder structure:</p>
+<p><img alt="" src="../../_images/Standard_project_folder_structure.drawio.svg" /></p>
+<p>How it may look like on your pc:</p>
+<figure class="align-default" id="en-qgis-folder-structure-pc-png">
+<a class="reference internal image-reference" href="../../_images/en_qgis_folder_structure_pc.png"><img alt="../../_images/en_qgis_folder_structure_pc.png" src="../../_images/en_qgis_folder_structure_pc.png" style="width: 75%;" /></a>
+</figure>
+<p>The standard folder structure has two principal advantages:</p>
+<ol class="arabic simple">
+<li><p>By sharing the whole project folder, we can be certain that the project will run without problems on a different computer.</p></li>
+<li><p>The folder structure supports the proper organization of geodata and supports the stable function of a QGIS project.</p></li>
+</ol>
+<p>The folder structure template can be downloaded <a class="reference external" href="https://github.com/GIScience/gis-training-resource-center/blob/main/fig/GIS_Project_folder_template.zip"><strong>here</strong></a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The layer data used in the project are not saved in the project file. Instead, the project file only contains the file paths where the layer data were located at the time the project was last saved on the PC. If the location of this layer data is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.
+Good data organisation with a fixed and well thought-out folder structure prevents such problems.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -789,6 +812,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-north-arrow-is-not-syncing-with-the-corresponding-map">The North arrow is not syncing with the corresponding map</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrong-data-results-or-missing-data">Wrong data results or missing data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-management-issues">File Management Issues</a></li>
 </ul>
   </nav></div>
 
