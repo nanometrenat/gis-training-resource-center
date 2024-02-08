@@ -532,7 +532,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -548,6 +550,23 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-raster-data">What is Raster Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-raster-data">Types of Raster Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-raster-data">Properties of Raster data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-extent">Spatial Extent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-resolution">Spatial Resolution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-refernce-sytem-crs">Coordinate Refernce Sytem (CRS)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">Metadata</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">File Format</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -560,6 +579,79 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="remote-sensing-and-raster-data-theorie">
 <h1>Remote Sensing and Raster data theorie 🛰️<a class="headerlink" href="#remote-sensing-and-raster-data-theorie" title="Permalink to this heading">#</a></h1>
 <p>🚧This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
+<section id="what-is-raster-data">
+<h2>What is Raster Data<a class="headerlink" href="#what-is-raster-data" title="Permalink to this heading">#</a></h2>
+<p>Raster data is next to vector data a fundamental component of GIS and represents spatial information as a rectangular grid of cells or pixels that are each associated with a specific geographical information. Each cell contains a value representing a certain attribute, such as elevation, temperature or land cover within a specific area. Regarding their structure geospatial rasters are very similar the representation of optical information in a digital picture, the different beeing that a geospatial raster is accompanied by spatial information that connects the data to a particular location.</p>
+<p>The data format raster data is particularly useful for capturing continuous phenomena across a geographical area such as temperature or elevation that do not suit the visualization with vector geometries due to their continuous nature without clear boundaries.</p>
+<p>In each raster cell information is stored with a value that can be interpreted in the context of the attribute/phenomenen the raster expresses, for example elevation in meters or colour intensity in case of an image.</p>
+<figure class="align-default" id="basic-concept-of-a-spatial-raster">
+<a class="reference internal image-reference" href="../../_images/mod8_rasterdata_rasterbasics.png"><img alt="../../_images/mod8_rasterdata_rasterbasics.png" src="../../_images/mod8_rasterdata_rasterbasics.png" style="width: 500px;" /></a>
+</figure>
+</section>
+<section id="types-of-raster-data">
+<h2>Types of Raster Data<a class="headerlink" href="#types-of-raster-data" title="Permalink to this heading">#</a></h2>
+<p>Raster data can be distinguished intwo two common types according to the type of information that is displayed: Continous and catigoral raster data.</p>
+<p>Continuous raster data refers to datasets where the values assigned to each pixel represent continuous phenomena that vary smoothly across the area covered by the raster. Some examples of continuous rasters include:</p>
+<ol class="arabic simple">
+<li><p><strong>Precipitation Maps</strong> displaying variable precipitation sums</p></li>
+<li><p><strong>Digital Elevation Models</strong> containing altidute values</p></li>
+<li><p><strong>Spatially variable Indices</strong> such as the Normalized Difference vegetation Index (NDVI)</p></li>
+</ol>
+<figure class="align-default" id="exemplary-digital-elevation-model-of-an-area-in-the-indian-himalayas">
+<a class="reference internal image-reference" href="../../_images/mod8_rasterdata_DEM.png"><img alt="../../_images/mod8_rasterdata_DEM.png" src="../../_images/mod8_rasterdata_DEM.png" style="width: 500px;" /></a>
+</figure>
+<p><strong>Discontinous</strong> rasters contain catigorical data, where each pixel represents a discrete classvalue rather than a value on a continuous scale. The information in these types of raster is sometimes also suitable for the storage with vector data. Some examples of classified maps include:</p>
+<ol class="arabic simple">
+<li><p><strong>Landcover/Land Use Maps</strong> with discrete classes</p></li>
+<li><p><strong>Tree height maps classified</strong> as short, medium, and tall trees</p></li>
+<li><p><strong>Risk maps</strong> with multiple distinct risk classes</p></li>
+</ol>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/mod8_rasterdata_lulcexample.png"><img alt="../../_images/mod8_rasterdata_lulcexample.png" src="../../_images/mod8_rasterdata_lulcexample.png" style="width: 500px;" /></a>
+</figure>
+</section>
+<section id="properties-of-raster-data">
+<h2>Properties of Raster data<a class="headerlink" href="#properties-of-raster-data" title="Permalink to this heading">#</a></h2>
+<section id="spatial-extent">
+<h3>Spatial Extent<a class="headerlink" href="#spatial-extent" title="Permalink to this heading">#</a></h3>
+<p>The spatial extent of a raster refers to the geographical area covered by the grid of cells in the raster dataset. It defines the boundaries of the raster dataset in terms of its geographical coordi-nates. The spatial extent is typically described by the minimum and maximum values of the spatial coordinates in every geographical direction (e.g. minimum and maximum latitude and longitude) that encompass all pixels of the raster.
+BEISPIEL ABBILDUNG</p>
+</section>
+<section id="spatial-resolution">
+<h3>Spatial Resolution<a class="headerlink" href="#spatial-resolution" title="Permalink to this heading">#</a></h3>
+<p>The spatial resolution of a raster refers to the area represented by each individual pixel on the ground in the real world. It quantifies the level of detail of the spatial representation within the dataset. For example, a spatial resolution of 30 metres per pixel means that each pixel represents an area of 30x30 metres on the ground. High spatial resolution means smaller pixel sizes, result-ing in finer detail and more accurate representation of spatial features within the dataset.</p>
+<figure class="align-default" id="different-spatial-resolutions-of-the-same-raster">
+<a class="reference internal image-reference" href="../../_images/mod8_rasterdata_spatialresolution.png"><img alt="../../_images/mod8_rasterdata_spatialresolution.png" src="../../_images/mod8_rasterdata_spatialresolution.png" style="width: 500px;" /></a>
+</figure>
+</section>
+<section id="coordinate-refernce-sytem-crs">
+<h3>Coordinate Refernce Sytem (CRS)<a class="headerlink" href="#coordinate-refernce-sytem-crs" title="Permalink to this heading">#</a></h3>
+<p>As with vector data, the Coordinate Reference System (CRS) of a raster dataset refers to the spa-tial reference framework used to define the geographic location and orientation of the raster on the Earth’s surface (CRS WIKI link). It provides a standardised way of representing spatial coor-dinates and ensures that raster data can be accurately geolocated and integrated with other geo-spatial datasets.<br><br>
+The CRS includes a number of different parameters:<br></p>
+<ol class="arabic simple">
+<li><p><strong>Coordinate system</strong>: This defines how spatial coordinates are represented. Common coordinate systems include geographic (latitude and longitude) and projected (e.g. Universal Transverse Mercator - UTM).</p></li>
+<li><p><strong>Datum</strong>: The datum specifies the reference ellipsoid and geodetic parameters used to model the shape of the Earth. It ensures consistency of spatial measurements across different datasets (e.g. the WGS 84 ellipsoid).</p></li>
+<li><p><strong>Unit</strong>: The unit of measurement for spatial coordinates, such as metres (e.g. in UTM) or degrees in the case of geographical coordinates.</p></li>
+<li><p><strong>Origin</strong>: The origin or reference point of the coordinate system, which may vary depending on the projection method used.</p></li>
+</ol>
+</section>
+<section id="metadata">
+<h3>Metadata<a class="headerlink" href="#metadata" title="Permalink to this heading">#</a></h3>
+<p>Metadata for raster data consists of descriptive information that provides context and details about the raster dataset. It includes information such as the dataset source, creation date, spatial extent, spatial resolution, coordinate reference system (CRS), data type, units, compression tech-niques, processing steps, accuracy ratings, and copyright/licensing information.<br><br>
+This metadata helps users to understand the content, origin, quality and appropriate use of raster data. It facilitates data discovery, evaluation and integration into geospatial workflows, ensuring that users can effectively interpret and use the data for their specific applications.</p>
+</section>
+</section>
+<section id="file-format">
+<h2>File Format<a class="headerlink" href="#file-format" title="Permalink to this heading">#</a></h2>
+<p>There are multiple different file formats for storing an working with raster data. Following a short overview over the most common formats that you will likely come by as you work with spaptial rasters:</p>
+<ol class="arabic simple">
+<li><p><strong>GeoTIFF (.tif/.tiff)</strong>: Widely used file format, supports georeferencing and metadata.</p></li>
+<li><p><strong>GeoPackage (.gpkg)</strong>: Open format for storing geospatial data, supports raster and vec-tor.</p></li>
+<li><p><strong>JPEG (.jpg/.jpeg) &amp; PNG (.png)</strong>: Common formats for images, lacks georeferencing.</p></li>
+<li><p><strong>Esri Grid (.adf)</strong>: Esri’s raster format, used in ArcGIS, supports georeferncing amd metadata</p></li>
+<li><p><strong>GeoPackage (.gpkg)</strong>: Open format for storing geospatial data, supports raster and vec-tor.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -616,6 +708,29 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-raster-data">What is Raster Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-raster-data">Types of Raster Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-raster-data">Properties of Raster data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-extent">Spatial Extent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-resolution">Spatial Resolution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-refernce-sytem-crs">Coordinate Refernce Sytem (CRS)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">Metadata</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">File Format</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
