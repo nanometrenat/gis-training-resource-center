@@ -561,14 +561,20 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimated-time-demand-for-the-exercise">Estimated time demand for the exercise.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-a-heat-map-visualization-past-flood-delineation">Exercise A: Heat Map Visualization: Past Flood Delineation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">1. Load data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#georeferencing-and-autoextraction-with-the-sketch-map-tool">2. Georeferencing and autoextraction with the sketch Map tool</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rasterize">3. Rasterize</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-calculator">4. Raster Calculator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-the-trainers">Instructions for the trainers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-a-complement-your-sketch-map-tool-data">Exercise A: Complement your Sketch Map Tool data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-heat-map-visualization-past-flood-delineation">Exercise B: Heat Map Visualization: Past Flood Delineation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-and-background">Scenario and Background</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection">1. Data Collection</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#georeferencing-and-autoextraction-with-the-sketch-map-tool">2. Georeferencing and autoextraction with the Sketch Map tool</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#start-your-qgis-project">3. Start your QGIS Project</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rasterize">3. Rasterize</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-calculator">4. Raster Calculator</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-analysis-with-additional-data-road-safety-assessment">Exercise B: Analysis with additional data: Road Safety Assessment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-or-for-near-future-connection-of-sketch-map-tool-and-in-field-surveys-f-ex-kobo">Optional or for near future: Connection of Sketch Map Tool and in field Surveys (f.ex. Kobo)</a></li>
 </ul>
             </nav>
         </div>
@@ -603,29 +609,97 @@ document.write(`
 </section>
 <section id="estimated-time-demand-for-the-exercise">
 <h3>Estimated time demand for the exercise.<a class="headerlink" href="#estimated-time-demand-for-the-exercise" title="Permalink to this heading">#</a></h3>
-<p>Combined with a case and prepared data so the focus can be on the analysis and what you can see in the results</p>
-<p>Two options</p>
-<p>Count-dublicates-script</p>
-<p>Or just do it in QGIS (more advanced)</p>
 </section>
 </section>
-<section id="exercise-a-heat-map-visualization-past-flood-delineation">
-<h2>Exercise A: Heat Map Visualization: Past Flood Delineation<a class="headerlink" href="#exercise-a-heat-map-visualization-past-flood-delineation" title="Permalink to this heading">#</a></h2>
-<section id="load-data">
-<h3>1. Load data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h3>
+<section id="instructions-for-the-trainers">
+<h2>Instructions for the trainers<a class="headerlink" href="#instructions-for-the-trainers" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Trainers Corner<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="rubric">Preparation and material</p>
+<ul class="simple">
+<li><p class="sd-card-text">Online access and devices (PC)</p></li>
+<li><p class="sd-card-text">QGIS installed on the computer</p></li>
+<li><p class="sd-card-text">Take a look and make yourself familiar on the provided material for the exercise and the Sketch Map Tool in general.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Alternatives</span>  
+<span class="o">-</span> <span class="n">If</span> <span class="n">you</span> <span class="n">like</span> <span class="n">to</span> <span class="n">skip</span> <span class="n">parts</span> <span class="n">of</span> <span class="n">the</span> <span class="n">workflow</span><span class="p">,</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">you</span> <span class="n">have</span> <span class="n">alternative</span> <span class="n">material</span> <span class="p">(</span><span class="n">like</span> <span class="n">preprinted</span><span class="p">,</span> <span class="ow">or</span> <span class="n">already</span> <span class="n">marked</span> <span class="n">Sketch</span> <span class="n">maps</span><span class="p">)</span> <span class="n">prepared</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">If</span> <span class="n">you</span> <span class="n">like</span> <span class="n">to</span> <span class="n">adapt</span> <span class="n">this</span> <span class="n">exercise</span> <span class="n">to</span> <span class="n">your</span> <span class="n">specific</span> <span class="n">use</span> <span class="n">case</span><span class="p">,</span> <span class="n">create</span> <span class="n">your</span> <span class="n">own</span> <span class="n">case</span><span class="o">-</span><span class="n">description</span><span class="o">.</span> 
+</pre></div>
+</div>
+<p class="rubric">Available Material: needs to be linked directly</p>
+<p class="sd-card-text">•	Introduction Slides about the Sketch Map Tool available
+•	5 Pre-marked and photographed maps to be use as input for Sketch Map Tool for Exercise B
+o	Geodata of the results and some pictures</p>
+<p class="rubric">During the exercise:</p>
+<p class="rubric">Introduction:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Introduce the idea, the aim and the general workflow of the Skech Map Tool beforehand</p></li>
+<li><p class="sd-card-text">Provide access to the needed material</p></li>
+<li><p class="sd-card-text">check-in if there are questions or problems.</p></li>
+</ul>
+<p class="rubric">Wrap up:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Take some time at the end to wrap up and that several people present their result map</p></li>
+<li><p class="sd-card-text">Discuss Benefits of showing results as a heatmap and think about further thematic areas where this could be useful</p></li>
+<li><p class="sd-card-text">Time to for Open questions.</p></li>
+</ul>
+<p class="rubric">Step-by step introduction for participants</p>
+<p class="sd-card-text">link where you can download this part as a short pdf to hand it to participants</p>
+<p class="sd-card-text">If you expieriences any problems during your use of the <a class="reference external" href="https://sketch-map-tool.heigit.org/">Sketch Map Tool</a> please take a look at the <a class="reference external" href="https://sketch-map-tool.heigit.org/help">Help page</a>.</p>
+</div>
+</details><section id="exercise-a-complement-your-sketch-map-tool-data">
+<h3>Exercise A: Complement your Sketch Map Tool data<a class="headerlink" href="#exercise-a-complement-your-sketch-map-tool-data" title="Permalink to this heading">#</a></h3>
+<p>Szenarien:</p>
+<ul class="simple">
+<li><p>Eine eingezeichnete Fläche wurde nicht erkannt, ich möchte sie auf Grundlage des GeoTiffs digitalisieren und dem geojson hinzufügen</p></li>
+<li><p>Ich möchte den verschiedenen Polygonen eine weitere Information/column hinzufügen</p></li>
+</ul>
+<p>To do: map erstellen und ein Polygon mit Bleistift einzeichen, sodass es nicht erkannt wird. Vielleicht flood risk - vulnerabilities and capacities
+–&gt; dann eine spalte mit angeben wo description steht -&gt; culnerability oder capacity je nach Farbe</p>
+<ul class="simple">
+<li><p>Ich habe mehrere geojson outputs von mehreren Sketch Maps</p></li>
+</ul>
+</section>
+<section id="exercise-b-heat-map-visualization-past-flood-delineation">
+<h3>Exercise B: Heat Map Visualization: Past Flood Delineation<a class="headerlink" href="#exercise-b-heat-map-visualization-past-flood-delineation" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="scenario-and-background">
+<h3>Scenario and Background<a class="headerlink" href="#scenario-and-background" title="Permalink to this heading">#</a></h3>
+<p>Flood maps hold immense importance, especially in less privileged regions with limited regular surveying by official bodies. In these areas, where access to sophisticated technology and resources is often limited, flood maps provide a vital resource for understanding and managing flood risks. They empower communities to identify vulnerable areas, plan emergency response strategies, and implement mitigation measures. Flood maps facilitate informed decision-making, enabling communities to allocate resources effectively, prioritize infrastructure development, and implement early warning systems. By filling the gap in official surveying, flood maps play a crucial role in enhancing resilience, minimizing damages, and safeguarding lives and livelihoods in these vulnerable regions.</p>
+<p>The sketch map tool is a valuable tool for delineating flood areas within a community. It enables users to create hand-drawn or digitally generated maps to identify and outline areas prone to flooding. By incorporating local knowledge and observations, the tool empowers community members to actively participate in flood risk assessment and mitigation efforts. The Sketch Map Tool serves as a user-friendly and accessible solution for mapping flood areas, facilitating community engagement, and informing decision-making processes to enhance resilience and response strategies against flooding events.</p>
+<section id="data-collection">
+<h4>1. Data Collection<a class="headerlink" href="#data-collection" title="Permalink to this heading">#</a></h4>
+<p>Imagine you have had a field trip in order to talk to people in the affected areas and let them draw flood prone areas in their community. You are now back to your office and have 5 different flood maps that you have already scanned in. Please download the prepared maps <span class="xref myst">here</span>.</p>
+<p>Optional: You find the empty map <span class="xref myst">here</span>. Feel free to draw some additional flood maps by printing the template out and drawing on it or by using a simple graphics editor.</p>
 </section>
 <section id="georeferencing-and-autoextraction-with-the-sketch-map-tool">
-<h3>2. Georeferencing and autoextraction with the sketch Map tool<a class="headerlink" href="#georeferencing-and-autoextraction-with-the-sketch-map-tool" title="Permalink to this heading">#</a></h3>
+<h4>2. Georeferencing and autoextraction with the Sketch Map tool<a class="headerlink" href="#georeferencing-and-autoextraction-with-the-sketch-map-tool" title="Permalink to this heading">#</a></h4>
+<p>Upload the sketch maps back to the tool’s website. Head to <a class="reference external" href="https://sketch-map-tool.heigit.org/">sketch-map-tool.heigit.org</a> and choose ‘Digitize your Sketch maps’ on the right. Upload all your sketches in .png or .jpg format. You can mark your sketches and simply drag and drop them into the window.</p>
+<p>The sketch maps are now being processed and georeferenced with the annotations extracted and vectorized. Download the vectors. You may use the ones we have prepared <span class="xref myst">here</span>.</p>
+</section>
+<section id="start-your-qgis-project">
+<h4>3. Start your QGIS Project<a class="headerlink" href="#start-your-qgis-project" title="Permalink to this heading">#</a></h4>
+<p>Open QGIS and load your vector files by dragginf and dropping them into the layer panel. Explore the file by opening the attribute table.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you upload a several marked Sketch Maps simultaneously, you will get one vector output containing all the markings of all Sketch Maps, while uploading your Sketch Maps one by one will provide you with one vector file for the marking in each Sketch Map. This information can be important for the planning phase of your p mapping process.</p>
+</div>
 </section>
 <section id="rasterize">
-<h3>3. Rasterize<a class="headerlink" href="#rasterize" title="Permalink to this heading">#</a></h3>
+<h4>3. Rasterize<a class="headerlink" href="#rasterize" title="Permalink to this heading">#</a></h4>
 </section>
 <section id="raster-calculator">
-<h3>4. Raster Calculator<a class="headerlink" href="#raster-calculator" title="Permalink to this heading">#</a></h3>
+<h4>4. Raster Calculator<a class="headerlink" href="#raster-calculator" title="Permalink to this heading">#</a></h4>
 </section>
 </section>
-<section id="exercise-b-analysis-with-additional-data-road-safety-assessment">
-<h2>Exercise B: Analysis with additional data: Road Safety Assessment<a class="headerlink" href="#exercise-b-analysis-with-additional-data-road-safety-assessment" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="optional-or-for-near-future-connection-of-sketch-map-tool-and-in-field-surveys-f-ex-kobo">
+<h2>Optional or for near future: Connection of Sketch Map Tool and in field Surveys (f.ex. Kobo)<a class="headerlink" href="#optional-or-for-near-future-connection-of-sketch-map-tool-and-in-field-surveys-f-ex-kobo" title="Permalink to this heading">#</a></h2>
 <p>vielleicht noch bessere Ideen?</p>
 </section>
 </section>
@@ -683,14 +757,20 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimated-time-demand-for-the-exercise">Estimated time demand for the exercise.</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-a-heat-map-visualization-past-flood-delineation">Exercise A: Heat Map Visualization: Past Flood Delineation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">1. Load data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#georeferencing-and-autoextraction-with-the-sketch-map-tool">2. Georeferencing and autoextraction with the sketch Map tool</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rasterize">3. Rasterize</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-calculator">4. Raster Calculator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-the-trainers">Instructions for the trainers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-a-complement-your-sketch-map-tool-data">Exercise A: Complement your Sketch Map Tool data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-heat-map-visualization-past-flood-delineation">Exercise B: Heat Map Visualization: Past Flood Delineation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scenario-and-background">Scenario and Background</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection">1. Data Collection</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#georeferencing-and-autoextraction-with-the-sketch-map-tool">2. Georeferencing and autoextraction with the Sketch Map tool</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#start-your-qgis-project">3. Start your QGIS Project</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rasterize">3. Rasterize</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-calculator">4. Raster Calculator</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-analysis-with-additional-data-road-safety-assessment">Exercise B: Analysis with additional data: Road Safety Assessment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-or-for-near-future-connection-of-sketch-map-tool-and-in-field-surveys-f-ex-kobo">Optional or for near future: Connection of Sketch Map Tool and in field Surveys (f.ex. Kobo)</a></li>
 </ul>
   </nav></div>
 
