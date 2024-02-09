@@ -556,7 +556,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-networks-analysis-and-insights">Understanding Networks: Analysis and Insights</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-lies-the-analysis">Where Lies the Analysis?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -578,15 +578,13 @@ document.write(`
 <p>Creating a graph involves defining its nodes (vertices) and edges (connections between nodes).</p>
 <p><strong>Defining Nodes:</strong> entities, objects, locations <strong>→</strong> Features in OpenStreetMap (hospitals, schools etc.)</p>
 <p><strong>Identifying Edges:</strong> roads or pathways between locations <strong>→</strong> Ways in OpenStreetMap (roads, paths, cicleways)</p>
-<p>Edges can be endowed with diverse weights. OpenStreetMap features tags such as road type, segment length, speed limit, and surface condition, which can be interpreted as weight attributes. Depending on your requirements, you can compute the shortest route or opt for the route with minimal elevation gain.</p>
+<p><strong>Additional Information</strong>
+Edges can be endowed with diverse weights. OpenStreetMap features tags such as road type, segment length, speed limit, and surface condition, which can be interpreted as weight attributes. Depending on your requirements, you  can compute the shortest route or opt for the route with minimal elevation gain.</p>
 <figure class="align-center" id="basic-classification">
-<a class="reference internal image-reference" href="../../_images/Network.png"><img alt="../../_images/Network.png" src="../../_images/Network.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../../_images/data_to_network.drawio.png"><img alt="../../_images/data_to_network.drawio.png" src="../../_images/data_to_network.drawio.png" style="width: 500px;" /></a>
 </figure>
-  <div style="text-align:center;">
-  <img src="/fig/Network.png" width="500" height="370">
-  </div>
-<section id="where-lies-the-analysis">
-<h3>Where Lies the Analysis?<a class="headerlink" href="#where-lies-the-analysis" title="Permalink to this heading">#</a></h3>
+<section id="analysis">
+<h3>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">#</a></h3>
 <p>You can determine directions or standard routes, which unveil the shortest path between two points. Isochrones offer insight into the area accessible within a specified time or distance threshold. Additionally, generating a matrix enables the assessment of time or distance between predefined locations. Alternatively, graphs facilitate travel optimization by computing the most efficient sequence for visiting a given set of points.</p>
 <p>This module deals with isochrones and shows a network analysis in QGIS in two different ways.</p>
 <p>bit stuff here:</p>
@@ -659,7 +657,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-networks-analysis-and-insights">Understanding Networks: Analysis and Insights</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-lies-the-analysis">Where Lies the Analysis?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
 </ul>
 </li>
 </ul>
