@@ -566,6 +566,15 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrong-data-results-or-missing-data">Wrong data results or missing data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-management-issues">File Management Issues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-qgis-problems">Specific QGIS problems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-settings-deactivating-the-automatic-projection-selection">Basic settings &gt; Deactivating the automatic projection selection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-saving">Regular saving</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grass-applications">GRASS applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saga-with-linux">SAGA with Linux</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#umlauts-special-characters-spaces-in-file-paths">Umlauts, special characters, spaces in file paths</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help-access-links">Help Access Links</a></li>
 </ul>
             </nav>
         </div>
@@ -582,7 +591,7 @@ document.write(`
 <p>Here we are collecting common QGIS errors and issues as general QGIS training support.</p>
 <section id="different-qgis-versions">
 <h2>Different QGIS versions<a class="headerlink" href="#different-qgis-versions" title="Permalink to this heading">#</a></h2>
-<p><strong>Main items</strong> (to add for example different screen views)</p>
+<p>The Wiki and in particular the videos it contains are only a snapshot in time. QGIS itself, as well as the installable extensions, are constantly being developed and improved. There may therefore be differences between the various versions in the appearance of the user interface or, in rare cases, even in the function. Consequently, there may be differences between the wiki and the QGIS installed on your PC.</p>
 </section>
 <section id="qgis-on-mac-doesn-t-open">
 <h2>QGIS on Mac doesn’t open<a class="headerlink" href="#qgis-on-mac-doesn-t-open" title="Permalink to this heading">#</a></h2>
@@ -750,7 +759,49 @@ When having two layers with different crs, then select one of the layers as the 
 <p>The layer data used in the project are not saved in the project file. Instead, the project file only contains the file paths where the layer data were located at the time the project was last saved on the PC. If the location of this layer data is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.
 Good data organisation with a fixed and well thought-out folder structure prevents such problems.</p>
 </div>
-<p>See also the following [<strong>Wiki_Page</strong>]: (<a class="github reference external" href="https://github.com/GIScience/gis-training-resource-center/blob/main/content/Wiki/en_qgis_projects_folder_structure_wiki.md">GIScience/gis-training-resource-center</a>) for <code class="docutils literal notranslate"><span class="pre">How</span> <span class="pre">to</span> <span class="pre">create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">QGIS</span> <span class="pre">project</span></code> and <code class="docutils literal notranslate"><span class="pre">How</span> <span class="pre">to</span> <span class="pre">open</span> <span class="pre">an</span> <span class="pre">existing</span> <span class="pre">QGIS</span> <span class="pre">project</span></code>.</p>
+<p>See also the following [<strong>Wiki_Page</strong>]:</p>
+<p>(<a class="github reference external" href="https://github.com/GIScience/gis-training-resource-center/blob/main/content/Wiki/en_qgis_projects_folder_structure_wiki.md">GIScience/gis-training-resource-center</a>) for <code class="docutils literal notranslate"><span class="pre">How</span> <span class="pre">to</span> <span class="pre">create</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">QGIS</span> <span class="pre">project</span></code> and <code class="docutils literal notranslate"><span class="pre">How</span> <span class="pre">to</span> <span class="pre">open</span> <span class="pre">an</span> <span class="pre">existing</span> <span class="pre">QGIS</span> <span class="pre">project</span></code>.</p>
+</section>
+<section id="specific-qgis-problems">
+<h2>Specific QGIS problems<a class="headerlink" href="#specific-qgis-problems" title="Permalink to this heading">#</a></h2>
+<section id="basic-settings-deactivating-the-automatic-projection-selection">
+<h3>Basic settings &gt; Deactivating the automatic projection selection<a class="headerlink" href="#basic-settings-deactivating-the-automatic-projection-selection" title="Permalink to this heading">#</a></h3>
+<p>After installing QGIS, some basic settings should be changed to avoid possible sources of error.
+If a layer file does not have a projection, a projection must be defined for it when it is imported into QGIS. By deactivating the automatic projection selection, this projection can be defined manually. This prevents layers from accidentally being in the wrong projection.</p>
+<p>++image ergänzen++</p>
+</section>
+<section id="regular-saving">
+<h3>Regular saving<a class="headerlink" href="#regular-saving" title="Permalink to this heading">#</a></h3>
+<p>Unfortunately, GIS programs are notorious for freezing or crashing completely. Although there is a trend towards fewer complications with better hardware, even a “gaming PC” costing several thousand euros is not completely safe.
+More complex tasks with longer calculation times may still cause problems. Regular saving is therefore recommended.</p>
+<p>See also the following [<strong>Wiki_Page</strong>]:</p>
+<p>(<a class="github reference external" href="https://github.com/GIScience/gis-training-resource-center//content/Wiki/en_qgis_interface_wiki.html#save-open-qgis-projects">GIScience/gis-training-resource-center</a>) <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">and</span> <span class="pre">open</span> <span class="pre">QGIS</span> <span class="pre">Projects</span></code>.</p>
+</section>
+<section id="grass-applications">
+<h3>GRASS applications<a class="headerlink" href="#grass-applications" title="Permalink to this heading">#</a></h3>
+<p>QGIS also allows the use of tools from external GIS software, such as GRASS GIS. GRASS does not have to be downloaded separately, but is automatically installed when QGIS is installed. GRASS tools are identified by their icon.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please note that the GRASS software is not started when the standard QGIS application is started. Consequently, an error message may appear when using GRASS tools. This can be remedied by opening the QGIS with GRASS application (found via the computer’s search function) instead of the standard application.</p>
+</div>
+</section>
+<section id="saga-with-linux">
+<h3>SAGA with Linux<a class="headerlink" href="#saga-with-linux" title="Permalink to this heading">#</a></h3>
+<p>SAGA is another external GIS software. SAGA tools are identified by their icon. When using Windows or MacOS as the operating system, SAGA is automatically implemented when QGIS is installed. With Linux, however, SAGA is not installed automatically and must be installed manually. Experience has shown that this installation is not always easy and can cause problems. Alternatively, you can either use a Windows or MacOS virtual box or refrain from using SAGA tools (you will then have to search for alternative tools yourself).</p>
+</section>
+<section id="umlauts-special-characters-spaces-in-file-paths">
+<h3>Umlauts, special characters, spaces in file paths<a class="headerlink" href="#umlauts-special-characters-spaces-in-file-paths" title="Permalink to this heading">#</a></h3>
+<p>If the file path contains umlauts (ä,ö,ü), special characters (!,?, ., etc.) or spaces, this can lead to problems when these files are processed by QGIS. It is therefore recommended that you avoid these characters in your file paths (write out umlauts, replace spaces with _).</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Temporary files are user-specific (if several people use one PC, each person has their own temporary files). The file path therefore contains your user name. If this contains problematic characters, it may therefore be advisable to change it.</p>
+</div>
+</section>
+</section>
+<section id="help-access-links">
+<h2>Help Access Links<a class="headerlink" href="#help-access-links" title="Permalink to this heading">#</a></h2>
+<p>Here you will find further Help access links or QGIS community links to address specific issues.</p>
+<p>….</p>
 </section>
 </section>
 
@@ -829,6 +880,15 @@ Good data organisation with a fixed and well thought-out folder structure preven
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrong-data-results-or-missing-data">Wrong data results or missing data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-management-issues">File Management Issues</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-qgis-problems">Specific QGIS problems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-settings-deactivating-the-automatic-projection-selection">Basic settings &gt; Deactivating the automatic projection selection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-saving">Regular saving</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grass-applications">GRASS applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saga-with-linux">SAGA with Linux</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#umlauts-special-characters-spaces-in-file-paths">Umlauts, special characters, spaces in file paths</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help-access-links">Help Access Links</a></li>
 </ul>
   </nav></div>
 
