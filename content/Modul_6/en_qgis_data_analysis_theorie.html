@@ -564,7 +564,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection-analysis">Intersection analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculating-the-length-of-a-flooded-road-network">Example: Calculating the length of a flooded road network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmaps">Heatmaps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hexagon-grid">Hexagon grid</a></li>
 </ul>
             </nav>
         </div>
@@ -713,15 +713,25 @@ There are some spatial analysis problems that are difficult to avoid completely.
 The unit of measurement of the calculated area depends on the distance unit settings of the current project’s CRS (metrical or geographic). In most cases you want metres or kilometers. Make sure the units of your CRS are metres to get the correct values.</p>
 <p>You can check this by opening the CRS selector (bottom right corner) and reading the information of your selected CRS.</p>
 </div>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example: Calculating the length of roads<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2__fieldcalc_calculating_length
+.mp4"></video></p>
+</div>
+</details></section>
 <section id="basic-statistics">
 <h2>Basic statistics<a class="headerlink" href="#basic-statistics" title="Permalink to this heading">#</a></h2>
-<p>In the field calculator, we can calculate the length, area, perimeter for each feature of a dataset. However, we might want to have aggregate statistics on a dataset (average length/area, total length/area).
+<p>In the field calculator, we can calculate the length, area, perimeter for each feature of a dataset. However, we might want to have aggregate statistics on a dataset (average length/area, total length/area).<br />
 QGIS comes with two basic processing tools to generate statistics:</p>
 <table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Processing tool</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="head"><p><em>Processing tool</em></p></th>
+<th class="head"><p><em>Description</em></p></th>
 </tr>
 </thead>
 <tbody>
@@ -729,17 +739,30 @@ QGIS comes with two basic processing tools to generate statistics:</p>
 <td><p>This algorithm generates basic statistics (count, sum, mean, median, standard deviation, quartiles, …) from the analysis of a values in a field in the attribute table of a vector layer. Numeric, date, time and string fields are supported. The statistics returned will depend on the field type. Statistics are generated as an HTML file.</p></td>
 </tr>
 <tr class="row-odd"><td><p>“<strong>Statistics by categories</strong>”</p></td>
-<td><p>This algorithm calculates statistics of fields depending on a parent class. In the field ‘</p></td>
+<td><p>This algorithm calculates statistics of fields depending on a parent class. In the option <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">to</span> <span class="pre">calculate</span> <span class="pre">statistics</span> <span class="pre">on</span></code>, you must select the column that you wish to create statistics for (for example, area/length). In the option <code class="docutils literal notranslate"><span class="pre">Field(s)</span> <span class="pre">with</span> <span class="pre">categories</span></code> you select the values that will be used as categories in the statistics (for example, flooding=Y/N, type of road, type of building/amenity).</p></td>
 </tr>
 </tbody>
 </table>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Example: Aggregating… <div class="sd-summary-down docutils">
+Example: Statistics by categories<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">In this example we have a road network which has been intersected with a flood extent. A new field (“Flood”) has been calculated containing information wether the road is flooded or not (Y=flooded, N=not flooded). The length of each road has been calculated using the <code class="docutils literal notranslate"><span class="pre">$length</span></code> function in the field calculator as new column called “Length”.<br />
+We want to calculate the total length of flooded and unflooded road respectively.</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Open the “Statistics by category”-tool</p></li>
+<li><p class="sd-card-text">Select the road network layer.</p></li>
+<li><p class="sd-card-text">Under <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">to</span> <span class="pre">calculate</span> <span class="pre">statistics</span> <span class="pre">on</span></code>, select <code class="docutils literal notranslate"><span class="pre">Length</span></code></p></li>
+<li><p class="sd-card-text">Under <code class="docutils literal notranslate"><span class="pre">Field(s)</span> <span class="pre">with</span> <span class="pre">categories</span></code>, select <code class="docutils literal notranslate"><span class="pre">Flood</span></code></p></li>
+<li><p class="sd-card-text">Specify a location to save the statistics file.</p></li>
+<li><p class="sd-card-text">Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+<li><p class="sd-card-text">After completion, a new layer will appear in your layer tab. This will not contain spatial attributes and is a simple attribute table with the statistics. In our case, we will have the basic statistics (min, max, range, sum, median, sd, etc.) for all the road features with the flooding value “Y”, and “N”.</p></li>
+</ol>
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_statistics_by_categories_example
+.mp4"></video></p>
 </div>
 </details></section>
 <section id="buffer-analysis">
@@ -755,8 +778,8 @@ Example: Aggregating… <div class="sd-summary-down docutils">
 <section id="heatmaps">
 <h2>Heatmaps<a class="headerlink" href="#heatmaps" title="Permalink to this heading">#</a></h2>
 </section>
-<section id="id2">
-<h2><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="hexagon-grid">
+<h2>Hexagon grid<a class="headerlink" href="#hexagon-grid" title="Permalink to this heading">#</a></h2>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -835,7 +858,7 @@ Example: Aggregating… <div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection-analysis">Intersection analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculating-the-length-of-a-flooded-road-network">Example: Calculating the length of a flooded road network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmaps">Heatmaps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hexagon-grid">Hexagon grid</a></li>
 </ul>
   </nav></div>
 
