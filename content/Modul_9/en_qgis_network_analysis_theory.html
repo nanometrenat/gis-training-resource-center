@@ -555,7 +555,14 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-networks-analysis-and-insights">Understanding Networks: Analysis and Insights</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-a-graph">Components of a Graph</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openrouteservice">OpenRouteService</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#general-information">General Information</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#services">Services</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#isochrones">Isochrones</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -574,6 +581,8 @@ document.write(`
 <section id="understanding-networks-analysis-and-insights">
 <h2>Understanding Networks: Analysis and Insights<a class="headerlink" href="#understanding-networks-analysis-and-insights" title="Permalink to this heading">#</a></h2>
 <p>Networks serve as simplified representations of real-world systems. A network comprises nodes and edges, representing entities and their relationships respectively. Rather than being defined by coordinates, positions within a network are determined by connectivity. In GIS (Geographic Information Systems), networks play integral roles in transportation modeling and supply chain networks such as water and energy distribution. Additionally, they are utilized for analyzing the service areas of healthcare facilities. For instance, analyses can assess areas vulnerable to flooding to ascertain the potential impact on healthcare services during a disaster.</p>
+<section id="components-of-a-graph">
+<h3>Components of a Graph<a class="headerlink" href="#components-of-a-graph" title="Permalink to this heading">#</a></h3>
 <p>Creating a graph involves defining its nodes (vertices) and edges (connections between nodes).</p>
 <p><strong>Defining Nodes:</strong> entities, objects, locations <strong>→</strong> Features in OpenStreetMap (hospitals, schools etc.)</p>
 <p><strong>Identifying Edges:</strong> roads or pathways between locations <strong>→</strong> Ways in OpenStreetMap (roads, paths, cicleways)</p>
@@ -582,12 +591,73 @@ Edges can be endowed with diverse weights. OpenStreetMap features tags such as r
 <figure class="align-center" id="basic-classification">
 <a class="reference internal image-reference" href="../../_images/graph_creation.png"><img alt="../../_images/graph_creation.png" src="../../_images/graph_creation.png" style="width: 700px;" /></a>
 </figure>
+</section>
 <section id="analysis">
 <h3>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">#</a></h3>
 <p>You can determine directions or standard routes, which unveil the shortest path between two points. Isochrones offer insight into the area accessible within a specified time or distance threshold. Additionally, generating a matrix enables the assessment of time or distance between predefined locations. Alternatively, graphs facilitate travel optimization by computing the most efficient sequence for visiting a given set of points.</p>
-<p>This module deals with isochrones and shows a network analysis in QGIS in two different ways.</p>
+</section>
+<section id="openrouteservice">
+<h3>OpenRouteService<a class="headerlink" href="#openrouteservice" title="Permalink to this heading">#</a></h3>
+<section id="general-information">
+<h4>General Information<a class="headerlink" href="#general-information" title="Permalink to this heading">#</a></h4>
+<ul>
+<li><p>Graphhopper based routing machine since 2008</p></li>
+<li><p>Completly Open-Source</p></li>
+<li><p>Global public API</p>
+<ul>
+<li><p>Updates every week</p></li>
+<li><blockquote>
+<div><p>100GB RAM per routing profile
+Some limitations due to computational capacities</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p>Can also run on your local laptop</p>
+<ul class="simple">
+<li><p>A small to medium country with one profile</p></li>
+<li><p>Freedom of choice on limitations</p></li>
+</ul>
+</li>
+<li><p>Different routing profiles (car, hgv, bike, pedestrian, wheelchair)</p></li>
+</ul>
+</section>
+<section id="services">
+<h4>Services<a class="headerlink" href="#services" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Directions/standard routing</strong>: Shortest path bewteen two locations</p></li>
+<li><p><strong>Isochrones</strong>: Area reachable within a limit (time | distance)</p></li>
+<li><p><strong>Matrix</strong>: Times / Distances bewteen a set of locations</p></li>
+<li><p><strong>Optimization</strong>: Best order to visit a set of points</p></li>
+</ul>
+<p>-&gt; This module deals with isochrones and shows a network analysis in QGIS in two different ways.</p>
+</section>
+<section id="isochrones">
+<h4>Isochrones<a class="headerlink" href="#isochrones" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Different profiles: car, pedestrian, Bike, Heavy Goods vehicles</p></li>
+<li><p>Avoid areas, avoid, road types</p></li>
+<li><p>Further dynmaic prefernces</p>
+<ul>
+<li><p>Green routing</p></li>
+<li><p>Noise aware routing</p></li>
+<li><p>Landmark routing</p></li>
+<li><p>(heat aware routing)</p></li>
+</ul>
+</li>
+<li><p>Based on profile and preferences what area is reachable within a given time       limit?</p></li>
+<li><p>Determine</p>
+<ul>
+<li><p>Reachability</p></li>
+<li><p>Catchment areas</p></li>
+</ul>
+</li>
+<li><p>Max. 60minutes on the public API</p></li>
+<li><p>SDKs &amp; Plugins: Python, R, JavaScript, QGIS Plugin “ORS Tools”</p></li>
+</ul>
 <p>bit stuff here:</p>
 <p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/blob/main/0318_network.pdf">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/blob/main/0318_network.pdf</a></p>
+</section>
 </section>
 </section>
 </section>
@@ -656,7 +726,14 @@ Edges can be endowed with diverse weights. OpenStreetMap features tags such as r
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-networks-analysis-and-insights">Understanding Networks: Analysis and Insights</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#components-of-a-graph">Components of a Graph</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">Analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openrouteservice">OpenRouteService</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#general-information">General Information</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#services">Services</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#isochrones">Isochrones</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
