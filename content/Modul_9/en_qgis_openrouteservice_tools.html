@@ -554,7 +554,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-plugin-and-set-up-an-api">Install the Plugin and set up an API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#openrpouteservice-qgis-plugin">OpenRpouteService QGIS Plugin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-plugin">Install the Plugin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-up-and-setup">Sign up and setup</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -568,13 +572,63 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="plugin-openrouteservice-ors-tools">
 <h1>Plugin: Openrouteservice (ORS) tools<a class="headerlink" href="#plugin-openrouteservice-ors-tools" title="Permalink to this heading">#</a></h1>
-<section id="install-the-plugin-and-set-up-an-api">
-<h2>Install the Plugin and set up an API<a class="headerlink" href="#install-the-plugin-and-set-up-an-api" title="Permalink to this heading">#</a></h2>
+<section id="openrpouteservice-qgis-plugin">
+<h2>OpenRpouteService QGIS Plugin<a class="headerlink" href="#openrpouteservice-qgis-plugin" title="Permalink to this heading">#</a></h2>
+<section id="install-the-plugin">
+<h3>Install the Plugin<a class="headerlink" href="#install-the-plugin" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Go under tab “Plugins”</p></li>
 </ul>
+<figure class="align-center" id="basic-classification">
+<a class="reference internal image-reference" href="../../_images/qgis_plugins.png"><img alt="../../_images/qgis_plugins.png" src="../../_images/qgis_plugins.png" style="width: 700px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Click on ” Manage and install plugins”, a new window will open up</p></li>
+<li><p>Search for “ORS Tools” in search line and click “Install plugin” (right bottom)</p></li>
+</ul>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/install_ors.png"><img alt="../../_images/install_ors.png" src="../../_images/install_ors.png" style="width: 700px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Close the window</p></li>
+<li><p>After a few seconds the plugin should appear under “Web” tab in QGIS as “ORS      Tools”</p></li>
+</ul>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/open_ors.png"><img alt="../../_images/open_ors.png" src="../../_images/open_ors.png" style="width: 700px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Open the “ORS tools” plugin</p></li>
+<li><p>To make use of the ORS tools, you first need to sign up. Therefore click “Sign    Up”</p></li>
+</ul>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="fig/sign_up_ors_qgis.png"><img alt="fig/sign_up_ors_qgis.png" src="fig/sign_up_ors_qgis.png" style="width: 700px;" /></a>
+</figure>
+</section>
+<section id="sign-up-and-setup">
+<h3>Sign up and setup<a class="headerlink" href="#sign-up-and-setup" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>You will be redirected to the OpenRouteService site, where you need to create     a user account</p></li>
+</ul>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/request_api.png"><img alt="../../_images/request_api.png" src="../../_images/request_api.png" style="width: 700px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>After submitting your profile, a confirmtaion e-mail will be sent to your mail    adress</p></li>
+<li><p>Please confirm your account</p></li>
+<li><p>You are now able to create tokens (API keys) which allow you to run queries through the ORS Tools plugin in QGIS</p></li>
+<li><p>Click into the field under “Request a token” and choose “Free”</p></li>
+<li><p>Choose a “Token Name” in the field to the right and “Create token”</p></li>
+<li><p>The token will directly appear above in the “key” field</p></li>
+</ul>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/request_token.png"><img alt="../../_images/request_token.png" src="../../_images/request_token.png" style="width: 700px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Click on the token, it will directly be copied. You can now go back into QGIS     for further setup</p></li>
+</ul>
 <p><a class="github reference external" href="https://github.com/GIScience/orstools-qgis-plugin">GIScience/orstools-qgis-plugin</a></p>
 <p><a class="reference external" href="https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/ORSTools">https://gitlab.gistools.geog.uni-heidelberg.de/giscience/disaster-tools/gis-in-anticipatory-humanitarian-action/-/wikis/ORSTools</a></p>
+</section>
 </section>
 </section>
 
@@ -641,7 +695,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-plugin-and-set-up-an-api">Install the Plugin and set up an API</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#openrpouteservice-qgis-plugin">OpenRpouteService QGIS Plugin</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-plugin">Install the Plugin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-up-and-setup">Sign up and setup</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
