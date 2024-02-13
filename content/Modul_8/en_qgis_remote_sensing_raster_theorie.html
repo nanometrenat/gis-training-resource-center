@@ -564,16 +564,19 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">File Format</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources-typical-use-cases-in-the-humanitarian-sector">Data sources/ typical use cases in  the humanitarian sector</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hdx-the-humanitarian-data-exchange-data-portal-br">HDX (The Humanitarian Data Exchange) Data Portal:**<br/></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usgs-earth-explorer">USGS earth Explorer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-and-sources-of-raster-data-in-the-humanitarian-sector">Use and Sources of Raster Data in the Humanitarian Sector</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hdx-the-humanitarian-data-exchange-data-portal-br">HDX (The Humanitarian Data Exchange) Data Portal:<br/></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usgs-earth-explorer">USGS Earth Explorer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esa-earth-online">ESA Earth Online</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-data">Remote sensing data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Data sources/ typical use cases in  the humanitarian sector</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-used-tools-in-qgis">Frequently used Tools in QGIS</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-data">Remote sensing data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources-typical-use-cases-in-the-humanitarian-sector">Data sources/ typical use cases in  the humanitarian sector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-used-tools-in-qgis">Frequently used Tools in QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -606,10 +609,10 @@ document.write(`
 <li><p><strong>Digital Elevation Models</strong> containing altidute values</p></li>
 <li><p><strong>Spatially variable Indices</strong> such as the Normalized Difference vegetation Index (NDVI)</p></li>
 </ol>
-<figure class="align-default" id="id3">
+<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/mod8_rasterdata_DEM.png"><img alt="../../_images/mod8_rasterdata_DEM.png" src="../../_images/mod8_rasterdata_DEM.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 122 </span><span class="caption-text">Exemplary Digital Elevation Model of an area in the indian Himalayas</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 122 </span><span class="caption-text">Exemplary Digital Elevation Model of an area in the indian Himalayas</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Discontinous</strong> rasters contain catigorical data, where each pixel represents a discrete classvalue rather than a value on a continuous scale. The information in these types of raster is sometimes also suitable for the storage with vector data. Some examples of classified maps include:</p>
@@ -664,9 +667,10 @@ This metadata helps users to understand the content, origin, quality and appropr
 <li><p><strong>Esri Grid (.adf)</strong>: Esri’s raster format, used in ArcGIS, supports georeferncing amd metadata</p></li>
 <li><p><strong>GeoPackage (.gpkg)</strong>: Open format for storing geospatial data, supports raster and vec-tor.</p></li>
 </ol>
+<p><strong>Beispielbild Metadata</strong></p>
 </section>
-<section id="data-sources-typical-use-cases-in-the-humanitarian-sector">
-<h2>Data sources/ typical use cases in  the humanitarian sector<a class="headerlink" href="#data-sources-typical-use-cases-in-the-humanitarian-sector" title="Permalink to this heading">#</a></h2>
+<section id="use-and-sources-of-raster-data-in-the-humanitarian-sector">
+<h2>Use and Sources of Raster Data in the Humanitarian Sector<a class="headerlink" href="#use-and-sources-of-raster-data-in-the-humanitarian-sector" title="Permalink to this heading">#</a></h2>
 <p>In the humanitarian sector, many different types of raster data are used in various application areas. The most important grid types include, for example, population grids, which can form the basis for calculating the exposure of the population to a natural hazard like floods, or precipitation grids, which can significantly help to understand droughts.</p>
 <p>If raster data is available at several points in time or even as a continuous data series, parameters such as the condition of agricultural land can be measured with data like a series of rasters of a vegetation index.</p>
 <p>Main products/raster types you may come across in the humanitarian sector include:</p>
@@ -676,9 +680,9 @@ This metadata helps users to understand the content, origin, quality and appropr
 <li><p>Landuse and Lancover Classifications like <strong>XXXX</strong></p></li>
 <li><p>Risk Maps like flood inundation zones alongside rivers</p></li>
 </ol>
-<p>Popular and proven sources for raster data include</p>
+<p>Popular and proven sources for raster data include:</p>
 <section id="hdx-the-humanitarian-data-exchange-data-portal-br">
-<h3>HDX (The Humanitarian Data Exchange) Data Portal:**<br><a class="headerlink" href="#hdx-the-humanitarian-data-exchange-data-portal-br" title="Permalink to this heading">#</a></h3>
+<h3>HDX (The Humanitarian Data Exchange) Data Portal:<br><a class="headerlink" href="#hdx-the-humanitarian-data-exchange-data-portal-br" title="Permalink to this heading">#</a></h3>
 <p><strong>Offering</strong>: Hosts a wide range of humanitarian data for a variety of countries, including raster data regarding population countts/density and demographic parameters like age and sex structurs or birthrates.<br><br>
 <strong>Pros and Cons</strong></p>
 <ul class="simple">
@@ -690,7 +694,7 @@ This metadata helps users to understand the content, origin, quality and appropr
 <p>Online: <strong>HDX LINK</strong></p>
 </section>
 <section id="usgs-earth-explorer">
-<h3>USGS earth Explorer<a class="headerlink" href="#usgs-earth-explorer" title="Permalink to this heading">#</a></h3>
+<h3>USGS Earth Explorer<a class="headerlink" href="#usgs-earth-explorer" title="Permalink to this heading">#</a></h3>
 <p><strong>Offering</strong>:The Data Portal of the US Geological Survey provides access to a vast collection of satellite imagery and derived products like DEMs and Landcover Data.<br><br>
 <strong>Pros and Cons:</strong></p>
 <ul class="simple">
@@ -708,19 +712,18 @@ This metadata helps users to understand the content, origin, quality and appropr
 <strong>Pros and Cons:</strong></p>
 <ul class="simple">
 <li><p>Wide range of basic and processed remote sensing products</p></li>
-<li><p>Advanced search and filtering options</p></li>
-<li><p>Acount is needed for data download</p></li>
-<li></li>
+<li><p>Nice interface for visalization and basic analysis</p></li>
+<li><p>Account is needed for data download</p></li>
+<li><p>Data search needs basic knowledge of geospatial data and remote sensing</p></li>
 </ul>
-<p>Online: <strong>USGS LINK</strong></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Sources: HDX, USGs Earth Explorer, NASA, EO Portal
-* Products: DEMS, LULVC; Population Data, Precipitation data, Vegetation, Water and drought indices
-</pre></div>
-</div>
+<p>Online: <strong>ESA LINK</strong>
+<br><br><br><br></p>
 </section>
 </section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h2>
 <section id="remote-sensing-data">
-<h2>Remote sensing data<a class="headerlink" href="#remote-sensing-data" title="Permalink to this heading">#</a></h2>
+<h3>Remote sensing data<a class="headerlink" href="#remote-sensing-data" title="Permalink to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Remote sensing Basics: Data types, spectral properties, use cases/typical products
 * Electromagnetic spectrum
 * Concept: Multiple raster bands
@@ -731,15 +734,15 @@ This metadata helps users to understand the content, origin, quality and appropr
 </div>
 <p>–&gt; DEM</p>
 </section>
-<section id="id2">
-<h2>Data sources/ typical use cases in  the humanitarian sector<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="data-sources-typical-use-cases-in-the-humanitarian-sector">
+<h3>Data sources/ typical use cases in  the humanitarian sector<a class="headerlink" href="#data-sources-typical-use-cases-in-the-humanitarian-sector" title="Permalink to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Sources: HDX, USGs Earth Explorer, NASA, EO Portal
 * Products: DEMS, LULVC; Population Data, Precipitation data, Vegetation, Water and drought indices
 </pre></div>
 </div>
 </section>
 <section id="frequently-used-tools-in-qgis">
-<h2>Frequently used Tools in QGIS<a class="headerlink" href="#frequently-used-tools-in-qgis" title="Permalink to this heading">#</a></h2>
+<h3>Frequently used Tools in QGIS<a class="headerlink" href="#frequently-used-tools-in-qgis" title="Permalink to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Raster Calculator
 * Zonal Statistics
 * Rasterize
@@ -751,7 +754,7 @@ This metadata helps users to understand the content, origin, quality and appropr
 </div>
 </section>
 <section id="exercises">
-<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Pop per Districts berechnen
 * Index, z.B. NDVI berechnen
 * Einfache Multi Criteria Analyse
@@ -760,6 +763,7 @@ This metadata helps users to understand the content, origin, quality and appropr
 </pre></div>
 </div>
 <p>–&gt; Modul 6 hexagongrid referencen</p>
+</section>
 </section>
 </section>
 
@@ -836,16 +840,19 @@ This metadata helps users to understand the content, origin, quality and appropr
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">File Format</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources-typical-use-cases-in-the-humanitarian-sector">Data sources/ typical use cases in  the humanitarian sector</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hdx-the-humanitarian-data-exchange-data-portal-br">HDX (The Humanitarian Data Exchange) Data Portal:**<br/></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usgs-earth-explorer">USGS earth Explorer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-and-sources-of-raster-data-in-the-humanitarian-sector">Use and Sources of Raster Data in the Humanitarian Sector</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hdx-the-humanitarian-data-exchange-data-portal-br">HDX (The Humanitarian Data Exchange) Data Portal:<br/></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usgs-earth-explorer">USGS Earth Explorer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esa-earth-online">ESA Earth Online</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-data">Remote sensing data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Data sources/ typical use cases in  the humanitarian sector</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-used-tools-in-qgis">Frequently used Tools in QGIS</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-data">Remote sensing data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources-typical-use-cases-in-the-humanitarian-sector">Data sources/ typical use cases in  the humanitarian sector</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-used-tools-in-qgis">Frequently used Tools in QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
