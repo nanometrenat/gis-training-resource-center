@@ -564,6 +564,14 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">File Format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-used-tools-in-qgis">Frequently used Tools in QGIS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-calculator">Raster Calculator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zonal-statistics">Zonal Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rasterize">Rasterize</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling">Resampling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clip-merge-reproject">(Clip/Merge/Reproject)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-and-sources-of-raster-data-in-the-humanitarian-sector">Use and Sources of Raster Data in the Humanitarian Sector</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hdx-the-humanitarian-data-exchange-data-portal-br">HDX (The Humanitarian Data Exchange) Data Portal:<br/></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usgs-earth-explorer">USGS Earth Explorer</a></li>
@@ -572,8 +580,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-data">Remote sensing data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources-typical-use-cases-in-the-humanitarian-sector">Data sources/ typical use cases in  the humanitarian sector</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-used-tools-in-qgis">Frequently used Tools in QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Frequently used Tools in QGIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
 </li>
@@ -609,10 +616,10 @@ document.write(`
 <li><p><strong>Digital Elevation Models</strong> containing altidute values</p></li>
 <li><p><strong>Spatially variable Indices</strong> such as the Normalized Difference vegetation Index (NDVI)</p></li>
 </ol>
-<figure class="align-default" id="id2">
+<figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="../../_images/mod8_rasterdata_DEM.png"><img alt="../../_images/mod8_rasterdata_DEM.png" src="../../_images/mod8_rasterdata_DEM.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 123 </span><span class="caption-text">Exemplary Digital Elevation Model of an area in the indian Himalayas</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 123 </span><span class="caption-text">Exemplary Digital Elevation Model of an area in the indian Himalayas</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Discontinous</strong> rasters contain catigorical data, where each pixel represents a discrete classvalue rather than a value on a continuous scale. The information in these types of raster is sometimes also suitable for the storage with vector data. Some examples of classified maps include:</p>
@@ -654,7 +661,9 @@ The CRS includes a number of different parameters:<br></p>
 <h3>Metadata<a class="headerlink" href="#metadata" title="Permalink to this heading">#</a></h3>
 <p>Metadata for raster data consists of descriptive information that provides context and details about the raster dataset. It includes information such as the dataset source, creation date, spatial extent, spatial resolution, coordinate reference system (CRS), data type, units, compression tech-niques, processing steps, accuracy ratings, and copyright/licensing information.<br><br>
 This metadata helps users to understand the content, origin, quality and appropriate use of raster data. It facilitates data discovery, evaluation and integration into geospatial workflows, ensuring that users can effectively interpret and use the data for their specific applications.</p>
-<p><strong>Beispiel Metadata</strong></p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/mod8_rasterdata_metadata.png"><img alt="../../_images/mod8_rasterdata_metadata.png" src="../../_images/mod8_rasterdata_metadata.png" style="width: 900px;" /></a>
+</figure>
 </section>
 </section>
 <section id="file-format">
@@ -669,9 +678,34 @@ This metadata helps users to understand the content, origin, quality and appropr
 </ol>
 <p><strong>Beispielbild Metadata</strong></p>
 </section>
+<section id="frequently-used-tools-in-qgis">
+<h2>Frequently used Tools in QGIS<a class="headerlink" href="#frequently-used-tools-in-qgis" title="Permalink to this heading">#</a></h2>
+<section id="raster-calculator">
+<h3>Raster Calculator<a class="headerlink" href="#raster-calculator" title="Permalink to this heading">#</a></h3>
+<p>The raster calculator enables the performing of mathematical operations on one or multiple raster layers by using different expressions. These expressions can involve arithmetic operations like multiplication, comparison operators like “&lt;” or “&gt;”, conditional expressions like “IF” “THEN” statements, and mathematical functions like “mean” or “sum”.</p>
+<p>Example:
+You have a Digital Elevation Model with the Altitude in m and a Landcover Classification raster. You want to produce a raster with all acricultural areas (raster value = 5) above 1500m.</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/mod8_rasterdata_rastercalculator.png"><img alt="../../_images/mod8_rasterdata_rastercalculator.png" src="../../_images/mod8_rasterdata_rastercalculator.png" style="width: 900px;" /></a>
+</figure>
+<p>The wanted result can be achieved by firstly selecting both of the relevant rasters as inputs for the raster calculator and then using the expression interface to selct all pixels with a elevation above 1500m ( “( “DEM&#64;1” &gt;  1500)”) and a landcover value of “5” (”( “Landcover&#64;1” = 5 ) “) by connecting both expression with the logical operator “AND”. In the calculated raster all pixels that fulfill the condition will have the value “1”, all other pixels the value “0”.</p>
+</section>
+<section id="zonal-statistics">
+<h3>Zonal Statistics<a class="headerlink" href="#zonal-statistics" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="rasterize">
+<h3>Rasterize<a class="headerlink" href="#rasterize" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="resampling">
+<h3>Resampling<a class="headerlink" href="#resampling" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="clip-merge-reproject">
+<h3>(Clip/Merge/Reproject)<a class="headerlink" href="#clip-merge-reproject" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
 <section id="use-and-sources-of-raster-data-in-the-humanitarian-sector">
 <h2>Use and Sources of Raster Data in the Humanitarian Sector<a class="headerlink" href="#use-and-sources-of-raster-data-in-the-humanitarian-sector" title="Permalink to this heading">#</a></h2>
-<p>In the humanitarian sector, many different types of raster data are used in various application areas. The most important grid types include, for example, population grids, which can form the basis for calculating the exposure of the population to a natural hazard like floods, or precipitation grids, which can significantly help to understand droughts.</p>
+<p>In the humanitarian sector, many different types of raster data are used in various application areas. The most important grid types include population grids, which can form the basis for calculating the exposure of the population to a natural hazard like floods, or precipitation grids, which can significantly help to understand droughts.</p>
 <p>If raster data is available at several points in time or even as a continuous data series, parameters such as the condition of agricultural land can be measured with data like a series of rasters of a vegetation index.</p>
 <p>Main products/raster types you may come across in the humanitarian sector include:</p>
 <ol class="arabic simple">
@@ -732,23 +766,15 @@ This metadata helps users to understand the content, origin, quality and appropr
 * Typical products: LULC, DEM, Multispectral Data
 </pre></div>
 </div>
-<p>–&gt; DEM</p>
 </section>
-<section id="data-sources-typical-use-cases-in-the-humanitarian-sector">
-<h3>Data sources/ typical use cases in  the humanitarian sector<a class="headerlink" href="#data-sources-typical-use-cases-in-the-humanitarian-sector" title="Permalink to this heading">#</a></h3>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Sources: HDX, USGs Earth Explorer, NASA, EO Portal
-* Products: DEMS, LULVC; Population Data, Precipitation data, Vegetation, Water and drought indices
-</pre></div>
-</div>
-</section>
-<section id="frequently-used-tools-in-qgis">
-<h3>Frequently used Tools in QGIS<a class="headerlink" href="#frequently-used-tools-in-qgis" title="Permalink to this heading">#</a></h3>
+<section id="id4">
+<h3>Frequently used Tools in QGIS<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Raster Calculator
 * Zonal Statistics
 * Rasterize
 * Resampling
 * Clip/Merge/Reproject
-* Slope/TWI? optional
+* Slope/TWI/Hillshade
 * Visulisation of Rasters? -&gt; Eigenes Kapitel
 </pre></div>
 </div>
@@ -756,10 +782,12 @@ This metadata helps users to understand the content, origin, quality and appropr
 <section id="exercises">
 <h3>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Pop per Districts berechnen
-* Index, z.B. NDVI berechnen
-* Einfache Multi Criteria Analyse
+* (Index, z.B. NDVI berechnen)
+* (Einfache Multi Criteria Analyse)
 * Verschiedene Parameter aus DEM berechnen
-* Malnutrition rasterize + mit Pop berechnen
+**Malnutrition rasterize + mit Pop berechnen**
+* (Optische) Threshold setzen
+* Verschiedene Visualisierungsoptionen
 </pre></div>
 </div>
 <p>–&gt; Modul 6 hexagongrid referencen</p>
@@ -840,6 +868,14 @@ This metadata helps users to understand the content, origin, quality and appropr
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-format">File Format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-used-tools-in-qgis">Frequently used Tools in QGIS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-calculator">Raster Calculator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zonal-statistics">Zonal Statistics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rasterize">Rasterize</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resampling">Resampling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clip-merge-reproject">(Clip/Merge/Reproject)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-and-sources-of-raster-data-in-the-humanitarian-sector">Use and Sources of Raster Data in the Humanitarian Sector</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hdx-the-humanitarian-data-exchange-data-portal-br">HDX (The Humanitarian Data Exchange) Data Portal:<br/></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usgs-earth-explorer">USGS Earth Explorer</a></li>
@@ -848,8 +884,7 @@ This metadata helps users to understand the content, origin, quality and appropr
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-data">Remote sensing data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources-typical-use-cases-in-the-humanitarian-sector">Data sources/ typical use cases in  the humanitarian sector</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#frequently-used-tools-in-qgis">Frequently used Tools in QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Frequently used Tools in QGIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
 </li>
