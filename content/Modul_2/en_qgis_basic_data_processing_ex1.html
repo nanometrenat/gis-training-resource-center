@@ -531,7 +531,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -547,6 +549,18 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-wiki-articles">Links to Wiki articles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result">Result</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -558,6 +572,78 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-geodata-processing-exercise-1">
 <h1>Basic Geodata processing Exercise 1<a class="headerlink" href="#basic-geodata-processing-exercise-1" title="Permalink to this heading">#</a></h1>
+<section id="aim-of-the-exercise">
+<h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
+<p>The objective of this exercise is to get a feeling for Geodata and start working with it. Understand the attribute table, sort it, select manually and export the selection.</p>
+</section>
+<section id="links-to-wiki-articles">
+<h2>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h2>
+<p>will be done when Wiki is finished</p>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<p>Download all datasets <span class="xref myst">here</span> and save the folder on your computer and unzip the file. The zip folder includes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nigeria_populated_places.shp</span></code> (Points) Shapefile</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nigeria_boundaries.geojson</span></code> GeoJSON</p></li>
+</ul>
+</section>
+<section id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Load both files into your QGIS.</p></li>
+<li><p>Optional: You can add the OpenStreetMap base map via the browser window –&gt; XYZ Tiles.</p></li>
+<li><p>Familiarise yourself with the data by opening the attribute table.</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">nigeria_populated_places.shp</span></code>, select manually <strong>Zuyel</strong> and zoom onto the selected point.</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The place starts with a <em>Z</em> so it might be easiest to sort the column <code class="docutils literal notranslate"><span class="pre">name</span></code> descending.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Export <strong>Zuyel</strong> as its own Shapefile. Check the projection and choose an appropriate crs. Name it <code class="docutils literal notranslate"><span class="pre">zuyel.shp</span></code>.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+How do I know which crs to choose?<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You can find all projections and their CRS code at this <a class="reference external" href="http://epsg.io">website</a> and search for the country.</p>
+</div>
+</details><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since we don’t want to calculate anything, f. e. area, WGS84 (EPSG:4326) would be fine to use.</p>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Repeat the steps for the layer <code class="docutils literal notranslate"><span class="pre">nigeria_boundaries.geojson</span></code> and only export the district in which <strong>Zuyel</strong> is in. Name it accordingly.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+How do I know in which district Zuyel is in?<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You can check by using the <code class="docutils literal notranslate"><span class="pre">identify</span> <span class="pre">features</span></code> option.
+<img alt="Check district by clicking" src="content/Modul_2/fig/modul2_ex_nigeria_district.png" />
+Afterwards you can again select manually by sorting the attribute table.</p>
+</div>
+</details><ol class="arabic simple" start="7">
+<li><p>Open the attribute table and check that you only have one feature each.</p></li>
+<li><p>Save your project.</p></li>
+</ol>
+</section>
+<section id="result">
+<h2>Result<a class="headerlink" href="#result" title="Permalink to this heading">#</a></h2>
+<figure class="align-default" id="en-result-geodata-processing-exercise">
+<a class="reference internal image-reference" href="../../_images/en_result_geodata_processing_exercise.png"><img alt="../../_images/en_result_geodata_processing_exercise.png" src="../../_images/en_result_geodata_processing_exercise.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">This is how your output could look like in the end</span><a class="headerlink" href="#en-result-geodata-processing-exercise" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -614,6 +700,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-wiki-articles">Links to Wiki articles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result">Result</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
