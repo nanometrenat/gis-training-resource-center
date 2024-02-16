@@ -565,6 +565,27 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concept-of-our-methodology">Key concept of our methodology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-hia-sudan">Step by Step HIA Sudan</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-area-of-interest">Step 1: Area of Interest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-finding-flood-disaster-timeframes">Step 2. Finding Flood Disaster Timeframes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-selecting-datasets">Step 3: Selecting datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#data-selection-parameters">Data selection parameters</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#currentness">Currentness</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#uniqueness">Uniqueness</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-id">Dataset ID</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-outcome">Step 3: Outcome</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-preparing-excel-table-structure">Step 4: Preparing Excel table Structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#date">Date</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source">Data source</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#location">Location</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-information">Impact information</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-outcome">Step 4: Outcome</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-data-compiling">Step 5: Data compiling</a></li>
 </ul>
 </li>
 </ul>
@@ -613,17 +634,1351 @@ And even when there was a single flash flood event, in reports it is often refer
 <section id="key-concept-of-our-methodology">
 <h2>Key concept of our methodology<a class="headerlink" href="#key-concept-of-our-methodology" title="Permalink to this heading">#</a></h2>
 <p>Our goal was to store all available impact information in one table or dataset. If we would use a classic weight table we would end up with a super clumsy table since there are so many different types of impacts a flood can cause. To avoid that we decided to use a long table.
-The core of a long table is the Key + Value concept.</p>
-<p>GRAPHIC</p>
+The advantages of a long table over a classic wider table in this context are:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Advantages</p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Flexibility</p></td>
+<td><p>Long tables can accommodate a variable number of attributes, making them suitable for diverse datasets.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Scalability</p></td>
+<td><p>They can handle large datasets efficiently, making them suitable for compiling extensive information.</p></td>
+</tr>
+<tr class="row-even"><td><p>Ease of Integration</p></td>
+<td><p>Simplifies the integration of data from various sources, providing a consistent structure.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Compatibility</p></td>
+<td><p>Many analysis tools work well with long-format data, making it easier to analyze and derive insights.</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-center">
+<img alt="../../_images/key_value_concept.drawio.svg" src="../../_images/key_value_concept.drawio.svg" /></figure>
 </section>
 <section id="step-by-step-hia-sudan">
 <h2>Step by Step HIA Sudan<a class="headerlink" href="#step-by-step-hia-sudan" title="Permalink to this heading">#</a></h2>
+<figure class="align-center">
+<img alt="../../_images/14022024_Sudan_HIA.drawio.svg" src="../../_images/14022024_Sudan_HIA.drawio.svg" /></figure>
 <section id="step-1-area-of-interest">
 <h3>Step 1: Area of Interest<a class="headerlink" href="#step-1-area-of-interest" title="Permalink to this heading">#</a></h3>
 <p>The Area of Interest (AOI) for the HeiGIT team was formally limited to Khartoum, Northern, White Nile and Sennar. However, the analysis and data collection were conducted for all states of Sudan.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Sudan_AOI_HIA.jpg"><img alt="../../_images/Sudan_AOI_HIA.jpg" src="../../_images/Sudan_AOI_HIA.jpg" style="width: 500px;" /></a>
 </figure>
+</section>
+<section id="step-2-finding-flood-disaster-timeframes">
+<h3>Step 2. Finding Flood Disaster Timeframes<a class="headerlink" href="#step-2-finding-flood-disaster-timeframes" title="Permalink to this heading">#</a></h3>
+<p>We want to tie single pieces of information like impacts, to knowen flood events in Sudan. Thus we first need a comprehensive list of such events. In the case of Sudan, there are two sources, EM-DAT and RelifeWeb. EM-DAT is a disaster database that lists events above a certain severity.
+RelifeWeb is actually an information platform for humanitarian response. But it has a list of active and past disasters as well.
+Both databases list the same events for the most part. By comparing the two datasets and only selecting unique events, we receive a list of all significant flood events in Sudan and the timeframes of all events.</p>
+<ul class="simple">
+<li><p>EM-Dat lists 21 flood events in Sudan from 2000 to 2024</p></li>
+<li><p>Relief Web lists 29 events between 1988 and 2024</p></li>
+</ul>
+<p>In total, there were 35 flood events reported between 1988 and 2021
+In some cases, the start and end dates cannot precisely be identified. This is not a problem, we only want to have a rough overview about when there have been floods.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Flood Events List<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Start Year</p></th>
+<th class="head"><p class="sd-card-text">Start Date</p></th>
+<th class="head"><p class="sd-card-text">End Date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">1988</p></td>
+<td><p class="sd-card-text">1988-08-06</p></td>
+<td><p class="sd-card-text">1988-09-15</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">1994</p></td>
+<td><p class="sd-card-text">1994-09-20</p></td>
+<td><p class="sd-card-text">1988-10-21</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">1996</p></td>
+<td><p class="sd-card-text">1996-08-12</p></td>
+<td><p class="sd-card-text">1996-10-23</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">1998</p></td>
+<td><p class="sd-card-text">1998-09-04</p></td>
+<td><p class="sd-card-text">1998-10-15</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2001</p></td>
+<td><p class="sd-card-text">2001-08-06</p></td>
+<td><p class="sd-card-text">2001-09-13</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2002</p></td>
+<td><p class="sd-card-text">2002-08-03</p></td>
+<td><p class="sd-card-text">2002-08-03</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2003</p></td>
+<td><p class="sd-card-text">2003-07-28</p></td>
+<td><p class="sd-card-text">2003-08-21</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2005</p></td>
+<td><p class="sd-card-text">2005-08-29</p></td>
+<td><p class="sd-card-text">2005-09-06</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2005</p></td>
+<td><p class="sd-card-text">2005-07-14</p></td>
+<td><p class="sd-card-text">2005-07-15</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2006</p></td>
+<td><p class="sd-card-text">2006-08-13</p></td>
+<td><p class="sd-card-text">2006-09-26</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2006</p></td>
+<td><p class="sd-card-text">2006-08-07</p></td>
+<td><p class="sd-card-text">2006-08-07</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2007</p></td>
+<td><p class="sd-card-text">2007-07-03</p></td>
+<td><p class="sd-card-text">2007-10-08</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2009</p></td>
+<td><p class="sd-card-text">2009-08-16</p></td>
+<td><p class="sd-card-text">2009-08-26</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2010</p></td>
+<td><p class="sd-card-text">2010-07-10</p></td>
+<td><p class="sd-card-text">2010-07-15</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2010</p></td>
+<td><p class="sd-card-text">2010-07-01</p></td>
+<td><p class="sd-card-text">2010-10-07</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2012</p></td>
+<td><p class="sd-card-text">2012-08-01</p></td>
+<td><p class="sd-card-text">2012-08-12</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2013</p></td>
+<td><p class="sd-card-text">2013-08-01</p></td>
+<td><p class="sd-card-text">2013-08-21</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2014</p></td>
+<td><p class="sd-card-text">2014-07-25</p></td>
+<td><p class="sd-card-text">2014-09</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2015</p></td>
+<td><p class="sd-card-text">2015-08-08</p></td>
+<td><p class="sd-card-text">2015-08-09</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2017</p></td>
+<td><p class="sd-card-text">2017-06-30</p></td>
+<td><p class="sd-card-text">2017-08-14</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">2018-06-18</p></td>
+<td><p class="sd-card-text">2018-06-27</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">2018-07-23</p></td>
+<td><p class="sd-card-text">2018-07-30</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2019</p></td>
+<td><p class="sd-card-text">2019-06-08</p></td>
+<td><p class="sd-card-text">2019-06-18</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2020</p></td>
+<td><p class="sd-card-text">2020-06</p></td>
+<td><p class="sd-card-text">2020-09-09</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2021</p></td>
+<td><p class="sd-card-text">2021-07-20</p></td>
+<td><p class="sd-card-text">2021-09-24</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></section>
+<section id="step-3-selecting-datasets">
+<h3>Step 3: Selecting datasets<a class="headerlink" href="#step-3-selecting-datasets" title="Permalink to this heading">#</a></h3>
+<p>Now we search for datasets and other information for each of the flood events identified in step 2. Naturally, it will be much easier to find information on more recent events. This process can take a lot of time and sometimes needs multiple iterations.</p>
+<p>There are three principal sources of datasets. The Sudan Red Cresent Society (SRCS), RelifeWeb and Floodlist.</p>
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .organization {
+    width: 50%; 
+  }
+
+  .logo {
+    width: 35%; 
+    text-align: right;
+  }
+  
+  .bold-header {
+    font-weight: bold;
+  }
+</style>
+<div class="container">
+  <div class="organization">
+    <p><strong>Sudan Red Crescent Society (SRCS)</strong><br>
+      SRCS has documentation about flood impacts and past operations. Furthermore, SRCS was able to source some datasets from the Sudan National Council for Civil Defence (NCCD)  and the Sudan Humanitarian Aid Commission (HAC).
+    </p>
+  </div>
+  <div class="logo">
+    <img src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Sudan_SRCS_logo.png" alt="Sudan Red Crescent Society (SRCS) Logo">
+  </div>
+</div>
+<div class="container">
+  <div class="organization">
+    <p><strong>ReliefWeb</strong><br>
+      ReliefWeb is the largest database for humanitarian reports and bulletins. The datasets are very conveniently organized based on specific flood events. This makes it easy to match information with an event.
+    </p>
+  </div>
+  <div class="logo">
+    <img src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/RelifeWeb_Logo_short.png" alt="ReliefWeb Logo">
+  </div>
+</div>
+<div class="container">
+  <div class="organization">
+    <p><strong>Flood List</strong><br>
+      Floodlis is a news portal all about floods. The articles are ordered chronologically.
+    </p>
+  </div>
+  <div class="logo">
+    <img src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/floodlist-logo-1101.png" alt="Floodlist Logo">
+  </div>
+</div>
+<p>Of course, much information from the different sources is redundant. A significant part of the work is to sift through the datasets and identify unique information.</p>
+<section id="datasets">
+<h4>Datasets<a class="headerlink" href="#datasets" title="Permalink to this heading">#</a></h4>
+<p>We use the term data set to refer to all types of publications from which we can obtain data.
+In the table below we list typical datasets used in the Sudan HIA. Remember, we can pull all kinds of information out of a dataset. It does not have to be quantitative or in table format or anything like that. It can also be info directly from texts or graphics.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Typical Publishing Organisation (Examples)</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Typical Features</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IFRC</p></td>
+<td><p>Emergency Plan of Action</p></td>
+<td><p><a class="reference external" href="https://reliefweb.int/report/sudan/sudan-floods-2018-emergency-plan-action-epoa-dref-operation-n-mdrsd026">Emergency Plan of Action (EPoA) Sudan: Floods 2018</a></p></td>
+<td><p>Tables; Graphics; Maps; Info directly from texts</p></td>
+</tr>
+<tr class="row-odd"><td><p>IFRC</p></td>
+<td><p>Flood Interagency Assessment Reports</p></td>
+<td><p>Not public</p></td>
+<td><p>Tables; Graphics; Maps; Info directly from texts</p></td>
+</tr>
+<tr class="row-even"><td><p>IFRC</p></td>
+<td><p>Government Datasets</p></td>
+<td><p>Not public</p></td>
+<td><p>Tables in many different forms</p></td>
+</tr>
+<tr class="row-odd"><td><p>UN OCHA</p></td>
+<td><p>Humanitarian Bulletins</p></td>
+<td><p><a class="reference external" href="https://reliefweb.int/report/sudan/sudan-humanitarian-bulletin-issue-18-8-october-4-november-2018-enar">Sudan Humanitarian Bulletin Issue 18/ 8 October – 4 November 2018</a></p></td>
+<td><p>Tables; Graphics; Maps; Info directly from texts</p></td>
+</tr>
+<tr class="row-even"><td><p>UN OCHA</p></td>
+<td><p>(Flood) Situation Reports</p></td>
+<td><p><a class="reference external" href="https://reliefweb.int/report/sudan/sudan-situation-report-13-nov-2020-enar">SUDAN Situation Report 13 Nov 2020</a></p></td>
+<td><p>Tables; Graphics; Maps; Info directly from texts</p></td>
+</tr>
+<tr class="row-odd"><td><p>UN OCHA</p></td>
+<td><p>Humanitarian Snapshots</p></td>
+<td><p><a class="reference external" href="https://reliefweb.int/report/sudan/sudan-humanitarian-snapshot-september-2021-18-october-2021">Sudan: Humanitarian Snapshot - September 2021 (as of 18 October 2021)</a></p></td>
+<td><p>Tables; Graphics; Maps; Info directly from texts</p></td>
+</tr>
+<tr class="row-even"><td><p>UN OCHA</p></td>
+<td><p>Dashboards</p></td>
+<td><p><a class="reference external" href="https://app.powerbi.com/view?=eyJrIjoiZWVmMmU3YzMtNGNkMC00NDU3LWFmOTItM2ZmMjc3YjZhOGI2IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9">Sudan Floods: People &amp; areas affected 25 October 2022</a></p></td>
+<td><p>Data in Excel or CSV data format</p></td>
+</tr>
+<tr class="row-odd"><td><p>World Bank</p></td>
+<td><p>Large Reports</p></td>
+<td><p><a class="reference external" href="https://reliefweb.int/report/sudan/sudan-rapid-post-disaster-needs-and-recovery-assessment-rapid-pdnra">Sudan Rapid Post Disaster Needs and Recovery Assessment (Rapid PDNRA)</a></p></td>
+<td><p>Tables; Graphics; Maps; Info directly from texts</p></td>
+</tr>
+<tr class="row-even"><td><p>Floodlist</p></td>
+<td><p>Newspaper Articles</p></td>
+<td><p><a class="reference external" href="https://floodlist.com/africa/sudan-north-darfur-floods-october-2019">Sudan – North Darfur Town Devastated by Rains, Flash Floods</a></p></td>
+<td><p>Info directly from texts</p></td>
+</tr>
+</tbody>
+</table>
+<section id="data-selection-parameters">
+<h5>Data selection parameters<a class="headerlink" href="#data-selection-parameters" title="Permalink to this heading">#</a></h5>
+<p>In general, we can use any kind of dataset e.g. reports, maps, bulletins, tables…. However, we do not need to check all datasets available for one event. The selection of datasets is based on two principal parameters.</p>
+</section>
+<section id="currentness">
+<h5>Currentness<a class="headerlink" href="#currentness" title="Permalink to this heading">#</a></h5>
+<p>The assumption is that later after the event, the picture of what happens becomes clearer, thus the data report is more reliable.
+This means., if you have multiple similar datasets containing similar data, chose the newer one.</p>
+<p>In this example, the later map from the <a class="reference external" href="https://reliefweb.int/report/sudan/sudan-situation-report-13-nov-2020-enar">13th of November</a> shows more affected people for instance in Central Darfur the the map publihsed on the <a class="reference external" href="https://reliefweb.int/report/sudan/sudan-situation-report-9-nov-2020-enar">9th of November</a>.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+SUDAN Situation Report 09 Nov 2020</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/Map_affected_pop_20201109.png"><img alt="../../_images/Map_affected_pop_20201109.png" src="../../_images/Map_affected_pop_20201109.png" style="width: 4500px;" /></a>
+</figure>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+SUDAN Situation Report 13 Nov 2020</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/Map_affected_pop_20201113.png"><img alt="../../_images/Map_affected_pop_20201113.png" src="../../_images/Map_affected_pop_20201113.png" style="width: 4500px;" /></a>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="uniqueness">
+<h5>Uniqueness<a class="headerlink" href="#uniqueness" title="Permalink to this heading">#</a></h5>
+<p>It is important to not only use data from one source becaus of confience.
+The assumption is that different organisations have different capacities and work in different areas, thus they may have better information in some locations of sectors than other organisations.</p>
+</section>
+</section>
+<section id="dataset-id">
+<h4>Dataset ID<a class="headerlink" href="#dataset-id" title="Permalink to this heading">#</a></h4>
+<p>When selecting datasets it is important to save the datasets on your computer. To be able to later retrace which piece of information was taken from which datasets, we have to give the datasets unique identification codes.
+In the Sudan project, we used the simple structure year of the flood the document is referring to (for example 2019), the publishing organisation (for example IFRC) and the publishing date (for example 20191003).</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/Sudan_HIA_ID.drawio.svg"><img alt="../../_images/Sudan_HIA_ID.drawio.svg" src="../../_images/Sudan_HIA_ID.drawio.svg" width="8000px" /></a>
+</figure>
+</section>
+<section id="step-3-outcome">
+<h4>Step 3: Outcome<a class="headerlink" href="#step-3-outcome" title="Permalink to this heading">#</a></h4>
+<p>At the end of the selection process, you should have multiple relevant datasets with IDs for every event, covering all relevant areas and sectors.</p>
+<figure class="align-center">
+<img alt="../../_images/Sudan_HIA_dataset_typ_overview.drawio.svg" src="../../_images/Sudan_HIA_dataset_typ_overview.drawio.svg" /></figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+All datasets with ID used by HeiGIT<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">2012</p></th>
+<th class="head"><p class="sd-card-text">2013</p></th>
+<th class="head"><p class="sd-card-text">2014</p></th>
+<th class="head"><p class="sd-card-text">2016</p></th>
+<th class="head"><p class="sd-card-text">2017</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">2012_IFRC_20120531.pdf</p></td>
+<td><p class="sd-card-text">2013_Floodlist_20130816.pdf</p></td>
+<td><p class="sd-card-text">2014_Floodlist_20140801.pdf</p></td>
+<td><p class="sd-card-text">2016_IFRC_20160902.pdf</p></td>
+<td><p class="sd-card-text">2017_floodlist_20170825.pdf</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2012_IFRC_20120910.pdf</p></td>
+<td><p class="sd-card-text">2013_Floodlist_20130827.pdf</p></td>
+<td><p class="sd-card-text">2014_Floodlist_20140804.pdf</p></td>
+<td><p class="sd-card-text">2016_OCHA_20160828.pdf</p></td>
+<td><p class="sd-card-text">2017_floodlist_20170829.pdf</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2013_IFRC_20131010.pdf</p></td>
+<td><p class="sd-card-text">2014_Floodlist_20140814.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2017_floodlist_20170905.pdf</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2013_OCHA_20130915.pdf</p></td>
+<td><p class="sd-card-text">2014_Floodlist_20140920.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2017_floodlist_20170906.pdf</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2013_OCHA_20130919.pdf</p></td>
+<td><p class="sd-card-text">2014_IFRC_20140925.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2017_HAC_20170919.pdf</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2013_OCHA_20130930.pdf</p></td>
+<td><p class="sd-card-text">2014_OCHA_20140909.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2013_OCHA_HAC_20130902.pdf</p></td>
+<td><p class="sd-card-text">2014_OCHA_20140914.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2014_RelifeWeb_20140915.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2014_RelifeWeb_20141009.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2014_SRCS_20140903.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">2018</p></th>
+<th class="head"><p class="sd-card-text">2019</p></th>
+<th class="head"><p class="sd-card-text">2020</p></th>
+<th class="head"><p class="sd-card-text">2021</p></th>
+<th class="head"><p class="sd-card-text">2022</p></th>
+<th class="head"><p class="sd-card-text">Extra</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">2018_floodlist_20180625.pdf</p></td>
+<td><p class="sd-card-text">2019_ECHO_20190906.pdf</p></td>
+<td><p class="sd-card-text">2020_OCHA_20201025.pdf</p></td>
+<td><p class="sd-card-text">2021_OCHA_20211011.xlsx</p></td>
+<td><p class="sd-card-text">2022_OCHA_20221025.xlsx</p></td>
+<td><p class="sd-card-text">HAC_1_affected.pdf</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2018_floodlist_20181105.pdf</p></td>
+<td><p class="sd-card-text">2019_floodlist_20190613.pdf</p></td>
+<td><p class="sd-card-text">2020_PDNRA_20210531.pdf</p></td>
+<td><p class="sd-card-text">2021_OCHA_20211018.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Interagency_mission2022.pdf</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2018_floodlist_DG_ECHO_20180824.pdf</p></td>
+<td><p class="sd-card-text">2019_floodlist_20190816.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">NCCD_1_Impact.xlsx</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2018_IFRC_20180813.pdf</p></td>
+<td><p class="sd-card-text">2019_floodlist_20190821.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2018_OCHA_20180819.pdf</p></td>
+<td><p class="sd-card-text">2019_floodlist_20190901.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2018_OCHA_20181104.pdf</p></td>
+<td><p class="sd-card-text">2019_floodlist_20191008.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">2019_OCHA_20191003.pdf</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></section>
+</section>
+<section id="step-4-preparing-excel-table-structure">
+<h3>Step 4: Preparing Excel table Structure<a class="headerlink" href="#step-4-preparing-excel-table-structure" title="Permalink to this heading">#</a></h3>
+<p>Before we can start compiling data, we need to prepare the table structure we will use. The table needs to accommodate four components. <strong>Date</strong>, <strong>data source</strong>, <strong>location</strong>,and <strong>impact information</strong>.</p>
+<section id="date">
+<h4>Date<a class="headerlink" href="#date" title="Permalink to this heading">#</a></h4>
+<p>The date information must accommodate the flood event information from the list of flood events prepared in Step 2. And potential dates of specific impact information.
+The date portion of the whole Excel table would look like this:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Start Year</p></th>
+<th class="head"><p>Start Date</p></th>
+<th class="head"><p>End Date</p></th>
+<th class="head"><p>Date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2018</p></td>
+<td><p>2018-07-01</p></td>
+<td><p>2018-08-29</p></td>
+<td><p>2018-07-12</p></td>
+</tr>
+<tr class="row-odd"><td><p>2019</p></td>
+<td><p>2019-06-01</p></td>
+<td><p>2019-06-31</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2020</p></td>
+<td><p>2020-07-20</p></td>
+<td><p>2020-08-11</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-source">
+<h4>Data source<a class="headerlink" href="#data-source" title="Permalink to this heading">#</a></h4>
+<p>This section is simply one column with the ID of the dataset from which the particular information was taken.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>source_ID</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2018_OCHA_20180819.pdf</p></td>
+</tr>
+<tr class="row-odd"><td><p>2019_floodlist_20190613.pdf</p></td>
+</tr>
+<tr class="row-even"><td><p>2020_PDNRA_20210531.pdf</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="location">
+<h4>Location<a class="headerlink" href="#location" title="Permalink to this heading">#</a></h4>
+<p>Practical all impact information refers to state, locality, town or refugee/IDP camp level. This means we need a column for each of these levels and one column to indicate the level the information is referring to. In this way, we can later filter for all information on for example locality level.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>admin_level</p></th>
+<th class="head"><p>admin_1</p></th>
+<th class="head"><p>admin_2</p></th>
+<th class="head"><p>admin_3</p></th>
+<th class="head"><p>admin_camp</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>State</p></td>
+<td><p>West Kordofan</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Locality</p></td>
+<td><p>South Darfur</p></td>
+<td><p>Beliel</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Camp</p></td>
+<td><p>South Darfur</p></td>
+<td><p>Beliel</p></td>
+<td><p></p></td>
+<td><p>Kalma Camp</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="impact-information">
+<h4>Impact information<a class="headerlink" href="#impact-information" title="Permalink to this heading">#</a></h4>
+<p>The actual impact information consists of two parts. One part is always the impact type. This explain what happened. For example, people were affected by the flood, the cholera broke out or schools got damaged.</p>
+<p>The other part is either the impact quantity or the impact quality. It can not be both!
+The impact quantity describes simply how many of something. How many people have been affected? How many schools got damaged?</p>
+<p>The impact quality is used if something cannot be described with numbers. For example, there was a disease outbreak of cholear. Cholera is not a number. Or a locality was affected -&gt; Yes the locality was affected.</p>
+<p>Hence we need three columns to describe impacts: impact_typ, impact_quality and impact_quantity.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>impact_typ</p></th>
+<th class="head"><p>impact_quality</p></th>
+<th class="head"><p>impact_quantity</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>houses_damaged_totaly</p></td>
+<td><p>2500</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>deaths</p></td>
+<td><p>6</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>disease_outbreak</p></td>
+<td><p></p></td>
+<td><p>Cholera</p></td>
+</tr>
+</tbody>
+</table>
+<p>It makes sense to list some of the basic impact types we are interested in or which are very commonly reported. Such as affected people or deaths. The list of impact types can be extended on the fly. It is however important to stay consistent.
+The HeiGIT team used 75 different impact types. You can find the whole list below.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Impact taypes used in Sudan HIA<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Impact Type</p></th>
+<th class="head"><p class="sd-card-text">Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">Affected</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Agricultural_land_affected</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Agriculturalsectors_fedan</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Agriculture_Affected</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Agriculture_Bananplantation_damged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Agriculture_crops_damaged</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Agriculture_Livestock_crops_damaged</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Deaths</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Diseases</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Economic</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Evacuation</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Event</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Eviromental_sanitation</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Flooding</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Foodprice_increas</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Healt_center_affected</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Health_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Health_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">HH_Affected</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">HH_displaced</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Houses_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Houses_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Infrastructure_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Infrastructure_electricity_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Injuries</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Institutions_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Institutions_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Livestock_Cattle</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Livestock_Deaths</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Livestock_Goats</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Livestock_Poultry</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Livestock_Sheep</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Mosques_damaged_partally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Mosques_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Mosquitos</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Others</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Pop_affected</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Pop_displaced</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Problem_Health_access</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Problem_Water_access</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Protection_Issus</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Public_facilities_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Public_facilities_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Public_facilities_damged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Public_facilities_damged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Public_facilities_schools_affected</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Sanitation_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">School_dropout</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Schools_affeacted</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Schools_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Schools_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Schools_Primary_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Schools_Primary_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Schools_Secondary_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Schools_Universities_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Shelter</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Shops_damaged_partally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Shops_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Villages_affacted</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">WASH_damaged_partally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">WASH_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">WASH_drinking_river</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">WASH_home_latrines_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">WASH_latriens_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">WASH_latrines_affected</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">WASH_latrines_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">WASH_latrines_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">WASH_Latrines_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">WASH_latrines_damaged_totaly</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">WASH_open_defecation</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">WASH_sewage_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">WASH_Water_station_affected</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">WASH_Water_station_source_damaged_partially</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">WASH_Water_station_source_damaged_totally</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">WASH_watersource_contaminated</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></section>
+</section>
+<section id="step-4-outcome">
+<h3>Step 4: Outcome<a class="headerlink" href="#step-4-outcome" title="Permalink to this heading">#</a></h3>
+<p>Now we have your final table structure. We can put ALL information from the selected datasets we deem relevant into this table structure thus creating a consistent historical impact dataset.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Start Year</p></th>
+<th class="head"><p>Start Date</p></th>
+<th class="head"><p>End Date</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>source_ID</p></th>
+<th class="head"><p>admin_level</p></th>
+<th class="head"><p>admin_1</p></th>
+<th class="head"><p>admin_2</p></th>
+<th class="head"><p>admin_3</p></th>
+<th class="head"><p>admin_camp</p></th>
+<th class="head"><p>impact_typ</p></th>
+<th class="head"><p>impact_quality</p></th>
+<th class="head"><p>impact_quantity</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2018</p></td>
+<td><p>2018-07-01</p></td>
+<td><p>2018-08-29</p></td>
+<td><p>2018-07-12</p></td>
+<td><p>2018_OCHA_20180819.pdf</p></td>
+<td><p>State</p></td>
+<td><p>West Kordofan</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>disease_outbreak</p></td>
+<td><p>Cholera</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>2019</p></td>
+<td><p>2019-06-01</p></td>
+<td><p>2019-06-31</p></td>
+<td><p></p></td>
+<td><p>2019_floodlist_20190613.pdf</p></td>
+<td><p>Locality</p></td>
+<td><p>South Darfur</p></td>
+<td><p>Beliel</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>deaths</p></td>
+<td><p></p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>2020</p></td>
+<td><p>2020-07-20</p></td>
+<td><p>2020-08-11</p></td>
+<td><p></p></td>
+<td><p>2020_PDNRA_20210531.pdf</p></td>
+<td><p>Camp</p></td>
+<td><p>South Darfur</p></td>
+<td><p>Beliel</p></td>
+<td><p></p></td>
+<td><p>Kalma Camp</p></td>
+<td><p>houses_damaged_totaly</p></td>
+<td><p></p></td>
+<td><p>2500</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="step-5-data-compiling">
+<h3>Step 5: Data compiling<a class="headerlink" href="#step-5-data-compiling" title="Permalink to this heading">#</a></h3>
+<p>During the data compilation, we simply identify the relevant information in the dataset and transfer it into the table. Below you can find some examples of the process.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="rubric">Emergency Plan of Action (EPoA) Sudan: Floods 2018</p>
+<p class="sd-card-text">This is a small extract from Emergency Plan of Action (EPoA) Sudan: Floods 2018 page 4.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/2018_IFRC_20180813_snap_shot.png"><img alt="../../_images/2018_IFRC_20180813_snap_shot.png" src="../../_images/2018_IFRC_20180813_snap_shot.png" style="width: 600px;" /></a>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Data extracted from dataset<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Year</p></th>
+<th class="head"><p class="sd-card-text">Start_Date</p></th>
+<th class="head"><p class="sd-card-text">End_Date</p></th>
+<th class="head"><p class="sd-card-text">Date</p></th>
+<th class="head"><p class="sd-card-text">source_ID</p></th>
+<th class="head"><p class="sd-card-text">admin_level</p></th>
+<th class="head"><p class="sd-card-text">admin_1</p></th>
+<th class="head"><p class="sd-card-text">admin_2</p></th>
+<th class="head"><p class="sd-card-text">admin_3</p></th>
+<th class="head"><p class="sd-card-text">admin_camp</p></th>
+<th class="head"><p class="sd-card-text">Impact type</p></th>
+<th class="head"><p class="sd-card-text">Impact_quantity</p></th>
+<th class="head"><p class="sd-card-text">Impact_quality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">Locality</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">Elnohoud</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">houses damaged_totaly</p></td>
+<td><p class="sd-card-text">2500</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">Locality</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">Einhoud</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">houses_damaged_partially</p></td>
+<td><p class="sd-card-text">1500</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">deaths</p></td>
+<td><p class="sd-card-text">6</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">missing people</p></td>
+<td><p class="sd-card-text">3</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Injured</p></td>
+<td><p class="sd-card-text">49</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">livestock deaths</p></td>
+<td><p class="sd-card-text">121</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">water infrastructure_damage</p></td>
+<td><p class="sd-card-text">3</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="rubric">SUDAN FLOOD RESPONSE HUMANITARIAN PARTNERS UPDATE BY STATE #3 (as of 19 Oct, 2020)</p>
+<p class="sd-card-text">The map on the first page shows affecte population per state. This information can be extracted.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/UN_OCH_MAP_2021.png"><img alt="../../_images/UN_OCH_MAP_2021.png" src="../../_images/UN_OCH_MAP_2021.png" style="width: 600px;" /></a>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Data extracted from dataset<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Year</p></th>
+<th class="head"><p class="sd-card-text">Start_Date</p></th>
+<th class="head"><p class="sd-card-text">End_Date</p></th>
+<th class="head"><p class="sd-card-text">Date</p></th>
+<th class="head"><p class="sd-card-text">source_ID</p></th>
+<th class="head"><p class="sd-card-text">admin_level</p></th>
+<th class="head"><p class="sd-card-text">admin_1</p></th>
+<th class="head"><p class="sd-card-text">admin_2</p></th>
+<th class="head"><p class="sd-card-text">admin_3</p></th>
+<th class="head"><p class="sd-card-text">admin_camp</p></th>
+<th class="head"><p class="sd-card-text">Impact type</p></th>
+<th class="head"><p class="sd-card-text">Impact_quantity</p></th>
+<th class="head"><p class="sd-card-text">Impact quality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">2020</p></td>
+<td><p class="sd-card-text">07/2020</p></td>
+<td><p class="sd-card-text">09/2020</p></td>
+<td><p class="sd-card-text">2020 OCHA 20201025</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">Northern</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">pop_affected</p></td>
+<td><p class="sd-card-text">125660</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2020</p></td>
+<td><p class="sd-card-text">07/2020</p></td>
+<td><p class="sd-card-text">09/2020</p></td>
+<td><p class="sd-card-text">2020 OCHA 20201025</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">River Nile</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">pop_affected</p></td>
+<td><p class="sd-card-text">33225</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="rubric">Humanitarian Bulletin Sudan Issue 35 | 22 - 28 August 2016</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/2016_OCHA_20160828_snapshot.png"><img alt="../../_images/2016_OCHA_20160828_snapshot.png" src="../../_images/2016_OCHA_20160828_snapshot.png" style="width: 600px;" /></a>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Data extracted from dataset<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Year</p></th>
+<th class="head"><p class="sd-card-text">Start_Date</p></th>
+<th class="head"><p class="sd-card-text">End_Date</p></th>
+<th class="head"><p class="sd-card-text">Date</p></th>
+<th class="head"><p class="sd-card-text">source_ID</p></th>
+<th class="head"><p class="sd-card-text">admin_level</p></th>
+<th class="head"><p class="sd-card-text">admin_1</p></th>
+<th class="head"><p class="sd-card-text">admin_2</p></th>
+<th class="head"><p class="sd-card-text">admin_3</p></th>
+<th class="head"><p class="sd-card-text">admin_camp</p></th>
+<th class="head"><p class="sd-card-text">Impact type</p></th>
+<th class="head"><p class="sd-card-text">Impact_quantity</p></th>
+<th class="head"><p class="sd-card-text">Impact quality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">2016</p></td>
+<td><p class="sd-card-text">06/2016</p></td>
+<td><p class="sd-card-text">09/2016</p></td>
+<td><p class="sd-card-text">2016 OCHA 20160828</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">affected</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">yes</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2016</p></td>
+<td><p class="sd-card-text">06/2016</p></td>
+<td><p class="sd-card-text">09/2016</p></td>
+<td><p class="sd-card-text">2016 OCHA 20160828</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">affected</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">yes</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2016</p></td>
+<td><p class="sd-card-text">06/2016</p></td>
+<td><p class="sd-card-text">09/2016</p></td>
+<td><p class="sd-card-text">2016 OCHA 20160828</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">Al Gezira</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">affected</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">yes</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2016</p></td>
+<td><p class="sd-card-text">06/2016</p></td>
+<td><p class="sd-card-text">09/2016</p></td>
+<td><p class="sd-card-text">2016 OCHA 20160828</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">affected</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">yes</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="rubric">Sudan Floods Countinue (FloodList)</p>
+<p class="sd-card-text">The quote below is just one bit of relevant information from the flood list article.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/2013_Floodlist_20130816_snapshot.png"><img alt="../../_images/2013_Floodlist_20130816_snapshot.png" src="../../_images/2013_Floodlist_20130816_snapshot.png" style="width: 800px;" /></a>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Data extracted from dataset<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Year</p></th>
+<th class="head"><p class="sd-card-text">Start_Date</p></th>
+<th class="head"><p class="sd-card-text">End_Date</p></th>
+<th class="head"><p class="sd-card-text">Date</p></th>
+<th class="head"><p class="sd-card-text">source_ID</p></th>
+<th class="head"><p class="sd-card-text">admin_level</p></th>
+<th class="head"><p class="sd-card-text">admin_1</p></th>
+<th class="head"><p class="sd-card-text">admin_2</p></th>
+<th class="head"><p class="sd-card-text">admin_3</p></th>
+<th class="head"><p class="sd-card-text">admin_camp</p></th>
+<th class="head"><p class="sd-card-text">Impact type</p></th>
+<th class="head"><p class="sd-card-text">Impact_quantity</p></th>
+<th class="head"><p class="sd-card-text">Impact quality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">2013</p></td>
+<td><p class="sd-card-text">01/08/2013</p></td>
+<td><p class="sd-card-text">21/08/21</p></td>
+<td><p class="sd-card-text">11/08/2013</p></td>
+<td><p class="sd-card-text">2013 Floodlist 201308</p></td>
+<td><p class="sd-card-text">Camp</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">Bellel</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Kalma Camp</p></td>
+<td><p class="sd-card-text">deaths</p></td>
+<td><p class="sd-card-text">14</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2014</p></td>
+<td><p class="sd-card-text">01/08/2014</p></td>
+<td><p class="sd-card-text">21/08/22</p></td>
+<td><p class="sd-card-text">11/08/2014</p></td>
+<td><p class="sd-card-text">2014 Floodlist 201308</p></td>
+<td><p class="sd-card-text">Camp</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">Bellel</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Kalma Camp</p></td>
+<td><p class="sd-card-text">houses_damaged_totaly</p></td>
+<td><p class="sd-card-text">874</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></div>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/20240216_Sudan_HIA_data_compiling.drawio.png"><img alt="../../_images/20240216_Sudan_HIA_data_compiling.drawio.png" src="../../_images/20240216_Sudan_HIA_data_compiling.drawio.png" style="width: 1000px;" /></a>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -702,6 +2057,27 @@ The core of a long table is the Key + Value concept.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concept-of-our-methodology">Key concept of our methodology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-hia-sudan">Step by Step HIA Sudan</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-area-of-interest">Step 1: Area of Interest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-finding-flood-disaster-timeframes">Step 2. Finding Flood Disaster Timeframes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-selecting-datasets">Step 3: Selecting datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#data-selection-parameters">Data selection parameters</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#currentness">Currentness</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#uniqueness">Uniqueness</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-id">Dataset ID</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-outcome">Step 3: Outcome</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-preparing-excel-table-structure">Step 4: Preparing Excel table Structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#date">Date</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source">Data source</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#location">Location</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-information">Impact information</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-outcome">Step 4: Outcome</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-data-compiling">Step 5: Data compiling</a></li>
 </ul>
 </li>
 </ul>
