@@ -564,6 +564,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-toolbox">Missing toolbox</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-north-arrow-is-not-syncing-with-the-corresponding-map">The North arrow is not syncing with the corresponding map</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-what-do-all-these-terms-mean">Coordinate systems: What do all these terms mean?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-my-dataset-is-not-located-where-it-should-be">Coordinate systems: My dataset is not located where it should be!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-what-coordinate-system-should-my-dataset-be-in">Coordinate systems: What coordinate system should my dataset be in?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#my-dataset-is-slightly-offset-from-where-it-should-be">My dataset is slightly offset from where it should be!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrong-data-results-or-missing-data">Wrong data results or missing data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-management-issues">File Management Issues</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-qgis-problems">Specific QGIS problems</a><ul class="nav section-nav flex-column">
@@ -748,6 +752,114 @@ When having two layers with different crs, then select one of the layers as the 
 <p><strong>Solution:</strong></p>
 <p>These errors in the geometries can be corrected by selecting <code class="docutils literal notranslate"><span class="pre">Fix</span> <span class="pre">Geometries</span></code> in the Processing Toolbox.</p>
 </section>
+<section id="coordinate-systems-what-do-all-these-terms-mean">
+<h2>Coordinate systems: What do all these terms mean?<a class="headerlink" href="#coordinate-systems-what-do-all-these-terms-mean" title="Permalink to this heading">#</a></h2>
+<p>Geospatial datasets consist of three basic data:</p>
+<ul class="simple">
+<li><p>Attributes: the meanings or labels of a data point.</p></li>
+<li><p>Coordinates: numbers describing the data point’s position in space.</p></li>
+<li><p>Coordinate (reference) system: metadata describing the space itself: origin, axes, units, etc.</p></li>
+</ul>
+<p>For example:</p>
+<ul class="simple">
+<li><p>Attributes: “The White House” or “1600 Pennsylvania Avenue”</p></li>
+<li><p>Coordinates: (-77.0367, 38.8976)</p></li>
+<li><p>Coordinate (reference) system: WGS84 longitude,latitude</p></li>
+</ul>
+<p><strong>Glossary</strong></p>
+<p>Redefining means the metadata about the coordinate system is modified but the coordinates are not. This contrasts with reprojections and transformations, which modify both the coordinate system and the coordinates.</p>
+<p><strong>Solutions:</strong></p>
+<ul class="simple">
+<li><p>In QGIS, for vector datasets, use the <code class="docutils literal notranslate"><span class="pre">Assign</span> <span class="pre">Projection</span></code> <a class="reference external" href="https://docs.qgis.org/3.28/en/docs/user_manual/processing_algs/gdal/rasterprojections.html#assign-projection">https://docs.qgis.org/3.28/en/docs/user_manual/processing_algs/gdal/rasterprojections.html#assign-projection</a> tool in the <code class="docutils literal notranslate"><span class="pre">Vector</span> <span class="pre">General</span></code> toolset, not the <code class="docutils literal notranslate"><span class="pre">Reproject</span> <span class="pre">Layer</span></code> tool.</p></li>
+<li><p>In QGIS, for raster datasets, use the <code class="docutils literal notranslate"><span class="pre">Assign</span> <span class="pre">Projection</span></code> tool <a class="reference external" href="https://docs.qgis.org/3.28/en/docs/user_manual/processing_algs/gdal/rasterprojections.html#assign-projection">https://docs.qgis.org/3.28/en/docs/user_manual/processing_algs/gdal/rasterprojections.html#assign-projection</a> in the <code class="docutils literal notranslate"><span class="pre">GDAL</span></code> toolset, not the <code class="docutils literal notranslate"><span class="pre">Warp</span> <span class="pre">(Reproject)</span></code> tool.</p></li>
+<li><p>From the command line, for vector datasets, use <code class="docutils literal notranslate"><span class="pre">ogr2ogr</span></code><br />
+<a class="reference external" href="https://gdal.org/programs/ogr2ogr.html#cmdoption-ogr2ogr-a_srs">https://gdal.org/programs/ogr2ogr.html#cmdoption-ogr2ogr-a_srs</a> with the <code class="docutils literal notranslate"><span class="pre">-a_srs</span></code> parameter, not the <code class="docutils literal notranslate"><span class="pre">-t_srs</span></code> parameter.</p></li>
+<li><p>From the command line, for raster datasets, use <code class="docutils literal notranslate"><span class="pre">gdal_edit</span></code><a class="reference external" href="https://gdal.org/programs/gdal_edit.html#cmdoption-a_srs.py">https://gdal.org/programs/gdal_edit.html#cmdoption-a_srs.py</a> with the <code class="docutils literal notranslate"><span class="pre">-a_srs</span></code> parameter.</p></li>
+</ul>
+</section>
+<section id="coordinate-systems-my-dataset-is-not-located-where-it-should-be">
+<h2>Coordinate systems: My dataset is not located where it should be!<a class="headerlink" href="#coordinate-systems-my-dataset-is-not-located-where-it-should-be" title="Permalink to this heading">#</a></h2>
+<p>Your dataset probably has the wrong coordinate system. This is the more general case of the previous problem. This can happen if the coordinate system is missing altogether, in which case GIS software often assumes that it is the same coordinate system as a previously loaded dataset, or the coordinate system set in the “project” or “map document”.</p>
+<p><strong>Solution:</strong></p>
+<p>Redefine the coordinate system, <a class="reference external" href="https://ihatecoordinatesystems.com/#redefine">https://ihatecoordinatesystems.com/#redefine</a> i.e. change the coordinate system but not the coordinates, to the correct coordinate system <a class="reference external" href="https://ihatecoordinatesystems.com/#correct-crs">https://ihatecoordinatesystems.com/#correct-crs</a>.</p>
+</section>
+<section id="coordinate-systems-what-coordinate-system-should-my-dataset-be-in">
+<h2>Coordinate systems: What coordinate system should my dataset be in?<a class="headerlink" href="#coordinate-systems-what-coordinate-system-should-my-dataset-be-in" title="Permalink to this heading">#</a></h2>
+<p>A data point’s attributes gives context to where on the Earth it is located. Most GIS software will display the minimum and maximum coordinates in the layer’s properties as “extent” or “bounding box”.</p>
+<p><strong>Solutions:</strong></p>
+<p>If the attributes indicate the approximate longitude,latitude where the coordinates should be located, try doing a reverse lookup. This iterates over every well-defined coordinate system, unprojects the X,Y coordinates to WGS84, and measures the error to the known longitude,latitude. Errors less than a few hundred meters denote a reasonable projection, though this isn’t precise enough to determine the GCS.
+You can run this sample code yourself, or use this form:</p>
+<p>Table:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                &lt;table style=&quot;padding: 0.5em;width:100%;font-size:90%;&quot;&gt;
+                    &lt;colgroup&gt;
+                        &lt;col span=&quot;1&quot; style=&quot;width: 18%;&quot;&gt;
+                        &lt;col span=&quot;1&quot; style=&quot;width: 20%;&quot;&gt;
+                        &lt;col span=&quot;1&quot; style=&quot;width: 18%;&quot;&gt;
+                        &lt;col span=&quot;1&quot; style=&quot;width: 20%;&quot;&gt;
+                        &lt;col span=&quot;1&quot; style=&quot;width: 20%;&quot;&gt;
+                    &lt;/colgroup&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td style=&quot;text-align:right;&quot;&gt;&lt;label for=&quot;lookup_lng&quot;&gt;Longitude:&lt;/label&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input style=&quot;width:90%;&quot; type=&quot;number&quot; step=&quot;any&quot; id=&quot;lookup_lng&quot;
+                                    name=&quot;lookup_lng&quot;&gt;&lt;/td&gt;
+                            &lt;td style=&quot;text-align:right;&quot;&gt;&lt;label for=&quot;lookup_lat&quot;&gt;Latitude:&lt;/label&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input style=&quot;width:90%;&quot; type=&quot;number&quot; step=&quot;any&quot; id=&quot;lookup_lat&quot;
+                                    name=&quot;lookup_lat&quot;&gt;&lt;br&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td style=&quot;text-align:right;&quot;&gt;&lt;label for=&quot;lookup_x&quot;&gt;X-coordinate:&lt;/label&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input style=&quot;width:90%;&quot; type=&quot;number&quot; step=&quot;any&quot; id=&quot;lookup_x&quot; name=&quot;lookup_x&quot;&gt;
+                            &lt;/td&gt;
+                            &lt;td style=&quot;text-align:right;&quot;&gt;&lt;label for=&quot;lookup_y&quot;&gt;Y-coordinate:&lt;/label&gt;&lt;/td&gt;
+                            &lt;td&gt;&lt;input style=&quot;width:90%;&quot; type=&quot;number&quot; step=&quot;any&quot; id=&quot;lookup_y&quot; name=&quot;lookup_y&quot;&gt;
+                            &lt;/td&gt;
+                            &lt;td&gt;&lt;input style=&quot;width:70%;&quot; id=&quot;projectionLookupButton&quot; type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/form&gt;
+            &lt;p id=&quot;projectionLoookupLoading&quot; style=&quot;display:none;text-align:center;&quot;&gt;
+                &lt;span id=&quot;projectionLoookupLoadingText&quot; class=&quot;bold italic&quot;&gt;&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;table id=&quot;projectionLookupResults&quot; style=&quot;display:none;padding:0.5em;font-size:80%;&quot;&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;span class=&quot;bold&quot;&gt;Code&lt;/span&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;span class=&quot;bold&quot;&gt;Name&lt;/span&gt;&lt;/td&gt;
+                    &lt;td style=&quot;text-align:right;&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Error (meters)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If the coordinates have X-values between -180 and 180, and Y-values between -90 and 90, then you probably want to redefine to a longitude,latitude geographic coordinate system (GCS) like WGS84.</p></li>
+<li><p>If the coordinates have large absolute values, try redefining to a local coordinate system like UTM, Gauss-Krüger, State Plane, or a national grid. Also consider trying neighboring zones, e.g. if UTM Zone 19N is wrong, try UTM Zone 18N.</p></li>
+<li><p>If the attributes suggest the dataset is in the USA, then there might a problem converting to/from Freedom Units. Try multiplying/dividing a data point’s coordinates by 3.28084 to convert feet to meters/meters to feet and see if that places it in the proper location.</p></li>
+<li><p>If the minimum X/Y coordinates are both zero and the maxmimum X/Y coordinates are both positive, then the dataset may have been exported from non-geospatial software like Photoshop or Illustrator or Inkscape. This is especially likely if the dataset is flipped vertically since those editors typically have the Y-axis increasing going down. You will need to manually georeference the dataset to use it, which changes both the coordinates and the coordinate system.</p></li>
+</ul>
+</section>
+<section id="my-dataset-is-slightly-offset-from-where-it-should-be">
+<h2>My dataset is slightly offset from where it should be!<a class="headerlink" href="#my-dataset-is-slightly-offset-from-where-it-should-be" title="Permalink to this heading">#</a></h2>
+<p>Your dataset probably has the wrong longitude/latitude geographic coordinate system (GCS). Different GCSs define slightly different sizes/shapes of the Earth (their ellipsoids) and different positionings on the Earth (their datums). As a result, the same longitude/latitude coordinates in two different GCSs can appear offset, although typically within tens of meters of each other. This can happen even if you are using a projected coordinate system (PCS) whose units are not degrees of longitude/latitude since PCSs have a GCS embedded within them.</p>
+<ul class="simple">
+<li><p>Image</p></li>
+</ul>
+<p><strong>Solution</strong>:</p>
+<p>Redefine the coordinate system, i.e. change the coordinate system but not the coordinates, to one of the following:</p>
+<ul class="simple">
+<li><p>Try redefining to the WGS84 GCS.</p></li>
+<li><p>If your dataset was collected with GPS , try redefining to WGS84.</p></li>
+<li><p>If your dataset was collected with GLONASS , try redefining to PZ-90.</p></li>
+<li><p>If your dataset was collected with Galileo , try redefining to ITRF.</p></li>
+<li><p>If your dataset is in the USA , try redefining to NAD27, NAD83, or WGS84.</p></li>
+<li><p>If your dataset is in Europe , try redefining to ED50, ETRS89, or WGS84.
+*If your dataset is in Australia , try redefining to GDA94 or GDA2020.
+*If your dataset is in China  and/or collected with BeiDou, good luck.</p></li>
+</ul>
+<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+</section>
 <section id="wrong-data-results-or-missing-data">
 <h2>Wrong data results or missing data<a class="headerlink" href="#wrong-data-results-or-missing-data" title="Permalink to this heading">#</a></h2>
 <p>When you get wrong data results or missing data, please check your file names. You should not use file names with capitals, special characters or empty spaces. Always use underscores between the words for the file name.</p>
@@ -929,6 +1041,10 @@ More complex tasks with longer calculation times may still cause problems. Regul
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#missing-toolbox">Missing toolbox</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-north-arrow-is-not-syncing-with-the-corresponding-map">The North arrow is not syncing with the corresponding map</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-what-do-all-these-terms-mean">Coordinate systems: What do all these terms mean?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-my-dataset-is-not-located-where-it-should-be">Coordinate systems: My dataset is not located where it should be!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-what-coordinate-system-should-my-dataset-be-in">Coordinate systems: What coordinate system should my dataset be in?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#my-dataset-is-slightly-offset-from-where-it-should-be">My dataset is slightly offset from where it should be!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrong-data-results-or-missing-data">Wrong data results or missing data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-management-issues">File Management Issues</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specific-qgis-problems">Specific QGIS problems</a><ul class="nav section-nav flex-column">
