@@ -801,51 +801,48 @@ When having two layers with different crs, then select one of the layers as the 
 <p><strong>Solutions:</strong></p>
 <p>If the attributes indicate the approximate longitude,latitude where the coordinates should be located, try doing a reverse lookup. This iterates over every well-defined coordinate system, unprojects the X,Y coordinates to WGS84, and measures the error to the known longitude,latitude. Errors less than a few hundred meters denote a reasonable projection, though this isn’t precise enough to determine the GCS.
 You can run this sample code yourself, or use this form:</p>
-<p><a class="reference external" href="https://ihatecoordinatesystems.com/#correct-crs">https://ihatecoordinatesystems.com/#correct-crs</a></p>
-<p>Form in HTML-Content (needs to be converted)</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                &lt;table style=&quot;padding: 0.5em;width:100%;font-size:90%;&quot;&gt;
-                    &lt;colgroup&gt;
-                        &lt;col span=&quot;1&quot; style=&quot;width: 18%;&quot;&gt;
-                        &lt;col span=&quot;1&quot; style=&quot;width: 20%;&quot;&gt;
-                        &lt;col span=&quot;1&quot; style=&quot;width: 18%;&quot;&gt;
-                        &lt;col span=&quot;1&quot; style=&quot;width: 20%;&quot;&gt;
-                        &lt;col span=&quot;1&quot; style=&quot;width: 20%;&quot;&gt;
-                    &lt;/colgroup&gt;
-                    &lt;tbody&gt;
-                        &lt;tr&gt;
-                            &lt;td style=&quot;text-align:right;&quot;&gt;&lt;label for=&quot;lookup_lng&quot;&gt;Longitude:&lt;/label&gt;&lt;/td&gt;
-                            &lt;td&gt;&lt;input style=&quot;width:90%;&quot; type=&quot;number&quot; step=&quot;any&quot; id=&quot;lookup_lng&quot;
-                                    name=&quot;lookup_lng&quot;&gt;&lt;/td&gt;
-                            &lt;td style=&quot;text-align:right;&quot;&gt;&lt;label for=&quot;lookup_lat&quot;&gt;Latitude:&lt;/label&gt;&lt;/td&gt;
-                            &lt;td&gt;&lt;input style=&quot;width:90%;&quot; type=&quot;number&quot; step=&quot;any&quot; id=&quot;lookup_lat&quot;
-                                    name=&quot;lookup_lat&quot;&gt;&lt;br&gt;&lt;/td&gt;
-                            &lt;td&gt;&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            &lt;td style=&quot;text-align:right;&quot;&gt;&lt;label for=&quot;lookup_x&quot;&gt;X-coordinate:&lt;/label&gt;&lt;/td&gt;
-                            &lt;td&gt;&lt;input style=&quot;width:90%;&quot; type=&quot;number&quot; step=&quot;any&quot; id=&quot;lookup_x&quot; name=&quot;lookup_x&quot;&gt;
-                            &lt;/td&gt;
-                            &lt;td style=&quot;text-align:right;&quot;&gt;&lt;label for=&quot;lookup_y&quot;&gt;Y-coordinate:&lt;/label&gt;&lt;/td&gt;
-                            &lt;td&gt;&lt;input style=&quot;width:90%;&quot; type=&quot;number&quot; step=&quot;any&quot; id=&quot;lookup_y&quot; name=&quot;lookup_y&quot;&gt;
-                            &lt;/td&gt;
-                            &lt;td&gt;&lt;input style=&quot;width:70%;&quot; id=&quot;projectionLookupButton&quot; type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
-                            &lt;/td&gt;
-                        &lt;/tr&gt;
-                    &lt;/tbody&gt;
-                &lt;/table&gt;
-            &lt;/form&gt;
-            &lt;p id=&quot;projectionLoookupLoading&quot; style=&quot;display:none;text-align:center;&quot;&gt;
-                &lt;span id=&quot;projectionLoookupLoadingText&quot; class=&quot;bold italic&quot;&gt;&lt;/span&gt;
-            &lt;/p&gt;
-            &lt;table id=&quot;projectionLookupResults&quot; style=&quot;display:none;padding:0.5em;font-size:80%;&quot;&gt;
-                &lt;tr&gt;
-                    &lt;td&gt;&lt;span class=&quot;bold&quot;&gt;Code&lt;/span&gt;&lt;/td&gt;
-                    &lt;td&gt;&lt;span class=&quot;bold&quot;&gt;Name&lt;/span&gt;&lt;/td&gt;
-                    &lt;td style=&quot;text-align:right;&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Error (meters)&lt;/span&gt;&lt;/td&gt;
-                &lt;/tr&gt;
-            &lt;/table&gt;
-</pre></div>
-</div>
+<form>
+    <table style="padding: 0.5em;width:100%;font-size:90%;">
+        <colgroup>
+            <col span="1" style="width: 18%;">
+            <col span="1" style="width: 20%;">
+            <col span="1" style="width: 18%;">
+            <col span="1" style="width: 20%;">
+            <col span="1" style="width: 20%;">
+        </colgroup>
+        <tbody>
+            <tr>
+                <td style="text-align:right;"><label for="lookup_lng">Longitude:</label></td>
+                <td><input style="width:90%;" type="number" step="any" id="lookup_lng"
+                        name="lookup_lng"></td>
+                <td style="text-align:right;"><label for="lookup_lat">Latitude:</label></td>
+                <td><input style="width:90%;" type="number" step="any" id="lookup_lat"
+                        name="lookup_lat"><br></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="text-align:right;"><label for="lookup_x">X-coordinate:</label></td>
+                <td><input style="width:90%;" type="number" step="any" id="lookup_x" name="lookup_x">
+                </td>
+                <td style="text-align:right;"><label for="lookup_y">Y-coordinate:</label></td>
+                <td><input style="width:90%;" type="number" step="any" id="lookup_y" name="lookup_y">
+                </td>
+                <td><input style="width:70%;" id="projectionLookupButton" type="submit" value="Submit">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<p id="projectionLoookupLoading" style="display:none;text-align:center;">
+    <span id="projectionLoookupLoadingText" class="bold italic"></span>
+</p>
+<table id="projectionLookupResults" style="display:none;padding:0.5em;font-size:80%;">
+    <tr>
+        <td><span class="bold">Code</span></td>
+        <td><span class="bold">Name</span></td>
+        <td style="text-align:right;"><span class="bold">Error (meters)</span></td>
+    </tr>
+</table>
 <ul class="simple">
 <li><p>If the coordinates have X-values between -180 and 180, and Y-values between -90 and 90, then you probably want to redefine to a longitude,latitude geographic coordinate system (GCS) like WGS84.</p></li>
 <li><p>If the coordinates have large absolute values, try redefining to a local coordinate system like UTM, Gauss-Krüger, State Plane, or a national grid. Also consider trying neighboring zones, e.g. if UTM Zone 19N is wrong, try UTM Zone 18N.</p></li>
@@ -871,7 +868,6 @@ You can run this sample code yourself, or use this form:</p>
 *If your dataset is in Australia , try redefining to GDA94 or GDA2020.
 *If your dataset is in China  and/or collected with BeiDou, good luck.</p></li>
 </ul>
-<p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
 </section>
 <section id="wrong-data-results-or-missing-data">
 <h2>Wrong data results or missing data<a class="headerlink" href="#wrong-data-results-or-missing-data" title="Permalink to this heading">#</a></h2>
