@@ -565,6 +565,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-north-arrow-is-not-syncing-with-the-corresponding-map">The North arrow is not syncing with the corresponding map</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-what-do-all-these-terms-mean">Coordinate systems: What do all these terms mean?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-how-do-i-redefine-a-dataset-s-coordinate-system">Coordinate systems: How do I redefine a dataset’s coordinate system?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-why-is-mercator-ever-used-if-it-s-so-distorted">Coordinate systems: Why is Mercator ever used if it’s so distorted?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-my-dataset-is-not-located-where-it-should-be">Coordinate systems: My dataset is not located where it should be!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-what-coordinate-system-should-my-dataset-be-in">Coordinate systems: What coordinate system should my dataset be in?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#my-dataset-is-slightly-offset-from-where-it-should-be">My dataset is slightly offset from where it should be!</a></li>
@@ -766,7 +768,9 @@ When having two layers with different crs, then select one of the layers as the 
 <li><p>Coordinates: (-77.0367, 38.8976)</p></li>
 <li><p>Coordinate (reference) system: WGS84 longitude,latitude</p></li>
 </ul>
-<p><strong>Glossary</strong></p>
+</section>
+<section id="coordinate-systems-how-do-i-redefine-a-dataset-s-coordinate-system">
+<h2>Coordinate systems: How do I redefine a dataset’s coordinate system?<a class="headerlink" href="#coordinate-systems-how-do-i-redefine-a-dataset-s-coordinate-system" title="Permalink to this heading">#</a></h2>
 <p>Redefining means the metadata about the coordinate system is modified but the coordinates are not. This contrasts with reprojections and transformations, which modify both the coordinate system and the coordinates.</p>
 <p><strong>Solutions:</strong></p>
 <ul class="simple">
@@ -777,11 +781,19 @@ When having two layers with different crs, then select one of the layers as the 
 <li><p>From the command line, for raster datasets, use <code class="docutils literal notranslate"><span class="pre">gdal_edit</span></code><a class="reference external" href="https://gdal.org/programs/gdal_edit.html#cmdoption-a_srs.py">https://gdal.org/programs/gdal_edit.html#cmdoption-a_srs.py</a> with the <code class="docutils literal notranslate"><span class="pre">-a_srs</span></code> parameter.</p></li>
 </ul>
 </section>
+<section id="coordinate-systems-why-is-mercator-ever-used-if-it-s-so-distorted">
+<h2>Coordinate systems: Why is Mercator ever used if it’s so distorted?<a class="headerlink" href="#coordinate-systems-why-is-mercator-ever-used-if-it-s-so-distorted" title="Permalink to this heading">#</a></h2>
+<p>Mercator is the only conformal cylindrical map projection. Cylindrical map projections mean the whole Earth fits into a rectangle, which is very convenient for data processing algorithms that are used to working with rectangular images. Conformal means that angles and shapes are always preserved: north is always up, squares are always square, etc. Using a non-conformal projection would make things look stretched, squashed, and/or rotated when zooming in.</p>
+<figure class="align-default" id="qgis-mercator-jpg">
+<a class="reference internal image-reference" href="../../_images/qgis_mercator.jpg"><img alt="../../_images/qgis_mercator.jpg" src="../../_images/qgis_mercator.jpg" style="width: 75%;" /></a>
+</figure>
+<p>Mercator does enlarge areas farther from the equator, but at least this distortion is the same horizontally and vertically. And it’s trivial to calculate a scale factor <a class="reference external" href="https://en.wikipedia.org/wiki/Mercator_projection#Scale_factor">https://en.wikipedia.org/wiki/Mercator_projection#Scale_factor</a> to correct measurements. The only time the distortion is problematic is when viewing a global-scale map with a range of different scale factors, but most maps are not global-scale and there are plenty of better projections to use for this case.</p>
+</section>
 <section id="coordinate-systems-my-dataset-is-not-located-where-it-should-be">
 <h2>Coordinate systems: My dataset is not located where it should be!<a class="headerlink" href="#coordinate-systems-my-dataset-is-not-located-where-it-should-be" title="Permalink to this heading">#</a></h2>
 <p>Your dataset probably has the wrong coordinate system. This is the more general case of the previous problem. This can happen if the coordinate system is missing altogether, in which case GIS software often assumes that it is the same coordinate system as a previously loaded dataset, or the coordinate system set in the “project” or “map document”.</p>
 <p><strong>Solution:</strong></p>
-<p>Redefine the coordinate system, <a class="reference external" href="https://ihatecoordinatesystems.com/#redefine">https://ihatecoordinatesystems.com/#redefine</a> i.e. change the coordinate system but not the coordinates, to the correct coordinate system <a class="reference external" href="https://ihatecoordinatesystems.com/#correct-crs">https://ihatecoordinatesystems.com/#correct-crs</a>.</p>
+<p>Redefine the coordinate system, redefine i.e. change the coordinate system but not the coordinates, to the correct coordinate system.</p>
 </section>
 <section id="coordinate-systems-what-coordinate-system-should-my-dataset-be-in">
 <h2>Coordinate systems: What coordinate system should my dataset be in?<a class="headerlink" href="#coordinate-systems-what-coordinate-system-should-my-dataset-be-in" title="Permalink to this heading">#</a></h2>
@@ -789,7 +801,16 @@ When having two layers with different crs, then select one of the layers as the 
 <p><strong>Solutions:</strong></p>
 <p>If the attributes indicate the approximate longitude,latitude where the coordinates should be located, try doing a reverse lookup. This iterates over every well-defined coordinate system, unprojects the X,Y coordinates to WGS84, and measures the error to the known longitude,latitude. Errors less than a few hundred meters denote a reasonable projection, though this isn’t precise enough to determine the GCS.
 You can run this sample code yourself, or use this form:</p>
-<p>Table:</p>
+<p>parse:
+myst_enable_extensions:
+# don’t forget to list any other extensions you want enabled,
+# including those that are enabled by default!
+- html_admonition</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;div class=&quot;admonition note&quot; name=&quot;html-admonition&quot; style=&quot;background: lightgreen; padding: 10px&quot;&gt;
+</pre></div>
+</div>
+<p class="title">This is the **Table**</p>
+This is the *content*
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                &lt;table style=&quot;padding: 0.5em;width:100%;font-size:90%;&quot;&gt;
                     &lt;colgroup&gt;
                         &lt;col span=&quot;1&quot; style=&quot;width: 18%;&quot;&gt;
@@ -833,6 +854,7 @@ You can run this sample code yourself, or use this form:</p>
             &lt;/table&gt;
 </pre></div>
 </div>
+</div>
 <ul class="simple">
 <li><p>If the coordinates have X-values between -180 and 180, and Y-values between -90 and 90, then you probably want to redefine to a longitude,latitude geographic coordinate system (GCS) like WGS84.</p></li>
 <li><p>If the coordinates have large absolute values, try redefining to a local coordinate system like UTM, Gauss-Krüger, State Plane, or a national grid. Also consider trying neighboring zones, e.g. if UTM Zone 19N is wrong, try UTM Zone 18N.</p></li>
@@ -843,9 +865,9 @@ You can run this sample code yourself, or use this form:</p>
 <section id="my-dataset-is-slightly-offset-from-where-it-should-be">
 <h2>My dataset is slightly offset from where it should be!<a class="headerlink" href="#my-dataset-is-slightly-offset-from-where-it-should-be" title="Permalink to this heading">#</a></h2>
 <p>Your dataset probably has the wrong longitude/latitude geographic coordinate system (GCS). Different GCSs define slightly different sizes/shapes of the Earth (their ellipsoids) and different positionings on the Earth (their datums). As a result, the same longitude/latitude coordinates in two different GCSs can appear offset, although typically within tens of meters of each other. This can happen even if you are using a projected coordinate system (PCS) whose units are not degrees of longitude/latitude since PCSs have a GCS embedded within them.</p>
-<ul class="simple">
-<li><p>Image</p></li>
-</ul>
+<figure class="align-default" id="qgis-wrong-gcs-png">
+<a class="reference internal image-reference" href="../../_images/qgis_wrong-gcs.png"><img alt="../../_images/qgis_wrong-gcs.png" src="../../_images/qgis_wrong-gcs.png" style="width: 75%;" /></a>
+</figure>
 <p><strong>Solution</strong>:</p>
 <p>Redefine the coordinate system, i.e. change the coordinate system but not the coordinates, to one of the following:</p>
 <ul class="simple">
@@ -1042,6 +1064,8 @@ More complex tasks with longer calculation times may still cause problems. Regul
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-north-arrow-is-not-syncing-with-the-corresponding-map">The North arrow is not syncing with the corresponding map</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#invalid-geometry">Invalid Geometry</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-what-do-all-these-terms-mean">Coordinate systems: What do all these terms mean?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-how-do-i-redefine-a-dataset-s-coordinate-system">Coordinate systems: How do I redefine a dataset’s coordinate system?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-why-is-mercator-ever-used-if-it-s-so-distorted">Coordinate systems: Why is Mercator ever used if it’s so distorted?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-my-dataset-is-not-located-where-it-should-be">Coordinate systems: My dataset is not located where it should be!</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-systems-what-coordinate-system-should-my-dataset-be-in">Coordinate systems: What coordinate system should my dataset be in?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#my-dataset-is-slightly-offset-from-where-it-should-be">My dataset is slightly offset from where it should be!</a></li>
