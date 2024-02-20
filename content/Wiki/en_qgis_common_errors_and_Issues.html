@@ -801,16 +801,7 @@ When having two layers with different crs, then select one of the layers as the 
 <p><strong>Solutions:</strong></p>
 <p>If the attributes indicate the approximate longitude,latitude where the coordinates should be located, try doing a reverse lookup. This iterates over every well-defined coordinate system, unprojects the X,Y coordinates to WGS84, and measures the error to the known longitude,latitude. Errors less than a few hundred meters denote a reasonable projection, though this isn’t precise enough to determine the GCS.
 You can run this sample code yourself, or use this form:</p>
-<p>parse:
-myst_enable_extensions:
-# don’t forget to list any other extensions you want enabled,
-# including those that are enabled by default!
-- html_admonition</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;div class=&quot;admonition note&quot; name=&quot;html-admonition&quot; style=&quot;background: lightgreen; padding: 10px&quot;&gt;
-</pre></div>
-</div>
-<p class="title">This is the **Table**</p>
-This is the *content*
+<p>Form in HTML-Content (needs to be concerted)</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>                &lt;table style=&quot;padding: 0.5em;width:100%;font-size:90%;&quot;&gt;
                     &lt;colgroup&gt;
                         &lt;col span=&quot;1&quot; style=&quot;width: 18%;&quot;&gt;
@@ -853,7 +844,6 @@ This is the *content*
                 &lt;/tr&gt;
             &lt;/table&gt;
 </pre></div>
-</div>
 </div>
 <ul class="simple">
 <li><p>If the coordinates have X-values between -180 and 180, and Y-values between -90 and 90, then you probably want to redefine to a longitude,latitude geographic coordinate system (GCS) like WGS84.</p></li>
