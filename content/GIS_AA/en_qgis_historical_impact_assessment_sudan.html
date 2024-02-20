@@ -582,9 +582,9 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source">Data source</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#location">Location</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-information">Impact information</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-outcome">Step 4: Outcome</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-outcome">Step 4: Outcome</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-data-compiling">Step 5: Data compiling</a></li>
 </ul>
 </li>
@@ -1216,7 +1216,1468 @@ The date portion of the whole Excel table would look like this:</p>
 </tr>
 </tbody>
 </table>
-</section>
+<p>In the Sudan HIA, most of the information has been on the state level, whereas the team found very little information on the camp level.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Admin_level</p></th>
+<th class="head"><p>Number of informations</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>State</p></td>
+<td><p>1,979</p></td>
+</tr>
+<tr class="row-odd"><td><p>Locality</p></td>
+<td><p>596</p></td>
+</tr>
+<tr class="row-even"><td><p>Town/ Village</p></td>
+<td><p>565</p></td>
+</tr>
+<tr class="row-odd"><td><p>IDP &amp; Refugee Camp</p></td>
+<td><p>63</p></td>
+</tr>
+</tbody>
+</table>
+<p>Tipp: We highly recommend using the English names of states and localities which are compatible with P-codes. Those can be found <a class="reference external" href="https://data.humdata.org/dataset/cod-ab-sdn?">here</a>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Admin 1 - States<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">ADM1_EN</p></th>
+<th class="head"><p class="sd-card-text">ADM1_AR</p></th>
+<th class="head"><p class="sd-card-text">ADM1_PCODE</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">Abyei PCA</p></td>
+<td><p class="sd-card-text">إدارية أبيي</p></td>
+<td><p class="sd-card-text">SD19</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Aj Jazirah</p></td>
+<td><p class="sd-card-text">الجزيرة</p></td>
+<td><p class="sd-card-text">SD15</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Blue Nile</p></td>
+<td><p class="sd-card-text">النيل الأزرق</p></td>
+<td><p class="sd-card-text">SD08</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Central Darfur</p></td>
+<td><p class="sd-card-text">وسط دارفور</p></td>
+<td><p class="sd-card-text">SD06</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">East Darfur</p></td>
+<td><p class="sd-card-text">شرق دارفور</p></td>
+<td><p class="sd-card-text">SD05</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Khartoum</p></td>
+<td><p class="sd-card-text">الخرطوم</p></td>
+<td><p class="sd-card-text">SD01</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">North Kordofan</p></td>
+<td><p class="sd-card-text">شمال كردفان</p></td>
+<td><p class="sd-card-text">SD13</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Northern</p></td>
+<td><p class="sd-card-text">الشمالية</p></td>
+<td><p class="sd-card-text">SD17</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">River Nile</p></td>
+<td><p class="sd-card-text">نهر النيل</p></td>
+<td><p class="sd-card-text">SD16</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text">سنار</p></td>
+<td><p class="sd-card-text">SD14</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">West Darfur</p></td>
+<td><p class="sd-card-text">غرب دارفور</p></td>
+<td><p class="sd-card-text">SD04</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">White Nile</p></td>
+<td><p class="sd-card-text">النيل الأبيض</p></td>
+<td><p class="sd-card-text">SD09</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Admin 2- Localities<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">ADM2_EN</p></th>
+<th class="head"><p class="sd-card-text">ADM2_AR</p></th>
+<th class="head"><p class="sd-card-text">ADM2_PCODE</p></th>
+<th class="head"><p class="sd-card-text">ADM1_EN</p></th>
+<th class="head"><p class="sd-card-text">ADM1_AR</p></th>
+<th class="head"><p class="sd-card-text">ADM1_PCODE</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">Abassiya</p></td>
+<td><p class="sd-card-text">العباسية</p></td>
+<td><p class="sd-card-text">SD07090</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Abu Hamad</p></td>
+<td><p class="sd-card-text">أبو حمد</p></td>
+<td><p class="sd-card-text">SD16008</p></td>
+<td><p class="sd-card-text">River Nile</p></td>
+<td><p class="sd-card-text">نهر النيل</p></td>
+<td><p class="sd-card-text">SD16</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Abu Hujar</p></td>
+<td><p class="sd-card-text">أبو حجار</p></td>
+<td><p class="sd-card-text">SD14037</p></td>
+<td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text">سنار</p></td>
+<td><p class="sd-card-text">SD14</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Abu Jabrah</p></td>
+<td><p class="sd-card-text">أبو جابرة</p></td>
+<td><p class="sd-card-text">SD05140</p></td>
+<td><p class="sd-card-text">East Darfur</p></td>
+<td><p class="sd-card-text">شرق دارفور</p></td>
+<td><p class="sd-card-text">SD05</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Abu Jubayhah</p></td>
+<td><p class="sd-card-text">أبو جبيهة</p></td>
+<td><p class="sd-card-text">SD07088</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Abu Karinka</p></td>
+<td><p class="sd-card-text">أبو كارنكا</p></td>
+<td><p class="sd-card-text">SD05155</p></td>
+<td><p class="sd-card-text">East Darfur</p></td>
+<td><p class="sd-card-text">شرق دارفور</p></td>
+<td><p class="sd-card-text">SD05</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Abu Kershola</p></td>
+<td><p class="sd-card-text">أبو كرشولا</p></td>
+<td><p class="sd-card-text">SD07104</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Abu Zabad</p></td>
+<td><p class="sd-card-text">أبو زبد</p></td>
+<td><p class="sd-card-text">SD18028</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Abyei</p></td>
+<td><p class="sd-card-text">أبيي</p></td>
+<td><p class="sd-card-text">SD18087</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Abyei PCA area</p></td>
+<td><p class="sd-card-text">إدارية أبيي</p></td>
+<td><p class="sd-card-text">SD19001</p></td>
+<td><p class="sd-card-text">Abyei PCA</p></td>
+<td><p class="sd-card-text">إدارية أبيي</p></td>
+<td><p class="sd-card-text">SD19</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Ad Dabbah</p></td>
+<td><p class="sd-card-text">الدبة</p></td>
+<td><p class="sd-card-text">SD17019</p></td>
+<td><p class="sd-card-text">Northern</p></td>
+<td><p class="sd-card-text">الشمالية</p></td>
+<td><p class="sd-card-text">SD17</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Ad Dali</p></td>
+<td><p class="sd-card-text">الدالي</p></td>
+<td><p class="sd-card-text">SD14039</p></td>
+<td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text">سنار</p></td>
+<td><p class="sd-card-text">SD14</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Ad Damar</p></td>
+<td><p class="sd-card-text">الدامر</p></td>
+<td><p class="sd-card-text">SD16011</p></td>
+<td><p class="sd-card-text">River Nile</p></td>
+<td><p class="sd-card-text">نهر النيل</p></td>
+<td><p class="sd-card-text">SD16</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Ad Dinder</p></td>
+<td><p class="sd-card-text">الدندر</p></td>
+<td><p class="sd-card-text">SD14040</p></td>
+<td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text">سنار</p></td>
+<td><p class="sd-card-text">SD14</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Ad Diwaim</p></td>
+<td><p class="sd-card-text">الدويم</p></td>
+<td><p class="sd-card-text">SD09044</p></td>
+<td><p class="sd-card-text">White Nile</p></td>
+<td><p class="sd-card-text">النيل الأبيض</p></td>
+<td><p class="sd-card-text">SD09</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Ad Du’ayn</p></td>
+<td><p class="sd-card-text">الضعين</p></td>
+<td><p class="sd-card-text">SD05142</p></td>
+<td><p class="sd-card-text">East Darfur</p></td>
+<td><p class="sd-card-text">شرق دارفور</p></td>
+<td><p class="sd-card-text">SD05</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Adila</p></td>
+<td><p class="sd-card-text">عديلة</p></td>
+<td><p class="sd-card-text">SD05139</p></td>
+<td><p class="sd-card-text">East Darfur</p></td>
+<td><p class="sd-card-text">شرق دارفور</p></td>
+<td><p class="sd-card-text">SD05</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Ag Geneina</p></td>
+<td><p class="sd-card-text">الجنينة</p></td>
+<td><p class="sd-card-text">SD04115</p></td>
+<td><p class="sd-card-text">West Darfur</p></td>
+<td><p class="sd-card-text">غرب دارفور</p></td>
+<td><p class="sd-card-text">SD04</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Agig</p></td>
+<td><p class="sd-card-text">عقيق</p></td>
+<td><p class="sd-card-text">SD10072</p></td>
+<td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Aj Jabalain</p></td>
+<td><p class="sd-card-text">الجبلين</p></td>
+<td><p class="sd-card-text">SD09051</p></td>
+<td><p class="sd-card-text">White Nile</p></td>
+<td><p class="sd-card-text">النيل الأبيض</p></td>
+<td><p class="sd-card-text">SD09</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Buhaira</p></td>
+<td><p class="sd-card-text">البحيرة</p></td>
+<td><p class="sd-card-text">SD16014</p></td>
+<td><p class="sd-card-text">River Nile</p></td>
+<td><p class="sd-card-text">نهر النيل</p></td>
+<td><p class="sd-card-text">SD16</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Buram</p></td>
+<td><p class="sd-card-text">البرام</p></td>
+<td><p class="sd-card-text">SD07099</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Burgaig</p></td>
+<td><p class="sd-card-text">البرقيق</p></td>
+<td><p class="sd-card-text">SD17016</p></td>
+<td><p class="sd-card-text">Northern</p></td>
+<td><p class="sd-card-text">الشمالية</p></td>
+<td><p class="sd-card-text">SD17</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Butanah</p></td>
+<td><p class="sd-card-text">البطانة</p></td>
+<td><p class="sd-card-text">SD12073</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Dibab</p></td>
+<td><p class="sd-card-text">الدبب</p></td>
+<td><p class="sd-card-text">SD18103</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Fao</p></td>
+<td><p class="sd-card-text">الفاو</p></td>
+<td><p class="sd-card-text">SD12074</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Fashaga</p></td>
+<td><p class="sd-card-text">الفشقة</p></td>
+<td><p class="sd-card-text">SD12075</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Fasher</p></td>
+<td><p class="sd-card-text">الفاشر</p></td>
+<td><p class="sd-card-text">SD02114</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Firdous</p></td>
+<td><p class="sd-card-text">الفردوس</p></td>
+<td><p class="sd-card-text">SD05152</p></td>
+<td><p class="sd-card-text">East Darfur</p></td>
+<td><p class="sd-card-text">شرق دارفور</p></td>
+<td><p class="sd-card-text">SD05</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Galabat Al Gharbyah - Kassab</p></td>
+<td><p class="sd-card-text">القلابات الغربية - كساب</p></td>
+<td><p class="sd-card-text">SD12078</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Ganab</p></td>
+<td><p class="sd-card-text">القنب</p></td>
+<td><p class="sd-card-text">SD10069</p></td>
+<td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Gitaina</p></td>
+<td><p class="sd-card-text">القطينة</p></td>
+<td><p class="sd-card-text">SD09050</p></td>
+<td><p class="sd-card-text">White Nile</p></td>
+<td><p class="sd-card-text">النيل الأبيض</p></td>
+<td><p class="sd-card-text">SD09</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Golid</p></td>
+<td><p class="sd-card-text">القولد</p></td>
+<td><p class="sd-card-text">SD17018</p></td>
+<td><p class="sd-card-text">Northern</p></td>
+<td><p class="sd-card-text">الشمالية</p></td>
+<td><p class="sd-card-text">SD17</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Hasahisa</p></td>
+<td><p class="sd-card-text">الحصاحيصا</p></td>
+<td><p class="sd-card-text">SD15034</p></td>
+<td><p class="sd-card-text">Aj Jazirah</p></td>
+<td><p class="sd-card-text">الجزيرة</p></td>
+<td><p class="sd-card-text">SD15</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Idia</p></td>
+<td><p class="sd-card-text">الأضية</p></td>
+<td><p class="sd-card-text">SD18104</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Kamlin</p></td>
+<td><p class="sd-card-text">الكاملين</p></td>
+<td><p class="sd-card-text">SD15035</p></td>
+<td><p class="sd-card-text">Aj Jazirah</p></td>
+<td><p class="sd-card-text">الجزيرة</p></td>
+<td><p class="sd-card-text">SD15</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Khiwai</p></td>
+<td><p class="sd-card-text">الخوي</p></td>
+<td><p class="sd-card-text">SD18105</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Koma</p></td>
+<td><p class="sd-card-text">الكومة</p></td>
+<td><p class="sd-card-text">SD02116</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Kurmuk</p></td>
+<td><p class="sd-card-text">الكرمك</p></td>
+<td><p class="sd-card-text">SD08106</p></td>
+<td><p class="sd-card-text">Blue Nile</p></td>
+<td><p class="sd-card-text">النيل الأزرق</p></td>
+<td><p class="sd-card-text">SD08</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Lagowa</p></td>
+<td><p class="sd-card-text">لقاوة</p></td>
+<td><p class="sd-card-text">SD18102</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Lait</p></td>
+<td><p class="sd-card-text">اللعيت</p></td>
+<td><p class="sd-card-text">SD02169</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Leri</p></td>
+<td><p class="sd-card-text">الليري</p></td>
+<td><p class="sd-card-text">SD07105</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Mafaza</p></td>
+<td><p class="sd-card-text">المفازة</p></td>
+<td><p class="sd-card-text">SD12082</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Malha</p></td>
+<td><p class="sd-card-text">المالحة</p></td>
+<td><p class="sd-card-text">SD02117</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Manaqil</p></td>
+<td><p class="sd-card-text">المناقل</p></td>
+<td><p class="sd-card-text">SD15036</p></td>
+<td><p class="sd-card-text">Aj Jazirah</p></td>
+<td><p class="sd-card-text">الجزيرة</p></td>
+<td><p class="sd-card-text">SD15</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Matama</p></td>
+<td><p class="sd-card-text">المتمة</p></td>
+<td><p class="sd-card-text">SD16009</p></td>
+<td><p class="sd-card-text">River Nile</p></td>
+<td><p class="sd-card-text">نهر النيل</p></td>
+<td><p class="sd-card-text">SD16</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Meiram</p></td>
+<td><p class="sd-card-text">الميرم</p></td>
+<td><p class="sd-card-text">SD18106</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Quoz</p></td>
+<td><p class="sd-card-text">القوز</p></td>
+<td><p class="sd-card-text">SD07094</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Qurashi</p></td>
+<td><p class="sd-card-text">القرشي</p></td>
+<td><p class="sd-card-text">SD15037</p></td>
+<td><p class="sd-card-text">Aj Jazirah</p></td>
+<td><p class="sd-card-text">الجزيرة</p></td>
+<td><p class="sd-card-text">SD15</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Qureisha</p></td>
+<td><p class="sd-card-text">القريشة</p></td>
+<td><p class="sd-card-text">SD12076</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Al Radoum</p></td>
+<td><p class="sd-card-text">الردوم</p></td>
+<td><p class="sd-card-text">SD03141</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Al Wihda</p></td>
+<td><p class="sd-card-text">الوحدة</p></td>
+<td><p class="sd-card-text">SD03150</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">An Nuhud</p></td>
+<td><p class="sd-card-text">النهود</p></td>
+<td><p class="sd-card-text">SD18022</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Ar Rahad</p></td>
+<td><p class="sd-card-text">الرهد</p></td>
+<td><p class="sd-card-text">SD12084</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Ar Rahad</p></td>
+<td><p class="sd-card-text">الرهد</p></td>
+<td><p class="sd-card-text">SD13030</p></td>
+<td><p class="sd-card-text">North Kordofan</p></td>
+<td><p class="sd-card-text">شمال كردفان</p></td>
+<td><p class="sd-card-text">SD13</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Ar Rashad</p></td>
+<td><p class="sd-card-text">الرشاد</p></td>
+<td><p class="sd-card-text">SD07093</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Ar Reif Ash Shargi</p></td>
+<td><p class="sd-card-text">الريف الشرقي</p></td>
+<td><p class="sd-card-text">SD07097</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Ar Rusayris</p></td>
+<td><p class="sd-card-text">الروصيرص</p></td>
+<td><p class="sd-card-text">SD08107</p></td>
+<td><p class="sd-card-text">Blue Nile</p></td>
+<td><p class="sd-card-text">النيل الأزرق</p></td>
+<td><p class="sd-card-text">SD08</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">As Salam - SD</p></td>
+<td><p class="sd-card-text">السلام - ج د</p></td>
+<td><p class="sd-card-text">SD03166</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">As Salam - WK</p></td>
+<td><p class="sd-card-text">السلام - غ ك</p></td>
+<td><p class="sd-card-text">SD18086</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">As Salam / Ar Rawat</p></td>
+<td><p class="sd-card-text">السلام / الراوات</p></td>
+<td><p class="sd-card-text">SD09049</p></td>
+<td><p class="sd-card-text">White Nile</p></td>
+<td><p class="sd-card-text">النيل الأبيض</p></td>
+<td><p class="sd-card-text">SD09</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">As Serief</p></td>
+<td><p class="sd-card-text">السريف</p></td>
+<td><p class="sd-card-text">SD02118</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">As Suki</p></td>
+<td><p class="sd-card-text">السوكي</p></td>
+<td><p class="sd-card-text">SD14041</p></td>
+<td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text">سنار</p></td>
+<td><p class="sd-card-text">SD14</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">As Sunta</p></td>
+<td><p class="sd-card-text">السنطة</p></td>
+<td><p class="sd-card-text">SD03156</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">As Sunut</p></td>
+<td><p class="sd-card-text">السنوط</p></td>
+<td><p class="sd-card-text">SD18092</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Assalaya</p></td>
+<td><p class="sd-card-text">عسلاية</p></td>
+<td><p class="sd-card-text">SD05163</p></td>
+<td><p class="sd-card-text">East Darfur</p></td>
+<td><p class="sd-card-text">شرق دارفور</p></td>
+<td><p class="sd-card-text">SD05</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">At Tadamon - BN</p></td>
+<td><p class="sd-card-text">التضامن - ن ق</p></td>
+<td><p class="sd-card-text">SD08108</p></td>
+<td><p class="sd-card-text">Blue Nile</p></td>
+<td><p class="sd-card-text">النيل الأزرق</p></td>
+<td><p class="sd-card-text">SD08</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">At Tadamon - SK</p></td>
+<td><p class="sd-card-text">التضامن - ج ك</p></td>
+<td><p class="sd-card-text">SD07106</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">At Tawisha</p></td>
+<td><p class="sd-card-text">الطويشة</p></td>
+<td><p class="sd-card-text">SD02119</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">At Tina</p></td>
+<td><p class="sd-card-text">الطينة</p></td>
+<td><p class="sd-card-text">SD02171</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Atbara</p></td>
+<td><p class="sd-card-text">عطبرة</p></td>
+<td><p class="sd-card-text">SD16012</p></td>
+<td><p class="sd-card-text">River Nile</p></td>
+<td><p class="sd-card-text">نهر النيل</p></td>
+<td><p class="sd-card-text">SD16</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Azum</p></td>
+<td><p class="sd-card-text">أزوم</p></td>
+<td><p class="sd-card-text">SD06110</p></td>
+<td><p class="sd-card-text">Central Darfur</p></td>
+<td><p class="sd-card-text">وسط دارفور</p></td>
+<td><p class="sd-card-text">SD06</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Babanusa</p></td>
+<td><p class="sd-card-text">بابنوسة</p></td>
+<td><p class="sd-card-text">SD18100</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Bahr Al Arab</p></td>
+<td><p class="sd-card-text">بحر العرب</p></td>
+<td><p class="sd-card-text">SD05160</p></td>
+<td><p class="sd-card-text">East Darfur</p></td>
+<td><p class="sd-card-text">شرق دارفور</p></td>
+<td><p class="sd-card-text">SD05</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Bahri</p></td>
+<td><p class="sd-card-text">بحري</p></td>
+<td><p class="sd-card-text">SD01003</p></td>
+<td><p class="sd-card-text">Khartoum</p></td>
+<td><p class="sd-card-text">الخرطوم</p></td>
+<td><p class="sd-card-text">SD01</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Bara</p></td>
+<td><p class="sd-card-text">بارا</p></td>
+<td><p class="sd-card-text">SD13026</p></td>
+<td><p class="sd-card-text">North Kordofan</p></td>
+<td><p class="sd-card-text">شمال كردفان</p></td>
+<td><p class="sd-card-text">SD13</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Barbar</p></td>
+<td><p class="sd-card-text">بربر</p></td>
+<td><p class="sd-card-text">SD16013</p></td>
+<td><p class="sd-card-text">River Nile</p></td>
+<td><p class="sd-card-text">نهر النيل</p></td>
+<td><p class="sd-card-text">SD16</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Basundah</p></td>
+<td><p class="sd-card-text">باسندة</p></td>
+<td><p class="sd-card-text">SD12077</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Baw</p></td>
+<td><p class="sd-card-text">باو</p></td>
+<td><p class="sd-card-text">SD08104</p></td>
+<td><p class="sd-card-text">Blue Nile</p></td>
+<td><p class="sd-card-text">النيل الأزرق</p></td>
+<td><p class="sd-card-text">SD08</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Beida</p></td>
+<td><p class="sd-card-text">بيضا</p></td>
+<td><p class="sd-card-text">SD04111</p></td>
+<td><p class="sd-card-text">West Darfur</p></td>
+<td><p class="sd-card-text">غرب دارفور</p></td>
+<td><p class="sd-card-text">SD04</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Beliel</p></td>
+<td><p class="sd-card-text">بليل</p></td>
+<td><p class="sd-card-text">SD03162</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Bendasi</p></td>
+<td><p class="sd-card-text">بندسي</p></td>
+<td><p class="sd-card-text">SD06112</p></td>
+<td><p class="sd-card-text">Central Darfur</p></td>
+<td><p class="sd-card-text">وسط دارفور</p></td>
+<td><p class="sd-card-text">SD06</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Buram</p></td>
+<td><p class="sd-card-text">برام</p></td>
+<td><p class="sd-card-text">SD03161</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Damso</p></td>
+<td><p class="sd-card-text">دمسو</p></td>
+<td><p class="sd-card-text">SD03172</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Dar As Salam</p></td>
+<td><p class="sd-card-text">دار السلام</p></td>
+<td><p class="sd-card-text">SD02113</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Delami</p></td>
+<td><p class="sd-card-text">دلامي</p></td>
+<td><p class="sd-card-text">SD07107</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Delgo</p></td>
+<td><p class="sd-card-text">دلقو</p></td>
+<td><p class="sd-card-text">SD17015</p></td>
+<td><p class="sd-card-text">Northern</p></td>
+<td><p class="sd-card-text">الشمالية</p></td>
+<td><p class="sd-card-text">SD17</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Dilling</p></td>
+<td><p class="sd-card-text">الدلنج</p></td>
+<td><p class="sd-card-text">SD07095</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Dongola</p></td>
+<td><p class="sd-card-text">دنقلا</p></td>
+<td><p class="sd-card-text">SD17017</p></td>
+<td><p class="sd-card-text">Northern</p></td>
+<td><p class="sd-card-text">الشمالية</p></td>
+<td><p class="sd-card-text">SD17</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Dordieb</p></td>
+<td><p class="sd-card-text">درديب</p></td>
+<td><p class="sd-card-text">SD10063</p></td>
+<td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Ed Al Fursan</p></td>
+<td><p class="sd-card-text">عد الفرسان</p></td>
+<td><p class="sd-card-text">SD03143</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Ed Damazine</p></td>
+<td><p class="sd-card-text">الدمازين</p></td>
+<td><p class="sd-card-text">SD08105</p></td>
+<td><p class="sd-card-text">Blue Nile</p></td>
+<td><p class="sd-card-text">النيل الأزرق</p></td>
+<td><p class="sd-card-text">SD08</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Foro Baranga</p></td>
+<td><p class="sd-card-text">فور برنقا</p></td>
+<td><p class="sd-card-text">SD04121</p></td>
+<td><p class="sd-card-text">West Darfur</p></td>
+<td><p class="sd-card-text">غرب دارفور</p></td>
+<td><p class="sd-card-text">SD04</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Gala’a Al Nahal</p></td>
+<td><p class="sd-card-text">قلع النحل</p></td>
+<td><p class="sd-card-text">SD12079</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Galabat Ash-Shargiah</p></td>
+<td><p class="sd-card-text">القلابات الشرقية</p></td>
+<td><p class="sd-card-text">SD12083</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Gebrat Al Sheikh</p></td>
+<td><p class="sd-card-text">جبرة الشيخ</p></td>
+<td><p class="sd-card-text">SD13027</p></td>
+<td><p class="sd-card-text">North Kordofan</p></td>
+<td><p class="sd-card-text">شمال كردفان</p></td>
+<td><p class="sd-card-text">SD13</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Geisan</p></td>
+<td><p class="sd-card-text">قيسان</p></td>
+<td><p class="sd-card-text">SD08109</p></td>
+<td><p class="sd-card-text">Blue Nile</p></td>
+<td><p class="sd-card-text">النيل الأزرق</p></td>
+<td><p class="sd-card-text">SD08</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Gereida</p></td>
+<td><p class="sd-card-text">قريضة</p></td>
+<td><p class="sd-card-text">SD03153</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Ghadeer</p></td>
+<td><p class="sd-card-text">غدير</p></td>
+<td><p class="sd-card-text">SD07108</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Gharb Bara</p></td>
+<td><p class="sd-card-text">غرب بارا</p></td>
+<td><p class="sd-card-text">SD13029</p></td>
+<td><p class="sd-card-text">North Kordofan</p></td>
+<td><p class="sd-card-text">شمال كردفان</p></td>
+<td><p class="sd-card-text">SD13</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Gharb Jabal Marrah</p></td>
+<td><p class="sd-card-text">غرب جبل مرة</p></td>
+<td><p class="sd-card-text">SD06131</p></td>
+<td><p class="sd-card-text">Central Darfur</p></td>
+<td><p class="sd-card-text">وسط دارفور</p></td>
+<td><p class="sd-card-text">SD06</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Ghubaish</p></td>
+<td><p class="sd-card-text">غبيش</p></td>
+<td><p class="sd-card-text">SD18021</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Guli</p></td>
+<td><p class="sd-card-text">قلي</p></td>
+<td><p class="sd-card-text">SD09052</p></td>
+<td><p class="sd-card-text">White Nile</p></td>
+<td><p class="sd-card-text">النيل الأبيض</p></td>
+<td><p class="sd-card-text">SD09</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Habila - SK</p></td>
+<td><p class="sd-card-text">هبيلة - ج ك</p></td>
+<td><p class="sd-card-text">SD07103</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Habila - WD</p></td>
+<td><p class="sd-card-text">هبيلة - غ د</p></td>
+<td><p class="sd-card-text">SD04122</p></td>
+<td><p class="sd-card-text">West Darfur</p></td>
+<td><p class="sd-card-text">غرب دارفور</p></td>
+<td><p class="sd-card-text">SD04</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Hala’ib</p></td>
+<td><p class="sd-card-text">حلايب</p></td>
+<td><p class="sd-card-text">SD10066</p></td>
+<td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Halfa</p></td>
+<td><p class="sd-card-text">حلفا</p></td>
+<td><p class="sd-card-text">SD17014</p></td>
+<td><p class="sd-card-text">Northern</p></td>
+<td><p class="sd-card-text">الشمالية</p></td>
+<td><p class="sd-card-text">SD17</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Halfa Aj Jadeedah</p></td>
+<td><p class="sd-card-text">حلفا الجديدة</p></td>
+<td><p class="sd-card-text">SD11052</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Haya</p></td>
+<td><p class="sd-card-text">هيا</p></td>
+<td><p class="sd-card-text">SD10070</p></td>
+<td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Heiban</p></td>
+<td><p class="sd-card-text">هيبان</p></td>
+<td><p class="sd-card-text">SD07096</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Janub Al Jazirah</p></td>
+<td><p class="sd-card-text">جنوب الجزيرة</p></td>
+<td><p class="sd-card-text">SD15031</p></td>
+<td><p class="sd-card-text">Aj Jazirah</p></td>
+<td><p class="sd-card-text">الجزيرة</p></td>
+<td><p class="sd-card-text">SD15</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Jebel Awlia</p></td>
+<td><p class="sd-card-text">جبل أولياء</p></td>
+<td><p class="sd-card-text">SD01001</p></td>
+<td><p class="sd-card-text">Khartoum</p></td>
+<td><p class="sd-card-text">الخرطوم</p></td>
+<td><p class="sd-card-text">SD01</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Jebel Moon</p></td>
+<td><p class="sd-card-text">جبل مون</p></td>
+<td><p class="sd-card-text">SD04123</p></td>
+<td><p class="sd-card-text">West Darfur</p></td>
+<td><p class="sd-card-text">غرب دارفور</p></td>
+<td><p class="sd-card-text">SD04</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Jubayt Elma’aadin</p></td>
+<td><p class="sd-card-text">جبيت المعادن</p></td>
+<td><p class="sd-card-text">SD10067</p></td>
+<td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Kadugli</p></td>
+<td><p class="sd-card-text">كادقلي</p></td>
+<td><p class="sd-card-text">SD07098</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Karrari</p></td>
+<td><p class="sd-card-text">كرري</p></td>
+<td><p class="sd-card-text">SD01005</p></td>
+<td><p class="sd-card-text">Khartoum</p></td>
+<td><p class="sd-card-text">الخرطوم</p></td>
+<td><p class="sd-card-text">SD01</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Kas</p></td>
+<td><p class="sd-card-text">كاس</p></td>
+<td><p class="sd-card-text">SD03144</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Kateila</p></td>
+<td><p class="sd-card-text">كتيلا</p></td>
+<td><p class="sd-card-text">SD03159</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Kebkabiya</p></td>
+<td><p class="sd-card-text">كبكابية</p></td>
+<td><p class="sd-card-text">SD02124</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Keilak</p></td>
+<td><p class="sd-card-text">كيلك</p></td>
+<td><p class="sd-card-text">SD18085</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Kelemando</p></td>
+<td><p class="sd-card-text">كلمندو</p></td>
+<td><p class="sd-card-text">SD02126</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Kereneik</p></td>
+<td><p class="sd-card-text">كرينك</p></td>
+<td><p class="sd-card-text">SD04125</p></td>
+<td><p class="sd-card-text">West Darfur</p></td>
+<td><p class="sd-card-text">غرب دارفور</p></td>
+<td><p class="sd-card-text">SD04</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Kernoi</p></td>
+<td><p class="sd-card-text">كرنوي</p></td>
+<td><p class="sd-card-text">SD02168</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Khartoum</p></td>
+<td><p class="sd-card-text">الخرطوم</p></td>
+<td><p class="sd-card-text">SD01007</p></td>
+<td><p class="sd-card-text">Khartoum</p></td>
+<td><p class="sd-card-text">الخرطوم</p></td>
+<td><p class="sd-card-text">SD01</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Kosti</p></td>
+<td><p class="sd-card-text">كوستي</p></td>
+<td><p class="sd-card-text">SD09047</p></td>
+<td><p class="sd-card-text">White Nile</p></td>
+<td><p class="sd-card-text">النيل الأبيض</p></td>
+<td><p class="sd-card-text">SD09</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Kubum</p></td>
+<td><p class="sd-card-text">كبم</p></td>
+<td><p class="sd-card-text">SD03157</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Kulbus</p></td>
+<td><p class="sd-card-text">كلبس</p></td>
+<td><p class="sd-card-text">SD04127</p></td>
+<td><p class="sd-card-text">West Darfur</p></td>
+<td><p class="sd-card-text">غرب دارفور</p></td>
+<td><p class="sd-card-text">SD04</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Kutum</p></td>
+<td><p class="sd-card-text">كتم</p></td>
+<td><p class="sd-card-text">SD02128</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Madeinat Al Gedaref</p></td>
+<td><p class="sd-card-text">مدينة القضارف</p></td>
+<td><p class="sd-card-text">SD12080</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Madeinat Kassala</p></td>
+<td><p class="sd-card-text">مدينة كسلا</p></td>
+<td><p class="sd-card-text">SD11053</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Medani Al Kubra</p></td>
+<td><p class="sd-card-text">مدني الكبري</p></td>
+<td><p class="sd-card-text">SD15030</p></td>
+<td><p class="sd-card-text">Aj Jazirah</p></td>
+<td><p class="sd-card-text">الجزيرة</p></td>
+<td><p class="sd-card-text">SD15</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Melit</p></td>
+<td><p class="sd-card-text">مليط</p></td>
+<td><p class="sd-card-text">SD02129</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Mershing</p></td>
+<td><p class="sd-card-text">مرشنج</p></td>
+<td><p class="sd-card-text">SD03145</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Merwoe</p></td>
+<td><p class="sd-card-text">مروي</p></td>
+<td><p class="sd-card-text">SD17020</p></td>
+<td><p class="sd-card-text">Northern</p></td>
+<td><p class="sd-card-text">الشمالية</p></td>
+<td><p class="sd-card-text">SD17</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Mukjar</p></td>
+<td><p class="sd-card-text">مكجر</p></td>
+<td><p class="sd-card-text">SD06130</p></td>
+<td><p class="sd-card-text">Central Darfur</p></td>
+<td><p class="sd-card-text">وسط دارفور</p></td>
+<td><p class="sd-card-text">SD06</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Nitega</p></td>
+<td><p class="sd-card-text">نتيقة</p></td>
+<td><p class="sd-card-text">SD03151</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Nyala Janoub</p></td>
+<td><p class="sd-card-text">نيالا جنوب</p></td>
+<td><p class="sd-card-text">SD03167</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Nyala Shimal</p></td>
+<td><p class="sd-card-text">نيالا شمال</p></td>
+<td><p class="sd-card-text">SD03164</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Port Sudan</p></td>
+<td><p class="sd-card-text">بورتسودان</p></td>
+<td><p class="sd-card-text">SD10064</p></td>
+<td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Rabak</p></td>
+<td><p class="sd-card-text">ربك</p></td>
+<td><p class="sd-card-text">SD09046</p></td>
+<td><p class="sd-card-text">White Nile</p></td>
+<td><p class="sd-card-text">النيل الأبيض</p></td>
+<td><p class="sd-card-text">SD09</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Rehaid Albirdi</p></td>
+<td><p class="sd-card-text">رهيد البردي</p></td>
+<td><p class="sd-card-text">SD03158</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Reifi Aroma</p></td>
+<td><p class="sd-card-text">ريفى أروما</p></td>
+<td><p class="sd-card-text">SD11055</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Reifi Gharb Kassala</p></td>
+<td><p class="sd-card-text">ريفى غرب كسلا</p></td>
+<td><p class="sd-card-text">SD11054</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Reifi Hamashkureib</p></td>
+<td><p class="sd-card-text">ريفى همش كوريب</p></td>
+<td><p class="sd-card-text">SD11058</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Reifi Kassla</p></td>
+<td><p class="sd-card-text">ريفى كسلا</p></td>
+<td><p class="sd-card-text">SD11056</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Reifi Khashm Elgirba</p></td>
+<td><p class="sd-card-text">ريفى خشم القربة</p></td>
+<td><p class="sd-card-text">SD11060</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Reifi Nahr Atbara</p></td>
+<td><p class="sd-card-text">ريفى نهر عطبرة</p></td>
+<td><p class="sd-card-text">SD11062</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Reifi Shamal Ad Delta</p></td>
+<td><p class="sd-card-text">ريفى شمال الدلتا</p></td>
+<td><p class="sd-card-text">SD11057</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Reifi Telkok</p></td>
+<td><p class="sd-card-text">ريفى تلكوك</p></td>
+<td><p class="sd-card-text">SD11059</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Reifi Wad Elhilaiw</p></td>
+<td><p class="sd-card-text">ريفى ود الحليو</p></td>
+<td><p class="sd-card-text">SD11061</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text">كسلا</p></td>
+<td><p class="sd-card-text">SD11</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Saraf Omra</p></td>
+<td><p class="sd-card-text">سرف عمرة</p></td>
+<td><p class="sd-card-text">SD02133</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Sawakin</p></td>
+<td><p class="sd-card-text">سواكن</p></td>
+<td><p class="sd-card-text">SD10068</p></td>
+<td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text">سنار</p></td>
+<td><p class="sd-card-text">SD14038</p></td>
+<td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text">سنار</p></td>
+<td><p class="sd-card-text">SD14</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Shamal Jabal Marrah</p></td>
+<td><p class="sd-card-text">شمال  جبل مرة</p></td>
+<td><p class="sd-card-text">SD06132</p></td>
+<td><p class="sd-card-text">Central Darfur</p></td>
+<td><p class="sd-card-text">وسط دارفور</p></td>
+<td><p class="sd-card-text">SD06</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Sharg Aj Jabal</p></td>
+<td><p class="sd-card-text">شرق الجبل</p></td>
+<td><p class="sd-card-text">SD03147</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Sharg Al Jazirah</p></td>
+<td><p class="sd-card-text">شرق الجزيرة</p></td>
+<td><p class="sd-card-text">SD15033</p></td>
+<td><p class="sd-card-text">Aj Jazirah</p></td>
+<td><p class="sd-card-text">الجزيرة</p></td>
+<td><p class="sd-card-text">SD15</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Sharg An Neel</p></td>
+<td><p class="sd-card-text">شرق النيل</p></td>
+<td><p class="sd-card-text">SD01004</p></td>
+<td><p class="sd-card-text">Khartoum</p></td>
+<td><p class="sd-card-text">الخرطوم</p></td>
+<td><p class="sd-card-text">SD01</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Sharg Sennar</p></td>
+<td><p class="sd-card-text">شرق سنار</p></td>
+<td><p class="sd-card-text">SD14042</p></td>
+<td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text">سنار</p></td>
+<td><p class="sd-card-text">SD14</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Shattaya</p></td>
+<td><p class="sd-card-text">شطاية</p></td>
+<td><p class="sd-card-text">SD03154</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Sheikan</p></td>
+<td><p class="sd-card-text">شيكان</p></td>
+<td><p class="sd-card-text">SD13024</p></td>
+<td><p class="sd-card-text">North Kordofan</p></td>
+<td><p class="sd-card-text">شمال كردفان</p></td>
+<td><p class="sd-card-text">SD13</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Shendi</p></td>
+<td><p class="sd-card-text">شندي</p></td>
+<td><p class="sd-card-text">SD16010</p></td>
+<td><p class="sd-card-text">River Nile</p></td>
+<td><p class="sd-card-text">نهر النيل</p></td>
+<td><p class="sd-card-text">SD16</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Shia’ria</p></td>
+<td><p class="sd-card-text">شعيرية</p></td>
+<td><p class="sd-card-text">SD05148</p></td>
+<td><p class="sd-card-text">East Darfur</p></td>
+<td><p class="sd-card-text">شرق دارفور</p></td>
+<td><p class="sd-card-text">SD05</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Sinja</p></td>
+<td><p class="sd-card-text">سنجة</p></td>
+<td><p class="sd-card-text">SD14043</p></td>
+<td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text">سنار</p></td>
+<td><p class="sd-card-text">SD14</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Sinkat</p></td>
+<td><p class="sd-card-text">سنكات</p></td>
+<td><p class="sd-card-text">SD10071</p></td>
+<td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Sirba</p></td>
+<td><p class="sd-card-text">سربا</p></td>
+<td><p class="sd-card-text">SD04134</p></td>
+<td><p class="sd-card-text">West Darfur</p></td>
+<td><p class="sd-card-text">غرب دارفور</p></td>
+<td><p class="sd-card-text">SD04</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Soudari</p></td>
+<td><p class="sd-card-text">سودري</p></td>
+<td><p class="sd-card-text">SD13025</p></td>
+<td><p class="sd-card-text">North Kordofan</p></td>
+<td><p class="sd-card-text">شمال كردفان</p></td>
+<td><p class="sd-card-text">SD13</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Talawdi</p></td>
+<td><p class="sd-card-text">تلودي</p></td>
+<td><p class="sd-card-text">SD07089</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Tawila</p></td>
+<td><p class="sd-card-text">طويلة</p></td>
+<td><p class="sd-card-text">SD02170</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Tawkar</p></td>
+<td><p class="sd-card-text">طوكر</p></td>
+<td><p class="sd-card-text">SD10065</p></td>
+<td><p class="sd-card-text">Red Sea</p></td>
+<td><p class="sd-card-text">البحر الأحمر</p></td>
+<td><p class="sd-card-text">SD10</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Tendalti</p></td>
+<td><p class="sd-card-text">تندلتي</p></td>
+<td><p class="sd-card-text">SD09048</p></td>
+<td><p class="sd-card-text">White Nile</p></td>
+<td><p class="sd-card-text">النيل الأبيض</p></td>
+<td><p class="sd-card-text">SD09</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Tulus</p></td>
+<td><p class="sd-card-text">تلس</p></td>
+<td><p class="sd-card-text">SD03149</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Um Algura</p></td>
+<td><p class="sd-card-text">أم القري</p></td>
+<td><p class="sd-card-text">SD15032</p></td>
+<td><p class="sd-card-text">Aj Jazirah</p></td>
+<td><p class="sd-card-text">الجزيرة</p></td>
+<td><p class="sd-card-text">SD15</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Um Bada</p></td>
+<td><p class="sd-card-text">أمبدة</p></td>
+<td><p class="sd-card-text">SD01002</p></td>
+<td><p class="sd-card-text">Khartoum</p></td>
+<td><p class="sd-card-text">الخرطوم</p></td>
+<td><p class="sd-card-text">SD01</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Um Baru</p></td>
+<td><p class="sd-card-text">أم برو</p></td>
+<td><p class="sd-card-text">SD02120</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Um Dafoug</p></td>
+<td><p class="sd-card-text">أم دافوق</p></td>
+<td><p class="sd-card-text">SD03146</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">جنوب دارفور</p></td>
+<td><p class="sd-card-text">SD03</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Um Dam Haj Ahmed</p></td>
+<td><p class="sd-card-text">أم دم حاج أحمد</p></td>
+<td><p class="sd-card-text">SD13028</p></td>
+<td><p class="sd-card-text">North Kordofan</p></td>
+<td><p class="sd-card-text">شمال كردفان</p></td>
+<td><p class="sd-card-text">SD13</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Um Dukhun</p></td>
+<td><p class="sd-card-text">أم دخن</p></td>
+<td><p class="sd-card-text">SD06135</p></td>
+<td><p class="sd-card-text">Central Darfur</p></td>
+<td><p class="sd-card-text">وسط دارفور</p></td>
+<td><p class="sd-card-text">SD06</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Um Durein</p></td>
+<td><p class="sd-card-text">أم دورين</p></td>
+<td><p class="sd-card-text">SD07091</p></td>
+<td><p class="sd-card-text">South Kordofan</p></td>
+<td><p class="sd-card-text">جنوب كردفان</p></td>
+<td><p class="sd-card-text">SD07</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Um Durman</p></td>
+<td><p class="sd-card-text">أم درمان</p></td>
+<td><p class="sd-card-text">SD01006</p></td>
+<td><p class="sd-card-text">Khartoum</p></td>
+<td><p class="sd-card-text">الخرطوم</p></td>
+<td><p class="sd-card-text">SD01</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Um Kadadah</p></td>
+<td><p class="sd-card-text">أم كدادة</p></td>
+<td><p class="sd-card-text">SD02136</p></td>
+<td><p class="sd-card-text">North Darfur</p></td>
+<td><p class="sd-card-text">شمال دارفور</p></td>
+<td><p class="sd-card-text">SD02</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Um Rawaba</p></td>
+<td><p class="sd-card-text">أم روابة</p></td>
+<td><p class="sd-card-text">SD13023</p></td>
+<td><p class="sd-card-text">North Kordofan</p></td>
+<td><p class="sd-card-text">شمال كردفان</p></td>
+<td><p class="sd-card-text">SD13</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Um Rimta</p></td>
+<td><p class="sd-card-text">أم رمتة</p></td>
+<td><p class="sd-card-text">SD09045</p></td>
+<td><p class="sd-card-text">White Nile</p></td>
+<td><p class="sd-card-text">النيل الأبيض</p></td>
+<td><p class="sd-card-text">SD09</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Wad Al Mahi</p></td>
+<td><p class="sd-card-text">ود الماحي</p></td>
+<td><p class="sd-card-text">SD08110</p></td>
+<td><p class="sd-card-text">Blue Nile</p></td>
+<td><p class="sd-card-text">النيل الأزرق</p></td>
+<td><p class="sd-card-text">SD08</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Wad Bandah</p></td>
+<td><p class="sd-card-text">ود بندة</p></td>
+<td><p class="sd-card-text">SD18029</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">غرب كردفان</p></td>
+<td><p class="sd-card-text">SD18</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Wadi Salih</p></td>
+<td><p class="sd-card-text">وادي صالح</p></td>
+<td><p class="sd-card-text">SD06137</p></td>
+<td><p class="sd-card-text">Central Darfur</p></td>
+<td><p class="sd-card-text">وسط دارفور</p></td>
+<td><p class="sd-card-text">SD06</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Wasat Al Gedaref</p></td>
+<td><p class="sd-card-text">وسط القضارف</p></td>
+<td><p class="sd-card-text">SD12081</p></td>
+<td><p class="sd-card-text">Gedaref</p></td>
+<td><p class="sd-card-text">القضارف</p></td>
+<td><p class="sd-card-text">SD12</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Wasat Jabal Marrah</p></td>
+<td><p class="sd-card-text">وسط جبل مرة</p></td>
+<td><p class="sd-card-text">SD06139</p></td>
+<td><p class="sd-card-text">Central Darfur</p></td>
+<td><p class="sd-card-text">وسط دارفور</p></td>
+<td><p class="sd-card-text">SD06</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Yassin</p></td>
+<td><p class="sd-card-text">يس</p></td>
+<td><p class="sd-card-text">SD05165</p></td>
+<td><p class="sd-card-text">East Darfur</p></td>
+<td><p class="sd-card-text">شرق دارفور</p></td>
+<td><p class="sd-card-text">SD05</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Zalingi</p></td>
+<td><p class="sd-card-text">زالنجى</p></td>
+<td><p class="sd-card-text">SD06138</p></td>
+<td><p class="sd-card-text">Central Darfur</p></td>
+<td><p class="sd-card-text">وسط دارفور</p></td>
+<td><p class="sd-card-text">SD06</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></section>
 <section id="impact-information">
 <h4>Impact information<a class="headerlink" href="#impact-information" title="Permalink to this heading">#</a></h4>
 <p>The actual impact information consists of two parts. One part is always the impact type. This explain what happened. For example, people were affected by the flood, the cholera broke out or schools got damaged.</p>
@@ -1491,9 +2952,8 @@ Impact taypes used in Sudan HIA<div class="sd-summary-down docutils">
 </table>
 </div>
 </details></section>
-</section>
 <section id="step-4-outcome">
-<h3>Step 4: Outcome<a class="headerlink" href="#step-4-outcome" title="Permalink to this heading">#</a></h3>
+<h4>Step 4: Outcome<a class="headerlink" href="#step-4-outcome" title="Permalink to this heading">#</a></h4>
 <p>Now we have your final table structure. We can put ALL information from the selected datasets we deem relevant into this table structure thus creating a consistent historical impact dataset.</p>
 <table class="table">
 <thead>
@@ -1571,6 +3031,7 @@ Impact taypes used in Sudan HIA<div class="sd-summary-down docutils">
 </tr>
 </tbody>
 </table>
+</section>
 </section>
 <section id="step-5-data-compiling">
 <h3>Step 5: Data compiling<a class="headerlink" href="#step-5-data-compiling" title="Permalink to this heading">#</a></h3>
@@ -1971,6 +3432,219 @@ Data extracted from dataset<div class="sd-summary-down docutils">
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/20240216_Sudan_HIA_data_compiling.drawio.png"><img alt="../../_images/20240216_Sudan_HIA_data_compiling.drawio.png" src="../../_images/20240216_Sudan_HIA_data_compiling.drawio.png" style="width: 1000px;" /></a>
 </figure>
+<p class="rubric">Tipps for data compiling</p>
+<p>Compiling the data in EXCEL is a time-intensive and repeatable task. Here are some tips to speed up the process:</p>
+<p class="rubric">Excel copy function:</p>
+<p>Try to use the copy function of Excel as much as possible. When taking info from a map, the information in the columns, year, start_date, end_date, date, Source_ID, and admin_level usually stay the same. So you can just copy and paste this information. In most cases, you should only write the name of location, Impact_type, Impact_quality and Impact_quantity.</p>
+<p class="rubric">Use ChatGPT:</p>
+<p>If you encounter tables that do not fit into your table structure use ChatGPT to turn them into a long table format. For example, look at the image in the table below.</p>
+<p>You can copy the content which produces this text:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+DREF Final Report Sudan: Floods 31 May 2013<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Affected 
+State
+Locality Houses damage Institutions Sanitation Death 
+of 
+Animals
+Damage 
+to 
+property 
+crops, 
+livestock
+Wounded
+of Death
+No of people 
+affected
+completely
+partially
+Completely
+partially
+Completely
+partially
+Sinnar Abohojar/Senja 3,651 4,819 0 0 0 0 0 1 0 1 34,562
+Kasalla Algrba/Wad 
+helio
+4,875 2,047 165 44 641 17 0 0 0 35 28,245
+White Nile Alrgig/Tandlti/A
+lsalam
+1,800 1,348 0 0 0 0 0 865 7 7 12,845
+Gadarif Aalgalabat/Alma
+faza/Alfaw
+406 591 0 0 0 0 0 0 0 0 4,068
+Khartoum Khartoum 931 1,963 0 0 20 0 0 0 0 0 17,364
+Algeziara Um Algora 521 110 0 4 0 0 0 0 0 0 3,786
+West Darfur Benddsi/Wadi 
+Salih
+1,600 576 0 0 572 0 0 4 0 4 13,056
+Blue Nile Aldamazain/Ba
+w
+381 2,785 0 0 0 0 0 1 0 1 18,996
+Northern Elbrgig/Aldaba 66 302 0 7 0 60 115 0 0 0 2,208
+South 
+Darfur
+Kubom 1,000 1,000 0 0 0 0 0 0 0 0 12,000
+River Nile Albawga/Shandi
+/Aldamir
+54 31 0 0 43 40 0 0 0 0 510
+North 
+Kordofan0
+Shikan/Um 
+Roaba
+370 2,511 0 0 669 0 0 0 0 0 17,286
+South 
+Kordofan
+Aldebb 600 533 0 4 0 0 0 0 0 6,798
+Total 16,225 18,616 167 59 1,945 117 115 865 7 49 177,724
+</pre></div>
+</div>
+</div>
+</details><p>Go to ChatGPT and use a prompt like
+„Can you turn this information taken from a Table into a long table format?“ + the table as text</p>
+<p>Probably you will have to ask ChatGPT to give you the whole table. Something like: “Super good! Can you give me a table on the other states as well?
+“</p>
+<p class="rubric">Use Gemini AI:</p>
+<p>Google Gemini Can also handle images. For example, it can turn this graph into a table which is much easier to handle than copying everything by hand.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Sudan_flood_impact_table_2016.png"><img alt="../../_images/Sudan_flood_impact_table_2016.png" src="../../_images/Sudan_flood_impact_table_2016.png" style="width: 600px;" /></a>
+</figure>
+<p>The resulting table can easily be adjusted in Excel.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>State</p></th>
+<th class="head"><p>Affected People</p></th>
+<th class="head"><p>Deaths</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AL GEZIRA</p></td>
+<td><p>23,280</p></td>
+<td><p>26</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLUE NILE</p></td>
+<td><p>1,930</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>E. DARFUR</p></td>
+<td><p>150</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>GEDAREF</p></td>
+<td><p>11,355</p></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-even"><td><p>KASSALA</p></td>
+<td><p>55,880</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>KHARTOUM</p></td>
+<td><p>4,305</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>N. DARFUR</p></td>
+<td><p>7,367</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>N. KORDOFAN</p></td>
+<td><p>5,310</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>NORTHERN</p></td>
+<td><p>3,210</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>RED SEA</p></td>
+<td><p>520</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>RIVER NILE</p></td>
+<td><p>N/A</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>SENNAR</p></td>
+<td><p>16,980</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>S. DARFUR</p></td>
+<td><p>38,575</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-odd"><td><p>S. KORDOFAN</p></td>
+<td><p>10,812</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p>W. DARFUR</p></td>
+<td><p>285</p></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-odd"><td><p>W. KORDOFAN</p></td>
+<td><p>14,340</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>WHITE NILE</p></td>
+<td><p>10,160</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">HIA Data Cleaning</p>
+<p>When creating such a dataset there will be errors like misspellings of names or wrong numbers. To address that you will need to clean the dataset before actually using it. To clean the dataset you can use Excel or specialized tools like OpenRefein.</p>
+<p>Independently on which tool you will use, here are some important points you have to check when cleaning the data:</p>
+<ol class="arabic simple">
+<li><p><strong>Year and Columns:</strong></p>
+<ul class="simple">
+<li><p>Check if all values are within the expected range of years.</p></li>
+<li><p>Ensure that there are no missing or invalid year values becaus we need a year information for all data</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” or “Numeric facet” to explore the distribution of values in the Year column. Use the “Text filter” or “Numeric filter” to filter out any rows with invalid or missing year values.</p></li>
+</ul>
+</li>
+<li><p><strong>Date Columns (Start_Date, End_Date, Date):</strong></p>
+<ul class="simple">
+<li><p>Check if all dates are in the correct date format.</p></li>
+<li><p>Ensure that there are no  inconsistent date values.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Edit cells” &gt; “Common transforms” &gt; “To date” option to convert date columns to a standard date format. Use the “Text facet” to identify and correct any inconsistencies in formatting or missing dates.</p></li>
+</ul>
+</li>
+<li><p><strong>source_ID Column:</strong></p>
+<ul class="simple">
+<li><p>Check that there is only one way of spelling for every individual source_ID!</p></li>
+<li><p>Check if all source IDs follow a consistent naming convention.</p></li>
+<li><p>Ensure that there are no missing source IDs.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code>or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Admin Columns (admin_level, admin_1, admin_2, admin_3, admin_camp):</strong></p>
+<ul class="simple">
+<li><p>Check if all administrative units are correctly categorized.</p></li>
+<li><p>Ensure that there are no misspelled or inconsistent administrative unit names.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Consolidate the of states and loclities that they are consisten with the list in the <span class="xref myst">location chapter</span>.Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Impact Type Column:</strong></p>
+<ul class="simple">
+<li><p>Check if all impact types are correctly categorized and named.</p></li>
+<li><p>Ensure that there are no duplicate or missing impact types.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Impact Quantity Columns:</strong></p>
+<ul class="simple">
+<li><p>Check if all numerical values are within expected ranges.</p></li>
+<li><p>Ensure that there are no missing or invalid numerical values.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Numeric facet” to explore the distribution of values in each numerical column. Use the “Edit cells” or “Transform” option to handle missing or invalid values, and standardize formatting.</p></li>
+</ul>
+</li>
+<li><p><strong>Impact Quality Columns:</strong></p>
+<ul class="simple">
+<li><p>Check that the same impacts are spelt consistently. For example illness names.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+</ul>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -2074,9 +3748,9 @@ Data extracted from dataset<div class="sd-summary-down docutils">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-source">Data source</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#location">Location</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-information">Impact information</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-outcome">Step 4: Outcome</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-outcome">Step 4: Outcome</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-data-compiling">Step 5: Data compiling</a></li>
 </ul>
 </li>
