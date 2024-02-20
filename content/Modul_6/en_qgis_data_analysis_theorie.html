@@ -562,11 +562,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-statistics">Basic statistics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer-analysis">Buffer analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#density-map-analysis">Density Map Analysis</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap">Heatmap</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmaps">Heatmaps</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-symbology-tab-to-create-a-heatmap">Using the symbology tab to create a heatmap</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hexagon-grid">Hexagon grid</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hex-maps-hexagon-grids">Hex Maps (Hexagon Grids)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-by-joining-attributes">Analysis by joining attributes</a></li>
@@ -590,7 +590,7 @@ document.write(`
 <h2>Data Analysis<a class="headerlink" href="#data-analysis" title="Permalink to this heading">#</a></h2>
 <p>Even in a single layer, a lot of analysis is possible. However, sometimes the things we want to analyse are <strong>split across</strong> multiple layers. In order to get these insights we use the spatial and non spatial GIS-processing tools we learned in the previous modules. In this module, we will look how to apply these tools, collect and work with data to create meaningful insights. We will go over a few examples of data analysis that are common in humanitarian work.</p>
 <figure class="align-left" id="spatial-analysis-using-multiple-layers-example">
-<a class="reference internal image-reference" href="../../_images/multiple_layer_data_analysis.png"><img alt="../../_images/multiple_layer_data_analysis.png" src="../../_images/multiple_layer_data_analysis.png" style="width: 250px;" /></a>
+<a class="reference internal image-reference" href="../../_images/multiple_layer_data_analysis.png"><img alt="../../_images/multiple_layer_data_analysis.png" src="../../_images/multiple_layer_data_analysis.png" style="width: 300px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 121 </span><span class="caption-text">Overlaying layers is a spatial analysis</span><a class="headerlink" href="#spatial-analysis-using-multiple-layers-example" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -600,7 +600,7 @@ document.write(`
 <ul class="simple">
 <li><p>A spatial analysis can be a result of combining several layers with different information in a single map.</p></li>
 </ul>
-<p>Geographic analysis helps us answer questions like:</p>
+<p><strong>Geographic analysis helps us answer questions like</strong>:</p>
 <ul class="simple">
 <li><p>What <strong>patterns</strong> are in the data?</p></li>
 <li><p>How can we <strong>summarise</strong> any trends?</p></li>
@@ -610,7 +610,7 @@ document.write(`
 <li><p>How do phenomenon <strong>change with location</strong>?</p></li>
 <li><p>How do locations <strong>change over time</strong>?</p></li>
 </ul>
-<p>Before doing any sort of processing, you need to familiarise yourself with the data and understand it.</p>
+<p>Before doing any sort of processing, you need to <strong>familiarise yourself with the data</strong> and understand it.</p>
 <ol class="arabic simple">
 <li><p>The first step is to read the metadata from the source and understand <strong>what data was collected</strong>, <strong>who collected the data</strong>, <strong>and how the data was collected</strong>.</p></li>
 <li><p>Next, open the attribute table and look at the different features and attributes available. What do the attributes show and what are they called?</p></li>
@@ -624,16 +624,13 @@ document.write(`
 </ol>
 <p>We are usually looking for ways to <strong>describe</strong> our data to an audience in some ways. Sometimes spatial analysis will be used to provide recommendations for activities. Considering the amount of data available online, it is always important to take a step back and gain perspective when facing this knowledge, these capacities, as well as the data itself before rushing in to manipulate it:</p>
 <ul class="simple">
-<li><p>Reliability: Can I trust this datagit c?</p></li>
-<li><p>Interest: Do I need this data?</p></li>
-<li><p>Usage: Am I able to use this data?</p></li>
-<li><p>Comprehensiveness: Is this data complete?</p></li>
-<li><p>Date: How old is this data?</p></li>
-<li><p>Sensitivity: Is this data sensitive?</p></li>
+<li><p><strong>Reliability</strong>: Can I trust this data?</p></li>
+<li><p><strong>Interest</strong>: Do I need this data?</p></li>
+<li><p><strong>Usage</strong>: Am I able to use this data?</p></li>
+<li><p><strong>Comprehensiveness</strong>: Is this data complete?</p></li>
+<li><p><strong>Date</strong>: How old is this data?</p></li>
+<li><p><strong>Sensitivity</strong>: Is this data sensitive?</p></li>
 </ul>
-<blockquote>
-<div><p>Insert Map example?</p>
-</div></blockquote>
 <p>With spatial analysis, you can build predictive models to plan ahead of disasters. <strong>BUT: Not all analysis is complex! Just knowing how many features are in a layer is useful.</strong> Simple analysis includes:</p>
 <ul class="simple">
 <li><p>Ranking</p></li>
@@ -741,7 +738,7 @@ Example: Calculating the length of roads<div class="sd-summary-down docutils">
 </details></section>
 <section id="basic-statistics">
 <h2>Basic statistics<a class="headerlink" href="#basic-statistics" title="Permalink to this heading">#</a></h2>
-<p>In the field calculator, we can calculate the length, area, perimeter for each feature of a dataset. However, we might want to have aggregate statistics on a dataset (average length/area, total length/area).<br />
+<p>In the field calculator, we can calculate the length, area, perimeter for each feature of a dataset. However, we might want to have <strong>aggregate statistics</strong> on a dataset (average length/area, total length/area).<br />
 QGIS comes with two basic processing tools to generate statistics:</p>
 <table class="table">
 <thead>
@@ -785,7 +782,7 @@ We want to calculate the total length of flooded and unflooded road respectively
 </section>
 <section id="buffer-analysis">
 <h2>Buffer analysis<a class="headerlink" href="#buffer-analysis" title="Permalink to this heading">#</a></h2>
-<p>Creating a <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#buffer">buffer</a> is a helpful analysis to determine what lies in proximity of, for example, a contaminated water source or other hazards and determine vulnerability. Buffer analysis is often used to map the riparian zones along rivers to devise environmental protection zones or estimate vulnerability.</p>
+<p>Creating a <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#buffer">buffer</a> is a helpful analysis to determine <strong>what lies in proximity</strong> of, for example, a contaminated water source or other hazards and determine vulnerability. Buffer analysis is often used to map the riparian zones along rivers to devise environmental protection zones or estimate vulnerability.</p>
 <ul class="simple">
 <li><p>Proximity analysis</p></li>
 <li><p>Estimated vulnerability analysis</p></li>
@@ -793,16 +790,16 @@ We want to calculate the total length of flooded and unflooded road respectively
 </section>
 <section id="density-map-analysis">
 <h2>Density Map Analysis<a class="headerlink" href="#density-map-analysis" title="Permalink to this heading">#</a></h2>
-<p>Density maps are very useful in communicating the <strong>intensity of a phenomenon in an area</strong>. Point data is aggregated to show the amount of incidents in that area.
+<p>Density maps are very useful in communicating the <strong>intensity of a phenomenon in an area</strong>. Point data is <strong>spatially aggregated</strong> to show the amount of incidents in that area.
 <strong>For example</strong>, number of schools or number of disease cases.</p>
-<p>It is important to consider that most demographic or economic data needs to be normalized (e.g. number of inhabitants). To assess the significance of the number of schools, you will need to know how the population of the area; so the amount of schools per 1,000 inhabitants, or the number of disease cases per 100 persons, for example.</p>
+<p>It is important to consider that most demographic or economic data needs to be <strong>normalized</strong> (e.g. number of inhabitants). To assess the significance of the number of schools, you will need to know how the population of the area; so the amount of schools per 1,000 inhabitants, or the number of disease cases per 100 persons, for example.</p>
 <p>There are a few different types of density maps. The most common are heatmaps and hexagon grid maps. In both cases, the intensity of a phenomenon is calculcated with point data (rarely with lines or polygons).</p>
 <blockquote>
 <div><p>discrete vs. continuous?</p>
 </div></blockquote>
-<section id="heatmap">
-<h3>Heatmap<a class="headerlink" href="#heatmap" title="Permalink to this heading">#</a></h3>
-<p>Heat maps use features in a dataset to calculate the relative density of points on a map. The density is displayed as a colour ramp with colors ranging from “cool” (low density) to “hot” (high density). Heatmaps are useful when you have a large number of features covering an area with areas where these features cluster together and help us visualize spatial patterns of the layer.</p>
+<section id="heatmaps">
+<h3>Heatmaps<a class="headerlink" href="#heatmaps" title="Permalink to this heading">#</a></h3>
+<p>Heat maps use features in a dataset to calculate the <strong>relative density of points</strong> on a map. The density is displayed as a colour ramp with colors ranging from “cool” (low density) to “hot” (high density). Heatmaps are useful when you have a large number of features covering an area with areas <strong>where these features cluster together</strong> and help us visualize <strong>spatial patterns</strong> of a layer.</p>
 <figure class="align-default" id="point-map-to-heat-map-example">
 <a class="reference internal image-reference" href="../../_images/point_map_to_heat_map_example.png"><img alt="../../_images/point_map_to_heat_map_example.png" src="../../_images/point_map_to_heat_map_example.png" style="height: 300px;" /></a>
 <figcaption>
@@ -816,7 +813,7 @@ We want to calculate the total length of flooded and unflooded road respectively
 </div></blockquote>
 <section id="using-the-symbology-tab-to-create-a-heatmap">
 <h4>Using the symbology tab to create a heatmap<a class="headerlink" href="#using-the-symbology-tab-to-create-a-heatmap" title="Permalink to this heading">#</a></h4>
-<p>You can create a heatmap in the __symbology tab__of a point or polyline layer. Navigate to the symbology tab and select the <code class="docutils literal notranslate"><span class="pre">Heatmap</span></code> symbolization method. Here, you can adjust the color ramp to your liking. You can also set the radius (in Millimeters on the canvas). This determines the radius that is used to aggregate the points. If it gets bigger, the circle that is used to count the points in an are gets bigger, more points are aggregated and the ‘heat’ increases.  You can also adjust the highest value. The highest value determines the value that is given the ‘hottest’ color. By default, it is set to the highest number of aggregated points. For example, you can set a threshold above which everything has Reducing it changes the visualization drastically.</p>
+<p>You can create a heatmap in the <strong>symbology tab</strong> of a point or polyline layer. Navigate to the symbology tab and select the <code class="docutils literal notranslate"><span class="pre">Heatmap</span></code> symbolization method. Here, you can adjust the <strong>color ramp, radius, and maximum value</strong>. The <strong>radius</strong> (in Millimeters on your screen) determines the size of the circle that is used to aggregate the points. If it gets bigger more points can be aggregated and the ‘heat’ increases. The <strong>maximum value</strong> determines the value that is given the ‘hottest’ color. By default, it is set to the highest number of aggregated points. For example, you can <strong>set a threshold</strong> above which everything has the “hottest” color. Reducing it changes the visualization drastically.</p>
 <figure class="align-default" id="heatmap-example-with-different-radii-and-max-value">
 <a class="reference internal image-reference" href="../../_images/en_heatmap_radius_max_value_conf_example.png"><img alt="../../_images/en_heatmap_radius_max_value_conf_example.png" src="../../_images/en_heatmap_radius_max_value_conf_example.png" style="width: 700px;" /></a>
 <figcaption>
@@ -831,11 +828,12 @@ Assigning a weight to the samples<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Assigning weight to samplepoints can be useful when your dataset has additional information (such as the type of incident, or sampled amount of rainfall) and you want to integrate this information into your heatmap.</p>
 </div>
 </details></section>
 </section>
-<section id="hexagon-grid">
-<h3>Hexagon grid<a class="headerlink" href="#hexagon-grid" title="Permalink to this heading">#</a></h3>
+<section id="hex-maps-hexagon-grids">
+<h3>Hex Maps (Hexagon Grids)<a class="headerlink" href="#hex-maps-hexagon-grids" title="Permalink to this heading">#</a></h3>
 <p>Hexagon grids are used to aggregate point incidents in order to normalize geographic data or to mitigate the modifiable area unit problem (problems arising from using irregular shaped polygons). In GIS, we commonly use rectangles (e.g. raster data) or <strong>hexagons</strong>, as these geometries can be repeat in an evenly spaced grid without leaving gaps.</p>
 <p>The advantage of using hexagons is that it is a polygon that closely resembles a <strong>circle</strong> (where the distance to the centre is equal at every point along the outline), but still <strong>leaves no gaps</strong> when placed as a <strong>grid</strong>. This means that it is also possible to use absolute values (no normalizations), since the spatial units have the same size.</p>
 <blockquote>
@@ -852,11 +850,12 @@ Assigning a weight to the samples<div class="sd-summary-down docutils">
 </figure>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can remove the hexagon cells that are not overlapping the reference layer:</p>
+<p>You can remove the hexagon cells that are not overlapping with the reference layer:</p>
 <ol class="arabic simple">
 <li><p>Select by location all the cells that intersect with your reference polygon/layer.</p></li>
 <li><p>Invert the selection.</p></li>
 <li><p>Delete the selected hexagon cells.</p></li>
+<li><p>Save the changes you made to the layer.</p></li>
 </ol>
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -958,11 +957,11 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-statistics">Basic statistics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer-analysis">Buffer analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#density-map-analysis">Density Map Analysis</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmap">Heatmap</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heatmaps">Heatmaps</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-symbology-tab-to-create-a-heatmap">Using the symbology tab to create a heatmap</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hexagon-grid">Hexagon grid</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hex-maps-hexagon-grids">Hex Maps (Hexagon Grids)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-by-joining-attributes">Analysis by joining attributes</a></li>
