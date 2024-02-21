@@ -2683,7 +2683,7 @@ Admin 2- Localities<div class="sd-summary-down docutils">
 <p>The actual impact information consists of two parts. One part is always the impact type. This explain what happened. For example, people were affected by the flood, the cholera broke out or schools got damaged.</p>
 <p>The other part is either the impact quantity or the impact quality. It can not be both!
 The impact quantity describes simply how many of something. How many people have been affected? How many schools got damaged?</p>
-<p>The impact quality is used if something cannot be described with numbers. For example, there was a disease outbreak of cholear. Cholera is not a number. Or a locality was affected -&gt; Yes the locality was affected.</p>
+<p>The impact quality is used if something cannot be described with numbers but with “Yes” or “No”. For example, there was a disease outbreak of cholear. Cholera is not a number. Yes there was cholera outbreak. Or a locality was affected -&gt; Yes the locality was affected.</p>
 <p>Hence we need three columns to describe impacts: impact_typ, impact_quality and impact_quantity.</p>
 <table class="table">
 <thead>
@@ -2701,9 +2701,9 @@ The impact quantity describes simply how many of something. How many people have
 <td><p>6</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p>disease_outbreak</p></td>
+<tr class="row-even"><td><p>disease_cholera</p></td>
 <td><p></p></td>
-<td><p>Cholera</p></td>
+<td><p>yes</p></td>
 </tr>
 </tbody>
 </table>
@@ -3592,7 +3592,7 @@ Total 16,225 18,616 167 59 1,945 117 115 865 7 49 177,724
 </tbody>
 </table>
 <p class="rubric">HIA Data Cleaning</p>
-<p>When creating such a dataset there will be errors like misspellings of names or wrong numbers. To address that you will need to clean the dataset before actually using it. To clean the dataset you can use Excel or specialized tools like OpenRefein.</p>
+<p>When creating such a dataset there will be errors like misspellings of names or wrong numbers. To address that you will need to clean the dataset before actually using it. To clean the dataset you can use Excel or specialized tools like <a class="reference external" href="https://openrefine.org/">OpenRefein</a>.</p>
 <p>Independently on which tool you will use, here are some important points you have to check when cleaning the data:</p>
 <ol class="arabic simple">
 <li><p><strong>Year and Columns:</strong></p>
@@ -3621,14 +3621,14 @@ Total 16,225 18,616 167 59 1,945 117 115 865 7 49 177,724
 <ul class="simple">
 <li><p>Check if all administrative units are correctly categorized.</p></li>
 <li><p>Ensure that there are no misspelled or inconsistent administrative unit names.</p></li>
-<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Consolidate the of states and loclities that they are consisten with the list in the <span class="xref myst">location chapter</span>.Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <a class="reference external" href="https://openrefine.org/docs/manual/cellediting#cluster-and-edit"><code class="docutils literal notranslate"><span class="pre">Cluster</span></code></a> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Consolidate the of states and loclities that they are consisten with the list in the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/GIS_AA/en_qgis_historical_impact_assessment_sudan.html#location">location chapter</a>.Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
 </ul>
 </li>
 <li><p><strong>Impact Type Column:</strong></p>
 <ul class="simple">
 <li><p>Check if all impact types are correctly categorized and named.</p></li>
 <li><p>Ensure that there are no duplicate or missing impact types.</p></li>
-<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <a class="reference external" href="https://openrefine.org/docs/manual/cellediting#cluster-and-edit"><code class="docutils literal notranslate"><span class="pre">Cluster</span></code></a> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
 </ul>
 </li>
 <li><p><strong>Impact Quantity Columns:</strong></p>
@@ -3641,10 +3641,38 @@ Total 16,225 18,616 167 59 1,945 117 115 865 7 49 177,724
 <li><p><strong>Impact Quality Columns:</strong></p>
 <ul class="simple">
 <li><p>Check that the same impacts are spelt consistently. For example illness names.</p></li>
-<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <a class="reference external" href="https://openrefine.org/docs/manual/cellediting#cluster-and-edit"><code class="docutils literal notranslate"><span class="pre">Cluster</span></code></a> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Delete redundant data</strong></p>
+<ul class="simple">
+<li><p>It might be the case that you have for one flood event, multiple information on for example affected populations for the same location. This could later be a problem when you want to analyse the data.
+Probably, the reddened information is from two different sources. So you can delete the information of the older source and only keep the one from the up-to-date source as possible.</p></li>
 </ul>
 </li>
 </ol>
+<p class="rubric">Adding P-Codes to the table</p>
+<p class="rubric">Working with the impact table in Excel</p>
+<p>Now we have our impact dataset cleaned and ready to use. Since the dataset is a long table we cannot use it as a normal table in Excel. To get the data in a format so we can use it in QGIS or create a graph out of it, we need to pivot it. Depending on your work with impact quantity or quality, there are small differences. Here is how you do it:</p>
+<p class="rubric">Impact Quantity for one year on the state level:</p>
+<ol class="arabic simple">
+<li><p>Open the Excel dataset.</p></li>
+<li><p>Turn the data in a table by clicking on <code class="docutils literal notranslate"><span class="pre">Insert</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Table</span></code>-&gt; check <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">table</span> <span class="pre">has</span> <span class="pre">headers</span></code></p></li>
+<li><p>Also under the <code class="docutils literal notranslate"><span class="pre">Insert</span></code>-Tab click on <code class="docutils literal notranslate"><span class="pre">Pivot</span> <span class="pre">Table</span></code>. Make sure your table range is correct. Check <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Worksheet</span></code>. Click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
+<li><p>Setup the pivot table by placing the columns as follows:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Filter: Start_year</p></li>
+<li><p>Columns: Impact_Type</p></li>
+<li><p>Rows: admin_1 or admin_1_PCODE (If you want to use this table in QGIS, you should use admin_1_PCODE Instead of admin_1)</p></li>
+<li><p>Values: Impact_quantity</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>To see the sum of the different impacts click on Impact_quantity under Values -&gt; <code class="docutils literal notranslate"><span class="pre">Value</span> <span class="pre">Field</span> <span class="pre">Settings</span></code> -&gt; select <code class="docutils literal notranslate"><span class="pre">Sum</span></code>.</p></li>
+<li><p>Directly above the pivot table, you should see the option to filter by year. Select the year you are interested in.</p></li>
+</ol>
+<p>Now you can just copy the whole table, and place it in a new worksheet. Make sure to only paste the values.
+This table can now be used to join with an existing geodata set in QGIS.</p>
 </div>
 </div>
 </div>
