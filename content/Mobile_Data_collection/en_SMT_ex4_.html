@@ -561,10 +561,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-the-trainers">Instructions for the trainers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-basic-visulization-of-sketch-map-tool-outputs-in-umap">Exercise B: Basic visulization of Sketch Map Tool outputs in UMAP</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background-information-on-umap">Background Information on UMAP</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-a-exploaration-basic-visualization-of-sketch-map-tool-outputs-in-qgis">Exercise A: Exploaration &amp; basic visualization of Sketch Map Tool outputs in QGIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-basic-visulization-of-sketch-map-tool-outputs-in-umap">Exercise B: Basic visulization of Sketch Map Tool outputs in UMAP</a></li>
 </ul>
             </nav>
         </div>
@@ -654,9 +652,12 @@ o	Geodata of the results and some pictures</p>
 <p class="sd-card-text">link where you can download this part as a short pdf to hand it to participants</p>
 <p class="sd-card-text">If you expieriences any problems during your use of the <a class="reference external" href="https://sketch-map-tool.heigit.org/">Sketch Map Tool</a> please take a look at the <a class="reference external" href="https://sketch-map-tool.heigit.org/help">Help page</a>.</p>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+</details></section>
+<section id="exercise-a-exploaration-basic-visualization-of-sketch-map-tool-outputs-in-qgis">
+<h2>Exercise A: Exploaration &amp; basic visualization of Sketch Map Tool outputs in QGIS<a class="headerlink" href="#exercise-a-exploaration-basic-visualization-of-sketch-map-tool-outputs-in-qgis" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
 <summary class="sd-summary-title sd-card-header">
-## Exercise A: Exploaration &amp; basic visualization of Sketch Map Tool outputs in QGIS<div class="sd-summary-down docutils">
+Exercise A: Exploaration &amp; basic visualization of Sketch Map Tool outputs in QGIS<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -676,14 +677,14 @@ Unzip the .zip folder in order to be able to acess the geotiff output.</p>
 <p class="sd-card-text">Now load your vector file (“Schuld_Ahr-tal_sketch-map_Ex4.geojson”) and geotiff file (“Schuld_Ahr-tal_sketch-map_Ex4.geotiff”) by dragging and dropping them into the layer panel.</p>
 <p class="rubric">3. Explore the data</p>
 <ol class="arabic">
-<li><p class="sd-card-text">Orientate in the User Interface</p>
+<li><p class="sd-card-text"><strong>Orientate in the User Interface</strong></p>
 <p class="sd-card-text">If you are a beginner to QGIS get to know the basics of the QGIS User Interface <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html#qgis-interface">here</a>.</p>
 </li>
-<li><p class="sd-card-text">Add a Basemap</p>
+<li><p class="sd-card-text"><strong>Add a Basemap</strong></p>
 <p class="sd-card-text">For a better overview and orientation it is always helpful to add a basemap to your project and put your situation in a spatial context. Find in the <code class="docutils literal notranslate"><span class="pre">Browser</span></code> Panel <code class="docutils literal notranslate"><span class="pre">XYZ</span> <span class="pre">Tiles</span></code>, open the dropdown by clicking on it and select OpenStreetMap or another basemap.</p>
 <p class="sd-card-text">Click <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html#standard-qgis-basemaps">here</a> for more information on basemaps and how toa dd them to your project.</p>
 </li>
-<li><p class="sd-card-text">Understand the Layer Concept</p>
+<li><p class="sd-card-text"><strong>Understand the Layer Concept</strong></p>
 <p class="sd-card-text">By dragging and dropping your data into QGIS the data will be visualized in the map canvas and its description will be visible in the <code class="docutils literal notranslate"><span class="pre">Layers</span></code> Panel. You should now have 3 layers in your panel: your geojason output (vector), your geotiff (Raster) and the opentstreetmap basemap. In order to see all the information you have to bing theminto order. It is important to understand the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html#layer-concept">Layer Concept</a>.</p>
 <figure class="align-center" id="t">
 <a class="reference internal image-reference" href="fig/en_SMT_ex4_fig1.PNG"><img alt="fig/en_SMT_ex4_fig1.PNG" src="fig/en_SMT_ex4_fig1.PNG" style="height: 50px;" /></a>
@@ -692,7 +693,7 @@ Unzip the .zip folder in order to be able to acess the geotiff output.</p>
 </figcaption>
 </figure>
 </li>
-<li><p class="sd-card-text">Explore the data</p>
+<li><p class="sd-card-text"><strong>Explore the data</strong></p>
 <p class="sd-card-text"><strong>Vector data</strong></p>
 <p class="sd-card-text">In order to explore your detected markings, right-click on your vector file and navigate to <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code> and click on it. The table has one entry (row) for each detected marking. In our example 6 markings where detecetd. The column “color” describes the color which has been detected for each marking and the column “name” contains the name of your uploaded Sketch Map.</p>
 <div class="admonition note">
@@ -780,54 +781,63 @@ Attribute Table with added polygon
 </details></section>
 <section id="exercise-b-basic-visulization-of-sketch-map-tool-outputs-in-umap">
 <h2>Exercise B: Basic visulization of Sketch Map Tool outputs in UMAP<a class="headerlink" href="#exercise-b-basic-visulization-of-sketch-map-tool-outputs-in-umap" title="Permalink to this heading">#</a></h2>
-<section id="background-information-on-umap">
-<h3>Background Information on UMAP<a class="headerlink" href="#background-information-on-umap" title="Permalink to this heading">#</a></h3>
-<p>UMAP (Unified Map Platform) is an online platform that allows users to create custom maps using OpenStreetMap (OSM) data. No installation or registration is necesary which enables users to quickly gain an intuitive overview of their data.
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+Exercise B: Basic visulization of Sketch Map Tool outputs in UMAP<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="rubric">Exercise B: Basic visulization of Sketch Map Tool outputs in UMAP</p>
+<p class="rubric">1. Background Information on UMAP</p>
+<p class="sd-card-text">UMAP (Unified Map Platform) is an online platform that allows users to create custom maps using OpenStreetMap (OSM) data. No installation or registration is necesary which enables users to quickly gain an intuitive overview of their data.
 Useres can customize the appearance of the map and share it with others. It’s particularly useful for collaborative mapping projects, visualizing geographic data, and creating custom maps tailored to specific needs</p>
 <table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Feature</p></th>
-<th class="head text-left"><p>QGIS</p></th>
-<th class="head text-left"><p>UMAP</p></th>
+<tr class="row-odd"><th class="head text-left"><p class="sd-card-text">Feature</p></th>
+<th class="head text-left"><p class="sd-card-text">QGIS</p></th>
+<th class="head text-left"><p class="sd-card-text">UMAP</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>Type</p></td>
-<td class="text-left"><p>Desktop Geographic Information System (GIS) software</p></td>
-<td class="text-left"><p>Online mapping platform</p></td>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">Type</p></td>
+<td class="text-left"><p class="sd-card-text">Desktop Geographic Information System (GIS) software</p></td>
+<td class="text-left"><p class="sd-card-text">Online mapping platform</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Accessibility</p></td>
-<td class="text-left"><p>Requires installation on a desktop computer</p></td>
-<td class="text-left"><p>Accessible online via web browser</p></td>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">Accessibility</p></td>
+<td class="text-left"><p class="sd-card-text">Requires installation on a desktop computer</p></td>
+<td class="text-left"><p class="sd-card-text">Accessible online via web browser</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Purpose</p></td>
-<td class="text-left"><p>Comprehensive GIS software for spatial data analysis</p></td>
-<td class="text-left"><p>Interactive mapping tool for creating custom maps</p></td>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">Purpose</p></td>
+<td class="text-left"><p class="sd-card-text">Comprehensive GIS software for spatial data analysis</p></td>
+<td class="text-left"><p class="sd-card-text">Interactive mapping tool for creating custom maps</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Data Import</p></td>
-<td class="text-left"><p>Supports various data formats (shapefiles, geodatabases, etc.)</p></td>
-<td class="text-left"><p>Primarily utilizes OpenStreetMap (OSM) data</p></td>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">Data Import</p></td>
+<td class="text-left"><p class="sd-card-text">Supports various data formats (shapefiles, geodatabases, etc.)</p></td>
+<td class="text-left"><p class="sd-card-text">Primarily utilizes OpenStreetMap (OSM) data</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Data Visualization and Analysis</p></td>
-<td class="text-left"><p>Offers extensive visualization and analysis capabilities, Provides a wide range of geospatial analysis tools</p></td>
-<td class="text-left"><p>Focuses on creating interactive maps with custom elements, Limited analysis tools</p></td>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">Data Visualization and Analysis</p></td>
+<td class="text-left"><p class="sd-card-text">Offers extensive visualization and analysis capabilities, Provides a wide range of geospatial analysis tools</p></td>
+<td class="text-left"><p class="sd-card-text">Focuses on creating interactive maps with custom elements, Limited analysis tools</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Output</p></td>
-<td class="text-left"><p>Printable map with all necesary map elements</p></td>
-<td class="text-left"><p>URL so share map online</p></td>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">Output</p></td>
+<td class="text-left"><p class="sd-card-text">Printable map with all necesary map elements</p></td>
+<td class="text-left"><p class="sd-card-text">URL so share map online</p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>The Geojson output of the Sketch Map Tool cannot be opened and inspected with commonly available tools. If you use the Sketch Map Tool and do not have QGIS installed and quickly want to examine your result, UMAP is a simple and quick way to do so.</p>
+<p class="sd-card-text">The Geojson output of the Sketch Map Tool cannot be opened and inspected with commonly available tools. If you use the Sketch Map Tool and do not have QGIS installed and quickly want to examine your result, UMAP is a simple and quick way to do so.</p>
 </div>
-<p>Hintergrundkarte kann ausgewählt werden</p>
-<p>Karte einen Namen geben</p>
-<p>Digitalization:</p>
-<p>you can draw polygon, give it name and description</p>
-</section>
-</section>
+<p class="rubric">2. Load your data</p>
+<p class="sd-card-text">Hintergrundkarte kann ausgewählt werden</p>
+<p class="sd-card-text">Karte einen Namen geben</p>
+<p class="sd-card-text">Digitalization:</p>
+<p class="sd-card-text">you can draw polygon, give it name and description</p>
+<p class="rubric">3. Customize your map</p>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -884,10 +894,8 @@ Useres can customize the appearance of the map and share it with others. It’s 
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-the-trainers">Instructions for the trainers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-basic-visulization-of-sketch-map-tool-outputs-in-umap">Exercise B: Basic visulization of Sketch Map Tool outputs in UMAP</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background-information-on-umap">Background Information on UMAP</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-a-exploaration-basic-visualization-of-sketch-map-tool-outputs-in-qgis">Exercise A: Exploaration &amp; basic visualization of Sketch Map Tool outputs in QGIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-basic-visulization-of-sketch-map-tool-outputs-in-umap">Exercise B: Basic visulization of Sketch Map Tool outputs in UMAP</a></li>
 </ul>
   </nav></div>
 
