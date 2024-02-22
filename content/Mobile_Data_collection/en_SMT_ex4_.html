@@ -561,16 +561,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-the-trainers">Instructions for the trainers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-a-basic-visulaization-of-sketch-map-tool-outputs-in-qgis">Exercise A: Basic visulaization of Sketch Map Tool outputs in QGIS</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection">1. Data Collection</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#georeferencing-and-autoextraction-with-the-sketch-map-tool">2. Georeferencing and autoextraction with the Sketch Map tool</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-your-qgis-project">3. Start your QGIS Project</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-the-data">3. Explore the data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correct-or-enhance-your-data">5. Correct or enhance your data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-your-data">6. Visualize your data</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-basic-visulaization-of-sketch-mnap-tool-outputs-in-umap">Exercise B: Basic visulaization of Sketch MNap Tool outputs in UMAP</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-basic-visulization-of-sketch-map-tool-outputs-in-umap">Exercise B: Basic visulization of Sketch Map Tool outputs in UMAP</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background-information-on-umap">Background Information on UMAP</a></li>
 </ul>
 </li>
@@ -663,58 +654,50 @@ o	Geodata of the results and some pictures</p>
 <p class="sd-card-text">link where you can download this part as a short pdf to hand it to participants</p>
 <p class="sd-card-text">If you expieriences any problems during your use of the <a class="reference external" href="https://sketch-map-tool.heigit.org/">Sketch Map Tool</a> please take a look at the <a class="reference external" href="https://sketch-map-tool.heigit.org/help">Help page</a>.</p>
 </div>
-</details></section>
-<section id="exercise-a-basic-visulaization-of-sketch-map-tool-outputs-in-qgis">
-<h2>Exercise A: Basic visulaization of Sketch Map Tool outputs in QGIS<a class="headerlink" href="#exercise-a-basic-visulaization-of-sketch-map-tool-outputs-in-qgis" title="Permalink to this heading">#</a></h2>
-<p>critical infrastrucutre and historical flood extent</p>
-<p>Exercise Input: jpeg um noch kurz den Prozess im SMT zu wiederholen oder direkt geojson zur Verfügung stellen?</p>
-<p>To do: Kontext und Gebiet  auswählen</p>
-<p>Schritte:</p>
-<section id="data-collection">
-<h3>1. Data Collection<a class="headerlink" href="#data-collection" title="Permalink to this heading">#</a></h3>
-<p>Please download the prepared maps <span class="xref myst">here</span>.
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+## Exercise A: Exploaration &amp; basic visualization of Sketch Map Tool outputs in QGIS<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="rubric">Exercise A: Exploaration &amp; basic visualization of Sketch Map Tool outputs in QGIS</p>
+<p class="rubric">1. Scenario and Background</p>
+<p class="sd-card-text">critical infrastrucutre and historical flood extent</p>
+<p class="rubric">1. Data Collection</p>
+<p class="sd-card-text">Please download the prepared maps <span class="xref myst">here</span>.
 Unzip the .zip folder in order to be able to acess the geotiff output.</p>
-<p>Optional: You find the empty map <span class="xref myst">here</span>. Feel free to draw some additional flood maps by printing the template out and drawing on it or by using a simple graphics editor.</p>
-</section>
-<section id="georeferencing-and-autoextraction-with-the-sketch-map-tool">
-<h3>2. Georeferencing and autoextraction with the Sketch Map tool<a class="headerlink" href="#georeferencing-and-autoextraction-with-the-sketch-map-tool" title="Permalink to this heading">#</a></h3>
-<p>Upload the sketch maps back to the tool’s website. Head to <a class="reference external" href="https://sketch-map-tool.heigit.org/">sketch-map-tool.heigit.org</a> and choose ‘Digitize your Sketch maps’ on the right. Upload all your sketches in .png or .jpg format. You can mark your sketches and simply drag and drop them into the window.</p>
-<p>The sketch maps are now being processed and georeferenced with the annotations extracted and vectorized. Download the vectors. You may use the ones we have prepared <span class="xref myst">here</span>.</p>
-</section>
-<section id="start-your-qgis-project">
-<h3>3. Start your QGIS Project<a class="headerlink" href="#start-your-qgis-project" title="Permalink to this heading">#</a></h3>
-<p>Open QGIS and navigate to <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Save</span></code>. Naviagte to where you want to save your project, give it a name and clikc <code class="docutils literal notranslate"><span class="pre">Save</span></code> again. When working in QGIS always remember to save your project every now and then.</p>
-<p>Now load your vector file (“Schuld_Ahr-tal_sketch-map_Ex4.geojson”) and geotiff file (“Schuld_Ahr-tal_sketch-map_Ex4.geotiff”) by dragging and dropping them into the layer panel.</p>
-</section>
-<section id="explore-the-data">
-<h3>3. Explore the data<a class="headerlink" href="#explore-the-data" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Orientate in the User Interface</p></li>
-</ol>
-<p>If you are a beginner to QGIS get to know the basics of the QGIS User Interface <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html#qgis-interface">here</a>.</p>
-<ol class="arabic simple" start="2">
-<li><p>Add a Basemap</p></li>
-</ol>
-<p>For a better overview and orientation it is always helpful to add a basemap to your project and put your situation in a spatial context. Find in the <code class="docutils literal notranslate"><span class="pre">Browser</span></code> Panel <code class="docutils literal notranslate"><span class="pre">XYZ</span> <span class="pre">Tiles</span></code>, open the dropdown by clicking on it and select OpenStreetMap or another basemap.</p>
-<p>Click <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html#standard-qgis-basemaps">here</a> for more information on basemaps and how toa dd them to your project.</p>
-<ol class="arabic simple" start="3">
-<li><p>Understand the Layer Concept</p></li>
-</ol>
-<p>By dragging and dropping your data into QGIS the data will be visualized in the map canvas and its description will be visible in the <code class="docutils literal notranslate"><span class="pre">Layers</span></code> Panel. You should now have 3 layers in your panel: your geojason output (vector), your geotiff (Raster) and the opentstreetmap basemap. In order to see all the information you have to bing theminto order. It is important to understand the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html#layer-concept">Layer Concept</a>.</p>
+<p class="sd-card-text">Optional: You find the empty map <span class="xref myst">here</span>. Feel free to draw some additional flood maps by printing the template out and drawing on it or by using a simple graphics editor.</p>
+<p class="rubric">2. Georeferencing and autoextraction with the Sketch Map tool</p>
+<p class="sd-card-text">Upload the sketch maps back to the tool’s website. Head to <a class="reference external" href="https://sketch-map-tool.heigit.org/">sketch-map-tool.heigit.org</a> and choose ‘Digitize your Sketch maps’ on the right. Upload all your sketches in .png or .jpg format. You can mark your sketches and simply drag and drop them into the window.</p>
+<p class="sd-card-text">The sketch maps are now being processed and georeferenced with the annotations extracted and vectorized. Download the vectors. You may use the ones we have prepared <span class="xref myst">here</span>.</p>
+<p class="rubric">3. Start your QGIS Project</p>
+<p class="sd-card-text">Open QGIS and navigate to <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Save</span></code>. Naviagte to where you want to save your project, give it a name and clikc <code class="docutils literal notranslate"><span class="pre">Save</span></code> again. When working in QGIS always remember to save your project every now and then.</p>
+<p class="sd-card-text">Now load your vector file (“Schuld_Ahr-tal_sketch-map_Ex4.geojson”) and geotiff file (“Schuld_Ahr-tal_sketch-map_Ex4.geotiff”) by dragging and dropping them into the layer panel.</p>
+<p class="rubric">3. Explore the data</p>
+<ol class="arabic">
+<li><p class="sd-card-text">Orientate in the User Interface</p>
+<p class="sd-card-text">If you are a beginner to QGIS get to know the basics of the QGIS User Interface <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html#qgis-interface">here</a>.</p>
+</li>
+<li><p class="sd-card-text">Add a Basemap</p>
+<p class="sd-card-text">For a better overview and orientation it is always helpful to add a basemap to your project and put your situation in a spatial context. Find in the <code class="docutils literal notranslate"><span class="pre">Browser</span></code> Panel <code class="docutils literal notranslate"><span class="pre">XYZ</span> <span class="pre">Tiles</span></code>, open the dropdown by clicking on it and select OpenStreetMap or another basemap.</p>
+<p class="sd-card-text">Click <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html#standard-qgis-basemaps">here</a> for more information on basemaps and how toa dd them to your project.</p>
+</li>
+<li><p class="sd-card-text">Understand the Layer Concept</p>
+<p class="sd-card-text">By dragging and dropping your data into QGIS the data will be visualized in the map canvas and its description will be visible in the <code class="docutils literal notranslate"><span class="pre">Layers</span></code> Panel. You should now have 3 layers in your panel: your geojason output (vector), your geotiff (Raster) and the opentstreetmap basemap. In order to see all the information you have to bing theminto order. It is important to understand the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html#layer-concept">Layer Concept</a>.</p>
 <figure class="align-center" id="t">
 <a class="reference internal image-reference" href="fig/en_SMT_ex4_fig1.PNG"><img alt="fig/en_SMT_ex4_fig1.PNG" src="fig/en_SMT_ex4_fig1.PNG" style="height: 50px;" /></a>
 <figcaption>
 <p><span class="caption-text">Interface</span><a class="headerlink" href="#t" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="4">
-<li><p>Explore the data</p></li>
-</ol>
-<p>Vector data</p>
-<p>In order to explore your detected markings, right-click on your vector file and navigate to <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code> and click on it. The table has one entry (row) for each detected marking. In our example 6 markings where detecetd. The column “color” describes the color which has been detected for each marking and the column “name” contains the name of your uploaded Sketch Map.</p>
+</li>
+<li><p class="sd-card-text">Explore the data</p>
+<p class="sd-card-text"><strong>Vector data</strong></p>
+<p class="sd-card-text">In order to explore your detected markings, right-click on your vector file and navigate to <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code> and click on it. The table has one entry (row) for each detected marking. In our example 6 markings where detecetd. The column “color” describes the color which has been detected for each marking and the column “name” contains the name of your uploaded Sketch Map.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When you upload several marked Sketch Maps simultaneously, you will get one vector output containing all the markings of all Sketch Maps. In this case the column “name” helps you to track on which map each marking was detected</p>
+<p class="sd-card-text">When you upload several marked Sketch Maps simultaneously, you will get one vector output containing all the markings of all Sketch Maps. In this case the column “name” helps you to track on which map each marking was detected</p>
 </div>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="fig/en_SMT_ex4_Attrbute_Table.PNG"><img alt="fig/en_SMT_ex4_Attrbute_Table.PNG" src="fig/en_SMT_ex4_Attrbute_Table.PNG" style="height: 50px;" /></a>
@@ -722,50 +705,81 @@ Unzip the .zip folder in order to be able to acess the geotiff output.</p>
 <p><span class="caption-text">Attribute Tabek of Vector file output of Sketch Map Tool</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>GeoTIFF</p>
-<p>The Raster file as result of the SKetch Map Tool is basically the foto you took of your Sketch Map but georeferenced. You see if the georeferencing is correct when it matches the base map. Furthermore your tif File is helpful to compare and review the marking detection (vector file). In this case your tiff is your “groudn truth” and you can check if the marking detection by the tool is true or if there are pieces missing or wongly detected.</p>
-<p>Question:
+<p class="sd-card-text"><strong>GeoTIFF</strong></p>
+<p class="sd-card-text">The Raster file as result of the SKetch Map Tool is basically the foto you took of your Sketch Map but georeferenced. You see if the georeferencing is correct when it matches the base map. Furthermore your tif File is helpful to compare and review the marking detection (vector file). In this case your tiff is your “groudn truth” and you can check if the marking detection by the tool is true or if there are pieces missing or wongly detected.</p>
+<p class="sd-card-text">Question:
 Do your different output match or do you find any errors?</p>
-<p>-&gt; Yes, you are right. Unfortunatly, one marked polygon did not get detected. This can happen since marking are being detected by machien learning algorithms that can encounter problemas in soem situations.</p>
-</section>
-<section id="correct-or-enhance-your-data">
-<h3>5. Correct or enhance your data<a class="headerlink" href="#correct-or-enhance-your-data" title="Permalink to this heading">#</a></h3>
-<p>So what can we do if a marking has not been detected? We can add missing markings manually by tracking the drawing on the getif file. This process is also called <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_3/en_qgis_digitalisation.html?highlight=digitize#digitalisation">digitalisation</a>.</p>
-<ol class="arabic simple">
-<li><p>Right-click on your vector file and click on <code class="docutils literal notranslate"><span class="pre">Toggle</span> <span class="pre">Editing</span></code>. The <code class="docutils literal notranslate"><span class="pre">Digitizing</span> <span class="pre">Toolbox</span></code> in your menu bar on top of your QGIS will be activated:</p></li>
+<p class="sd-card-text">-&gt; Yes, you are right. Unfortunatly, one marked polygon did not get detected. This can happen since marking are being detected by machien learning algorithms that can encounter problemas in soem situations.</p>
+</li>
 </ol>
+<p class="rubric">5. Correct or enhance your data</p>
+<p class="sd-card-text">So what can we do if a marking has not been detected? We can add missing markings manually by tracking the drawing on the getif file. This process is also called <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_3/en_qgis_digitalisation.html?highlight=digitize#digitalisation">digitalisation</a>.</p>
+<ol class="arabic">
+<li><p class="sd-card-text">Right-click on your vector file and click on <code class="docutils literal notranslate"><span class="pre">Toggle</span> <span class="pre">Editing</span></code>. The <code class="docutils literal notranslate"><span class="pre">Digitizing</span> <span class="pre">Toolbox</span></code> in your menu bar on top of your QGIS will be activated:</p>
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="fig/en_SMT_ex4_dig_toolbox.PNG"><img alt="fig/en_SMT_ex4_dig_toolbox.PNG" src="fig/en_SMT_ex4_dig_toolbox.PNG" style="height: 50px;" /></a>
 <figcaption>
 <p><span class="caption-text">Digitzing Toolbox</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Click on <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Feature:</span> <span class="pre">Capture</span> <span class="pre">Polygon</span></code><img alt="" src="../../_images/mActionCapturePolygon.png" />. You will note that your mouse market now changed its symbol into a target. This means you can now start tracing the missing polygon my left-clicking. You finish your polygon by a right-click and you will be asked to enter the descriptions. Enter the information and click ok.</p>
+<p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Feature:</span> <span class="pre">Capture</span> <span class="pre">Polygon</span></code><img alt="" src="../../_images/mActionCapturePolygon.png" />. You will note that your mouse market now changed its symbol into a target. This means you can now start tracing the missing polygon my left-clicking. You finish your polygon by a right-click and you will be asked to enter the descriptions. Enter the information and click ok.</p>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="fig/en_SMT_ex4_dig_info.PNG"><img alt="fig/en_SMT_ex4_dig_info.PNG" src="fig/en_SMT_ex4_dig_info.PNG" style="height: 50px;" /></a>
 <figcaption>
-<p><span class="caption-text">Digitzing</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Digitizing</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In the map canvas you can already see your handdrawn polygon. In order to save it you should now right-click on your vector layer and turn off the Editing mode by clickin on <code class="docutils literal notranslate"><span class="pre">Toggle</span> <span class="pre">Editing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code>. Check your result by looking at the Attribute Table again: You now have 7 features in your table.</p>
+<p class="sd-card-text">In the map canvas you can already see your handdrawn polygon. In order to save it you should now right-click on your vector layer and turn off the Editing mode by clickin on <code class="docutils literal notranslate"><span class="pre">Toggle</span> <span class="pre">Editing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code>. Check your result by looking at the Attribute Table again: You now have 7 features in your table.</p>
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="fig/en_SMT_ex4_Attrbute_Table_new.PNG"><img alt="fig/en_SMT_ex4_Attrbute_Table_new.PNG" src="fig/en_SMT_ex4_Attrbute_Table_new.PNG" style="height: 50px;" /></a>
 <figcaption>
 <p><span class="caption-text">Attribute Table with added polygon</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The whole process of Digitalisation is explained in detail <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_3/en_qgis_digitalisation.html?highlight=digitize#digitalisation">here</a>.</p>
-</section>
-<section id="visualize-your-data">
-<h3>6. Visualize your data<a class="headerlink" href="#visualize-your-data" title="Permalink to this heading">#</a></h3>
+<p class="sd-card-text">The whole process of Digitalisation is explained in detail <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_3/en_qgis_digitalisation.html?highlight=digitize#digitalisation">here</a>.</p>
+</li>
+</ol>
+<p class="rubric">6. Visualize your data</p>
+<p class="sd-card-text">Now we want to visualize our results and generate a printable map so the results can be shown to third parties in a clear and comprehensible manner. We can now delete the geotiff layer by right-click -&gt; <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">Layer</span></code> since we will be working with the vector marking detections.</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text"><strong>Customize Symbology</strong></p></li>
+</ol>
+<p class="sd-card-text">We can customize the symbology of our vectory layer by right-clicking on it in the <code class="docutils literal notranslate"><span class="pre">Layers</span></code> Panel -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code>.</p>
+<p class="sd-card-text">First of all we want to assign different colors for different features. We assume we know that blac and blue colors were used to mark past flood extents and red was used to mark critical infrastructures. We want to replicate this.</p>
+<p class="sd-card-text">In the topmost drop-down menu, choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code>. As Value choose “color” and then click on the bottom left on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>. We are now able to choose colors depending on the value in the column “color”. By oble-clicking on the colored box in your windwo next to your value andf Legend descriptions the <code class="docutils literal notranslate"><span class="pre">Symbol</span> <span class="pre">Selector</span></code> will open in a new window where you can choose the color of your preference by clicking on the drop-down arrow next to “Color”.
+Right below you can also ajust the opcaty level of your feature.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{figure} /fig/en_SMT_ex4_dig_categorize.PNG
+---
+height: 50px
+name: T
+align: center
+---
+Attribute Table with added polygon 
+```
+</pre></div>
+</div>
+<p class="sd-card-text">In the <code class="docutils literal notranslate"><span class="pre">Symbol</span> <span class="pre">Selector</span></code>, you can also in the upper window click on <code class="docutils literal notranslate"><span class="pre">Simple</span> <span class="pre">line</span></code> and change the <code class="docutils literal notranslate"><span class="pre">Symbol</span> <span class="pre">Layer</span> <span class="pre">Type</span></code>. In tzis example we would like to symbolize the critical Infrastructure with red outlines, so we choose “Outline: Simple Line”. Juts below we can adjust the color, stroke witdh stroke line type, etc. You can find more information about the visualization of vector data <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_visualisation_wiki.html#visualisation-of-vector-data">here</a>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{figure} /fig/en_SMT_ex4_dig_Symbology.PNG
+---
+height: 50px
+name: T
+align: center
+---
+Attribute Table with added polygon 
+```
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p class="sd-card-text"><strong>Make a printable Map</strong></p></li>
+</ol>
 <ul class="simple">
-<li><p>Customize colors (Categorize!), opacity, …</p></li>
-<li><p>Lean how to makew a printable map, map layout, legend, north arrow, etc.</p></li>
+<li><p class="sd-card-text">Lean how to makew a printable map, map layout, legend, north arrow, etc.</p></li>
 </ul>
-</section>
-</section>
-<section id="exercise-b-basic-visulaization-of-sketch-mnap-tool-outputs-in-umap">
-<h2>Exercise B: Basic visulaization of Sketch MNap Tool outputs in UMAP<a class="headerlink" href="#exercise-b-basic-visulaization-of-sketch-mnap-tool-outputs-in-umap" title="Permalink to this heading">#</a></h2>
+<p class="sd-card-text">In the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_map_making_wiki.html#map-making-wiki">Map Making Wiki</a> you can find all the information about making a printable map.</p>
+</div>
+</details></section>
+<section id="exercise-b-basic-visulization-of-sketch-map-tool-outputs-in-umap">
+<h2>Exercise B: Basic visulization of Sketch Map Tool outputs in UMAP<a class="headerlink" href="#exercise-b-basic-visulization-of-sketch-map-tool-outputs-in-umap" title="Permalink to this heading">#</a></h2>
 <section id="background-information-on-umap">
 <h3>Background Information on UMAP<a class="headerlink" href="#background-information-on-umap" title="Permalink to this heading">#</a></h3>
 <p>UMAP (Unified Map Platform) is an online platform that allows users to create custom maps using OpenStreetMap (OSM) data. No installation or registration is necesary which enables users to quickly gain an intuitive overview of their data.
@@ -870,16 +884,7 @@ Useres can customize the appearance of the map and share it with others. It’s 
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-the-trainers">Instructions for the trainers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-a-basic-visulaization-of-sketch-map-tool-outputs-in-qgis">Exercise A: Basic visulaization of Sketch Map Tool outputs in QGIS</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection">1. Data Collection</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#georeferencing-and-autoextraction-with-the-sketch-map-tool">2. Georeferencing and autoextraction with the Sketch Map tool</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-your-qgis-project">3. Start your QGIS Project</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-the-data">3. Explore the data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correct-or-enhance-your-data">5. Correct or enhance your data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-your-data">6. Visualize your data</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-basic-visulaization-of-sketch-mnap-tool-outputs-in-umap">Exercise B: Basic visulaization of Sketch MNap Tool outputs in UMAP</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-basic-visulization-of-sketch-map-tool-outputs-in-umap">Exercise B: Basic visulization of Sketch Map Tool outputs in UMAP</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background-information-on-umap">Background Information on UMAP</a></li>
 </ul>
 </li>
