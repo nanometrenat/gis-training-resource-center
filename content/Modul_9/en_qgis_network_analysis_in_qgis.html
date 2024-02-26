@@ -554,18 +554,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-assess-water-distribution-access">Task 1 - assess water distribution access</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-with-openrouteservice-isochrones">Catchments with openrouteservice isochrones</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-for-operational-facilities">Catchments for operational facilities</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#waterpoint-catchment-by-closest-euclidean-distance">Waterpoint catchment by closest euclidean distance</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-access-healthcare-avoid-areas">Task 2 - access healthcare - avoid areas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones">Healthcare catchment - Isochrones</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-qgis-service-area">Healthcare catchment - QGIS Service area</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones-avoid-flood">Healthcare catchment - Isochrones avoid flood</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-for-operational-facilities">Catchments for operational facilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#waterpoint-catchment-by-closest-euclidean-distance">Waterpoint catchment by closest euclidean distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones-avoid-flood">Healthcare catchment - Isochrones avoid flood</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3">Task 3</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#network-isochrones">Network - Isochrones</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-accumulated-cost">Raster - accumulated cost</a></li>
@@ -584,25 +575,29 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="network-analysis-in-qgis">
 <h1>Network Analysis in QGIS<a class="headerlink" href="#network-analysis-in-qgis" title="Permalink to this heading">#</a></h1>
-<section id="task-1-assess-water-distribution-access">
-<h2>Task 1 - assess water distribution access<a class="headerlink" href="#task-1-assess-water-distribution-access" title="Permalink to this heading">#</a></h2>
-<p>For Camp 18 in Kutupalong Refugee Camp, we have a dataset on the locations of water distribution points. Further we have data on the buildings (footprint and centroid) within camp 18. In the following task we will use the following dataset:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Task 1 - assess water distribution access<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">For Camp 18 in Kutupalong Refugee Camp, we have a dataset on the locations of water distribution points. Further we have data on the buildings (footprint and centroid) within camp 18. In the following task we will use the following dataset:</p>
 <ul class="simple">
-<li><p>Camp18.gpkg</p></li>
+<li><p class="sd-card-text">Camp18.gpkg</p></li>
 </ul>
-<section id="catchments-with-openrouteservice-isochrones">
-<h3>Catchments with openrouteservice isochrones<a class="headerlink" href="#catchments-with-openrouteservice-isochrones" title="Permalink to this heading">#</a></h3>
-<p>Make sure you installed the ORS Tools plugin and set it up already with an API Key. If not, consult Openrouteservice &amp; QGIS Plugin before proceeding.
+<p class="rubric">Catchments with openrouteservice isochrones</p>
+<p class="sd-card-text">Make sure you installed the ORS Tools plugin and set it up already with an API Key. If not, consult Openrouteservice &amp; QGIS Plugin before proceeding.
 Hier Tabelle!
 The result layer shows for every waterpoint a 500m catchment area for pedestrian travel mode. 500m is the maximum distance from any household to the water point according to <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">Sphere</span> <span class="pre">Handbook:</span> <span class="pre">Humanitarian</span> <span class="pre">Charter</span> <span class="pre">and</span> <span class="pre">Minimum</span> <span class="pre">Standards</span> <span class="pre">in</span> <span class="pre">Humanitarian</span> <span class="pre">Response</span></code> p. 106. There are other key indicators like maximum number of people using the facility, queuing time, etc. We will work on the distance as we miss further information like the flow rate per water point or the household size per building.</p>
-<p>We proceed to find out how many water point options are there for each building given the 500m constraint. Basically we add a count aggregation of isochrones that intersect with each building.</p>
-</section>
+</div>
+</details><p>We proceed to find out how many water point options are there for each building given the 500m constraint. Basically we add a count aggregation of isochrones that intersect with each building.</p>
 <section id="catchments-for-operational-facilities">
-<h3>Catchments for operational facilities<a class="headerlink" href="#catchments-for-operational-facilities" title="Permalink to this heading">#</a></h3>
+<h2>Catchments for operational facilities<a class="headerlink" href="#catchments-for-operational-facilities" title="Permalink to this heading">#</a></h2>
 <p>Look into the attributes of the waterpoints layer. Filter for all waterpoints that are operational (<code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Attribute</span></code>). Redo the analysis for operational waterpoints only.</p>
 </section>
 <section id="waterpoint-catchment-by-closest-euclidean-distance">
-<h3>Waterpoint catchment by closest euclidean distance<a class="headerlink" href="#waterpoint-catchment-by-closest-euclidean-distance" title="Permalink to this heading">#</a></h3>
+<h2>Waterpoint catchment by closest euclidean distance<a class="headerlink" href="#waterpoint-catchment-by-closest-euclidean-distance" title="Permalink to this heading">#</a></h2>
 <p>There are other means to generate catchment areas, implemented in QGIS. In the next part we will use the hub distance to calculate the euclidean distance between every building and its closest waterpoint.</p>
 <p>TABELLE!</p>
 <p>The output layer has the same point geometry type like the input building_centroid layer. But it now features two attributes:</p>
@@ -612,31 +607,35 @@ The result layer shows for every waterpoint a 500m catchment area for pedestrian
 </ul>
 <p>All buildings are assigned to their closest waterpoint. With the minimum bounding geometry tool in QGIS we can use this grouping information to create areas from.</p>
 <p>TABELLE!</p>
-</section>
-</section>
-<section id="task-2-access-healthcare-avoid-areas">
-<h2>Task 2 - access healthcare - avoid areas<a class="headerlink" href="#task-2-access-healthcare-avoid-areas" title="Permalink to this heading">#</a></h2>
-<p>For the main area of Kutupalong Refugee Camp, we have the boundary, the path and road network, water streams and health facilities. The boundary is available on <code class="docutils literal notranslate"><span class="pre">HDX</span></code>. Healthcare facilities, the road &amp; path network, streams as well as the health facilities were extracted from <code class="docutils literal notranslate"><span class="pre">OpenStreetMap</span></code>. In this task we will compare openrouteservice isochrone and QGIS built-in service area catchments. Also we will showcase the avoid area feature in openrouteservice to account for a simple simulated flooding.</p>
-<p>Use the following file:</p>
-<ul class="simple">
-<li><p>camp.gpkg</p></li>
-</ul>
-<section id="healthcare-catchment-isochrones">
-<h3>Healthcare catchment - Isochrones<a class="headerlink" href="#healthcare-catchment-isochrones" title="Permalink to this heading">#</a></h3>
-<p>TABELLE!</p>
-</section>
-<section id="healthcare-catchment-qgis-service-area">
-<h3>Healthcare catchment - QGIS Service area<a class="headerlink" href="#healthcare-catchment-qgis-service-area" title="Permalink to this heading">#</a></h3>
-<p>Isochrones in QGIS can be generated via the service area tool in combination with the minimum bounding geometry tool. Based on a road network, we define origins, a default speed, and a maximum cost.</p>
-<p>TABELLE!</p>
-<p>QGIS on-the-fly creates a network graph from the road and path network. The graph is rather simple. All edges can be traveled in both ways, there are no weights included. Travel cost is represented by the length of a segment and the default average speed. The output is a simplification of the input road &amp; path geometry but with the attributes of the healthcare facilities. For every healthcare facility we see a multiline geometry object in the output. We can style it according to the attribute “&#64;osmId” to see which segments are assigned to which facility.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+## Task 2 - access healthcare - avoid areas
+For the main area of Kutupalong Refugee Camp, we have the boundary, the path and road network, water streams and health facilities. The boundary is available on `HDX`. Healthcare facilities, the road &amp; path network, streams as well as the health facilities were extracted from `OpenStreetMap`. In this task we will compare openrouteservice isochrone and QGIS built-in service area catchments. Also we will showcase the avoid area feature in openrouteservice to account for a simple simulated flooding.
+
+Use the following file:
+* camp.gpkg
+
+### Healthcare catchment - Isochrones
+
+TABELLE!
+
+### Healthcare catchment - QGIS Service area
+Isochrones in QGIS can be generated via the service area tool in combination with the minimum bounding geometry tool. Based on a road network, we define origins, a default speed, and a maximum cost. 
+
+TABELLE!
+
+QGIS on-the-fly creates a network graph from the road and path network. The graph is rather simple. All edges can be traveled in both ways, there are no weights included. Travel cost is represented by the length of a segment and the default average speed. The output is a simplification of the input road &amp; path geometry but with the attributes of the healthcare facilities. For every healthcare facility we see a multiline geometry object in the output. We can style it according to the attribute “@osmId” to see which segments are assigned to which facility.
+
+:::{exercise}
+Can you already spot areas that are not reachable within 10 minutes by foot within
+the camp?
+</pre></div>
+</div>
 <p>In order to better compare the result of the service areas and isochrones we will again compute the minimum bounding geometry. But this time for the multiline output of the service area tool.</p>
 </section>
 <section id="healthcare-catchment-isochrones-avoid-flood">
-<h3>Healthcare catchment - Isochrones avoid flood<a class="headerlink" href="#healthcare-catchment-isochrones-avoid-flood" title="Permalink to this heading">#</a></h3>
+<h2>Healthcare catchment - Isochrones avoid flood<a class="headerlink" href="#healthcare-catchment-isochrones-avoid-flood" title="Permalink to this heading">#</a></h2>
 <p>In this part we will again calculate catchments based on the same configured isochrones. But we will include a polygon for the avoid area functionality in openrouteservice. For the <strong>avoid area</strong> we will use the water streams that run through the main camp area. Make sure to buffer the camp_stream layer by 2 meters. The avoid areas function only allows for polygons, not for line geometries. If you have buffered the streams, go ahead with the Isochrones tool again.</p>
 <p>TABELLE!</p>
-</section>
 </section>
 <section id="task-3">
 <h2>Task 3<a class="headerlink" href="#task-3" title="Permalink to this heading">#</a></h2>
@@ -728,18 +727,9 @@ Take a look at the Attribute table of the Isochrone output layer. One of the att
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-assess-water-distribution-access">Task 1 - assess water distribution access</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-with-openrouteservice-isochrones">Catchments with openrouteservice isochrones</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-for-operational-facilities">Catchments for operational facilities</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#waterpoint-catchment-by-closest-euclidean-distance">Waterpoint catchment by closest euclidean distance</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-access-healthcare-avoid-areas">Task 2 - access healthcare - avoid areas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones">Healthcare catchment - Isochrones</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-qgis-service-area">Healthcare catchment - QGIS Service area</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones-avoid-flood">Healthcare catchment - Isochrones avoid flood</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-for-operational-facilities">Catchments for operational facilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#waterpoint-catchment-by-closest-euclidean-distance">Waterpoint catchment by closest euclidean distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones-avoid-flood">Healthcare catchment - Isochrones avoid flood</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3">Task 3</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#network-isochrones">Network - Isochrones</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-accumulated-cost">Raster - accumulated cost</a></li>
