@@ -604,22 +604,18 @@ document.write(`
 <p><strong>The earth is a sphere and cannot be represented on a flat map without being distorted.</strong> To able able to display the earth on a flat map for example as a rectangle it needs to be projected. For further explanation, watch this video.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kIID5FDi2JQ?si=C0tYz7nteMF_xqvr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <p>For this translation, from a curved on a flat surface, thousands of different methods exist. These are called <strong>Coordinate Reference Systems (CRS)</strong>.</p>
-<p><img alt="Different Coordinate Reference Systems" src="../../_images/en_examples_projections_IBIS.png" /></p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Embedded Website <div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<iframe src="http://ibis.colostate.edu/webcontent/NR505/2012_Projects/Team6/GISConcepts.html" width="750" height="500"></iframe>
-</div>
-</details><p>Every projection comes with a trade-off in shape, direction, distance and area. That’s why it is important to choose different types of CRS for different use cases.</p>
+<figure class="align-center" id="examples-for-projections-azimuthal-cylindrical-and-conic">
+<a class="reference internal image-reference" href="../../_images/en_examples_projections_IBIS.png"><img alt="../../_images/en_examples_projections_IBIS.png" src="../../_images/en_examples_projections_IBIS.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Examples for Projections. Source:(<a class="reference external" href="http://ibis.colostate.edu/webcontent/NR505/2012_Projects/Team6/GISConcepts.html">http://ibis.colostate.edu/webcontent/NR505/2012_Projects/Team6/GISConcepts.html</a>)</span><a class="headerlink" href="#examples-for-projections-azimuthal-cylindrical-and-conic" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Every projection comes with a trade-off in shape, direction, distance and area. That’s why it is important to choose different types of CRS for different use cases.</p>
 <p>For example, Mercator projections don´t represent the area correctly. Google Maps still uses the Mercator to be able to represent streets correctly, since it works well on a small scale. On a big scale, the shape of the countries stay the same but the area is mispresented. You can check the true size in comparison to different placements on the map on this <a class="reference external" href="https://www.thetruesize.com">website</a>. A popular example is Greenland in comparison with Africa, which seem on the map to be about the same size, but in reality Africa is a lot bigger.</p>
 <figure class="align-center" id="comparison-greenland-africa">
 <a class="reference internal image-reference" href="../../_images/en_greenland_africa.png"><img alt="../../_images/en_greenland_africa.png" src="../../_images/en_greenland_africa.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Comparison Greenland - Africa. Source: <a class="reference external" href="https://www.thetruesize.com/#?borders=1~!MTYwODM1MTk.MzkyNDUyNg*MjY5NjM4Mzg(MTA1MjgyOTE~!CONTIGUOUS_US*MTAwMjQwNzU.MjUwMjM1MTc(MTc1)MQ~!IN*NTI2NDA1MQ.Nzg2MzQyMQ)MA~!CN*OTkyMTY5Nw.NzMxNDcwNQ(MjI1)Mg">The True Size of</a></span><a class="headerlink" href="#comparison-greenland-africa" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Comparison Greenland - Africa. Source: <a class="reference external" href="https://www.thetruesize.com/#?borders=1~!MTYwODM1MTk.MzkyNDUyNg*MjY5NjM4Mzg(MTA1MjgyOTE~!CONTIGUOUS_US*MTAwMjQwNzU.MjUwMjM1MTc(MTc1)MQ~!IN*NTI2NDA1MQ.Nzg2MzQyMQ)MA~!CN*OTkyMTY5Nw.NzMxNDcwNQ(MjI1)Mg">The True Size of</a></span><a class="headerlink" href="#comparison-greenland-africa" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -662,7 +658,7 @@ Embedded Website <div class="sd-summary-down docutils">
 <figure class="align-center" id="local-and-global-coordinate-reference-systems-crs">
 <a class="reference internal image-reference" href="../../_images/en_local_crs.png"><img alt="../../_images/en_local_crs.png" src="../../_images/en_local_crs.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Local and global coordinate reference systems (CRS). Source: British Red Cross (BRC)</span><a class="headerlink" href="#local-and-global-coordinate-reference-systems-crs" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Local and global coordinate reference systems (CRS). Source: British Red Cross (BRC)</span><a class="headerlink" href="#local-and-global-coordinate-reference-systems-crs" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -724,7 +720,7 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 <figure class="align-center" id="layers-in-a-gis">
 <a class="reference internal image-reference" href="../../_images/en_layer.png"><img alt="../../_images/en_layer.png" src="../../_images/en_layer.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Layers in a GIS. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_1_layers">CartONG</a></span><a class="headerlink" href="#layers-in-a-gis" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Layers in a GIS. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_1_layers">CartONG</a></span><a class="headerlink" href="#layers-in-a-gis" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -734,7 +730,7 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 <figure class="align-center" id="raster-vector-concept">
 <a class="reference internal image-reference" href="../../_images/en_vector_raster.png"><img alt="../../_images/en_vector_raster.png" src="../../_images/en_vector_raster.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Raster Vector Concept. Source: Adapted from <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Raster_vector_tikz.png">WikiMedia</a></span><a class="headerlink" href="#raster-vector-concept" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Raster Vector Concept. Source: Adapted from <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Raster_vector_tikz.png">WikiMedia</a></span><a class="headerlink" href="#raster-vector-concept" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="vector">
@@ -743,7 +739,7 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 <figure class="align-center" id="vector-data-overview">
 <a class="reference internal image-reference" href="../../_images/en_vector_data_overview.drawio.png"><img alt="../../_images/en_vector_data_overview.drawio.png" src="../../_images/en_vector_data_overview.drawio.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Vector Data overview. Source: HeiGIT</span><a class="headerlink" href="#vector-data-overview" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Vector Data overview. Source: HeiGIT</span><a class="headerlink" href="#vector-data-overview" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="vector-file-formats">
@@ -782,7 +778,7 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 <figure class="align-center" id="the-main-geographical-data-formats">
 <a class="reference internal image-reference" href="../../_images/en_data_formats.png"><img alt="../../_images/en_data_formats.png" src="../../_images/en_data_formats.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 32 </span><span class="caption-text">The main geographical data formats. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/4_data_geo/4_1_formats">CartONG</a></span><a class="headerlink" href="#the-main-geographical-data-formats" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">The main geographical data formats. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/4_data_geo/4_1_formats">CartONG</a></span><a class="headerlink" href="#the-main-geographical-data-formats" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -794,7 +790,7 @@ Since a raster is based on an image, the resolution is crucial. It defines the a
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/en_quality_raster.png"><img alt="../../_images/en_quality_raster.png" src="../../_images/en_quality_raster.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">The main geographical data formats. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_3_vector_raster_data">CartONG</a></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">The main geographical data formats. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_3_vector_raster_data">CartONG</a></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In this picture you can see the same location, on the left as vector data, visualising streets and urban area, and on the right hand as raster data (satellite image), showing the land cover.</p>
@@ -807,7 +803,7 @@ Vector</div>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/en_same_location_vector.png"><img alt="../../_images/en_same_location_vector.png" src="../../_images/en_same_location_vector.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text">The same location as vector data. Source: British Red Cross (BRC)</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">The same location as vector data. Source: British Red Cross (BRC)</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -819,7 +815,7 @@ Raster</div>
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/en_same_location_raster.png"><img alt="../../_images/en_same_location_raster.png" src="../../_images/en_same_location_raster.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 35 </span><span class="caption-text">The same location as raster image. Source: British Red Cross (BRC)</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 36 </span><span class="caption-text">The same location as raster image. Source: British Red Cross (BRC)</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
