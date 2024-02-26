@@ -603,21 +603,21 @@ Watch here:<div class="sd-summary-down docutils">
 <p class="sd-card-text">TABELLE!</p>
 </div>
 </details><p>The result layer shows for every waterpoint a 500m catchment area for pedestrian travel mode. 500m is the maximum distance from any household to the water point according to <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">Sphere</span> <span class="pre">Handbook:</span> <span class="pre">Humanitarian</span> <span class="pre">Charter</span> <span class="pre">and</span> <span class="pre">Minimum</span> <span class="pre">Standards</span> <span class="pre">in</span> <span class="pre">Humanitarian</span> <span class="pre">Response</span></code> p. 106. There are other key indicators like maximum number of people using the facility, queuing time, etc. We will work on the distance as we miss further information like the flow rate per water point or the household size per building.</p>
-<div class="question admonition">
-<p class="admonition-title">exercise</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>How is the coverage with water point catchments within camp 18? Any underserved areas?</p>
 </div>
 <p>We proceed to find out how many water point options are there for each building given the 500m constraint. Basically we add a count aggregation of isochrones that intersect with each building.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>What is the min/max number of waterpoints available to the buildings in camp 18?</p>
 </div>
 </section>
 <section id="catchments-for-operational-facilities">
 <h3>Catchments for operational facilities<a class="headerlink" href="#catchments-for-operational-facilities" title="Permalink to this heading">#</a></h3>
 <p>Look into the attributes of the waterpoints layer. Filter for all waterpoints that are operational (<code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Attribute</span></code>). Redo the analysis for operational waterpoints only.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>Is the general coverage different, any undersupplied areas?
 What are the differences in the min/max number of waterpoints available to the buildings in camp 18 compared to using all waterpoints (non-operational, planned)</p>
 </div>
@@ -639,8 +639,8 @@ Watch here:<div class="sd-summary-down docutils">
 <li><p>HubName: The name/id of the closest waterpoint.</p></li>
 <li><p>HubDist: The euclidean distance from the building centroid to the closest waterpoint in meters.</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>What is the shortest / longest euclidean distance from a building to the closest waterpoint.</p>
 </div>
 <p>All buildings are assigned to their closest waterpoint. With the minimum bounding geometry tool in QGIS we can use this grouping information to create areas from.</p>
@@ -653,8 +653,8 @@ Watch here:<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">TABELLE!</p>
 </div>
-</details><div class="admonition note">
-<p class="admonition-title">Note</p>
+</details><div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>Have a close look at the hub distance based catchments. Can you tell that some buildings are quite far from a waterpoint when considering the paths connecting the two?</p>
 </div>
 </section>
@@ -691,14 +691,14 @@ Watch here:<div class="sd-summary-down docutils">
 <p class="sd-card-text">TABELLE!</p>
 </div>
 </details><p>QGIS on-the-fly creates a network graph from the road and path network. The graph is rather simple. All edges can be traveled in both ways, there are no weights included. Travel cost is represented by the length of a segment and the default average speed. The output is a simplification of the input road &amp; path geometry but with the attributes of the healthcare facilities. For every healthcare facility we see a multiline geometry object in the output. We can style it according to the attribute “&#64;osmId” to see which segments are assigned to which facility.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>Can you already spot areas that are not reachable within 10 minutes by foot within
 the camp?</p>
 </div>
 <p>In order to better compare the result of the service areas and isochrones we will again compute the minimum bounding geometry. But this time for the multiline output of the service area tool.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>Compare the results of both catchments. What differences can you spot?</p>
 </div>
 </section>
@@ -714,8 +714,8 @@ Watch here:<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">TABELLE!</p>
 </div>
-</details><div class="admonition note">
-<p class="admonition-title">Note</p>
+</details><div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>Compare the output of the flooded isochrones with the isochrones from before. What differences are apparent for you?</p>
 </div>
 </section>
@@ -757,8 +757,8 @@ Watch here:<div class="sd-summary-down docutils">
 </div>
 </details><p>Select the <strong>Accumulated Cost</strong> output layer and open the <strong>Layer styling panel (F7)</strong> choose <strong>Singleband Pseudocolor</strong>. Adjust the range from a minimum of 0 to a maximum of 60 minutes. Overlay the isochrone output layer. Compare the different catchment areas. Add an OpenStreetMap background layer to better understand the differences. May consider dissolving <strong>(Vector Geometry &gt;&gt; Dissolve)</strong> the isochrone output layer by range value, to get a more clear outline of intersecting ranges in areas with multiple healthcare facilities.
 Take a look at the Attribute table of the Isochrone output layer. One of the attributes bears information on the population living within the boundary of the isochrone. The population estimates are based on the Global Human Settlement Layer project.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
 <p>How many people are covered within 5, 10, 60 minutes in Rwanda according to our Analysis?
 How would you describe the differences?
 What are the advantages/disadvantages of the raster versus the network approach?</p>
