@@ -531,7 +531,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -547,6 +549,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-assess-water-distribution-access">Task 1 - assess water distribution access</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-with-openrouteservice-isochrones">Catchments with openrouteservice isochrones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-for-operational-facilities">Catchments for operational facilities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#waterpoint-catchment-by-closest-euclidean-distance">Waterpoint catchment by closest euclidean distance</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -558,8 +573,46 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="network-analysis-in-qgis">
 <h1>Network Analysis in QGIS<a class="headerlink" href="#network-analysis-in-qgis" title="Permalink to this heading">#</a></h1>
-<p>Basic network capabilities within QGIS</p>
+<section id="task-1-assess-water-distribution-access">
+<h2>Task 1 - assess water distribution access<a class="headerlink" href="#task-1-assess-water-distribution-access" title="Permalink to this heading">#</a></h2>
+<p>For Camp 18 in Kutupalong Refugee Camp, we have a dataset on the locations of water distribution points. Further we have data on the buildings (footprint and centroid) within camp 18. In the following task we will use the following dataset:</p>
+<ul class="simple">
+<li><p>Camp18.gpkg</p></li>
+</ul>
+<section id="catchments-with-openrouteservice-isochrones">
+<h3>Catchments with openrouteservice isochrones<a class="headerlink" href="#catchments-with-openrouteservice-isochrones" title="Permalink to this heading">#</a></h3>
+<p>Make sure you installed the ORS Tools plugin and set it up already with an API Key. If not, consult Openrouteservice &amp; QGIS Plugin before proceeding.
+Hier Tabelle!
+The result layer shows for every waterpoint a 500m catchment area for pedestrian travel mode. 500m is the maximum distance from any household to the water point according to <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">Sphere</span> <span class="pre">Handbook:</span> <span class="pre">Humanitarian</span> <span class="pre">Charter</span> <span class="pre">and</span> <span class="pre">Minimum</span> <span class="pre">Standards</span> <span class="pre">in</span> <span class="pre">Humanitarian</span> <span class="pre">Response</span></code> p. 106. There are other key indicators like maximum number of people using the facility, queuing time, etc. We will work on the distance as we miss further information like the flow rate per water point or the household size per building.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>How is the coverage with water point catchments within camp 18? Any underserved areas?
+</pre></div>
+</div>
+<p>We proceed to find out how many water point options are there for each building given the 500m constraint. Basically we add a count aggregation of isochrones that intersect with each building.</p>
+<p>What is the min/max number of waterpoints available to the buildings in camp 18?</p>
+</section>
+<section id="catchments-for-operational-facilities">
+<h3>Catchments for operational facilities<a class="headerlink" href="#catchments-for-operational-facilities" title="Permalink to this heading">#</a></h3>
+<p>Look into the attributes of the waterpoints layer. Filter for all waterpoints that are operational (<code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Attribute</span></code>). Redo the analysis for operational waterpoints only.</p>
+<p>Is the general coverage different, any undersupplied areas?
+What are the differences in the min/max number of waterpoints available to the buildings in camp 18 compared to using all waterpoints (non-operational, planned)</p>
+</section>
+<section id="waterpoint-catchment-by-closest-euclidean-distance">
+<h3>Waterpoint catchment by closest euclidean distance<a class="headerlink" href="#waterpoint-catchment-by-closest-euclidean-distance" title="Permalink to this heading">#</a></h3>
+<p>There are other means to generate catchment areas, implemented in QGIS. In the next part we will use the hub distance to calculate the euclidean distance between every building and its closest waterpoint.</p>
+<p>TABELLE!</p>
+<p>The output layer has the same point geometry type like the input building_centroid layer. But it now features two attributes:</p>
+<ul>
+<li><p>HubName: The name/id of the closest waterpoint.</p></li>
+<li><p>HubDist: The euclidean distance from the building centroid to the closest waterpoint in meters.</p>
+<p>What is the shortest / longest euclidean distance from a building to the closest waterpoint.</p>
+</li>
+</ul>
+<p>All buildings are assigned to their closest waterpoint. With the minimum bounding geometry tool in QGIS we can use this grouping information to create areas from.</p>
+<p>TABELLE!</p>
+<p>Have a close look at the hub distance based catchments. Can you tell that some buildings are quite far from a waterpoint when considering the paths connecting the two?</p>
 <p><a class="reference external" href="https://docs.qgis.org/3.34/en/docs/user_manual/processing_algs/qgis/networkanalysis.html?highlight=network">https://docs.qgis.org/3.34/en/docs/user_manual/processing_algs/qgis/networkanalysis.html?highlight=network</a></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -616,6 +669,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-1-assess-water-distribution-access">Task 1 - assess water distribution access</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-with-openrouteservice-isochrones">Catchments with openrouteservice isochrones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-for-operational-facilities">Catchments for operational facilities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#waterpoint-catchment-by-closest-euclidean-distance">Waterpoint catchment by closest euclidean distance</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
