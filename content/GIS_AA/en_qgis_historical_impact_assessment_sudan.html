@@ -559,7 +559,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges">Challenges</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challange-1-scatert-information-on-flood-impacts">Challange 1: Scatert information on flood impacts</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challange-2-how-to-get-diverse-data-in-one-easy-to-use-data-format">Challange 2: How to get diverse data in one easy-to-use data format</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challange-3-differentiating-between-riverain-flood-impacts-and-flash-flood-impacts">Challange 3: Differentiating between riverain flood impacts and flash flood impacts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challange-3-differentiating-between-riverine-flood-impacts-and-flash-flood-impacts">Challange 3: Differentiating between riverine flood impacts and flash flood impacts</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concept-of-our-methodology">Key concept of our methodology</a></li>
@@ -625,9 +625,9 @@ Secondly, without a good understanding of which magnitude of flood causes signif
 <h3>Challange 2: How to get diverse data in one easy-to-use data format<a class="headerlink" href="#challange-2-how-to-get-diverse-data-in-one-easy-to-use-data-format" title="Permalink to this heading">#</a></h3>
 <p>Since all information about flood impacts is contained in such a diverse range of documents and formats, it is difficult to bring the information together in one dataset.</p>
 </section>
-<section id="challange-3-differentiating-between-riverain-flood-impacts-and-flash-flood-impacts">
-<h3>Challange 3: Differentiating between riverain flood impacts and flash flood impacts<a class="headerlink" href="#challange-3-differentiating-between-riverain-flood-impacts-and-flash-flood-impacts" title="Permalink to this heading">#</a></h3>
-<p>Ricereich and flash floods often occur at the same time in the same place, so it is almost impossible to state what was the exact cause of the impact.
+<section id="challange-3-differentiating-between-riverine-flood-impacts-and-flash-flood-impacts">
+<h3>Challange 3: Differentiating between riverine flood impacts and flash flood impacts<a class="headerlink" href="#challange-3-differentiating-between-riverine-flood-impacts-and-flash-flood-impacts" title="Permalink to this heading">#</a></h3>
+<p>Riverine and flash floods often occur at the same time in the same place, so it is almost impossible to state what was the exact cause of the impact.
 And even when there was a single flash flood event, in reports it is often referred to as a flood. Hence, there is the real risk that impacts caused by flash floods are listed as river flood impacts.</p>
 </section>
 </section>
@@ -3669,10 +3669,35 @@ Probably, the reddened information is from two different sources. So you can del
 </ul>
 <ol class="arabic simple" start="5">
 <li><p>To see the sum of the different impacts click on Impact_quantity under Values -&gt; <code class="docutils literal notranslate"><span class="pre">Value</span> <span class="pre">Field</span> <span class="pre">Settings</span></code> -&gt; select <code class="docutils literal notranslate"><span class="pre">Sum</span></code>.</p></li>
-<li><p>Directly above the pivot table, you should see the option to filter by year. Select the year you are interested in.</p></li>
+<li><p>Directly above the pivot table, you should see the option to filter by year. Select the year you are interested in. For the following example the year 2020 was used.</p></li>
 </ol>
-<p>Now you can just copy the whole table, and place it in a new worksheet. Make sure to only paste the values.
-This table can now be used to join with an existing geodata set in QGIS.</p>
+<p>Now you can just copy the whole table, and place it in a new worksheet. Make sure to only paste the values. Save this output as a CSV-file, this will make the import of the subset into QGIS easier. Now we can use this table to join it with an existing geodataset in QGIS.</p>
+<p class="rubric">How to further analyse and visualise data in QGIS</p>
+<ol class="arabic simple">
+<li><p>Import the previously created CSV-file into QGIS. Open the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">Manager</span></code> and select the <code class="docutils literal notranslate"><span class="pre">Delimited</span> <span class="pre">Text</span></code> section. Here you can input your CSV-file and depending on the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Format</span></code> you need to define Costum delimiters or you can just select CSV. Always check the Sample Data output at the bottom to see if the import is working as expected. You propably will also need to check the <code class="docutils literal notranslate"><span class="pre">Record</span> <span class="pre">and</span> <span class="pre">Fields</span> <span class="pre">Options</span></code> and specify if your first record is a header or already data. Lastly, it is important to specify the <code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">Definition</span></code>, were you can just select <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">geometry</span></code>. An example will be shown in <a class="reference internal" href="#hia-csv-import"><span class="std std-numref">Fig. 145</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="hia-csv-import">
+<a class="reference internal image-reference" href="../../_images/en_HIA_csv_import.PNG"><img alt="../../_images/en_HIA_csv_import.PNG" src="../../_images/en_HIA_csv_import.PNG" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 145 </span><span class="caption-text">Import of the CSV-data</span><a class="headerlink" href="#hia-csv-import" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>For this example we will use geodata that contains information about the states of Sudan. Make sure that your geodata has the admin_1_PCODE column that will be used for joining the table data with the geodata. We will use the tool <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code>. And select the corresponding columns. This is shown in <a class="reference internal" href="#hia-join"><span class="std std-numref">Fig. 146</span></a> below.</p></li>
+</ol>
+<figure class="align-default" id="hia-join">
+<a class="reference internal image-reference" href="../../_images/en_HIA_join.PNG"><img alt="../../_images/en_HIA_join.PNG" src="../../_images/en_HIA_join.PNG" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 146 </span><span class="caption-text">Join the table information onto geodata</span><a class="headerlink" href="#hia-join" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The information can now be visualized on a spatial scale and maps can be created to transport important information. An example could be to visualize the total affected population for the year of 2020 on state level. But we can also visualize more specific impact types such as damaged schools or damaged sanitation. This is how such a map could look like.</p>
+<figure class="align-default" id="map-coping-sudan">
+<a class="reference internal image-reference" href="../../_images/en_06_2023_Map_coping_sudan.png"><img alt="../../_images/en_06_2023_Map_coping_sudan.png" src="../../_images/en_06_2023_Map_coping_sudan.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 147 </span><span class="caption-text">Example map</span><a class="headerlink" href="#map-coping-sudan" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
 </div>
 </div>
@@ -3753,7 +3778,7 @@ This table can now be used to join with an existing geodata set in QGIS.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges">Challenges</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challange-1-scatert-information-on-flood-impacts">Challange 1: Scatert information on flood impacts</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challange-2-how-to-get-diverse-data-in-one-easy-to-use-data-format">Challange 2: How to get diverse data in one easy-to-use data format</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challange-3-differentiating-between-riverain-flood-impacts-and-flash-flood-impacts">Challange 3: Differentiating between riverain flood impacts and flash flood impacts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challange-3-differentiating-between-riverine-flood-impacts-and-flash-flood-impacts">Challange 3: Differentiating between riverine flood impacts and flash flood impacts</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concept-of-our-methodology">Key concept of our methodology</a></li>
