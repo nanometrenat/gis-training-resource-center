@@ -592,9 +592,17 @@ document.write(`
 </ul>
 <section id="catchments-with-openrouteservice-isochrones">
 <h3>Catchments with openrouteservice isochrones<a class="headerlink" href="#catchments-with-openrouteservice-isochrones" title="Permalink to this heading">#</a></h3>
-<p>Make sure you installed the ORS Tools plugin and set it up already with an API Key. If not, consult Openrouteservice &amp; QGIS Plugin before proceeding.
-Hier Tabelle!
-The result layer shows for every waterpoint a 500m catchment area for pedestrian travel mode. 500m is the maximum distance from any household to the water point according to <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">Sphere</span> <span class="pre">Handbook:</span> <span class="pre">Humanitarian</span> <span class="pre">Charter</span> <span class="pre">and</span> <span class="pre">Minimum</span> <span class="pre">Standards</span> <span class="pre">in</span> <span class="pre">Humanitarian</span> <span class="pre">Response</span></code> p. 106. There are other key indicators like maximum number of people using the facility, queuing time, etc. We will work on the distance as we miss further information like the flow rate per water point or the household size per building.</p>
+<p>Make sure you installed the ORS Tools plugin and set it up already with an API Key. If not, consult Openrouteservice &amp; QGIS Plugin before proceeding.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Watch here:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">TABELLE!</p>
+</div>
+</details><p>The result layer shows for every waterpoint a 500m catchment area for pedestrian travel mode. 500m is the maximum distance from any household to the water point according to <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">Sphere</span> <span class="pre">Handbook:</span> <span class="pre">Humanitarian</span> <span class="pre">Charter</span> <span class="pre">and</span> <span class="pre">Minimum</span> <span class="pre">Standards</span> <span class="pre">in</span> <span class="pre">Humanitarian</span> <span class="pre">Response</span></code> p. 106. There are other key indicators like maximum number of people using the facility, queuing time, etc. We will work on the distance as we miss further information like the flow rate per water point or the household size per building.</p>
 <p>We proceed to find out how many water point options are there for each building given the 500m constraint. Basically we add a count aggregation of isochrones that intersect with each building.</p>
 </section>
 <section id="catchments-for-operational-facilities">
