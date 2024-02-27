@@ -565,6 +565,8 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap-data">OpenStreetMap data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">OpenStreetMap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-osm-plugin">Quick OSM plugin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hot-export-tool">HOT Export Tool</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-turbo">overpass turbo</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ohsome-tools">ohsome tools</a></li>
 </ul>
@@ -811,12 +813,20 @@ document.write(`
 <section id="openstreetmap">
 <h3>OpenStreetMap<a class="headerlink" href="#openstreetmap" title="Permalink to this heading">#</a></h3>
 <p>If you are using version 3.4 or higher in QGIS, it is by default possible to add the OSM base map to your project. Unfold the XYZ tiles, right-click on OpenStreetMap and select add layer to project.</p>
-<figure class="align-default" id="add-osm-basemap">
+<figure class="align-center" id="add-osm-basemap">
 <a class="reference internal image-reference" href="../../_images/en_add_osm_basemap.png"><img alt="../../_images/en_add_osm_basemap.png" src="../../_images/en_add_osm_basemap.png" style="height: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 66 </span><span class="caption-text">Screenshot of how to add OSM basemap</span><a class="headerlink" href="#add-osm-basemap" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
+<section id="quick-osm-plugin">
+<h3>Quick OSM plugin<a class="headerlink" href="#quick-osm-plugin" title="Permalink to this heading">#</a></h3>
+<p>tba</p>
+</section>
+<section id="hot-export-tool">
+<h3>HOT Export Tool<a class="headerlink" href="#hot-export-tool" title="Permalink to this heading">#</a></h3>
+<p>tba</p>
 </section>
 <section id="overpass-turbo">
 <h3>overpass turbo<a class="headerlink" href="#overpass-turbo" title="Permalink to this heading">#</a></h3>
@@ -828,13 +838,13 @@ Search for it in the <a class="reference external" href="https://wiki.openstreet
 <strong>2.  Write or build the query</strong><br />
 Either use the wizard by tiping in <em>amenity=school in Heidelberg</em> or write your own query (f. e. for your bounding box):<br />
 <strong>Wizard:</strong></p>
-<figure class="align-default" id="overpass-turbo-wizard">
+<figure class="align-center" id="overpass-turbo-wizard">
 <a class="reference internal image-reference" href="../../_images/en_wizard_overpassturbo.png"><img alt="../../_images/en_wizard_overpassturbo.png" src="../../_images/en_wizard_overpassturbo.png" style="height: 250px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 67 </span><span class="caption-text">Screenshot of the Wizard in overpass turbo</span><a class="headerlink" href="#overpass-turbo-wizard" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="overpass-turbo-wizard-result">
+<figure class="align-center" id="overpass-turbo-wizard-result">
 <a class="reference internal image-reference" href="../../_images/en_wizard_result.png"><img alt="../../_images/en_wizard_result.png" src="../../_images/en_wizard_result.png" style="height: 250px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 68 </span><span class="caption-text">Screenshot of the result</span><a class="headerlink" href="#overpass-turbo-wizard-result" title="Permalink to this image">#</a></p>
@@ -877,7 +887,7 @@ One can export the results in various ways.</p>
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 Data</label><div class="sd-tab-content docutils">
 <p>By exporting the data as f.e. GeoJSON you can later on import them in your QGIS project.</p>
-<figure class="align-default" id="overpass-turbo-data">
+<figure class="align-center" id="overpass-turbo-data">
 <a class="reference internal image-reference" href="../../_images/en_overpass_turbo_data.png"><img alt="../../_images/en_overpass_turbo_data.png" src="../../_images/en_overpass_turbo_data.png" style="height: 250px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 69 </span><span class="caption-text">Screenshot of how to export data in overpassturbo</span><a class="headerlink" href="#overpass-turbo-data" title="Permalink to this image">#</a></p>
@@ -888,7 +898,7 @@ Data</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 Map</label><div class="sd-tab-content docutils">
 <p>By exporting the query as map, you can share your current view as link or image.</p>
-<figure class="align-default" id="overpass-turbo-map">
+<figure class="align-center" id="overpass-turbo-map">
 <a class="reference internal image-reference" href="../../_images/en_overpass_turbo_map.png"><img alt="../../_images/en_overpass_turbo_map.png" src="../../_images/en_overpass_turbo_map.png" style="height: 150px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 70 </span><span class="caption-text">Screenshot of how to export map in overpassturbo</span><a class="headerlink" href="#overpass-turbo-map" title="Permalink to this image">#</a></p>
@@ -899,7 +909,7 @@ Map</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 Query</label><div class="sd-tab-content docutils">
 <p>By exporting your query you can get the text or convert it to an OverpassXML or OverpassQL formated query.</p>
-<figure class="align-default" id="overpass-turbo-query">
+<figure class="align-center" id="overpass-turbo-query">
 <a class="reference internal image-reference" href="../../_images/en_overpass_turbo_query.png"><img alt="../../_images/en_overpass_turbo_query.png" src="../../_images/en_overpass_turbo_query.png" style="height: 250px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 71 </span><span class="caption-text">Screenshot of how to export query in overpassturbo</span><a class="headerlink" href="#overpass-turbo-query" title="Permalink to this image">#</a></p>
@@ -995,6 +1005,8 @@ Query</label><div class="sd-tab-content docutils">
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap-data">OpenStreetMap data</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">OpenStreetMap</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-osm-plugin">Quick OSM plugin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hot-export-tool">HOT Export Tool</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overpass-turbo">overpass turbo</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ohsome-tools">ohsome tools</a></li>
 </ul>
