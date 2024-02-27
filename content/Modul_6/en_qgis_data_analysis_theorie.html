@@ -554,10 +554,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">Data Analysis</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-analysis">Spatial Analysis</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-spatial-analysis">Data &amp; Spatial Analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#length-surface-circumference">Length, Surface, Circumference</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-statistics">Basic statistics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer-analysis">Buffer analysis</a></li>
@@ -569,7 +566,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hex-maps-hexagon-grids">Hex Maps (Hexagon Grids)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-by-joining-attributes">Analysis by joining attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-by-joining-attributes">Analysis by joining attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-tables">Pivoting tables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-locations-according-to-a-set-of-criteria">Selecting locations according to a set of criteria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpolation-idw-spline">Interpolation (IDW &amp; Spline)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kriging">Kriging</a></li>
 </ul>
             </nav>
         </div>
@@ -586,17 +589,17 @@ document.write(`
 <p>🚧This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
 <p><strong>Competences</strong>:</p>
 <p>This Module covers a general understanding of data analysis, how to create statistics, create buffers, heatmaps, and how to break rivers, roads, or areas into segments. The following modules will cover more complex analysis methods.</p>
-<section id="data-analysis">
-<h2>Data Analysis<a class="headerlink" href="#data-analysis" title="Permalink to this heading">#</a></h2>
+<section id="data-spatial-analysis">
+<h2>Data &amp; Spatial Analysis<a class="headerlink" href="#data-spatial-analysis" title="Permalink to this heading">#</a></h2>
 <p>Even in a single layer, a lot of analysis is possible. However, sometimes the things we want to analyse are <strong>split across</strong> multiple layers. In order to get these insights we use the spatial and non spatial GIS-processing tools we learned in the previous modules. In this module, we will look how to apply these tools, collect and work with data to create meaningful insights. We will go over a few examples of data analysis that are common in humanitarian work.</p>
 <figure class="align-left" id="spatial-analysis-using-multiple-layers-example">
 <a class="reference internal image-reference" href="../../_images/multiple_layer_data_analysis.png"><img alt="../../_images/multiple_layer_data_analysis.png" src="../../_images/multiple_layer_data_analysis.png" style="width: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 131 </span><span class="caption-text">Overlaying layers is a spatial analysis</span><a class="headerlink" href="#spatial-analysis-using-multiple-layers-example" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 131 </span><span class="caption-text">Spatial analysis means using multiple layers to gain new insights</span><a class="headerlink" href="#spatial-analysis-using-multiple-layers-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<section id="spatial-analysis">
-<h3>Spatial Analysis<a class="headerlink" href="#spatial-analysis" title="Permalink to this heading">#</a></h3>
+<aside class="sidebar">
+<p class="sidebar-title">Spatial Analysis</p>
 <ul class="simple">
 <li><p>A spatial analysis can be a result of combining several layers with different information in a single map.</p></li>
 </ul>
@@ -611,6 +614,7 @@ document.write(`
 <li><p>How do locations <strong>change over time</strong>?</p></li>
 </ul>
 <p>Before doing any sort of processing, you need to <strong>familiarise yourself with the data</strong> and understand it.</p>
+</aside>
 <ol class="arabic simple">
 <li><p>The first step is to read the metadata from the source and understand <strong>what data was collected</strong>, <strong>who collected the data</strong>, <strong>and how the data was collected</strong>.</p></li>
 <li><p>Next, open the attribute table and look at the different features and attributes available. What do the attributes show and what are they called?</p></li>
@@ -643,7 +647,7 @@ document.write(`
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Spatial Representation and Analysis
-There are some spatial analysis problems that are difficult to avoid completely. For example the <strong>Modifiable Areal Unit Problem</strong> (pictured below), where the results look different depending on the unit of analysis.</p>
+There are some spatial analysis problems that are difficult to avoid completely. For example the <strong>Modifiable Areal Unit Problem</strong>, where the results look different depending on the unit of analysis.</p>
 <blockquote>
 <div><p>INSERT LINK TO MODIFIABLE AREAL UNIT PROBLEM EXPLANATION</p>
 </div></blockquote>
@@ -687,7 +691,6 @@ There are some spatial analysis problems that are difficult to avoid completely.
 <p><span class="caption-number">Fig. 135 </span><span class="caption-text">Example of a flood risk map. Source: Frank, Enrico &amp; Ramsbottom, David &amp; Avanzi, Agostino. (2016). Flood risk assessment and prioritisation of measures: Two key tools in the development of a national programme of flood risk management measures in Moldova. International Journal of Safety and Security Engineering. 6. 475-484. 10.2495/SAFE-V6-N3-475-484.</span><a class="headerlink" href="#flood-risk-map-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
 </section>
 <section id="length-surface-circumference">
 <h2>Length, Surface, Circumference<a class="headerlink" href="#length-surface-circumference" title="Permalink to this heading">#</a></h2>
@@ -779,7 +782,11 @@ We want to calculate the total length of flooded and unflooded road respectively
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_statistics_by_categories_example
 .mp4"></video></p>
 </div>
-</details><blockquote>
+</details><div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can add a table of the statistics to your print layout by using the “<strong>Add attribute table</strong>”-tool in the print layout composer</p>
+</div>
+<blockquote>
 <div><p>Insert statistics examples</p>
 </div></blockquote>
 </section>
@@ -839,6 +846,7 @@ Assigning a weight to the samples<div class="sd-summary-down docutils">
 <h3>Hex Maps (Hexagon Grids)<a class="headerlink" href="#hex-maps-hexagon-grids" title="Permalink to this heading">#</a></h3>
 <p>Hexagon grids are used to aggregate point incidents in order to normalize geographic data or to mitigate the modifiable area unit problem (problems arising from using irregular shaped polygons). In GIS, we commonly use rectangles (e.g. raster data) or <strong>hexagons</strong>, as these geometries can be repeat in an evenly spaced grid without leaving gaps.</p>
 <p>The advantage of using hexagons is that it is a polygon that closely resembles a <strong>circle</strong> (where the distance to the centre is equal at every point along the outline), but still <strong>leaves no gaps</strong> when placed as a <strong>grid</strong>. This means that it is also possible to use absolute values (no normalizations), since the spatial units have the same size.</p>
+<p>Another advantage is that you can use the hexagon grid as spatial units and combine multiple variables (for example, number of incidents per population size) or calculate indexes.</p>
 <blockquote>
 <div><p>WIKI: <strong>Hexagon grids</strong> are especially useful for density maps. For example, the number of conflict events or water points in an area.</p>
 </div></blockquote>
@@ -884,6 +892,26 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
 </section>
 <section id="analysis-by-joining-attributes">
 <h2>Analysis by joining attributes<a class="headerlink" href="#analysis-by-joining-attributes" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_joins_wiki.html">Joining</a> datasets is a common and useful way to get new insights by adding the information of one table to the other, taking into account key attributes that are used to identify the features that are to be joined.</p>
+<figure class="align-default" id="non-spatial-join-aggregate-table-example">
+<a class="reference internal image-reference" href="../../_images/en_non_spatial_join_aggregate_table.png"><img alt="../../_images/en_non_spatial_join_aggregate_table.png" src="../../_images/en_non_spatial_join_aggregate_table.png" style="width: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 139 </span><span class="caption-text">Table aggregation workflow</span><a class="headerlink" href="#non-spatial-join-aggregate-table-example" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="pivoting-tables">
+<h3>Pivoting tables<a class="headerlink" href="#pivoting-tables" title="Permalink to this heading">#</a></h3>
+<p>Sometimes, the tables are in a format that is not suitable to join. For example, you have multiple zones per land, making the field <code class="docutils literal notranslate"><span class="pre">CNTRY_NAME</span></code> not suitable for aggregation. In this case, it is useful to pivot the table. This means that the fields for the zones and their respective area size are aggregated under the country. The values of the column <code class="docutils literal notranslate"><span class="pre">ZONE</span></code> will be turned into Columns</p>
+</section>
+</section>
+<section id="selecting-locations-according-to-a-set-of-criteria">
+<h2>Selecting locations according to a set of criteria<a class="headerlink" href="#selecting-locations-according-to-a-set-of-criteria" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="interpolation-idw-spline">
+<h2>Interpolation (IDW &amp; Spline)<a class="headerlink" href="#interpolation-idw-spline" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="kriging">
+<h2>Kriging<a class="headerlink" href="#kriging" title="Permalink to this heading">#</a></h2>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -952,10 +980,7 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis">Data Analysis</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spatial-analysis">Spatial Analysis</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-spatial-analysis">Data &amp; Spatial Analysis</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#length-surface-circumference">Length, Surface, Circumference</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-statistics">Basic statistics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer-analysis">Buffer analysis</a></li>
@@ -967,7 +992,13 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hex-maps-hexagon-grids">Hex Maps (Hexagon Grids)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-by-joining-attributes">Analysis by joining attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-by-joining-attributes">Analysis by joining attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-tables">Pivoting tables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-locations-according-to-a-set-of-criteria">Selecting locations according to a set of criteria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpolation-idw-spline">Interpolation (IDW &amp; Spline)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kriging">Kriging</a></li>
 </ul>
   </nav></div>
 
