@@ -612,8 +612,11 @@ The version of a standardized folder structure, that is used for all exercises i
 <li><p>By sharing the whole project folder, we can be certain that the project will run without problems on a different computer.</p></li>
 <li><p>The folder structure supports the proper organization of geodata and supports the stable function of a QGIS project.</p></li>
 </ol>
-<figure class="align-center">
+<figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/Standard_project_folder_structure.drawio.svg"><img alt="../../_images/Standard_project_folder_structure.drawio.svg" src="../../_images/Standard_project_folder_structure.drawio.svg" width="600px" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Standard folder structure. Source: ???</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 </section>
 <section id="geodata-naming">
@@ -663,8 +666,11 @@ Delimited text import</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Tip</p>
 <p>To directly load .csv or EXCEL data into QGIS, the datasets need to have columns containing geometry in the form of latitude (Y-field) and longitude (X-field).</p>
 </div>
-<figure class="align-center">
+<figure class="align-center" id="import-delimited-text">
 <a class="reference internal image-reference" href="../../_images/en_import_delimeted_text.png"><img alt="../../_images/en_import_delimeted_text.png" src="../../_images/en_import_delimeted_text.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Import delimited text.</span><a class="headerlink" href="#import-delimited-text" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt;<code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Delimited</span> <span class="pre">Text</span> <span class="pre">Layer</span></code>.</p></li>
@@ -675,8 +681,11 @@ Delimited text import</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Tip</p>
 <p>To find out which delimiter is used you can open your .csv file in Notepad or Excel. There you can check which delimiter is used to separate the information.</p>
 </div>
-<figure class="align-center">
+<figure class="align-center" id="import-delimited-text-file-format">
 <a class="reference internal image-reference" href="../../_images/en_delimited_text_fileformat.png"><img alt="../../_images/en_delimited_text_fileformat.png" src="../../_images/en_delimited_text_fileformat.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Import delimited text - file format.</span><a class="headerlink" href="#import-delimited-text-file-format" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <ol class="arabic simple" start="4">
 <li><p><code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">definition</span></code>: In this section, you specify which columns of the file contain the spatial information to geo-referenced the data on the map. If the file has a column containing <strong>latitude</strong> and another with <strong>longitude</strong> data, you can use them to georeferenced the data. Check <code class="docutils literal notranslate"><span class="pre">Point</span> <span class="pre">Coordinates</span></code>. Select for <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">field</span></code> “LONGITUDE” and for <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">field</span></code> “LATITUDE”.</p></li>
@@ -706,8 +715,11 @@ Raster data import</label><div class="sd-tab-content docutils">
 <section id="geo-features-and-attributes">
 <h2>Geo features and attributes<a class="headerlink" href="#geo-features-and-attributes" title="Permalink to this heading">#</a></h2>
 <p>Each vector layer consists of geometric elements (points, lines or polygons) and an <strong>attribute table</strong>. The attribute table contains information on each element of the layer. The information is stored in rows and columns in the attribute table. Each <strong>row</strong> in the table represents a <strong>feature</strong>, while <strong>columns</strong> store specific <strong>attributes</strong>. This table facilitates searching, selection, sorting, filtering, and editing of features.</p>
-<figure class="align-center">
+<figure class="align-center" id="vector-data-overview">
 <a class="reference internal image-reference" href="../../_images/en_vector_data_overview.drawio.png"><img alt="../../_images/en_vector_data_overview.drawio.png" src="../../_images/en_vector_data_overview.drawio.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">Vector Data overview. Source: HeiGIT</span><a class="headerlink" href="#vector-data-overview" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -852,20 +864,20 @@ Buttons of Attribute Table<div class="sd-summary-down docutils">
 <section id="open-the-attribute-table">
 <h3>Open the attribute table<a class="headerlink" href="#open-the-attribute-table" title="Permalink to this heading">#</a></h3>
 <p>One can open the attribute table in two ways. Either click right on the chosen layer and select <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">attribute</span> <span class="pre">table</span></code> or click on the symbol on the top.</p>
-<figure class="align-default" id="open-attribute-table-with-right-click">
-<a class="reference internal image-reference" href="../../_images/en_attributetable_right_click.png"><img alt="../../_images/en_attributetable_right_click.png" src="../../_images/en_attributetable_right_click.png" style="height: 600px;" /></a>
+<figure class="align-center" id="open-attribute-table-with-right-click">
+<a class="reference internal image-reference" href="../../_images/en_attributetable_right_click.png"><img alt="../../_images/en_attributetable_right_click.png" src="../../_images/en_attributetable_right_click.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Screenshot of Opening the Attribute Table with right click</span><a class="headerlink" href="#open-attribute-table-with-right-click" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Screenshot of Opening the Attribute Table with right click</span><a class="headerlink" href="#open-attribute-table-with-right-click" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have multiple layers, only the attribute table of the layer selected in the layer panel on the left will open.</p>
 </div>
-<figure class="align-default" id="open-attribute-table-top-right">
-<a class="reference internal image-reference" href="../../_images/en_attributetable_top_right.png"><img alt="../../_images/en_attributetable_top_right.png" src="../../_images/en_attributetable_top_right.png" style="height: 600px;" /></a>
+<figure class="align-center" id="open-attribute-table-top-right">
+<a class="reference internal image-reference" href="../../_images/en_attributetable_top_right.png"><img alt="../../_images/en_attributetable_top_right.png" src="../../_images/en_attributetable_top_right.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Screenshot of Opening the Attribute Table</span><a class="headerlink" href="#open-attribute-table-top-right" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Screenshot of Opening the Attribute Table</span><a class="headerlink" href="#open-attribute-table-top-right" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -885,17 +897,17 @@ The small arrow indicates whether it is sorted ascending or descending.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../../_images/en_ascending.png"><img alt="../../_images/en_ascending.png" src="../../_images/en_ascending.png" style="width: 600px;" /></a>
+<tr class="row-even"><td><figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/en_ascending.png"><img alt="../../_images/en_ascending.png" src="../../_images/en_ascending.png" style="height: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 56 </span><span class="caption-text">The data is sorted ascending.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">The data is sorted ascending.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </td>
-<td><figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../../_images/en_descending.png"><img alt="../../_images/en_descending.png" src="../../_images/en_descending.png" style="width: 600px;" /></a>
+<td><figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/en_descending.png"><img alt="../../_images/en_descending.png" src="../../_images/en_descending.png" style="height: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 57 </span><span class="caption-text">The data is sorted descending.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">The data is sorted descending.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </td>
@@ -924,16 +936,16 @@ The small arrow indicates whether it is sorted ascending or descending.</p>
 <section id="zoom-to-selected-area">
 <h3>Zoom to selected area<a class="headerlink" href="#zoom-to-selected-area" title="Permalink to this heading">#</a></h3>
 <p>Now that you learned how to select features, you can zoom onto your area of interest. To do so you can click on the symbol on the top pannel or click right on the layer and select <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Selection</span></code></p>
-<figure class="align-default" id="zoom-to-selection-top-pannel">
+<figure class="align-center" id="zoom-to-selection-top-pannel">
 <a class="reference internal image-reference" href="../../_images/en_zoom_to_selection_1.png"><img alt="../../_images/en_zoom_to_selection_1.png" src="../../_images/en_zoom_to_selection_1.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Screenshot of how to zoom to Selection on the top.</span><a class="headerlink" href="#zoom-to-selection-top-pannel" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Screenshot of how to zoom to Selection on the top.</span><a class="headerlink" href="#zoom-to-selection-top-pannel" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="zoom-to-selection-right-click">
+<figure class="align-center" id="zoom-to-selection-right-click">
 <a class="reference internal image-reference" href="../../_images/en_zoom_to_selection_2.png"><img alt="../../_images/en_zoom_to_selection_2.png" src="../../_images/en_zoom_to_selection_2.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Screenshot of how to zoom to Selection by clicking right.</span><a class="headerlink" href="#zoom-to-selection-right-click" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Screenshot of how to zoom to Selection by clicking right.</span><a class="headerlink" href="#zoom-to-selection-right-click" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -947,10 +959,10 @@ The small arrow indicates whether it is sorted ascending or descending.</p>
 If you are unsure which format is best, check out the wiki <a class="reference internal" href="../Wiki/en_qgis_geodata_types_wiki.html"><span class="doc std std-doc">Geodata types</span></a></p>
 </div>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_select_export_wiki.mp4"></video></p>
-<figure class="align-default" id="save-selection-right-click">
+<figure class="align-center" id="save-selection-right-click">
 <a class="reference internal image-reference" href="../../_images/en_save_selection.png"><img alt="../../_images/en_save_selection.png" src="../../_images/en_save_selection.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Screenshot of how to save only selected features.</span><a class="headerlink" href="#save-selection-right-click" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Screenshot of how to save only selected features.</span><a class="headerlink" href="#save-selection-right-click" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
