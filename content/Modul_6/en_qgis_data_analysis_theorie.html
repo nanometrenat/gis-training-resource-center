@@ -901,7 +901,7 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
 </figure>
 <section id="pivoting-tables">
 <h3>Pivoting tables<a class="headerlink" href="#pivoting-tables" title="Permalink to this heading">#</a></h3>
-<p>Sometimes, the tables are in a format that is not suitable to join. For example, you have multiple zones per land, making the field <code class="docutils literal notranslate"><span class="pre">CNTRY_NAME</span></code> not suitable for aggregation. In this case, it is useful to pivot the table. This means that the fields for the zones and their respective area size are aggregated under the country. The values of the column <code class="docutils literal notranslate"><span class="pre">ZONE</span></code> will be turned into Columns</p>
+<p>Sometimes, the tables are in a format that is not suitable to join. For example, you have multiple zones per land, making the field <code class="docutils literal notranslate"><span class="pre">CNTRY_NAME</span></code> not suitable for aggregation. In this case, it is useful to pivot the table. This means that the fields for the zones and their respective area size are aggregated under the country. The values of the column <code class="docutils literal notranslate"><span class="pre">ZONE</span></code> will be turned into Columns with the values for the area in these columns. Now you can aggregate this table with additional information that has data on countries.</p>
 </section>
 </section>
 <section id="selecting-locations-according-to-a-set-of-criteria">
