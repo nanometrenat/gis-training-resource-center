@@ -771,18 +771,13 @@ When having two layers with different crs, then select one of the layers as the 
 <h2>The North arrow is not syncing with the corresponding map<a class="headerlink" href="#the-north-arrow-is-not-syncing-with-the-corresponding-map" title="Permalink to this heading">#</a></h2>
 <p><strong>Solution:</strong></p>
 <p>There are two places where you have to define with which map the north arrow should sync with.</p>
-<ol class="arabic simple">
-<li><p>In the <code class="docutils literal notranslate"><span class="pre">Layout</span> <span class="pre">Tab</span></code> (of the print layout) for the map image under <code class="docutils literal notranslate"><span class="pre">General</span> <span class="pre">Settings</span></code> make sure that the reference map has the right map selected.</p></li>
-</ol>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Layout</span> <span class="pre">Tab</span></code> (of the print layout) for the map image under <code class="docutils literal notranslate"><span class="pre">General</span> <span class="pre">Settings</span></code> make sure that the reference map has the right map selected.</p>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/en_qgis_correct_referenciation_to_map.png"><img alt="../../_images/en_qgis_correct_referenciation_to_map.png" src="../../_images/en_qgis_correct_referenciation_to_map.png" style="width: 85%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 34 </span><span class="caption-text">Correct referenciation to map.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="2">
-<li><p>Go to <code class="docutils literal notranslate"><span class="pre">Properties</span></code>, expand <code class="docutils literal notranslate"><span class="pre">Image</span> <span class="pre">Rotation</span></code>, select the <code class="docutils literal notranslate"><span class="pre">Sync</span> <span class="pre">with</span> <span class="pre">map</span> <span class="pre">option</span></code> and define here which map it should be.</p></li>
-</ol>
 <p>See also: Geographic Information Systems
 <a class="reference external" href="https://gis.stackexchange.com/questions/265095/north-arrow-not-syncing-with-map-qgis-2-18#:~:text=1%20Answer&amp;amp;text=2-,There%20are%20TWO%20places%20where%20you%20have%20to%20tell%20it,and%20tell%20it%20which%20map">https://gis.stackexchange.com/questions/265095/north-arrow-not-syncing-with-map-qgis-2-18#:~:text=1 Answer&amp;text=2-,There are TWO places where you have to tell it,and tell it which map</a></p>
 </section>
@@ -840,6 +835,13 @@ The only time the distortion is problematic, is when viewing a global-scale map 
 <p>Your dataset probably has the wrong coordinate system. This is the more general case of the previous problem. This can happen if the coordinate system is missing altogether, in which case GIS software often assumes that it is the same coordinate system as a previously loaded dataset, or the coordinate system set in the “project” or “map document”.</p>
 <p><strong>Solution:</strong></p>
 <p>Redefine the coordinate system, redefine i.e. change the coordinate system but not the coordinates, to the correct coordinate system.</p>
+<p>1, Open your Project: Open the QGIS project where you want to redefine the coordinate system.</p>
+<p>2, Access Project Properties: Go to the “Project” menu at the top of the QGIS window and select “Properties”. Alternatively, you can press Ctrl + Shift + P as a shortcut.</p>
+<p>3, Coordinate System Tab: In the Project Properties window, select the “Coordinate System” tab.</p>
+<p>4, Change Coordinate System: Here, you can select a new coordinate system for your project. You can search for a specific coordinate system using the search bar, or you can browse through the list of available coordinate systems.</p>
+<p>Apply Changes: Once you’ve selected the desired coordinate system, click “OK” to apply the changes. QGIS will reproject the layers in your project to match the new coordinate system.</p>
+<p>5, Check and Adjust Layers: After redefining the coordinate system, it’s essential to check your layers to ensure they align correctly. Some layers may require manual adjustments or reprojection if they don’t align as expected.
+And have also a final look at the right bottom of the QGIS window where the actual CRS is indicated.</p>
 </section>
 <section id="coordinate-systems-what-coordinate-system-should-my-dataset-be-in">
 <h2>Coordinate systems: What coordinate system should my dataset be in?<a class="headerlink" href="#coordinate-systems-what-coordinate-system-should-my-dataset-be-in" title="Permalink to this heading">#</a></h2>
