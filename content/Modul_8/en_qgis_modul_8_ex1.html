@@ -657,44 +657,48 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/mod8_ex1_visualisationmodes.png"><img alt="../../_images/mod8_ex1_visualisationmodes.png" src="../../_images/mod8_ex1_visualisationmodes.png" style="width: 400px;" /></a>
 </figure>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>2. Choose &quot;Singleband Pseudocolour&quot; and selct a colour palette you like just like with vector visualization. Under the classification window you can choose from three classification modes (Continous, Equal interval, Quantile) (**Wiki article**) for the visual classification of the raster. Which one seems to suit the diplay of elevation the best?
-
-3. Finally you can choose between the interpolation methods &quot;Linear&quot; (smooth display) and &quot;Discrete&quot; (display in distinct classes). Choose one of them. If you choose &quot;Discrete&quot; you can alter the number of Classes with the &quot;Classes&quot; dropdown menu.
-</pre></div>
-</div>
+<ol class="arabic simple" start="2">
+<li><p>Choose “Singleband Pseudocolour” and selct a colour palette you like just like with vector visualization. Under the classification window you can choose from three classification modes (Continous, Equal interval, Quantile) (<strong>Wiki article</strong>) for the visual classification of the raster. Which one seems to suit the diplay of elevation the best?</p></li>
+<li><p>Finally you can choose between the interpolation methods “Linear” (smooth display) and “Discrete” (display in distinct classes). Choose one of them. If you choose “Discrete” you can alter the number of Classes with the “Classes” dropdown menu.</p></li>
+</ol>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/mod8_ex1_symbologypanel.png"><img alt="../../_images/mod8_ex1_symbologypanel.png" src="../../_images/mod8_ex1_symbologypanel.png" style="width: 400px;" /></a>
 </figure>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>4. your DEM could look something like this now (colour palette &quot;Spectral&quot; and interpolation &quot;Linear&quot;)
-</pre></div>
-</div>
+<ol class="arabic simple" start="4">
+<li><p>your DEM could look something like this now (colour palette “Spectral” and interpolation “Linear”)</p></li>
+</ol>
 <figure class="align-center">
 <a class="reference internal image-reference" href="fig/mod8_ex1_deml.png"><img alt="fig/mod8_ex1_deml.png" src="fig/mod8_ex1_deml.png" style="width: 400px;" /></a>
 </figure>
-<ol class="arabic simple" start="7">
-<li><p>Now we want to have a look at a different raster: Make the “Pakistan_pop_density_1km” layer visible. This raster stores values of population density per km in 1km x 1km cells, so effectively the approximate population count per area. The initial visualisation seems not to display the information of the different population desities very well as it is mostly black. We will fix this with the following steps:
-1. Have a look of the value range of the raster in the raster properties and check some values in different areas with the <img alt="" src="../../_images/mod8_ex1_informationtool.png" /> tool.
-2. The raster covers a very large value range from around 0,2 - 31300. This is the case because of the disparity in population between very remote areas and extremely densly populated megacities both being present in pakistan. To have a closer look at the value distribution among the cells of the raster generate a <strong>histogramm link</strong> in the layer styling panel by selcting the <img alt="" src="../../_images/mod8_ex1_histogrammicon.png" /> icon on the left and click on “compute histogramm”. Have a closer Look at the histogramm by zoomin in to the range of “Pixel Value” = 5000 and “Frequency” = 2000. A few things are visible:</p>
+<ol class="arabic" start="7">
+<li><p>Now we want to have a look at a different raster: Make the “Pakistan_pop_density_1km” layer visible. This raster stores values of population density per km in 1km x 1km cells, so effectively the approximate population count per area. The initial visualisation seems not to display the information of the different population desities very well as it is mostly black. We will fix this with the following steps:</p>
+<ol class="arabic simple">
+<li><p>Have a look of the value range of the raster in the raster properties and check some values in different areas with the <img alt="" src="../../_images/mod8_ex1_informationtool.png" /> tool.</p></li>
+<li><p>The raster covers a very large value range from around 0,2 - 31300. This is the case because of the disparity in population between very remote areas and extremely densly populated megacities both being present in pakistan. To have a closer look at the value distribution among the cells of the raster generate a <strong>histogramm link</strong> in the layer styling panel by selcting the <img alt="" src="../../_images/mod8_ex1_histogrammicon.png" /> icon on the left and click on “compute histogramm”. Have a closer Look at the histogramm by zoomin in to the range of “Pixel Value” = 5000 and “Frequency” = 2000. A few things are visible:</p></li>
+</ol>
 <ul class="simple">
 <li><p>The Raster values are extremely tailed with very few cells higher than 2000 but extent into ay higher ranges.</p></li>
 <li><p>There are extremely many values in the very low value range</p></li>
 <li><p>The vast majority of the values seem to be between around 0 to 3000.</p></li>
 </ul>
+<ol class="arabic simple" start="3">
+<li><p>Based on the exploration of the histogramm try a few value boundaries for visualisation at the top of your layer styling panel (under Symbology). Keep in mind that we look at population data and that population distribution very spatially heterogenic most of the time. Try the following combination and choose the one that suits the data best:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Min = 0    Max = 1000</p></li>
+<li><p>Min = 0    Max = 3000</p></li>
+<li><p>Min = 0    Max = 5000</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Have a look at the Histogramm of the DEM and adjust the visalization range for the DEM too if you deem it necessary.</p></li>
+<li><p>A common and easy method to enhance the visuals of a map you generate with QGIS is the addition of a trasparent “Hillshade” layer. You can generate it with the “Hillshade” tool that you can find in your toolbox panel or via “raster” &gt; “Analyse” &gt; “Hillshade”.</p></li>
+</ol>
 </li>
 </ol>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>3. Based on the exploration of the histogramm try a few value boundaries for visualisation at the top of your layer styling panel (under Symbology). Keep in mind that we look at population data and that population distribution very spatially heterogenic most of the time. Try the following combination and choose the one that suits the data best:
-  - Min = 0    Max = 1000
-  - Min = 0    Max = 3000
-  - Min = 0    Max = 5000
-
-4. Have a look at the Histogramm of the DEM and adjust the visalization range for the DEM too if you deem it necessary.
-
-8. A common and easy method to enhance the visuals of a map you generate with QGIS is the addition of a trasparent &quot;Hillshade&quot; layer. You can generate it with the &quot;Hillshade&quot; tool that you can find in your toolbox panel or via &quot;raster&quot; &gt; &quot;Analyse&quot; &gt; &quot;Hillshade&quot;. 
-</pre></div>
-</div>
 <p><strong>HILLSHADE BILD</strong></p>
-<div class="highlight-{Nice notranslate"><div class="highlight"><pre><span></span>One advantage of rasterdata over vectordata is that that they are better suited for deriving further data sets such as a hillshade raster. There are a multitude of tools in QGIS for the derivation of topographical paramters such as slope or aspect, hydrological paramters such as stream networks or flow accumulaton and varius different indices.
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One advantage of rasterdata over vectordata is that that they are better suited for deriving further data sets such as a hillshade raster. There are a multitude of tools in QGIS for the derivation of topographical paramters such as slope or aspect, hydrological paramters such as stream networks or flow accumulaton and varius different indices.</p>
 </div>
 </section>
 </section>
