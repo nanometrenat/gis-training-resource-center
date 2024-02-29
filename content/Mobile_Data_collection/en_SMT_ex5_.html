@@ -573,7 +573,6 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-or-for-near-future-connection-of-sketch-map-tool-and-in-field-surveys-f-ex-kobo">Optional or for near future: Connection of Sketch Map Tool and in field Surveys (f.ex. Kobo)</a></li>
 </ul>
             </nav>
         </div>
@@ -744,13 +743,33 @@ In the <code class="docutils literal notranslate"><span class="pre">Raster</span
 </section>
 <section id="visualization">
 <h4>6. Visualization<a class="headerlink" href="#visualization" title="Permalink to this heading">#</a></h4>
-<p>In order to visualize the result right-click on your layer and navigate to <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p>
+<p>In order to visualize the result right-click on your layer and navigate to <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code>
+In the <code class="docutils literal notranslate"><span class="pre">Band</span> <span class="pre">Rendering</span></code> section you can for example choose as <code class="docutils literal notranslate"><span class="pre">Render</span> <span class="pre">Type</span></code> “Singleband pseudocolor” and next to <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">ramp</span></code> choose a color ramp of your choice.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Rendering</span></code> section you can adapt your <code class="docutils literal notranslate"><span class="pre">Blending</span> <span class="pre">mode</span></code>. Play around with the options and the <code class="docutils literal notranslate"><span class="pre">Brightness</span></code> and <code class="docutils literal notranslate"><span class="pre">Contrast</span></code> section in order to find a good match in order to visualize well your findings.
+Please revise <span class="xref myst">XX Chapter</span> in order to lean more about options you have to visualize your raster data.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/en_SMT_ex5_raster_symbology.PNG"><img alt="../../_images/en_SMT_ex5_raster_symbology.PNG" src="../../_images/en_SMT_ex5_raster_symbology.PNG" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text">Raster Symbology</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You will realize that you 0 Values (=no flooding) are still colored, but they are not of interest for us since we are interested in visualizing flooing polygons. In order to make them transparent you can navigate in <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Transparency</span></code> where you’ll see an option for <code class="docutils literal notranslate"><span class="pre">Transparent</span> <span class="pre">pixel</span> <span class="pre">list</span></code>. Click on <code class="docutils literal notranslate"><span class="pre">+</span></code> to specify the pixels values you want to be transparent. In our case, we want al 0 values to be 100% transparent. Once you’ve set the transparency settings as desired, click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to see the changes in the map canvas. If you’re satisfied, click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the Layer Properties dialog.</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/en_SMT_ex5_raster_transparency.PNG"><img alt="../../_images/en_SMT_ex5_raster_transparency.PNG" src="../../_images/en_SMT_ex5_raster_transparency.PNG" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text">Raster Transparency</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Your resulting heatmap yould look something like this, where the darker the areas the more people/sketch maps indicated flooded areas:</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/en_SMT_ex5_heatmap.PNG"><img alt="../../_images/en_SMT_ex5_heatmap.PNG" src="../../_images/en_SMT_ex5_heatmap.PNG" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text">Raster Transparency</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You are not ready to create a presentable printable map. If you dont know how to it, you are welcome to look at our tutorila <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_map_making_wiki.html?highlight=print+layout#map-making-wiki">here</a>.</p>
 </section>
 </section>
-</section>
-<section id="optional-or-for-near-future-connection-of-sketch-map-tool-and-in-field-surveys-f-ex-kobo">
-<h2>Optional or for near future: Connection of Sketch Map Tool and in field Surveys (f.ex. Kobo)<a class="headerlink" href="#optional-or-for-near-future-connection-of-sketch-map-tool-and-in-field-surveys-f-ex-kobo" title="Permalink to this heading">#</a></h2>
-<p>vielleicht noch bessere Ideen?</p>
 </section>
 </section>
 
@@ -820,7 +839,6 @@ In the <code class="docutils literal notranslate"><span class="pre">Raster</span
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-or-for-near-future-connection-of-sketch-map-tool-and-in-field-surveys-f-ex-kobo">Optional or for near future: Connection of Sketch Map Tool and in field Surveys (f.ex. Kobo)</a></li>
 </ul>
   </nav></div>
 
