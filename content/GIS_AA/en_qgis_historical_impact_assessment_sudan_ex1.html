@@ -570,6 +570,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-finding-flood-disaster-timeframes">Task 2- Finding Flood Disaster Timeframes ✅</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-selecting-datasets">Task 3- Selecting datasets</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-preparing-excel-table-structure">Task 4: Preparing Excel table Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-data-compiling">Task 5: Data compiling</a></li>
 </ul>
 </li>
 </ul>
@@ -2373,7 +2374,7 @@ The impact quantity describes simply how many of something. How many people have
 The HeiGIT team used 75 different impact types. You can find the whole list below.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Impact taypes used in Sudan HIA<div class="sd-summary-down docutils">
+Impact types used in Sudan HIA<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -2615,6 +2616,577 @@ Impact taypes used in Sudan HIA<div class="sd-summary-down docutils">
 </div>
 </details></div>
 </details></section>
+<section id="task-5-data-compiling">
+<h2>Task 5: Data compiling<a class="headerlink" href="#task-5-data-compiling" title="Permalink to this heading">#</a></h2>
+<p>Finally, we can start to compile the data. Remember we are using the key + value concept to create a long table. Every piece of information gets one row!</p>
+<ol class="arabic simple">
+<li><p>Find a relevant information in a dataset</p></li>
+<li><p>Date:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Year</span></code>: This information is mandatory! Check to which year the information is revering.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Start_Date</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">End_Date</span></code>: If the information on the timeframe of the flood is available, place the start and end date in these columns.
+This information should be listed in the Flood Events List.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Date</span></code>: If exact information of the date of the <strong>impact</strong> is available, place it here.</p></li>
+</ol>
+</li>
+<li><p>Source_ID: Write the ID in the <code class="docutils literal notranslate"><span class="pre">Dataset_ID</span></code> column.</p></li>
+<li><p>Location:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_level</span></code>: Check t which admin level the information is revering to e.g. state, locality, town or camp.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_1</span></code>: This information is mandatory! To which state is the information revering?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_2</span></code>: If avilebel. To which locality is the information revering?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_3</span></code>: If avilebel. To which town is the information revering?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_camp</span></code>: If avilebel. To which camp is the information revering?</p></li>
+</ol>
+</li>
+</ol>
+<div class="highlight-{attention notranslate"><div class="highlight"><pre><span></span>It is extremely important to use standardised location names for every piece of information. This will limit the effort we need to put into data cleaning later on.
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p><code class="docutils literal notranslate"><span class="pre">Impact_type</span></code>: Select the fitting impact type from the Impact types list or create a new one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Impact_quantity</span></code>: If quantitative information, place the number here.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Impact</span> <span class="pre">quality</span></code>: If qualitative information, place „Yes“ or „No“ here.</p></li>
+</ol>
+<p>Below you can find some examples of pieces of information from different datasets placed in the table structure.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Emergency Plan of Action (EPoA) Sudan: Floods 2018<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is a small extract from Emergency Plan of Action (EPoA) Sudan: Floods 2018 page 4.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/2018_IFRC_20180813_snap_shot.png"><img alt="../../_images/2018_IFRC_20180813_snap_shot.png" src="../../_images/2018_IFRC_20180813_snap_shot.png" style="width: 600px;" /></a>
+</figure>
+<p class="sd-card-text"><strong>Data extracted from dataset</strong></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Year</p></th>
+<th class="head"><p class="sd-card-text">Start_Date</p></th>
+<th class="head"><p class="sd-card-text">End_Date</p></th>
+<th class="head"><p class="sd-card-text">Date</p></th>
+<th class="head"><p class="sd-card-text">source_ID</p></th>
+<th class="head"><p class="sd-card-text">admin_level</p></th>
+<th class="head"><p class="sd-card-text">admin_1</p></th>
+<th class="head"><p class="sd-card-text">admin_2</p></th>
+<th class="head"><p class="sd-card-text">admin_3</p></th>
+<th class="head"><p class="sd-card-text">admin_camp</p></th>
+<th class="head"><p class="sd-card-text">Impact type</p></th>
+<th class="head"><p class="sd-card-text">Impact_quantity</p></th>
+<th class="head"><p class="sd-card-text">Impact_quality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">Locality</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">Elnohoud</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">houses damaged_totaly</p></td>
+<td><p class="sd-card-text">2500</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">Locality</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text">Einhoud</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">houses_damaged_partially</p></td>
+<td><p class="sd-card-text">1500</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">deaths</p></td>
+<td><p class="sd-card-text">6</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">missing people</p></td>
+<td><p class="sd-card-text">3</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Injured</p></td>
+<td><p class="sd-card-text">49</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">livestock deaths</p></td>
+<td><p class="sd-card-text">121</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">30/07/2018</p></td>
+<td><p class="sd-card-text">23/07/2018</p></td>
+<td><p class="sd-card-text">2018_IFRC_20180813</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">West Kordofan</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">water infrastructure_damage</p></td>
+<td><p class="sd-card-text">3</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+SUDAN FLOOD RESPONSE HUMANITARIAN PARTNERS UPDATE BY STATE #3 (as of 19 Oct, 2020)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The map on the first page shows affecte population per state. This information can be extracted.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/UN_OCH_MAP_2021.png"><img alt="../../_images/UN_OCH_MAP_2021.png" src="../../_images/UN_OCH_MAP_2021.png" style="width: 600px;" /></a>
+</figure>
+<p class="sd-card-text"><strong>Data extracted from dataset</strong></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Year</p></th>
+<th class="head"><p class="sd-card-text">Start_Date</p></th>
+<th class="head"><p class="sd-card-text">End_Date</p></th>
+<th class="head"><p class="sd-card-text">Date</p></th>
+<th class="head"><p class="sd-card-text">source_ID</p></th>
+<th class="head"><p class="sd-card-text">admin_level</p></th>
+<th class="head"><p class="sd-card-text">admin_1</p></th>
+<th class="head"><p class="sd-card-text">admin_2</p></th>
+<th class="head"><p class="sd-card-text">admin_3</p></th>
+<th class="head"><p class="sd-card-text">admin_camp</p></th>
+<th class="head"><p class="sd-card-text">Impact type</p></th>
+<th class="head"><p class="sd-card-text">Impact_quantity</p></th>
+<th class="head"><p class="sd-card-text">Impact quality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">2020</p></td>
+<td><p class="sd-card-text">07/2020</p></td>
+<td><p class="sd-card-text">09/2020</p></td>
+<td><p class="sd-card-text">2020 OCHA 20201025</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">Northern</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">pop_affected</p></td>
+<td><p class="sd-card-text">125660</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2020</p></td>
+<td><p class="sd-card-text">07/2020</p></td>
+<td><p class="sd-card-text">09/2020</p></td>
+<td><p class="sd-card-text">2020 OCHA 20201025</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">River Nile</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">pop_affected</p></td>
+<td><p class="sd-card-text">33225</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Humanitarian Bulletin Sudan Issue 35 | 22 - 28 August 2016<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/2016_OCHA_20160828_snapshot.png"><img alt="../../_images/2016_OCHA_20160828_snapshot.png" src="../../_images/2016_OCHA_20160828_snapshot.png" style="width: 600px;" /></a>
+</figure>
+<p class="sd-card-text"><strong>Data extracted from dataset</strong></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Year</p></th>
+<th class="head"><p class="sd-card-text">Start_Date</p></th>
+<th class="head"><p class="sd-card-text">End_Date</p></th>
+<th class="head"><p class="sd-card-text">Date</p></th>
+<th class="head"><p class="sd-card-text">source_ID</p></th>
+<th class="head"><p class="sd-card-text">admin_level</p></th>
+<th class="head"><p class="sd-card-text">admin_1</p></th>
+<th class="head"><p class="sd-card-text">admin_2</p></th>
+<th class="head"><p class="sd-card-text">admin_3</p></th>
+<th class="head"><p class="sd-card-text">admin_camp</p></th>
+<th class="head"><p class="sd-card-text">Impact type</p></th>
+<th class="head"><p class="sd-card-text">Impact_quantity</p></th>
+<th class="head"><p class="sd-card-text">Impact quality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">2016</p></td>
+<td><p class="sd-card-text">06/2016</p></td>
+<td><p class="sd-card-text">09/2016</p></td>
+<td><p class="sd-card-text">2016 OCHA 20160828</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">Kassala</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">affected</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">yes</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2016</p></td>
+<td><p class="sd-card-text">06/2016</p></td>
+<td><p class="sd-card-text">09/2016</p></td>
+<td><p class="sd-card-text">2016 OCHA 20160828</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">affected</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">yes</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">2016</p></td>
+<td><p class="sd-card-text">06/2016</p></td>
+<td><p class="sd-card-text">09/2016</p></td>
+<td><p class="sd-card-text">2016 OCHA 20160828</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">Al Gezira</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">affected</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">yes</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2016</p></td>
+<td><p class="sd-card-text">06/2016</p></td>
+<td><p class="sd-card-text">09/2016</p></td>
+<td><p class="sd-card-text">2016 OCHA 20160828</p></td>
+<td><p class="sd-card-text">State</p></td>
+<td><p class="sd-card-text">Sennar</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">affected</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">yes</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+<td><p class="sd-card-text">…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Sudan Floods Countinue (FloodList)<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The quote below is just one bit of relevant information from the flood list article.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/2013_Floodlist_20130816_snapshot.png"><img alt="../../_images/2013_Floodlist_20130816_snapshot.png" src="../../_images/2013_Floodlist_20130816_snapshot.png" style="width: 800px;" /></a>
+</figure>
+<p class="sd-card-text"><strong>Data extracted from dataset</strong></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Year</p></th>
+<th class="head"><p class="sd-card-text">Start_Date</p></th>
+<th class="head"><p class="sd-card-text">End_Date</p></th>
+<th class="head"><p class="sd-card-text">Date</p></th>
+<th class="head"><p class="sd-card-text">source_ID</p></th>
+<th class="head"><p class="sd-card-text">admin_level</p></th>
+<th class="head"><p class="sd-card-text">admin_1</p></th>
+<th class="head"><p class="sd-card-text">admin_2</p></th>
+<th class="head"><p class="sd-card-text">admin_3</p></th>
+<th class="head"><p class="sd-card-text">admin_camp</p></th>
+<th class="head"><p class="sd-card-text">Impact type</p></th>
+<th class="head"><p class="sd-card-text">Impact_quantity</p></th>
+<th class="head"><p class="sd-card-text">Impact quality</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">2013</p></td>
+<td><p class="sd-card-text">01/08/2013</p></td>
+<td><p class="sd-card-text">21/08/21</p></td>
+<td><p class="sd-card-text">11/08/2013</p></td>
+<td><p class="sd-card-text">2013 Floodlist 201308</p></td>
+<td><p class="sd-card-text">Camp</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">Bellel</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Kalma Camp</p></td>
+<td><p class="sd-card-text">deaths</p></td>
+<td><p class="sd-card-text">14</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">2014</p></td>
+<td><p class="sd-card-text">01/08/2014</p></td>
+<td><p class="sd-card-text">21/08/22</p></td>
+<td><p class="sd-card-text">11/08/2014</p></td>
+<td><p class="sd-card-text">2014 Floodlist 201308</p></td>
+<td><p class="sd-card-text">Camp</p></td>
+<td><p class="sd-card-text">South Darfur</p></td>
+<td><p class="sd-card-text">Bellel</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Kalma Camp</p></td>
+<td><p class="sd-card-text">houses_damaged_totaly</p></td>
+<td><p class="sd-card-text">874</p></td>
+<td><p class="sd-card-text"></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Tipps for data compiling<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Compiling the data in EXCEL is a time-intensive and repeatable task. Here are some tips to speed up the process:</p>
+<p class="sd-card-text"><strong>Excel copy function:</strong></p>
+<p class="sd-card-text">Try to use the copy function of Excel as much as possible. When taking info from a map, the information in the columns, year, start_date, end_date, date, Source_ID, and admin_level usually stay the same. So you can just copy and paste this information. In most cases, you should only write the name of location, Impact_type, Impact_quality and Impact_quantity.</p>
+<p class="sd-card-text"><strong>Use ChatGPT:</strong></p>
+<p class="sd-card-text">If you encounter tables that do not fit into your table structure use ChatGPT to turn them into a long table format. For example, look at the image in the table below.</p>
+<p class="sd-card-text">You can copy the content which produces this text:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+DREF Final Report Sudan: Floods 31 May 2013<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```md
+Affected 
+State
+Locality Houses damage Institutions Sanitation Death 
+of 
+Animals
+Damage 
+to 
+property 
+crops, 
+livestock
+Wounded
+of Death
+No of people 
+affected
+completely
+partially
+Completely
+partially
+Completely
+partially
+Sinnar Abohojar/Senja 3,651 4,819 0 0 0 0 0 1 0 1 34,562
+Kasalla Algrba/Wad 
+helio
+4,875 2,047 165 44 641 17 0 0 0 35 28,245
+White Nile Alrgig/Tandlti/A
+lsalam
+1,800 1,348 0 0 0 0 0 865 7 7 12,845
+Gadarif Aalgalabat/Alma
+faza/Alfaw
+406 591 0 0 0 0 0 0 0 0 4,068
+Khartoum Khartoum 931 1,963 0 0 20 0 0 0 0 0 17,364
+Algeziara Um Algora 521 110 0 4 0 0 0 0 0 0 3,786
+West Darfur Benddsi/Wadi 
+Salih
+1,600 576 0 0 572 0 0 4 0 4 13,056
+Blue Nile Aldamazain/Ba
+w
+381 2,785 0 0 0 0 0 1 0 1 18,996
+Northern Elbrgig/Aldaba 66 302 0 7 0 60 115 0 0 0 2,208
+South 
+Darfur
+Kubom 1,000 1,000 0 0 0 0 0 0 0 0 12,000
+River Nile Albawga/Shandi
+/Aldamir
+54 31 0 0 43 40 0 0 0 0 510
+North 
+Kordofan0
+Shikan/Um 
+Roaba
+370 2,511 0 0 669 0 0 0 0 0 17,286
+South 
+Kordofan
+Aldebb 600 533 0 4 0 0 0 0 0 6,798
+Total 16,225 18,616 167 59 1,945 117 115 865 7 49 177,724
+```
+</pre></div>
+</div>
+</div>
+</details><p class="sd-card-text">Go to ChatGPT and use a prompt like
+„Can you turn this information taken from a Table into a long table format?“ + the table as text</p>
+<p class="sd-card-text">Probably you will have to ask ChatGPT to give you the whole table. Something like: “Super good! Can you give me a table on the other states as well?
+“</p>
+<p class="sd-card-text"><strong>Use Gemini AI:</strong></p>
+<p class="sd-card-text">Google Gemini Can also handle images. For example, it can turn this graph into a table which is much easier to handle than copying everything by hand.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/Sudan_flood_impact_table_2016.png"><img alt="../../_images/Sudan_flood_impact_table_2016.png" src="../../_images/Sudan_flood_impact_table_2016.png" style="width: 600px;" /></a>
+</figure>
+<p class="sd-card-text">The resulting table can easily be adjusted in Excel.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">State</p></th>
+<th class="head"><p class="sd-card-text">Affected People</p></th>
+<th class="head"><p class="sd-card-text">Deaths</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">AL GEZIRA</p></td>
+<td><p class="sd-card-text">23,280</p></td>
+<td><p class="sd-card-text">26</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">BLUE NILE</p></td>
+<td><p class="sd-card-text">1,930</p></td>
+<td><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">E. DARFUR</p></td>
+<td><p class="sd-card-text">150</p></td>
+<td><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">GEDAREF</p></td>
+<td><p class="sd-card-text">11,355</p></td>
+<td><p class="sd-card-text">13</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">KASSALA</p></td>
+<td><p class="sd-card-text">55,880</p></td>
+<td><p class="sd-card-text">6</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">KHARTOUM</p></td>
+<td><p class="sd-card-text">4,305</p></td>
+<td><p class="sd-card-text">2</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">N. DARFUR</p></td>
+<td><p class="sd-card-text">7,367</p></td>
+<td><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">N. KORDOFAN</p></td>
+<td><p class="sd-card-text">5,310</p></td>
+<td><p class="sd-card-text">4</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">NORTHERN</p></td>
+<td><p class="sd-card-text">3,210</p></td>
+<td><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">RED SEA</p></td>
+<td><p class="sd-card-text">520</p></td>
+<td><p class="sd-card-text">3</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">RIVER NILE</p></td>
+<td><p class="sd-card-text">N/A</p></td>
+<td><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">SENNAR</p></td>
+<td><p class="sd-card-text">16,980</p></td>
+<td><p class="sd-card-text">-</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">S. DARFUR</p></td>
+<td><p class="sd-card-text">38,575</p></td>
+<td><p class="sd-card-text">17</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">S. KORDOFAN</p></td>
+<td><p class="sd-card-text">10,812</p></td>
+<td><p class="sd-card-text">7</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">W. DARFUR</p></td>
+<td><p class="sd-card-text">285</p></td>
+<td><p class="sd-card-text">13</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">W. KORDOFAN</p></td>
+<td><p class="sd-card-text">14,340</p></td>
+<td><p class="sd-card-text">6</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">WHITE NILE</p></td>
+<td><p class="sd-card-text">10,160</p></td>
+<td><p class="sd-card-text">1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -2691,6 +3263,7 @@ Impact taypes used in Sudan HIA<div class="sd-summary-down docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2-finding-flood-disaster-timeframes">Task 2- Finding Flood Disaster Timeframes ✅</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-3-selecting-datasets">Task 3- Selecting datasets</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-preparing-excel-table-structure">Task 4: Preparing Excel table Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-data-compiling">Task 5: Data compiling</a></li>
 </ul>
 </li>
 </ul>
