@@ -3679,12 +3679,16 @@ Probably, the reddened information is from two different sources. So you can del
 <p>Now you can just copy the whole table, and place it in a new worksheet. Make sure to only paste the values. Save this output as a CSV-file, this will make the import of the subset into QGIS easier. Now we can use this table to join it with an existing geodataset in QGIS.</p>
 <p class="rubric">How to further analyse and visualise data in QGIS</p>
 <ol class="arabic simple">
-<li><p>Import the previously created CSV-file into QGIS. Open the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">Manager</span></code> and select the <code class="docutils literal notranslate"><span class="pre">Delimited</span> <span class="pre">Text</span></code> section. Here you can input your CSV-file and depending on the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Format</span></code> you need to define Costum delimiters or you can just select CSV. Always check the Sample Data output at the bottom to see if the import is working as expected. You propably will also need to check the <code class="docutils literal notranslate"><span class="pre">Record</span> <span class="pre">and</span> <span class="pre">Fields</span> <span class="pre">Options</span></code> and specify if your first record is a header or already data. Lastly, it is important to specify the <code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">Definition</span></code>, were you can just select <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">geometry</span></code>. An example will be shown in <a class="reference internal" href="#hia-csv-import"><span class="std std-numref">Fig. 176</span></a>.</p></li>
+<li><p>Import the previously created CSV file into QGIS. Open the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">Manager</span></code> and select the <code class="docutils literal notranslate"><span class="pre">Delimited</span> <span class="pre">Text</span></code> section. Here you can input your CSV-file and depending on the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Format</span></code> you need to define Costum delimiters or you can just select CSV. Always check the Sample Data output at the bottom to see if the import is working as expected. You propably will also need to check the <code class="docutils literal notranslate"><span class="pre">Record</span> <span class="pre">and</span> <span class="pre">Fields</span> <span class="pre">Options</span></code> and specify if your first record is a header or already data. Lastly, it is important to specify the <code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">Definition</span></code>, were you can just select <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">geometry</span></code>. An example will be shown in <a class="reference internal" href="#hia-csv-import"><span class="std std-numref">Fig. 176</span></a>.</p></li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To ensure easy data import into QGIS, export the filtered long table data as a CSV file.</p>
+</div>
 <figure class="align-default" id="hia-csv-import">
 <a class="reference internal image-reference" href="../../_images/en_HIA_csv_import.PNG"><img alt="../../_images/en_HIA_csv_import.PNG" src="../../_images/en_HIA_csv_import.PNG" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 176 </span><span class="caption-text">Import of the CSV-data</span><a class="headerlink" href="#hia-csv-import" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 176 </span><span class="caption-text">Import of the CSV data</span><a class="headerlink" href="#hia-csv-import" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="2">
@@ -3693,14 +3697,108 @@ Probably, the reddened information is from two different sources. So you can del
 <figure class="align-default" id="hia-join">
 <a class="reference internal image-reference" href="../../_images/en_HIA_join.PNG"><img alt="../../_images/en_HIA_join.PNG" src="../../_images/en_HIA_join.PNG" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 177 </span><span class="caption-text">Join the table information onto geodata</span><a class="headerlink" href="#hia-join" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 177 </span><span class="caption-text">Join the table information onto the geodata</span><a class="headerlink" href="#hia-join" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The information can now be visualized on a spatial scale and maps can be created to transport important information. An example could be to visualize the total affected population for the year of 2020 on state level. But we can also visualize more specific impact types such as damaged schools or damaged sanitation. This is how such a map could look like.</p>
-<figure class="align-default" id="map-coping-sudan">
-<a class="reference internal image-reference" href="../../_images/en_06_2023_Map_coping_sudan.png"><img alt="../../_images/en_06_2023_Map_coping_sudan.png" src="../../_images/en_06_2023_Map_coping_sudan.png" style="height: 500px;" /></a>
+<figure class="align-default" id="hia-map-houses">
+<a class="reference internal image-reference" href="../../_images/en_HIA_map_houses.png"><img alt="../../_images/en_HIA_map_houses.png" src="../../_images/en_HIA_map_houses.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 178 </span><span class="caption-text">Example map</span><a class="headerlink" href="#map-coping-sudan" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 178 </span><span class="caption-text">Example map</span><a class="headerlink" href="#hia-map-houses" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p class="rubric">Other exemplary analyses</p>
+<p class="rubric">Flood events in Sudanese states for all the recorded years</p>
+<p>In this section we want to analyse and visualise all recorded flooding events for all the Sudanese state. With our filter for the Impact-Type we derive information for the years 2003 until 2021.</p>
+<ol class="arabic simple">
+<li><p>In the first step we will create a new <code class="docutils literal notranslate"><span class="pre">pivot</span> <span class="pre">table</span></code> and store it in a new sheet. Here we will specify the following:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Columns: Impact_Type</p></li>
+<li><p>Rows: admin_1_PCODE</p></li>
+<li><p>Values: Count of impact_quality</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Now we want to filter the columns labels to the following impact types:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Event</p></li>
+<li><p>Flash-flood</p></li>
+<li><p>Flood</p></li>
+<li><p>Flooding</p></li>
+</ul>
+<p>We also want to include the Event and Flash-floods as these types can also be associated with flooding events as a result of heavy rainfall, seasonal rainfall, etc.
+We also want to make sure that we rename the column containing the sum of the flooding events to <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">flood</span> <span class="pre">events</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li><p>Now we export this excel sheet as a CSV file and import it into QGIS. We will open the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">Manager</span></code> and select the <code class="docutils literal notranslate"><span class="pre">Delimited</span> <span class="pre">Text</span></code> section. Here we need to do the following specifications (<a class="reference internal" href="#hia-import-csv-floods"><span class="std std-numref">Fig. 179</span></a>).</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Always check the Sample Data window to see what your data looks like. These specifications may not always be applicable to your data, and you may need to make minor adjustments.</p>
+</div>
+<figure class="align-default" id="hia-import-csv-floods">
+<a class="reference internal image-reference" href="../../_images/en_HIA_import_csv_floods.png"><img alt="../../_images/en_HIA_import_csv_floods.png" src="../../_images/en_HIA_import_csv_floods.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 179 </span><span class="caption-text">Import of the CSV data</span><a class="headerlink" href="#hia-import-csv-floods" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>The next step follows the same logic as step 2 in the previous example. We will use geodata that contains information about the states of Sudan and join them with the imported CSV data. We will use the <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code> tool and select the ADM1_PCODE as the table field used for the join. An example is shown in <a class="reference internal" href="#hia-join-floods"><span class="std std-numref">Fig. 180</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="hia-join-floods">
+<a class="reference internal image-reference" href="../../_images/en_HIA_join_floods.png"><img alt="../../_images/en_HIA_join_floods.png" src="../../_images/en_HIA_join_floods.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 180 </span><span class="caption-text">Join the table information onto the geodata</span><a class="headerlink" href="#hia-join-floods" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>Now we can visualise our results using <code class="docutils literal notranslate"><span class="pre">Graduated</span></code> and selecting the corresponding column of the attribute table <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">flood</span> <span class="pre">events</span></code>. Select an appropriate color scheme and start creating your map. Your final product could look like <a class="reference internal" href="#hia-map-floods"><span class="std std-numref">Fig. 181</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="hia-map-floods">
+<a class="reference internal image-reference" href="../../_images/en_HIA_map_floods.png"><img alt="../../_images/en_HIA_map_floods.png" src="../../_images/en_HIA_map_floods.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 181 </span><span class="caption-text">Example map</span><a class="headerlink" href="#hia-map-floods" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We can expand this analysis by also including the affected population an calculate the average number of affected population per flood event on state level.</p>
+<ol class="arabic simple" start="6">
+<li><p>We continue with creating a new <code class="docutils literal notranslate"><span class="pre">pivot</span> <span class="pre">table</span></code>. We will do the following specifications:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Columns: Impact_Type</p></li>
+<li><p>Rows: admin_1_PCODE</p></li>
+<li><p>Values: Sum of Impact_quantity</p></li>
+</ul>
+<p>Again we will apply a filter to the column labels and select the impact type <code class="docutils literal notranslate"><span class="pre">Pop_affected</span></code>. Also make sure to rename the Grand total to <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">affected</span> <span class="pre">pop</span></code>. Export the subset as a CSV file.</p>
+<ol class="arabic simple" start="7">
+<li><p>The next steps in QGIS will follow the same logic as before. Import the data and join the table onto your output from the previous task. This will look the following <a class="reference internal" href="#hia-join-aff-pop"><span class="std std-numref">Fig. 182</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="hia-join-aff-pop">
+<a class="reference internal image-reference" href="../../_images/en_HIA_join_aff_pop.png"><img alt="../../_images/en_HIA_join_aff_pop.png" src="../../_images/en_HIA_join_aff_pop.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 182 </span><span class="caption-text">Join the table information onto the geodata with the flood information.</span><a class="headerlink" href="#hia-join-aff-pop" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="8">
+<li><p>Now we will calculate the the average number of affected population per flood event on state level. To do so, we need to activate the editing mode for our geodata clicking on this symbol <img alt="" src="../../_images/mActionToggleEditing.png" />. In the next step we will open the <code class="docutils literal notranslate"><span class="pre">Field</span> <span class="pre">calculator</span></code> <img alt="" src="../../_images/mActionCalculateField.png" />. Here we will calculate the sum of the affected population divided by the number of flood events for each state. Your calculation will look like <a class="reference internal" href="#hia-field-calculator"><span class="std std-numref">Fig. 183</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="hia-field-calculator">
+<a class="reference internal image-reference" href="../../_images/en_HIA_field_calculator.png"><img alt="../../_images/en_HIA_field_calculator.png" src="../../_images/en_HIA_field_calculator.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 183 </span><span class="caption-text">Calculate the average number of affected population per flood event on state level.</span><a class="headerlink" href="#hia-field-calculator" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="9">
+<li><p>Visualise the results and create a map.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Two states have NULL values and will not appear when styling the data. The original admin1 Sudan dataset can be used as a mask with the correct styling to include them in our map. This way, we can display the state boundaries without adding any new content.</p>
+</div>
+<figure class="align-default" id="hia-map-affected-pop">
+<a class="reference internal image-reference" href="../../_images/en_HIA_map_affected_pop.png"><img alt="../../_images/en_HIA_map_affected_pop.png" src="../../_images/en_HIA_map_affected_pop.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 184 </span><span class="caption-text">Example map</span><a class="headerlink" href="#hia-map-affected-pop" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
