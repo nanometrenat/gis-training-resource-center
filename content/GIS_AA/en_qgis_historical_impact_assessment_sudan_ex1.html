@@ -614,7 +614,22 @@ The folder is called <strong>GIS_AA_HIA_Sudan_ex1</strong> and contains the whol
 </section>
 <section id="task-2-finding-flood-disaster-timeframes">
 <h2>Task 2- Finding Flood Disaster Timeframes ✅<a class="headerlink" href="#task-2-finding-flood-disaster-timeframes" title="Permalink to this heading">#</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
 <p>This step is outlined in the article Historical Impact Assessment (HIA) for Flood in Suda will not be the subject of this exercise.</p>
+</div>
+<p>We want to tie single pieces of information like impacts, to knowen flood events in Sudan. Thus we first need a comprehensive list of such events. In the case of Sudan, there are two sources, EM-DAT and RelifeWeb. EM-DAT is a disaster database that lists events above a certain severity.
+RelifeWeb is actually an information platform for humanitarian response. But it has a list of active and past disasters as well.
+Both databases list the same events for the most part. By comparing the two datasets and only selecting unique events, we receive a list of all significant flood events in Sudan and the timeframes of all events. This can easily be done in Excel.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>EM-Date and RelifeWeb data overview
+In total, there were 35 flood events reported between 1988 and 2021</p>
+<ul class="simple">
+<li><p>EM-Dat lists 21 flood events in Sudan from 2000 to 2024</p></li>
+<li><p>Relief Web lists 29 events between 1988 and 2024</p></li>
+</ul>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Flood Events List<div class="sd-summary-down docutils">
@@ -733,8 +748,7 @@ Flood Events List<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><p></p>
-</section>
+</details></section>
 <section id="task-3-selecting-datasets">
 <h2>Task 3- Selecting datasets<a class="headerlink" href="#task-3-selecting-datasets" title="Permalink to this heading">#</a></h2>
 <p>In this step, we decide which datasets we want to include in the HIA. In this context, there are three sources we can turn to. The Sudan Red Crescent Society (SRCS), RelifeWeb and FloodList. In this exercise, we will limit ourselves to datasets from RelifeWeb and Floodlist.
@@ -796,8 +810,12 @@ Expected outcome:</p>
 </section>
 <section id="task-4-preparing-excel-table-structure">
 <h2>Task 4: Preparing Excel table Structure ✅<a class="headerlink" href="#task-4-preparing-excel-table-structure" title="Permalink to this heading">#</a></h2>
-<p>Before we can start compiling data, we need to prepare the Excel table structure we want to use. In this exercise, you will be provided with the ready-to-use table. You can find it „temp“ folder of the exercise data structure.</p>
-<p>Below you can find short explanations of the diffrent columns of the table structure.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>In this exercise, you will be provided with the ready-to-use table. You can find it „temp“ folder of the exercise data structure.</p>
+</div>
+<p>Before we can start compiling data, we need to prepare the Excel table structure we want to use. Depending on the context the table structure can look differently. In the end, you need to be able to collect information on when something happened, where it happened and what happened. Furthermore, you need to be able to identify from which dataset you take every single information.
+Below you can find short explanations of the different columns of the table structure.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Date<div class="sd-summary-down docutils">
@@ -3194,12 +3212,79 @@ Sudan Floods Countinue (FloodList)<div class="sd-summary-down docutils">
 </details></section>
 <section id="task-6-hia-data-cleaning">
 <h2>Task 6: HIA Data Cleaning ✅<a class="headerlink" href="#task-6-hia-data-cleaning" title="Permalink to this heading">#</a></h2>
-<p>This step is outlined in the article Historical Impact Assessment (HIA) for Flood in Suda will not be the subject of this exercise.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>In this exercise, you can skip this step by using the provided data in the folder task_7</p>
+</div>
+<p>When creating such a dataset there will be errors like misspellings of names or wrong numbers. To not create faulty analysis products, we need to make sure that our data is consistent. Especially location names are vital in this context since we use these columns to join the data later on a geodata set in QGIS. If for example state names are spelled wrong, this data will be lost.
+To make sure our data is consistent, we need to clean it. Although this can be done using many different programs like Excel, R or Python, we recommend using <a class="reference external" href="https://openrefine.org/">OpenRefein</a>.</p>
+<p>You can do this step task by cleaning the data you compiled in the previous steps or the data from the folder task_6.
+If you want to use the data from the „task_6“ folder, your principal task is to clean the file „Sudan_Impact_uncleaned“. To check your results, you can compare your cleaned data with the file „Imapct_Sudan_cleaned“.</p>
+<ol class="arabic simple">
+<li><p><strong>Year and Columns:</strong></p>
+<ul class="simple">
+<li><p>Check if all values are within the expected range of years.</p></li>
+<li><p>Ensure that there are no missing or invalid year values becaus we need a year information for all data</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” or “Numeric facet” to explore the distribution of values in the Year column. Use the “Text filter” or “Numeric filter” to filter out any rows with invalid or missing year values.</p></li>
+</ul>
+</li>
+<li><p><strong>Date Columns (Start_Date, End_Date, Date):</strong></p>
+<ul class="simple">
+<li><p>Check if all dates are in the correct date format.</p></li>
+<li><p>Ensure that there are no  inconsistent date values.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Edit cells” &gt; “Common transforms” &gt; “To date” option to convert date columns to a standard date format. Use the “Text facet” to identify and correct any inconsistencies in formatting or missing dates.</p></li>
+</ul>
+</li>
+<li><p><strong>source_ID Column:</strong></p>
+<ul class="simple">
+<li><p>Check that there is only one way of spelling for every individual source_ID!</p></li>
+<li><p>Check if all source IDs follow a consistent naming convention.</p></li>
+<li><p>Ensure that there are no missing source IDs.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <code class="docutils literal notranslate"><span class="pre">Cluster</span></code> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code>or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Admin Columns (admin_level, admin_1, admin_2, admin_3, admin_camp):</strong></p>
+<ul class="simple">
+<li><p>Check if all administrative units are correctly categorized.</p></li>
+<li><p>Ensure that there are no misspelled or inconsistent administrative unit names.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <a class="reference external" href="https://openrefine.org/docs/manual/cellediting#cluster-and-edit"><code class="docutils literal notranslate"><span class="pre">Cluster</span></code></a> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Consolidate the of states and loclities that they are consisten with the list in the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/GIS_AA/en_qgis_historical_impact_assessment_sudan.html#location">location chapter</a>.Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Impact Type Column:</strong></p>
+<ul class="simple">
+<li><p>Check if all impact types are correctly categorized and named.</p></li>
+<li><p>Ensure that there are no duplicate or missing impact types.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <a class="reference external" href="https://openrefine.org/docs/manual/cellediting#cluster-and-edit"><code class="docutils literal notranslate"><span class="pre">Cluster</span></code></a> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Impact Quantity Columns:</strong></p>
+<ul class="simple">
+<li><p>Check if all numerical values are within expected ranges.</p></li>
+<li><p>Ensure that there are no missing or invalid numerical values.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Numeric facet” to explore the distribution of values in each numerical column. Use the “Edit cells” or “Transform” option to handle missing or invalid values, and standardize formatting.</p></li>
+</ul>
+</li>
+<li><p><strong>Impact Quality Columns:</strong></p>
+<ul class="simple">
+<li><p>Check that the same impacts are spelt consistently. For example illness names.</p></li>
+<li><p><em>OpenRefine Step:</em> Use the “Text facet” to explore the distribution of values in each admin level column. Click on <a class="reference external" href="https://openrefine.org/docs/manual/cellediting#cluster-and-edit"><code class="docutils literal notranslate"><span class="pre">Cluster</span></code></a> and set <code class="docutils literal notranslate"><span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">collision</span></code> or <code class="docutils literal notranslate"><span class="pre">Nearest</span> <span class="pre">neighbor</span></code>. Adjust wrong names by checking <code class="docutils literal notranslate"><span class="pre">Merge</span></code> and adjust the <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">cell</span> <span class="pre">value</span></code> and click on <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">selected</span> <span class="pre">&amp;</span> <span class="pre">re-cluster</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Delete redundant data</strong></p>
+<ul class="simple">
+<li><p>It might be the case that you have for one flood event, multiple information on for example affected populations for the same location. This could later be a problem when you want to analyse the data.
+Probably, the reddened information is from two different sources. So you can delete the information of the older source and only keep the one from the up-to-date source as possible.</p></li>
+</ul>
+</li>
+</ol>
 </section>
 <section id="task-7-joining-p-code-columns">
 <h2>Task 7: Joining P-Code columns<a class="headerlink" href="#task-7-joining-p-code-columns" title="Permalink to this heading">#</a></h2>
-<p>In this exercise, you can skip this step by using the provided data in the folder task_8
-Usually, it is easier in QGIS to work with data having P-code columns in contrast to state or district names. There is just less potential for errors.
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>In this exercise, you can skip this step by using the provided data in the folder task_8</p>
+</div>
+<p>Usually, it is easier in QGIS to work with data having P-code columns in contrast to state or district names. There is just less potential for errors.
 Once you are done with data compiling and cleaning, it is recommended to join p-code columns to your data. Below you can find a method to do that in Excel.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
