@@ -765,7 +765,7 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <li><p>Click on “Run” to rasterize your floodextents.</p></li>
 </ul>
 </li>
-<li><p>The layer <code class="docutils literal notranslate"><span class="pre">Rastermask_floods</span></code> should now have values of “1” instead of “0” in the cells covered by the flood of 2023. Change the visualization range in your Layer styling panel under “Symbology” <strong>SYMBOLOGY ICON</strong> to Min = 0 and Max = 1 and check if the rasterization was succesful. Youl layer should look something like this (Singleband grey” visalization):</p></li>
+<li><p>The layer <code class="docutils literal notranslate"><span class="pre">Rastermask_floods</span></code> should now have values of “1” instead of “0” in the cells covered by the flood of 2023. Change the visualization range in your Layer styling panel under “Symbology” <strong>SYMBOLOGY ICON</strong> to Min = 0 and Max = 1 and check if the rasterization was succesful. Youl layer should look something like this (Singleband grey” visualization):</p></li>
 </ol>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_floodmask.png"><img alt="../../_images/en_3.34_m8ex1_floodmask.png" src="../../_images/en_3.34_m8ex1_floodmask.png" style="width: 600px;" /></a>
@@ -799,15 +799,9 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 </li>
 </ol>
 <p>Your layer should look something like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{figure} /fig/en_3.34_m8ex1_popflood.png
----
-width: 600px
-name: 
-align: center
----
-```
-</pre></div>
-</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_popflood.png"><img alt="../../_images/en_3.34_m8ex1_popflood.png" src="../../_images/en_3.34_m8ex1_popflood.png" style="width: 600px;" /></a>
+</figure>
 <p>Now we have teached our goal of generating a dataset displaying flood affected population. In the context of real world application in the humanitarian sector or the visualisation of data for people/institutions not familiar with GIS, it can be sensible to aggregate rasterdata on the level of administrative units.</p>
 <ol class="arabic" start="5">
 <li><p>We will achieve this with our produced dataset on the admin 2 level  (districts) in Pakistan by calculating the total population affected by floods per district.</p>
@@ -843,16 +837,10 @@ align: center
 </ol>
 </li>
 </ol>
-<p>Your output layer should look something like this</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{figure} /fig/en_3.34_m8ex1_popflood_districts.png
----
-width: 600px
-name: 
-align: center
----
-```
-</pre></div>
-</div>
+<p>Your output layer should look something like this:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_popflood_districts.png"><img alt="../../_images/en_3.34_m8ex1_popflood_districts.png" src="../../_images/en_3.34_m8ex1_popflood_districts.png" style="width: 600px;" /></a>
+</figure>
 <p>As we now have a rough idea which in which districts large populations where affected by floods we want to explore if precipitation data of 2023 shows similar patterns as heavy rainfall is a major predisposing factor for the occurence riverine floods: Are the districts experiencing flooding also experiencing the most rainfall?</p>
 <ol class="arabic simple" start="5">
 <li><p>We will achieve this with our produced dataset on the admin 2 level  (districts) in Pakistan by calculating the total population affected by floods per district.</p>
@@ -867,15 +855,9 @@ align: center
 </li>
 </ol>
 <p>Your result should look somehing like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{figure} /fig/en_3.34_m8ex1_precip_districts.png
----
-width: 600px
-name: 
-align: center
----
-```
-</pre></div>
-</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_precip_districts.png"><img alt="../../_images/en_3.34_m8ex1_precip_districts.png" src="../../_images/en_3.34_m8ex1_precip_districts.png" style="width: 600px;" /></a>
+</figure>
 <ol class="arabic simple" start="7">
 <li><p>Compare your Layer “Precip_admin2” with “Floodaffected_pop_admin2” and the flooded areas (“Pakistan_floodextent_2023). Would precipitation data be a good paramter for the forecasting of floodexosure in the year 2023? Also have a look at the layer “Pakistan_indusbasin_streams” as well as your DEM and try to explain the observed patterns of the spatial distribution of flooded areas and precipitation.</p></li>
 </ol>
