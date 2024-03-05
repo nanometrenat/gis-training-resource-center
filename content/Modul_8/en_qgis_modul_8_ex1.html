@@ -608,7 +608,7 @@ document.write(`
 <p><strong>Vectordata</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Pakistan_indusbasin_streams.shp</span></code> (Line Geometry)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Pakistan_borders.gpkg</span></code> (GeoPackage)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">Pakistan_admin.gpkg</span></code> (GeoPackage)</p>
 <ul>
 <li><p>Pakistan_national_borders (Lines)</p></li>
 <li><p>Pakistan_admin2 (Polygons)</p></li>
@@ -668,11 +668,11 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <li><p>Finally you can choose between the interpolation methods “Linear” (smooth display) and “Discrete” (display in distinct classes). Choose one of them. If you choose “Discrete” you can alter the number of visual breaks in your data display by changing the number of classes in the “Classes” menu.</p></li>
 </ol>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/mod8_ex1_symbologypanel.png"><img alt="../../_images/mod8_ex1_symbologypanel.png" src="../../_images/mod8_ex1_symbologypanel.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/mod8_ex1_symbologypanel.png"><img alt="../../_images/mod8_ex1_symbologypanel.png" src="../../_images/mod8_ex1_symbologypanel.png" style="width: 600px;" /></a>
 </figure>
 <p>Your DEM (<code class="docutils literal notranslate"><span class="pre">Pakistan_DEM</span></code>) could look something like this now (Colour palette “Spectral” and interpolation “Linear”)</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/mod8_ex1_dem.png"><img alt="../../_images/mod8_ex1_dem.png" src="../../_images/mod8_ex1_dem.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/mod8_ex1_dem.png"><img alt="../../_images/mod8_ex1_dem.png" src="../../_images/mod8_ex1_dem.png" style="width: 600px;" /></a>
 </figure>
 <ol class="arabic" start="10">
 <li><p>Now we want to have a look at a different raster: Make the <code class="docutils literal notranslate"><span class="pre">Pakistan_pop_density_1km</span></code> layer visible. This raster stores values of population density per kilometer in 1km x 1km cells, so effectively the approximate population count per area. The initial visualization seems not to display the information of the different population densities very well, as it is mostly black. We will fix this with the following steps:</p>
@@ -695,7 +695,9 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 </ul>
 </li>
 </ol>
-<p><strong>BILD VALUBOUNDARIES</strong></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="fig/en_3.34_m8ex1_valueboundaries.png"><img alt="fig/en_3.34_m8ex1_valueboundaries.png" src="fig/en_3.34_m8ex1_valueboundaries.png" style="width: 600px;" /></a>
+</figure>
 <ol class="arabic simple" start="11">
 <li><p>Have a look at the histogramm of the DEM and adjust the visualization range for the DEM too if you deem it necessary.</p></li>
 <li><p>A common and easy method to enhance the visuals of a map you generate with QGIS is the addition of a trasparent “Hillshade” layer. You can generate it with the <code class="docutils literal notranslate"><span class="pre">Hillshade</span></code> tool that you can find in your Processing toolbox panel or via <code class="docutils literal notranslate"><span class="pre">Raster</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Analyse</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Hillshade</span></code>.</p>
@@ -713,7 +715,7 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <p>While you can choose from all different visalisation methods for your hillshade layer too, e.g. visualize it with a colour palette, it usually yields the best results to use the default “Singleband gray” method.</p>
 </div>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_hillshade.png"><img alt="../../_images/en_3.34_m8ex1_hillshade.png" src="../../_images/en_3.34_m8ex1_hillshade.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_hillshade.png"><img alt="../../_images/en_3.34_m8ex1_hillshade.png" src="../../_images/en_3.34_m8ex1_hillshade.png" style="width: 600px;" /></a>
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -751,7 +753,7 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 </li>
 </ol>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_createraster.png"><img alt="../../_images/en_3.34_m8ex1_createraster.png" src="../../_images/en_3.34_m8ex1_createraster.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_createraster.png"><img alt="../../_images/en_3.34_m8ex1_createraster.png" src="../../_images/en_3.34_m8ex1_createraster.png" style="width: 600px;" /></a>
 </figure>
 <ol class="arabic simple" start="2">
 <li><p>Now we will convert our Floodextent-Multipolygon (“Pakistan_floodextents_2023.shp”) to the raster format. This process is called “Rasterization”.</p>
@@ -766,7 +768,7 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <li><p>The layer <code class="docutils literal notranslate"><span class="pre">Rastermask_floods</span></code> should now have values of “1” instead of “0” in the cells covered by the flood of 2023. Change the visualization range in your Layer styling panel under “Symbology” <strong>SYMBOLOGY ICON</strong> to Min = 0 and Max = 1 and check if the rasterization was succesful. Youl layer should look something like this (Singleband grey” visalization):</p></li>
 </ol>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_floodmask.png"><img alt="../../_images/en_3.34_m8ex1_floodmask.png" src="../../_images/en_3.34_m8ex1_floodmask.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_floodmask.png"><img alt="../../_images/en_3.34_m8ex1_floodmask.png" src="../../_images/en_3.34_m8ex1_floodmask.png" style="width: 600px;" /></a>
 </figure>
 <ol class="arabic" start="4">
 <li><p>Now we want to extract the population count within the flood zones. We do this by processing two rasters with the <code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Calculator</span></code> (<strong>Extensive Wiki Article</strong>)</p>
@@ -789,7 +791,7 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <li><p>Navigate too your temp folder and save the output raster under “Pop_floodextents” and click “Run” execute the calculation.</p></li>
 </ol>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_rastercalc_popflood.png"><img alt="../../_images/en_3.34_m8ex1_rastercalc_popflood.png" src="../../_images/en_3.34_m8ex1_rastercalc_popflood.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_rastercalc_popflood.png"><img alt="../../_images/en_3.34_m8ex1_rastercalc_popflood.png" src="../../_images/en_3.34_m8ex1_rastercalc_popflood.png" style="width: 600px;" /></a>
 </figure>
 <ol class="arabic simple" start="8">
 <li><p>For the output layer select a visualization range of Min = 0 and Max = 500 and the colour palette “Mako”. the difference in Population density within the areas of the past floods should now be visible.</p></li>
@@ -799,31 +801,84 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <p>Your layer should look something like this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```{figure} /fig/en_3.34_m8ex1_popflood.png
 ---
-width: 400px
+width: 600px
 name: 
 align: center
 ---
 ```
 </pre></div>
 </div>
-<p>Now we have teached our goal of generating a dataset displaying flood affected population. In the context of real world application in the humanitarian sector or the visualisation of data for people/institutions not familiar with GIS, it can be sensible to aggregate rasterdata on the level of administrative units. We will do this with our produced dataset on the admin 2 level  (districts) in Pakistan.</p>
+<p>Now we have teached our goal of generating a dataset displaying flood affected population. In the context of real world application in the humanitarian sector or the visualisation of data for people/institutions not familiar with GIS, it can be sensible to aggregate rasterdata on the level of administrative units.</p>
+<ol class="arabic" start="5">
+<li><p>We will achieve this with our produced dataset on the admin 2 level  (districts) in Pakistan by calculating the total population affected by floods per district.</p>
 <ol class="arabic simple">
 <li><p>Open the tool <code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code> from your Processing Toolbox Panel.</p></li>
+<li><p>As “Input Layer” choose the layer “Pakistan_admin2” with the polygons of administrative districts.</p></li>
+<li><p>As “Raster Layer” choose “Pop_floodextent”.</p></li>
+<li><p>Defining a prefix for your output column is optinal but can be helpful for finding the caculatedb values in large attribute tables. Choose “pop_” as “Output column prefix”.</p></li>
+<li><p>Below “Statistics to calculate” click on the <strong>THREE_DOTS</strong> to acess the different options of statistical operations available for calculating polygon values based on your raster.</p>
+<ul class="simple">
+<li><p>Which statistical operation woud suit the task of calculating flood affected population per district?</p></li>
+</ul>
+</li>
 </ol>
-<p>-&gt; Noch Rastercalculator Beispielaufgaben machen:
-- Addition
-- Maske
-- If When SZATEMENT Z.B POP &gt; X UND DEM &lt; 500</p>
-<p>Präsention
-- Worlpop erklären
-- Erhebungsmethoden
-- Unsicherheiten von Worldpop, können von zensus abweichen
-- Unterschiedliche Formate
-- Beispieledaten rein:
-- Worldopo
-- DEM
-- Landuse
-- Risk Map</p>
+<p>Solution:
+“Sum” is the appropriate method, as we want the total population count per district that results from the additions of the values of all cells with affected population per district.</p>
+<ol class="arabic simple" start="6">
+<li><p>Name your layer “Floodaffected_pop_admin2”, save it to your “output” folder and click <code class="docutils literal notranslate"><span class="pre">Run</span></code>.</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_zonalstat.png"><img alt="../../_images/en_3.34_m8ex1_zonalstat.png" src="../../_images/en_3.34_m8ex1_zonalstat.png" style="width: 600px;" /></a>
+</figure>
+</li>
+<li><p>Now you can refresh your skills learned in the trainings about vector data fort the visualisation of your output layer:</p>
+<ol class="arabic simple">
+<li><p>Perform a visualisation of the values in the newly generated field “pop_sum” with graduated classification and the colour palette “Reds”</p></li>
+<li><p>Choose an appropriate mode of classification, that fits the nature of the displayed data.</p></li>
+<li><p>Enable labels with the district names (colum “xxxx”)</p>
+<ul class="simple">
+<li><p>Which districts display the most population affected by the floods?</p></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p>Your output layer should look something like this</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> ```{figure} /fig/en_3.34_m8ex1_popflood_districts.png
+---
+width: 600px
+name: 
+align: center
+---
+```
+</pre></div>
+</div>
+<p>As we now have a rough idea which in which districts large populations where affected by floods we want to explore if precipitation data of 2023 shows similar patterns as heavy rainfall is a major predisposing factor for the occurence riverine floods: Are the districts experiencing flooding also experiencing the most rainfall?</p>
+<ol class="arabic simple" start="5">
+<li><p>We will achieve this with our produced dataset on the admin 2 level  (districts) in Pakistan by calculating the total population affected by floods per district.</p>
+<ol class="arabic simple">
+<li><p>Again open <code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code>.</p></li>
+<li><p>As “Input Layer” again choose “Pakistan_admin2”. The “Rasterlayer this time is “Pakistan_precip_2023”.</p></li>
+<li><p>Choose the prefix “precip_”.</p></li>
+<li><p>Which statistical method suits the task if you want to compare precipitation across districts in the context of flooding? Choose a method.</p></li>
+<li><p>Name your layer “Precip_admin2”, save it to your “output” folder and click <code class="docutils literal notranslate"><span class="pre">Run</span></code>.</p></li>
+<li><p>Visualize the resuts by implementing a graduated classification of your new column in the attribute table “precip_mean”</p></li>
+</ol>
+</li>
+</ol>
+<p>Your result should look somehing like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> ```{figure} /fig/en_3.34_m8ex1_precip_districts.png
+---
+width: 600px
+name: 
+align: center
+---
+```
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Compare your Layer “Precip_admin2” with “Floodaffected_pop_admin2” and the flooded areas (“Pakistan_floodextent_2023). Would precipitation data be a good paramter for the forecasting of floodexosure in the year 2023? Also have a look at the layer “Pakistan_indusbasin_streams” as well as your DEM and try to explain the observed patterns of the spatial distribution of flooded areas and precipitation.</p></li>
+</ol>
 </section>
 </section>
 
