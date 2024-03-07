@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Module 9 exercise 2 &#8212; GIS Resource Training Center</title>
+    <title>Task 2 - Access healthcare - avoid areas &#8212; GIS Resource Training Center</title>
   
   
   
@@ -65,8 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Modul_9/en_qgis_modul_9_ex2';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="QGIS Trigger Workflow for Somalia" href="../GIS_AA/en_qgis_drought_trigger_somalia.html" />
-    <link rel="prev" title="Module 9 exercise 1" href="en_qgis_modul_9_ex1.html" />
+    <link rel="next" title="Plugin: Openrouteservice (ORS) tools" href="en_qgis_openrouteservice_tools.html" />
+    <link rel="prev" title="Task 1 - Assess water distribution access" href="en_qgis_modul_9_ex1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -327,13 +327,13 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_network_analysis_theory.html">Spatial Network Analysis Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_network_analysis_in_qgis.html">Network Analysis in QGIS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="en_qgis_openrouteservice_tools.html">Plugin: Openrouteservice (ORS) tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="en_qgis_qneat3.html">Plugin: QGIS Network Analysis Toolbox 3 (QNEAT3)</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="en_qgis_modul_9_exercises.html">Exercises Network Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="en_qgis_modul_9_ex1.html">Module 9 exercise 1</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module 9 exercise 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_modul_9_ex1.html">Task 1 - Assess water distribution access</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Task 2 - Access healthcare - avoid areas</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_openrouteservice_tools.html">Plugin: Openrouteservice (ORS) tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_qneat3.html">Plugin: QGIS Network Analysis Toolbox 3 (QNEAT3)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">GIS in Anticipatory Action</span></p>
 <ul class="nav bd-sidenav">
@@ -537,7 +537,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -548,11 +550,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Module 9 exercise 2</h1>
+    <h1>Task 2 - Access healthcare - avoid areas</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones">Healthcare catchment - Isochrones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-qgis-service-area">Healthcare catchment - QGIS Service area</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones-avoid-flood">Healthcare catchment - Isochrones avoid flood</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -562,9 +574,66 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="module-9-exercise-2">
-<h1>Module 9 exercise 2<a class="headerlink" href="#module-9-exercise-2" title="Permalink to this heading">#</a></h1>
-<p>Placeholder for second exercise</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="task-2-access-healthcare-avoid-areas">
+<h1>Task 2 - Access healthcare - avoid areas<a class="headerlink" href="#task-2-access-healthcare-avoid-areas" title="Permalink to this heading">#</a></h1>
+<p>For the main area of Kutupalong Refugee Camp, we have the boundary, the path and road network, water streams and health facilities. The boundary is available on <code class="docutils literal notranslate"><span class="pre">HDX</span></code>. Healthcare facilities, the road &amp; path network, streams as well as the health facilities were extracted from <code class="docutils literal notranslate"><span class="pre">OpenStreetMap</span></code>. In this task we will compare openrouteservice isochrone and QGIS built-in service area catchments. Also we will showcase the avoid area feature in openrouteservice to account for a simple simulated flooding.</p>
+<p>Use the following file:</p>
+<ul class="simple">
+<li><p>camp.gpkg</p></li>
+</ul>
+<section id="healthcare-catchment-isochrones">
+<h2>Healthcare catchment - Isochrones<a class="headerlink" href="#healthcare-catchment-isochrones" title="Permalink to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Watch here:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">TABELLE!</p>
+</div>
+</details></section>
+<section id="healthcare-catchment-qgis-service-area">
+<h2>Healthcare catchment - QGIS Service area<a class="headerlink" href="#healthcare-catchment-qgis-service-area" title="Permalink to this heading">#</a></h2>
+<p>Isochrones in QGIS can be generated via the service area tool in combination with the minimum bounding geometry tool. Based on a road network, we define origins, a default speed, and a maximum cost.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Watch here:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">TABELLE!</p>
+</div>
+</details><p>QGIS on-the-fly creates a network graph from the road and path network. The graph is rather simple. All edges can be traveled in both ways, there are no weights included. Travel cost is represented by the length of a segment and the default average speed. The output is a simplification of the input road &amp; path geometry but with the attributes of the healthcare facilities. For every healthcare facility we see a multiline geometry object in the output. We can style it according to the attribute “&#64;osmId” to see which segments are assigned to which facility.</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>Can you already spot areas that are not reachable within 10 minutes by foot within
+the camp?</p>
+</div>
+<p>In order to better compare the result of the service areas and isochrones we will again compute the minimum bounding geometry. But this time for the multiline output of the service area tool.</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>Compare the results of both catchments. What differences can you spot?</p>
+</div>
+</section>
+<section id="healthcare-catchment-isochrones-avoid-flood">
+<h2>Healthcare catchment - Isochrones avoid flood<a class="headerlink" href="#healthcare-catchment-isochrones-avoid-flood" title="Permalink to this heading">#</a></h2>
+<p>In this part we will again calculate catchments based on the same configured isochrones. But we will include a polygon for the avoid area functionality in openrouteservice. For the <strong>avoid area</strong> we will use the water streams that run through the main camp area. Make sure to buffer the camp_stream layer by 2 meters. The avoid areas function only allows for polygons, not for line geometries. If you have buffered the streams, go ahead with the Isochrones tool again.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Watch here:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">TABELLE!</p>
+</div>
+</details><div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>Compare the output of the flooded isochrones with the isochrones from before. What differences are apparent for you?</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -603,15 +672,15 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Module 9 exercise 1</p>
+        <p class="prev-next-title">Task 1 - Assess water distribution access</p>
       </div>
     </a>
     <a class="right-next"
-       href="../GIS_AA/en_qgis_drought_trigger_somalia.html"
+       href="en_qgis_openrouteservice_tools.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">QGIS Trigger Workflow for Somalia</p>
+        <p class="prev-next-title">Plugin: Openrouteservice (ORS) tools</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -621,6 +690,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones">Healthcare catchment - Isochrones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-qgis-service-area">Healthcare catchment - QGIS Service area</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones-avoid-flood">Healthcare catchment - Isochrones avoid flood</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
