@@ -579,6 +579,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-tables">Pivoting tables</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-appropriate-locations-according-to-a-set-of-criteria">Selecting appropriate locations according to a set of criteria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpolation">Interpolation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#idw-interpolation-inverse-distance-weighted">IDW-Interpolation (Inverse Distance Weighted)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spline-interpolation">Spline Interpolation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kriging">Kriging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolizing-continuous-data">Symbolizing continuous data</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -976,51 +984,44 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
 </figure>
 </div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-## Selecting appropriate locations according to a set of criteria
-
-## Interpolation 
-
-&gt;insert links
-
-Spatial interpolation uses point data to estimate values at other unknown points. This is extremely useful for spatial pheonomena that are [continuous](link), such as rainfall or temperature. For example, you have point data of the temperatures at weather stations, but you want to estimate the temperatures in between these points. Spatial Interpolation can estimate the temperature in between those points. This form of interpolation is called a __statistical surface__. Interpolation can be used to calculate elevation data, precipitation, snow accumulation, water table and population density for example. 
-
-```{figure} ../../fig/interpolation_example_temperature.png
----
-name: interpolation example temperature heidelberg
-width: 400 px
----
-Temperature map interpolated from weather stations in Heidelberg, Germany using IDW-interpolation.
-```
-
-Interpolating data can be highly useful since an extensive data collection is costly and rarely possible. Data collection for continuous phenomena is usually conducted only at a small number of locations. Interpolation models use these points to calculate a raster surface with estimated values for each raster cell. 
-
-There are many differnt interpolation methods, each suited for another type of phenomenon or able to take into account different characteristics. In GIS, the most commonly used interpolation methods are __Spline interpolation__, __Inverse Distance Weighted Interpolation (IDW)__, and __Kriging__. In the following subchapters, we will take a look at these methods, and discuss their strengths and shortcomings.
-
-### IDW-Interpolation (Inverse Distance Weighted)
-
-In the IDW interpolation method, the distance of a sample point to the point that is to be calculated dictates how much the value of the sample points influences the value of the unknown point. The weight of a point is assigned to sample points by assigning a weighting coefficient that dictates how much the influence of a sample point will drop as the distance increases. The further away the known sample point is located, the less influence it has on the point that is to be calculated. 
-
-```{figure} ../../fig/en_idw_explanation.png
----
-name: IDW interpolation explanation, Mitas &amp; Mitasova 1999
-width: 500px
----
-Inverse Distance Weighted interpolation based on weighted sample point distance (left). Interpolated IDW surface from elevation vector points (right). (Source: Mitas, L., Mitasova, H. (1999). Spatial Interpolation. In: P.Longley, M.F. Goodchild, D.J. Maguire, D.W.Rhind (Eds.), Geographical Information Systems: Principles, Techniques, Management and Applications, Wiley.)
-```
-
-Keep in mind that IDW interpolation has a few __disadvantages__. For example, the quality of the calculated statistical surface decreases, if the distribution of sample points is uneven. Additionally, the highest and lowest values in the interpolated surface only occur at sample points, which is probably not the case in the real world. This often results in peaks or pits aroung the sample data points (see [IDW interpolatino example](giscience.github.io/gis-training-resource-center/content/Modul_6/en_qgis_data_analysis_theorie.html#Interpolation)) (adopted from the QGIS documentation). 
-
-### Spline Interpolation
-
-### Kriging
-
-### Symbolizing continuous data
-
-
-
-</pre></div>
-</div>
+</section>
+</section>
+<section id="selecting-appropriate-locations-according-to-a-set-of-criteria">
+<h2>Selecting appropriate locations according to a set of criteria<a class="headerlink" href="#selecting-appropriate-locations-according-to-a-set-of-criteria" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="interpolation">
+<h2>Interpolation<a class="headerlink" href="#interpolation" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>insert links</p>
+</div></blockquote>
+<p>Spatial interpolation uses point data to estimate values at other unknown points. This is extremely useful for spatial pheonomena that are <span class="xref myst">continuous</span>, such as rainfall or temperature. For example, you have point data of the temperatures at weather stations, but you want to estimate the temperatures in between these points. Spatial Interpolation can estimate the temperature in between those points. This form of interpolation is called a <strong>statistical surface</strong>. Interpolation can be used to calculate elevation data, precipitation, snow accumulation, water table and population density for example.</p>
+<figure class="align-default" id="interpolation-example-temperature-heidelberg">
+<a class="reference internal image-reference" href="../../_images/interpolation_example_temperature.png"><img alt="../../_images/interpolation_example_temperature.png" src="../../_images/interpolation_example_temperature.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 174 </span><span class="caption-text">Temperature map interpolated from weather stations in Heidelberg, Germany using IDW-interpolation.</span><a class="headerlink" href="#interpolation-example-temperature-heidelberg" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Interpolating data can be highly useful since an extensive data collection is costly and rarely possible. Data collection for continuous phenomena is usually conducted only at a small number of locations. Interpolation models use these points to calculate a raster surface with estimated values for each raster cell.</p>
+<p>There are many differnt interpolation methods, each suited for another type of phenomenon or able to take into account different characteristics. In GIS, the most commonly used interpolation methods are <strong>Spline interpolation</strong>, <strong>Inverse Distance Weighted Interpolation (IDW)</strong>, and <strong>Kriging</strong>. In the following subchapters, we will take a look at these methods, and discuss their strengths and shortcomings.</p>
+<section id="idw-interpolation-inverse-distance-weighted">
+<h3>IDW-Interpolation (Inverse Distance Weighted)<a class="headerlink" href="#idw-interpolation-inverse-distance-weighted" title="Permalink to this heading">#</a></h3>
+<p>In the IDW interpolation method, the distance of a sample point to the point that is to be calculated dictates how much the value of the sample points influences the value of the unknown point. The weight of a point is assigned to sample points by assigning a weighting coefficient that dictates how much the influence of a sample point will drop as the distance increases. The further away the known sample point is located, the less influence it has on the point that is to be calculated.</p>
+<figure class="align-default" id="idw-interpolation-explanation-mitas-mitasova-1999">
+<a class="reference internal image-reference" href="../../_images/en_idw_explanation.png"><img alt="../../_images/en_idw_explanation.png" src="../../_images/en_idw_explanation.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 175 </span><span class="caption-text">Inverse Distance Weighted interpolation based on weighted sample point distance (left). Interpolated IDW surface from elevation vector points (right). (Source: Mitas, L., Mitasova, H. (1999). Spatial Interpolation. In: P.Longley, M.F. Goodchild, D.J. Maguire, D.W.Rhind (Eds.), Geographical Information Systems: Principles, Techniques, Management and Applications, Wiley.)</span><a class="headerlink" href="#idw-interpolation-explanation-mitas-mitasova-1999" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Keep in mind that IDW interpolation has a few <strong>disadvantages</strong>. For example, the quality of the calculated statistical surface decreases, if the distribution of sample points is uneven. Additionally, the highest and lowest values in the interpolated surface only occur at sample points, which is probably not the case in the real world. This often results in peaks or pits aroung the sample data points (see <span class="xref myst">IDW interpolatino example</span>) (adopted from the QGIS documentation).</p>
+</section>
+<section id="spline-interpolation">
+<h3>Spline Interpolation<a class="headerlink" href="#spline-interpolation" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="kriging">
+<h3>Kriging<a class="headerlink" href="#kriging" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="symbolizing-continuous-data">
+<h3>Symbolizing continuous data<a class="headerlink" href="#symbolizing-continuous-data" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -1107,6 +1108,14 @@ Keep in mind that IDW interpolation has a few __disadvantages__. For example, th
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-by-joining-attributes">Analysis by joining attributes</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-tables">Pivoting tables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-appropriate-locations-according-to-a-set-of-criteria">Selecting appropriate locations according to a set of criteria</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpolation">Interpolation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#idw-interpolation-inverse-distance-weighted">IDW-Interpolation (Inverse Distance Weighted)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spline-interpolation">Spline Interpolation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kriging">Kriging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolizing-continuous-data">Symbolizing continuous data</a></li>
 </ul>
 </li>
 </ul>
