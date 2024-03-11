@@ -561,21 +561,22 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">What is GIS? (Theory)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gis-vs-cartography">GIS vs Cartography</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-spatial-analysis">What is Spatial Analysis?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-from-the-past-john-snows-cholera-map">An Example from the Past: John Snows’ Cholera Map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-gis-used-by-humanitarian-organisations">Examples of GIS used by humanitarian organisations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gis-vs-cartography">GIS vs cartography</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-spatial-analysis">What is spatial analysis?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-from-the-past-john-snow-s-cholera-map">An example from the past: John Snow’s cholera map</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#most-used-map-types-in-humanitarian-responses">Most used map types in humanitarian responses?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reference-maps">General Reference Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#infrastructure-maps">Infrastructure Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thematic-maps">Thematic Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-maps">Analysis Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situation-descriptive-maps">Situation/Descriptive Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#web-mobile-gis-applications">Web &amp; Mobile GIS Applications</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-mobile-apps-overview">Geo Mobile Apps Overview</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#common-map-types-in-humanitarian-response">Common map types in humanitarian response</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reference-maps">General reference maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#infrastructure-maps">Infrastructure maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thematic-maps">Thematic maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-maps">Analysis maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situation-descriptive-maps">Situation/descriptive maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#web-mobile-gis-applications">Web &amp; mobile GIS applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-apps-overview">Mobile apps overview</a></li>
 </ul>
 </li>
 </ul>
@@ -595,129 +596,202 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="what-is-gis-theory">
 <h1>What is GIS? (Theory)<a class="headerlink" href="#what-is-gis-theory" title="Permalink to this heading">#</a></h1>
 <p><strong>🔙<a class="reference internal" href="../intro.html"><span class="doc std std-doc">Back to Homepage</span></a></strong></p>
-<p>🚧This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
-<p>At its core GIS is a computer-based system to organises data with any spatial component. Also, called geodata. There are three core functions of GIS.</p>
+<p>🚧This training platform and the entire content is under ⚠️construction⚠️ and
+may not be shared or published! 🚧</p>
+<p>At its core, GIS is a computer-based system to organise data with a spatial
+component (<em>geodata</em>). There are three core functions of GIS:</p>
+<ol class="arabic simple">
+<li><p>Connecting data to maps</p></li>
+<li><p>Visualisation, organisation and processing of spatial data</p></li>
+<li><p>Analysing spatial data</p></li>
+</ol>
 <figure class="align-center" id="gis-core-functunality">
 <a class="reference internal image-reference" href="../../_images/GIS_Core_functunality.drawio.svg"><img alt="../../_images/GIS_Core_functunality.drawio.svg" height="500px" src="../../_images/GIS_Core_functunality.drawio.svg" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 45 </span><span class="caption-text">GIS Core functunality</span><a class="headerlink" href="#gis-core-functunality" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">GIS core functunality</span><a class="headerlink" href="#gis-core-functunality" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Around this core of GIS evolves a galaxy of techniques, tools and applications. Some are listed in the graphic below. As a GIS user, you need to know which techniques and tools you need to use to achieve a specific result. Although there are so many techniques and tools out there, a surprisingly small number of them are sufficient to fulfil most tasks in the field of GIS.
-Here at our GIS Training Resource Center, you can learn exactly these basic techniques.</p>
+<p>Around these core GIS features there are a wide range of techniques, tools and
+applications - some are listed in the graphic below. As a GIS user, you need to
+know which techniques and tools to use to achieve a specific result. Although
+there are lots of tools and techniques out there, a surprisingly small number of
+them are sufficient to fulfil most tasks you will have. This platform provides
+materials to teach the tools that will be most useful for the kinds of mapping
+that are used in the humanitarian sector.</p>
 <figure class="align-center" id="en-qgis-gis-ha">
 <a class="reference internal image-reference" href="../../_images/GIS_SIMS.drawio.svg"><img alt="../../_images/GIS_SIMS.drawio.svg" height="750px" src="../../_images/GIS_SIMS.drawio.svg" width="900px" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 46 </span><span class="caption-text">GIS in Humanitarian Assistance</span><a class="headerlink" href="#en-qgis-gis-ha" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">GIS in humanitarian assistance</span><a class="headerlink" href="#en-qgis-gis-ha" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In the world of GIS, the product of your work will be most of the time a map. In the humanitarian work, the range of published maps is huge. Just have a look at the graphic above.
-However, most of them can be produced with the basic techniques you will learn here, depending on the available data.</p>
-<p>To get a better understanding of the use of GIS in humanitarian assistance, we dot some example from different organisations for you. Some of the map products puplished by these organisation you will find in the graphic above.</p>
-<p><strong>Examples of GIS used by Humanitarian Organisations</strong></p>
+<p>In the world of GIS, the product of your work will be most of the time a map.
+The graphic above shows the huge range of mapping products used in the
+humanitarian sector.</p>
+<p>To get a better understanding of how GIS is used in the humanitarian sector, we
+have collected some examples from different organisations in the section below
+(click the different tabs to view the examples by organisation).</p>
+<section id="examples-of-gis-used-by-humanitarian-organisations">
+<h2>Examples of GIS used by humanitarian organisations<a class="headerlink" href="#examples-of-gis-used-by-humanitarian-organisations" title="Permalink to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 Lebanese Red Cross</label><div class="sd-tab-content docutils">
-<p>The Lebanese Red Cross (LRC) has used GIS for years and produces stunning results. Here is talk of LBC staff, have a look.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BNOgW9Koz7A?si=gpXNpFRmjfoPV1dX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>This video gives an overview of GIS use in the Lebanese Red Cross in their
+operations, including informing ambulance services and supporting blood donations.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BNOgW9Koz7A?si=gpXNpFRmjfoPV1dX" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 IFRC</label><div class="sd-tab-content docutils">
-<p>The IFRC publishes a wide variety of maps in many different contexts. You can find some of those on <a class="reference external" href="https://reliefweb.int/updates?advanced-search=%28S1242%29_%28F12%29">RelifeWeb</a>.</p>
+<p>The International Federation of Red Cross and Red Crescent Societies (IFRC)
+publishes a wide variety of maps to support active operations. You can
+find some of those on <a class="reference external" href="https://reliefweb.int/updates?advanced-search=%28S1242%29_%28F12%29">ReliefWeb</a>
+or on the IFRC GO platform’s <a class="reference external" href="https://go.ifrc.org/emergencies/all">Emergency pages</a>.</p>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 ICRC</label><div class="sd-tab-content docutils">
-<p>The ICRC has a specialised GIS Support Unit. They run the <a class="reference external" href="https://gisupporticrc.github.io/GISResourceCenter/">GIS Resource Center</a> and ICRC GeoPortal. ICRC utilized the ArcGIS of Esri. ArcGIS is not free, however, very versatile.</p>
+<p>The International Committee of the Red Cross (ICRC) has a specialised GIS Support
+Unit that runs their <a class="reference external" href="https://gisupporticrc.github.io/GISResourceCenter/#portfolio">GIS Resource Center</a>
+and ICRC GeoPortal. The ICRC resource centre portfolio gives an idea of the
+kinds of analysis the GIS unit produces, although much of it is not public.</p>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
 REACH Initiative</label><div class="sd-tab-content docutils">
-<p>The REACH initiative provides humanitarian actors with maps reports and Web-maps &amp; online dashboards.
-REACH is a joint initiative of IMPACT Initiatives, ACTED and the United Nations Operational Satellite Applications Programme (UNOSAT).
-<a class="reference external" href="https://www.reachresourcecentre.info/search/?search=1&amp;initiative%5B%5D=reach&amp;ptype%5B%5D=map&amp;dates=&amp;keywords=">Here</a> you can have a look at the maps REACH publishes.</p>
+<p>REACH Initiative is a humanitarian data collection and analysis NGO that has a
+strong GIS specialism. The <a class="reference external" href="https://www.impact-initiatives.org/resource-centre/">REACH Resource Centre</a>
+is where the organisation publishes content, including
+<a class="reference external" href="https://www.impact-initiatives.org/resource-centre/?category%5B%5D=information_products&amp;category%5B%5D=data_methods&amp;type%5B%5D=281&amp;order=latest&amp;limit=10">standalone maps</a>
+and <a class="reference external" href="https://www.impact-initiatives.org/resource-centre/?category%5B%5D=information_products&amp;category%5B%5D=data_methods&amp;order=latest&amp;limit=10">reports</a>
+which also often include maps and spatial analysis.</p>
 </div>
 <input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
 Médecins Sans Frontières</label><div class="sd-tab-content docutils">
-<p>MSF is very big when it comes to GIS. They run the <a class="reference external" href="https://geo.msf.org/home">MSF GIS Unit</a> and the GeoMSF Platform, which is an extensive online GIS platform which supports MSF missions.
-Have a look at their catalogue of maps <a class="reference external" href="https://geo.msf.org/catalogue">here</a></p>
-<p>MSF uses GIS in these four principal areas:</p>
+<p>Médecins Sans Frontières (MSF) has a <a class="reference external" href="https://geo.msf.org/home">GIS Unit</a> that
+publishes geospatial products on the <a class="reference external" href="https://geo.msf.org/catalogue">GeoMSF platform</a>
+to support MSF activities.</p>
+<p>MSF uses GIS in four main areas:</p>
 <ul class="simple">
-<li><p>Operations, Emergency Preparedness and Response</p></li>
+<li><p>Operations, emergency preparedness and response</p></li>
 <li><p>Healthcare</p></li>
-<li><p>Advocacy, Communication and Reporting</p></li>
-<li><p>Environmental Healt</p></li>
+<li><p>Advocacy, communication and reporting</p></li>
+<li><p>Environmental health</p></li>
 </ul>
-<p>One very impressive use case of GIS during the Ebola outbreak in Sierra Leone in 2015 was documented in the video below.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XxW_e9o0lA8?si=xS36hYai0rgmQW6J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>This short video outlines the role of GIS in MSF’s response to the 2015 Ebola
+outbreak in Sierra Leone.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XxW_e9o0lA8?si=xS36hYai0rgmQW6J" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen></iframe>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-5">
 World Food Programme (WFP)</label><div class="sd-tab-content docutils">
-<p>WFP is BIG in the are of GIS. The provide a lot od geodata on <a class="reference external" href="https://data.humdata.org/organization/wfp?">HDX</a> and pluisch many maps on <a class="reference external" href="https://reliefweb.int/updates?advanced-search=%28S1741%29_%28F12%29">RelifeWeb</a>.  Here you can check out the <a class="reference external" href="https://www.wfp.org/publications/wfp-geospatial-activities-catalogue">WFP Geospatial Activities Catalogue</a>. WFP provides dashboards for local context like this one <a class="reference external" href="https://www.arcgis.com/apps/webappviewer/index.html?id=93b4605fff13415bb8d2decd0e9158e0">Cash Assistance during the COVID-19 Pandemic in Jordan</a>.</p>
-<p>WFP also runs shiny Dashboards for advocacy like the Live HungerMap below.</p>
+<p>The World Food Programme (WFP) produces maps and publishes geodata both on their
+own data platform - <a class="reference external" href="https://geonode.wfp.org/">WFP Geonode</a> and on the
+<a class="reference external" href="https://data.humdata.org/organization/wfp?">Humanitarian Data Exchange (HDX)</a>.
+You can find maps published by WFP on <a class="reference external" href="https://reliefweb.int/updates?advanced-search=%28S1741%29_%28F12%29">RelifeWeb</a>.<br />
+WFP’s <a class="reference external" href="https://www.wfp.org/publications/wfp-geospatial-activities-catalogue">Geospatial Activities Catalogue</a>
+outline’s to organisation’s geospatial services, which includes developing<br />
+dashboards like this one one <a class="reference external" href="https://www.arcgis.com/apps/webappviewer/index.html?id=93b4605fff13415bb8d2decd0e9158e0">cash assistance during the COVID-19 pandemic in Jordan</a>.</p>
+<p>WFP also builds dashboards for advocacy, like HungerMap Live:</p>
 <iframe src="https://hungermap.wfp.org/" width="750" height="500"></iframe>
 </div>
 <input id="sd-tab-item-6" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
 iMMAP</label><div class="sd-tab-content docutils">
-<p><a class="reference external" href="https://immap.org/products/">iMMAP</a></p>
+<p>iMAAP is an information management NGO that provides support to the UN and
+international NGOs. Their <a class="reference external" href="https://immap.org/products/">product portfolio</a>
+includes examples of maps used in sitaution overviews, interactive dashboards
+and sector-specific analysis.</p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
 MapAction</label><div class="sd-tab-content docutils">
-<p><a class="reference external" href="https://maps.mapaction.org/">MapAction</a></p>
+<p>MapAction produces maps and geospatial data support decision-making in emergency
+response. Their <a class="reference external" href="https://maps.mapaction.org/">maps and data</a> page gives shows
+recent products they have published, and their <a class="reference external" href="https://guides.mapaction.org/">product catalogue</a>
+gives an overview of the types of services they provide.</p>
 </div>
 </div>
+</section>
 <section id="gis-vs-cartography">
-<h2>GIS vs Cartography<a class="headerlink" href="#gis-vs-cartography" title="Permalink to this heading">#</a></h2>
-<p><strong>Cartography</strong> is the study and practice of <strong>making maps</strong>. A GIS is a <strong>modern extension</strong> of traditional cartography. Both contain examples of a <strong>base map</strong> to which additional data can be added. The differences are that there is no limit to the <strong>amount of additional data</strong> that can be added to a GIS map. Cartographic maps are often extremely simplified as there are limits to the amount of data that can be physically and meaningfully stored on a small map. GIS uses <strong>analysis and statistics</strong> to present data in support of particular arguments which a cartographic map cannot do. You can use GIS <strong>for</strong> cartography.</p>
+<h2>GIS vs cartography<a class="headerlink" href="#gis-vs-cartography" title="Permalink to this heading">#</a></h2>
+<p><strong>Cartography</strong> is the study and practice of <strong>making maps</strong>. A GIS is a
+<strong>modern extension</strong> of traditional cartography. Both contain examples of a
+<strong>base map</strong> to which additional data can be added. The differences are that
+there is no limit to the <strong>amount of additional data</strong> that can be added to a
+GIS map. Cartographic maps are often extremely simplified as there are limits
+to the amount of data that can be physically and meaningfully stored on a small
+map. GIS uses <strong>analysis and statistics</strong> to present data in support of particular
+arguments which a cartographic map cannot do. You can use GIS <strong>for</strong> cartography.</p>
 </section>
 <section id="what-is-spatial-analysis">
-<h2>What is Spatial Analysis?<a class="headerlink" href="#what-is-spatial-analysis" title="Permalink to this heading">#</a></h2>
-<p>Many map products relay on spatiall analysis. And indeed, the ability to use analysis tool allows us to get the most out of the data we have and to solve a wide variety of problems. The points below give you an simple definition of the concept.</p>
-<p>However, the example of John Snows Colera Map of 1854 is THE example of what spatial Analysis actually is.</p>
+<h2>What is spatial analysis?<a class="headerlink" href="#what-is-spatial-analysis" title="Permalink to this heading">#</a></h2>
+<p>Many map products rely on spatial analysis. And indeed, the ability to use
+analysis tool allows us to get the most out of the data we have and to solve a
+wide variety of problems. The points below give you an simple definition of the
+concept.</p>
+<p>However, the example of John Snow’s cholera map of 1854 is a popular example of
+how spatial analysis can help to solve problems.</p>
 <ul class="simple">
-<li><p>Spatial analysis <strong>studies entities and events</strong> using their topological, geometric, or geographic properties.</p></li>
+<li><p>Spatial analysis <strong>studies entities and events</strong> using their topological,
+geometric, or geographic properties.</p></li>
 <li><p>It includes a <strong>variety of techniques</strong> to analyse geographic data.</p></li>
 <li><p>Data can be <strong>added to a map as layers and they can interact with each other</strong>.</p></li>
-<li><p>GIS enables you to work with these <strong>layers</strong> to explore critically important questions and <strong>find answers</strong> to those questions.</p></li>
+<li><p>GIS enables you to work with these <strong>layers</strong> to explore critically important
+questions and <strong>find answers</strong> to those questions.</p></li>
 </ul>
-<section id="an-example-from-the-past-john-snows-cholera-map">
-<h3>An Example from the Past: John Snows’ Cholera Map<a class="headerlink" href="#an-example-from-the-past-john-snows-cholera-map" title="Permalink to this heading">#</a></h3>
-<p>In 1854 an <strong>outbreak of cholera</strong> occurred in London, England. The most common theory was that the disease was spread through the air. Dr.John Snow believed that the danger was <strong>in the water</strong>. He made a map to analyse the <strong>number of deaths</strong> in Soho per house block. He added the <strong>location of water pumps</strong> on the map.
-He found a <strong>correlation</strong> between one specific water pump and the number of infections.</p>
-<p><strong>Dr. Snow’s map of the Cholera outbreak of 1854</strong>, and the reports that it accompanied, <strong>won over the predominant “Miasma Theory”</strong> that the disease <strong>was spread through the air</strong>. Residents were now warned to <strong>boil their water</strong>, and so ended the last Cholera outbreak London has seen.</p>
+<section id="an-example-from-the-past-john-snow-s-cholera-map">
+<h3>An example from the past: John Snow’s cholera map<a class="headerlink" href="#an-example-from-the-past-john-snow-s-cholera-map" title="Permalink to this heading">#</a></h3>
+<p>In 1854, an <strong>outbreak of cholera</strong> occurred in the Soho area of London, England.
+The most common theory was that the disease was spread through the air.
+Dr. John Snow believed that the danger was <strong>in the water</strong>. He made a map to
+analyse the <strong>number of deaths</strong> in every housing block in Soho. He added the
+<strong>location of water pumps</strong> on the map. He found a <strong>correlation</strong> between one
+specific water pump and the number of infections.</p>
+<p><strong>Dr. Snow’s map of the cholera outbreak of 1854</strong>, and the reports that it
+accompanied, <strong>won over the predominant “miasma theory”</strong> that the disease <strong>was
+spread through the air</strong>. Residents were now warned to <strong>boil their water</strong>, and
+so ended the last cholera outbreak London has seen.</p>
+<p>This interactive version of the cholera map shows it overlaid on a basemap of
+modern London.</p>
 <figure class="align-center" id="snow-cholera-map-original">
 <a class="reference internal image-reference" href="../../_images/John_snow_zoom_map2.png"><img alt="../../_images/John_snow_zoom_map2.png" src="../../_images/John_snow_zoom_map2.png" style="height: 600px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 47 </span><span class="caption-text">John Snow Cholera map of London (1854)</span><a class="headerlink" href="#snow-cholera-map-original" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><strong>Using GIS</strong>, several measures of spatial central tendency have been applied to the dataset, revealing that the Spatial Mean (the geographic center of the distribution of deaths) of the outbreak lies <strong>within 35 meters of the Broad Street Pump</strong>, identified as the <strong>source of contamination</strong> in the 1854 outbreak.</p>
+<p><strong>Using GIS</strong>, several measures of spatial central tendency have been applied to
+the dataset, revealing that the Spatial Mean (the geographic center of the
+distribution of deaths) of the outbreak lies <strong>within 35 meters of the Broad
+Street Pump</strong>, identified as the <strong>source of contamination</strong> in the 1854 outbreak.</p>
 <iframe src="https://www.arcgis.com/apps/PublicInformation/index.html?appid=d7deb67f810d46dfacb80ff80ac224e9" width="750" height="500"></iframe>
 </section>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="most-used-map-types-in-humanitarian-responses">
-<h1>Most used map types in humanitarian responses?<a class="headerlink" href="#most-used-map-types-in-humanitarian-responses" title="Permalink to this heading">#</a></h1>
-<p>Now you now the concept of GIS and Spatial Analysis, we want to have a closer look at typical map products in humanitariann assistance.</p>
+<section class="tex2jax_ignore mathjax_ignore" id="common-map-types-in-humanitarian-response">
+<h1>Common map types in humanitarian response<a class="headerlink" href="#common-map-types-in-humanitarian-response" title="Permalink to this heading">#</a></h1>
+<p>The humanitarian sector tends to use certain types of maps regularly. These are
+outlined below.</p>
 <section id="general-reference-maps">
-<h2>General Reference Maps<a class="headerlink" href="#general-reference-maps" title="Permalink to this heading">#</a></h2>
+<h2>General reference maps<a class="headerlink" href="#general-reference-maps" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Show important <strong>physical features</strong> of an area</p></li>
 <li><p>Include <strong>natural and man-made features</strong></p></li>
 <li><p>Usually meant to help for <strong>navigation</strong> or discovery of locations</p></li>
 <li><p>Usually fairly <strong>simple</strong></p></li>
-<li><p>Can be <strong>stylized</strong> based on the intended audience</p></li>
+<li><p>Can be <strong>styled</strong> based on the intended audience</p></li>
 </ul>
-<p><img alt="Reference map of Iraq" src="../../_images/en_Reference_Map_Iraq.png" />  Reference map of Iraq</p>
+<p><img alt="Reference map of Iraq" src="../../_images/en_Reference_Map_Iraq.png" /> <em>Reference map of Iraq
+by REACH Initiative (<span class="xref myst">source</span>)</em> <!-- FIXME: add source! --></p>
 </section>
 <section id="infrastructure-maps">
-<h2>Infrastructure Maps<a class="headerlink" href="#infrastructure-maps" title="Permalink to this heading">#</a></h2>
+<h2>Infrastructure maps<a class="headerlink" href="#infrastructure-maps" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Display relevant features and <strong>structures</strong> in a specific area</p></li>
 <li><p>Help <strong>planning</strong> and navigation</p></li>
@@ -725,20 +799,23 @@ He found a <strong>correlation</strong> between one specific water pump and the 
 <li><p>Produced after field <strong>data collection</strong></p></li>
 </ul>
 <p><img alt="Infrastructure map of Nigeria" src="../../_images/en_Infrastructure_Map_Nigeria.png" />
-Infrastructure map of Nigeria</p>
+<em>Infrastructure map of a displaced persons camp in Borno State, Nigeria, produced
+by Reach Initiative (<span class="xref myst">source</span>)</em> <!-- FIXME: add source! --></p>
 </section>
 <section id="thematic-maps">
-<h2>Thematic Maps<a class="headerlink" href="#thematic-maps" title="Permalink to this heading">#</a></h2>
+<h2>Thematic maps<a class="headerlink" href="#thematic-maps" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Focus on a <strong>specific theme</strong> or subject</p></li>
 <li><p>Features on the map <strong>represent the subject</strong> being mapped</p></li>
 <li><p>Use <strong>colours and shapes</strong> to display quantitative and qualitative data</p></li>
 <li><p>Rise <strong>awareness</strong> about a specific subject</p></li>
 </ul>
-<p><img alt="Thematic map of Africa" src="../../_images/en_Thematic_Map_Africa.png" /> Thematic map of Africa</p>
+<p><img alt="Thematic map of Africa" src="../../_images/en_Thematic_Map_Africa.png" />
+<em>Thematic map of Africa</em></p>
+<!-- FIXME: explain the map and add source -->
 </section>
 <section id="analysis-maps">
-<h2>Analysis Maps<a class="headerlink" href="#analysis-maps" title="Permalink to this heading">#</a></h2>
+<h2>Analysis maps<a class="headerlink" href="#analysis-maps" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Analyse data</strong> in respect to their geographic location</p></li>
 <li><p>Create <strong>new layers of information</strong> from the interaction between multiple features</p></li>
@@ -746,43 +823,65 @@ Infrastructure map of Nigeria</p>
 <li><p><strong>Support</strong> decision makers</p></li>
 <li><p>Generally display a greater <strong>level of detail</strong></p></li>
 </ul>
-<p><tagName>  <tagName></p>
-<p><img alt="Analysis map of Yemen" src="../../_images/en_Analysis_Map_Yemen.png" /> Analysis map of Yemen</p>
+<p><img alt="Analysis map of Yemen" src="../../_images/en_Analysis_Map_Yemen.png" />
+<em>Analysis map showing areas affected by flooding in Yemen, produced by Reach
+Initiative (<span class="xref myst">source</span>)</em> <!-- FIXME: add source --></p>
 </section>
 <section id="situation-descriptive-maps">
-<h2>Situation/Descriptive Maps<a class="headerlink" href="#situation-descriptive-maps" title="Permalink to this heading">#</a></h2>
+<h2>Situation/descriptive maps<a class="headerlink" href="#situation-descriptive-maps" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Used to <strong>better visualize</strong> a specific ongoing and/or past situation</p></li>
 <li><p>Maps can include <strong>narrative</strong> and graphic elements</p></li>
 <li><p>Can be used in reports and/or to <strong>raise awareness</strong> on a specific event</p></li>
 </ul>
-<p><tagName>  <tagName></p>
-<p><img alt="Situation map from Tilkaif to Mosul" src="../../_images/en_Situation_Map_Tilkaif_Mosul.png" />Situation map from Tilkaif to Mosul</p>
+<p><img alt="Situation map from Tilkaif to Mosul" src="../../_images/en_Situation_Map_Tilkaif_Mosul.png" />
+<em>Situation map from Tilkaif to Mosul</em> <!-- FIXME: explain the map and add source --></p>
 </section>
 <section id="web-mobile-gis-applications">
-<h2>Web &amp; Mobile GIS Applications<a class="headerlink" href="#web-mobile-gis-applications" title="Permalink to this heading">#</a></h2>
-<p>You can use GIS through <strong>multiple applications</strong>, from desktop software, to online platforms, to mobile apps. At a basic level, you can perform limited geospatial tasks with apps such as <strong>Google Earth</strong> or <strong>Google Maps</strong>.
-As a GIS professional, you will mostly use a <strong>desktop software</strong>, which could be either: Proprietary e.g ArcGIS or Open source e.g. QGIS.
-However, web applications can be relevant for obtaining data or to share data and maps with others.</p>
-<p>Below we have listed some applications you should know. With some of those, you will work in other training modules.</p>
+<h2>Web &amp; mobile GIS applications<a class="headerlink" href="#web-mobile-gis-applications" title="Permalink to this heading">#</a></h2>
+<p>You can use GIS through <strong>multiple applications</strong>, from desktop software, to
+online platforms, to mobile apps. At a basic level, you can perform limited
+geospatial tasks with apps such as <strong>Google Earth</strong> or <strong>Google Maps</strong>.
+As a GIS professional, you will mostly use a <strong>desktop software</strong>, which could
+be either proprietary (requiring a license, e.g ESRI’s ArcGIS) or open-source
+(available to use for free, e.g. QGIS). However, web applications can be relevant
+for obtaining data or to share data and maps with others.</p>
+<p>Here are some online GIS platforms and tools you should be aware of; we’ll use
+some of them later in the training.</p>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="https://www.openstreetmap.org/#map=14/49.4192/8.7235">Open Street Maps (OSM)</a></strong>: An <strong>open geographic database</strong> updated and maintained by a community of volunteers via open collaboration. It works using a tag system (each feature is categorized through tags).</p></li>
+<li><p><strong><a class="reference external" href="https://www.openstreetmap.org/">OpenStreetMap (OSM)</a></strong>:
+An <strong>open geographic database</strong> updated and maintained by a community of volunteers
+via open collaboration. It works using a tag system (each feature is categorized
+through tags).</p></li>
 <li><p><strong><a class="reference external" href="https://umap.openstreetmap.fr/en/">uMap</a></strong>:
-An online GIS application based on OpenStreetMap. You can upload standard geodata formats and do nice visualisation. Umap is very good for sharing maps and presenting basic interactive maps.</p></li>
+An online GIS application based on OpenStreetMap. You can upload standard geodata
+formats and do nice visualisation. Umap is very good for sharing maps and
+presenting basic interactive maps.</p></li>
 <li><p><strong><a class="reference external" href="https://felt.com/">Felt</a></strong>:
-Felt is similar to uMap but even pritteier. An <strong>easy tool</strong> to create maps. You can draw, create feature and upload shapefiles. Plus, you can connect it to you QGIS with an plugin. In this way, you can use Felt for collaborative work.</p></li>
-<li><p><strong><a class="reference external" href="https://wikimapia.org/#lang=de&amp;lat=49.402500&amp;lon=8.633100&amp;z=12&amp;m=w">Wikimapia</a></strong>:
-Online editable map service. Updated and maintained by contributors all over the world. It uses <strong>local knowledge</strong>, making it particularly useful in remote areas.</p></li>
-<li><p><strong><a class="reference external" href="https://www.google.com/maps/d/">Google Maps</a></strong>:
-Limited, but it allows to upload layers, create and export features, <strong>share simple maps</strong>.</p></li>
+Felt is similar to uMap but even pretteier. An <strong>easy tool</strong> to create maps. You
+can draw, create feature and upload shapefiles. Plus, you can connect it to you
+QGIS with an plugin. In this way, you can use Felt for collaborative work.</p></li>
+<li><p><strong><a class="reference external" href="https://wikimapia.org/">Wikimapia</a></strong>:
+Online editable map service. Updated and maintained by contributors all over the
+world. It uses <strong>local knowledge</strong>, making it particularly useful in remote areas.</p></li>
+<li><p><strong><a class="reference external" href="https://www.google.com/maps">Google Maps</a></strong>:
+Limited, but it allows to upload layers, create and export features, <strong>share
+simple maps</strong>.</p></li>
 </ul>
-<section id="geo-mobile-apps-overview">
-<h3>Geo Mobile Apps Overview<a class="headerlink" href="#geo-mobile-apps-overview" title="Permalink to this heading">#</a></h3>
-<p>Mobil GIS Apps are highly important for navigation and mobil data collection. Some of the most important free and open-source apps are listed below.</p>
+<section id="mobile-apps-overview">
+<h3>Mobile apps overview<a class="headerlink" href="#mobile-apps-overview" title="Permalink to this heading">#</a></h3>
+<p>Mobile GIS apps are important for navigation and mobile data collection.
+Some of the most important free and open-source apps are listed below.</p>
 <ul class="simple">
-<li><p><strong><a class="reference external" href="https://docs.qfield.org/">Qfield</a></strong>: Through QFieldCloud, you can <strong>open your QGIS projects</strong> on Qfield on your mobile device. Any edit made on the map in the app can then be synced and displayed in QGIS.</p></li>
-<li><p><strong><a class="reference external" href="https://osmand.net">OsmAnd</a></strong>: Using OSM basemap, it’s a good app for <strong>offline navigation</strong>. You can upload kml-files to display on the map, as well as recording your trips and then export them to kml.</p></li>
-<li><p><strong><a class="reference external" href="http://geoodk.com/index.htm">GeoODK</a></strong>: Combines <strong>ODK with a geo app</strong>. You can collect data through ODK surveys and display them on a map, in addition to easily create polygons and add information to them.</p></li>
+<li><p><strong><a class="reference external" href="https://docs.qfield.org/">Qfield</a></strong>: Through QFieldCloud, you can <strong>open
+your QGIS projects</strong> on Qfield on your mobile device. Any edit made on the map
+in the app can then be synced and displayed in QGIS.</p></li>
+<li><p><strong><a class="reference external" href="https://osmand.net">OsmAnd</a></strong>: Using OSM basemap, it’s a good app for
+<strong>offline navigation</strong>. You can upload <code class="docutils literal notranslate"><span class="pre">.kml</span></code> files to display on the map, as well
+as recording your trips and then exporting them.</p></li>
+<li><p><strong><a class="reference external" href="http://geoodk.com/index.htm">GeoODK</a></strong>: Combines <strong>OpenDataKit (ODK) with a geo app</strong>.
+You can collect data through ODK surveys and display them on a map, in addition
+to easily create polygons and add information to them.</p></li>
 </ul>
 </section>
 </section>
@@ -852,21 +951,22 @@ Limited, but it allows to upload layers, create and export features, <strong>sha
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">What is GIS? (Theory)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gis-vs-cartography">GIS vs Cartography</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-spatial-analysis">What is Spatial Analysis?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-from-the-past-john-snows-cholera-map">An Example from the Past: John Snows’ Cholera Map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-gis-used-by-humanitarian-organisations">Examples of GIS used by humanitarian organisations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gis-vs-cartography">GIS vs cartography</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-spatial-analysis">What is spatial analysis?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-from-the-past-john-snow-s-cholera-map">An example from the past: John Snow’s cholera map</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#most-used-map-types-in-humanitarian-responses">Most used map types in humanitarian responses?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reference-maps">General Reference Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#infrastructure-maps">Infrastructure Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thematic-maps">Thematic Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-maps">Analysis Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situation-descriptive-maps">Situation/Descriptive Maps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#web-mobile-gis-applications">Web &amp; Mobile GIS Applications</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-mobile-apps-overview">Geo Mobile Apps Overview</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#common-map-types-in-humanitarian-response">Common map types in humanitarian response</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reference-maps">General reference maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#infrastructure-maps">Infrastructure maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thematic-maps">Thematic maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-maps">Analysis maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situation-descriptive-maps">Situation/descriptive maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#web-mobile-gis-applications">Web &amp; mobile GIS applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-apps-overview">Mobile apps overview</a></li>
 </ul>
 </li>
 </ul>
