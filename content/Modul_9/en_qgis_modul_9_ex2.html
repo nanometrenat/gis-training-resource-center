@@ -560,9 +560,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones">Healthcare catchment - Isochrones</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-qgis-service-area">Healthcare catchment - QGIS Service area</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones-avoid-flood">Healthcare catchment - Isochrones avoid flood</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-healthcare-catchment-isochrones">STEP 1: Healthcare catchment - Isochrones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-healthcare-catchment-qgis-service-area">STEP 2: Healthcare catchment - QGIS Service area</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-service-area-by-minimum-bounding-box">STEP 3: Service area by minimum bounding box</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-healthcare-catchment-isochrones-avoid-flood">STEP 4: Healthcare catchment - Isochrones avoid flood</a></li>
 </ul>
             </nav>
         </div>
@@ -581,8 +582,28 @@ document.write(`
 <ul class="simple">
 <li><p>camp.gpkg</p></li>
 </ul>
-<section id="healthcare-catchment-isochrones">
-<h2>Healthcare catchment - Isochrones<a class="headerlink" href="#healthcare-catchment-isochrones" title="Permalink to this heading">#</a></h2>
+<section id="step-1-healthcare-catchment-isochrones">
+<h2>STEP 1: Healthcare catchment - Isochrones<a class="headerlink" href="#step-1-healthcare-catchment-isochrones" title="Permalink to this heading">#</a></h2>
+<p>Open the <strong>Processing Toolbox</strong> and scroll down to <strong>ORS Tools</strong> choose <strong>Isochrones</strong> and <strong>Isochrones from layer</strong>.
+Leave all settings at default except:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Input Point layer</p></td>
+<td><p>camp_healthcare</p></td>
+</tr>
+<tr class="row-odd"><td><p>Travel mode</p></td>
+<td><p>foot-walking</p></td>
+</tr>
+<tr class="row-even"><td><p>Comma separated ranges</p></td>
+<td><p>5, 10</p></td>
+</tr>
+</tbody>
+</table>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Watch here:<div class="sd-summary-down docutils">
@@ -590,12 +611,44 @@ Watch here:<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">TABELLE!</p>
+<p class="sd-card-text">VIDEO!</p>
 </div>
 </details></section>
-<section id="healthcare-catchment-qgis-service-area">
-<h2>Healthcare catchment - QGIS Service area<a class="headerlink" href="#healthcare-catchment-qgis-service-area" title="Permalink to this heading">#</a></h2>
+<section id="step-2-healthcare-catchment-qgis-service-area">
+<h2>STEP 2: Healthcare catchment - QGIS Service area<a class="headerlink" href="#step-2-healthcare-catchment-qgis-service-area" title="Permalink to this heading">#</a></h2>
 <p>Isochrones in QGIS can be generated via the service area tool in combination with the minimum bounding geometry tool. Based on a road network, we define origins, a default speed, and a maximum cost.</p>
+<p>Open the <strong>Processing Toolbox</strong>  and scroll down to <strong>Network Analysis</strong>, choose <strong>Service area (from layer)</strong>.
+Leave all settings at default except:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Vector layer representing network</p></td>
+<td><p>camp_ways</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vector layer with start points</p></td>
+<td><p>camp_healthcare</p></td>
+</tr>
+<tr class="row-even"><td><p>Path type to calculate</p></td>
+<td><p>fastest</p></td>
+</tr>
+<tr class="row-odd"><td><p>Travel cost</p></td>
+<td><p>0.15 (~9 min.)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Advanced Parameters</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Default speed</p></td>
+<td><p>5.0 (pedestrian)</p></td>
+</tr>
+<tr class="row-even"><td><p>Topology tolerance</p></td>
+<td><p>50.0</p></td>
+</tr>
+</tbody>
+</table>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Watch here:<div class="sd-summary-down docutils">
@@ -603,7 +656,7 @@ Watch here:<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">TABELLE!</p>
+<p class="sd-card-text">VIDEO!</p>
 </div>
 </details><p>QGIS on-the-fly creates a network graph from the road and path network. The graph is rather simple. All edges can be traveled in both ways, there are no weights included. Travel cost is represented by the length of a segment and the default average speed. The output is a simplification of the input road &amp; path geometry but with the attributes of the healthcare facilities. For every healthcare facility we see a multiline geometry object in the output. We can style it according to the attribute “&#64;osmId” to see which segments are assigned to which facility.</p>
 <div class="admonition-question admonition">
@@ -611,15 +664,30 @@ Watch here:<div class="sd-summary-down docutils">
 <p>Can you already spot areas that are not reachable within 10 minutes by foot within
 the camp?</p>
 </div>
-<p>In order to better compare the result of the service areas and isochrones we will again compute the minimum bounding geometry. But this time for the multiline output of the service area tool.</p>
-<div class="admonition-question admonition">
-<p class="admonition-title">Question</p>
-<p>Compare the results of both catchments. What differences can you spot?</p>
-</div>
 </section>
-<section id="healthcare-catchment-isochrones-avoid-flood">
-<h2>Healthcare catchment - Isochrones avoid flood<a class="headerlink" href="#healthcare-catchment-isochrones-avoid-flood" title="Permalink to this heading">#</a></h2>
-<p>In this part we will again calculate catchments based on the same configured isochrones. But we will include a polygon for the avoid area functionality in openrouteservice. For the <strong>avoid area</strong> we will use the water streams that run through the main camp area. Make sure to buffer the camp_stream layer by 2 meters. The avoid areas function only allows for polygons, not for line geometries. If you have buffered the streams, go ahead with the Isochrones tool again.</p>
+<section id="step-3-service-area-by-minimum-bounding-box">
+<h2>STEP 3: Service area by minimum bounding box<a class="headerlink" href="#step-3-service-area-by-minimum-bounding-box" title="Permalink to this heading">#</a></h2>
+<p>In order to better compare the result of the service areas and isochrones we will again compute the minimum bounding geometry. But this time for the multiline output of the service area tool.</p>
+<p>Open the <strong>Processing Toolbox</strong>, choose <strong>Network Analysis</strong>,then choose <strong>Minimum Bounding Geometry</strong>.
+Leave all settings at default except:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Input layer</p></td>
+<td><p>Service area (lines)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Field</p></td>
+<td><p>&#64;osmId</p></td>
+</tr>
+<tr class="row-even"><td><p>Geometry type</p></td>
+<td><p>Convex Hull</p></td>
+</tr>
+</tbody>
+</table>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Watch here:<div class="sd-summary-down docutils">
@@ -627,7 +695,50 @@ Watch here:<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">TABELLE!</p>
+<p class="sd-card-text">VIDEO!</p>
+</div>
+</details><div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>Compare the results of both catchments. What differences can you spot?</p>
+</div>
+</section>
+<section id="step-4-healthcare-catchment-isochrones-avoid-flood">
+<h2>STEP 4: Healthcare catchment - Isochrones avoid flood<a class="headerlink" href="#step-4-healthcare-catchment-isochrones-avoid-flood" title="Permalink to this heading">#</a></h2>
+<p>In this part we will again calculate catchments based on the same configured isochrones. But we will include a polygon for the avoid area functionality in openrouteservice. For the <strong>avoid area</strong> we will use the water streams that run through the main camp area. Make sure to buffer the camp_stream layer by 2 meters. The avoid areas function only allows for polygons, not for line geometries. If you have buffered the streams, go ahead with the Isochrones tool again.</p>
+<p>Open the <strong>Processing Toolbox</strong> and scroll down to <strong>ORS Tools</strong> choose <strong>Isochrones</strong>  and  <strong>Isochrones from layer</strong>.
+Leave all settings at default except:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Travel mode</p></td>
+<td><p>foot-walking</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input Point layer</p></td>
+<td><p>camp_healthcare</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Advanced Parameters</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Polygons to avoid</p></td>
+<td><p>stream_buffer</p></td>
+</tr>
+<tr class="row-even"><td><p>Comma separated ranges</p></td>
+<td><p>5, 10</p></td>
+</tr>
+</tbody>
+</table>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Watch here:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">VIDEO!</p>
 </div>
 </details><div class="admonition-question admonition">
 <p class="admonition-title">Question</p>
@@ -699,9 +810,10 @@ Watch here:<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones">Healthcare catchment - Isochrones</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-qgis-service-area">Healthcare catchment - QGIS Service area</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#healthcare-catchment-isochrones-avoid-flood">Healthcare catchment - Isochrones avoid flood</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-healthcare-catchment-isochrones">STEP 1: Healthcare catchment - Isochrones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-healthcare-catchment-qgis-service-area">STEP 2: Healthcare catchment - QGIS Service area</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-service-area-by-minimum-bounding-box">STEP 3: Service area by minimum bounding box</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-healthcare-catchment-isochrones-avoid-flood">STEP 4: Healthcare catchment - Isochrones avoid flood</a></li>
 </ul>
   </nav></div>
 
