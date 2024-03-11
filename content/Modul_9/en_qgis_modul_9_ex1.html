@@ -560,9 +560,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-with-openrouteservice-isochrones">Catchments with openrouteservice isochrones</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-for-operational-facilities">Catchments for operational facilities</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#waterpoint-catchment-by-closest-euclidean-distance">Waterpoint catchment by closest euclidean distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-catchments-with-openrouteservice-isochrones">STEP 1: Catchments with openrouteservice isochrones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-catchments-for-operational-facilities">STEP 2: Catchments for operational facilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-waterpoint-catchment-by-closest-euclidean-distance">STEP 3: Waterpoint catchment by closest euclidean distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-hub-distance-based-catchments">STEP 4: Hub distance based catchments</a></li>
 </ul>
             </nav>
         </div>
@@ -580,20 +581,14 @@ document.write(`
 <ul class="simple">
 <li><p>Camp18.gpkg</p></li>
 </ul>
-<section id="catchments-with-openrouteservice-isochrones">
-<h2>Catchments with openrouteservice isochrones<a class="headerlink" href="#catchments-with-openrouteservice-isochrones" title="Permalink to this heading">#</a></h2>
+<section id="step-1-catchments-with-openrouteservice-isochrones">
+<h2>STEP 1: Catchments with openrouteservice isochrones<a class="headerlink" href="#step-1-catchments-with-openrouteservice-isochrones" title="Permalink to this heading">#</a></h2>
 <p>Make sure you installed the ORS Tools plugin and set it up already with an API Key. If not, consult Openrouteservice &amp; QGIS Plugin before proceeding.</p>
-<p>| Open the <strong>Processing Toolbox</strong> and scroll down to <strong>ORS Tools</strong>:|
-| choose <strong>Isochrones and Isochrones</strong> from layer.                :|
-| Leave all settings at default except:                           :|
-|——————————–:|:——————————:|
-| Input Point Layer               |                    waterpoints |
-| Travel mode                     |                   foot-walking |
-| Dimension                       |                       distance |
-| Comma separated ranges          |                            500 |</p>
+<p>Open the <strong>Processing Toolbox</strong> and scroll down to <strong>ORS Tools</strong> choose <strong>Isochrones</strong> and <strong>Isochrones from layer</strong>.
+Leave all settings at default except:</p>
 <table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Open the Processing Toolbox and scroll down to ORS Tools choose Isochrones and Isochrones from layer. Leave all settings at default except:</p></th>
+<tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p></p></th>
 </tr>
 </thead>
@@ -627,23 +622,32 @@ Watch here:<div class="sd-summary-down docutils">
 <p>How is the coverage with water point catchments within camp 18? Any underserved areas?</p>
 </div>
 <p>We proceed to find out how many water point options are there for each building given the 500m constraint. Basically we add a count aggregation of isochrones that intersect with each building.</p>
-<div class="admonition-question admonition">
-<p class="admonition-title">Question</p>
-<p>What is the min/max number of waterpoints available to the buildings in camp 18?</p>
-</div>
-</section>
-<section id="catchments-for-operational-facilities">
-<h2>Catchments for operational facilities<a class="headerlink" href="#catchments-for-operational-facilities" title="Permalink to this heading">#</a></h2>
-<p>Look into the attributes of the waterpoints layer. Filter for all waterpoints that are operational (<code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Attribute</span></code>). Redo the analysis for operational waterpoints only.</p>
-<div class="admonition-question admonition">
-<p class="admonition-title">Question</p>
-<p>Is the general coverage different, any undersupplied areas?
-What are the differences in the min/max number of waterpoints available to the buildings in camp 18 compared to using all waterpoints (non-operational, planned)</p>
-</div>
-</section>
-<section id="waterpoint-catchment-by-closest-euclidean-distance">
-<h2>Waterpoint catchment by closest euclidean distance<a class="headerlink" href="#waterpoint-catchment-by-closest-euclidean-distance" title="Permalink to this heading">#</a></h2>
-<p>There are other means to generate catchment areas, implemented in QGIS. In the next part we will use the hub distance to calculate the euclidean distance between every building and its closest waterpoint.</p>
+<p>Open the <strong>Processing Toolbox</strong> and scroll down to <strong>Vector general</strong> choose <strong>Join attributes by location (summary)</strong>.
+Leave all settings at default except:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Base Layer</p></td>
+<td><p>buildings_centroid</p></td>
+</tr>
+<tr class="row-odd"><td><p>Join Layer</p></td>
+<td><p>Isochrones</p></td>
+</tr>
+<tr class="row-even"><td><p>Geometric Predicate</p></td>
+<td><p>Intersects</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fields to Summarize</p></td>
+<td><p>ID</p></td>
+</tr>
+<tr class="row-even"><td><p>Summaries to Calculate</p></td>
+<td><p>count</p></td>
+</tr>
+</tbody>
+</table>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Watch here:<div class="sd-summary-down docutils">
@@ -651,7 +655,56 @@ Watch here:<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">TABELLE!</p>
+<p class="sd-card-text">VIDEO</p>
+</div>
+</details><div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>What is the min/max number of waterpoints available to the buildings in camp 18?</p>
+</div>
+</section>
+<section id="step-2-catchments-for-operational-facilities">
+<h2>STEP 2: Catchments for operational facilities<a class="headerlink" href="#step-2-catchments-for-operational-facilities" title="Permalink to this heading">#</a></h2>
+<p>Look into the attributes of the waterpoints layer. Filter for all waterpoints that are operational (<code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Attribute</span></code>). Redo the analysis for operational waterpoints only.</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>Is the general coverage different, any undersupplied areas?
+What are the differences in the min/max number of waterpoints available to the buildings in camp 18 compared to using all waterpoints (non-operational, planned)</p>
+</div>
+</section>
+<section id="step-3-waterpoint-catchment-by-closest-euclidean-distance">
+<h2>STEP 3: Waterpoint catchment by closest euclidean distance<a class="headerlink" href="#step-3-waterpoint-catchment-by-closest-euclidean-distance" title="Permalink to this heading">#</a></h2>
+<p>There are other means to generate catchment areas, implemented in QGIS. In the next part we will use the hub distance to calculate the euclidean distance between every building and its closest waterpoint.</p>
+<p>Open the <strong>Processing Toolbox</strong>, choose <strong>Vector Analysis</strong>,then choose <strong>Distance to nearest hub (points)</strong> [docs.qgis]
+Leave all settings at default except:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Source points</p></td>
+<td><p>buildings_centroid</p></td>
+</tr>
+<tr class="row-odd"><td><p>Destination hubs layer</p></td>
+<td><p>waterpoints</p></td>
+</tr>
+<tr class="row-even"><td><p>Hub layer name attribute</p></td>
+<td><p>id_plastic</p></td>
+</tr>
+<tr class="row-odd"><td><p>Measurement unit</p></td>
+<td><p>Meters</p></td>
+</tr>
+</tbody>
+</table>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Watch here:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">VIDEO!</p>
 </div>
 </details><p>The output layer has the same point geometry type like the input building_centroid layer. But it now features two attributes:</p>
 <ul class="simple">
@@ -662,7 +715,30 @@ Watch here:<div class="sd-summary-down docutils">
 <p class="admonition-title">Question</p>
 <p>What is the shortest / longest euclidean distance from a building to the closest waterpoint.</p>
 </div>
+</section>
+<section id="step-4-hub-distance-based-catchments">
+<h2>STEP 4: Hub distance based catchments<a class="headerlink" href="#step-4-hub-distance-based-catchments" title="Permalink to this heading">#</a></h2>
 <p>All buildings are assigned to their closest waterpoint. With the minimum bounding geometry tool in QGIS we can use this grouping information to create areas from.</p>
+<p>Open the <strong>Processing Toolbox</strong>, choose <strong>Vector Analysis</strong>,then choose <strong>Minimum Bounding Geometry</strong> [docs.qgis]
+Leave all settings at default except:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Input layer</p></td>
+<td><p>Hub distance</p></td>
+</tr>
+<tr class="row-odd"><td><p>Field</p></td>
+<td><p>Hubname</p></td>
+</tr>
+<tr class="row-even"><td><p>Geometry type</p></td>
+<td><p>Convex Hull</p></td>
+</tr>
+</tbody>
+</table>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Watch here:<div class="sd-summary-down docutils">
@@ -670,7 +746,7 @@ Watch here:<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">TABELLE!</p>
+<p class="sd-card-text">VIDEO!</p>
 </div>
 </details><div class="admonition-question admonition">
 <p class="admonition-title">Question</p>
@@ -742,9 +818,10 @@ Watch here:<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-with-openrouteservice-isochrones">Catchments with openrouteservice isochrones</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catchments-for-operational-facilities">Catchments for operational facilities</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#waterpoint-catchment-by-closest-euclidean-distance">Waterpoint catchment by closest euclidean distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-catchments-with-openrouteservice-isochrones">STEP 1: Catchments with openrouteservice isochrones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-catchments-for-operational-facilities">STEP 2: Catchments for operational facilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-waterpoint-catchment-by-closest-euclidean-distance">STEP 3: Waterpoint catchment by closest euclidean distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-hub-distance-based-catchments">STEP 4: Hub distance based catchments</a></li>
 </ul>
   </nav></div>
 
