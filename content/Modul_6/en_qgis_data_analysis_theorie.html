@@ -588,7 +588,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spline-interpolation">Spline Interpolation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triangulated-irregular-network">Triangulated Irregular Network</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kriging">Kriging</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolizing-continuous-data">Symbolizing continuous data</a></li>
 </ul>
 </li>
 </ul>
@@ -930,64 +929,36 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
 <section id="pivoting-tables">
 <h3>Pivoting tables<a class="headerlink" href="#pivoting-tables" title="Permalink to this heading">#</a></h3>
 <p>Sometimes, the tables are in a format that is not suitable to join. For example, you have multiple zones per land, making the field <code class="docutils literal notranslate"><span class="pre">CNTRY_NAME</span></code> not suitable for aggregation. In this case, it is useful to pivot the table. This means that the fields for the zones and their respective area size are aggregated under the country. The values of the column <code class="docutils literal notranslate"><span class="pre">ZONE</span></code> will be turned into Columns with the values for the area in these columns. Now you can aggregate this table with additional information that has data on countries.</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
 <figure class="align-default" id="table-pivot-1">
 <a class="reference internal image-reference" href="../../_images/en_table_pivot_1.png"><img alt="../../_images/en_table_pivot_1.png" src="../../_images/en_table_pivot_1.png" style="width: 350px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 195 </span><span class="caption-text">Pivoting tables means transforming values into columns</span><a class="headerlink" href="#table-pivot-1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</div>
-</div>
-</div>
-<div class="sd-col sd-d-flex-row docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
 <figure class="align-default" id="table-pivot-2">
 <a class="reference internal image-reference" href="../../_images/en_table_pivot_2.png"><img alt="../../_images/en_table_pivot_2.png" src="../../_images/en_table_pivot_2.png" style="width: 350px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 196 </span><span class="caption-text">Values of the column <code class="docutils literal notranslate"><span class="pre">ZONE</span></code> are transformed into columns</span><a class="headerlink" href="#table-pivot-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
 <figure class="align-default" id="id2">
 <img alt="../../_images/en_table_pivot_3.png" src="../../_images/en_table_pivot_3.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 197 </span><span class="caption-text">A country is now represented in a single row</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
 <figure class="align-default" id="id3">
 <img alt="../../_images/en_table_pivot_4.png" src="../../_images/en_table_pivot_4.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 198 </span><span class="caption-text">The values for the areas are added to the country column</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
 <figure class="align-default" id="id4">
 <img alt="../../_images/en_table_pivot_5.png" src="../../_images/en_table_pivot_5.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 199 </span><span class="caption-text">Red = Pivot field; Blue = Input field; Green = Values field</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</div>
-</div>
 </section>
 </section>
 <section id="selecting-appropriate-locations-according-to-a-set-of-criteria">
@@ -1033,9 +1004,6 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
 <section id="kriging">
 <h3>Kriging<a class="headerlink" href="#kriging" title="Permalink to this heading">#</a></h3>
 <p>Kriging is a method of geostatistics used to estimate values for spatial units where the phenomenon of interest has not been measured at every spatial points. Kriging integrates covariates into the interpolation. For example, it is not only the distance to measured temperatures that influences its weighting; temperature is also influenced by the altitude of the sample point.</p>
-</section>
-<section id="symbolizing-continuous-data">
-<h3>Symbolizing continuous data<a class="headerlink" href="#symbolizing-continuous-data" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -1130,7 +1098,6 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spline-interpolation">Spline Interpolation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#triangulated-irregular-network">Triangulated Irregular Network</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kriging">Kriging</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolizing-continuous-data">Symbolizing continuous data</a></li>
 </ul>
 </li>
 </ul>
