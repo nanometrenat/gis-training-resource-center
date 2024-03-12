@@ -612,7 +612,7 @@ You may <strong>view, edit, capture and analyze spatial data or create printable
 <h2>Introducing QGIS<a class="headerlink" href="#introducing-qgis" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>QGIS is a <strong>desktop software</strong>: that means you get a program that opens up on your computer as a window with buttons you can click, forms you can fill out to do tasks, and it’s generally a visual interactive experience.</p></li>
-<li><p>QGIS is backed by a <strong>large community of users</strong>, so it’s easy to find solutions to technical issues by using QGIS forums, blog and subreddit.</p></li>
+<li><p>QGIS is backed by a <strong>large community of users</strong>, so it’s easy to find solutions to technical issues by using QGIS forums, blog and subreddit, which are listed <span class="xref myst">here</span>.</p></li>
 </ul>
 <hr class="docutils" />
 <section id="open-qgis">
@@ -632,7 +632,7 @@ The start screen of QGIS usually shows you the projects you worked on recently a
 <p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_new_project.mp4"></video></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>A QGIS Project file has the format ending <code class="docutils literal notranslate"><span class="pre">.qgz</span></code></p>
+<p>A QGIS project file has the format ending <code class="docutils literal notranslate"><span class="pre">.qgz</span></code></p>
 </div>
 </section>
 <section id="overview-of-qgis-interface">
@@ -640,9 +640,14 @@ The start screen of QGIS usually shows you the projects you worked on recently a
 <p>The interface of QGIS is at first glance quite complex. However, once you know all the components you will be able to orientate yourself quickly. Here you can find a description of all components of the interface.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>When you hover with your mouse cursor over icons, text will appear which explains the function of the button</p>
+<p>When you hover with your mouse cursor over icons, text will appear which explains the function of the button.</p>
 </div>
-<p><img alt="QGIS_User_Interface" src="../../_images/en_QGIS_GUI.png" /></p>
+<figure class="align-center" id="qgis-user-interface">
+<a class="reference internal image-reference" href="../../_images/en_QGIS_GUI.png"><img alt="../../_images/en_QGIS_GUI.png" src="../../_images/en_QGIS_GUI.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">QGIS User Interface. Source:</span><a class="headerlink" href="#qgis-user-interface" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ol class="arabic simple">
 <li><p><strong>Layers List / Browser Panel:</strong> The <strong>layers list</strong> shows <strong>all layers/files</strong> that are <strong>loaded in the project</strong>. You can show/hide layers and set other properties.</p></li>
 <li><p><strong>Toolsbars:  <strong>Toolbars</strong> are shortcuts</strong> to execute frequently used commands. For example, there are special toolbars for <strong>vector and raster files</strong>, but also general ones for saving your project, etc. The toolbar contains, among other things, a list of all the commands you can use. The toolbar also contains the <strong>toolbox</strong>, which is used later in many of the wiki videos.</p></li>
@@ -709,8 +714,8 @@ Exercise: Create a new QGIS project<div class="sd-summary-down docutils">
 <section id="show-and-hide-displays-and-toolbars">
 <h4>Show and hide displays and toolbars<a class="headerlink" href="#show-and-hide-displays-and-toolbars" title="Permalink to this heading">#</a></h4>
 <p>There are toolbars and panels for many different tasks. To avoid an overcrowded interface it is smart to only activate specific toolbars or panels only when you really need them.</p>
-<p>To add or remove toolbars from your interface click on <code class="docutils literal notranslate"><span class="pre">View</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbars</span></code> -&gt; Check or uncheck the toolboxes you want to add or remove</p>
-<p>To add or remove  panels from your interface click on <code class="docutils literal notranslate"><span class="pre">View</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">TPanels</span></code> -&gt; Check or uncheck the panels you want to add or remove</p>
+<p>To add or remove toolbars from your interface click on <code class="docutils literal notranslate"><span class="pre">View</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Toolbars</span></code> -&gt; Check or uncheck the toolboxes you want to add or remove.</p>
+<p>To add or remove  panels from your interface click on <code class="docutils literal notranslate"><span class="pre">View</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">TPanels</span></code> -&gt; Check or uncheck the panels you want to add or remove.</p>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Anzeigen_einblenden_ausblenden.mp4"></video></p>
 </section>
 <section id="move-and-arrange-toolbars">
@@ -724,7 +729,7 @@ Exercise: Create a new QGIS project<div class="sd-summary-down docutils">
 <section id="save-open-qgis-projects">
 <h2>Save &amp; Open QGIS Projects<a class="headerlink" href="#save-open-qgis-projects" title="Permalink to this heading">#</a></h2>
 <p>To save progress or to open an existing project in QGIS is very similar to programs like MS Word. However, there is one <strong>BIG</strong> difference.
-In QGIS the geodata you work with is <strong>not</strong> saved in your QGIS projectfile. Instead, the project file only contains the file paths where the geodata were located at the time the project was last saved on the PC. If the location of this geodata is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.</p>
+In QGIS, the geodata you work with is <strong>not</strong> saved in your QGIS projectfile. Instead, the project file only contains the file paths where the geodata were located at the time the project was last saved on the PC. If the location of this geodata is subsequently changed, the error message “handle unavailable layers” will appear when the project is opened again.</p>
 <p>Good data organisation with a fixed and well-thought-out folder structure prevents such problems.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -739,8 +744,8 @@ In QGIS the geodata you work with is <strong>not</strong> saved in your QGIS pro
 <section id="save-projects">
 <h3>Save Projects<a class="headerlink" href="#save-projects" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>When you save the first time</strong>: To save the QGIS project you are working on click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as…</span></code>-&gt; Navigate to the folder where you want to save the project -&gt; Give the project a name -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
-<li><p><strong>When you save progress</strong>: To save progress in a project that was already saved somewhere on your computer there are two good options:</p>
+<li><p><strong>When you save for the first time</strong>: To save the QGIS project you are working on click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as…</span></code>-&gt; Navigate to the folder where you want to save the project -&gt; Give the project a name -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code></p></li>
+<li><p><strong>When saving your progress</strong>: To save progress in a project that was already saved somewhere on your computer there are two good options:</p>
 <ul>
 <li><p>Use the hotkey <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>+ <code class="docutils literal notranslate"><span class="pre">s</span></code> on your keyboard.</p></li>
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p></li>
