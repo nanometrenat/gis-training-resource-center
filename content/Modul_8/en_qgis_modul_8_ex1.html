@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Remote Sensing and Raster data 🛰️ Exercise &#8212; GIS Resource Training Center</title>
+    <title>Rasterdata Exercise 1: Basic Asesment of Flood Exposure in the Indus Basin in Pakistan &#8212; GIS Resource Training Center</title>
   
   
   
@@ -320,8 +320,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 8 - Remote Sensing and Raster data</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_remote_sensing_raster_theorie.html">Remote Sensing and Raster data theorie 🛰️</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Remote Sensing and Raster data 🛰️ Exercise</a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Rasterdata Exercise 1: Basic Asesment of Flood Exposure in the Indus Basin in Pakistan</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 9- Network Analysis</span></p>
 <ul class="nav bd-sidenav">
@@ -552,7 +551,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Remote Sensing and Raster data 🛰️ Exercise</h1>
+    <h1>Rasterdata Exercise 1: Basic Asesment of Flood Exposure in the Indus Basin in Pakistan</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -562,17 +561,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Remote Sensing and Raster data 🛰️ Exercise</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-classification-exercise-1-basic-overview-map-of-flood-risk-in-the-indus-basin-in-pakistan">Geodata Classification Exercise 1: Basic Overview Map of Flood Risk in the Indus Basin in Pakistan</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-wiki-articles">Relevant Wiki Articles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks-1">Tasks 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2">Task 2</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -583,12 +577,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="remote-sensing-and-raster-data-exercise">
-<h1>Remote Sensing and Raster data 🛰️ Exercise<a class="headerlink" href="#remote-sensing-and-raster-data-exercise" title="Permalink to this heading">#</a></h1>
-<p>🚧This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="geodata-classification-exercise-1-basic-overview-map-of-flood-risk-in-the-indus-basin-in-pakistan">
-<h1>Geodata Classification Exercise 1: Basic Overview Map of Flood Risk in the Indus Basin in Pakistan<a class="headerlink" href="#geodata-classification-exercise-1-basic-overview-map-of-flood-risk-in-the-indus-basin-in-pakistan" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="rasterdata-exercise-1-basic-asesment-of-flood-exposure-in-the-indus-basin-in-pakistan">
+<h1>Rasterdata Exercise 1: Basic Asesment of Flood Exposure in the Indus Basin in Pakistan<a class="headerlink" href="#rasterdata-exercise-1-basic-asesment-of-flood-exposure-in-the-indus-basin-in-pakistan" title="Permalink to this heading">#</a></h1>
 <section id="aim-of-the-exercise">
 <h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
 <p>The aim of this exercise is to gain a basic understanding of working with raster data and its visualisation and advantages. To achieve this, several datasets such as a digital elevation model, population data and mapped flood extents are processed to create a simple flood risk map for the Indus River basin in Pakistan.</p>
@@ -632,7 +622,7 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Open QGIS and create a <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#step-by-step-setting-up-a-new-qgis-project-from-scratch">new project</a> by clicking on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span></code></p></li>
 <li><p>Once the project is created save the project in the “project” folder of the “Ex_Pakistan_floodrisk”. To do that click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code> and navigate to the folder. Name the project “Pakistan_floodrisk”.</p></li>
-<li><p>Import the GeoPackages <code class="docutils literal notranslate"><span class="pre">Pakistan_borders.gpkg</span></code> and the rasters <code class="docutils literal notranslate"><span class="pre">Pakistan_DEM_1km.tif</span></code>, <code class="docutils literal notranslate"><span class="pre">Pakistan_pop_dens_1km.tif</span></code> into your project via drag and drop (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-vector-data-via-drag-and-drop">Wiki Video</a>).
+<li><p>Import the GeoPackages <code class="docutils literal notranslate"><span class="pre">Pakistan_admin.gpkg</span></code> and the rasters <code class="docutils literal notranslate"><span class="pre">Pakistan_DEM_1km.tif</span></code>, <code class="docutils literal notranslate"><span class="pre">Pakistan_pop_dens_1km.tif</span></code> into your project via drag and drop (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-vector-data-via-drag-and-drop">Wiki Video</a>).
 Or by clicking <code class="docutils literal notranslate"><span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Vector</span> <span class="pre">Layer</span></code>/ <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Raster</span> <span class="pre">Layer</span></code></p></li>
 </ol>
 <div class="admonition attention">
@@ -671,7 +661,7 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <li><p>Finally you can choose between the interpolation methods “Linear” (smooth display) and “Discrete” (display in distinct classes). Choose one of them. If you choose “Discrete” you can alter the number of visual breaks in your data display by changing the number of classes in the “Classes” menu.</p></li>
 </ol>
 <figure class="align-center" id="symbologypanel">
-<a class="reference internal image-reference" href="../../_images/mod8_ex1_symbologypanel.png"><img alt="../../_images/mod8_ex1_symbologypanel.png" src="../../_images/mod8_ex1_symbologypanel.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/mod8_ex1_symbologypanel.png"><img alt="../../_images/mod8_ex1_symbologypanel.png" src="../../_images/mod8_ex1_symbologypanel.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 182 </span><span class="caption-text">Symbologypanel of rasterlayers</span><a class="headerlink" href="#symbologypanel" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -687,11 +677,11 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <p><span class="caption-number">Fig. 183 </span><span class="caption-text">Exemplary visualization of the DEM with linear interpolation</span><a class="headerlink" href="#dem-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic" start="10">
+<ol class="arabic" start="9">
 <li><p>Now we want to have a look at a different raster: Make the <code class="docutils literal notranslate"><span class="pre">Pakistan_pop_density_1km</span></code> layer visible. This raster stores values of population density per kilometer in 1km x 1km cells, so effectively the approximate population count per area. The initial visualization seems not to display the information of the different population densities very well, as it is mostly black. We will fix this with the following steps:</p>
 <ol class="arabic simple">
 <li><p>Have a look of the value range of the raster in the raster properties and check some values in different areas with the <img alt="" src="../../_images/mod8_ex1_informationtool.png" /> tool.</p></li>
-<li><p>The raster covers a very large value range from around 0,2 - 31300. This is the case because of the disparity in population between very remote areas and extremely densly populated megacities that are both present in Pakistan. To have a closer look at the value distribution among the cells of the raster generate a histogramm <strong>histogramm link</strong> in the layer styling panel by selcting the <img alt="" src="../../_images/mod8_ex1_histogrammicon.png" /> icon on the left and click on <code class="docutils literal notranslate"><span class="pre">Compute</span> <span class="pre">histogramm</span></code>. Have a closer look at the histogramm by zoomin in to the range of “Pixel Value” = 5000 and “Frequency” = 2000. A few things are visible:</p></li>
+<li><p>The raster covers a very large value range from around 0,2 - 31300. This is the case because of the disparity in population between very remote areas and extremely densly populated megacities that are both present in Pakistan. To have a closer look at the value distribution among the cells of the raster generate a histogramm in the layer styling panel by selecting the <img alt="" src="../../_images/mod8_ex1_histogrammicon.png" /> icon on the left and click on <code class="docutils literal notranslate"><span class="pre">Compute</span> <span class="pre">histogramm</span></code>. Have a closer look at the histogramm by zoomin in to the range of “Pixel Value” = 5000 and “Frequency” = 2000. A few things are visible:</p></li>
 </ol>
 <ul class="simple">
 <li><p>The Raster values are extremely tailed with very few cells higher than 2000 but extent into ay higher ranges.</p></li>
@@ -699,7 +689,7 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <li><p>The vast majority of the values seem to be between around 0 to 3000.</p></li>
 </ul>
 <ol class="arabic simple" start="3">
-<li><p>Based on the exploration of the histogramm try a few <strong>value boundaries</strong> for visualisation at the top of your layer styling panel (select the <img alt="" src="fig/mod8_ex1_symbologyicon.png" /> menu). Keep in mind that we look at population data and that population distribution is very spatially heterogenic most of the time. Try the following combinations and choose the one that suits the data best:</p></li>
+<li><p>Based on the exploration of the histogramm try a few value boundaries for visualisation at the top of your layer styling panel (select the <img alt="" src="fig/mod8_ex1_symbologyicon.png" /> menu). Keep in mind that we look at population data and that population distribution is very spatially heterogenic most of the time. Try the following combinations and choose the one that suits the data best:</p></li>
 </ol>
 <ul class="simple">
 <li><p>Min = 0    Max = 1000</p></li>
@@ -711,10 +701,10 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <figure class="align-center" id="valuerange-panel">
 <a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_valuerange.png"><img alt="../../_images/en_3.34_m8ex1_valuerange.png" src="../../_images/en_3.34_m8ex1_valuerange.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 184 </span><span class="caption-text">Prompts to adjust die valurange for visulization</span><a class="headerlink" href="#valuerange-panel" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 184 </span><span class="caption-text">Prompts to adjust die valuerange for visulization</span><a class="headerlink" href="#valuerange-panel" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="11">
+<ol class="arabic simple" start="10">
 <li><p>Have a look at the histogramm of the DEM and adjust the visualization range for the DEM too if you deem it necessary.</p></li>
 <li><p>A common and easy method to enhance the visuals of a map you generate with QGIS is the addition of a trasparent “Hillshade” layer. You can generate it with the <code class="docutils literal notranslate"><span class="pre">Hillshade</span></code> tool that you can find in your Processing toolbox panel or via <code class="docutils literal notranslate"><span class="pre">Raster</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Analyse</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Hillshade</span></code>.</p>
 <ol class="arabic simple">
@@ -722,7 +712,7 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <li><p>The next modifiable Parameter is the “Z factor”. It is used to adjust the vertical exaggeration of elevation data, influencing the steepness of slopes in the visualization. You can just use the default od one or change it to to “2” or “3” if you want a more pronounced shading.</p></li>
 <li><p>The paramters “Azimuth” and “Vertical angle” determine the direction and angle above the horizon of the imaginary lightsource creating the shading. We recommend to leave the default values.</p></li>
 <li><p>Name the output “Hillshade_Pakistan” and select your “temp” folder to save it. Click <code class="docutils literal notranslate"><span class="pre">Run</span></code> to generate the Hillshade.</p></li>
-<li><p>When the Hillshade layer is generated set its “global opacity” to 20% in your layer styling panel and position it over the DEM in your Layer panel to combine the Hillshade with the DEM. You can also enhance the contrast of the Hillshade layer when you scroll down in the symbology tab in the layer styling panel to optimize the visualization.</p></li>
+<li><p>When the Hillshade layer is generated set its “global opacity” to 20% in your layer styling panel and position it over the DEM in your layer panel to combine the Hillshade with the DEM. You can also enhance the contrast of the Hillshade layer when you scroll down in the symbology tab <img alt="" src="fig/mod8_ex1_symbologyicon.png" /> in the layer styling panel to optimize the visualisation.</p></li>
 </ol>
 </li>
 </ol>
@@ -738,7 +728,7 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>One general advantage of rasterdata over vectordata is that that they are better suited for deriving further data sets such as a hillshade raster. There are a multitude of tools in QGIS for the derivation of topographical paramters such as slope or aspect, hydrological paramters such as stream networks or flow accumulaton and varius different indices.</p>
+<p>One general advantage of rasterdata over vectordata is that that they are better suited for deriving further data sets, such as a hillshade raster. There are a multitude of tools in QGIS for the derivation of topographical paramters such as slope or aspect, hydrological paramters such as stream networks or flow accumulaton and varius different indices.</p>
 </div>
 </section>
 <section id="task-2">
@@ -755,16 +745,16 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 </li>
 </ol>
 <p>To get a aproximation of flood exposure our first goal is to create a layer displaying the population that was directly affected by the recent floods. This involves several steps:</p>
-<ol class="arabic simple">
+<ol class="arabic simple" start="2">
 <li><p>First we will covert the <code class="docutils literal notranslate"><span class="pre">Pakistan_floodextents_2023.shp</span></code> vectorlayer to the rasterformat. To achieve this first create an empty raster that will be the base layer for our rasterization.</p>
-<ul class="simple">
+<ol class="arabic simple">
 <li><p>Open the tool <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">constant</span> <span class="pre">raster</span> <span class="pre">layer</span></code> from your Processing toolbox panel.</p></li>
 <li><p>Under “Desired extent” choose “Calculate from layer” &gt; <code class="docutils literal notranslate"><span class="pre">Pakistan_pop_dens_1km</span></code> to set the layer extent to the extent of xour floodextent layer.</p></li>
 <li><p>Under “Target CRS” choose “EPSG:32642 - WGS 84 / UTM zone 42N” from the dropdoen menu. If the CRS does not pop up search it by clicking the <img alt="" src="fig/mod8_ex1_crsicon.png" /> icon next to the prompt.</p></li>
-<li><p>As “Pixel size” choose “1000” as the unit of the choosen CRS is meters and the resolution should match our population raster with a cellsize of 1 x 1km.</p></li>
+<li><p>As “Pixel size” choose “1000” as the unit of the chosen CRS is meters and the resolution should match our population raster with a cellsize of 1 x 1km.</p></li>
 <li><p>Under “Constant value” choose “0”. This is the value that will be assigned to all rastercells of the created raster.</p></li>
 <li><p>Save the raster as “Rastermask_floods” in your “temp” folder and click <code class="docutils literal notranslate"><span class="pre">Run</span></code> to generate the empty raster.</p></li>
-</ul>
+</ol>
 </li>
 </ol>
 <figure class="align-center" id="interface-of-the-create-constant-raster-layer-tool">
@@ -773,15 +763,15 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <p><span class="caption-number">Fig. 186 </span><span class="caption-text">Interface of the “Create constant raster layer” tool</span><a class="headerlink" href="#interface-of-the-create-constant-raster-layer-tool" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li><p>Now we will convert our Floodextent-Multipolygon (“Pakistan_floodextents_2023.shp”) to the raster format. This process is called “Rasterization”.</p>
-<ul class="simple">
+<ol class="arabic simple">
 <li><p>Open the tool <code class="docutils literal notranslate"><span class="pre">Rasterize</span> <span class="pre">(overwrite</span> <span class="pre">with</span> <span class="pre">fixed</span> <span class="pre">value)</span></code> from your processing toolbox panel</p></li>
 <li><p>As “Input vector layer ” choose you floodextent layer “Pakistan_floodextents_2023”</p></li>
-<li><p>A- As “Input raster layer ” choose your empty raster “Rastermask_floods”</p></li>
+<li><p>As “Input raster layer ” choose your empty raster “Rastermask_floods”</p></li>
 <li><p>Under “A fixed value to burn” type in “1”. This means that all rastercells of your input rasters that are covered by geometries of your input vector layer will be changed to the value “1”.</p></li>
-<li><p>Click on “Run” to rasterize your floodextents.</p></li>
-</ul>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Run</span></code> to rasterize your floodextents.</p></li>
+</ol>
 </li>
 <li><p>The layer <code class="docutils literal notranslate"><span class="pre">Rastermask_floods</span></code> should now have values of “1” instead of “0” in the cells covered by the flood of 2023. Change the visualization range in your Layer styling panel under “Symbology” <img alt="" src="fig/mod8_ex1_symbologyicon.png" /> to Min = 0 and Max = 1 and check if the rasterization was succesful. Youl layer should look something like this (Singleband grey” visualization):</p></li>
 </ol>
@@ -791,12 +781,12 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <p><span class="caption-number">Fig. 187 </span><span class="caption-text">Example rastermask of flooded areas</span><a class="headerlink" href="#example-floodmask" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic" start="4">
-<li><p>Now we want to extract the population count within the flood zones. We do this by processing two rasters with the <code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Calculator</span></code> (<strong>Extensive Wiki Article</strong>)</p>
+<ol class="arabic" start="5">
+<li><p>Now we want to extract the population count within the flood zones. We do this by processing two rasters with the <code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Calculator</span></code>.</p>
 <ol class="arabic simple">
 <li><p>Open the raster Calculator from your processing toolbox Panel or via <code class="docutils literal notranslate"><span class="pre">Raster</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Calculator</span></code>.</p></li>
 <li><p>As “Input Layers” layers select your rastermask “Rastermask_floods” and the population layer “Pakistan_pop_dens_1km.tif” by clicking on the <img alt="" src="fig/mod8_ex1_optionsicon.png" /> icon and ticking the boxes next to the two layers.</p></li>
-<li><p>Click on the <img alt="" src="fig/mod8_ex1_expressionicon.png" /> icon to open the expression interface. You might know a very similar panel from the “field calculator” for conducting calculations in the attribute table of verctorlayers.</p></li>
+<li><p>Click on the <img alt="" src="fig/mod8_ex1_expressionicon.png" /> icon to open the expression interface. You might know a very similar panel from the “field calculator” for conducting calculations in the attribute table of vector layers.</p></li>
 <li><p>Enter the following expression to  “Raster Calculator Expression” Panel:</p></li>
 </ol>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>&quot;Rastermask_floods@1&quot; * &quot;Pakistan_pop_dens_1km@1&quot;
@@ -804,12 +794,12 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can add your Input layers to your expression in the “Raster caculator Expression” Interface by double clicking in them in the “Layers” Panel. The “&#64;1” behind the layer name indicates that the first Band of the layer is used for the calculation. Most rasters just have one band, but there are a few exceptions like multispectral remote sensing data.</p>
+<p>You can add your Input layers to your expression in the “Raster caculator Expression” Interface by double clicking on them in the “Layers” Panel. The “&#64;1” behind the layer name indicates, that the first band of the layer is used for the calculation. Most rasters just have one band, but there are a few exceptions like multispectral remote sensing data.</p>
 </div>
 <ol class="arabic simple" start="5">
-<li><p>All we doing with this expression is a simple mathematical opration: We multiply the value of each cell of the first raster with the value of the cell in the same location of the second raster. The output cell stores the resulting value. Because our <code class="docutils literal notranslate"><span class="pre">Rastermask_floods</span></code> is 0 in all cells outside the flood extents all cells in these areas are multiplied by 0 and become = 0. The cells of <code class="docutils literal notranslate"><span class="pre">Pakistan_pop_dens_1km.tif</span></code>  within the flooded areas get multiplied by 1 and keep their values.</p></li>
+<li><p>All we doing with this expression is a simple mathematical operation: We multiply the value of each cell of the first raster with the value of the cell in the same location of the second raster. The output cell stores the resulting value. Because our <code class="docutils literal notranslate"><span class="pre">Rastermask_floods</span></code> is “0” in all cells outside the flood extents all cells in these areas are multiplied by “0” and become = 0. The cells of <code class="docutils literal notranslate"><span class="pre">Pakistan_pop_dens_1km.tif</span></code>  within the flooded areas get multiplied by 1 and keep their values.</p></li>
 <li><p>Under “Output CRS” select “EPSG:32642 - WGS 84 / UTM zone 42N”.</p></li>
-<li><p>Navigate too your temp folder and save the output raster under “Pop_floodextents” and click “Run” execute the calculation.</p></li>
+<li><p>Navigate too your “temp” folder and save the output raster under “Pop_floodextents” and click <code class="docutils literal notranslate"><span class="pre">Run</span></code> execute the calculation.</p></li>
 </ol>
 <figure class="align-center" id="rastercalculator-interface">
 <a class="reference internal image-reference" href="../../_images/en_3.34_m8ex1_rastercalc_popflood.png"><img alt="../../_images/en_3.34_m8ex1_rastercalc_popflood.png" src="../../_images/en_3.34_m8ex1_rastercalc_popflood.png" style="width: 600px;" /></a>
@@ -830,14 +820,14 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 </figcaption>
 </figure>
 <p>Now we have teached our goal of generating a dataset displaying flood affected population. In the context of real world application in the humanitarian sector or the visualisation of data for people/institutions not familiar with GIS, it can be sensible to aggregate rasterdata on the level of administrative units.</p>
-<ol class="arabic" start="5">
+<ol class="arabic" start="6">
 <li><p>We will achieve this with our produced dataset on the admin 2 level  (districts) in Pakistan by calculating the total population affected by floods per district.</p>
 <ol class="arabic simple">
-<li><p>Open the tool <code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code> from your Processing Toolbox Panel.</p></li>
+<li><p>Open the tool <code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code> (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_raster_basic_wiki.html##zonal-statistics">Wiki Article</a>) from your Processing Toolbox Panel.</p></li>
 <li><p>As “Input Layer” choose the layer “Pakistan_admin2” with the polygons of administrative districts.</p></li>
 <li><p>As “Raster Layer” choose “Pop_floodextent”.</p></li>
-<li><p>Defining a prefix for your output column is optinal but can be helpful for finding the caculatedb values in large attribute tables. Choose “pop_” as “Output column prefix”.</p></li>
-<li><p>Below “Statistics to calculate” click on the <img alt="" src="fig/mod8_ex1_optionsicon.png" /> icon to acess the different options of statistical operations available for calculating polygon values based on your raster.</p>
+<li><p>Defining a prefix for your output column is optional but can be helpful for finding the calculated values in large attribute tables. Choose “pop_” as “Output column prefix”.</p></li>
+<li><p>Below “Statistics to calculate” click on the <img alt="" src="fig/mod8_ex1_optionsicon.png" /> icon to access the different options of statistical operations available for calculating polygon values based on your raster.</p>
 <ul class="simple">
 <li><p>Which statistical operation woud suit the task of calculating flood affected population per district?</p></li>
 </ul>
@@ -866,7 +856,7 @@ Solution<div class="sd-summary-down docutils">
 <ol class="arabic simple">
 <li><p>Perform a visualisation of the values in the newly generated field “pop_sum” with graduated classification and the colour palette “Reds”</p></li>
 <li><p>Choose an appropriate mode of classification, that fits the nature of the displayed data.</p></li>
-<li><p>Enable labels with the district names (<strong>colum “xxxx”</strong>)</p>
+<li><p>Enable labels with the district names (column “ADM2_EN”)</p>
 <ul class="simple">
 <li><p>Which districts display the most population affected by the floods?</p></li>
 </ul>
@@ -881,9 +871,9 @@ Solution<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 191 </span><span class="caption-text">Polygonlayer of flood affected population per district</span><a class="headerlink" href="#example-popflood-per-district" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>As we now have a rough idea which in which districts large populations where affected by floods we want to explore if precipitation data of 2023 shows similar patterns as heavy rainfall is a major predisposing factor for the occurence riverine floods: Are the districts experiencing flooding also experiencing the most rainfall?</p>
-<ol class="arabic" start="5">
-<li><p>We will achieve this with our produced dataset on the admin 2 level  (districts) in Pakistan by calculating the total population affected by floods per district.</p>
+<p>As we now have a rough idea which in which districts large populations where affected by floods we want to explore if precipitation data of 2023 shows similar patterns, as heavy rainfall is a major predisposing factor for the occurence of riverine floods: Are the districts experiencing flooding also experiencing the most rainfall?</p>
+<ol class="arabic" start="8">
+<li><p>We will explore this by firstly calculating the the precipitation intensity per district for all of Pakistan in 2023.</p>
 <ol class="arabic simple">
 <li><p>Again open <code class="docutils literal notranslate"><span class="pre">Zonal</span> <span class="pre">Statistics</span></code>.</p></li>
 <li><p>As “Input Layer” again choose “Pakistan_admin2”. The “Rasterlayer this time is “Pakistan_precip_2023”.</p></li>
@@ -899,7 +889,7 @@ Solution<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">“Mean” is the appropriate method, as we want to determine the average amount of rainfall per area unit, which is a paramter that we can compare across districts.</p>
 </div>
-</details><ol class="arabic simple" start="6">
+</details><ol class="arabic simple" start="5">
 <li><p>Name your layer “Precip_admin2”, save it to your “output” folder and click <code class="docutils literal notranslate"><span class="pre">Run</span></code>.</p></li>
 <li><p>Visualize the resuts by implementing a graduated classification of your new column in the attribute table “precip_mean”</p></li>
 </ol>
@@ -912,8 +902,8 @@ Solution<div class="sd-summary-down docutils">
 <p><span class="caption-number">Fig. 192 </span><span class="caption-text">Polygonlayer of mean precipitation per district in 2023</span><a class="headerlink" href="#mean-precip-per-district" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="7">
-<li><p>Compare your Layer “Precip_admin2” with “Floodaffected_pop_admin2” and the flooded areas (“Pakistan_floodextent_2023). Would precipitation data be a good paramter for the forecasting of floodexosure in the year 2023? Also have a look at the layer “Pakistan_indusbasin_streams” as well as your DEM and try to explain the observed patterns of the spatial distribution of flooded areas and precipitation.</p></li>
+<ol class="arabic simple" start="9">
+<li><p>Compare your layer “Precip_admin2” with “Floodaffected_pop_admin2” and the flooded areas (“Pakistan_floodextent_2023). Would precipitation be a good paramter for the forecasting of floodexposure in the year 2023? Also have a look at the layer “Pakistan_indusbasin_streams” as well as your DEM and try to explain the observed patterns of the spatial distribution of flooded areas and precipitation.</p></li>
 </ol>
 </section>
 </section>
@@ -981,17 +971,12 @@ Solution<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Remote Sensing and Raster data 🛰️ Exercise</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-classification-exercise-1-basic-overview-map-of-flood-risk-in-the-indus-basin-in-pakistan">Geodata Classification Exercise 1: Basic Overview Map of Flood Risk in the Indus Basin in Pakistan</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-wiki-articles">Relevant Wiki Articles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks-1">Tasks 1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-2">Task 2</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
