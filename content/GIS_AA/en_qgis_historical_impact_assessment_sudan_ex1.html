@@ -342,16 +342,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_drought_trigger_somalia.html">QGIS Trigger Workflow for Somalia</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_risk_assessment_plugin.html">Risk Assessment QGIS Plugin</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="en_qgis_historical_impact_assessment_sudan.html">Historical Impact Assessment (HIA) for Flood in Sudan</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Historical Impact Assessment (HIA) Sudan exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_historical_impact_assessment_sudan.html">Historical Impact Assessment (HIA) for Flood in Sudan</a></li>
 
-</ul>
-</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mobile Data Collection</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Mobile_Data_collection/en_SMT.html">Sketch Map Tool</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Mobile_Data_collection/en_SMT_training.html">Sketch Map Tool Training</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Mobile_Data_collection/en_SMT_training.html">Sketch Map Tool Training</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -575,8 +572,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-preparing-excel-table-structure">Task 4: Preparing Excel table Structure ✅</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-data-compiling">Task 5: Data compiling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-hia-data-cleaning">Task 6: HIA Data Cleaning ✅</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-7-joining-p-code-columns">Task 7: Joining P-Code columns</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-8-data-visualization-and-analysis">Task 8: Data visualization and analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-7-joining-p-code-columns">Task 7: Joining P-Code columns ✅</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-8-data-export-using-pivot-table-in-excel">Task 8: Data export using Pivot-Table in Excel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-9-data-visualization-and-analysis-in-qgis">Task 9: Data visualization and analysis in QGIS</a></li>
 </ul>
 </li>
 </ul>
@@ -621,9 +619,18 @@ The folder is called <strong>GIS_AA_HIA_Sudan_ex1</strong> and contains the whol
 <p class="admonition-title">Attention</p>
 <p>This step is outlined in the article Historical Impact Assessment (HIA) for Flood in Suda will not be the subject of this exercise.</p>
 </div>
-<p>We want to tie single pieces of information like impacts, to knowen flood events in Sudan. Thus we first need a comprehensive list of such events. In the case of Sudan, there are two sources, EM-DAT and RelifeWeb. EM-DAT is a disaster database that lists events above a certain severity.
-RelifeWeb is actually an information platform for humanitarian response. But it has a list of active and past disasters as well.
-Both databases list the same events for the most part. By comparing the two datasets and only selecting unique events, we receive a list of all significant flood events in Sudan and the timeframes of all events. This can easily be done in Excel.</p>
+<p>We want to tie single pieces of information, like impacts, to known flood events in Sudan. Thus, we first need a comprehensive list of such events. In the case of Sudan, there are two sources: EM-DAT and ReliefWeb. <a class="reference external" href="https://www.emdat.be/">EM-DAT</a> is a disaster database that lists events above a certain severity.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>EM-DAT Inclusion Criteria</p>
+<ul class="simple">
+<li><p>At least ten deaths (including dead and missing).</p></li>
+<li><p>At least 100 affected (people affected, injured, or homeless).</p></li>
+<li><p>A call for international assistance or an emergency declaration.</p></li>
+</ul>
+</div>
+<p><a class="reference external" href="https://reliefweb.int/">ReliefWeb</a> is actually an information platform for humanitarian response, but it also has a list of active and past disasters.</p>
+<p>Both databases list the same events for the most part. By comparing the two datasets and only selecting unique events, we receive a list of all significant flood events in Sudan and the timeframes of each event. This can easily be done in Excel</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>EM-Date and RelifeWeb data overview
@@ -754,8 +761,8 @@ Flood Events List<div class="sd-summary-down docutils">
 </details></section>
 <section id="task-3-selecting-datasets">
 <h2>Task 3- Selecting datasets<a class="headerlink" href="#task-3-selecting-datasets" title="Permalink to this heading">#</a></h2>
-<p>In this step, we decide which datasets we want to include in the HIA. In this context, there are three sources we can turn to. The Sudan Red Crescent Society (SRCS), RelifeWeb and FloodList. In this exercise, we will limit ourselves to datasets from RelifeWeb and Floodlist.
-In the „Input“ folder of the exercise data you can find the folder „reports_articles“. This folder contains 10 datasets.</p>
+<p>In this step, we decide which datasets we want to include in the HIA. In this context, there are three sources we can turn to: the Sudan Red Crescent Society (SRCS), ReliefWeb, and FloodList. For this exercise, we will limit ourselves to datasets from ReliefWeb and FloodList.
+In the ‘Input’ folder of the exercise data, you can find the folder ‘reports_articles.’ This folder contains 10 datasets.</p>
 <ol class="arabic">
 <li><p>Your task now is to go through the reports and decide which one you will use in the HIA. Place the dataset you want to use in a new folder.</p>
 <p>As a decision support, you can use these three parameters:</p>
@@ -795,8 +802,8 @@ SUDAN Situation Report 13 Nov 2020</div>
 </div>
 </details><hr class="docutils" />
 <p><strong>Uniqueness</strong></p>
-<p>It is important to not only use data from one source becaus of confience.
-The assumption is that different organisations have different capacities and work in different areas, thus they may have better information in some locations of sectors than other organisations.</p>
+<p>It is important to not only use data from one source because of confidence.
+The assumption is that different organizations have different capacities and work in different areas; thus, they may have better information in some locations or sectors than other organizations.</p>
 </li>
 <li><p>Give the datasets you selected an ID. This is essential to be able to later pinpoint from which dataset a particular information was pulled. Change the name of the file to the new ID. Furthermore, create a list of the datasets you want to use for the HIA.</p>
 <figure class="align-default">
@@ -2642,7 +2649,7 @@ Impact types used in Sudan HIA<div class="sd-summary-down docutils">
 </details></section>
 <section id="task-5-data-compiling">
 <h2>Task 5: Data compiling<a class="headerlink" href="#task-5-data-compiling" title="Permalink to this heading">#</a></h2>
-<p>Finally, we can start to compile the data. Remember we are using the key + value concept to create a long table. Every piece of information gets one row!</p>
+<p>Finally, we can start to compile the data. Remember we are using the <strong>key + value</strong> concept to create a long table. Every piece of information gets one row!</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Tipps for data compiling<div class="sd-summary-down docutils">
@@ -3282,7 +3289,7 @@ Probably, the reddened information is from two different sources. So you can del
 </ol>
 </section>
 <section id="task-7-joining-p-code-columns">
-<h2>Task 7: Joining P-Code columns<a class="headerlink" href="#task-7-joining-p-code-columns" title="Permalink to this heading">#</a></h2>
+<h2>Task 7: Joining P-Code columns ✅<a class="headerlink" href="#task-7-joining-p-code-columns" title="Permalink to this heading">#</a></h2>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>In this exercise, you can skip this step by using the provided data in the folder task_8</p>
@@ -3318,17 +3325,148 @@ The information below should show a green check and „The selection has matched
 <p class="sd-card-text">The Result should be the Excel file „Suadn_impact_p_code“. The file should contain all info from the original impact table and the two new columns „ADM1_EN“ and „ADM1_PCODE“.</p>
 </div>
 </details></section>
-<section id="task-8-data-visualization-and-analysis">
-<h2>Task 8: Data visualization and analysis<a class="headerlink" href="#task-8-data-visualization-and-analysis" title="Permalink to this heading">#</a></h2>
-<p>Import the CSV-file into QGIS.</p>
+<section id="task-8-data-export-using-pivot-table-in-excel">
+<h2>Task 8: Data export using Pivot-Table in Excel<a class="headerlink" href="#task-8-data-export-using-pivot-table-in-excel" title="Permalink to this heading">#</a></h2>
+<p><strong>Impact Quantity for one year on state level:</strong></p>
 <ol class="arabic simple">
-<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">Manager</span></code></p></li>
-<li><p>Select the <code class="docutils literal notranslate"><span class="pre">Delimited</span> <span class="pre">Text</span></code> section. Here you can input your CSV-file</p></li>
-<li><p>Depending on the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Format</span></code> you need to define Custom delimiters or you can just select CSV.</p></li>
-<li><p>Always check the Sample Data output at the bottom to see if the import is working as expected. You probably will also need to check the <code class="docutils literal notranslate"><span class="pre">Record</span> <span class="pre">and</span> <span class="pre">Fields</span> <span class="pre">Options</span></code> and specify if your first record is a header or already data.</p></li>
-<li><p>Lastly, it is important to specify the <code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">Definition</span></code>, where you can just select <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">geometry</span></code>.</p></li>
+<li><p>Open the Excel dataset.</p></li>
+<li><p>Turn the data in a table by clicking on <code class="docutils literal notranslate"><span class="pre">Insert</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Table</span></code>-&gt; check <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">table</span> <span class="pre">has</span> <span class="pre">headers</span></code></p></li>
+<li><p>Also under the <code class="docutils literal notranslate"><span class="pre">Insert</span></code>-Tab click on <code class="docutils literal notranslate"><span class="pre">Pivot</span> <span class="pre">Table</span></code>. Make sure your table range is correct. Check <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Worksheet</span></code>. Click <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
+<li><p>Setup the pivot table by placing the columns as follows:</p></li>
 </ol>
-<p>An example will be shown in <a class="reference internal" href="en_qgis_historical_impact_assessment_sudan.html#hia-csv-import"><span class="std std-numref">Fig. 216</span></a>.</p>
+<ul class="simple">
+<li><p>Filter: Start_year</p></li>
+<li><p>Columns: Impact_Type</p></li>
+<li><p>Rows: admin_1 or admin_1_PCODE (If you want to use this table in QGIS, you should use admin_1_PCODE Instead of admin_1)</p></li>
+<li><p>Values: Impact_quantity</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>To see the sum of the different impacts click on Impact_quantity under Values -&gt; <code class="docutils literal notranslate"><span class="pre">Value</span> <span class="pre">Field</span> <span class="pre">Settings</span></code> -&gt; select <code class="docutils literal notranslate"><span class="pre">Sum</span></code>.</p></li>
+<li><p>Directly above the pivot table, you should see the option to filter by year. Select the year you are interested in. For the following example the year 2020 was used.</p></li>
+</ol>
+<p>Now you can just copy the whole table, and place it in a new worksheet. Make sure to only paste the values. Save this output as a CSV-file, this will make the import of the subset into QGIS easier. Now we can use this table to join it with an existing geodataset in QGIS.</p>
+<p><strong>Flood events in Sudanese states for all the recorded years</strong></p>
+<p>In this section we want to analyse and visualise all recorded flooding events for all the Sudanese state. With our filter for the Impact-Type we derive information for the years 2003 until 2021.</p>
+<ol class="arabic simple">
+<li><p>In the first step we will create a new <code class="docutils literal notranslate"><span class="pre">pivot</span> <span class="pre">table</span></code> and store it in a new sheet. Here we will specify the following:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Columns: Impact_Type</p></li>
+<li><p>Rows: admin_1_PCODE</p></li>
+<li><p>Values: Count of impact_quality</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Now we want to filter the columns labels to the following impact types:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Event</p></li>
+<li><p>Flash-flood</p></li>
+<li><p>Flood</p></li>
+<li><p>Flooding</p></li>
+</ul>
+<p>We also want to include the Event and Flash-floods as these types can also be associated with flooding events as a result of heavy rainfall, seasonal rainfall, etc.
+We also want to make sure that we rename the column containing the sum of the flooding events to <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">flood</span> <span class="pre">events</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li><p>Now we export this excel sheet as a CSV file and import it into QGIS. We will open the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">Manager</span></code> and select the <code class="docutils literal notranslate"><span class="pre">Delimited</span> <span class="pre">Text</span></code> section. Here we need to do the following specifications (<a class="reference internal" href="#hia-import-csv-floods"><span class="std std-numref">Fig. 228</span></a>).</p></li>
+</ol>
+</section>
+<section id="task-9-data-visualization-and-analysis-in-qgis">
+<h2>Task 9: Data visualization and analysis in QGIS<a class="headerlink" href="#task-9-data-visualization-and-analysis-in-qgis" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open QGIS and create a new projeckt.</p></li>
+<li><p>Import the file “sdn_adm_cbs_nic_ssa_20200831 — sdn_admbnda_adm1_cbs_nic_ssa_20200831”  from the input file in QGIS.</p></li>
+</ol>
+<p>__Visualise impact quantity data for one year on state level in QGIS: __</p>
+<ol class="arabic simple">
+<li><p>Import the csv fille “Sudan_admin1_Flood_Impact_quantity_2020.CSV” from the input folder of task 8 in QGIS by opening the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">Manager</span></code> and select the <code class="docutils literal notranslate"><span class="pre">Delimited</span> <span class="pre">Text</span></code> section.</p>
+<ol class="arabic simple">
+<li><p>Here you can input your CSV-file and depending on the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Format</span></code> you need to define Costum delimiters or you can just select CSV. In thix case go with semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code>. Always check the Sample Data output at the bottom to see if the import is working as expected.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Record</span> <span class="pre">and</span> <span class="pre">Fields</span> <span class="pre">Options</span></code>: Specify that your first record is a header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">Definition</span></code>: Select <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">geometry</span></code>.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Add</span></code></p></li>
+</ol>
+</li>
+</ol>
+<p><strong>Outcome:</strong>  You should now have your “Sudan_admin1_Flood_Impact_quantity_2020” file as table in QGIS.</p>
+<figure class="align-default" id="hia-csv-import">
+<a class="reference internal image-reference" href="../../_images/Sudan_HIA_ex_import_csv_impact.png"><img alt="../../_images/Sudan_HIA_ex_import_csv_impact.png" src="../../_images/Sudan_HIA_ex_import_csv_impact.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 225 </span><span class="caption-text">Import of the CSV data impact quantity 2020 on state level</span><a class="headerlink" href="#hia-csv-import" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>To turn the impact data into a geodataset we will join it with the — layer based on th p-codes. We will use the tool <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code>.</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span></code>: “sdn_adm_cbs_nic_ssa_20200831 — sdn_admbnda_adm1_cbs_nic_ssa_20200831”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span></code>: “admin1Pcode”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Layer</span> <span class="pre">2</span></code>: “Sudan_admin1_Flood_Impact_quantity_2020”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">field</span> <span class="pre">2</span></code>: “admin1_pcode”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">Type</span></code> : “Take attributes of the first matching features only (one-to-one)</p></li>
+<li><p>Name the new file “Sudan_admin1_impact_quantity” and save it in your “result” folder</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+</ol>
+</li>
+</ol>
+<p><strong>Outcome:</strong> You should now have the layer „Sudan_admin1_impact_quantity“ in your QGIS. The layer should have all columns from Sudan_admin1_Flood_Impact_quantity_2020 and sdn_adm_cbs_nic_ssa_20200831 — sdn_admbnda_adm1_cbs_nic_ssa_20200831.</p>
+<figure class="align-default" id="hia-join">
+<a class="reference internal image-reference" href="../../_images/Sudan_HIA_ex_join_table.png"><img alt="../../_images/Sudan_HIA_ex_join_table.png" src="../../_images/Sudan_HIA_ex_join_table.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 226 </span><span class="caption-text">Join the table information onto the geodata</span><a class="headerlink" href="#hia-join" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>Now we can start creating maps or spatial analysis with our impact data. Let’s create a map that shows destroyed houses in 2020. Since absolute destroyed houses are natural numbers, we use the option <code class="docutils literal notranslate"><span class="pre">Graduated</span></code> (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_graduated_wiki.html">Wiki Video</a>).</p>
+<ol class="arabic simple">
+<li><p>Right-click on the layer “Sudan_admin1_impact_quantity” in the <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Panel</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code>. A new window will open up with a vertical tab section on the left. Navigate to the <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> tab.</p></li>
+<li><p>On the top you find a dropdown menue. Open it and choose <code class="docutils literal notranslate"><span class="pre">Graduated</span></code>.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Value</span></code> select “Houses_damaged_totally”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">ramp</span></code>: Select a white-to-red color ramp.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Mode</span></code>: Equal Count (Quantile)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Classes</span></code>: 5</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Classify</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code></p></li>
+</ol>
+</li>
+</ol>
+<figure class="align-default" id="hia-map-houses">
+<a class="reference internal image-reference" href="../../_images/en_HIA_map_houses.png"><img alt="../../_images/en_HIA_map_houses.png" src="../../_images/en_HIA_map_houses.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 227 </span><span class="caption-text">Example map of destroyed houses in Sudan 2020</span><a class="headerlink" href="#hia-map-houses" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Flood events in Sudanese states for all the recorded years</strong></p>
+<p>In this section we want to analyse and visualise all recorded flooding events for all the Sudanese state. With our filter for the Impact-Type we derive information for the years 2003 until 2021.</p>
+<ol class="arabic simple">
+<li><p>Now we impoer the file “Floods_Sudan_all_years” from the input folder. We will open the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">Manager</span></code> and select the <code class="docutils literal notranslate"><span class="pre">Delimited</span> <span class="pre">Text</span></code> section. Here we need to do the following specifications (<a class="reference internal" href="#hia-import-csv-floods"><span class="std std-numref">Fig. 228</span></a>).</p></li>
+</ol>
+<figure class="align-default" id="hia-import-csv-floods">
+<a class="reference internal image-reference" href="../../_images/en_HIA_import_csv_floods.png"><img alt="../../_images/en_HIA_import_csv_floods.png" src="../../_images/en_HIA_import_csv_floods.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 228 </span><span class="caption-text">Import of the CSV data</span><a class="headerlink" href="#hia-import-csv-floods" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>The next step follows the same logic as step 2 in the previous example. We will use geodata that contains information about the states of Sudan and join them with the imported CSV data. We will use the <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">field</span> <span class="pre">value</span></code> tool and select the ADM1_PCODE as the table field used for the join. An example is shown in <a class="reference internal" href="#hia-join-floods"><span class="std std-numref">Fig. 229</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="hia-join-floods">
+<a class="reference internal image-reference" href="../../_images/en_HIA_join_floods.png"><img alt="../../_images/en_HIA_join_floods.png" src="../../_images/en_HIA_join_floods.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 229 </span><span class="caption-text">Join the table information onto the geodata</span><a class="headerlink" href="#hia-join-floods" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="3">
+<li><p>Now we can visualise our results using <code class="docutils literal notranslate"><span class="pre">Graduated</span></code> and selecting the corresponding column of the attribute table <code class="docutils literal notranslate"><span class="pre">Sum</span> <span class="pre">flood</span> <span class="pre">events</span></code>. Select an appropriate color scheme and start creating your map. Your final product could look like <a class="reference internal" href="#hia-map-floods"><span class="std std-numref">Fig. 230</span></a>.</p></li>
+</ol>
+<figure class="align-default" id="hia-map-floods">
+<a class="reference internal image-reference" href="../../_images/en_HIA_map_floods.png"><img alt="../../_images/en_HIA_map_floods.png" src="../../_images/en_HIA_map_floods.png" style="height: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 230 </span><span class="caption-text">Example map</span><a class="headerlink" href="#hia-map-floods" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Two states have NULL values and will not appear when styling the data. The original admin1 Sudan dataset can be used as a mask with the correct styling to include them in our map. This way, we can display the state boundaries without adding any new content.</p>
+</div>
 </section>
 </section>
 
@@ -3408,8 +3546,9 @@ The information below should show a green check and „The selection has matched
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-4-preparing-excel-table-structure">Task 4: Preparing Excel table Structure ✅</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-5-data-compiling">Task 5: Data compiling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-6-hia-data-cleaning">Task 6: HIA Data Cleaning ✅</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-7-joining-p-code-columns">Task 7: Joining P-Code columns</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-8-data-visualization-and-analysis">Task 8: Data visualization and analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-7-joining-p-code-columns">Task 7: Joining P-Code columns ✅</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-8-data-export-using-pivot-table-in-excel">Task 8: Data export using Pivot-Table in Excel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-9-data-visualization-and-analysis-in-qgis">Task 9: Data visualization and analysis in QGIS</a></li>
 </ul>
 </li>
 </ul>
