@@ -539,7 +539,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -555,6 +557,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-dissolve-layer">STEP 1: Dissolve Layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">STEP 2:</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -566,6 +577,20 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="task-5-identifying-critical-road-segments">
 <h1>Task 5: Identifying critical road segments<a class="headerlink" href="#task-5-identifying-critical-road-segments" title="Permalink to this heading">#</a></h1>
+<p>For this task, we imagine that the city of Heidelberg is partially affected by flooding of the Neckar. Such scenarios are becoming increasingly likely in the future due to climate change. The flood has a major impact on the city’s infrastructure. In this exercise, you will use QGIS to analyze the impact of the flood by determining the betweenness centrality of multiple nodes in the city before and after the flooding event.</p>
+<p>Use the following files:</p>
+<ul class="simple">
+<li><p>highways.gpkg</p></li>
+<li><p>flood_area.gpkg</p></li>
+</ul>
+<section id="step-1-dissolve-layer">
+<h2>STEP 1: Dissolve Layer<a class="headerlink" href="#step-1-dissolve-layer" title="Permalink to this heading">#</a></h2>
+<p>First we want to dissolve the <code class="docutils literal notranslate"><span class="pre">highways</span></code> layer to combine all the LineString geometries to one LineString. This is important for determining the betweenness centrality in the future steps.</p>
+<p>Open the <strong>Processing Toolbox</strong> and search for <strong>Dissolve</strong>. Select the <code class="docutils literal notranslate"><span class="pre">highways</span></code> layer as the Input Layer and leave all other settings at default.</p>
+</section>
+<section id="step-2">
+<h2>STEP 2:<a class="headerlink" href="#step-2" title="Permalink to this heading">#</a></h2>
+<p>Make sure you installed the GRASS GIS provider Plugin. If you don’t know how to install Plugins, click here:<a class="reference internal" href="../Wiki/en_qgis_plugins_wiki.html#content-references-wiki-plugins"><span class="std std-ref">Plugins</span></a></p>
 <p>Valentins show</p>
 <ul class="simple">
 <li><p>dissolve layer</p></li>
@@ -575,6 +600,7 @@ document.write(`
 <li><p>Zentralität mit neuem layer</p></li>
 <li><p>interpretation der unterschiedlichen Layer</p></li>
 </ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -631,6 +657,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-dissolve-layer">STEP 1: Dissolve Layer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">STEP 2:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
