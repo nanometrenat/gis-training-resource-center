@@ -563,7 +563,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-mananagemnet">Geodata mananagemnet</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-folder-structure">Standard Folder Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-folder-structure">Standard folder structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-naming">Geodata naming</a></li>
 </ul>
 </li>
@@ -593,32 +593,52 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>🚧 This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
+  <p>🚧 This training platform and the entire content is under ⚠️construction⚠️ and
+may not be shared or published! 🚧</p>
 <section class="tex2jax_ignore mathjax_ignore" id="geodata-and-geodata-processing">
 <h1>Geodata and Geodata processing<a class="headerlink" href="#geodata-and-geodata-processing" title="Permalink to this heading">#</a></h1>
 <p><strong>Competences:</strong></p>
 <ul class="simple">
-<li><p>Data Import</p></li>
+<li><p>Data import</p></li>
 <li><p>Geo features and attributes</p></li>
 <li><p>Feature selection</p></li>
 <li><p>Basemap selection</p></li>
 </ul>
-<p>In this chapter, we will have a close look at how to work with geodata in QGIS. Since vector data is the primer geodata type you will work with at the beginning of your GIS carrier, we will focus on vector geodata.</p>
+<p>In this chapter, we will have a close look at how to work with geodata in QGIS.
+Since vector data is the primary geodata type you will work with at the beginning
+of your GIS career, we will focus on vector geodata.</p>
 <section id="geodata-mananagemnet">
 <h2>Geodata mananagemnet<a class="headerlink" href="#geodata-mananagemnet" title="Permalink to this heading">#</a></h2>
-<p>Working with geodata is unlike working with data in programs like Excel or MS Word. Whenever you load an image in a Word file, the file will contain the image. When you delete the image on your computer, the Word file will still contain a copy of the image.</p>
-<p>This is not the case in QGIS! When you load geodata into QGIS, the system only establishes a path to the location where your geodata is stored on your computer. This means your QGIS project <strong>does not contain</strong> the geodata, it only links to the data on your computer. Once you have loaded the geodata in your QGIS project and you change the location of the geodata or delete it on your computer, the data is no longer available in your QGIS project.</p>
-<p>Ok, QGIS projects only link to geodata, they do not contain the data. This means that whenever you edit geodata, the changes persistent and can not be reversed.</p>
-<p>These circumstances make working with geodata special. To handle this, the only solution is good data management practices!</p>
+<p>Working with geodata is not like working with data in programs like Microsoft
+Excel or Word. Whenever you load an image in a Word file, the file will contain
+the image. If you delete the image on your computer, the Word file will still
+contain a copy of the image.</p>
+<p>This is not the case in QGIS! When you load geodata into QGIS, the system only
+establishes a link to the location where the data is stored on your computer.
+This means your QGIS project <strong>does not contain</strong> the geodata, it only links to
+it. If you load data in your QGIS project and you change the location of the
+data or delete it, the data is no longer available in your QGIS project and you
+will get an error when you open it.</p>
+<p>Because you are working directly with the source data, rather than a copy,
+whenever you edit data in QGIS the changes replace the source data and can not
+be reversed. If you plan to make changes to your data, you should make a copy of
+it first so that you always have a ‘clean’ copy you can go back to.</p>
 <section id="standard-folder-structure">
-<h3>Standard Folder Structure<a class="headerlink" href="#standard-folder-structure" title="Permalink to this heading">#</a></h3>
-<p>The single most important geodata management practice is to use a standardized folder structure that contains all elements of the particular QGIS project.
-The paths from a QGIS project to the geodata are by default relative. That means when the data and the project are in a fixed folder structure, you can move the whole structure without impacting the QGIS project or the paths to the geodata.
-The version of a standardized folder structure, that is used for all exercises in this training is explained below. A template of the folder structure can be downloaded <a class="reference external" href="https://github.com/GIScience/gis-training-resource-center/blob/main/fig/GIS_Project_folder_template.zip"><strong>here</strong></a>.</p>
+<h3>Standard folder structure<a class="headerlink" href="#standard-folder-structure" title="Permalink to this heading">#</a></h3>
+<p>The single most important geodata management practice is to use a standardised
+folder structure that contains all parts of the QGIS project.</p>
+<p>The paths from a QGIS project to the geodata are by default relative. This means
+when the data and the project are in a fixed folder structure, you can move the
+whole structure without impacting the QGIS project or the paths to the data.
+The version of a standardized folder structure that is used for all exercises
+in this training is explained below. A template of the folder structure can be
+downloaded <a class="reference external" href="https://github.com/GIScience/gis-training-resource-center/blob/main/fig/GIS_Project_folder_template.zip"><strong>here</strong></a>.</p>
 <p>A standard folder structure has two principal advantages:</p>
 <ol class="arabic simple">
-<li><p>By sharing the whole project folder, we can be certain that the project will run without problems on a different computer.</p></li>
-<li><p>The folder structure supports the proper organization of geodata and supports the stable function of a QGIS project.</p></li>
+<li><p>If we share the whole project folder, we can expect the project to run
+without problems on a different computer</p></li>
+<li><p>The folder structure supports the proper organisation of project data and
+helps ensure the QGIS project will work as intended</p></li>
 </ol>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/Standard_project_folder_structure.drawio.svg"><img alt="../../_images/Standard_project_folder_structure.drawio.svg" src="../../_images/Standard_project_folder_structure.drawio.svg" width="600px" /></a>
@@ -626,44 +646,67 @@ The version of a standardized folder structure, that is used for all exercises i
 <p><span class="caption-number">Fig. 64 </span><span class="caption-text">Standard folder structure. Source: ???</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<!-- CHECK: add source -->
 </section>
 <section id="geodata-naming">
 <h3>Geodata naming<a class="headerlink" href="#geodata-naming" title="Permalink to this heading">#</a></h3>
-<p>There are some basic principles when it comes to naming geodata that you produce or manipulate:</p>
+<p>There are some basic principles when it comes to naming geodata that you produce
+or manipulate:</p>
+<!-- CLARIFY: why do we need naming principles? -->
+<!-- CLARIFY: does this apply to file names, layer names, or both? -->
 <ul class="simple">
-<li><p>Do not use special characters like <code class="docutils literal notranslate"><span class="pre">!</span></code>,<code class="docutils literal notranslate"><span class="pre">?</span></code> etc., slash or dash <code class="docutils literal notranslate"><span class="pre">/</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p></li>
+<li><p>Do not use special characters like <code class="docutils literal notranslate"><span class="pre">!</span></code>,<code class="docutils literal notranslate"><span class="pre">?</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p></li>
 <li><p>Do not use blank spaces, use underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p></li>
-<li><p>Make sure you can relate every output / intermediate result to a step in your workflow. Below you can see a geodata set representing the borders of a country evolving during geodata processing. It is not apparent what was done with the original dataset.</p></li>
+<li><p>Give layers meaningful names so that you can understand what they represent,
+even if they are a temporary/intermediate step in a workflow.</p></li>
 </ul>
+<p>Below you can see an example of a workflow to process an admin boundary dataset
+(<code class="docutils literal notranslate"><span class="pre">adm0</span></code>). The purpose of the intermediate steps is not clear because the layer
+names are not meaningful.</p>
 <p><code class="docutils literal notranslate"><span class="pre">adm0</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_temp</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_temp2</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_temp3</span> <span class="pre">&gt;&gt;</span> <span class="pre">facilities_final</span></code></p>
-<p>In the version below, it is clear what was done. In this way, other people can understand the process behind a final result like a map.</p>
-<p><code class="docutils literal notranslate"><span class="pre">adm0</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM_clipUrban</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM_clipUrban_intersectFacilities</span> <span class="pre">&gt;&gt;</span> <span class="pre">facilities_processe</span></code></p>
+<p>A better system of naming is shown below. In this version, it is clear what
+processing was performed at each step (reproject, clip layer, join with another layer,
+output). <!-- CHECK: Is this understanding correct? -->
+In this way, other people can understand what purpose different layers serve and
+whether they are needed in the final project.</p>
+<p><code class="docutils literal notranslate"><span class="pre">adm0</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM_clipUrban</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM_clipUrban_intersectFacilities</span> <span class="pre">&gt;&gt;</span> <span class="pre">facilities_processed</span></code></p>
 </section>
 </section>
 <section id="data-import">
 <h2>Data import<a class="headerlink" href="#data-import" title="Permalink to this heading">#</a></h2>
-<p>Before you can start visualizing and analysing in QGIS, you need to import your data.</p>
+<p>Before you can start creating maps in QGIS, you need to add your data.</p>
 <p>Depending on which file format you want to import, the process differs slightly.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
 Vector data import</label><div class="sd-tab-content docutils">
-<p>Typical vector data formats are Shapefile and GeoPackage. The process of importing vector data in either of the two formats is the same.
-<a class="reference internal" href="en_qgis_geodata_concept.html"><span class="doc std std-doc">Here</span></a> is a list of possible vector data formats.</p>
+<p>Typical vector data formats are Shapefile (<code class="docutils literal notranslate"><span class="pre">.shp</span></code>) and GeoPackage (<code class="docutils literal notranslate"><span class="pre">.gpkg</span></code>).
+The process of importing vector data in either of the two formats is the same.
+<a class="reference internal" href="en_qgis_geodata_concept.html"><span class="doc std std-doc">Section 2.1</span></a> has a list of
+common vector data formats. <!-- CHECK: Is it possible to link to the section of 
+  the page? --></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>GeoPackage file can contain multiple files and even whole QGIS projects. When you load such a file in QGIS a window will appear in which you have to select the files you want to load in your QGIS project.</p>
+<p>GeoPackage files can contain multiple datasets and even whole QGIS projects.
+When you load a GeoPackage in QGIS, a window will appear where you can select
+the datasets you want to load.</p>
 </div>
-<p>There are two ways how to load vector data in QGIS. Via the <code class="docutils literal notranslate"><span class="pre">Layer</span></code> tab or via drag-and-drop.</p>
-<p class="rubric">Open vector data via Layer Tab</p>
+<p>There are two ways to load vector data in QGIS. Via the <code class="docutils literal notranslate"><span class="pre">Layer</span></code> menu or via
+drag-and-drop.</p>
+<!-- FIXME: Also through the browser pane and keyboard shortcuts -->
+<p class="rubric">Open vector data via Layer menu</p>
 <ol class="arabic simple">
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Vector</span> <span class="pre">Layer</span></code>.</p></li>
-<li><p>Click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to your vector file.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Vector</span> <span class="pre">Layer...</span></code></p></li>
+<li><p>Click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to your
+vector file</p></li>
 <li><p>Select the file and click <code class="docutils literal notranslate"><span class="pre">Open</span></code></p></li>
 <li><p>Back in QGIS click <code class="docutils literal notranslate"><span class="pre">Add</span></code></p></li>
 </ol>
+<!-- CLARIFY: What should people do with optional settings? -->
+<!-- ADD: Should mention zipped vs unzipped shapefiles -->
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_vector.mp4"></video></p>
 <p class="rubric">Open vector data via drag-and-drop</p>
+<!-- FIXME: Explain this video. Where should people drag and drop? -->
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_vector_d_d.mp4"></video></p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
@@ -672,7 +715,10 @@ Delimited text import</label><div class="sd-tab-content docutils">
 <p class="rubric">Open  Delimited Text Layer (.csv, .txt)</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>To directly load .csv or EXCEL data into QGIS, the datasets need to have columns containing geometry in the form of latitude (Y-field) and longitude (X-field).</p>
+<p>To load data from spreadheets such as Comma Separated Value (<code class="docutils literal notranslate"><span class="pre">.csv</span></code>) or
+Excel (<code class="docutils literal notranslate"><span class="pre">.xlsx</span></code>), the datasets need to have columns containing geometry - this is
+most often in the form of latitude (Y field) and longitude (X field), but might
+also be in other formats.</p>
 </div>
 <figure class="align-center" id="import-delimited-text">
 <a class="reference internal image-reference" href="../../_images/en_import_delimeted_text.png"><img alt="../../_images/en_import_delimeted_text.png" src="../../_images/en_import_delimeted_text.png" style="width: 600px;" /></a>
@@ -681,13 +727,18 @@ Delimited text import</label><div class="sd-tab-content docutils">
 </figcaption>
 </figure>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt;<code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Delimited</span> <span class="pre">Text</span> <span class="pre">Layer</span></code>.</p></li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">name</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to your csv. file and click <code class="docutils literal notranslate"><span class="pre">Open</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Format</span></code>: Here you can specify which delimiter is used in the file you want to import. In a standard .csv file commas <code class="docutils literal notranslate"><span class="pre">,</span></code> is used. If this is not the case, select <code class="docutils literal notranslate"><span class="pre">Costume</span> <span class="pre">delimiters</span></code>. Here you can choose the exact delimiter used in your file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Delimited</span> <span class="pre">Text</span> <span class="pre">Layer</span></code>.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">name</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" /> and
+navigate to your csv file and click <code class="docutils literal notranslate"><span class="pre">Open</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Format</span></code>: Here you can specify which delimiter is used in the file you
+want to import. In a standard .csv file commas <code class="docutils literal notranslate"><span class="pre">,</span></code> is used. If this is not the
+case, select <code class="docutils literal notranslate"><span class="pre">Custom</span> <span class="pre">delimiters</span></code>. Here you can choose the exact delimiter
+used in your file.</p></li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>To find out which delimiter is used you can open your .csv file in Notepad or Excel. There you can check which delimiter is used to separate the information.</p>
+<p>To find out which delimiter is used you can open your .csv file in Notepad or
+Excel. There you can check which delimiter is used to separate the information.</p>
 </div>
 <figure class="align-center" id="import-delimited-text-file-format">
 <a class="reference internal image-reference" href="../../_images/en_delimited_text_fileformat.png"><img alt="../../_images/en_delimited_text_fileformat.png" src="../../_images/en_delimited_text_fileformat.png" style="width: 600px;" /></a>
@@ -695,10 +746,18 @@ Delimited text import</label><div class="sd-tab-content docutils">
 <p><span class="caption-number">Fig. 66 </span><span class="caption-text">Import delimited text - file format.</span><a class="headerlink" href="#import-delimited-text-file-format" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="4">
-<li><p><code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">definition</span></code>: In this section, you specify which columns of the file contain the spatial information to geo-referenced the data on the map. If the file has a column containing <strong>latitude</strong> and another with <strong>longitude</strong> data, you can use them to georeferenced the data. Check <code class="docutils literal notranslate"><span class="pre">Point</span> <span class="pre">Coordinates</span></code>. Select for <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">field</span></code> “LONGITUDE” and for <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">field</span></code> “LATITUDE”.</p></li>
-<li><p>Under <code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">CRS</span></code>select the coordinate reference system (CRS). By default, QGIS will select the CRS of the project.
-If the file does not have spatial information choose the option <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">geometry</span> <span class="pre">(attribute</span> <span class="pre">only</span> <span class="pre">table)</span></code>.</p></li>
+<ol class="arabic" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">definition</span></code>: In this section, you specify which columns of the file
+contain the spatial information to georeference the data on the map. If the
+file has a column containing <strong>latitude</strong> and another with <strong>longitude</strong> data,
+you can use them to georeferenced the data. Check <code class="docutils literal notranslate"><span class="pre">Point</span> <span class="pre">Coordinates</span></code>. Select
+for <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">field</span></code> “LONGITUDE” and for <code class="docutils literal notranslate"><span class="pre">Y</span> <span class="pre">field</span></code> “LATITUDE”.</p>
+<!-- CLARIFY: When wouldn't you choose Point ? -->
+</li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Geometry</span> <span class="pre">CRS</span></code> select the coordinate reference system (CRS). By default,
+QGIS will select the CRS of the project.</p>
+<p>If the file does not have spatial information choose the option <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">geometry</span>&#160; <span class="pre">(attribute</span> <span class="pre">only</span> <span class="pre">table)</span></code>.</p>
+</li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Add</span></code></p></li>
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_textfile.mp4"></video></p>
@@ -706,23 +765,33 @@ If the file does not have spatial information choose the option <code class="doc
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
 Raster data import</label><div class="sd-tab-content docutils">
-<p>There are two ways how to load vector data in QGIS. Via the <code class="docutils literal notranslate"><span class="pre">Raster</span></code> tab or via drag-and-drop.</p>
-<p class="rubric">Open raster data via Layer Tab</p>
+<p>There are two ways to load vector data in QGIS, via the <code class="docutils literal notranslate"><span class="pre">Raster</span></code> tab or via
+drag-and-drop.</p>
+<!-- FIXME: as above - also via browser panel and keyboard shortcut -->
+<p class="rubric">Open raster data via Layer menu</p>
 <ol class="arabic simple">
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Raster</span> <span class="pre">Layer</span></code>.</p></li>
-<li><p>Click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to your raster file.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Raster</span> <span class="pre">Layer</span></code></p></li>
+<li><p>Click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to your
+raster file</p></li>
 <li><p>Select the file and click <code class="docutils literal notranslate"><span class="pre">Open</span></code></p></li>
 <li><p>Back in QGIS click <code class="docutils literal notranslate"><span class="pre">Add</span></code></p></li>
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_open_raster.mp4"></video></p>
 <p class="rubric">Open raster data via drag-and-drop</p>
+<!-- FIXME: Explain this video. Where should people drag and drop? -->
+<!-- CHECK: If we are focusing on raster data, do we need this here? -->
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_raster_d_d.mp4"></video></p>
 </div>
 </div>
 </section>
 <section id="geo-features-and-attributes">
 <h2>Geo features and attributes<a class="headerlink" href="#geo-features-and-attributes" title="Permalink to this heading">#</a></h2>
-<p>Each vector layer consists of geometric elements (points, lines or polygons) and an <strong>attribute table</strong>. The attribute table contains information on each element of the layer. The information is stored in rows and columns in the attribute table. Each <strong>row</strong> in the table represents a <strong>feature</strong>, while <strong>columns</strong> store specific <strong>attributes</strong>. This table facilitates searching, selection, sorting, filtering, and editing of features.</p>
+<p>Each vector layer consists of geometric features (points, lines or polygons) and
+an <strong>attribute table</strong>. The attribute table contains information on each feature
+in the layer. The information is stored in rows and columns in the attribute table.
+Each <strong>row</strong> in the table represents a <strong>feature</strong>, while <strong>columns</strong> store
+<strong>attributes</strong> of that feature. You can use the attribute table to search, sort,
+filter, edit and select data.</p>
 <figure class="align-center" id="vector-data-overview">
 <a class="reference internal image-reference" href="../../_images/en_vector_data_overview.drawio.png"><img alt="../../_images/en_vector_data_overview.drawio.png" src="../../_images/en_vector_data_overview.drawio.png" style="width: 600px;" /></a>
 <figcaption>
@@ -868,10 +937,14 @@ Buttons of Attribute Table<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><p>Having a look into the attribute table can be helpful to get an overview on the data you are working with. It can also be used to select, filter or edit data.</p>
+</details><p>Having a look into the attribute table can be helpful to get an overview on the
+data you are working with.</p>
+<!-- CLARIFY: What types of things can people get an overview of? -->
 <section id="open-the-attribute-table">
 <h3>Open the attribute table<a class="headerlink" href="#open-the-attribute-table" title="Permalink to this heading">#</a></h3>
-<p>One can open the attribute table in two ways. Either click right on the chosen layer and select <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">attribute</span> <span class="pre">table</span></code> or click on the symbol on the top.</p>
+<p>One can open the attribute table in two ways. Either click right on the chosen
+layer and select <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code> or click on the attribute table symbol
+in the toolbar.</p>
 <figure class="align-center" id="open-attribute-table-with-right-click">
 <a class="reference internal image-reference" href="../../_images/en_attributetable_right_click.png"><img alt="../../_images/en_attributetable_right_click.png" src="../../_images/en_attributetable_right_click.png" style="height: 500px;" /></a>
 <figcaption>
@@ -880,7 +953,8 @@ Buttons of Attribute Table<div class="sd-summary-down docutils">
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you have multiple layers, only the attribute table of the layer selected in the layer panel on the left will open.</p>
+<p>If you have multiple layers, only the attribute table of the layer currently
+selected in the layer panel will open.</p>
 </div>
 <figure class="align-center" id="open-attribute-table-top-right">
 <a class="reference internal image-reference" href="../../_images/en_attributetable_top_right.png"><img alt="../../_images/en_attributetable_top_right.png" src="../../_images/en_attributetable_top_right.png" style="height: 500px;" /></a>
@@ -891,8 +965,10 @@ Buttons of Attribute Table<div class="sd-summary-down docutils">
 </section>
 <section id="sort-the-attribute-table">
 <h3>Sort the attribute table<a class="headerlink" href="#sort-the-attribute-table" title="Permalink to this heading">#</a></h3>
-<p>Now that the attribute table is opened, it is possible to sort the data within. By clicking on the tab of the column, you can sort the data (alphabetically) in ascending or descending order.
-The small arrow indicates whether it is sorted ascending or descending.</p>
+<p>Now that the attribute table is opened, it is possible to sort the data within.
+By clicking on the tab of the column, you can sort the data (alphabetically) in
+ascending or descending order. The small arrow indicates whether it is sorted
+ascending or descending.</p>
 <p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_show_attribute_table.mp4"></video></p>
 <table class="table">
 <colgroup>
@@ -932,18 +1008,23 @@ The small arrow indicates whether it is sorted ascending or descending.</p>
 </section>
 <section id="manually-select-features-in-the-attribute-table">
 <h3>Manually select features in the attribute table<a class="headerlink" href="#manually-select-features-in-the-attribute-table" title="Permalink to this heading">#</a></h3>
-<p>To interact with features in a layer you have to select these features. One way to select features is via the attribute table.</p>
+<p>To interact with features in a layer you have to select these features. One way
+to select features is via the attribute table.</p>
 <ul class="simple">
 <li><p><strong>Select:</strong> Click on the lines of the features.</p></li>
 <li><p><strong>Multi Select:</strong> To select multiple features press <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> and select <code class="docutils literal notranslate"><span class="pre">features</span></code>.</p></li>
-<li><p><strong>Show only selected features:</strong> In the bottom left of the attribute table open the dropdown menu and select <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">selected</span> <span class="pre">features</span></code>. To show again all features click on <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">all</span> <span class="pre">features</span></code>.</p></li>
+<li><p><strong>Show only selected features:</strong> In the bottom left of the attribute table open
+the dropdown menu and select <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">selected</span> <span class="pre">features</span></code>. To show again all
+features click on <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">all</span> <span class="pre">features</span></code>.</p></li>
 <li><p><strong>Only show unselected features</strong> Select features and click on <img alt="" src="../../_images/mActionInvertSelection.png" /></p></li>
 </ul>
 <p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_select.mp4"></video></p>
 </section>
 <section id="zoom-to-selected-area">
 <h3>Zoom to selected area<a class="headerlink" href="#zoom-to-selected-area" title="Permalink to this heading">#</a></h3>
-<p>Now that you learned how to select features, you can zoom onto your area of interest. To do so you can click on the symbol on the top pannel or click right on the layer and select <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Selection</span></code></p>
+<p>Now that you learned how to select features, you can zoom onto your area of
+interest. To do so you can click on the symbol on the top pannel or click right
+on the layer and select <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Selection</span></code></p>
 <figure class="align-center" id="zoom-to-selection-top-pannel">
 <a class="reference internal image-reference" href="../../_images/en_zoom_to_selection_1.png"><img alt="../../_images/en_zoom_to_selection_1.png" src="../../_images/en_zoom_to_selection_1.png" style="width: 800px;" /></a>
 <figcaption>
@@ -959,7 +1040,9 @@ The small arrow indicates whether it is sorted ascending or descending.</p>
 </section>
 <section id="save-only-selected-features-as-a-new-file">
 <h3>Save only selected features as a new file<a class="headerlink" href="#save-only-selected-features-as-a-new-file" title="Permalink to this heading">#</a></h3>
-<p>After you selected your data, you might want to proceed with only the Selection. It is possible to save your Selection as new layer. To do so click right on the layer -<code class="docutils literal notranslate"><span class="pre">Export</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">only</span> <span class="pre">selected</span> <span class="pre">features</span></code></p>
+<p>After you selected your data, you might want to proceed with only the Selection.
+It is possible to save your Selection as new layer. To do so click right on the
+layer -<code class="docutils literal notranslate"><span class="pre">Export</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">only</span> <span class="pre">selected</span> <span class="pre">features</span></code></p>
 <p>You can then choose the format, layername and crs.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -977,8 +1060,11 @@ If you are unsure which format is best, check out the wiki <a class="reference i
 </section>
 <section id="base-maps">
 <h2>Base maps<a class="headerlink" href="#base-maps" title="Permalink to this heading">#</a></h2>
-<p>Basemaps are background maps. They are often very practical since they are easy to use, allow easy orientation on the map canvas and are diverse. QGIS offers OpenStreetMap and some other base maps by default.</p>
-<p>However, there is a wide range of base maps that can be used via extra plugins or XYZ Connections.</p>
+<p>Basemaps are background maps. They are often very practical since they are easy
+to use, allow easy orientation on the map canvas and are diverse. QGIS offers
+OpenStreetMap and some other base maps by default.</p>
+<p>However, there is a wide range of base maps that can be used via extra plugins
+or XYZ Connections.</p>
 <p>Here we give you an overview of ways to access base maps in QGIS.</p>
 <section id="standard-qgis-basemaps">
 <h3>Standard QGIS Basemaps<a class="headerlink" href="#standard-qgis-basemaps" title="Permalink to this heading">#</a></h3>
@@ -988,14 +1074,19 @@ If you are unsure which format is best, check out the wiki <a class="reference i
 <p>In the <a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html"><span class="doc std std-doc">wiki article on base maps</span></a>, you can find a tutorial to add more base maps e.g. from google to the standard base map list of your QGIS.</p>
 </div>
 <p>There are two ways to add the OpenStreetMap as a basemap.</p>
-<p><strong>Option 1:</strong> Find in the <code class="docutils literal notranslate"><span class="pre">Browser</span></code> panel <code class="docutils literal notranslate"><span class="pre">XYZ</span> <span class="pre">Tiles</span></code>. Open the dropdown by clicking on it and select OpenStreetMap or another basemap.</p>
-<p><strong>Option 2:</strong> <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">XYZ</span> <span class="pre">layer...</span></code> -&gt; Select the OpenStreetMap or another basemap.</p>
+<p><strong>Option 1:</strong> Find in the <code class="docutils literal notranslate"><span class="pre">Browser</span></code> panel <code class="docutils literal notranslate"><span class="pre">XYZ</span> <span class="pre">Tiles</span></code>. Open the dropdown by
+clicking on it and select OpenStreetMap or another basemap.</p>
+<p><strong>Option 2:</strong> <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">XYZ</span> <span class="pre">layer...</span></code> -&gt; Select the
+OpenStreetMap or another basemap.</p>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Add_basemap_OSM.mp4"></video></p>
 </section>
 <section id="quickmapservices">
 <h3>QuickMapServices<a class="headerlink" href="#quickmapservices" title="Permalink to this heading">#</a></h3>
-<p>There are numerous extensions for QGIS, also called plugins, which provide extended functionalities. In the wiki article about plugins, you can learn all about them.
-One of the most important plugins is the <a class="reference external" href="https://nextgis.com/blog/quickmapservices/">QuickMapServices</a> plugin.</p>
+<p>There are numerous extensions for QGIS, also called plugins, which provide
+extended functionalities. In the wiki article about plugins, you can learn all
+about them.
+One of the most important plugins is the
+<a class="reference external" href="https://nextgis.com/blog/quickmapservices/">QuickMapServices</a> plugin.</p>
 <p>The QuickMapServices Plugin allows to access a wide range of basemaps.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -1004,11 +1095,14 @@ Installation of plugins<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">To install a plugin <code class="docutils literal notranslate"><span class="pre">Plugins</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins…</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span></code> -&gt; Search for the plugin -&gt; <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Plugin</span></code></p>
+<p class="sd-card-text">To install a plugin <code class="docutils literal notranslate"><span class="pre">Plugins</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins…</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span></code> -&gt;
+Search for the plugin -&gt; <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Plugin</span></code></p>
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_plugins.mp4"></video></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p class="sd-card-text">If you cannot find a specific extension, check your capitalisation and correct use of spaces. If you still cannot find an extension, you may need to allow the experimental extensions in the options (see below).</p>
+<p class="sd-card-text">If you cannot find a specific extension, check your capitalisation and correct
+use of spaces. If you still cannot find an extension, you may need to allow the
+experimental extensions in the options (see below).</p>
 </div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">Web</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">QuickMapServices</span></code> -&gt; select provider e.g. NASA -&gt; select basemap</p>
@@ -1088,7 +1182,7 @@ Installation of plugins<div class="sd-summary-down docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-mananagemnet">Geodata mananagemnet</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-folder-structure">Standard Folder Structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-folder-structure">Standard folder structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-naming">Geodata naming</a></li>
 </ul>
 </li>

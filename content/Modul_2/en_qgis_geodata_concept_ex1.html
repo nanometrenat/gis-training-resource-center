@@ -581,15 +581,21 @@ document.write(`
 <h1>Geodata Concept Exercise 1<a class="headerlink" href="#geodata-concept-exercise-1" title="Permalink to this heading">#</a></h1>
 <section id="aim-of-the-exercise">
 <h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
-<p>The objective of this exercise is to make your first steps in QGIS. Understand the user interface and get to know the layer concept. Display vector data in QGIS and view the attributes of the data. Reproject the vector data (i.e. by changing the projection of the data).</p>
+<p>The objective of this exercise is to make your first steps in QGIS. Understand the user interface and get to know the layer concept.</p>
+<ul class="simple">
+<li><p>Display vector data in QGIS and view the attributes of the data</p></li>
+<li><p>Reproject the vector data (change the projection of the data)</p></li>
+</ul>
 </section>
 <section id="links-to-wiki-articles">
 <h2>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h2>
 <p>will be done when Wiki is finished</p>
+<!-- FIXME: to be updated -->
 </section>
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
 <p>Download all datasets <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_2/Modul_2_Exercise2_Geodata_Concept/Modul_2_Exercise2_Geodata_Concept.zip">here</a> and save the folder on your computer and unzip the file. The zip folder includes:</p>
+<!-- CLARIFY: does it matter where they are downloaded? -->
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Sierra_leone_borders.gpkg</span></code> (MultiLineString) GeoPackage</p>
 <ul>
@@ -598,28 +604,42 @@ document.write(`
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sierra_leone_health_HOT.shp</span></code> (Points) Shapefile</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sl-airports.csv</span></code> (CSV) -modified</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sl-airports.csv</span></code> (CSV) -modified <!-- CLARIFY: what does "modified" refer to? --></p></li>
 </ul>
+<!-- CLARIFY: What data is being loaded here? Give a quick explanation for each 
+    file -->
 </section>
 <section id="tasks">
 <h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Open QGIS and familiarise yourself with the user interface.</p></li>
-<li><p>Open the aforementioned files in QGIS. Load the vector layers into the program. To load the CSV file, select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">delimited</span> <span class="pre">text</span></code>.</p></li>
 </ol>
+<!-- FIXME: this is a poorly defined task step -->
+<ol class="arabic simple" start="2">
+<li><p>Open the files you have downloaded in QGIS. Load the vector layers into the
+program. To load the CSV file, select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">delimited</span> <span class="pre">text</span></code>.</p></li>
+</ol>
+<!-- FIXME: We haven't shown people how to open files yet -->
 <figure class="align-default" id="delimited-text">
 <a class="reference internal image-reference" href="../../_images/en_delimited_text_screenshot.PNG"><img alt="../../_images/en_delimited_text_screenshot.PNG" src="../../_images/en_delimited_text_screenshot.PNG" style="width: 80%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 62 </span><span class="caption-text">Screenshot of Data Source Manager - Delimited Text to load a CSV file</span><a class="headerlink" href="#delimited-text" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="3">
-<li><p>Interact with the map and explore the datasets. Use the zoom tool and move the map. Take note of the status bar at the bottom of the screen and observe how it changes.</p></li>
-<li><p>Familiarise yourself with the layer window (layer list). Show and hide different layers and move layers around in the hierarchy. Give the data layer a meaningful name.</p></li>
+<ol class="arabic" start="3">
+<li><p>Interact with the map and explore the datasets. Use the zoom tool and move
+the map. Take note of the status bar at the bottom of the screen and observe
+how it changes.</p>
+<!-- CLARIFY: What changes should people expect to see? -->
+</li>
+<li><p>Familiarise yourself with the layer window (layer list). Show and hide
+different layers and move layers around in the hierarchy. Give the data layer
+a meaningful name.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>It is important to note that renaming the layer does not affect the data sources, such as file names or storage location.</p>
+<p>Renaming the layer does not affect the data source, such as file names or
+storage location.</p>
 </div>
 <ol class="arabic simple" start="5">
 <li><p>Check out the attribute data of the layers by examining the attribute table.</p></li>
@@ -627,21 +647,29 @@ document.write(`
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that this does not change the projection (coordinates) of the files, only the projection of the map view. Verify this by looking at the properties of the point layer. What projection is shown there?</p>
+<p>This does not change the projection (coordinates) of the files, only the
+projection of the map view. Verify this by looking at the properties of the point
+layer. What projection is shown there?</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>You can use the search bar on the top left.</p>
 </div>
+<!-- CLARIFY: use it for what? -->
 <ol class="arabic simple" start="7">
-<li><p>Now save the health layer in the projection <code class="docutils literal notranslate"><span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">Pseudo-Mercator</span> <span class="pre">EPSG:3857</span></code>. This changes the projection of the file. Verify this by looking at the properties of the newly created layer.</p></li>
+<li><p>Now save the health layer in the projection <code class="docutils literal notranslate"><span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">Pseudo-Mercator</span> <span class="pre">EPSG:3857</span></code>.
+This changes the projection of the file. Verify this by looking at the
+properties of the newly created layer.</p></li>
 <li><p>Save your project.</p></li>
-<li><p>Optional: You can add the OpenStreetMap base map via the browser window –&gt; XYZ Tiles.</p></li>
+<li><p>Optional: You can add the OpenStreetMap base map via the browser window,
+under <code class="docutils literal notranslate"><span class="pre">XYZ</span> <span class="pre">Tiles</span></code>.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that online base maps can cause projection issues with different layers. It is important to remove the base map before saving the project.</p>
+<p>Online basemaps can cause display issues when combined with layers in different
+projections. It is important to remove the base map before saving the project.</p>
 </div>
+<!-- CLARIFY: What issues? Is there another workaround? -->
 <figure class="align-default" id="en-result-geodata-concept-exercise">
 <a class="reference internal image-reference" href="../../_images/en_result_geodata_concept_exercise.png"><img alt="../../_images/en_result_geodata_concept_exercise.png" src="../../_images/en_result_geodata_concept_exercise.png" style="width: 80%;" /></a>
 <figcaption>

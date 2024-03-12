@@ -565,10 +565,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projections">Projections</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theory">Theory</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it">How to check EPSG-Code/CRS of your QGIS Project and change it</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it">How to check EPSG-Code/CRS of your QGIS project and change it</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-vector-layer">Changing the projection of a vector layer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-raster-layer">Changing the projection of a raster layer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comen-mistakes-with-coordinate-reference-systems">Comen mistakes with Coordinate Reference Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes-with-coordinate-reference-systems">Common mistakes with Coordinate Reference Systems</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-concept">Layer concept</a></li>
@@ -596,7 +596,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="geodata-concept">
 <h1>Geodata concept<a class="headerlink" href="#geodata-concept" title="Permalink to this heading">#</a></h1>
-<p>🚧 This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
+<p>🚧 This training platform and the entire content is under ⚠️construction⚠️ and
+may not be shared or published! 🚧</p>
 <p><strong>🔙<a class="reference internal" href="../intro.html"><span class="doc std std-doc">Back to Homepage</span></a></strong></p>
 <p><strong>Competences:</strong></p>
 <ul class="simple">
@@ -609,17 +610,29 @@ document.write(`
 <h2>Projections<a class="headerlink" href="#projections" title="Permalink to this heading">#</a></h2>
 <section id="theory">
 <h3>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">#</a></h3>
-<p><strong>The earth is a sphere and cannot be represented on a flat map without being distorted.</strong> To able able to display the earth on a flat map for example as a rectangle it needs to be projected. For further explanation, watch this video.</p>
+<p><strong>The earth is a sphere and cannot be represented on a flat map without being
+distorted.</strong> To able able to display the earth on a flat map for example as a
+rectangle it needs to be projected. For further explanation, watch this video.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kIID5FDi2JQ?si=C0tYz7nteMF_xqvr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<p>For this translation, from a curved on a flat surface, thousands of different methods exist. These are called <strong>Coordinate Reference Systems (CRS)</strong>.</p>
+<p>For this translation, from a curved on a flat surface, thousands of different
+methods exist. These are called <strong>coordinate reference systems (CRS)</strong>.</p>
 <figure class="align-center" id="examples-for-projections-azimuthal-cylindrical-and-conic">
 <a class="reference internal image-reference" href="../../_images/en_examples_projections_IBIS.png"><img alt="../../_images/en_examples_projections_IBIS.png" src="../../_images/en_examples_projections_IBIS.png" style="width: 800px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 52 </span><span class="caption-text">Examples for Projections. Source:(<a class="reference external" href="http://ibis.colostate.edu/webcontent/NR505/2012_Projects/Team6/GISConcepts.html">http://ibis.colostate.edu/webcontent/NR505/2012_Projects/Team6/GISConcepts.html</a>)</span><a class="headerlink" href="#examples-for-projections-azimuthal-cylindrical-and-conic" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Every projection comes with a trade-off in shape, direction, distance and area. That’s why it is important to choose different types of CRS for different use cases.</p>
-<p>For example, Mercator projections don´t represent the area correctly. Google Maps still uses the Mercator to be able to represent streets correctly, since it works well on a small scale. On a big scale, the shape of the countries stay the same but the area is mispresented. You can check the true size in comparison to different placements on the map on this <a class="reference external" href="https://www.thetruesize.com">website</a>. A popular example is Greenland in comparison with Africa, which seem on the map to be about the same size, but in reality Africa is a lot bigger.</p>
+<p>Every projection comes with a trade-off in shape, direction, distance and area.
+That’s why it is important to choose different types of CRS for different use
+cases.</p>
+<p>For example, Mercator projections don´t represent the area correctly. Google
+Maps still uses the Mercator to be able to represent streets correctly, since it</p>
+<!-- CHECK: I think Google Maps uses variable CRS now -->
+<p>works well on a small scale. On a big scale, the shape of the countries stay the
+same but the area is mispresented. You can check the true size in comparison to
+different placements on the map on this <a class="reference external" href="https://www.thetruesize.com">website</a>.
+A popular example is Greenland in comparison with Africa, which seem on the map
+to be about the same size, but in reality Africa is a lot bigger.</p>
 <figure class="align-center" id="comparison-greenland-africa">
 <a class="reference internal image-reference" href="../../_images/en_greenland_africa.png"><img alt="../../_images/en_greenland_africa.png" src="../../_images/en_greenland_africa.png" style="width: 800px;" /></a>
 <figcaption>
@@ -628,7 +641,7 @@ document.write(`
 </figure>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Embedded Website <div class="sd-summary-down docutils">
+<a class="reference external" href="http://TheTrueSize.com">TheTrueSize.com</a> - compare the effects of different projections<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -637,9 +650,12 @@ Embedded Website <div class="sd-summary-down docutils">
 </div>
 </details><div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>It’s important to work with the right projections, if not we will produce wrong results!</p>
+<p>It’s important to work with the right projections, if not we will produce wrong
+results!</p>
 </div>
-<p>This table shows an overview on which projections to use for which needed characteristic:</p>
+<!-- FIXME: this statement could do with some clarification -->
+<p>This table shows an overview on which projections to use for which needed
+characteristic:</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Mercator (cylindrical)</p></th>
@@ -662,7 +678,8 @@ Embedded Website <div class="sd-summary-down docutils">
 </tr>
 </tbody>
 </table>
-<p>For smaller areas local projections should be used, since they give a more accurate display at the expense of more distortion at the global level.</p>
+<p>For smaller areas local projections should be used, since they give a more
+accurate display at the expense of more distortion at the global level.</p>
 <figure class="align-center" id="local-and-global-coordinate-reference-systems-crs">
 <a class="reference internal image-reference" href="../../_images/en_local_crs.png"><img alt="../../_images/en_local_crs.png" src="../../_images/en_local_crs.png" style="width: 800px;" /></a>
 <figcaption>
@@ -674,24 +691,33 @@ Embedded Website <div class="sd-summary-down docutils">
 <h3>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h3>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>You can find all the projections and their CRS code at this <a class="reference external" href="http://epsg.io">website</a>.</p>
+<p>You can find all the projections and their CRS codes <a class="reference external" href="http://epsg.io">EPSG.io</a>.</p>
 </div>
-<p>It is crucial that you are aware that you data can be in one CRS and your QGIS project in an other CRS. The data and the project should always be the same, or else you will get wrong results! The project CRS is displayed on the bottom left corner, as seen <a class="reference download internal" download="" href="../../_downloads/54547c7e6d6f20d020245b033bbce8f1/en_QGIS_User_Interface.png"><span class="xref download myst">here</span></a>.
+<p>It is crucial that you are aware that you data can be in one CRS and your QGIS
+project in an other CRS. The data and the project should always be the same, or
+else you will get wrong results! The project CRS is displayed on the bottom left
+corner, as seen <a class="reference download internal" download="" href="../../_downloads/54547c7e6d6f20d020245b033bbce8f1/en_QGIS_User_Interface.png"><span class="xref download myst">here</span></a>.
 To change the CRS of you data and project, follow the steps explained below.
-The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 (EPSG: 4326). This CRS is optimized for world maps. So not perfect for most applications, because we mostly use maps for small areas.</p>
+The default CRS/EPSG code of every QGIS project is the World Geodetic System 84
+(EPSG: 4326). This CRS is optimized for world maps. So not perfect for most
+applications, because we mostly use maps for small areas.</p>
 </section>
 <section id="how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it">
-<h3>How to check EPSG-Code/CRS of your QGIS Project and change it<a class="headerlink" href="#how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it" title="Permalink to this heading">#</a></h3>
+<h3>How to check EPSG-Code/CRS of your QGIS project and change it<a class="headerlink" href="#how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To check and adjust the CRS/ EPSG-Code should be the first thing you should do when starting a new QGIS project.</p>
+<p>To check and adjust the CRS/ EPSG code should be the first thing you should do
+when starting a new QGIS project.</p>
 </div>
 <ol class="arabic simple">
-<li><p>Open a QGIS projeckt</p></li>
-<li><p>In the very down right corner of QGIS you find the butten <code class="docutils literal notranslate"><span class="pre">EPSG</span></code>. The number next to it is the EPSG Code currently used in the project. For more information click on the button.
+<li><p>Open a QGIS project</p></li>
+<li><p>In the very down right corner of QGIS you find the butten <code class="docutils literal notranslate"><span class="pre">EPSG</span></code>. The number
+next to it is the EPSG Code currently used in the project. For more information
+click on the button.
 <img alt="" src="../../_images/EPSG_Code.png" /></p></li>
-<li><p>The window <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">Properties</span></code> will open. Here you can view all availble CRS/EPSG-Code and their properties.</p></li>
-<li><p>To change the CRS/EPSG-code, select the one you want to use and click <code class="docutils literal notranslate"><span class="pre">Apply</span></code>.</p></li>
+<li><p>The window <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">Properties</span></code> will open. Here you can view all availble
+CRS/EPSG-Code and their properties.</p></li>
+<li><p>To change the CRS/EPSG code, select the one you want to use and click <code class="docutils literal notranslate"><span class="pre">Apply</span></code>.</p></li>
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_change_project_CRS.mp4"></video></p>
 </section>
@@ -699,8 +725,9 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 <h3>Changing the projection of a vector layer<a class="headerlink" href="#changing-the-projection-of-a-vector-layer" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Vector</span></code> Tab -&gt; <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Management</span> <span class="pre">Tools</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Reproject</span> <span class="pre">Layer</span></code></p></li>
-<li><p>Select target CRS/ EPSG-Code.</p></li>
-<li><p>Save the new file by clicking on the three dots next to <code class="docutils literal notranslate"><span class="pre">Reprojected</span></code>, specify the file name and the location where you want to save the file.</p></li>
+<li><p>Select target CRS/EPSG code.</p></li>
+<li><p>Save the new file by clicking on the three dots next to <code class="docutils literal notranslate"><span class="pre">Reprojected</span></code>,
+specify the file name and the location where you want to save the file.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_reproject_vector.mp4"></video></p>
@@ -711,20 +738,29 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 <li><p><code class="docutils literal notranslate"><span class="pre">Raster</span></code> Tab -&gt; <code class="docutils literal notranslate"><span class="pre">Projections</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Warp</span> <span class="pre">(Reproject)</span></code></p></li>
 <li><p>Select target CRS/EPSG-Code</p></li>
 <li><p>Select resampling method</p></li>
-<li><p>Save the new file by clicking on th three dots nest to <code class="docutils literal notranslate"><span class="pre">Reprojected</span></code>, specify the file name and the location where you want to save the file.</p></li>
+<li><p>Save the new file by clicking on the three dots next to <code class="docutils literal notranslate"><span class="pre">Reprojected</span></code>, specify
+the file name and the location where you want to save the file.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_reproject_raster.mp4"></video></p>
 </section>
-<section id="comen-mistakes-with-coordinate-reference-systems">
-<h3>Comen mistakes with Coordinate Reference Systems<a class="headerlink" href="#comen-mistakes-with-coordinate-reference-systems" title="Permalink to this heading">#</a></h3>
-<p>The website <a class="reference external" href="https://ihatecoordinatesystems.com/"><strong>I Hate Coordinate Systems!</strong></a> offers a “a problem-based guide of common CRS issues, root causes, and solutions”. Check it out in case you have any issues with CRS.</p>
+<section id="common-mistakes-with-coordinate-reference-systems">
+<h3>Common mistakes with Coordinate Reference Systems<a class="headerlink" href="#common-mistakes-with-coordinate-reference-systems" title="Permalink to this heading">#</a></h3>
+<p>The website <a class="reference external" href="https://ihatecoordinatesystems.com/"><strong>I Hate Coordinate Systems!</strong></a>
+offers a “a problem-based guide of common CRS issues, root causes, and solutions”.
+Check it out in case you have any issues with CRS.</p>
 </section>
 </section>
 <section id="layer-concept">
 <h2>Layer concept<a class="headerlink" href="#layer-concept" title="Permalink to this heading">#</a></h2>
-<p>Geodata represents a real-world object on a map as a feature. A feature consists of two types of information: the location and attributes, e. g. name or ID. Those informations are collected in layers. A layer can only consist of geographic objects of the same type. <a class="footnote-reference brackets" href="#id5" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
-<p>By superpositioning different layers, you build your map and can obtain information of different sources. With those you then can perform analyses or adapt the representation by using symbols and colors.</p>
+<p>Geodata represents a real-world object on a map as a feature. A feature consists
+of two types of information: the location and attributes, e. g. name or ID. Those
+informations are collected in layers. A layer can only consist of geographic
+objects of the same type. <a class="footnote-reference brackets" href="#id5" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<!-- FIXME: We have not introduced geographic types yet -->
+<p>By adding different layers, you build your map and can combine information from
+different sources. With those you then can perform analyses or adapt the
+representation by using symbols and colors.</p>
 <figure class="align-center" id="layers-in-a-gis">
 <a class="reference internal image-reference" href="../../_images/en_layer.png"><img alt="../../_images/en_layer.png" src="../../_images/en_layer.png" style="width: 800px;" /></a>
 <figcaption>
@@ -734,7 +770,7 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 </section>
 <section id="vector-and-raster-data">
 <h2>Vector and raster data<a class="headerlink" href="#vector-and-raster-data" title="Permalink to this heading">#</a></h2>
-<p>There are two file types of geographic data: <strong>vector and raster</strong>.</p>
+<p>There are two primary types of geographic data: <strong>vector and raster</strong>.</p>
 <figure class="align-center" id="raster-vector-concept">
 <a class="reference internal image-reference" href="../../_images/en_vector_raster.png"><img alt="../../_images/en_vector_raster.png" src="../../_images/en_vector_raster.png" style="width: 800px;" /></a>
 <figcaption>
@@ -743,7 +779,11 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 </figure>
 <section id="vector">
 <h3>Vector<a class="headerlink" href="#vector" title="Permalink to this heading">#</a></h3>
-<p>Vector data contains a shape or a geometry. By using geometry objects (points, lines and polygons) the real world is represented. Each object stores the location (as adress or coordinates) and further attributes, e.g. name or ID. Which geometry is used, depends on the feature it represents.</p>
+<p>Vector data contains a shape or a geometry. By using geometry objects (points,
+lines and polygons) the real world is represented. Each object stores the location
+(as address or coordinates) and further attributes, e.g. name or ID. Which geometry
+is used, depends on the feature it represents.</p>
+<!-- FIXME: this section should explain the different geometry types -->
 <figure class="align-center" id="vector-data-overview">
 <a class="reference internal image-reference" href="../../_images/en_vector_data_overview.drawio.png"><img alt="../../_images/en_vector_data_overview.drawio.png" src="../../_images/en_vector_data_overview.drawio.png" style="width: 800px;" /></a>
 <figcaption>
@@ -763,11 +803,11 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 <tbody>
 <tr class="row-even"><td><p>.shp</p></td>
 <td><p>Shapefile</p></td>
-<td><p>Old but still widely used geodataformat. Can only contain one dataset. The file has to consist of at least three different files (.shp, .shx, .dbf)</p></td>
+<td><p>Old but still widely used geodata format. Can only contain one dataset. The file has to consist of at least three different files (.shp, .shx, .dbf)</p></td>
 </tr>
 <tr class="row-odd"><td><p>.gpkg</p></td>
 <td><p>GeoPackage</p></td>
-<td><p>Very versatile geodata format and the new standard for geodata. Can contain multiple datafiles (vector, raster and not spatial data like tables)</p></td>
+<td><p>Very versatile geodata format and the new standard for geodata. Can contain multiple datafiles (vector, raster and non-spatial data like tables)</p></td>
 </tr>
 <tr class="row-even"><td><p>.kml</p></td>
 <td><p>Keyhole Markup Language</p></td>
@@ -783,6 +823,7 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 </tr>
 </tbody>
 </table>
+<!-- FIXME: misleading to say GeoJSON is similar to shp - need a new definition? -->
 <figure class="align-center" id="the-main-geographical-data-formats">
 <a class="reference internal image-reference" href="../../_images/en_data_formats.png"><img alt="../../_images/en_data_formats.png" src="../../_images/en_data_formats.png" style="width: 800px;" /></a>
 <figcaption>
@@ -793,15 +834,20 @@ The default CRS/EPSG code of every QGIS project is the World Geodetic System 84 
 </section>
 <section id="raster">
 <h3>Raster<a class="headerlink" href="#raster" title="Permalink to this heading">#</a></h3>
-<p>Raster data are images which contain a matrix of pixels. Each pixel stores a value e.g. elevation, temperature, population or  land cover typ.
-Since a raster is based on an image, the resolution is crucial. It defines the accuracy of the data and size of the pixels.</p>
+<p>Raster data are images which contain a matrix of pixels (“raster” means “grid”
+in German). Each pixel stores a value, which might refer to elevation,
+temperature, population or land cover type. Since a raster is based on an image,
+the resolution is crucial. It defines the precision of the data and size of the
+pixels.</p>
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/en_quality_raster.png"><img alt="../../_images/en_quality_raster.png" src="../../_images/en_quality_raster.png" style="width: 800px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 59 </span><span class="caption-text">The main geographical data formats. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_3_vector_raster_data">CartONG</a></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In this picture you can see the same location, on the left as vector data, visualising streets and urban area, and on the right hand as raster data (satellite image), showing the land cover.</p>
+<p>In this picture you can see the same location, on the left as vector data,
+visualising streets and urban area, and on the right hand as raster data
+(satellite image), showing the land cover.</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
@@ -811,7 +857,7 @@ Vector</div>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/en_same_location_vector.png"><img alt="../../_images/en_same_location_vector.png" src="../../_images/en_same_location_vector.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 60 </span><span class="caption-text">The same location as vector data. Source: British Red Cross (BRC)</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Features represented with vector data. Source: British Red Cross (BRC)</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -823,7 +869,7 @@ Raster</div>
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/en_same_location_raster.png"><img alt="../../_images/en_same_location_raster.png" src="../../_images/en_same_location_raster.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 61 </span><span class="caption-text">The same location as raster image. Source: British Red Cross (BRC)</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">The same location represented as a raster image. Source: British Red Cross (BRC)</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -843,15 +889,15 @@ Raster</div>
 <tbody>
 <tr class="row-even"><td><p>.tif/.tiff/.geotiff</p></td>
 <td><p>Tag Image File Format</p></td>
-<td><p>Common raster and image data format. Does not necessarily have georeference information. If a .tif file has georeferenc information it is referred to as GeoTIFF.</p></td>
+<td><p>Common raster and image data format. Does not necessarily have georeferenced data. If a .tif file is georeferenced it is referred to as GeoTIFF.</p></td>
 </tr>
 <tr class="row-odd"><td><p>.nc</p></td>
 <td><p>netCDF</p></td>
-<td><p>Standard data format for scientific data like speed or temperature. Can be be a raster file. Can contain multible datasets</p></td>
+<td><p>Standard data format for scientific data like speed or temperature. Can be be a raster file. Can contain multiple datasets</p></td>
 </tr>
 <tr class="row-even"><td><p>.asc</p></td>
 <td><p>Esri ASCII Grid files</p></td>
-<td><p>Old simple raster file format, always with georeference informations</p></td>
+<td><p>Old, simple raster file format, always with georeferenced data</p></td>
 </tr>
 </tbody>
 </table>
@@ -933,10 +979,10 @@ Raster</div>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projections">Projections</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theory">Theory</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it">How to check EPSG-Code/CRS of your QGIS Project and change it</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-epsg-code-crs-of-your-qgis-project-and-change-it">How to check EPSG-Code/CRS of your QGIS project and change it</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-vector-layer">Changing the projection of a vector layer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-raster-layer">Changing the projection of a raster layer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comen-mistakes-with-coordinate-reference-systems">Comen mistakes with Coordinate Reference Systems</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes-with-coordinate-reference-systems">Common mistakes with Coordinate Reference Systems</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-concept">Layer concept</a></li>
