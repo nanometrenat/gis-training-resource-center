@@ -577,7 +577,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-only-selected-features-as-a-new-file">Save only selected features as a new file</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-maps">Base maps</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemaps">Basemaps</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-qgis-basemaps">Standard QGIS Basemaps</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickmapservices">QuickMapServices</a></li>
 </ul>
@@ -942,9 +942,12 @@ data you are working with.</p>
 <!-- CLARIFY: What types of things can people get an overview of? -->
 <section id="open-the-attribute-table">
 <h3>Open the attribute table<a class="headerlink" href="#open-the-attribute-table" title="Permalink to this heading">#</a></h3>
-<p>One can open the attribute table in two ways. Either click right on the chosen
-layer and select <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code> or click on the attribute table symbol
-in the toolbar.</p>
+<p>You can open the attribute table in two ways.</p>
+<ol class="arabic simple">
+<li><p>Right click on a layer in the Layers panel and select <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code></p></li>
+<li><p>Select a layer in the Layers panel and click on the attribute table symbol in
+the toolbar.</p></li>
+</ol>
 <figure class="align-center" id="open-attribute-table-with-right-click">
 <a class="reference internal image-reference" href="../../_images/en_attributetable_right_click.png"><img alt="../../_images/en_attributetable_right_click.png" src="../../_images/en_attributetable_right_click.png" style="height: 500px;" /></a>
 <figcaption>
@@ -965,10 +968,10 @@ selected in the layer panel will open.</p>
 </section>
 <section id="sort-the-attribute-table">
 <h3>Sort the attribute table<a class="headerlink" href="#sort-the-attribute-table" title="Permalink to this heading">#</a></h3>
-<p>Now that the attribute table is opened, it is possible to sort the data within.
-By clicking on the tab of the column, you can sort the data (alphabetically) in
-ascending or descending order. The small arrow indicates whether it is sorted
-ascending or descending.</p>
+<p>You can sort data in the attribute table by clicking on a column header. Text data will
+be sorted alphabetically and numeric data will be sorted by value. To reverse
+the sort order, click the header again. A small arrow in the column header
+indicates whether it is sorted in ascending or descending order.</p>
 <p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_show_attribute_table.mp4"></video></p>
 <table class="table">
 <colgroup>
@@ -998,12 +1001,15 @@ ascending or descending.</p>
 </tr>
 </tbody>
 </table>
+<!-- FIXME: these images can be cropped to just show the important part -->
 </section>
 <section id="zoom-in-on-a-specific-feature-via-attribute-table">
 <h3>Zoom in on a specific feature via attribute table<a class="headerlink" href="#zoom-in-on-a-specific-feature-via-attribute-table" title="Permalink to this heading">#</a></h3>
+<!-- ADD: Explain why this is useful -->
 <ul class="simple">
 <li><p><strong>Zoom:</strong> Right click on your feature –&gt; <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">To</span> <span class="pre">Feature</span></code></p></li>
 </ul>
+<!-- CLARIFY: Click on a cell rather than the row ID --> 
 <p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom_to_feature.mp4"></video></p>
 </section>
 <section id="manually-select-features-in-the-attribute-table">
@@ -1022,8 +1028,8 @@ features click on <code class="docutils literal notranslate"><span class="pre">S
 </section>
 <section id="zoom-to-selected-area">
 <h3>Zoom to selected area<a class="headerlink" href="#zoom-to-selected-area" title="Permalink to this heading">#</a></h3>
-<p>Now that you learned how to select features, you can zoom onto your area of
-interest. To do so you can click on the symbol on the top pannel or click right
+<p>Now that you know how to select features, you can zoom onto your area of
+interest. To do so you can click on the symbol on the toolbar or right click
 on the layer and select <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Selection</span></code></p>
 <figure class="align-center" id="zoom-to-selection-top-pannel">
 <a class="reference internal image-reference" href="../../_images/en_zoom_to_selection_1.png"><img alt="../../_images/en_zoom_to_selection_1.png" src="../../_images/en_zoom_to_selection_1.png" style="width: 800px;" /></a>
@@ -1040,14 +1046,15 @@ on the layer and select <code class="docutils literal notranslate"><span class="
 </section>
 <section id="save-only-selected-features-as-a-new-file">
 <h3>Save only selected features as a new file<a class="headerlink" href="#save-only-selected-features-as-a-new-file" title="Permalink to this heading">#</a></h3>
-<p>After you selected your data, you might want to proceed with only the Selection.
-It is possible to save your Selection as new layer. To do so click right on the
-layer -<code class="docutils literal notranslate"><span class="pre">Export</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">only</span> <span class="pre">selected</span> <span class="pre">features</span></code></p>
-<p>You can then choose the format, layername and crs.</p>
+<p>After you have selected your data, you might want to proceed with only the
+selection. You can save your selection as new layer. To do so right click on the
+layer - <code class="docutils literal notranslate"><span class="pre">Export</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">only</span> <span class="pre">selected</span> <span class="pre">features</span></code></p>
+<p>You can then choose the format, layer name and CRS.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Use GeoPackage (.gpkg) instead of Shapefile (.shp)!
-If you are unsure which format is best, check out the wiki <a class="reference internal" href="../Wiki/en_qgis_geodata_types_wiki.html"><span class="doc std std-doc">Geodata types</span></a></p>
+<p>We recommend use GeoPackage (.gpkg) instead of Shapefile (.shp) in most cases.
+If you are unsure which format is most appropriate, check out the <a class="reference internal" href="../Wiki/en_qgis_geodata_types_wiki.html"><span class="doc std std-doc">geodata types</span></a>
+page on the wiki.</p>
 </div>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_qgis_select_export_wiki.mp4"></video></p>
 <figure class="align-center" id="save-selection-right-click">
@@ -1058,36 +1065,42 @@ If you are unsure which format is best, check out the wiki <a class="reference i
 </figure>
 </section>
 </section>
-<section id="base-maps">
-<h2>Base maps<a class="headerlink" href="#base-maps" title="Permalink to this heading">#</a></h2>
+<section id="basemaps">
+<h2>Basemaps<a class="headerlink" href="#basemaps" title="Permalink to this heading">#</a></h2>
+<!-- CLARIFY: This section could be rewritten more clearly -->
 <p>Basemaps are background maps. They are often very practical since they are easy
 to use, allow easy orientation on the map canvas and are diverse. QGIS offers
 OpenStreetMap and some other base maps by default.</p>
 <p>However, there is a wide range of base maps that can be used via extra plugins
-or XYZ Connections.</p>
+or XYZ Tiles.</p>
 <p>Here we give you an overview of ways to access base maps in QGIS.</p>
 <section id="standard-qgis-basemaps">
 <h3>Standard QGIS Basemaps<a class="headerlink" href="#standard-qgis-basemaps" title="Permalink to this heading">#</a></h3>
 <p>You can always add the standard OpenStreetMap as a basemap to your map canvas.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>In the <a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html"><span class="doc std std-doc">wiki article on base maps</span></a>, you can find a tutorial to add more base maps e.g. from google to the standard base map list of your QGIS.</p>
+<p>The <a class="reference internal" href="../Wiki/en_qgis_basemaps_wiki.html"><span class="doc std std-doc">wiki article on basemaps</span></a>, has a tutorial
+on adding more types of basemaps (e.g. from Google Maps) to the standard basemap
+options in QGIS.</p>
 </div>
-<p>There are two ways to add the OpenStreetMap as a basemap.</p>
-<p><strong>Option 1:</strong> Find in the <code class="docutils literal notranslate"><span class="pre">Browser</span></code> panel <code class="docutils literal notranslate"><span class="pre">XYZ</span> <span class="pre">Tiles</span></code>. Open the dropdown by
-clicking on it and select OpenStreetMap or another basemap.</p>
-<p><strong>Option 2:</strong> <code class="docutils literal notranslate"><span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">XYZ</span> <span class="pre">layer...</span></code> -&gt; Select the
-OpenStreetMap or another basemap.</p>
+<p>There are two ways to add OpenStreetMap as a basemap.</p>
+<ol class="arabic simple">
+<li><p>Find in the <code class="docutils literal notranslate"><span class="pre">Browser</span></code> panel <code class="docutils literal notranslate"><span class="pre">XYZ</span> <span class="pre">Tiles</span></code>. Open the dropdown by
+clicking on the arrow next to it and select OpenStreetMap</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Layer</span></code> menu -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">XYZ</span> <span class="pre">layer...</span></code> -&gt; Select OpenStreetMap</p></li>
+</ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Add_basemap_OSM.mp4"></video></p>
 </section>
 <section id="quickmapservices">
 <h3>QuickMapServices<a class="headerlink" href="#quickmapservices" title="Permalink to this heading">#</a></h3>
-<p>There are numerous extensions for QGIS, also called plugins, which provide
-extended functionalities. In the wiki article about plugins, you can learn all
-about them.
-One of the most important plugins is the
-<a class="reference external" href="https://nextgis.com/blog/quickmapservices/">QuickMapServices</a> plugin.</p>
-<p>The QuickMapServices Plugin allows to access a wide range of basemaps.</p>
+<p>There are lots of plugins available for QGIS that provide additional tools not
+available in a standard installation. The [plugins page] on the wiki has more</p>
+<!-- FIXME: add link -->
+<p>information.
+One useful plugin is <a class="reference external" href="https://nextgis.com/blog/quickmapservices/">QuickMapServices</a>.
+This plugin lets you access a wide range of basemaps that are not available in
+QGIS by default.</p>
+<!-- CLARIFY: give examples -->
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Installation of plugins<div class="sd-summary-down docutils">
@@ -1097,22 +1110,31 @@ Installation of plugins<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">To install a plugin <code class="docutils literal notranslate"><span class="pre">Plugins</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins…</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span></code> -&gt;
 Search for the plugin -&gt; <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Plugin</span></code></p>
+<!-- CLARIFY -->
+<!-- FIXME: Plugin installation should be its own section, not nested under 
+   QuickMapServices -->
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_plugins.mp4"></video></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p class="sd-card-text">If you cannot find a specific extension, check your capitalisation and correct
-use of spaces. If you still cannot find an extension, you may need to allow the
-experimental extensions in the options (see below).</p>
+<p class="sd-card-text">If you cannot find a specific extension, check you have not used spaces where the
+plugin name doesn’t (e.g. When looking for QuickMapServices, searching “Quick Map”
+will not return results but “quickmap” will). You can use an asterisk (<code class="docutils literal notranslate"><span class="pre">*</span></code>) as a
+wildcard in searches (so “quick*map” will return results with or without a space
+between “quick” and “map”).</p>
+<p class="sd-card-text">If you still cannot find an extension, you may need to allow experimental
+extensions in the options (see below).</p>
 </div>
+<!-- FIXME: "see below" - no content given below -->
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">Web</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">QuickMapServices</span></code> -&gt; select provider e.g. NASA -&gt; select basemap</p>
+<!-- CLARIFY - make these instructions easier to follow. What are we doing and why? -->
 <p><strong>Functionality of QuickMapServices Plugin</strong>
 <video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/add_basemap_quickmapservice.mp4"></video></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There can be problems when printing some basemaps from the QuickMapServices!</p>
 </div>
-</section>
+<!-- CLARIFY: What are the problems? Are there any fixes for them? --></section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -1196,7 +1218,7 @@ experimental extensions in the options (see below).</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-only-selected-features-as-a-new-file">Save only selected features as a new file</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-maps">Base maps</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemaps">Basemaps</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-qgis-basemaps">Standard QGIS Basemaps</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickmapservices">QuickMapServices</a></li>
 </ul>
