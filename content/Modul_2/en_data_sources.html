@@ -829,8 +829,61 @@ document.write(`
 </section>
 <section id="quick-osm-plugin">
 <h3>Quick OSM plugin<a class="headerlink" href="#quick-osm-plugin" title="Permalink to this heading">#</a></h3>
-<p>tba</p>
-</section>
+<p>To download data from data and import it into your QGIS the plugin <strong>QuickOSM</strong> is great. First you need to install it by searching for it in the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins</span></code> Tab.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+How to download the plugin<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<figure class="align-center" id="manage-and-install-plugins">
+<a class="reference internal image-reference" href="../../_images/managa_install_plugins.png"><img alt="../../_images/managa_install_plugins.png" src="../../_images/managa_install_plugins.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 73 </span><span class="caption-text">Manage and Install Plugins.</span><a class="headerlink" href="#manage-and-install-plugins" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="installing-quickosm">
+<a class="reference internal image-reference" href="../../_images/install_quickosm.png"><img alt="../../_images/install_quickosm.png" src="../../_images/install_quickosm.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Installing QuickOSM.</span><a class="headerlink" href="#installing-quickosm" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</details><p>To launch the newly installed plugin, click on <img alt="" src="content/Modul_2/fig/quickosmplugin.png" /> or click under <code class="docutils literal notranslate"><span class="pre">vector</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">QuickOSM</span></code>.</p>
+<p>Follow the steps to fetch for data:</p>
+<ol class="arabic simple">
+<li><p>Select a Key and Value from the dropdown list. If you are unsure, check here: <a class="reference external" href="https://taginfo.openstreetmap.org">taginfo</a>.</p></li>
+</ol>
+<figure class="align-center" id="choosing-key-and-value">
+<a class="reference internal image-reference" href="../../_images/key_value_quickosm.png"><img alt="../../_images/key_value_quickosm.png" src="../../_images/key_value_quickosm.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Choosing key and value in QuickOSM.</span><a class="headerlink" href="#choosing-key-and-value" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Limit the area by typing in the name of your area of interest.</p></li>
+<li><p>Unfold the tab <code class="docutils literal notranslate"><span class="pre">Advanced</span></code>. Only select the datatypes you are expecting to minimize errors.</p></li>
+</ol>
+<figure class="align-center" id="running-the-quickosm-plugin">
+<a class="reference internal image-reference" href="../../_images/quickosm_usage.png"><img alt="../../_images/quickosm_usage.png" src="../../_images/quickosm_usage.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Running the QuickOSM plugin.</span><a class="headerlink" href="#running-the-quickosm-plugin" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">query</span></code>.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+How to fetch data for multiple queries<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If you want to get more data in the same area, you can add a query by clicking on the <img alt="" src="content/Modul_2/fig/plus_quickosm.png" />. Be careful choosing the right logical operator <code class="docutils literal notranslate"><span class="pre">And</span></code> or <code class="docutils literal notranslate"><span class="pre">Or</span></code>. If you are unsure check this <a class="reference internal" href="../Wiki/en_qgis_non_spatial_queries_wiki.html"><span class="doc std std-doc">Wikipage</span></a>.</p>
+</div>
+</details></section>
 <section id="hot-export-tool">
 <h3>HOT Export Tool<a class="headerlink" href="#hot-export-tool" title="Permalink to this heading">#</a></h3>
 <p>tba</p>
@@ -848,13 +901,13 @@ Either use the wizard by tiping in <em>amenity=school in Heidelberg</em> or writ
 <figure class="align-center" id="overpass-turbo-wizard">
 <a class="reference internal image-reference" href="../../_images/en_wizard_overpassturbo.png"><img alt="../../_images/en_wizard_overpassturbo.png" src="../../_images/en_wizard_overpassturbo.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 73 </span><span class="caption-text">Screenshot of the Wizard in overpass turbo</span><a class="headerlink" href="#overpass-turbo-wizard" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Screenshot of the Wizard in overpass turbo</span><a class="headerlink" href="#overpass-turbo-wizard" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="overpass-turbo-wizard-result">
 <a class="reference internal image-reference" href="../../_images/en_wizard_result.png"><img alt="../../_images/en_wizard_result.png" src="../../_images/en_wizard_result.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Screenshot of the result</span><a class="headerlink" href="#overpass-turbo-wizard-result" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 78 </span><span class="caption-text">Screenshot of the result</span><a class="headerlink" href="#overpass-turbo-wizard-result" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Query:</strong></p>
@@ -897,7 +950,7 @@ Data</label><div class="sd-tab-content docutils">
 <figure class="align-center" id="overpass-turbo-data">
 <a class="reference internal image-reference" href="../../_images/en_overpass_turbo_data.png"><img alt="../../_images/en_overpass_turbo_data.png" src="../../_images/en_overpass_turbo_data.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Screenshot of how to export data in overpassturbo</span><a class="headerlink" href="#overpass-turbo-data" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Screenshot of how to export data in overpassturbo</span><a class="headerlink" href="#overpass-turbo-data" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -908,7 +961,7 @@ Map</label><div class="sd-tab-content docutils">
 <figure class="align-center" id="overpass-turbo-map">
 <a class="reference internal image-reference" href="../../_images/en_overpass_turbo_map.png"><img alt="../../_images/en_overpass_turbo_map.png" src="../../_images/en_overpass_turbo_map.png" style="height: 150px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Screenshot of how to export map in overpassturbo</span><a class="headerlink" href="#overpass-turbo-map" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 80 </span><span class="caption-text">Screenshot of how to export map in overpassturbo</span><a class="headerlink" href="#overpass-turbo-map" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -919,7 +972,7 @@ Query</label><div class="sd-tab-content docutils">
 <figure class="align-center" id="overpass-turbo-query">
 <a class="reference internal image-reference" href="../../_images/en_overpass_turbo_query.png"><img alt="../../_images/en_overpass_turbo_query.png" src="../../_images/en_overpass_turbo_query.png" style="height: 250px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Screenshot of how to export query in overpassturbo</span><a class="headerlink" href="#overpass-turbo-query" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 81 </span><span class="caption-text">Screenshot of how to export query in overpassturbo</span><a class="headerlink" href="#overpass-turbo-query" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
