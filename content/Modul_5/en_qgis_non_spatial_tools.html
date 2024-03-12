@@ -593,7 +593,7 @@ document.write(`
 <h1>Non-Spatial Geodataprocessing<a class="headerlink" href="#non-spatial-geodataprocessing" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction:<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>Non-spatial geodataprocessing in QGIS refers to the manipulation, subsetting and analysis of attribute data within a GIS environment without directly involving spatial components. It involves operations on the non-geometric attributes of geospatial datasets. This can include data cleaning, transformation, enrichment and analysis based on the associated attribute information, such as population statistics, land use classifications or economic indicators. Non-spatial geodataprocessing can be used to perform calculations, generate statistics and gain insights into the non-spatial aspects of geospatial datasets. QGIS offers a variety of tools for non-spatial geodataprocessing to assist users in managing and analyzing attribute data effectively.</p>
+<p>Non-spatial geodataprocessing in QGIS refers to the manipulation, subsetting and analysis of attribute data within a GIS environment without directly involving spatial components. It involves operations on the <strong>non-geometric attributes</strong> of geospatial datasets. This can include data cleaning, transformation, enrichment and analysis based on the associated attribute information, such as population statistics, land use classifications or economic indicators. Non-spatial geodataprocessing can be used to perform calculations, generate statistics and gain insights into the non-spatial aspects of geospatial datasets. QGIS offers a variety of tools for non-spatial geodataprocessing to assist users in managing and analyzing attribute data effectively.</p>
 <p>This segment of Module 5 will start with the introduction of table functions. It will then progress into techniques for querying data, ultimately introducing the important concept of non-spatial joins.</p>
 <figure class="align-default" id="attribute-table-all">
 <a class="reference internal image-reference" href="../../_images/en_attribute_table_large.PNG"><img alt="../../_images/en_attribute_table_large.PNG" src="../../_images/en_attribute_table_large.PNG" style="height: 500px;" /></a>
@@ -607,7 +607,7 @@ document.write(`
 <p>For a comprehensive overview on the attribute table’s functionality and its purpose, you’re invited to explore the <a class="reference internal" href="../Wiki/en_qgis_attribute_table_wiki.html"><span class="doc std std-doc">Wiki</span></a> article on it.</p>
 <section id="add-field">
 <h3>Add field<a class="headerlink" href="#add-field" title="Permalink to this heading">#</a></h3>
-<p>The information within a vector layer can be accessed through its attribute table, and it can be enhanced by introducing new fields to this table. These additional fields may be derived from calculations, as exemplified in the following case where population density is computed to provide deeper insights into spatial population distribution.</p>
+<p>The information within a vector layer can be accessed through its <strong>attribute table</strong>, and it can be enhanced by <strong>introducing new fields</strong> to this table. These additional fields may be derived from calculations, as exemplified in the following case, where population density is computed to provide deeper insights into spatial population distribution.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>The selection of the appropriate data type should align with the information being added to the new attribute field. Please keep this in mind while watching the example video.</p>
@@ -652,7 +652,7 @@ Example: Delete all unused/unnecessary fields from a vector layer<div class="sd-
 <p>An important practice is to calculate the attribute values for a field, e.g., based on the values of other fields. In QGIS, you can <strong>create a new field or update an existing field</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>It is necessary to <strong>check if the data type of the field</strong> (new or updated) <strong>and your calculation match</strong>. For example: if you are calculating a ratio (e.g. density), the field should not be of type integer but rather of type decimal number.</p>
+<p>It is necessary to <strong>check if the data type of the field</strong> (new or updated) <strong>and your calculation match</strong>. For example, if you are calculating a ratio (e.g. density), the field should not be of type integer but rather of type decimal number.</p>
 </div>
 <p>An example could be to calculate the population density based on the already existing fields Population and Area.</p>
 <p>A very important tool for such calculations is the <strong>Field Calculator</strong>. It allows you to <strong>perform calculations based on existing attribute values or defined functions</strong>, for example, to calculate the length or area of a geometry feature or in the given example, could be used to calculate the population density based on the already existing fields Population and Area. The results of these calculations can be written into a new field or update an existing field.</p>
@@ -730,7 +730,7 @@ Example: Cities with more than 300.000 inhabitants and the amount of population 
 </section>
 <section id="non-spatial-queries">
 <h2>Non-spatial queries<a class="headerlink" href="#non-spatial-queries" title="Permalink to this heading">#</a></h2>
-<p>In GIS you can <strong>query</strong> (filter) data based on specific attribute information. Once the filtering is successful, only the desired features that <strong>correspond</strong> to the chosen attribute are displayed. Data filtering is a valuable technique for creating <strong>subsets</strong> of features that can be exported as a new layer.</p>
+<p>In GIS, you can <strong>query</strong> (filter) data based on specific attribute information. Once the filtering is successful, only the desired features that <strong>correspond</strong> to the chosen attribute are displayed. Data filtering is a valuable technique for creating <strong>subsets</strong> of features that can be exported as a new layer.</p>
 <section id="manual-selection">
 <h3>Manual selection<a class="headerlink" href="#manual-selection" title="Permalink to this heading">#</a></h3>
 <p>It is possible to manually select specific rows by clicking on the number on the left side of it. This can be easily used to select a small number of rows. If they are selected successfully, they will appear in <strong>yellow</strong>.</p>
@@ -901,7 +901,7 @@ SQL Cheat Sheet</label><div class="sd-tab-content docutils">
 <ul class="simple">
 <li><p>To list <strong>all unique values</strong> of a field, click the <strong>All</strong> button.</p></li>
 <li><p>To list the <strong>first 25</strong> unique values of the column, click the <strong>Sample</strong> button.</p></li>
-<li><p>To add a value to the expression window, double click it in the Values list. You can use the <strong>search box</strong> at the top of the Values frame to easily browse and find attribute values in the list.</p></li>
+<li><p>To add a value to the expression window, double click it in the Values list. You can use the <strong>search box</strong> at the top of the “Values”-panel to easily browse and find attribute values in the list.</p></li>
 </ul>
 </li>
 <li><p>The <strong>Operators</strong> section contains all usable operators. To add an operator, click the appropriate button.</p></li>
@@ -926,7 +926,7 @@ Example: Simple usage of the Query Builder.<div class="sd-summary-down docutils"
 </section>
 <section id="non-spatial-joins">
 <h2>Non-spatial joins<a class="headerlink" href="#non-spatial-joins" title="Permalink to this heading">#</a></h2>
-<p>A lot of analysis can be done with just a single layer. But sometimes the necessary information we need for our analysis is <strong>split across</strong> different datasets/layers. With QGIS, these layers can be <strong>combined</strong> to perform the analysis we want. The simplest way to combine layers is via an <strong>attribute join</strong>. This operation looks up information from a second data source based on a <strong>shared attribute value</strong>. This value functions as a common unique identifier, also known as an ID, UID or key.</p>
+<p>A lot of analysis can be done with just a single layer. But, sometimes, the necessary information we need for our analysis is <strong>split across</strong> different datasets/layers. With QGIS, these layers can be <strong>combined</strong> to perform the analysis we want. The simplest way to combine layers is via an <strong>attribute join</strong>. This operation looks up information from a second data source based on a <strong>shared attribute value</strong>. This value functions as a common unique identifier, also known as an ID, UID or key.</p>
 <p>In QGIS the tool <strong>Join attributes by field value</strong> is often used for such operations:</p>
 <figure class="align-default" id="join-attributes-by-field-value">
 <a class="reference internal image-reference" href="../../_images/en_join_attributes_by_field_values.PNG"><img alt="../../_images/en_join_attributes_by_field_values.PNG" src="../../_images/en_join_attributes_by_field_values.PNG" style="width: 75%;" /></a>

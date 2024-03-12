@@ -594,11 +594,11 @@ document.write(`
 </section>
 <section id="clip">
 <h2>Clip<a class="headerlink" href="#clip" title="Permalink to this heading">#</a></h2>
-<p>The <img alt="" src="../../_images/mAlgorithmClip.png" /> <code class="docutils literal notranslate"><span class="pre">Clip</span></code> tool is used to cut a vector layer with the boundaries of another polygon layer. It keeps only the parts of the features in the input layer that are inside the polygons of the overlay layer, creating a refined dataset. While the core attributes of the features remain the same, some properties like area or length may change after the clipping operation. If you’ve stored these properties as attributes, you might need to update them manually.</p>
+<p>The <img alt="" src="../../_images/mAlgorithmClip.png" /> <code class="docutils literal notranslate"><span class="pre">Clip</span></code> tool is used to cut a vector layer with the boundaries of another polygon layer. It keeps only the parts of the features in the input layer that are inside the polygons of the overlay layer, creating a refined dataset. While the core attributes of the features remain the same, some properties, like area or length, may change after the clipping operation. If you’ve stored these properties as attributes, you might need to update them manually.</p>
 <p>The tool has two different input option:</p>
 <ul class="simple">
-<li><p>Input layer: Layer from which the selection is clipped</p></li>
-<li><p>Overlay layer: Area of interest that the input layer will be clipped to.</p></li>
+<li><p><strong>Input layer</strong>: Layer from which the selection is clipped</p></li>
+<li><p><strong>Overlay layer</strong>: Area of interest that the input layer will be clipped to.</p></li>
 </ul>
 <figure class="align-default" id="en-clip-sudan">
 <a class="reference internal image-reference" href="../../_images/en_clip_sudan.PNG"><img alt="../../_images/en_clip_sudan.PNG" src="../../_images/en_clip_sudan.PNG" style="width: 75%;" /></a>
@@ -606,11 +606,14 @@ document.write(`
 <p><span class="caption-number">Fig. 122 </span><span class="caption-text">Screenshot of the Clip tool with the input data</span><a class="headerlink" href="#en-clip-sudan" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Information on road infrastructure for humanitarian aid operations is of great importance and can be easily retrieved from open-source data sources like OpenStreetMap. However, this information is often included in extensive datasets that contain a significant amount of irrelevant details for specific operations. To make working with this data more efficient, it is common practice to clip the data to the area of interest. In addition to clipping, data can often be filtered, as described in the first part of Module 5</p>
+<p>Information on road infrastructure for humanitarian aid operations is of great importance and can be easily retrieved from open-source data sources like OpenStreetMap. However, this information is often included in extensive datasets that contain a significant amount of irrelevant details for specific operations, or it covers a lot more area than is necessary for the operation. To make working with this data more efficient, it is common practice to clip the data to the area of interest. In addition to clipping, data can often be filtered, as described in the first part of Module 5.</p>
+<blockquote>
+<div><p>here it is not clear what the first part of module 5 is, maybe add link</p>
+</div></blockquote>
 <section id="exercise-clipping-a-roads-layer-to-administrative-boundaries">
 <h3>Exercise: Clipping a roads layer to administrative boundaries<a class="headerlink" href="#exercise-clipping-a-roads-layer-to-administrative-boundaries" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Load the OSM roads data from the <a class="reference external" href="https://export.hotosm.org/v3/exports/918cf68d-dfd7-40f1-ab46-4f0426dfaf68/">HOT Export tool</a> (part of the Humanitarian OpenStreetMap Team) as a new layer <strong>Road_infrastructure_Sudan.geojson</strong>.</p></li>
+<li><p>Load the OSM roads data from the <a class="reference external" href="https://export.hotosm.org/v3/exports/918cf68d-dfd7-40f1-ab46-4f0426dfaf68/">HOT Export tool</a> (part of the Humanitarian OpenStreetMap Team) as a new layer: <strong>Road_infrastructure_Sudan.geojson</strong>.</p></li>
 </ol>
 <figure class="align-default" id="en-screenshot-hot-export-tool">
 <a class="reference internal image-reference" href="../../_images/en_screenshot_hot_export_tool.PNG"><img alt="../../_images/en_screenshot_hot_export_tool.PNG" src="../../_images/en_screenshot_hot_export_tool.PNG" style="width: 75%;" /></a>
@@ -697,7 +700,7 @@ Clip vector by mask layer</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Attention</p>
 <p>If you are trying to make a buffer on a layer with a Geographical Coordinate System, processing will warn you and suggest to reproject the layer to a <strong>metric Coordinate System</strong>.</p>
 </div>
-<p>In the case of humanitarian action buffering can be used to create a map which provides information about the coverage of health sites in the distance of 10 km. The health sites are points and can be buffered with 10 km. In a next step, the results can be dissolved if two buffer zones overlap and create a homogoneous area. This examples will be done in the next step.</p>
+<p>In the case of humanitarian action, buffering can be used to create a map which provides information about the coverage of health sites in the distance of 10 km. The health sites are points and can be buffered with 10 km. In a next step, the results can be dissolved if two buffer zones overlap and create a homogoneous area. This examples will be done in the next step.</p>
 <section id="exercise-create-10km-buffer-around-health-centres">
 <h3>Exercise: Create 10km buffer around health centres<a class="headerlink" href="#exercise-create-10km-buffer-around-health-centres" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
@@ -709,15 +712,15 @@ Clip vector by mask layer</label><div class="sd-tab-content docutils">
 <li><p>Vector menu &gt; Data Management Tools &gt; <strong>Reproject Layer</strong></p></li>
 <li><p>Select the <strong>health sites</strong> layer as the input layer</p></li>
 <li><p>Set the target <strong>CRS to WGS 84 / UTM zone 36N</strong> (click the projections icon to search the full list of options)</p></li>
-<li><p>Click Run to reproject</p></li>
+<li><p>Click  <code class="docutils literal notranslate"><span class="pre">Run</span></code> to reproject</p></li>
 </ul>
 </li>
-<li><p>Open the <strong>Buffer</strong> tool by accessing Vector &gt; Geoprocessing Tools &gt; Buffer</p>
+<li><p>Open the <strong>Buffer</strong> tool by accessing <code class="docutils literal notranslate"><span class="pre">Vector</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Geoprocessing</span> <span class="pre">Tools</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Buffer</span></code></p>
 <ul class="simple">
 <li><p>Select the <strong>reprojected layer</strong> as the input layer</p></li>
 <li><p>Set the distance to <strong>10km</strong></p></li>
 <li><p>Check the option to <strong>dissolve</strong> result</p></li>
-<li><p>Leave the other options as defaults and click Run</p></li>
+<li><p>Leave the other options as defaults and click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
 </ul>
 </li>
 <li><p>Now you have a rough overview over the coverage with health sites for the district of Khartoum</p></li>
@@ -802,7 +805,7 @@ Cross</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-10">
 Join attributes by location</label><div class="sd-tab-content docutils">
 <p>This tool takes an input vector layer and creates a new vector layer that is an extended version of the input, with additional attributes in its attribute table.</p>
-<p>The additional attributes and their values are taken from a second vector layer. For this layer a spatial criteria is applied to select the values from it that are added to each feature from the first layer.</p>
+<p>The additional attributes and their values are taken from a <strong>second vector layer</strong>. For this layer a <strong>spatial criteria</strong> is applied to select the values from it that are added to each feature from the first layer.</p>
 <figure class="align-default" id="join-attribute-by-location">
 <a class="reference internal image-reference" href="../../_images/en_join_attributes_by_location.PNG"><img alt="../../_images/en_join_attributes_by_location.PNG" src="../../_images/en_join_attributes_by_location.PNG" style="width: 75%;" /></a>
 <figcaption>
@@ -813,7 +816,7 @@ Join attributes by location</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-11" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-11">
 Join attributes by location (summary)</label><div class="sd-tab-content docutils">
-<p>For performing additional calculations in combination with a spatial join, the QGIS tool  <strong>Join attributes by location (summary)</strong> is really helpful. This functionality closely resembles the previously outlined workflow; however, the algorithm extends its capabilities by calculating statistical summaries for the values from matching features in the second layer. These summaries encompass a wide range of options, including <strong>minimum</strong> and <strong>maximum values</strong>, <strong>mean values</strong>, as well as <strong>counts</strong>, <strong>sums</strong>, <strong>standard deviation</strong>, and more.</p>
+<p>When performing additional calculations in combination with a spatial join, the QGIS tool  <strong>Join attributes by location (summary)</strong> is really helpful. This functionality closely resembles the previously outlined workflow; however, the algorithm extends its capabilities by calculating statistical summaries for the values from matching features in the second layer. These summaries encompass a wide range of options, including <strong>minimum</strong> and <strong>maximum values</strong>, <strong>mean values</strong>, as well as <strong>counts</strong>, <strong>sums</strong>, <strong>standard deviation</strong>, and more.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/en_join_attributes_by_location_summary.PNG"><img alt="../../_images/en_join_attributes_by_location_summary.PNG" src="../../_images/en_join_attributes_by_location_summary.PNG" style="width: 75%;" /></a>
 <figcaption>
@@ -824,7 +827,7 @@ Join attributes by location (summary)</label><div class="sd-tab-content docutils
 <input id="sd-tab-item-12" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-12">
 Join attributes by nearest</label><div class="sd-tab-content docutils">
-<p>It takes an input vector layer and uses this information to create a new vector layer. The new layer incorporates additional fields in its attribute table, and these supplementary attributes are obtained from a second vector layer. The joining of features occurs by identifying the closest features from each of these layers.</p>
+<p>It takes an input vector layer and uses this information to create a new vector layer. The new layer incorporates additional fields in its attribute table, and these supplementary attributes are obtained from a second vector layer. The joining of features occurs by <strong>identifying the closest features</strong> from each of these layers.</p>
 <p>By default, this operation connects each feature with its nearest counterpart. However, it also offers the flexibility to join with the k-nearest neighboring features if needed.</p>
 <p>Furthermore, if a maximum distance is specified, only the features that are within this designated distance will be considered as suitable matches for the joining process.</p>
 <figure class="align-default" id="id3">
