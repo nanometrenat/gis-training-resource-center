@@ -599,13 +599,13 @@ document.write(`
 <div><p>picture /fig/SMT_workflow_satelite.png fehlt oder ist /fig/SMT_workflow.png gemeint (see below)?</p>
 </div></blockquote>
 <figure class="align-center" id="t">
-<a class="reference internal image-reference" href="fig/SMT_workflow_Satelite.png"><img alt="fig/SMT_workflow_Satelite.png" src="fig/SMT_workflow_Satelite.png" style="height: 450px;" /></a>
+<a class="reference internal image-reference" href="fig/smt_workflow_Satelite.png"><img alt="fig/smt_workflow_Satelite.png" src="fig/smt_workflow_Satelite.png" style="height: 450px;" /></a>
 <figcaption>
 <p><span class="caption-text">Thw workflow of the Sketch Map Tool</span><a class="headerlink" href="#t" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="smt-workflow">
-<a class="reference internal image-reference" href="fig/SMT_workflow.png"><img alt="fig/SMT_workflow.png" src="fig/SMT_workflow.png" style="height: 450px;" /></a>
+<a class="reference internal image-reference" href="content/fig/smt_workflow.png"><img alt="content/fig/smt_workflow.png" src="content/fig/smt_workflow.png" style="height: 500px;" /></a>
 <figcaption>
 <p><span class="caption-text">Thw workflow of the Sketch Map Tool</span><a class="headerlink" href="#smt-workflow" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -669,9 +669,10 @@ document.write(`
 </div>
 <section id="timetable">
 <h3>Timetable<a class="headerlink" href="#timetable" title="Permalink to this heading">#</a></h3>
-<p>| —– | —– |
-| Introduction | 10 min |
-| Group exercise | 1h 35min</p>
+<ol class="arabic simple">
+<li><p><strong>Introduction</strong>:  10 min</p></li>
+<li><p><strong>Group exercise</strong>: 1h 35min</p></li>
+</ol>
 <ul class="simple">
 <li><p>15 min group reading and discussion of the case</p></li>
 <li><p>10 min for creating the maps</p></li>
@@ -679,9 +680,13 @@ document.write(`
 <li><p>15 min for marking the Sketch maps</p></li>
 <li><p>10 min for digitizing the Sketch maps</p></li>
 <li><p>20 min to open the files in QGIS or uMap</p></li>
-<li><p>20 min preparation of a short presentation |
-| Wrap-up (with presentations)|</p></li>
-<li><p>each group about 5 min to present</p></li>
+<li><p>20 min preparation of a short presentation</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p><strong>Wrap-up</strong> (with presentations):</p></li>
+</ol>
+<ul class="simple">
+<li><p>5 min per group to present their findings</p></li>
 <li><p>10 min general discussion</p></li>
 <li><p>a bit buffer time for the change of the groups |</p></li>
 </ul>
@@ -709,20 +714,20 @@ Trainers Corner <div class="sd-summary-down docutils">
 </ul>
 <p class="rubric">Available Material:</p>
 <blockquote>
-<div><p class="sd-card-text">needs to be linked directly<br />
-•	Introduction slides about the Sketch Map Tool
+<div><p class="sd-card-text">needs to be linked directly + not fully understandable. Take a look at folder structure ex 4 or mention the file paths where to find the mentioned data</p>
+</div></blockquote>
+<p class="sd-card-text">•	Introduction slides about the Sketch Map Tool
 •	X EVCA-case studies as examples
 •	Alternative files based on OSM- and satellite-based Sketch Maps from 5 regions.</p>
-</div></blockquote>
 <ul class="simple">
-<li><p class="sd-card-text">The created maps for (pre-printing)</p></li>
+<li><p class="sd-card-text">The created maps for pre-printing</p></li>
 <li><p class="sd-card-text">Pre-marked and photographed maps</p></li>
 <li><p class="sd-card-text">Geodata of the results and some pictures</p></li>
 </ul>
 <p class="rubric">During the exercise:</p>
 <p class="rubric">Introduction:</p>
 <ul class="simple">
-<li><p class="sd-card-text">Introduce the idea, the aim, and the general workflow of the Skecht Map Tool before starting the exercise.</p></li>
+<li><p class="sd-card-text">Introduce the idea, the aim, and the general workflow of the Sketch Map Tool before starting the exercise.</p></li>
 <li><p class="sd-card-text">Provide access to the needed material and form groups (at least 3 people each to discuss together; ideal group size is 3 to 6 participants).</p></li>
 </ul>
 <p class="rubric">Time for group work:</p>
@@ -749,13 +754,13 @@ Trainers Corner <div class="sd-summary-down docutils">
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="fig/SMT_workflow_Satelite.png"><img alt="fig/SMT_workflow_Satelite.png" src="fig/SMT_workflow_Satelite.png" style="height: 450px;" /></a>
 <figcaption>
-<p><span class="caption-text">Picutre of the workflow</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Picture of the workflow</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
-<li><p>The first step is the creation of the paper-based maps. Users can choose between two basemap containing either <span class="xref myst">OpenStreetMap (OSM)</span> Data or basemaps containing satellite images. In addition, the tool can evaluate how well-suited an area of the OpenStreetMap (OSM) basemap is for participatory mapping. This evaluation is based on a quality analysis of the OpenStreetMap (OSM) data using the <a class="reference external" href="https://heigit.org/de/big-spatial-data-analytics/ohsome-3/ohsome-quality-analyst-oqt/">HeiGIT ohsome quality analyst</a>.</p></li>
-<li><p>The data is collected on site/offline through participatory mapping. For this, you only need participants, printed Sketch Maps and pens to draw markings on the Sketch Maps.</p></li>
-<li><p>After mapping, the Sketch Map Tool supports the digitisation of the Sketch Maps. Upon uploading the pictures or scans of the marked Sketch Maps, the Sketch Map Tool initiates an automatic georefferencing and coloure-detection process. The results can be downloaded in various geodata formats. The tool uses a combination of computer vision algorithms and novel AI models to extract Sketch Maps from photos and detect markings on them. The results can then be used for further analysis in Geographic Information System software (such as QGIS).</p></li>
+<li><p>The first step is the creation of the paper-based maps. Participants can choose between basemaps containing <span class="xref myst">OpenStreetMap (OSM)</span> data or basemaps containing satellite images. In addition, the tool can evaluate how well-suited an area of the OpenStreetMap (OSM) basemap is for participatory mapping. This evaluation is based on a quality analysis of the OpenStreetMap (OSM) data using the <a class="reference external" href="https://heigit.org/de/big-spatial-data-analytics/ohsome-3/ohsome-quality-analyst-oqt/">HeiGIT ohsome quality analyst</a>.</p></li>
+<li><p>Usually, the data is collected on site and offline through participatory mapping. For this, you only need participants, printed Sketch Maps and pens to draw markings on the Sketch Maps.</p></li>
+<li><p>After mapping, the Sketch Map Tool supports the digitisation of the Sketch Maps. Upon uploading the pictures or scans of the marked Sketch Maps, the Sketch Map Tool initiates an automatic georefferencing and colour-detection process. The tool uses a combination of computer vision algorithms and novel AI models to extract Sketch Maps from photos and detect markings on them. The results can be downloaded in various geodata formats.  The results can then be used for further analysis in Geographic Information System software (such as QGIS).</p></li>
 </ul>
 </section>
 <section id="what-does-georefferenced-means">
@@ -782,7 +787,7 @@ Trainers Corner <div class="sd-summary-down docutils">
 <section id="background-information-on-umap">
 <h3>Background Information on UMAP<a class="headerlink" href="#background-information-on-umap" title="Permalink to this heading">#</a></h3>
 <blockquote>
-<div><p>move this section?</p>
+<div><p>move this section or change title into comparison between QGIS and uMap?</p>
 </div></blockquote>
 <p>UMAP is an online platform that allows users to create custom maps with OpenStreetMap (OSM) as a basemap layer. No installation or registration is necessary to use the platform. This enables users to quickly gain an intuitive overview of their data.
 Users can customize the appearance of the map and share it with others. It’s particularly useful for collaborative mapping projects, quick visualization of geographic data, and creating custom maps tailored to specific needs.</p>
@@ -874,7 +879,7 @@ Users can customize the appearance of the map and share it with others. It’s p
 <section id="open-your-results-in-qgis-or-umap">
 <h3>5.	Open your results in QGIS or uMap<a class="headerlink" href="#open-your-results-in-qgis-or-umap" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>You can choose to use either QGIS (Option A) or <a class="reference external" href="https://umap.openstreetmap.fr/en/">uMap</a> (Option B) for the next part of the exercise.</p></li>
+<li><p>You can choose to use either QGIS (<strong>Option A</strong>) or <a class="reference external" href="https://umap.openstreetmap.fr/en/">uMap</a> (<strong>Option B</strong>) for the next part of the exercise.</p></li>
 </ul>
 <blockquote>
 <div><p>moved to each section because participants cannot do this now: “- Take a look at the detected markings, compare it with your map. Which differences can you see? Are some markings missing in the Sketch Map Tool results?”</p>
@@ -924,6 +929,7 @@ Option B: Open your results in uMAP<div class="sd-summary-down docutils">
 </figure>
 <ol class="arabic simple" start="3">
 <li><p class="sd-card-text">You can load your data into the map frame by clicking on the upwards-arrow button <img alt="" src="../../_images/umap_upload_data_icon.png" /> in the toolbar on the right side of the website. The <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">data</span></code> panel will open on the right hand side. Click on <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">file</span></code> and navigate to your vector output from the SKetch Map Tool (“Schuld_Ahr-tal_sketch-map_Ex4.geojson”) and click on <code class="docutils literal notranslate"><span class="pre">Open</span></code>. uMap will automatically detect that your file is a geojson/vector file . Click on <code class="docutils literal notranslate"><span class="pre">Import</span></code> to load your data to your map canvas.</p></li>
+<li><p class="sd-card-text">Click in the upper right corner on <code class="docutils literal notranslate"><span class="pre">Save</span></code>. If you are not logged in, you will be provided with an URL where you can access your map any time in the future. Save it somewhere or send it to your email.</p></li>
 </ol>
 <figure class="align-center" id="umap-data-loaded">
 <a class="reference internal image-reference" href="../../_images/en_SMT_ex4_UMAP_Data_Loaded.PNG"><img alt="../../_images/en_SMT_ex4_UMAP_Data_Loaded.PNG" src="../../_images/en_SMT_ex4_UMAP_Data_Loaded.PNG" style="height: 400px;" /></a>
@@ -931,11 +937,8 @@ Option B: Open your results in uMAP<div class="sd-summary-down docutils">
 <p><span class="caption-text">UMAP interface with the Sketch Map vectors</span><a class="headerlink" href="#umap-data-loaded" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="4">
-<li><p class="sd-card-text">Click in the upper right corner on <code class="docutils literal notranslate"><span class="pre">Save</span></code>. If you are not logged in, you will be provided with an URL where you can access your map any time in the future. Save it somewhere or send it to your email.</p></li>
-</ol>
 <blockquote>
-<div><p class="sd-card-text">if you are not logged in ^?</p>
+<div><p class="sd-card-text">confused if its correct: if you are not logged in you will be provided with an URL where you can access your map any time in the future. Save it somewhere or send it to your email^?</p>
 </div></blockquote>
 </div>
 </details></section>
