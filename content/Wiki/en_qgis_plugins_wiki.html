@@ -564,7 +564,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-of-plugins">Installation of plugins</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manage-plugins">Manage Plugins</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allow-experimental-extensions">Allow experimental extensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allow-experimental-extensions">Allow experimental extensions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-quick-osm-plugin">Downloading the Quick OSM plugin</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -613,6 +616,63 @@ document.write(`
 <p class="admonition-title">Tip</p>
 <p>Due to the often missing optimization for the used QGIS version, experimental extensions may cause more error messages or other problems up to a crash of QGIS. Experimental extensions should therefore only be activated for use and then deactivated again. In addition, make sure that the current working progress is saved to avoid data loss when QGIS crashes.</p>
 </div>
+<section id="downloading-the-quick-osm-plugin">
+<h3>Downloading the Quick OSM plugin<a class="headerlink" href="#downloading-the-quick-osm-plugin" title="Permalink to this heading">#</a></h3>
+<p>To download data from data and import it into your QGIS the plugin <strong>QuickOSM</strong> is great. First you need to install it by searching for it in the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins</span></code> Tab.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+How to download the plugin<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<figure class="align-center" id="manage-and-install-plugins">
+<a class="reference internal image-reference" href="../../_images/managa_install_plugins.png"><img alt="../../_images/managa_install_plugins.png" src="../../_images/managa_install_plugins.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Manage and Install Plugins.</span><a class="headerlink" href="#manage-and-install-plugins" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="installing-quickosm">
+<a class="reference internal image-reference" href="../../_images/install_quickosm.png"><img alt="../../_images/install_quickosm.png" src="../../_images/install_quickosm.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Installing QuickOSM.</span><a class="headerlink" href="#installing-quickosm" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</details><p>To launch the newly installed plugin, click on <img alt="" src="content/Wiki/fig/quickosmplugin.png" /> or click under <code class="docutils literal notranslate"><span class="pre">vector</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">QuickOSM</span></code>.</p>
+<p>Follow the steps to fetch for data:</p>
+<ol class="arabic simple">
+<li><p>Select a Key and Value from the dropdown list. If you are unsure, check here: <a class="reference external" href="https://taginfo.openstreetmap.org">taginfo</a>.</p></li>
+</ol>
+<figure class="align-center" id="choosing-key-and-value">
+<a class="reference internal image-reference" href="../../_images/key_value_quickosm.png"><img alt="../../_images/key_value_quickosm.png" src="../../_images/key_value_quickosm.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Choosing key and value in QuickOSM.</span><a class="headerlink" href="#choosing-key-and-value" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Limit the area by typing in the name of your area of interest.</p></li>
+<li><p>Unfold the tab <code class="docutils literal notranslate"><span class="pre">Advanced</span></code>. Only select the datatypes you are expecting to minimize errors.</p></li>
+</ol>
+<figure class="align-center" id="running-the-quickosm-plugin">
+<a class="reference internal image-reference" href="../../_images/quickosm_usage.png"><img alt="../../_images/quickosm_usage.png" src="../../_images/quickosm_usage.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Running the QuickOSM plugin.</span><a class="headerlink" href="#running-the-quickosm-plugin" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">query</span></code>.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+How to fetch data for multiple queries<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If you want to get more data in the same area, you can add a query by clicking on the <img alt="" src="content/Wiki/fig/plus_quickosm.png" />. Be careful choosing the right logical operator <code class="docutils literal notranslate"><span class="pre">And</span></code> or <code class="docutils literal notranslate"><span class="pre">Or</span></code>. If you are unsure check this <a class="reference internal" href="en_qgis_non_spatial_queries_wiki.html"><span class="doc std std-doc">Wikipage</span></a>.</p>
+</div>
+</details></section>
 </section>
 </section>
 
@@ -681,7 +741,10 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-of-plugins">Installation of plugins</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manage-plugins">Manage Plugins</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allow-experimental-extensions">Allow experimental extensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#allow-experimental-extensions">Allow experimental extensions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-the-quick-osm-plugin">Downloading the Quick OSM plugin</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
