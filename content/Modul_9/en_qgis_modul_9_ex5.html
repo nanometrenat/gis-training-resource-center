@@ -563,7 +563,8 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-dissolve-layer">STEP 1: Dissolve Layer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">STEP 2:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-betweenness-centrality-before-flood">STEP 2: Betweenness Centrality - Before Flood</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-betweenness-centrality-after-flood">STEP 3: Betweenness Centrality - After Flood</a></li>
 </ul>
             </nav>
         </div>
@@ -588,28 +589,33 @@ document.write(`
 <p>First we want to dissolve the <code class="docutils literal notranslate"><span class="pre">highways</span></code> layer to combine all the LineString geometries to one LineString. This is important for determining the betweenness centrality in the future steps.</p>
 <p>Open the <strong>Processing Toolbox</strong> and search for <strong>Dissolve</strong>. Select the <code class="docutils literal notranslate"><span class="pre">highways</span></code> layer as the Input Layer and leave all other settings at default.</p>
 </section>
-<section id="step-2">
-<h2>STEP 2:<a class="headerlink" href="#step-2" title="Permalink to this heading">#</a></h2>
+<section id="step-2-betweenness-centrality-before-flood">
+<h2>STEP 2: Betweenness Centrality - Before Flood<a class="headerlink" href="#step-2-betweenness-centrality-before-flood" title="Permalink to this heading">#</a></h2>
 <p>Make sure you installed the GRASS GIS provider Plugin. If you don’t know how to install Plugins, click here: <a class="reference internal" href="../Wiki/en_qgis_plugins_wiki.html#content-references-wiki-plugins"><span class="std std-ref">Plugins</span></a></p>
-<p>Open the <strong>Processing Toolbox</strong>, choose <strong>GRASS</strong>, then choose <strong>Vector</strong> and finally scroll down to <strong>v.net.centrality</strong>. Select the <code class="docutils literal notranslate"><span class="pre">Dissolved</span></code>Layer from Step 1 and leave all other settings at default. After the calculation you receive a new Point layer called <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">Centrality</span></code>.</p>
-<p>Now click <strong>F7</strong> to open the <strong>Layer Styling</strong>. There you can choose the new <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">Centrality</span></code> Layer and change <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">Symbol</span></code> to <code class="docutils literal notranslate"><span class="pre">Graduated</span></code> to get a color transition. Before you can see the final result, you must select the <code class="docutils literal notranslate"><span class="pre">Value</span></code> <strong>betweenness</strong> and click <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.</p>
+<p>To determine the betweenness centrality open the <strong>Processing Toolbox</strong>, choose <strong>GRASS</strong>, then choose <strong>Vector</strong> and finally scroll down to <strong>v.net.centrality</strong>. Select the <code class="docutils literal notranslate"><span class="pre">Dissolved</span></code> Layer from Step 1 and leave all other settings at default. After the calculation you receive a new Point layer called <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">Centrality</span></code>.</p>
+<p>Now you want to make the difference between the values visible for interpretation. Therefore click <strong>F7</strong> to open the <strong>Layer Styling</strong>. There you can choose the new <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">Centrality</span></code> Layer and change <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">Symbol</span></code> to <code class="docutils literal notranslate"><span class="pre">Graduated</span></code>.  You must select <strong>betweenness</strong> as your <code class="docutils literal notranslate"><span class="pre">Value</span></code>and finally click <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To make the differences of the values more visible, you can change the Classification <code class="docutils literal notranslate"><span class="pre">Mode</span></code> from <strong>Equal Count (Quantile)</strong> to <strong>Natural Breaks (Jenks)</strong>.</p>
 </div>
 <div class="admonition-question admonition">
 <p class="admonition-title">Question</p>
-<p>Can you spot ares of the city with higher centrality values by looking at the different nodes? What does this mean for the infrastructure of Heidelberg?</p>
+<p>Can you spot areas of the city with higher centrality values by looking at the different nodes? What does this mean for the infrastructure of Heidelberg?</p>
 </div>
-<p>Valentins show</p>
-<ul class="simple">
-<li><p>dissolve layer</p></li>
-<li><p>GRASS v.net.centrality</p></li>
-<li><p>interpretieren zwischenresultate</p></li>
-<li><p>Difference mit Floodlayer (flood simulieren)</p></li>
-<li><p>Zentralität mit neuem layer</p></li>
-<li><p>interpretation der unterschiedlichen Layer</p></li>
-</ul>
+</section>
+<section id="step-3-betweenness-centrality-after-flood">
+<h2>STEP 3: Betweenness Centrality - After Flood<a class="headerlink" href="#step-3-betweenness-centrality-after-flood" title="Permalink to this heading">#</a></h2>
+<p>In a next step, we want to carry out the same analysis after the flood event in order to determine the impact of the flood on the infrastructure in Heidelberg. To do so, we first have to delete the part of the <code class="docutils literal notranslate"><span class="pre">highways</span></code> layer that is flooded.</p>
+<p>Open the <strong>Processing Toolbox</strong> and search for <strong>Difference</strong>. Select the <code class="docutils literal notranslate"><span class="pre">Dissolved</span></code> layer as the Input Layer and the <code class="docutils literal notranslate"><span class="pre">flood_area</span></code>layer as the Overlay Layer. Leave all other settings at default. After the calculation you receive a new LineString layer called <code class="docutils literal notranslate"><span class="pre">Difference</span></code>.</p>
+<p>Repeat the analysis from Step 2 to determine the betweenness centrality of the <code class="docutils literal notranslate"><span class="pre">Difference</span></code> Layer.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To make the values of the two Point Layers more comparable, right click on your second <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">Centrality</span></code> Layer, choose <code class="docutils literal notranslate"><span class="pre">Styles</span></code>, <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">Styles</span></code> and then <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Style</span> <span class="pre">Categories</span></code>. Then right click on your first <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">Centrality</span></code> Layer, choose <code class="docutils literal notranslate"><span class="pre">Styles</span></code>, <code class="docutils literal notranslate"><span class="pre">Paste</span> <span class="pre">Styles</span></code> and then <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Style</span> <span class="pre">Categories</span></code>. Now the two layers share the same classification for comparison.</p>
+</div>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>Can you spot new areas of the city with high centrality values? How did the range of the values change due to the flood? How did the flood event influence the infrastructure of Heidelberg in general?</p>
+</div>
 </section>
 </section>
 
@@ -677,7 +683,8 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-dissolve-layer">STEP 1: Dissolve Layer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">STEP 2:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-betweenness-centrality-before-flood">STEP 2: Betweenness Centrality - Before Flood</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-betweenness-centrality-after-flood">STEP 3: Betweenness Centrality - After Flood</a></li>
 </ul>
   </nav></div>
 
