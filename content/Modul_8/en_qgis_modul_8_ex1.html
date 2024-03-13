@@ -787,6 +787,10 @@ Or by clicking <code class="docutils literal notranslate"><span class="pre">Laye
 <p><span class="caption-number">Fig. 204 </span><span class="caption-text">Example rastermask of flooded areas</span><a class="headerlink" href="#example-floodmask" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>It is possible that due to an error the raster values are not updating after rasterizing. To fix this delete the layer from your project, rename it in your temp folder and import in again.</p>
+</div>
 <ol class="arabic" start="5">
 <li><p>Now we want to extract the population count within the flood zones. We do this by processing two rasters with the <code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Calculator</span></code>.</p>
 <ol class="arabic simple">
