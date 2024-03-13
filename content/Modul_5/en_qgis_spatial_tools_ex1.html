@@ -580,7 +580,7 @@ document.write(`
 <h1>Exercise 1: Healthsite distribution in Saint Louis region<a class="headerlink" href="#exercise-1-healthsite-distribution-in-saint-louis-region" title="Permalink to this heading">#</a></h1>
 <section id="aim-of-the-exercise">
 <h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
-<p>Becoming familiar with different types of spatial analysis and geoprocessing tools. Understand the process of discovering relationships and connections between features in spatial data.</p>
+<p>Become familiar with different types of spatial analysis and geoprocessing tools. Understand the process of discovering relationships and connections between features in spatial data.</p>
 <section id="links-to-wiki-articles">
 <h3>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h3>
 <p>will be done when Wiki is finished</p>
@@ -600,17 +600,17 @@ document.write(`
 </section>
 <section id="task">
 <h3>Task<a class="headerlink" href="#task" title="Permalink to this heading">#</a></h3>
-<p>Assess the healthsite distribution in Saint Louis region in Senegal.</p>
+<p>The goal of this exercise will be to assess the healthsite distribution in the Saint Louis region in Senegal and which healthsites are prone to flooding.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>The projected coordinate system for Senegal is <code class="docutils literal notranslate"><span class="pre">EPSG:32628</span> <span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">UTM</span> <span class="pre">zone</span> <span class="pre">28N</span></code></p>
 </div>
 <ol class="arabic simple">
 <li><p>Load the healthsites layer (<code class="docutils literal notranslate"><span class="pre">sen_healthsites.shp</span></code>) and the administrative boundary data (<code class="docutils literal notranslate"><span class="pre">sen_admbnda_adm1_1m_gov_ocha_20190426.shp</span></code>) into your QGIS project. Add OpenStreetMap as a background layer (Hint: XYZ via the browser window or the QuickMapServices plugin).</p></li>
-<li><p>Make sure to reproject the dataset with the <strong>administrative boundaries</strong> and the dataset with the <strong>healthsites</strong> into UTM zone 28N. Use the tool <code class="docutils literal notranslate"><span class="pre">Reproject</span> <span class="pre">layer</span></code> for this process. See the Wiki entry on <strong>Projections</strong> for further information.</p></li>
+<li><p>Make sure to reproject the dataset with the <strong>administrative boundaries</strong> and the dataset with the <strong>healthsites</strong> into UTM zone 28N. Use the tool <code class="docutils literal notranslate"><span class="pre">Reproject</span> <span class="pre">layer</span></code> for this process. See the Wiki entry on <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projections_wiki.html">projections</a> for further information.</p></li>
 <li><p>Select all healthsites which are located within the Saint Louis region:</p>
 <ul class="simple">
-<li><p>Select the region <code class="docutils literal notranslate"><span class="pre">Saint</span> <span class="pre">Louis</span></code> in the boundary layer. You can just manually select the specific rows. See the Wiki entry on <strong>Spatial queries</strong> for further information.</p></li>
+<li><p>Select the region <code class="docutils literal notranslate"><span class="pre">Saint</span> <span class="pre">Louis</span></code> in the boundary layer. You can just manually select the specific rows. See the Wiki entry on <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_spatial_queries_wiki.html">spatial queries</a> for further information.</p></li>
 <li><p>Save the selection under the new name <code class="docutils literal notranslate"><span class="pre">Saint_Louis_region</span></code> in an extra layer. This can be done by right clicking on the boundary layer –&gt; <code class="docutils literal notranslate"><span class="pre">Export</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Selected</span> <span class="pre">Features</span> <span class="pre">As...</span></code></p></li>
 </ul>
 </li>
@@ -638,7 +638,7 @@ document.write(`
 <li><p>Investigate the flood risk in Saint Louis. Following the successful selection of all healthsites in the Saint Louis region in the previous step, proceed to load the flood extent layer of Saint Louis into QGIS:</p>
 <ul class="simple">
 <li><p>Add the flood extent layer (<code class="docutils literal notranslate"><span class="pre">EO4SD_SAINT_LOUIS_FLOOD_2018.shp</span></code>)</p></li>
-<li><p>While the layer does not cover the entirety of the Saint Louis region, it extends beyond Saint Louis in the north. Utilize the <img alt="" src="../../_images/mAlgorithmClip.png" /> <code class="docutils literal notranslate"><span class="pre">Clip</span></code> tool to clip the flood extent layer to the Saint Louis region (Hint: as input use Saint Louis flood extent, use Saint_louis_region as the overlay) for a more concentrated focus on central Saint Louis. See the Wiki entry on <strong>Geoprocessing</strong> for further information.</p></li>
+<li><p>While the layer does not cover the entirety of the Saint Louis region, it extends beyond Saint Louis in the north. Utilize the <img alt="" src="../../_images/mAlgorithmClip.png" /> <code class="docutils literal notranslate"><span class="pre">Clip</span></code> tool to clip the flood extent layer to the Saint Louis region (Hint: as input use Saint Louis flood extent, use Saint_louis_region as the overlay) for a more concentrated focus on central Saint Louis. See the Wiki entry on <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html">Geoprocessing</a> for further information.</p></li>
 <li><p>Save the selection as <code class="docutils literal notranslate"><span class="pre">Saint_Louis_flood_clipped</span></code>.</p></li>
 </ul>
 </li>
@@ -683,7 +683,7 @@ document.write(`
 <ol class="arabic simple" start="8">
 <li><p>Which healthsites are located close to flooded zones?</p>
 <ul class="simple">
-<li><p>Create a <img alt="" src="../../_images/mAlgorithmBuffer.png" /> buffer around the healthsites in Saint Louis with a distance of <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">meters</span></code>. See the Wiki entry on <strong>Geoprocessing</strong> for further information.</p></li>
+<li><p>Create a <img alt="" src="../../_images/mAlgorithmBuffer.png" /> buffer around the healthsites in Saint Louis with a distance of <code class="docutils literal notranslate"><span class="pre">20</span> <span class="pre">meters</span></code>. See the Wiki entry on <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html">Geoprocessing</a> for further information.</p></li>
 <li><p>Make use of the <img alt="" src="../../_images/mAlgorithmSelectLocation.png" /> <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">by</span> <span class="pre">location</span></code> tool to assess which buffers intersect with the flooded areas.</p></li>
 <li><p>How many healthsites are selected? Check the attribute table. The selection should include five pharmacies and one hospital.</p></li>
 <li><p>Feel free to experiment with additional buffer distances.</p></li>
@@ -692,7 +692,7 @@ document.write(`
 </ol>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>Latest at this stage, you will be reminded to reproject your layers. Meaningful buffers can only be calculated in projected coordinate systems. The projected coordinate system for Senegal is <code class="docutils literal notranslate"><span class="pre">EPSG:32628</span> <span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">UTM</span> <span class="pre">zone</span> <span class="pre">28N</span></code></p>
+<p>At this stage at the latest, you will be reminded to reproject your layers. Meaningful buffers can only be calculated in projected coordinate systems. The projected coordinate system for Senegal is <code class="docutils literal notranslate"><span class="pre">EPSG:32628</span> <span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">UTM</span> <span class="pre">zone</span> <span class="pre">28N</span></code></p>
 </div>
 <figure class="align-default" id="buffer">
 <a class="reference internal image-reference" href="../../_images/en_ex2_buffer.PNG"><img alt="../../_images/en_ex2_buffer.PNG" src="../../_images/en_ex2_buffer.PNG" style="width: 60%;" /></a>
