@@ -562,6 +562,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#openrouteservice-qgis-plugin">OpenRouteService QGIS Plugin</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-plugin">Install the Plugin</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-up-and-setup">Sign up and setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-the-plugin">Configure the plugin</a></li>
 </ul>
 </li>
 </ul>
@@ -582,7 +583,7 @@ document.write(`
 <section id="install-the-plugin">
 <h3>Install the Plugin<a class="headerlink" href="#install-the-plugin" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Go under tab “Plugins”</p></li>
+<li><p>Go under tab <code class="docutils literal notranslate"><span class="pre">Plugins</span></code></p></li>
 </ul>
 <figure class="align-center" id="basic-classification">
 <a class="reference internal image-reference" href="../../_images/qgis_plugins.png"><img alt="../../_images/qgis_plugins.png" src="../../_images/qgis_plugins.png" style="width: 700px;" /></a>
@@ -591,8 +592,8 @@ document.write(`
 </figcaption>
 </figure>
 <ul class="simple">
-<li><p>Click on ” Manage and install plugins”, a new window will open up</p></li>
-<li><p>Search for “ORS Tools” in search line and click “Install plugin” (right bottom)</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">install</span> <span class="pre">plugins</span></code>, a new window will open up</p></li>
+<li><p>Search for “ORS Tools” in search line and click <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">plugin</span></code> (right bottom)</p></li>
 </ul>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/install_ors.png"><img alt="../../_images/install_ors.png" src="../../_images/install_ors.png" style="width: 700px;" /></a>
@@ -611,8 +612,8 @@ document.write(`
 </figcaption>
 </figure>
 <ul class="simple">
-<li><p>Open the “ORS tools” plugin</p></li>
-<li><p>To make use of the ORS tools, you first need to sign up. Therefore click “Sign    Up”</p></li>
+<li><p>Open the “ORS tools” plugin - click on the ORS Tolls icon in the toolbar <img src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/icon_ORS_tools_plugin.png" alt="Icon" width="20" height="20"></p></li>
+<li><p>To make use of the ORS tools, you first need to sign up. Therefore click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">Up</span></code></p></li>
 </ul>
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/signup_ORS.png"><img alt="../../_images/signup_ORS.png" src="../../_images/signup_ORS.png" style="width: 700px;" /></a>
@@ -648,6 +649,15 @@ document.write(`
 </figure>
 <ul class="simple">
 <li><p>Click on the token, it will directly be copied. You can now go back into QGIS     for further setup</p></li>
+</ul>
+</section>
+<section id="configure-the-plugin">
+<h3>Configure the plugin<a class="headerlink" href="#configure-the-plugin" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>In QGIS and go to <code class="docutils literal notranslate"><span class="pre">Provider</span> <span class="pre">Settings</span></code> in the ORS Tools window by clicking the settings icon (right next to „Provider field“)</p></li>
+<li><p>Add the API key you just created into the „API Key“ field</p></li>
+<li><p>Add URL: <a class="reference external" href="https://api.openrouteservice.org">https://api.openrouteservice.org</a> into the Base URL field</p></li>
+<li><p>(Potentially: Click <code class="docutils literal notranslate"><span class="pre">Add</span></code> and enter „openrouteservice“ into the pop up window „Enter a name for the provider“)</p></li>
 </ul>
 <figure class="align-center" id="id6">
 <a class="reference internal image-reference" href="../../_images/modul9_add_api.png"><img alt="../../_images/modul9_add_api.png" src="../../_images/modul9_add_api.png" style="width: 350px;" /></a>
@@ -726,6 +736,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#openrouteservice-qgis-plugin">OpenRouteService QGIS Plugin</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-plugin">Install the Plugin</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-up-and-setup">Sign up and setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-the-plugin">Configure the plugin</a></li>
 </ul>
 </li>
 </ul>
