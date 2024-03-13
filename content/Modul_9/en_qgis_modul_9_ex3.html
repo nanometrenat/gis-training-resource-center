@@ -574,7 +574,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="task-3-larger-scale-accessibility-analyses">
 <h1>Task 3: Larger scale accessibility analyses<a class="headerlink" href="#task-3-larger-scale-accessibility-analyses" title="Permalink to this heading">#</a></h1>
-<p>There are two main approaches on accessibility analyses: network and cost raster based. In this task we will use both methods on the example of the country Rwanda. For the network based approach we will use the isochrone API of the openrouteservice to generate catchment areas for 5, 10 and 60 minute ranges. The cost raster approach will be conducted with the saga tool <strong>Accumulated Cost</strong> which is already part of the QGIS tools through the SAGA provider.</p>
+<p>There are two main approaches on accessibility analyses: network and cost raster based. In this task we will use both methods on the example of the country Rwanda. For the network based approach we will use the isochrone API of the openrouteservice to generate catchment areas for 5, 10 and 60 minute ranges. The cost raster approach will be conducted with the saga tool <code class="docutils literal notranslate"><span class="pre">Accumulated</span> <span class="pre">Cost</span></code> which is already part of the QGIS tools through the SAGA provider.</p>
 <p>Use the following files:</p>
 <ul class="simple">
 <li><p>rwa.gpkg</p></li>
@@ -585,7 +585,7 @@ document.write(`
 <section id="step-1-network-isochrones">
 <h2>STEP 1: Network - Isochrones<a class="headerlink" href="#step-1-network-isochrones" title="Permalink to this heading">#</a></h2>
 <p>We start with the isochrones gain. This time for a whole country - Rwanda. Use the layer <code class="docutils literal notranslate"><span class="pre">rwa_healthcare</span></code> as input point layer and 5, 10 and 60 minutes as ranges.</p>
-<p>Open the <strong>Processing Toolbox</strong> and scroll down to <strong>ORS Tools</strong> choose <strong>Isochrones</strong> and <strong>Isochrones from layer</strong>.
+<p>Click in the toolbar on the ORS Tools plugin Icon. Click on <code class="docutils literal notranslate"><span class="pre">Batch</span> <span class="pre">Jobs</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Isochrones</span> <span class="pre">from</span> <span class="pre">Layer</span></code>.
 Leave all settings at default except:</p>
 <table class="table">
 <thead>
@@ -617,7 +617,7 @@ Watch here:<div class="sd-summary-down docutils">
 </details></section>
 <section id="step-2-raster-accumulated-cost-requires-saga">
 <h2>STEP 2: Raster - accumulated cost (Requires SAGA)<a class="headerlink" href="#step-2-raster-accumulated-cost-requires-saga" title="Permalink to this heading">#</a></h2>
-<p>Open the <strong>Processing Toolbox</strong> and scroll down to <strong>SAGA</strong> choose <strong>Raster Analysis</strong> and then <strong>Accumulated Cost</strong>.
+<p>Open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code> and scroll down to <code class="docutils literal notranslate"><span class="pre">SAGA</span></code> choose <code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">Analysis</span></code> and then <code class="docutils literal notranslate"><span class="pre">Accumulated</span> <span class="pre">Cost</span></code> or enter “Accumulated Cost” in the search bar.
 Leave all settings at default except:</p>
 <table class="table">
 <thead>
@@ -646,7 +646,7 @@ Watch here:<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/modul_9_task3_2.mp4"></video></p>
 </div>
-</details><p>Select the <strong>Accumulated Cost</strong> output layer and open the <strong>Layer styling panel (F7)</strong> choose <strong>Singleband Pseudocolor</strong>. Adjust the range from a minimum of 0 to a maximum of 60 minutes. Overlay the isochrone output layer. Compare the different catchment areas. Add an OpenStreetMap background layer to better understand the differences. May consider dissolving <strong>(Vector Geometry &gt;&gt; Dissolve)</strong> the isochrone output layer by range value, to get a more clear outline of intersecting ranges in areas with multiple healthcare facilities.
+</details><p>Select the <code class="docutils literal notranslate"><span class="pre">Accumulated</span> <span class="pre">Cost</span></code> output layer and open the <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">styling</span> <span class="pre">panel</span> <span class="pre">(F7)</span></code> choose <code class="docutils literal notranslate"><span class="pre">Singleband</span> <span class="pre">Pseudocolor</span></code>. Adjust the range from a minimum of 0 to a maximum of 60 minutes. Overlay the isochrone output layer. Compare the different catchment areas. Add an OpenStreetMap background layer to better understand the differences. May consider dissolving <strong>(Vector Geometry &gt;&gt; Dissolve)</strong> the isochrone output layer by range value, to get a more clear outline of intersecting ranges in areas with multiple healthcare facilities.
 Take a look at the Attribute table of the Isochrone output layer. One of the attributes bears information on the population living within the boundary of the isochrone. The population estimates are based on the Global Human Settlement Layer project.</p>
 <div class="admonition-question admonition">
 <p class="admonition-title">Question</p>
@@ -654,7 +654,6 @@ Take a look at the Attribute table of the Isochrone output layer. One of the att
 How would you describe the differences?
 What are the advantages/disadvantages of the raster versus the network approach?</p>
 </div>
-<p><a class="reference external" href="https://docs.qgis.org/3.34/en/docs/user_manual/processing_algs/qgis/networkanalysis.html?highlight=network">https://docs.qgis.org/3.34/en/docs/user_manual/processing_algs/qgis/networkanalysis.html?highlight=network</a></p>
 </section>
 </section>
 
