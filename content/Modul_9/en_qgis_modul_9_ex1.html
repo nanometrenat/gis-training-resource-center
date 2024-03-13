@@ -582,8 +582,8 @@ document.write(`
 </ul>
 <section id="step-1-catchments-with-openrouteservice-isochrones">
 <h2>STEP 1: Catchments with openrouteservice isochrones<a class="headerlink" href="#step-1-catchments-with-openrouteservice-isochrones" title="Permalink to this heading">#</a></h2>
-<p>Make sure you installed the ORS Tools plugin and set it up already with an API Key. If not, consult Openrouteservice &amp; QGIS Plugin before proceeding.</p>
-<p>Open the <strong>Processing Toolbox</strong> and scroll down to <strong>ORS Tools</strong> choose <strong>Isochrones</strong> and <strong>Isochrones from layer</strong>.
+<p>Make sure you installed the ORS Tools plugin and set it up already with an API Key. If not follow these steps: [<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_9/en_qgis_openrouteservice_tools.html">https://giscience.github.io/gis-training-resource-center/content/Modul_9/en_qgis_openrouteservice_tools.html</a>]</p>
+<p>Click in the toolbar on the ORS Tools plugin Icon. Click on <code class="docutils literal notranslate"><span class="pre">Batch</span> <span class="pre">Jobs</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Isochrones</span> <span class="pre">from</span> <span class="pre">Layer</span></code>.
 Leave all settings at default except:</p>
 <table class="table">
 <thead>
@@ -621,7 +621,7 @@ Watch here:<div class="sd-summary-down docutils">
 <p>How is the coverage with water point catchments within camp 18? Any underserved areas?</p>
 </div>
 <p>We proceed to find out how many water point options are there for each building given the 500m constraint. Basically we add a count aggregation of isochrones that intersect with each building.</p>
-<p>Open the <strong>Processing Toolbox</strong> and scroll down to <strong>Vector general</strong> choose <strong>Join attributes by location (summary)</strong>.
+<p>Open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code> and scroll down to <code class="docutils literal notranslate"><span class="pre">Vector</span> <span class="pre">general</span></code> choose <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">attributes</span> <span class="pre">by</span> <span class="pre">location</span> <span class="pre">(summary)</span></code> or enter “Join attributes by location (summary)” in the search bar.
 Leave all settings at default except:</p>
 <table class="table">
 <thead>
@@ -663,7 +663,7 @@ Watch here:<div class="sd-summary-down docutils">
 </section>
 <section id="step-2-catchments-for-operational-facilities">
 <h2>STEP 2: Catchments for operational facilities<a class="headerlink" href="#step-2-catchments-for-operational-facilities" title="Permalink to this heading">#</a></h2>
-<p>Look into the attributes of the waterpoints layer. Filter for all waterpoints that are operational (<code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Attribute</span></code>). Redo the analysis for operational waterpoints only.</p>
+<p>Look into the attributes of the waterpoints layer. Filter for all waterpoints that are operational (search for <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Attribute</span></code>). Redo the analysis for operational waterpoints only.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Watch here:<div class="sd-summary-down docutils">
@@ -682,7 +682,7 @@ What are the differences in the min/max number of waterpoints available to the b
 <section id="step-3-waterpoint-catchment-by-closest-euclidean-distance">
 <h2>STEP 3: Waterpoint catchment by closest euclidean distance<a class="headerlink" href="#step-3-waterpoint-catchment-by-closest-euclidean-distance" title="Permalink to this heading">#</a></h2>
 <p>There are other means to generate catchment areas, implemented in QGIS. In the next part we will use the hub distance to calculate the euclidean distance between every building and its closest waterpoint.</p>
-<p>Open the <strong>Processing Toolbox</strong>, choose <strong>Vector Analysis</strong>,then choose <strong>Distance to nearest hub (points)</strong> [docs.qgis]
+<p>Open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code>, choose <code class="docutils literal notranslate"><span class="pre">Vector</span> <span class="pre">Analysis</span></code>,then choose <code class="docutils literal notranslate"><span class="pre">Distance</span> <span class="pre">to</span> <span class="pre">nearest</span> <span class="pre">hub</span> <span class="pre">(points)</span></code>or enter “Distance to nearest hub (points)” in the search bar..
 Leave all settings at default except:</p>
 <table class="table">
 <thead>
@@ -727,7 +727,7 @@ Watch here:<div class="sd-summary-down docutils">
 <section id="step-4-hub-distance-based-catchments">
 <h2>STEP 4: Hub distance based catchments<a class="headerlink" href="#step-4-hub-distance-based-catchments" title="Permalink to this heading">#</a></h2>
 <p>All buildings are assigned to their closest waterpoint. With the minimum bounding geometry tool in QGIS we can use this grouping information to create areas from.</p>
-<p>Open the <strong>Processing Toolbox</strong>, choose <strong>Vector Analysis</strong>,then choose <strong>Minimum Bounding Geometry</strong> [docs.qgis]
+<p>Open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code>, choose <code class="docutils literal notranslate"><span class="pre">Vector</span> <span class="pre">Analysis</span></code>,then choose <code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">Bounding</span> <span class="pre">Geometry</span></code>or enter “Minimum Bounding Geometry” in the search bar.
 Leave all settings at default except:</p>
 <table class="table">
 <thead>
