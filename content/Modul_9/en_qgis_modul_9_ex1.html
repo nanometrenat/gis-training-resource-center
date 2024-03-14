@@ -594,11 +594,11 @@ Leave all settings at default except:</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Input Point Layer</p></td>
-<td><p>waterpoints</p></td>
-</tr>
-<tr class="row-odd"><td><p>Travel mode</p></td>
+<tr class="row-even"><td><p>Travel mode</p></td>
 <td><p>foot-walking</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input Point Layer</p></td>
+<td><p>waterpoints</p></td>
 </tr>
 <tr class="row-even"><td><p>Dimension</p></td>
 <td><p>distance</p></td>
@@ -617,7 +617,7 @@ Watch here:<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/modul_9_task1_1.mp4"></video></p>
 </div>
-</details><p>The result layer shows for every waterpoint a 500m catchment area for pedestrian travel mode. 500m is the maximum distance from any household to the water point according to <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">Sphere</span> <span class="pre">Handbook:</span> <span class="pre">Humanitarian</span> <span class="pre">Charter</span> <span class="pre">and</span> <span class="pre">Minimum</span> <span class="pre">Standards</span> <span class="pre">in</span> <span class="pre">Humanitarian</span> <span class="pre">Response</span></code> p. 106. There are other key indicators like maximum number of people using the facility, queuing time, etc. We will work on the distance as we miss further information like the flow rate per water point or the household size per building.</p>
+</details><p>The result layer shows for every waterpoint a 500 meter catchment area for pedestrian travel mode. 500 meter is the maximum distance from any household to the water point according to <a class="reference external" href="https://spherestandards.org/wp-content/uploads/Sphere-Handbook-2018-EN.pdf">The Sphere Handbook: Humanitarian Charter and Minimum Standards in Humanitarian Response</a> p. 106. There are other key indicators like maximum number of people using the facility, queuing time, etc. We will work on the distance as we miss further information like the flow rate per water point or the household size per building.</p>
 <div class="admonition-question admonition">
 <p class="admonition-title">Question</p>
 <p>How is the coverage with water point catchments within camp 18? Any underserved areas?</p>
@@ -684,7 +684,7 @@ What are the differences in the min/max number of waterpoints available to the b
 <section id="step-3-waterpoint-catchment-by-closest-euclidean-distance">
 <h2>STEP 3: Waterpoint catchment by closest euclidean distance<a class="headerlink" href="#step-3-waterpoint-catchment-by-closest-euclidean-distance" title="Permalink to this heading">#</a></h2>
 <p>There are other means to generate catchment areas, implemented in QGIS. In the next part we will use the hub distance to calculate the euclidean distance between every building and its closest waterpoint.</p>
-<p>Open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code>, choose <code class="docutils literal notranslate"><span class="pre">Vector</span> <span class="pre">Analysis</span></code>,then choose <code class="docutils literal notranslate"><span class="pre">Distance</span> <span class="pre">to</span> <span class="pre">nearest</span> <span class="pre">hub</span> <span class="pre">(points)</span></code>or enter “Distance to nearest hub (points)” in the search bar..
+<p>Open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code>, choose <code class="docutils literal notranslate"><span class="pre">Vector</span> <span class="pre">Analysis</span></code>,then choose <code class="docutils literal notranslate"><span class="pre">Distance</span> <span class="pre">to</span> <span class="pre">nearest</span> <span class="pre">hub</span> <span class="pre">(points)</span></code>or enter “Distance to nearest hub (points)” in the search bar.
 Leave all settings at default except:</p>
 <table class="table">
 <thead>
@@ -728,8 +728,8 @@ Watch here:<div class="sd-summary-down docutils">
 </section>
 <section id="step-4-hub-distance-based-catchments">
 <h2>STEP 4: Hub distance based catchments<a class="headerlink" href="#step-4-hub-distance-based-catchments" title="Permalink to this heading">#</a></h2>
-<p>All buildings are assigned to their closest waterpoint. With the minimum bounding geometry tool in QGIS we can use this grouping information to create areas from.</p>
-<p>Open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code>, choose <code class="docutils literal notranslate"><span class="pre">Vector</span> <span class="pre">Analysis</span></code>,then choose <code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">Bounding</span> <span class="pre">Geometry</span></code>or enter “Minimum Bounding Geometry” in the search bar.
+<p>All buildings are assigned to their closest waterpoint. With the minimum bounding geometry tool in QGIS we can use this grouping information to create areas.</p>
+<p>Open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code>, choose <code class="docutils literal notranslate"><span class="pre">Vector</span> <span class="pre">Analysis</span></code>, then choose <code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">Bounding</span> <span class="pre">Geometry</span></code> or enter “Minimum Bounding Geometry” in the search bar.
 Leave all settings at default except:</p>
 <table class="table">
 <thead>
