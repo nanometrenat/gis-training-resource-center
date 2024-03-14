@@ -334,6 +334,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_modul_9_ex3.html">Task 3: Larger scale accessibility analyses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_modul_9_ex4.html">Task 4: Something something capacity?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_modul_9_ex5.html">Task 5: Identifying critical road segments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="en_qgis_modul_9_ex6.html">Task 6: West Germany / Ahrtal Flood logistics</a></li>
 </ul>
 </li>
 </ul>
@@ -578,7 +579,7 @@ document.write(`
                   
   <p>🚧 This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
 <section class="tex2jax_ignore mathjax_ignore" id="plugin-openrouteservice-ors-tools">
-<h1>Plugin: Openrouteservice (ORS) tools<a class="headerlink" href="#plugin-openrouteservice-ors-tools" title="Permalink to this heading">#</a></h1>
+<span id="content-references-module9-ors-tools-plugin"></span><h1>Plugin: Openrouteservice (ORS) tools<a class="headerlink" href="#plugin-openrouteservice-ors-tools" title="Permalink to this heading">#</a></h1>
 <section id="openrouteservice-qgis-plugin">
 <h2>Openrouteservice QGIS Plugin<a class="headerlink" href="#openrouteservice-qgis-plugin" title="Permalink to this heading">#</a></h2>
 <section id="install-the-plugin">
@@ -586,40 +587,40 @@ document.write(`
 <ul class="simple">
 <li><p>Go under tab <code class="docutils literal notranslate"><span class="pre">Plugins</span></code></p></li>
 </ul>
-<figure class="align-center" id="basic-classification">
+<figure class="align-center" id="manage-install-plugins">
 <a class="reference internal image-reference" href="../../_images/qgis_plugins.png"><img alt="../../_images/qgis_plugins.png" src="../../_images/qgis_plugins.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 212 </span><span class="caption-text">Where to manage and install plugins    Source: HeiGIT</span><a class="headerlink" href="#basic-classification" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 212 </span><span class="caption-text">Where to manage and install plugins    Source: HeiGIT</span><a class="headerlink" href="#manage-install-plugins" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">install</span> <span class="pre">plugins</span></code>, a new window will open up</p></li>
 <li><p>Search for “ORS Tools” in search line and click <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">plugin</span></code> (right bottom)</p></li>
 </ul>
-<figure class="align-center" id="id1">
+<figure class="align-center" id="search-ors-tools-plugin">
 <a class="reference internal image-reference" href="../../_images/install_ors.png"><img alt="../../_images/install_ors.png" src="../../_images/install_ors.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 213 </span><span class="caption-text">How to install the ORS Tools plugin    Source: HeiGIT</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 213 </span><span class="caption-text">How to install the ORS Tools plugin    Source: HeiGIT</span><a class="headerlink" href="#search-ors-tools-plugin" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>Close the window</p></li>
 <li><p>After a few seconds the plugin should appear under “Web” tab in QGIS as “ORS Tools”</p></li>
 </ul>
-<figure class="align-center" id="id2">
+<figure class="align-center" id="locate-ors-tools-plugin-in-qgis">
 <a class="reference internal image-reference" href="../../_images/open_ORS_tools_plugin.png"><img alt="../../_images/open_ORS_tools_plugin.png" src="../../_images/open_ORS_tools_plugin.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 214 </span><span class="caption-text">Where to open the ORS Tools plugin    Source: HeiGIT</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 214 </span><span class="caption-text">Where to open the ORS Tools plugin    Source: HeiGIT</span><a class="headerlink" href="#locate-ors-tools-plugin-in-qgis" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
 <li><p>Open the “ORS tools” plugin - click on the ORS Tolls icon in the toolbar <img src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/icon_ORS_tools_plugin.png" alt="Icon" width="20" height="20"></p></li>
 <li><p>To make use of the ORS tools, you first need to sign up. Therefore click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">Up</span></code></p></li>
 </ul>
-<figure class="align-center" id="id3">
+<figure class="align-center" id="basic-classification">
 <a class="reference internal image-reference" href="../../_images/signup_ORS.png"><img alt="../../_images/signup_ORS.png" src="../../_images/signup_ORS.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 215 </span><span class="caption-text">Where to sign up for OpenRouteService    Source: HeiGIT</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 215 </span><span class="caption-text">Where to sign up for OpenRouteService    Source: HeiGIT</span><a class="headerlink" href="#basic-classification" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -628,10 +629,10 @@ document.write(`
 <ul class="simple">
 <li><p>You will be redirected to the Openrouteservice site, where you need to create     a user account</p></li>
 </ul>
-<figure class="align-center" id="id4">
+<figure class="align-center" id="sign-up-for-ors">
 <a class="reference internal image-reference" href="../../_images/sign_up_ORS.png"><img alt="../../_images/sign_up_ORS.png" src="../../_images/sign_up_ORS.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 216 </span><span class="caption-text">How to sign up for Openrouteservice    Source: HeiGIT</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 216 </span><span class="caption-text">How to sign up for Openrouteservice    Source: HeiGIT</span><a class="headerlink" href="#sign-up-for-ors" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -642,10 +643,10 @@ document.write(`
 <li><p>Choose a “Token Name” in the field to the right and “Create token”</p></li>
 <li><p>The token will directly appear above in the “key” field</p></li>
 </ul>
-<figure class="align-center" id="id5">
+<figure class="align-center" id="generate-key">
 <a class="reference internal image-reference" href="../../_images/ORS_token.png"><img alt="../../_images/ORS_token.png" src="../../_images/ORS_token.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 217 </span><span class="caption-text">How to create a token (API key)    Source: HeiGIT</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 217 </span><span class="caption-text">How to create a token (API key)    Source: HeiGIT</span><a class="headerlink" href="#generate-key" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -660,10 +661,10 @@ document.write(`
 <li><p>Add URL: <a class="reference external" href="https://api.openrouteservice.org">https://api.openrouteservice.org</a> into the Base URL field</p></li>
 <li><p>(Potentially: Click <code class="docutils literal notranslate"><span class="pre">Add</span></code> and enter „openrouteservice“ into the pop up window „Enter a name for the provider“)</p></li>
 </ul>
-<figure class="align-center" id="id6">
+<figure class="align-center" id="plugin-config">
 <a class="reference internal image-reference" href="../../_images/modul9_add_api.png"><img alt="../../_images/modul9_add_api.png" src="../../_images/modul9_add_api.png" style="width: 350px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 218 </span><span class="caption-text">Where to add API key     Source: HeiGIT</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 218 </span><span class="caption-text">Where to add API key     Source: HeiGIT</span><a class="headerlink" href="#plugin-config" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For further information: [<a class="github reference external" href="https://github.com/GIScience/orstools-qgis-plugin">GIScience/orstools-qgis-plugin</a>]</p>
