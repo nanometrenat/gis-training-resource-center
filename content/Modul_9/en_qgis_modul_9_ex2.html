@@ -578,20 +578,21 @@ document.write(`
   <p>🚧 This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
 <section class="tex2jax_ignore mathjax_ignore" id="task-2-access-healthcare-avoid-areas">
 <h1>Task 2 - Access healthcare - avoid areas<a class="headerlink" href="#task-2-access-healthcare-avoid-areas" title="Permalink to this heading">#</a></h1>
-<p>For the main area of Kutupalong Refugee Camp, we have the boundary, the path and road network, water streams and health facilities. The boundary is available on <code class="docutils literal notranslate"><span class="pre">HDX</span></code>. Healthcare facilities, the road &amp; path network, streams as well as the health facilities were extracted from <code class="docutils literal notranslate"><span class="pre">OpenStreetMap</span></code>. In this task we will compare openrouteservice isochrone and QGIS built-in service area catchments. Also we will showcase the avoid area feature in openrouteservice to account for a simple simulated flooding.</p>
+<p>For the main area of Kutupalong Refugee Camp, we have the boundary, the path and road network, water streams and health facilities. In this task we will compare openrouteservice isochrone and QGIS built-in service area catchments. Also we will showcase the avoid area feature in openrouteservice to account for a simple simulated flooding.</p>
 <p>Download all datasets <strong><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_9/Modul_9_Exercise_2_Access_healthcare_avoid_areas/Modul_9_Exercise_2.zip">here</a></strong>.
 Save the folder on your computer.
 Unzip the .zip file. The unzipped folder is structured according to the recommended folder structure for QGIS projects.
 Under “data &gt; input” you find the geopackage file <code class="docutils literal notranslate"><span class="pre">task2.gpkg</span></code> which contains the following vector layers:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">camp18_healthcare</span></code> (points): Healthcare facility locations within camp 18</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">camp18_ways</span></code> (points): Roads and paths within camp 18</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">camp18_streams</span></code> (points): Water streams within camp 18</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">camp18_boundary</span></code> (polygons): The camps legal boundary</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">camp18_healthcare</span></code> (points): Healthcare facility locations within camp 18 (from <code class="docutils literal notranslate"><span class="pre">OpenStreetMap</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">camp18_ways</span></code> (points): Roads and paths within camp 18 (from <code class="docutils literal notranslate"><span class="pre">OpenStreetMap</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">camp18_streams</span></code> (points): Water streams within camp 18 (from <code class="docutils literal notranslate"><span class="pre">OpenStreetMap</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">camp18_boundary</span></code> (polygons): The camps legal boundary (from <code class="docutils literal notranslate"><span class="pre">HDX</span></code>)</p></li>
 </ul>
 <section id="step-1-healthcare-catchment-isochrones">
 <h2>STEP 1: Healthcare catchment - Isochrones<a class="headerlink" href="#step-1-healthcare-catchment-isochrones" title="Permalink to this heading">#</a></h2>
-<p>Click in the toolbar on the ORS Tools plugin Icon. Click on <code class="docutils literal notranslate"><span class="pre">Batch</span> <span class="pre">Jobs</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Isochrones</span> <span class="pre">from</span> <span class="pre">Layer</span></code>.
+<p>First we need to reproject our layers. To do so, open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code> and search for <code class="docutils literal notranslate"><span class="pre">Reproject</span> <span class="pre">layer</span></code>. Select one of your layers as your input layer and choose <strong>WGS 84 / UTM zone 46N</strong> as your target crs. Maybe you have to click on the planet button on the right and search for it, if it is not in the list. Leave all other settings at default. Repeat the process with all your layers to reproject all of them.</p>
+<p>To get the isochrones click in the toolbar on the ORS Tools plugin Icon. Click on <code class="docutils literal notranslate"><span class="pre">Batch</span> <span class="pre">Jobs</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Isochrones</span> <span class="pre">from</span> <span class="pre">Layer</span></code>.
 Leave all settings at default except:</p>
 <table class="table">
 <thead>
@@ -600,11 +601,11 @@ Leave all settings at default except:</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Input Point layer</p></td>
-<td><p>camp_healthcare</p></td>
-</tr>
-<tr class="row-odd"><td><p>Travel mode</p></td>
+<tr class="row-even"><td><p>Travel mode</p></td>
 <td><p>foot-walking</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input Point layer</p></td>
+<td><p>camp_healthcare</p></td>
 </tr>
 <tr class="row-even"><td><p>Comma separated ranges</p></td>
 <td><p>5, 10</p></td>
@@ -624,7 +625,7 @@ Watch here:<div class="sd-summary-down docutils">
 <section id="step-2-healthcare-catchment-qgis-service-area">
 <h2>STEP 2: Healthcare catchment - QGIS Service area<a class="headerlink" href="#step-2-healthcare-catchment-qgis-service-area" title="Permalink to this heading">#</a></h2>
 <p>Isochrones in QGIS can be generated via the service area tool in combination with the minimum bounding geometry tool. Based on a road network, we define origins, a default speed, and a maximum cost.</p>
-<p>Open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code>  and scroll down to <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">Analysis</span></code>, choose <code class="docutils literal notranslate"><span class="pre">Service</span> <span class="pre">area</span> <span class="pre">(from</span> <span class="pre">layer)</span></code> or enter “Service area (from layer)” in the search bar.
+<p>Open the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code> and scroll down to <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">Analysis</span></code>, choose <code class="docutils literal notranslate"><span class="pre">Service</span> <span class="pre">area</span> <span class="pre">(from</span> <span class="pre">layer)</span></code> or enter “Service area (from layer)” in the search bar.
 Leave all settings at default except:</p>
 <table class="table">
 <thead>
@@ -636,14 +637,14 @@ Leave all settings at default except:</p>
 <tr class="row-even"><td><p>Vector layer representing network</p></td>
 <td><p>camp_ways</p></td>
 </tr>
-<tr class="row-odd"><td><p>Vector layer with start points</p></td>
+<tr class="row-odd"><td><p>Path type to calculate</p></td>
+<td><p>shortest</p></td>
+</tr>
+<tr class="row-even"><td><p>Vector layer with start points</p></td>
 <td><p>camp_healthcare</p></td>
 </tr>
-<tr class="row-even"><td><p>Path type to calculate</p></td>
-<td><p>fastest</p></td>
-</tr>
 <tr class="row-odd"><td><p>Travel cost</p></td>
-<td><p>0.15 (~9 min.)</p></td>
+<td><p>500 (meters)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Advanced Parameters</strong></p></td>
 <td><p></p></td>
@@ -656,16 +657,7 @@ Leave all settings at default except:</p>
 </tr>
 </tbody>
 </table>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-Watch here:<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/modul_9_task2_2.mp4"></video></p>
-</div>
-</details><p>QGIS on-the-fly creates a network graph from the road and path network. The graph is rather simple. All edges can be traveled in both ways, there are no weights included. Travel cost is represented by the length of a segment and the default average speed. The output is a simplification of the input road &amp; path geometry but with the attributes of the healthcare facilities. For every healthcare facility we see a multiline geometry object in the output. We can style it according to the attribute “&#64;osmId” to see which segments are assigned to which facility.</p>
+<p>QGIS on-the-fly creates a network graph from the road and path network. The graph is rather simple. All edges can be traveled in both ways, there are no weights included. Travel cost is represented by the length of a segment and the default average speed. The output is a simplification of the input road &amp; path geometry but with the attributes of the healthcare facilities. For every healthcare facility we see a multiline geometry object in the output. We can style it according to the attribute “&#64;osmId” to see which segments are assigned to which facility.</p>
 <div class="admonition-question admonition">
 <p class="admonition-title">Question</p>
 <p>Can you already spot areas that are not reachable within 10 minutes by foot within
