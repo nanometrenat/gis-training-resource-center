@@ -577,12 +577,27 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="task-3-larger-scale-accessibility-analyses">
 <h1>Task 3: Larger scale accessibility analyses<a class="headerlink" href="#task-3-larger-scale-accessibility-analyses" title="Permalink to this heading">#</a></h1>
 <p>There are two main approaches on accessibility analyses: network and cost raster based. In this task we will use both methods on the example of the country Rwanda. For the network based approach we will use the isochrone API of the openrouteservice to generate catchment areas for 5, 10 and 60 minute ranges. The cost raster approach will be conducted with the saga tool <code class="docutils literal notranslate"><span class="pre">Accumulated</span> <span class="pre">Cost</span></code> which is already part of the QGIS tools through the SAGA provider.</p>
+<p>Download all datasets <strong><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_9/Modul_9_Exercise_3_larger_scale_access_analysis/Modul_9_Exercise_3.zip">here</a></strong>.
+Save the folder on your computer.
+Unzip the .zip file. The unzipped folder is structured according to the recommended folder structure for QGIS projects.
+Under “data &gt; input” you find the following datasets:</p>
+<p><strong>Vectorlayer</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">task3.gpkg</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">rwa_healthcare</span></code> (points): Hospital locations in Rwanda (based of OpenStreetMap)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rwa_adm0_boundary</span></code> (polygons): Country boundary of Rwanda</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rwa_adm1_boundary</span></code> (polygons): Administrative boundaries for the second level of Rwanda. In Rwandas case these are called provinces</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rwa_adm2_boundary</span></code> (polygons):  Thirs level administrative boundaries of Rwanda. In Rwandas case these are called prefectures</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Rasterlayer</strong></p>
 <p>Use the following files:</p>
 <ul class="simple">
-<li><p>rwa.gpkg</p></li>
-<li><p>motorized.tif</p></li>
-<li><p>Walking.tif</p></li>
-<li><p>population.tif</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">motorized.tif</span></code> : Friction layer for motorized travel profiles</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Walking.tif</span></code> : Friction layer for walking mobility profiles</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">population.tif</span></code> : Population counts from WorldPop</p></li>
 </ul>
 <section id="step-1-network-isochrones">
 <h2>STEP 1: Network - Isochrones<a class="headerlink" href="#step-1-network-isochrones" title="Permalink to this heading">#</a></h2>

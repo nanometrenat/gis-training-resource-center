@@ -579,8 +579,15 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="task-1-assess-water-distribution-access">
 <h1>Task 1 - Assess water distribution access<a class="headerlink" href="#task-1-assess-water-distribution-access" title="Permalink to this heading">#</a></h1>
 <p>For Camp 18 in Kutupalong Refugee Camp, we have a dataset on the locations of water distribution points. Further we have data on the buildings (footprint and centroid) within camp 18. In the following task we will use the following dataset:</p>
+<p>Download all datasets <strong><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_9/Modul_9_Exercise_1_Assess_water_distribution_access/Modul_9_Exercise_1.zip">here</a></strong>.
+Save the folder on your computer.
+Unzip the .zip file. The unzipped folder is structured according to the recommended folder structure for QGIS projects.
+Under “data &gt; input” you find the geopackage file <code class="docutils literal notranslate"><span class="pre">task1.gpkg</span></code> which contains the following vector layers:</p>
 <ul class="simple">
-<li><p>Camp18.gpkg</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">camp18_waterpoints</span></code> (points): Water point locations within camp 18</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">camp18_buildings_centroid</span></code> (points): Centroids of all building objects inside camp 18</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">camp18_buildings_footprint</span></code> (polygons): Actual footprints of all buildings</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">camp18_boundary</span></code> (polygons): The camps legal boundary</p></li>
 </ul>
 <section id="step-1-catchments-with-openrouteservice-isochrones">
 <h2>STEP 1: Catchments with openrouteservice isochrones<a class="headerlink" href="#step-1-catchments-with-openrouteservice-isochrones" title="Permalink to this heading">#</a></h2>
