@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Geodata concept &#8212; GIS Resource Training Center</title>
+    <title>Introduction to geodata, layers, and projections &#8212; GIS Resource Training Center</title>
   
   
   
@@ -237,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 2- Working with Geodata</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Geodata concept</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Introduction to geodata, layers, and projections</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_geodata_concept_ex1.html">Geodata Concept Exercise 1</a></li>
 </ul>
 </li>
@@ -550,7 +550,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Geodata concept</h1>
+    <h1>Introduction to geodata, layers, and projections</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -560,6 +560,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-geodata">What is geodata?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-data">Vector data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-file-formats">Vector file formats</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data">Raster data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-formats">Raster data formats</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-concept">Layer concept</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projections">Projections</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theory">Theory</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
@@ -567,18 +579,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-vector-layer">Changing the projection of a vector layer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-raster-layer">Changing the projection of a raster layer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes-with-coordinate-reference-systems">Common mistakes with Coordinate Reference Systems</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-concept">Layer concept</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-and-raster-data">Vector and raster data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector">Vector</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-file-formats">Vector file formats</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster">Raster</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-formats">Raster data formats</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -592,18 +592,195 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="geodata-concept">
-<h1>Geodata concept<a class="headerlink" href="#geodata-concept" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-geodata-layers-and-projections">
+<h1>Introduction to geodata, layers, and projections<a class="headerlink" href="#introduction-to-geodata-layers-and-projections" title="Permalink to this heading">#</a></h1>
 <p>🚧 This training platform and the entire content is under ⚠️construction⚠️ and
 may not be shared or published! 🚧</p>
 <p><strong>🔙<a class="reference internal" href="../intro.html"><span class="doc std std-doc">Back to Homepage</span></a></strong></p>
 <p><strong>Competences:</strong></p>
+<p>In this chapter, you will learn what <strong>geodata</strong> is, and understand the difference between <strong>vector and raster data</strong>. Furthermore, this chapter explains the <strong>layer concept</strong> of GIS-software, which is fundamental to every map you will create. Finally, we will explain the basics of <strong>projections</strong>, which is the method of how we display the spherical shape of our planet onto a 2 dimensional plane.</p>
+<p><strong>Table of Content</strong></p>
+<p>1.1 __<a class="reference internal" href="#"><span class="doc std std-doc">What is geodata?</span></a>
+1.2
+1.3
+1.4
+1.5</p>
+<section id="what-is-geodata">
+<h2>What is geodata?<a class="headerlink" href="#what-is-geodata" title="Permalink to this heading">#</a></h2>
+<p>Geodata, geospatial data, or geographic data is data that has geographical information. This means that the data refers to a location, that is defined by coordinates. It is similar to other forms of data that can be represented in tables (such as Excel spreadsheets or CSV-files) but each item in the data set also holds coordinate information (see figure below).
+The power of GIS-software is that we are able to visualise and manipulate geodata in a 2D (or even 3D) space.</p>
+<figure class="align-default" id="geodata-example">
+<a class="reference internal image-reference" href="../../_images/en_geodata_example_concept.png"><img alt="../../_images/en_geodata_example_concept.png" src="../../_images/en_geodata_example_concept.png" style="width: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">A data table in Microsoft Excel with geographical information (red)</span><a class="headerlink" href="#geodata-example" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>What type of information can be stored in geodata is almost endless. It can hold information about the physical world - such as elevation data, environmental data (soils, climate, temperature, rainfall, information about weather events or natural phenomena), data about the infrastructure, buildings, transportation, etc. - or sociocultural or economic data - such as demographic data, administrative boundaries, social events, crime, etc.
+Geodata usually represents data entries as <strong>geometries</strong> on a 2D canvas. These geometries can be points, lines, rectangles, circles, or polygons and can represent various objects that exist in the physical world - such as roads, lakes, trees, etc. - or represent intangible objects - such as administrative boundaries, population numbers, health indicators, historical events, etc.</p>
+<figure class="align-default" id="geometry-geodata-example">
+<a class="reference internal image-reference" href="../../_images/en_geometry_geodata_example.png"><img alt="../../_images/en_geometry_geodata_example.png" src="../../_images/en_geometry_geodata_example.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">The data entry for Lake Sulunga is represented by the grey polygon to the left</span><a class="headerlink" href="#geometry-geodata-example" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<blockquote>
+<div><p>Insert table with examples of geodata</p>
+</div></blockquote>
+<p>There are two primary types of geographic data: <strong>vector and raster</strong>. Both types represent tangible or intangible things in the physical world, however, how they store this data is quite different. Because of this, the manipulation and representation of these two types differs dramatically. Understanding the difference between these two types, and how to work with each type on it’s own, as well as, combining both types, will be one of the main skills you will acquire when learning GIS.</p>
+<figure class="align-center" id="raster-vector-concept">
+<a class="reference internal image-reference" href="../../_images/en_vector_raster.png"><img alt="../../_images/en_vector_raster.png" src="../../_images/en_vector_raster.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Raster Vector Concept. Source: Adapted from <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Raster_vector_tikz.png">WikiMedia</a></span><a class="headerlink" href="#raster-vector-concept" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="vector-data">
+<h3>Vector data<a class="headerlink" href="#vector-data" title="Permalink to this heading">#</a></h3>
+<p>Vector data represents spatial information through geometrical shapes, such as points, lines, or polygons. Each object stores the location (as address or coordinates) and further attributes, e.g. name, ID, or any other sort of information. Which geometry is used, depends on the type of data that is represented. For example, a road will be represented by a line, a building will be represented by polygon and a tree might be represented by a point.</p>
+<!-- FIXME: this section should explain the different geometry types -->
+<figure class="align-center" id="vector-data-overview">
+<a class="reference internal image-reference" href="../../_images/en_vector_data_overview.drawio.png"><img alt="../../_images/en_vector_data_overview.drawio.png" src="../../_images/en_vector_data_overview.drawio.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Vector Data overview. Source: HeiGIT</span><a class="headerlink" href="#vector-data-overview" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
-<li><p>Projections</p></li>
-<li><p>Layer concept</p></li>
-<li><p>Vector and raster data (basic concepts)</p></li>
-<li><p>Vector file formats</p></li>
+<li><p>Pointdata usually only have one set of coordinates (x, y, and sometimes z) per data entry.</p></li>
+<li><p>Lines are constructed by connecting several points which are saved as a single data entry.</p></li>
+<li><p>Polygons are also constructed by connecting several points, but they form a closed geometry. Each geometry is then represented by a single data entry.</p></li>
 </ul>
+<section id="vector-file-formats">
+<h4>Vector file formats<a class="headerlink" href="#vector-file-formats" title="Permalink to this heading">#</a></h4>
+<p>There are several file formats for vector data. They each differ in how the geometries and attributes are stored. However, they still all only contain points, lines, or polygons. Some formats have advantages over others, while others are still used out of convention, although they are outdated.
+The following table gives a short description of commonly used vector file formats.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Filename extension</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>.shp</p></td>
+<td><p>Shapefile</p></td>
+<td><p>Old but still widely used geodata format. Can only contain one dataset. The file has to consist of at least three different files (.shp, .shx, .dbf)</p></td>
+</tr>
+<tr class="row-odd"><td><p>.gpkg</p></td>
+<td><p>GeoPackage</p></td>
+<td><p>Very versatile geodata format and the new standard for geodata. Can contain multiple datafiles (vector, raster and non-spatial data like tables)</p></td>
+</tr>
+<tr class="row-even"><td><p>.kml</p></td>
+<td><p>Keyhole Markup Language</p></td>
+<td><p>Geodata format for use with <a class="reference external" href="https://earth.google.com/web/">Google Earth</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>.gpx</p></td>
+<td><p>GPS Exchange Format</p></td>
+<td><p>Geodata format for the exchange of coordinates. For example for waypoints of tracks.</p></td>
+</tr>
+<tr class="row-even"><td><p>.geojson</p></td>
+<td><p>GeoJSON</p></td>
+<td><p>Similar to shapefiles, but stores all information in a single file.</p></td>
+</tr>
+</tbody>
+</table>
+<!-- FIXME: misleading to say GeoJSON is similar to shp - need a new definition? -->
+<figure class="align-center" id="the-main-geographical-data-formats">
+<a class="reference internal image-reference" href="../../_images/en_data_formats.png"><img alt="../../_images/en_data_formats.png" src="../../_images/en_data_formats.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">The main geographical data formats. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/4_data_geo/4_1_formats">CartONG</a></span><a class="headerlink" href="#the-main-geographical-data-formats" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="raster-data">
+<h3>Raster data<a class="headerlink" href="#raster-data" title="Permalink to this heading">#</a></h3>
+<p>Another type of geospatial data is raster data. Raster data consists of cells that are organized into a grid with rows and columns, thus forming a raster. Each cell, or pixel, contains a
+Raster data are images which contain a matrix of pixels (“raster” means “grid”
+in German). Each pixel stores a value, which might refer to elevation,
+temperature, population or land cover type. Since a raster is based on an image,
+the resolution is crucial. It defines the precision of the data and size of the
+pixels.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/en_quality_raster.png"><img alt="../../_images/en_quality_raster.png" src="../../_images/en_quality_raster.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">The main geographical data formats. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_3_vector_raster_data">CartONG</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In this picture you can see the same location, on the left as vector data,
+visualising streets and urban area, and on the right hand as raster data
+(satellite image), showing the land cover.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Vector</div>
+<figure class="align-center" id="vector">
+<a class="reference internal image-reference" href="../../_images/en_same_location_vector.png"><img alt="../../_images/en_same_location_vector.png" src="../../_images/en_same_location_vector.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Features represented with vector data. Source: British Red Cross (BRC)</span><a class="headerlink" href="#vector" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Raster</div>
+<figure class="align-center" id="raster">
+<a class="reference internal image-reference" href="../../_images/en_same_location_raster.png"><img alt="../../_images/en_same_location_raster.png" src="../../_images/en_same_location_raster.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">The same location represented as a raster image. Source: British Red Cross (BRC)</span><a class="headerlink" href="#raster" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<section id="raster-data-formats">
+<h4>Raster data formats<a class="headerlink" href="#raster-data-formats" title="Permalink to this heading">#</a></h4>
+<p>Raster data can have the following data formats:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Filename extension</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Dscription</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>.tif/.tiff/.geotiff</p></td>
+<td><p>Tag Image File Format</p></td>
+<td><p>Common raster and image data format. Does not necessarily have georeferenced data. If a .tif file is georeferenced it is referred to as GeoTIFF.</p></td>
+</tr>
+<tr class="row-odd"><td><p>.nc</p></td>
+<td><p>netCDF</p></td>
+<td><p>Standard data format for scientific data like speed or temperature. Can be be a raster file. Can contain multiple datasets</p></td>
+</tr>
+<tr class="row-even"><td><p>.asc</p></td>
+<td><p>Esri ASCII Grid files</p></td>
+<td><p>Old, simple raster file format, always with georeferenced data</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="layer-concept">
+<h2>Layer concept<a class="headerlink" href="#layer-concept" title="Permalink to this heading">#</a></h2>
+<p>Geodata represents a real-world object on a map as a feature. A feature consists
+of two types of information: the location and attributes, e. g. name or ID. Those
+informations are collected in layers. A layer can only consist of geographic
+objects of the same type. <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<!-- FIXME: We have not introduced geographic types yet -->
+<p>By adding different layers, you build your map and can combine information from
+different sources. With those you then can perform analyses or adapt the
+representation by using symbols and colors.</p>
+<figure class="align-center" id="layers-in-a-gis">
+<a class="reference internal image-reference" href="../../_images/en_layer.png"><img alt="../../_images/en_layer.png" src="../../_images/en_layer.png" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Layers in a GIS. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_1_layers">CartONG</a></span><a class="headerlink" href="#layers-in-a-gis" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 <section id="projections">
 <h2>Projections<a class="headerlink" href="#projections" title="Permalink to this heading">#</a></h2>
 <section id="theory">
@@ -617,7 +794,7 @@ methods exist. These are called <strong>coordinate reference systems (CRS)</stro
 <figure class="align-center" id="examples-for-projections-azimuthal-cylindrical-and-conic">
 <a class="reference internal image-reference" href="../../_images/en_examples_projections_IBIS.png"><img alt="../../_images/en_examples_projections_IBIS.png" src="../../_images/en_examples_projections_IBIS.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Examples for Projections. Source:(<a class="reference external" href="http://ibis.colostate.edu/webcontent/NR505/2012_Projects/Team6/GISConcepts.html">http://ibis.colostate.edu/webcontent/NR505/2012_Projects/Team6/GISConcepts.html</a>)</span><a class="headerlink" href="#examples-for-projections-azimuthal-cylindrical-and-conic" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Examples for Projections. Source:(<a class="reference external" href="http://ibis.colostate.edu/webcontent/NR505/2012_Projects/Team6/GISConcepts.html">http://ibis.colostate.edu/webcontent/NR505/2012_Projects/Team6/GISConcepts.html</a>)</span><a class="headerlink" href="#examples-for-projections-azimuthal-cylindrical-and-conic" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Every projection comes with a trade-off in shape, direction, distance and area.
@@ -634,7 +811,7 @@ to be about the same size, but in reality Africa is a lot bigger.</p>
 <figure class="align-center" id="comparison-greenland-africa">
 <a class="reference internal image-reference" href="../../_images/en_greenland_africa.png"><img alt="../../_images/en_greenland_africa.png" src="../../_images/en_greenland_africa.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 57 </span><span class="caption-text">Comparison Greenland - Africa. Source: <a class="reference external" href="https://www.thetruesize.com/#?borders=1~!MTYwODM1MTk.MzkyNDUyNg*MjY5NjM4Mzg(MTA1MjgyOTE~!CONTIGUOUS_US*MTAwMjQwNzU.MjUwMjM1MTc(MTc1)MQ~!IN*NTI2NDA1MQ.Nzg2MzQyMQ)MA~!CN*OTkyMTY5Nw.NzMxNDcwNQ(MjI1)Mg">The True Size of</a></span><a class="headerlink" href="#comparison-greenland-africa" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 66 </span><span class="caption-text">Comparison Greenland - Africa. Source: <a class="reference external" href="https://www.thetruesize.com/#?borders=1~!MTYwODM1MTk.MzkyNDUyNg*MjY5NjM4Mzg(MTA1MjgyOTE~!CONTIGUOUS_US*MTAwMjQwNzU.MjUwMjM1MTc(MTc1)MQ~!IN*NTI2NDA1MQ.Nzg2MzQyMQ)MA~!CN*OTkyMTY5Nw.NzMxNDcwNQ(MjI1)Mg">The True Size of</a></span><a class="headerlink" href="#comparison-greenland-africa" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -681,7 +858,7 @@ accurate display at the expense of more distortion at the global level.</p>
 <figure class="align-center" id="local-and-global-coordinate-reference-systems-crs">
 <a class="reference internal image-reference" href="../../_images/en_local_crs.png"><img alt="../../_images/en_local_crs.png" src="../../_images/en_local_crs.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Local and global coordinate reference systems (CRS). Source: British Red Cross (BRC)</span><a class="headerlink" href="#local-and-global-coordinate-reference-systems-crs" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Local and global coordinate reference systems (CRS). Source: British Red Cross (BRC)</span><a class="headerlink" href="#local-and-global-coordinate-reference-systems-crs" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -747,164 +924,11 @@ the file name and the location where you want to save the file.</p></li>
 <p>The website <a class="reference external" href="https://ihatecoordinatesystems.com/"><strong>I Hate Coordinate Systems!</strong></a>
 offers a “a problem-based guide of common CRS issues, root causes, and solutions”.
 Check it out in case you have any issues with CRS.</p>
-</section>
-</section>
-<section id="layer-concept">
-<h2>Layer concept<a class="headerlink" href="#layer-concept" title="Permalink to this heading">#</a></h2>
-<p>Geodata represents a real-world object on a map as a feature. A feature consists
-of two types of information: the location and attributes, e. g. name or ID. Those
-informations are collected in layers. A layer can only consist of geographic
-objects of the same type. <a class="footnote-reference brackets" href="#id5" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
-<!-- FIXME: We have not introduced geographic types yet -->
-<p>By adding different layers, you build your map and can combine information from
-different sources. With those you then can perform analyses or adapt the
-representation by using symbols and colors.</p>
-<figure class="align-center" id="layers-in-a-gis">
-<a class="reference internal image-reference" href="../../_images/en_layer.png"><img alt="../../_images/en_layer.png" src="../../_images/en_layer.png" style="width: 800px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Layers in a GIS. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_1_layers">CartONG</a></span><a class="headerlink" href="#layers-in-a-gis" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="vector-and-raster-data">
-<h2>Vector and raster data<a class="headerlink" href="#vector-and-raster-data" title="Permalink to this heading">#</a></h2>
-<p>There are two primary types of geographic data: <strong>vector and raster</strong>.</p>
-<figure class="align-center" id="raster-vector-concept">
-<a class="reference internal image-reference" href="../../_images/en_vector_raster.png"><img alt="../../_images/en_vector_raster.png" src="../../_images/en_vector_raster.png" style="width: 800px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Raster Vector Concept. Source: Adapted from <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Raster_vector_tikz.png">WikiMedia</a></span><a class="headerlink" href="#raster-vector-concept" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<section id="vector">
-<h3>Vector<a class="headerlink" href="#vector" title="Permalink to this heading">#</a></h3>
-<p>Vector data contains a shape or a geometry. By using geometry objects (points,
-lines and polygons) the real world is represented. Each object stores the location
-(as address or coordinates) and further attributes, e.g. name or ID. Which geometry
-is used, depends on the feature it represents.</p>
-<!-- FIXME: this section should explain the different geometry types -->
-<figure class="align-center" id="vector-data-overview">
-<a class="reference internal image-reference" href="../../_images/en_vector_data_overview.drawio.png"><img alt="../../_images/en_vector_data_overview.drawio.png" src="../../_images/en_vector_data_overview.drawio.png" style="width: 800px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Vector Data overview. Source: HeiGIT</span><a class="headerlink" href="#vector-data-overview" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<section id="vector-file-formats">
-<h4>Vector file formats<a class="headerlink" href="#vector-file-formats" title="Permalink to this heading">#</a></h4>
-<p>Vector data can have the following data formats:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Filename extension</p></th>
-<th class="head"><p>Name</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>.shp</p></td>
-<td><p>Shapefile</p></td>
-<td><p>Old but still widely used geodata format. Can only contain one dataset. The file has to consist of at least three different files (.shp, .shx, .dbf)</p></td>
-</tr>
-<tr class="row-odd"><td><p>.gpkg</p></td>
-<td><p>GeoPackage</p></td>
-<td><p>Very versatile geodata format and the new standard for geodata. Can contain multiple datafiles (vector, raster and non-spatial data like tables)</p></td>
-</tr>
-<tr class="row-even"><td><p>.kml</p></td>
-<td><p>Keyhole Markup Language</p></td>
-<td><p>Geodata format for use with <a class="reference external" href="https://earth.google.com/web/">Google Earth</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>.gpx</p></td>
-<td><p>GPS Exchange Format</p></td>
-<td><p>Geodata format for the exchange of coordinates. For example for waypoints of tracks.</p></td>
-</tr>
-<tr class="row-even"><td><p>.geojson</p></td>
-<td><p>GeoJSON</p></td>
-<td><p>Similar to shapefiles, but stores all information in a single file.</p></td>
-</tr>
-</tbody>
-</table>
-<!-- FIXME: misleading to say GeoJSON is similar to shp - need a new definition? -->
-<figure class="align-center" id="the-main-geographical-data-formats">
-<a class="reference internal image-reference" href="../../_images/en_data_formats.png"><img alt="../../_images/en_data_formats.png" src="../../_images/en_data_formats.png" style="width: 800px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 62 </span><span class="caption-text">The main geographical data formats. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/4_data_geo/4_1_formats">CartONG</a></span><a class="headerlink" href="#the-main-geographical-data-formats" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
-<section id="raster">
-<h3>Raster<a class="headerlink" href="#raster" title="Permalink to this heading">#</a></h3>
-<p>Raster data are images which contain a matrix of pixels (“raster” means “grid”
-in German). Each pixel stores a value, which might refer to elevation,
-temperature, population or land cover type. Since a raster is based on an image,
-the resolution is crucial. It defines the precision of the data and size of the
-pixels.</p>
-<figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../../_images/en_quality_raster.png"><img alt="../../_images/en_quality_raster.png" src="../../_images/en_quality_raster.png" style="width: 800px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 63 </span><span class="caption-text">The main geographical data formats. Source: <a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_3_vector_raster_data">CartONG</a></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>In this picture you can see the same location, on the left as vector data,
-visualising streets and urban area, and on the right hand as raster data
-(satellite image), showing the land cover.</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Vector</div>
-<figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="../../_images/en_same_location_vector.png"><img alt="../../_images/en_same_location_vector.png" src="../../_images/en_same_location_vector.png" style="width: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Features represented with vector data. Source: British Red Cross (BRC)</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold docutils">
-Raster</div>
-<figure class="align-center" id="id4">
-<a class="reference internal image-reference" href="../../_images/en_same_location_raster.png"><img alt="../../_images/en_same_location_raster.png" src="../../_images/en_same_location_raster.png" style="width: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 65 </span><span class="caption-text">The same location represented as a raster image. Source: British Red Cross (BRC)</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<section id="raster-data-formats">
-<h4>Raster data formats<a class="headerlink" href="#raster-data-formats" title="Permalink to this heading">#</a></h4>
-<p>Raster data can have the following data formats:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Filename extension</p></th>
-<th class="head"><p>Name</p></th>
-<th class="head"><p>Dscription</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>.tif/.tiff/.geotiff</p></td>
-<td><p>Tag Image File Format</p></td>
-<td><p>Common raster and image data format. Does not necessarily have georeferenced data. If a .tif file is georeferenced it is referred to as GeoTIFF.</p></td>
-</tr>
-<tr class="row-odd"><td><p>.nc</p></td>
-<td><p>netCDF</p></td>
-<td><p>Standard data format for scientific data like speed or temperature. Can be be a raster file. Can contain multiple datasets</p></td>
-</tr>
-<tr class="row-even"><td><p>.asc</p></td>
-<td><p>Esri ASCII Grid files</p></td>
-<td><p>Old, simple raster file format, always with georeferenced data</p></td>
-</tr>
-</tbody>
-</table>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="id5" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<aside class="footnote brackets" id="id3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p><a class="reference external" href="https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_1_layers">https://cartong.pages.gitlab.cartong.org/learning-corner/en/3_key_gis_concepts/3_3_key_concepts/3_3_1_layers</a></p>
 </aside>
-</section>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -974,6 +998,18 @@ Raster</div>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-geodata">What is geodata?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-data">Vector data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-file-formats">Vector file formats</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data">Raster data</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-formats">Raster data formats</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-concept">Layer concept</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#projections">Projections</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theory">Theory</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application">Application</a></li>
@@ -981,18 +1017,6 @@ Raster</div>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-vector-layer">Changing the projection of a vector layer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-the-projection-of-a-raster-layer">Changing the projection of a raster layer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes-with-coordinate-reference-systems">Common mistakes with Coordinate Reference Systems</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#layer-concept">Layer concept</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-and-raster-data">Vector and raster data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector">Vector</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-file-formats">Vector file formats</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster">Raster</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-formats">Raster data formats</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
