@@ -596,15 +596,17 @@ document.write(`
 <h1>Task 6: West Germany / Ahrtal flood logistics<a class="headerlink" href="#task-6-west-germany-ahrtal-flood-logistics" title="Permalink to this heading">#</a></h1>
 <p>While exploring the general functionality of the ORS plugin, we will specifically focus on its application in disaster-aware routing. To demonstrate its practical use, we will dive into the scenario of the devastating Ahr Valley flood that occurred in Germany in 2021. By leveraging the plugin’s capabilities, we will learn how to optimize routing decisions in the context of disaster response and recovery.</p>
 <p>By the end of this workshop, you will have gained valuable insights and practical skills in using the ORS plugin for QGIS, empowering you to make informed routing decisions and contribute to more efficient disaster management efforts. Let’s embark on this journey of exploring disaster-aware routing with the ORS plugin and QGIS!</p>
-<p>Before we start with the training, make sure to download the datasets here:</p>
-<p><a class="reference external" href="https://heibox.uni-heidelberg.de/d/6a9bcec375c64839b84f/">https://heibox.uni-heidelberg.de/d/6a9bcec375c64839b84f/</a></p>
+<p>Download all datasets <strong><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_9/Modul_9_Exercise_6_Ahrtal_flood_response_logistics/Modul_9_Exercise_6.zip">here</a></strong>.
+Save the folder on your computer.
+Unzip the .zip file. The unzipped folder is structured according to the recommended folder structure for QGIS projects.
+Under “data &gt; input” you find the following datasets:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">nuerburgring.gpkg</span></code> Point location of the disaster relief staging area or base camp during the emergency response.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">affected_places.gpkg</span></code> Communities affected by the flood in the Ahr valley represented as indvidual points.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">affected_municipalities.gpkg</span></code> Municipal boundaries affected by the flood in the Ahr valley represented as polygons.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">affected_roads_buff2m_WGS84.gpkg</span></code> Road and bridge infrastructure damaged or destroyed by the flood represented as polygons</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">physicians.gpkg</span></code> Physicians located in and close to the Ahr valley represented as points.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wpop_ahrvalley.tif</span></code> Population counts from WorldPop for the Ahr valley. Raster dataset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nuerburgring.gpkg</span></code> (points): Point location of the disaster relief staging area or base camp during the emergency response.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">affected_places.gpkg</span></code> (points): Communities affected by the flood in the Ahr valley represented as indvidual points.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">affected_municipalities.gpkg</span></code> (points): Municipal boundaries affected by the flood in the Ahr valley represented as polygons.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">affected_roads_buff2m_WGS84.gpkg</span></code> (polygons): Road and bridge infrastructure damaged or destroyed by the flood represented as polygons</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">physicians.gpkg</span></code> (points): Physicians located in and close to the Ahr valley represented as points.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wpop_ahrvalley.tif</span></code> (raster): Population counts from WorldPop for the Ahr valley. Raster dataset.</p></li>
 </ul>
 <section id="part-1-single-routes-with-ors-tools">
 <h2>PART 1 - Single routes with ORS Tools<a class="headerlink" href="#part-1-single-routes-with-ors-tools" title="Permalink to this heading">#</a></h2>
