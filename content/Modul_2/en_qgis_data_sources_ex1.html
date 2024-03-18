@@ -579,45 +579,80 @@ document.write(`
 <h1>Data Sources Exercise 1<a class="headerlink" href="#data-sources-exercise-1" title="Permalink to this heading">#</a></h1>
 <section id="aim-of-the-exercise">
 <h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
-<p>The objective of this exercise is to navigate different data sources, develop an understanding of where and how to access relevant data and what to look out for.</p>
+<p>The objective of this exercise is to navigate different data sources, develop an
+understanding of where and how to access relevant data and what to look out for.</p>
+<!-- CLARIFY: what to look out for for what? -->
 </section>
 <section id="links-to-wiki-articles">
 <h2>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h2>
 <p>will be done when Wiki is finished</p>
+<!-- FIXME: Add wiki links -->
 </section>
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
-<p>Since the exercises aim is for you to find data, there won’t be any data to download. Instead download the usual folder structure <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_2/Modul_2_Exercise_Data_sources/Modul2_data_sources_exercise.zip">here</a> and add in your data.</p>
+<p>Since the exercises aim is for you to find data, there won’t be any data to download.
+Instead download the usual folder structure <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_2/Modul_2_Exercise_Data_sources/Modul2_data_sources_exercise.zip">here</a> and add in your data as you download it.</p>
 </section>
 <section id="tasks">
 <h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h2>
 <p>We want to see how many hospitals are in Bolivia.</p>
 <ol class="arabic simple">
-<li><p>Find a data source to download the administrative boundaries and the healthsites of Bolivia.</p></li>
+<li><p>Find a data source to download the administrative boundaries and the
+health sites of Bolivia.</p></li>
 </ol>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Examplary data sources<div class="sd-summary-down docutils">
+Example data sources<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Try downloading the administrative boundaries on <a class="reference external" href="https://osm-boundaries.com">OSM Boundaries</a> and the healthsites on <a class="reference external" href="https://healthsites.io">healthsites.io</a>.</p>
+<p class="sd-card-text">Try downloading the administrative boundaries on <a class="reference external" href="https://osm-boundaries.com">OSM Boundaries</a>
+and the healthsites on <a class="reference external" href="https://healthsites.io">healthsites.io</a>.</p>
 </div>
-</details><ol class="arabic simple" start="2">
-<li><p>Download and save them as <code class="docutils literal notranslate"><span class="pre">bolivia</span></code> and <code class="docutils literal notranslate"><span class="pre">healthsides_bolivia</span></code> into the <code class="docutils literal notranslate"><span class="pre">data</span></code> - <code class="docutils literal notranslate"><span class="pre">input</span></code> folder. Only use points as healthsites.</p></li>
-<li><p>Load both files into your QGIS.</p></li>
-<li><p>Optional: You can add the OpenStreetMap base map via the browser window –&gt; XYZ Tiles.</p></li>
+</details><!-- SUGGESTION: some of the instructions below assume that these are the datasets
+   that are being used, instead of just examples. Can we just ask people to use these
+   datasets, so that the rest of the instructions make sense? -->
+<ol class="arabic simple" start="2">
+<li><p>Download and save them as <code class="docutils literal notranslate"><span class="pre">bolivia</span></code> and <code class="docutils literal notranslate"><span class="pre">healthsides_bolivia</span></code> into the
+<code class="docutils literal notranslate"><span class="pre">data\input</span></code> folder. Only use the point data from the healthsites dataset.</p></li>
+<li><p>Load both files in QGIS.</p></li>
+<li><p>Optional: You can add the OpenStreetMap base map via the browser window –&gt;
+XYZ Tiles.</p></li>
+</ol>
+<!-- CLARIFY: what is the purpose of this being an optional step? -->
+<ol class="arabic simple" start="5">
 <li><p>Get familiar with the data by opening the attribute table.</p></li>
-<li><p>Filter the healthsites for hospitals.</p></li>
+</ol>
+<!-- FIXME: this instruction could be more specific. what sorts of things should 
+   people try to understand from the attribute table? Having this exercise in the 
+   context of a scenario could help with things like this --> 
+<ol class="arabic simple" start="6">
+<li><p>Filter the health sites layer so that it only hospitals.</p></li>
 </ol>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>To filter by an expression check out this <strong><a class="reference internal" href="../Wiki/en_qgis_attribute_table_wiki.html"><span class="doc std std-doc">Wiki article on the attribute table</span></a></strong></p>
+<p>To find out how to filter by an expression see the <strong><a class="reference internal" href="../Wiki/en_qgis_attribute_table_wiki.html"><span class="doc std std-doc">attribute table</span></a></strong>
+page on the wiki.</p>
 </div>
+<!-- Should we direct people to instructions on filters rather than attribute table? -->
 <ol class="arabic simple" start="7">
-<li><p>To only view the selected features (hospitals), export only selected features and save as <code class="docutils literal notranslate"><span class="pre">hospitals_bolivia</span></code> in your <code class="docutils literal notranslate"><span class="pre">data</span></code> - <code class="docutils literal notranslate"><span class="pre">output</span></code> folder.</p></li>
-<li><p>As you can see, there are significantly less hospitals in the north and east of Bolivia.</p></li>
+<li><p>To only view the selected features (hospitals), export only selected features
+and save as <code class="docutils literal notranslate"><span class="pre">hospitals_bolivia</span></code> in your <code class="docutils literal notranslate"><span class="pre">data\output</span></code> folder.</p></li>
+</ol>
+<!-- CLARIFY: are we asking people to filter or select? it's not clear to me from
+   these instructions -->
+<ol class="arabic simple" start="8">
+<li><p>As you can see, there are significantly less hospitals in the north and east
+of Bolivia.</p></li>
+</ol>
+<!-- FIXME: if the aim of the exercise is to understand the distribution of hospitals
+   in Bolivia, this should be clear in the introduction so that people can understand
+   why they are performing the steps. 
+
+   this point no. 8 is not a step, so could be moved under the exercise steps as 
+   "Results" or "Discussion" or something --> 
+<ol class="arabic simple" start="9">
 <li><p>Save your project.</p></li>
 </ol>
 </section>
@@ -626,7 +661,7 @@ Examplary data sources<div class="sd-summary-down docutils">
 <figure class="align-default" id="en-result-data-sources-exercise">
 <a class="reference internal image-reference" href="../../_images/en_result_data_sources_exercise.png"><img alt="../../_images/en_result_data_sources_exercise.png" src="../../_images/en_result_data_sources_exercise.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 104 </span><span class="caption-text">This is how your output could look like in the end</span><a class="headerlink" href="#en-result-data-sources-exercise" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 104 </span><span class="caption-text">Your map should look like this when you have finished the exercise.</span><a class="headerlink" href="#en-result-data-sources-exercise" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

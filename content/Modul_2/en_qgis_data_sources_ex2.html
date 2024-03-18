@@ -560,10 +560,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-wiki-articles">Relevant Wiki Articles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-wiki-articles">Relevant wiki articles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-geofabrik">Task: GEOFABRIK</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-geofabrik">Task: Geofabrik</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-hot-export-tool">Task: HOT Export Tool</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-quickosm">Task: QuickOSM</a></li>
 </ul>
@@ -584,10 +584,11 @@ document.write(`
 <p><strong>🔙<a class="reference internal" href="../intro.html"><span class="doc std std-doc">Back to Homepage</span></a></strong></p>
 <section id="aim-of-the-exercise">
 <h2>Aim of the exercise:<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
-<p>This exercise aims to show multiple ways how to get OpenStreetMap(OSM) as a vector file into QGIS.</p>
+<p>This exercise aims to show multiple ways how to get OpenStreetMap(OSM) as a vector
+file into QGIS.</p>
 </section>
 <section id="relevant-wiki-articles">
-<h2>Relevant Wiki Articles<a class="headerlink" href="#relevant-wiki-articles" title="Permalink to this heading">#</a></h2>
+<h2>Relevant wiki articles<a class="headerlink" href="#relevant-wiki-articles" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></p></li>
 <li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geodata_types_wiki.html">Types of Geodata</a></p></li>
@@ -598,31 +599,55 @@ document.write(`
 </section>
 <section id="data-sources">
 <h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this heading">#</a></h2>
-<p>In this exercise, you will download all data druing the exercise.</p>
+<p>In this exercise, you will download all data during the exercise.</p>
 </section>
 <section id="task">
 <h2>Task<a class="headerlink" href="#task" title="Permalink to this heading">#</a></h2>
 <p>There are multiple ways how to get data from OpenStreetMap (OSM).</p>
+<!-- FIXME: This task needs more information. what is the user trying to achieve 
+   and why? -->
 <section id="task-geofabrik">
-<h3>Task: GEOFABRIK<a class="headerlink" href="#task-geofabrik" title="Permalink to this heading">#</a></h3>
-<p>The website GEOFABRIK offers the possibility to download the full OSM dataset for a region.</p>
+<h3>Task: Geofabrik<a class="headerlink" href="#task-geofabrik" title="Permalink to this heading">#</a></h3>
+<p>The Geofabrik website offers downloads of OSM data by region.</p>
 <ol class="arabic simple">
-<li><p>Go to <strong><a class="reference external" href="https://download.geofabrik.de/">https://download.geofabrik.de/</a></strong> and navigate to the Mauritius  dataset by clicking on <code class="docutils literal notranslate"><span class="pre">Africa</span></code> -&gt; <code class="docutils literal notranslate"> <span class="pre">Mauritius</span></code></p></li>
-<li><p>Under <strong>Commonly Used Formats</strong> select the option <code class="docutils literal notranslate"><span class="pre">mauritius-latest-free.shp.zip</span></code> and download the file. Place it somewhere on your computer where you can find it again and unzip it.</p></li>
-<li><p>Check out the content of the folder. There are many different shapefiles, each containing one kind of OSM data. The whole list of layers and what they include can be found <a class="reference external" href="https://download.geofabrik.de/osm-data-in-gis-formats-free.pdf">here</a>. As well as a short overview below.</p></li>
-<li><p>Open a new QGIS project and save it in the “project” folder of your exercise folder.</p></li>
-<li><p>Load the file “gis_osm_places_a_free_1.shp” into your QGIS. This polygon layer contains the boundaries of different features reaching from named farm to island. Take some time to explore the data by using the attribute table.</p></li>
-<li><p>(Optional) You can select all features within the layer with the “fclass” = “island” and export them as a new layer.  This will allow you to start creating a map of the islands of Mauritius.</p></li>
-<li><p>Load the file “gis_osm_buildings_a_free_1.shp” into your QGIS. This polygon layer contains all buildings mapped on the OSM for Mauritius. Take some time to explore the layer. You can add a satellite base map by using the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html#basemaps-from-quickmapservices-plugin">QuickMapService plugin</a> to check if there are unmapped buildings.</p></li>
-<li><p>Load the dataset “gis_osm_landuse_a_free_1.shp” into QGIS. Check out the dataset and use the classification function to get a better overview.</p>
+<li><p>Go to <strong><a class="reference external" href="https://download.geofabrik.de/">https://download.geofabrik.de/</a></strong> and navigate to the Mauritius<br />
+dataset by clicking on <code class="docutils literal notranslate"><span class="pre">Africa</span></code> -&gt; <code class="docutils literal notranslate"> <span class="pre">Mauritius</span></code></p></li>
+<li><p>Under <strong>Commonly Used Formats</strong> select the option <code class="docutils literal notranslate"><span class="pre">mauritius-latest-free.shp.zip</span></code>
+and download the file. Place it somewhere on your computer where you can find
+it again and unzip it.</p></li>
+<li><p>Check out the content of the folder. There are many different shapefiles,
+each containing one kind of OSM data. The whole list of layers and what they
+include can be found <a class="reference external" href="https://download.geofabrik.de/osm-data-in-gis-formats-free.pdf">here</a>.</p></li>
+<li><p>Open a new QGIS project and save it in the <code class="docutils literal notranslate"><span class="pre">project</span></code> folder of your exercise
+folder.</p></li>
+<li><p>Load the file <code class="docutils literal notranslate"><span class="pre">gis_osm_places_a_free_1.shp</span></code>. This polygon
+layer contains the boundaries of different features. Take some time to explore
+the data by using the attribute table.</p></li>
+<li><p>(Optional) You can select all features within the layer with the
+“fclass” = “island” and export them as a new layer.  This will allow you to
+start creating a map of the islands of Mauritius.</p></li>
+<li><p>Load the file <code class="docutils literal notranslate"><span class="pre">gis_osm_buildings_a_free_1.shp</span></code>. This polygon
+layer contains all buildings in Mauritius mapped on OSM. Take some time
+to explore the layer.</p></li>
+<li><p>Add a satellite base map by using the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html#basemaps-from-quickmapservices-plugin">QuickMapServices plugin</a>
+to check if there are unmapped buildings.</p></li>
+<li><p>Load the file <code class="docutils literal notranslate"><span class="pre">gis_osm_landuse_a_free_1.shp</span></code>. Check out the
+dataset and use the classification function to get a better overview.</p>
 <ul class="simple">
-<li><p>Right-click on the layer “Bgis_osm_landuse_a_free_1” in the <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Panel</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code>. A new window will open up with a vertical tab section on the left. Navigate to the <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> tab.</p></li>
-<li><p>On the top you find a dropdown menue. Open it and choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code>. Under <code class="docutils literal notranslate"><span class="pre">Value</span></code> select “fclass”.</p></li>
-<li><p>Further down the window click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  Now you should see all unique values or attributes of the selected “fclass” column.  You can adjust the colours by double-clicking on one row in the central field. Once you are done, click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the symbology window.</p></li>
+<li><p>Right-click on the layer <code class="docutils literal notranslate"><span class="pre">gis_osm_landuse_a_free_1</span></code> in the <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Panel</span></code>
+-&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code>. A new window will open up with a vertical tab section on
+the left. Navigate to the <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> tab.</p></li>
+<li><p>On the top you find a dropdown menu. Open it and choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code>.
+Under <code class="docutils literal notranslate"><span class="pre">Value</span></code> select “fclass” (short for <em>featureclass</em>).</p></li>
+<li><p>Further down the window click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  You will see all unique
+values of the “fclass” column.  You can adjust the
+colours by double-clicking on one row in the central field. Once you are
+done, click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the symbology window.</p></li>
 </ul>
 </li>
 </ol>
-<p>As you can see, GEOFABRIk is great if you want to get complete OSM datasets for whole countries or regions.</p>
+<p>As you can see, Geofabrik is great if you want to get complete OSM datasets for
+whole countries or regions.</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Advantages</p></th>
@@ -637,25 +662,43 @@ document.write(`
 <td><p>- Large file size</p></td>
 </tr>
 <tr class="row-even"><td><p>+ Clear documentation of which OSM features are contained in each shapefile</p></td>
-<td><p>- Online available as shapefile</p></td>
+<td><p>- Only available as shapefile</p></td>
 </tr>
 </tbody>
 </table>
+<!-- notes - at the start we say the data is available split by region, but here 
+   is says  it's not optimal for regional data. which? file sizes often not large -->
 </section>
 <section id="task-hot-export-tool">
 <h3>Task: HOT Export Tool<a class="headerlink" href="#task-hot-export-tool" title="Permalink to this heading">#</a></h3>
-<p>The <a class="reference external" href="https://export.hotosm.org/v3/">HumanitarianOpenStreetMapTeam (HOT) Export Tool</a> is an NGO specialising in utilizing an extending OSM for humanitarian purposes. HOT offers a browser-based tool to download OSM data with good options to specify region, time, feature type and data format.</p>
+<p>The <a class="reference external" href="https://export.hotosm.org/v3/">HOT Export Tool</a>
+is a tool for accessing OSM data offered by Humanitarian OpenStreetMap Team (HOT).
+HOT offers a browser-based tool to download OSM data with good options to specify
+region, time, feature type and data format.</p>
 <ol class="arabic simple">
-<li><p>Go to the HOT Export tool. To use the tool you need an OSM account. If you don’t have one you need to create on. Click on <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">in</span></code>. In the new window select the option to create a new account.</p></li>
-<li><p>With your OSM account you can log in directly into the HOT Export tool by clicking on <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">in</span></code>.</p></li>
-<li><p>In this example, we want to download all features of the OSM related to banking and finance on the main island of Mauritius.</p>
+<li><p>Go to the HOT Export tool. To use the tool you need an OSM account. If you
+don’t have one you need to create one. Click on <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">in</span></code>. In the new window
+select the option to create a new account.</p></li>
+<li><p>If you have an OSM account you can log in directly into the HOT Export tool by
+clicking on <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">in</span></code>.</p></li>
+<li><p>In this example, we want to download all banking and finance features from OSM
+in Mauritius.</p>
 <ol class="arabic simple">
-<li><p>Select area or location: Zoom to Mauritius on the map or use the search bar.  To mark the main island there are three options. You can draw a box, draw a polygon or upload a geoJOSN file with your boundaries. In this case, use one of the first two options to mark Mauritius.</p></li>
-<li><p>Description: Add a name like “Mauritius finical institutions” for your export and a short description of your export.</p></li>
-<li><p>Format: The HOT Export tool offers many data formats in which you can export data. In this case, go with GeoPackage only.</p></li>
-<li><p>Data: The easiest way to select the data you want to download is the Tag Tree. The YAML option offers far more flexibility although is requires more technical knowledge.
-Since we want to download the position of financial institutions go to “Financial” and select all options (ATM, Bank, Bureau de Change).</p></li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Export</span></code>. You will be forwarded to a new page. Here you have to wait until the export from OSM is finished and then you can download the file by clicking on the name of the file next to “geoPackage<code class="docutils literal notranslate"><span class="pre">.gpkg</span></code>”.</p></li>
+<li><p>Select area or location: Zoom to Mauritius on the map or use the search
+bar. To mark the main island there are three options. You can draw a box,
+draw a polygon or upload a geoJOSN file with your boundaries. In this case,
+use one of the first two options to mark Mauritius.</p></li>
+<li><p>Name and description: give your export the name “Mauritius financial
+institutions” and add a short description of your export.</p></li>
+<li><p>Format tab: The HOT Export tool offers many data formats in which you can
+export data. Select GeoPackage (<code class="docutils literal notranslate"><span class="pre">.pgkg</span></code>) and leave the other
+options unchecked.</p></li>
+<li><p>Data tab: The easiest way to select the data you want to download is the Tag
+Tree. Since we want to download financial institutions, find the “Financial”
+category and select all options (ATM, Bank, Bureau de Change).</p></li>
+<li><p>Summary tab: Click on <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Export</span></code>. You will be forwarded to a page to
+wait until the export is finished. When the processing is finished, the
+page will show a download link for your file.</p></li>
 </ol>
 </li>
 </ol>
@@ -665,18 +708,32 @@ Since we want to download the position of financial institutions go to “Financ
 <p><span class="caption-number">Fig. 105 </span><span class="caption-text">Hot Export tool download of Mauritius financial institutions. Adapted screenshot from <a class="reference external" href="https://export.hotosm.org/v3/exports/new/describe">HOT Export Tool</a></span><a class="headerlink" href="#hot-export-tool-download-of-mauritius-financial-institutions" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="4">
-<li><p>Load the new file in your QGIS.</p></li>
+<ol class="arabic" start="4">
+<li><p>Load the new file in QGIS.</p></li>
 <li><p>Arrange the layers on the map so you can see the new layer.</p></li>
-<li><p>Use the  classification function to get a better overview to get a better overview:</p>
-<ul class="simple">
-<li><p>Right-click on the layer “Mauritius_finical_institution” in the <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Panel</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code>. A new window will open up with a vertical tab section on the left. Navigate to the <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> tab.</p></li>
-<li><p>On the top you find a dropdown menue. Open it and choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code>. Under <code class="docutils literal notranslate"><span class="pre">Value</span></code> select “amnity”.</p></li>
-<li><p>Further down the window click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  Now you should see all unique values or attributes of the selected “fclass” column.  You can adjust the colours by double-clicking on one row in the central field. Once you are done, click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the symbology window.</p></li>
+<li><p>Use the classification function to get a better overview to get a better
+overview:</p>
+<ul>
+<li><p>Right-click on the layer <code class="docutils literal notranslate"><span class="pre">Mauritius_finical_institution</span></code> in the <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Panel</span></code>
+-&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code>. A new window will open up with a vertical tab section on
+the left. Navigate to the <code class="docutils literal notranslate"><span class="pre">Symbology</span></code> tab.</p></li>
+<li><p>On the top you find a dropdown menue. Open it and choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code>.
+Under <code class="docutils literal notranslate"><span class="pre">Value</span></code> select “amnity”.</p></li>
+<li><p>Further down the window click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  Now you should see all unique
+values or attributes of the selected “fclass” column.  You can adjust the
+colours by double-clicking on one row in the central field. Once you are
+done, click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the symbology window.</p>
+<!-- SUGGESTION: I don't think the symbology instructions need to be repeated 
+   if they are already provided above -->
+</li>
 </ul>
 </li>
 </ol>
-<p>As you can see, the HOT Export tool offers a good mix of flexibility and quick access to OSM data. However, there are quite some steps involved until the data is in QGIS.</p>
+<p>As you can see, the HOT Export tool offers a good mix of flexibility and quick
+access to OSM data. However, there are quite some steps involved until the data
+is in QGIS.</p>
+<!-- note: is it quick or are there lots of steps? doesn't make sense if
+   both are true! -->
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Advantages</p></th>
@@ -701,27 +758,33 @@ Since we want to download the position of financial institutions go to “Financ
 </section>
 <section id="task-quickosm">
 <h3>Task: QuickOSM<a class="headerlink" href="#task-quickosm" title="Permalink to this heading">#</a></h3>
-<p>The Quick Map service plugin allows you to load OSM data directly into QGIS. However, the plugin requires the deepest knowledge of the OSM data model, compared to the previous two options. To tailor your query based on the exact key + value you need there are two great resources. The first is the <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Main_Page">OSM Wiki</a> and especially the article <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Map_features#Commercial">Map features</a>. And the second is the website <a class="reference external" href="https://taginfo.openstreetmap.org/">taginfo</a>. Have a look at both.</p>
+<p>The QuickOSM plugin allows you to load OSM data directly into QGIS.
+However, the plugin requires the deepest knowledge of the OSM data model,
+compared to the previous two options. To tailor your query based on the exact
+key and value you need there are two great resources:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Main_Page">OSM Wiki</a>, and especially the
+<a class="reference external" href="https://wiki.openstreetmap.org/wiki/Map_features">Map features</a> article.</p></li>
+<li><p><a class="reference external" href="https://taginfo.openstreetmap.org/">Taginfo</a></p></li>
+</ol>
+<p>Have a look at both.</p>
+<!-- NOTE: this feels like info that is best dealt with outside of an exercise -->
 <ol class="arabic">
-<li><p>Install the QuickOSM plugin by clicking on the <code class="docutils literal notranslate"><span class="pre">Plugin</span></code> tab, -&gt; <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins…</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span></code> -&gt; Search for the plugin -&gt; <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Plugin</span></code></p></li>
+<li><p>Install the QuickOSM plugin by clicking on the <code class="docutils literal notranslate"><span class="pre">Plugin</span></code> tab, -&gt; <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span>&#160; <span class="pre">Install</span> <span class="pre">Plugins…</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span></code> -&gt; Search for “QuickOSM” -&gt; <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Plugin</span></code></p></li>
 <li><p>Now we want to find all health facilities on the island of Mauritius.</p>
 <ol class="arabic simple">
-<li><p>Position the island of Mauritius in a way that the island is completely visible in your map canvas.</p></li>
-<li><p>Open the QuickOSM Plugin by clicking on the <code class="docutils literal notranslate"><span class="pre">Vector</span></code> tab -&gt; <code class="docutils literal notranslate"><span class="pre">QuickOSM</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">QuickOSM</span></code></p></li>
+<li><p>Position the island of Mauritius in a way that the island is completely
+visible in your map canvas.</p></li>
+<li><p>Open the QuickOSM plugin by clicking on the <code class="docutils literal notranslate"><span class="pre">Vector</span></code> menu -&gt; <code class="docutils literal notranslate"><span class="pre">QuickOSM</span></code> -&gt;
+<code class="docutils literal notranslate"><span class="pre">QuickOSM</span></code></p></li>
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Quick</span> <span class="pre">query</span></code>.</p></li>
-<li><p>In the table create a key + value pair below. This pair will cover all hospital features within the amenity key. See here.</p>
-<ul class="simple">
-<li><p>Key 	= amenity</p></li>
-<li><p>Value 	=  hospital</p></li>
-</ul>
-</li>
-<li><p>Click on the green plus icon to add another line to the table. In this line select “OR” in the small dropdown menu on the left-hand side of the new line</p></li>
-<li><p>Create a new key + value pair blow. This pair will cover all hospitals in the Healthcare key. See here.</p>
-<ul class="simple">
-<li><p>Key 	= healthcare</p></li>
-<li><p>Value	= hospital</p></li>
-</ul>
-</li>
+<li><p>In the table, add “amentiy” as the key and “hospital” as the value. This
+query will return hospital data. See here. <!-- FIXME: is this meant 
+  to link to something? --></p></li>
+<li><p>Click on the green plus icon to add another line to the table. In this
+line select “OR” in the small dropdown menu on the left-hand side of the
+new line</p></li>
+<li><p>Add “healthcare” as a new key with “hospital” as the value.</p></li>
 <li><p>Below the table set the small dropdown menu to “Canvas Extent”</p></li>
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">query</span></code></p></li>
 </ol>
@@ -732,9 +795,15 @@ Since we want to download the position of financial institutions go to “Financ
 </figcaption>
 </figure>
 </li>
-<li><p>Check out the new layers in the layer panel. Open the attribute table of the point layer. Check the “healthcare” and “amenity” column. Which data would be missing if you would have used only one of the keys?</p></li>
-<li><p>Do the same query for La Reunion which is direct to the southwest of Mauritius. Move the island in the middle of your map canvas and click <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">query</span></code>. Does the attribute table of this new point layer look different?</p></li>
-<li><p>What if we only want hospitals with an emergency room? In this case, we would need to build a query using a combination of the operators “OR” and “AND”. Look at the image below.</p>
+<li><p>Check out the new layers in the layer panel. Open the attribute table of the
+point layer. Check the “healthcare” and “amenity” columns. Which data would be
+missing if you would have used only one of the keys?</p></li>
+<li><p>Do the same query for La Reunion which is to the southwest of Mauritius.
+Move the island in the middle of your map canvas and click <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">query</span></code>. Does
+the attribute table of this new point layer look different?</p></li>
+<li><p>What if we only want hospitals with an emergency room? In this case, we would
+need to build a query using a combination of the operators “OR” and “AND”.
+Look at the image below.</p>
 <figure class="align-center" id="quickosm-hospital-with-emergency-query">
 <a class="reference internal image-reference" href="../../_images/en_quick_OSM_hospital_emgerency_key.png"><img alt="../../_images/en_quick_OSM_hospital_emgerency_key.png" src="../../_images/en_quick_OSM_hospital_emgerency_key.png" style="width: 800px;" /></a>
 <figcaption>
@@ -742,10 +811,12 @@ Since we want to download the position of financial institutions go to “Financ
 </figcaption>
 </figure>
 </li>
-<li><ol class="arabic simple" start="7">
-<li><p>Now try to create a query that shows all accommodations like hotels on the island. To do that, use this <a class="reference external" href="https://wiki.openstreetmap.org/wiki/DE:Key:tourism">wiki page</a>. The solution can be found in the dropdown menu below.</p></li>
 </ol>
-</li>
+<!-- SUGGESTION: This exercise is already long - suggest leaving out the hotels query -->
+<ol class="arabic simple" start="6">
+<li><p>Now try to create a query that shows all accommodations like hotels on
+the island. To do that, use this <a class="reference external" href="https://wiki.openstreetmap.org/wiki/DE:Key:tourism">wiki page</a>.
+The solution can be found in the dropdown menu below.</p></li>
 </ol>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -771,13 +842,10 @@ Solution accommodation query<div class="sd-summary-down docutils">
 <tr class="row-even"><td><p>+ Query can be tailored for very specific data</p></td>
 <td><p>- Requires knowledge of OSM data model</p></td>
 </tr>
-<tr class="row-odd"><td><p>+ Data directly in QGIS</p></td>
-<td><p>- Query building can quickly become complex</p></td>
+<tr class="row-odd"><td><p>+ Data loads directly in QGIS</p></td>
+<td><p>- Building queries can quickly become complex</p></td>
 </tr>
 <tr class="row-even"><td><p>+ Query can easily be repeated</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>+ Query can easily be repeated</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -850,10 +918,10 @@ Solution accommodation query<div class="sd-summary-down docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-wiki-articles">Relevant Wiki Articles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-wiki-articles">Relevant wiki articles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task">Task</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-geofabrik">Task: GEOFABRIK</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-geofabrik">Task: Geofabrik</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-hot-export-tool">Task: HOT Export Tool</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#task-quickosm">Task: QuickOSM</a></li>
 </ul>
