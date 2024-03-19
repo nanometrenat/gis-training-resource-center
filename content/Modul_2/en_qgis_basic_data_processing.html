@@ -571,16 +571,16 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-data-via-drag-and-drop">Open vector data via drag-and-drop</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delimited-text-import">Delimited text import</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-delimited-text-layer-csv-txt">Open Delimited Text Layer (.csv, .txt)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delimited-text-import-csv-txt">Delimited text import (.csv, .txt)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-delimited-text-layer">Open Delimited Text Layer</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-import">Raster data import</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-browser-panel">The Browser-panel</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-features-and-attributes">Geo features and attributes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-attribute-table">Open the attribute table</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-attribute-table">The attribute table</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-the-attribute-table">Opening the attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-the-attribute-table">Sort the attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-in-on-a-specific-feature-via-attribute-table">Zoom in on a specific feature via attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-select-features-in-the-attribute-table">Manually select features in the attribute table</a></li>
@@ -608,9 +608,7 @@ document.write(`
 may not be shared or published! 🚧</p>
 <section class="tex2jax_ignore mathjax_ignore" id="geodata-management">
 <h1>Geodata management<a class="headerlink" href="#geodata-management" title="Permalink to this heading">#</a></h1>
-<blockquote>
-<div><p>and Geodata processing?</p>
-</div></blockquote>
+<!-- no geodata processing? fix title-->
 <p><strong>Competences:</strong></p>
 <ul class="simple">
 <li><p>Data import</p></li>
@@ -695,19 +693,21 @@ whether they are needed in the final project.</p>
 </section>
 <section id="data-import">
 <h2>Data import<a class="headerlink" href="#data-import" title="Permalink to this heading">#</a></h2>
-<p>Before you can start creating maps in QGIS, you will need to load your data into QGIS.</p>
-<p>Depending on which file format you want to import, the process differs slightly.</p>
+<p>Before you can start creating maps in QGIS, you will need to load your data into QGIS. Depending on which file format you want to import, the process differs slightly.</p>
 <section id="vector-data-import">
 <h3>Vector data import<a class="headerlink" href="#vector-data-import" title="Permalink to this heading">#</a></h3>
 <p>Typical <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_2/en_qgis_geodata_concept.html#vector-file-formats">vector data formats</a> are Shapefile (<code class="docutils literal notranslate"><span class="pre">.shp</span></code>) and GeoPackage (<code class="docutils literal notranslate"><span class="pre">.gpkg</span></code>).
 The process of importing vector data in either of the two formats is the same.</p>
+<p>QGIS offers a few ways to load vector data into QGIS. The most immediate is via drag-and-drop, where you simply
+drag the data files you want to add to your QGIS project from your file browser into the QGIS window. Another
+method is via the “<strong>Data Source Manager</strong>” (<code class="docutils literal notranslate"><span class="pre">Layer</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">Manager</span></code>). You can also open the Data Source
+Manager with the keyboard-shortcut <code class="docutils literal notranslate"><span class="pre">CTRL</span> <span class="pre">+</span> <span class="pre">L</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>GeoPackage files can contain multiple datasets and even whole QGIS projects.
 When you load a GeoPackage in QGIS, a window will appear where you can select
 the datasets you want to load.</p>
 </div>
-<p>QGIS offers a few ways to load vector data into QGIS. The most immediate is via drag-and-drop, where you simply drag the data files you want to add to your QGIS project from your file browser into the QGIS window. Another method is via the “<strong>Data Source Manager</strong>” (<code class="docutils literal notranslate"><span class="pre">Layer</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">Manager</span></code>). You can also open the Data Source Manager with the keyboard-shortcut <code class="docutils literal notranslate"><span class="pre">CTRL</span> <span class="pre">+</span> <span class="pre">L</span></code>.</p>
 <section id="open-vector-data-via-the-data-source-manager">
 <h4>Open vector data via the Data Source Manager<a class="headerlink" href="#open-vector-data-via-the-data-source-manager" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
@@ -745,11 +745,11 @@ Video: Importing vector data via drag-and-drop<div class="sd-summary-down docuti
 </div>
 </details></section>
 </section>
-<section id="delimited-text-import">
-<h3>Delimited text import<a class="headerlink" href="#delimited-text-import" title="Permalink to this heading">#</a></h3>
-<p>In your GIS-career, you will come across geodata in the  format of delimited text files, such as <code class="docutils literal notranslate"><span class="pre">.csv</span></code>-files (Comma-Separated-Values). These files contain tabular data, which can be opened by programs such as Microsoft Excel. They contain geographical or positional information as point coordinates in separated columns (for example, latitude and longitue, or x- and y-coordinates), or as “Well-known-text” (WKT), which represents geometries.</p>
-<section id="open-delimited-text-layer-csv-txt">
-<h4>Open Delimited Text Layer (.csv, .txt)<a class="headerlink" href="#open-delimited-text-layer-csv-txt" title="Permalink to this heading">#</a></h4>
+<section id="delimited-text-import-csv-txt">
+<h3>Delimited text import (.csv, .txt)<a class="headerlink" href="#delimited-text-import-csv-txt" title="Permalink to this heading">#</a></h3>
+<p>In your GIS-career, you will come across geodata in the  format of delimited text files, such as <code class="docutils literal notranslate"><span class="pre">.csv</span></code>-files (Comma-Separated-Values). These files contain tabular data, which can be opened by programs such as Microsoft Excel. They contain geographical or positional information as point coordinates in separated columns (for example, latitude and longitue, or x- and y-coordinates), or as “Well-known-text” (WKT), which represents complex geometries, such as polygons or lines.</p>
+<section id="open-delimited-text-layer">
+<h4>Open Delimited Text Layer<a class="headerlink" href="#open-delimited-text-layer" title="Permalink to this heading">#</a></h4>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To load data from spreadheets such as Comma Separated Value (<code class="docutils literal notranslate"><span class="pre">.csv</span></code>) or
@@ -841,8 +841,8 @@ Video: Open raster data via drag-and-drop<div class="sd-summary-down docutils">
 <!-- ADD: Browser Panel workflow-->
 </section>
 </section>
-<section id="geo-features-and-attributes">
-<h2>Geo features and attributes<a class="headerlink" href="#geo-features-and-attributes" title="Permalink to this heading">#</a></h2>
+<section id="the-attribute-table">
+<h2>The attribute table<a class="headerlink" href="#the-attribute-table" title="Permalink to this heading">#</a></h2>
 <p>Each vector layer consists of geometric features (points, lines or polygons) and
 an <strong>attribute table</strong>. The attribute table contains information on each feature
 in the layer. The information is stored in rows and columns in the attribute table.
@@ -855,8 +855,8 @@ filter, edit and select data.</p>
 <p><span class="caption-number">Fig. 81 </span><span class="caption-text">Vector Data overview. Source: HeiGIT</span><a class="headerlink" href="#vector-data-overview" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<section id="open-the-attribute-table">
-<h3>Open the attribute table<a class="headerlink" href="#open-the-attribute-table" title="Permalink to this heading">#</a></h3>
+<section id="opening-the-attribute-table">
+<h3>Opening the attribute table<a class="headerlink" href="#opening-the-attribute-table" title="Permalink to this heading">#</a></h3>
 <p>Having a look into the attribute table is essential to understand and get an overview of the
 data you are working with. You can open the attribute table in two ways.</p>
 <ol class="arabic simple">
@@ -1020,8 +1020,7 @@ Buttons of Attribute Table<div class="sd-summary-down docutils">
 </tbody>
 </table>
 </div>
-</details><!-- CLARIFY: What types of things can people get an overview of? -->
-<!-- ADD: WHat will be the most important of these. EN-->
+</details><!-- ADD: WHat will be the most important of these. Needs more explanation. EN-->
 </section>
 <section id="sort-the-attribute-table">
 <h3>Sort the attribute table<a class="headerlink" href="#sort-the-attribute-table" title="Permalink to this heading">#</a></h3>
@@ -1058,18 +1057,24 @@ indicates whether it is sorted in ascending or descending order.</p>
 </tr>
 </tbody>
 </table>
-<!-- FIXME: these images can be cropped to just show the important part -->
 </section>
 <section id="zoom-in-on-a-specific-feature-via-attribute-table">
 <h3>Zoom in on a specific feature via attribute table<a class="headerlink" href="#zoom-in-on-a-specific-feature-via-attribute-table" title="Permalink to this heading">#</a></h3>
-<p>It can be useful to zoom into an</p>
-<!-- ADD: Explain why this is useful -->
-<ul class="simple">
-<li><p><strong>Zoom:</strong> Right click on your feature –&gt; <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">To</span> <span class="pre">Feature</span></code></p></li>
-</ul>
-<!-- CLARIFY: Click on a cell rather than the row ID --> 
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom_to_feature.mp4"></video></p>
-</section>
+<p>You can zoom in on a specific feature if you need to locate it geographically or you want to get a closer look:</p>
+<ol class="arabic simple">
+<li><p><strong>Zoom:</strong> Right click on a feature –&gt; <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">To</span> <span class="pre">Feature</span></code></p></li>
+<li><p>Close your attribute table. The map canvas will now show the selected feature.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Zoom in on a feature<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom_to_feature.mp4"></video></p>
+</div>
+</details></section>
 <section id="manually-select-features-in-the-attribute-table">
 <h3>Manually select features in the attribute table<a class="headerlink" href="#manually-select-features-in-the-attribute-table" title="Permalink to this heading">#</a></h3>
 <p>To interact with features in a layer you have to select these features. One way
@@ -1082,8 +1087,16 @@ the dropdown menu and select <code class="docutils literal notranslate"><span cl
 features click on <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">all</span> <span class="pre">features</span></code>.</p></li>
 <li><p><strong>Only show unselected features</strong> Select features and click on <img alt="" src="../../_images/mActionInvertSelection.png" /></p></li>
 </ul>
-<p><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_select.mp4"></video></p>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Manually select features in the attribute table<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_select.mp4"></video></p>
+</div>
+</details></section>
 <section id="zoom-to-selected-area">
 <h3>Zoom to selected area<a class="headerlink" href="#zoom-to-selected-area" title="Permalink to this heading">#</a></h3>
 <p>Now that you know how to select features, you can zoom onto your area of
@@ -1125,10 +1138,10 @@ page on the wiki.</p>
 </section>
 <section id="basemaps">
 <h2>Basemaps<a class="headerlink" href="#basemaps" title="Permalink to this heading">#</a></h2>
-<!-- CLARIFY: This section could be rewritten more clearly -->
-<p>Basemaps are background maps. They are often very practical since they are easy
-to use, allow easy orientation on the map canvas and are diverse. QGIS offers
-OpenStreetMap and some other base maps by default.</p>
+<!-- CLARIFY: This section could be rewritten more clearly; 
+EN: Added a bit more context -->
+<p>Basemaps are background maps that help you visualise the geographic area you are working on. They are very practical since they are easy to use, allow easy orientation on the map canvas. QGIS offers
+OpenStreetMap and some other base maps by default, such as OpenStreetMap or MapZen Global Terrain.</p>
 <p>However, there is a wide range of base maps that can be used via extra plugins
 or XYZ Tiles.</p>
 <p>Here we give you an overview of ways to access base maps in QGIS.</p>
@@ -1152,13 +1165,11 @@ clicking on the arrow next to it and select OpenStreetMap</p></li>
 <section id="quickmapservices">
 <h3>QuickMapServices<a class="headerlink" href="#quickmapservices" title="Permalink to this heading">#</a></h3>
 <p>There are lots of plugins available for QGIS that provide additional tools not
-available in a standard installation. The [plugins page] on the wiki has more</p>
-<!-- FIXME: add link -->
-<p>information.
+available in a standard installation. The <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_plugins_wiki.html">plugins page</a> on the wiki provides a more detailed example
+information.
 One useful plugin is <a class="reference external" href="https://nextgis.com/blog/quickmapservices/">QuickMapServices</a>.
 This plugin lets you access a wide range of basemaps that are not available in
-QGIS by default.</p>
-<!-- CLARIFY: give examples -->
+QGIS by default, such as Bing or Sentinel-2 satellite imagery.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Installation of plugins<div class="sd-summary-down docutils">
@@ -1168,9 +1179,9 @@ Installation of plugins<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">To install a plugin <code class="docutils literal notranslate"><span class="pre">Plugins</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins…</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span></code> -&gt;
 Search for the plugin -&gt; <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Plugin</span></code></p>
-<!-- CLARIFY -->
 <!-- FIXME: Plugin installation should be its own section, not nested under 
-   QuickMapServices -->
+   QuickMapServices 
+ -->
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_plugins.mp4"></video></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1179,20 +1190,36 @@ plugin name doesn’t (e.g. When looking for QuickMapServices, searching “Quic
 will not return results but “quickmap” will). You can use an asterisk (<code class="docutils literal notranslate"><span class="pre">*</span></code>) as a
 wildcard in searches (so “quick*map” will return results with or without a space
 between “quick” and “map”).</p>
+</div>
 <p class="sd-card-text">If you still cannot find an extension, you may need to allow experimental
 extensions in the options (see below).</p>
 </div>
-<!-- FIXME: "see below" - no content given below -->
+</details><p>To add a Basemap from the QuickMapServices Plugin:</p>
+<ol class="arabic simple">
+<li><p>In the main menu in the top bar of your screen, navigate to <code class="docutils literal notranslate"><span class="pre">Web</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">QuickMapServices</span></code></p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Search</span> <span class="pre">QMS</span></code>. A new panel will open, most likely at the bottom right.</p></li>
+<li><p>Here, you can search for a basemap of your choice. For example, Bing Aerial, different versions of OpenStreetMap, Sentinel-2 satellite imagery.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">Tip</span><span class="p">}</span>
+<span class="n">A</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">basemaps</span> <span class="ow">and</span> <span class="n">useful</span> <span class="n">search</span> <span class="n">queries</span> <span class="k">for</span> <span class="n">the</span> <span class="n">QMS</span><span class="o">-</span><span class="n">plugin</span> <span class="n">can</span> <span class="n">be</span> <span class="n">found</span> <span class="n">on</span> <span class="p">[</span><span class="n">this</span> <span class="n">website</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">qms</span><span class="o">.</span><span class="n">nextgis</span><span class="o">.</span><span class="n">com</span><span class="p">)</span><span class="o">.</span> <span class="n">This</span> <span class="n">link</span> <span class="n">can</span> <span class="n">also</span> <span class="n">be</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">the</span> <span class="s2">&quot;About&quot;</span> <span class="n">section</span> <span class="n">of</span> <span class="n">the</span> <span class="n">QMS</span><span class="o">-</span><span class="n">plugin</span>
+</pre></div>
 </div>
-</details><p><code class="docutils literal notranslate"><span class="pre">Web</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">QuickMapServices</span></code> -&gt; select provider e.g. NASA -&gt; select basemap</p>
-<!-- CLARIFY - make these instructions easier to follow. What are we doing and why? -->
-<p><strong>Functionality of QuickMapServices Plugin</strong>
-<video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/add_basemap_quickmapservice.mp4"></video></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Functionality of the QuickMapServices Plugin__<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/add_basemap_quickmapservice.mp4"></video></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There can be problems when printing some basemaps from the QuickMapServices!</p>
+<p class="sd-card-text">When you are using QuickMapServices, be aware that some of these maps are under copyright laws, that restrict the reproduction of these maps. Be aware of these restrictions by looking up the copyright licences for the basemaps you are using. In general, satellite imagery is not free to use.</p>
 </div>
-<!-- CLARIFY: What are the problems? Are there any fixes for them? --></section>
+<!-- CLARIFY: What are the problems? Are there any fixes for them? DONE
+EN: Is my understanding correct? -->
+</div>
+</details></section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -1272,16 +1299,16 @@ extensions in the options (see below).</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-vector-data-via-drag-and-drop">Open vector data via drag-and-drop</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delimited-text-import">Delimited text import</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-delimited-text-layer-csv-txt">Open Delimited Text Layer (.csv, .txt)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delimited-text-import-csv-txt">Delimited text import (.csv, .txt)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#open-delimited-text-layer">Open Delimited Text Layer</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-import">Raster data import</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-browser-panel">The Browser-panel</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geo-features-and-attributes">Geo features and attributes</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-attribute-table">Open the attribute table</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-attribute-table">The attribute table</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-the-attribute-table">Opening the attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-the-attribute-table">Sort the attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-in-on-a-specific-feature-via-attribute-table">Zoom in on a specific feature via attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-select-features-in-the-attribute-table">Manually select features in the attribute table</a></li>
