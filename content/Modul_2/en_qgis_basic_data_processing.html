@@ -189,6 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_basic_data_processing_ex1.html">Basic Geodata processing Exercise 1</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_attribute_table.html">Attribute Table</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="en_data_sources.html">Data sources</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_data_sources_ex1.html">Data Sources Exercise 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="en_qgis_data_sources_ex2.html">Exercise: OpenStreetMap data export</a></li>
@@ -583,6 +584,15 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-attribute-table">The attribute table</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-the-attribute-table">Opening the attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-the-attribute-table">Sort the attribute table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-in-on-a-specific-feature-via-attribute-table">Zoom in on a specific feature via attribute table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-select-features-in-the-attribute-table">Manually select features in the attribute table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-to-selected-area">Zoom to selected area</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-only-selected-features-as-a-new-file">Save only selected features as a new file</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemaps">Basemaps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-qgis-basemaps">Standard QGIS Basemaps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickmapservices">QuickMapServices</a></li>
 </ul>
 </li>
 </ul>
@@ -1047,7 +1057,11 @@ indicates whether it is sorted in ascending or descending order.</p>
 </div>
 </div>
 </div>
-<p class="rubric">Zoom in on a specific feature via attribute table</p>
+</div>
+</div>
+</section>
+<section id="zoom-in-on-a-specific-feature-via-attribute-table">
+<h3>Zoom in on a specific feature via attribute table<a class="headerlink" href="#zoom-in-on-a-specific-feature-via-attribute-table" title="Permalink to this heading">#</a></h3>
 <p>You can zoom in on a specific feature if you need to locate it geographically or you want to get a closer look:</p>
 <ol class="arabic simple">
 <li><p><strong>Zoom:</strong> Right click on a feature –&gt; <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">To</span> <span class="pre">Feature</span></code></p></li>
@@ -1062,7 +1076,9 @@ Video: Zoom in on a feature<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_zoom_to_feature.mp4"></video></p>
 </div>
-</details><p class="rubric">Manually select features in the attribute table</p>
+</details></section>
+<section id="manually-select-features-in-the-attribute-table">
+<h3>Manually select features in the attribute table<a class="headerlink" href="#manually-select-features-in-the-attribute-table" title="Permalink to this heading">#</a></h3>
 <p>To interact with features in a layer you have to select these features. One way
 to select features is via the attribute table.</p>
 <ul class="simple">
@@ -1082,7 +1098,9 @@ Video: Manually select features in the attribute table<div class="sd-summary-dow
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><video width="100%" controls muted src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_attribute_table_select.mp4"></video></p>
 </div>
-</details><p class="rubric">Zoom to selected area</p>
+</details></section>
+<section id="zoom-to-selected-area">
+<h3>Zoom to selected area<a class="headerlink" href="#zoom-to-selected-area" title="Permalink to this heading">#</a></h3>
 <p>Now that you know how to select features, you can zoom onto your area of
 interest. To do so you can click on the symbol on the toolbar or right click
 on the layer and select <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Selection</span></code></p>
@@ -1098,7 +1116,9 @@ on the layer and select <code class="docutils literal notranslate"><span class="
 <p><span class="caption-number">Fig. 38 </span><span class="caption-text">Screenshot of how to zoom to Selection by clicking right.</span><a class="headerlink" href="#zoom-to-selection-right-click" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p class="rubric">Save only selected features as a new file</p>
+</section>
+<section id="save-only-selected-features-as-a-new-file">
+<h3>Save only selected features as a new file<a class="headerlink" href="#save-only-selected-features-as-a-new-file" title="Permalink to this heading">#</a></h3>
 <p>After you have selected your data, you might want to proceed with only the
 selection. You can save your selection as new layer. To do so right click on the
 layer - <code class="docutils literal notranslate"><span class="pre">Export</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">only</span> <span class="pre">selected</span> <span class="pre">features</span></code></p>
@@ -1116,7 +1136,10 @@ page on the wiki.</p>
 <p><span class="caption-number">Fig. 39 </span><span class="caption-text">Screenshot of how to save only selected features.</span><a class="headerlink" href="#save-selection-right-click" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p class="rubric">Basemaps</p>
+</section>
+</section>
+<section id="basemaps">
+<h2>Basemaps<a class="headerlink" href="#basemaps" title="Permalink to this heading">#</a></h2>
 <!-- CLARIFY: This section could be rewritten more clearly; 
 EN: Added a bit more context. Is this enough? -->
 <p>Basemaps are background maps that help you visualise the geographic area you are working on. They are very practical since they are easy to use, allow easy orientation on the map canvas. QGIS offers
@@ -1124,7 +1147,8 @@ OpenStreetMap and some other base maps by default, such as OpenStreetMap or MapZ
 <p>However, there is a wide range of base maps that can be used via extra plugins
 or XYZ Tiles.</p>
 <p>The following section will provide an overview on how to access and add basemaps to your QGIS-project.</p>
-<p class="rubric">Standard QGIS Basemaps</p>
+<section id="standard-qgis-basemaps">
+<h3>Standard QGIS Basemaps<a class="headerlink" href="#standard-qgis-basemaps" title="Permalink to this heading">#</a></h3>
 <p>You can always add the standard OpenStreetMap as a basemap to your map canvas.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1139,7 +1163,9 @@ clicking on the arrow next to it and select OpenStreetMap</p></li>
 <li><p>In the <code class="docutils literal notranslate"><span class="pre">Layer</span></code> menu -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">XYZ</span> <span class="pre">layer...</span></code> -&gt; Select OpenStreetMap</p></li>
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Add_basemap_OSM.mp4"></video></p>
-<p class="rubric">QuickMapServices</p>
+</section>
+<section id="quickmapservices">
+<h3>QuickMapServices<a class="headerlink" href="#quickmapservices" title="Permalink to this heading">#</a></h3>
 <p>There are lots of plugins available for QGIS that provide additional tools not
 available in a standard installation. The <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_plugins_wiki.html">plugins page</a> on the wiki provides a more detailed example
 information.
@@ -1195,9 +1221,7 @@ Video: Functionality of the QuickMapServices Plugin__<div class="sd-summary-down
 <!-- CLARIFY: What are the problems? Are there any fixes for them? DONE
 EN: Is my understanding correct? -->
 </div>
-</details></div>
-</div>
-</section>
+</details></section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -1288,6 +1312,15 @@ EN: Is my understanding correct? -->
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-attribute-table">The attribute table</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-the-attribute-table">Opening the attribute table</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sort-the-attribute-table">Sort the attribute table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-in-on-a-specific-feature-via-attribute-table">Zoom in on a specific feature via attribute table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manually-select-features-in-the-attribute-table">Manually select features in the attribute table</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-to-selected-area">Zoom to selected area</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-only-selected-features-as-a-new-file">Save only selected features as a new file</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basemaps">Basemaps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-qgis-basemaps">Standard QGIS Basemaps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quickmapservices">QuickMapServices</a></li>
 </ul>
 </li>
 </ul>
