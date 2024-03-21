@@ -359,6 +359,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_how_to_training.html">How to do trainings?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_training_plans.html">Basic QGIS Training: Full training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_how_to_teach_GIS.html">How to teach GIS</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
@@ -563,10 +564,12 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-wiki-articles">Links to Wiki articles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result">Result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-wiki-articles">Relevant wiki articles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result">Result</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -586,18 +589,22 @@ document.write(`
 understanding of where and how to access relevant data and what to look out for.</p>
 <!-- CLARIFY: what to look out for for what? -->
 </section>
-<section id="links-to-wiki-articles">
-<h2>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h2>
-<p>will be done when Wiki is finished</p>
-<!-- FIXME: Add wiki links -->
-</section>
+<section id="relevant-wiki-articles">
+<h2>Relevant wiki articles<a class="headerlink" href="#relevant-wiki-articles" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geodata_types_wiki.html">Types of Geodata</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html">Layer Concept</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_graduated_wiki.html">Geodata Classification- Graduated</a></p></li>
+</ul>
 <section id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<h3>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h3>
 <p>Since the exercises aim is for you to find data, there won’t be any data to download.
 Instead download the usual folder structure <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_2/Modul_2_Exercise_Data_sources/Modul2_data_sources_exercise.zip">here</a> and add in your data as you download it.</p>
 </section>
 <section id="tasks">
-<h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h2>
+<h3>Tasks<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h3>
 <p>We want to see how many hospitals are in Bolivia.</p>
 <ol class="arabic simple">
 <li><p>Find a data source to download the administrative boundaries and the
@@ -660,13 +667,14 @@ of Bolivia.</p></li>
 </ol>
 </section>
 <section id="result">
-<h2>Result<a class="headerlink" href="#result" title="Permalink to this heading">#</a></h2>
+<h3>Result<a class="headerlink" href="#result" title="Permalink to this heading">#</a></h3>
 <figure class="align-default" id="en-result-data-sources-exercise">
 <a class="reference internal image-reference" href="../../_images/en_result_data_sources_exercise.png"><img alt="../../_images/en_result_data_sources_exercise.png" src="../../_images/en_result_data_sources_exercise.png" style="width: 80%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 49 </span><span class="caption-text">Your map should look like this when you have finished the exercise.</span><a class="headerlink" href="#en-result-data-sources-exercise" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+</section>
 </section>
 </section>
 
@@ -734,10 +742,12 @@ of Bolivia.</p></li>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-wiki-articles">Links to Wiki articles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#result">Result</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-wiki-articles">Relevant wiki articles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result">Result</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
