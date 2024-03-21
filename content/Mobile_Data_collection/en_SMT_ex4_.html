@@ -562,7 +562,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#characteristics-of-the-exercise">Characteristics of the exercise</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-the-trainers">Instructions for the trainers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-information">Important information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-introduction-for-participants">Step-by step introduction for participants</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-a-exploration-basic-visualization-of-sketch-map-tool-outputs-in-qgis">Exercise A: Exploration &amp; basic visualization of Sketch Map Tool outputs in QGIS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-basic-visualization-of-sketch-map-tool-outputs-in-umap">Exercise B: Basic visualization of Sketch Map Tool outputs in UMAP</a></li>
 </ul>
@@ -627,8 +627,9 @@ document.write(`
 <p class="rubric">Available Data</p>
 <ul class="simple">
 <li><p class="sd-card-text">Download the data for this exercise <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Sketch_Map_Tool_Exercise_4.zip">here</a> and unzip the folder</p></li>
-<li><p class="sd-card-text">In the data subfolder (<code class="docutils literal notranslate"><span class="pre">\data\input</span></code>), you will find the data you need to start the exercise.</p></li>
-<li><p class="sd-card-text">Download the <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Factsheet_printing_%20Ex_4.pdf">Printable exercise factsheet</a></p></li>
+<li><p class="sd-card-text">In the data subfolder (<code class="docutils literal notranslate"><span class="pre">\data\input</span></code>), you will find the data you need to start the exercise (created raw map &amp; pre-marked and photographed map). You will also find de geodata of the results (<code class="docutils literal notranslate"><span class="pre">\data\output</span></code>) and the intermediate result(<code class="docutils literal notranslate"><span class="pre">\data\temp</span></code>).</p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Factsheet_printing_%20Ex_4.pdf">Printable exercise factsheet</a>
+-<span class="xref myst">Introduction Slides</span> about the Sketch Map Tool</p></li>
 </ul>
 </div>
 </div>
@@ -644,39 +645,33 @@ document.write(`
 <h2>Instructions for the trainers<a class="headerlink" href="#instructions-for-the-trainers" title="Permalink to this heading">#</a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Trainers Corner<div class="sd-summary-down docutils">
+<strong>Trainers Corner</strong><div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="rubric">Preparation</p>
+<p class="rubric">Prepare the training</p>
 <ul class="simple">
 <li><p class="sd-card-text">Online access and devices (PC)</p></li>
 <li><p class="sd-card-text">QGIS installed on the computer</p></li>
 <li><p class="sd-card-text">Take a look and make yourself familiar on the provided material for the exercise and the Sketch Map Tool in general.</p></li>
+<li><p class="sd-card-text">Check out <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Trainers_corner/en_how_to_training.html#how-to-do-trainings">How to do trainings?</a> for some general tips on training conduction</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
-<li><p class="sd-card-text">If you like to skip parts of the workflow, make sure you have alternative material (like preprinted, or already marked Sketch maps) prepared.</p></li>
+<li><p class="sd-card-text">If you like to skip parts of the workflow, you can use the available geodata or intermediate results.</p></li>
 <li><p class="sd-card-text">If you would like to adapt this exercise to your specific use case, create your own case-description.</p></li>
 </ul>
 </div>
-<p class="rubric">Available Material</p>
-<ul class="simple">
-<li><p class="sd-card-text"><span class="xref myst">Introduction Slides</span> about the Sketch Map Tool</p></li>
-<li><p class="sd-card-text">Just the created map for (pre-printing)</p></li>
-<li><p class="sd-card-text">Pre-marked and photographed map</p></li>
-<li><p class="sd-card-text">Geodata of the results</p></li>
-</ul>
-<p class="rubric">During the exercise:</p>
-<p class="rubric">Introduction:</p>
+<p class="rubric">Conduct the training:</p>
+<p class="sd-card-text"><strong>Introduction:</strong></p>
 <ul class="simple">
 <li><p class="sd-card-text">Introduce the idea, the aim and the general workflow of the Skech Map Tool beforehand</p></li>
 <li><p class="sd-card-text">Provide access to the needed material</p></li>
 <li><p class="sd-card-text">check-in if there are questions or problems.</p></li>
 </ul>
-<p class="rubric">Wrap up:</p>
+<p class="sd-card-text"><strong>Wrap up:</strong></p>
 <ul class="simple">
 <li><p class="sd-card-text">Take some time at the end to wrap up and that several people present their result map</p></li>
 <li><p class="sd-card-text">Discuss Benefits of showing results as a map</p></li>
@@ -684,22 +679,22 @@ Trainers Corner<div class="sd-summary-down docutils">
 </ul>
 </div>
 </details></section>
-<section id="important-information">
-<h2>Important information<a class="headerlink" href="#important-information" title="Permalink to this heading">#</a></h2>
-<p><strong>You can choose wether you want to do the exercise with QGIS (Exercise A) or with uMAP (Exercise B) (or both)</strong>. An internet connection is required to work with uMAP.</p>
+<section id="step-by-step-introduction-for-participants">
+<h2>Step-by step introduction for participants<a class="headerlink" href="#step-by-step-introduction-for-participants" title="Permalink to this heading">#</a></h2>
+<p><strong>You can choose whether you want to do the exercise with QGIS (Exercise A) or with uMAP (Exercise B) (or both)</strong>. An internet connection is required to work with uMAP.</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
 <div class="sd-card-body docutils">
-<p class="sd-card-text"><strong>Click here to start exercise A</strong></p>
+<p class="sd-card-text"><strong>Click here to start exercise A (QGIS)</strong></p>
 </div>
 <a class="sd-stretched-link reference external" href="https://giscience.github.io/gis-training-resource-center/content/Mobile_Data_collection/en_SMT_ex4_.html#exercise-a-exploration-basic-visualization-of-sketch-map-tool-outputs-in-qgis"></a></div>
 </div>
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
 <div class="sd-card-body docutils">
-<p class="sd-card-text"><strong>Click here to start exercise B</strong></p>
+<p class="sd-card-text"><strong>Click here to start exercise B (uMAP)</strong></p>
 </div>
 <a class="sd-stretched-link reference external" href="https://giscience.github.io/gis-training-resource-center/content/Mobile_Data_collection/en_SMT_ex4_.html#exercise-b-basic-visualization-of-sketch-map-tool-outputs-in-umap"></a></div>
 </div>
@@ -1145,7 +1140,7 @@ You also have the option to download your layers as data files, a full backup of
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#characteristics-of-the-exercise">Characteristics of the exercise</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions-for-the-trainers">Instructions for the trainers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#important-information">Important information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-introduction-for-participants">Step-by step introduction for participants</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-a-exploration-basic-visualization-of-sketch-map-tool-outputs-in-qgis">Exercise A: Exploration &amp; basic visualization of Sketch Map Tool outputs in QGIS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-b-basic-visualization-of-sketch-map-tool-outputs-in-umap">Exercise B: Basic visualization of Sketch Map Tool outputs in UMAP</a></li>
 </ul>
