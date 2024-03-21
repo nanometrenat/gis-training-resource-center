@@ -628,8 +628,8 @@ document.write(`
 <ul class="simple">
 <li><p class="sd-card-text">Download the data for this exercise <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Sketch_Map_Tool_Exercise_4.zip">here</a> and unzip the folder</p></li>
 <li><p class="sd-card-text">In the data subfolder (<code class="docutils literal notranslate"><span class="pre">\data\input</span></code>), you will find the data you need to start the exercise (created raw map &amp; pre-marked and photographed map). You will also find de geodata of the results (<code class="docutils literal notranslate"><span class="pre">\data\output</span></code>) and the intermediate result(<code class="docutils literal notranslate"><span class="pre">\data\temp</span></code>).</p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Factsheet_printing_%20Ex_4.pdf">Printable exercise factsheet</a>
--<span class="xref myst">Introduction Slides</span> about the Sketch Map Tool</p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Factsheet_printing_%20Ex_4.pdf">Printable exercise factsheet</a></p></li>
+<li><p class="sd-card-text"><span class="xref myst">Introduction Slides</span> about the Sketch Map Tool</p></li>
 </ul>
 </div>
 </div>
@@ -762,9 +762,7 @@ Do your different output match or do you find any errors?</p>
 </li>
 </ol>
 <p class="rubric">5. Correct or enhance your data</p>
-<ol class="arabic simple">
-<li><p class="sd-card-text">Digitization: Add a marking manually</p></li>
-</ol>
+<p class="sd-card-text"><strong>1. Digitization: Add a marking manually</strong></p>
 <p class="sd-card-text">So what can we do if a marking has not been detected? We can add missing markings manually by tracking the drawing on the geotiff file. This process is also called <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_3/en_qgis_digitalisation.html?highlight=digitize#digitalisation">digitization</a>.</p>
 <p class="sd-card-text">Right-click on your vector file and click on <code class="docutils literal notranslate"><span class="pre">Toggle</span> <span class="pre">Editing</span></code>. The <code class="docutils literal notranslate"><span class="pre">Digitizing</span> <span class="pre">Toolbox</span></code> in your menu bar on top of your QGIS will be activated:</p>
 <figure class="align-center" id="digitizing-toolbox">
@@ -774,11 +772,8 @@ Do your different output match or do you find any errors?</p>
 </figcaption>
 </figure>
 <p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Feature:</span> <span class="pre">Capture</span> <span class="pre">Polygon</span></code><img alt="" src="../../_images/mActionCapturePolygon.png" />. You will note that your mouse market now changed its symbol into a target. This means you can now start tracing the missing polygon my left-clicking. You finish your polygon by a right-click and you will be asked to enter the descriptions. Enter the information and click ok.</p>
-<blockquote>
-<div><p class="sd-card-text">figure below missing?</p>
-</div></blockquote>
 <figure class="align-center" id="smt-attribute-table">
-<a class="reference internal image-reference" href="fig/en_SMT_ex4_dig_info.png"><img alt="fig/en_SMT_ex4_dig_info.png" src="fig/en_SMT_ex4_dig_info.png" style="height: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_SMT_ex4_dig_info.PNG"><img alt="../../_images/en_SMT_ex4_dig_info.PNG" src="../../_images/en_SMT_ex4_dig_info.PNG" style="height: 400px;" /></a>
 <figcaption>
 <p><span class="caption-text">Digitizing</span><a class="headerlink" href="#smt-attribute-table" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -791,9 +786,7 @@ Do your different output match or do you find any errors?</p>
 </figcaption>
 </figure>
 <p class="sd-card-text">The whole process of Digitization is explained in detail <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_3/en_qgis_digitalisation.html?highlight=digitize#digitalisation">here</a>.</p>
-<ol class="arabic simple" start="2">
-<li><p class="sd-card-text">Add a property/column to the Attribute Table</p></li>
-</ol>
+<p class="sd-card-text"><strong>2. Add a property/column to the Attribute Table</strong></p>
 <p class="sd-card-text">Normally, you know the meaning of the markings in your Sketch Map. We will now learn how to add them to your vector layer. In our example, we assume we know that black and blue colors were used to mark past flood extents and red was used to mark critical infrastructures. We want to replicate this:</p>
 <ul class="simple">
 <li><p class="sd-card-text">Right-click on your vector layer, navigate to <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code> and click on it.</p></li>
@@ -822,9 +815,7 @@ Do your different output match or do you find any errors?</p>
 </ul>
 <p class="rubric">6. Visualize your data</p>
 <p class="sd-card-text">Now we want to visualize our results and generate a printable map so the results can be shown to third parties in a clear and comprehensible manner. We can now delete the geotiff layer by right-click -&gt; <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">Layer</span></code> since we will be working with the vector marking detections.</p>
-<ol class="arabic simple">
-<li><p class="sd-card-text"><strong>Customize Symbology</strong></p></li>
-</ol>
+<p class="sd-card-text"><strong>1. Customize Symbology</strong></p>
 <p class="sd-card-text">We can customize the symbology of our vectory layer by right-clicking on it in the <code class="docutils literal notranslate"><span class="pre">Layers</span></code> Panel -&gt; <code class="docutils literal notranslate"><span class="pre">Properties</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Symbology</span></code>.</p>
 <p class="sd-card-text">First of all we want to assign different colors for different features:</p>
 <p class="sd-card-text">In the topmost drop-down menu, choose <code class="docutils literal notranslate"><span class="pre">Categorized</span></code>. As Value choose “Description” and then click on the bottom left on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>. We are now able to choose colors depending on the value in the column “Description”. By double-clicking on the colored box in your window next to your value and Legend descriptions the <code class="docutils literal notranslate"><span class="pre">Symbol</span> <span class="pre">Selector</span></code> will open in a new window where you can choose the color of your preference by clicking on the drop-down arrow next to “Color”.
@@ -842,8 +833,8 @@ Right below you can also ajust the opcaty level of your feature.</p>
 <p><span class="caption-text">Using the symbol selector</span><a class="headerlink" href="#smt-symbol-selector" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="2">
-<li><p class="sd-card-text"><strong>Make a printable Map</strong></p></li>
+<p class="sd-card-text"><strong>2. Make a printable Map</strong></p>
+<ol class="arabic simple">
 <li><p class="sd-card-text">Open a new print layout by clicking on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Print</span> <span class="pre">Layout</span></code> -&gt; enter the name of your current Project e.g “Ahrtal Flooding Sketch Map Tool”. A new window will open with a blank canvas and a different set of tools. This is the <strong>print layout designer</strong>.</p></li>
 </ol>
 <ul class="simple">
@@ -987,13 +978,9 @@ Unzip the .zip folder in order to be able to acess the geotiff output.</p>
 <p class="rubric">5. Customize your map</p>
 <p class="sd-card-text">Now that you imported your own data, you are ready to customize your own map in order to show your results to others in a vivid manner.
 In the toolbar on the right hand side you have various options to do so.</p>
-<ol class="arabic simple">
-<li><p class="sd-card-text">Change the background</p></li>
-</ol>
+<p class="sd-card-text"><strong>1. Change the background</strong></p>
 <p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">tilelayers</span></code><img alt="" src="../../_images/en_SMT_ex4_UMAP_basemap.PNG" /> to choose another background map.</p>
-<ol class="arabic simple" start="2">
-<li><p class="sd-card-text">Explore and Manage Data Layers</p></li>
-</ol>
+<p class="sd-card-text"><strong>2. Explore and Manage Data Layers</strong></p>
 <p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Layers</span></code><img alt="" src="../../_images/en_SMT_ex4_UMAP_layers.PNG" /> to open your layers panel. In this windows you will see all the layers in your project (in our case it is just one) and you are able to add additional information layers. The small symbols on the left hand side of you layer give you the option to hide, zoom to or delete your layer.</p>
 <figure class="align-center" id="umap-manage-layer-interface">
 <a class="reference internal image-reference" href="../../_images/en_SMT_ex4_UMAP_Managelayers.PNG"><img alt="../../_images/en_SMT_ex4_UMAP_Managelayers.PNG" src="../../_images/en_SMT_ex4_UMAP_Managelayers.PNG" style="height: 200px;" /></a>
@@ -1006,18 +993,13 @@ In the toolbar on the right hand side you have various options to do so.</p>
 <p class="admonition-title">Note</p>
 <p class="sd-card-text">Sketch Map Vector Output always have this same attribute table structure.</p>
 </div>
-<blockquote>
-<div><p class="sd-card-text">Maybe the figure below needs to be redone?</p>
-</div></blockquote>
 <figure class="align-default" id="smt-ex4-attribute-table">
-<a class="reference internal image-reference" href="../../_images/en_SMT_ex4_UMAP_AttributeTable.PNG"><img alt="../../_images/en_SMT_ex4_UMAP_AttributeTable.PNG" src="../../_images/en_SMT_ex4_UMAP_AttributeTable.PNG" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_SMT_ex4_UMAP_AttributeTable.PNG"><img alt="../../_images/en_SMT_ex4_UMAP_AttributeTable.PNG" src="../../_images/en_SMT_ex4_UMAP_AttributeTable.PNG" style="width: 1000px;" /></a>
 <figcaption>
 <p><span class="caption-text">Attribute Table in UMAP</span><a class="headerlink" href="#smt-ex4-attribute-table" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="2">
-<li><p class="sd-card-text">Customize your visualization</p></li>
-</ol>
+<p class="sd-card-text"><strong>2. Customize your visualization</strong></p>
 <p class="sd-card-text">Now we want to display the criticial infrastructure in red and the past flood extents in blue. For this we first have to create a group for each:</p>
 <ul class="simple">
 <li><p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Layers</span></code><img alt="" src="../../_images/en_SMT_ex4_UMAP_layers.PNG" /> <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layers</span></code></p></li>
