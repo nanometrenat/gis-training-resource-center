@@ -636,10 +636,10 @@ document.write(`
 <div class="sd-card-body docutils">
 <p class="rubric">Available data and resources</p>
 <ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool/PPP/Introduction_Sketch_Map_Tool_21_03.pptx">Introductory slides on the Sketch Map Tool</a></p></li>
 <li><p class="sd-card-text">Case Studies Descriptions: <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Case_Study_1.pdf">Case Study 1</a>, <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Case_Study_2.pdf">Case Study 2</a>, <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Case_Study_3.pdf">Case Study 3</a></p></li>
-<li><p class="sd-card-text">Case Studies Map Examples:</p></li>
+<li><p class="sd-card-text">Case Studies Maps:<a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Sketch_Map_Tool_Exercise_2-3/Case_1_Sudan.zip">Case Study Map 1</a>, <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Sketch_Map_Tool_Exercise_2-3/Case_2_Bolivien.zip">Case Study Map 2</a>, <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Sketch_Map_Tool_Exercise_2-3/Case_3_Port_Harcourt.zip">Case Study Map 3</a></p></li>
 <li><p class="sd-card-text"><a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/mobile_data_collection/sketch_map_tool_training/Factsheet_printing_%20Ex_3.pdf">Printable exercise factsheet</a></p></li>
-<li><p class="sd-card-text">Introduction Slides about the Sketch Map Tool</p></li>
 </ul>
 </div>
 </div>
@@ -771,28 +771,32 @@ It might seem a bit stange at first, but try to stay in your character. This can
 </section>
 <section id="optional-upload-your-created-maps">
 <h3>3. Optional: Upload your created maps<a class="headerlink" href="#optional-upload-your-created-maps" title="Permalink to this heading">#</a></h3>
-<div class="highlight-{dropdown}__Upload notranslate"><div class="highlight"><pre><span></span>Take a foto of your sketches or at least one sketch by loading them into [sketch-map-tool.heigit.org](https://sketch-map-tool.heigit.org/). On the website, choose &#39;Digitize your Sketch maps&#39; on the right. Upload all your sketches in .png or .jpg format. You can mark your sketches and simply drag and drop them into the window. 
-
-Now, let&#39;s take a look at the results in order to understand the community mapping process. We will use the [uMap website](https://umap.openstreetmap.fr/en/)
-
-
-__Load your data__ 
-
-1. Open the browser of your choice, navigate to the [uMap website](https://umap.openstreetmap.fr/en/) and click on the large green button: `Create a map`.
-2. You can load your data into the map frame by clicking on the upwards-arrow button ![](/fig/umap_upload_data_icon.png) in the toolbar on the right side of your screen. The `Import data` window will open on the right side. Click on `Select file`, navigate to the folder you downloaded from the Sketch Map Tool website and select the vector file (`.geojson`).
-4. Click on `Open`. uMap will automatically detect that the uploaded geojson-file is vector data. Click on `Import` to load your data to your map canvas.
-3. The detected markings of your sketch map should now appear in the map canvas. Take a look around by zooming in and out, or panning the map.
-
-- Compare detected markings with your physical map. Did the tool detect your markings correctly or are some markings missing? 
-- Which markings got detected better than others? What can you learn from this session in order to make better markings in the future?
-
-```{Tip}
-If you are further interested to customize your visualization in uMAP or to visulaize or even generate a printable map of your results in QGIS, have a look at [Exercise 4] where you will be guided through basic visualization in uMAP &amp; QGIS.
-```
-
-</pre></div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>Upload your created maps and visualize the results in UMAP</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Take a foto of your sketches or at least one sketch by loading them into <a class="reference external" href="https://sketch-map-tool.heigit.org/">sketch-map-tool.heigit.org</a>. On the website, choose ‘Digitize your Sketch maps’ on the right. Upload all your sketches in .png or .jpg format. You can mark your sketches and simply drag and drop them into the window.</p>
+<p class="sd-card-text">Now, let’s take a look at the results in order to understand the community mapping process. We will use the <a class="reference external" href="https://umap.openstreetmap.fr/en/">uMap website</a></p>
+<p class="sd-card-text"><strong>Load your data</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Open the browser of your choice, navigate to the <a class="reference external" href="https://umap.openstreetmap.fr/en/">uMap website</a> and click on the large green button: <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">map</span></code>.</p></li>
+<li><p class="sd-card-text">You can load your data into the map frame by clicking on the upwards-arrow button <img alt="" src="../../_images/umap_upload_data_icon.png" /> in the toolbar on the right side of your screen. The <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">data</span></code> window will open on the right side. Click on <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">file</span></code>, navigate to the folder you downloaded from the Sketch Map Tool website and select the vector file (<code class="docutils literal notranslate"><span class="pre">.geojson</span></code>).</p></li>
+<li><p class="sd-card-text">Click on <code class="docutils literal notranslate"><span class="pre">Open</span></code>. uMap will automatically detect that the uploaded geojson-file is vector data. Click on <code class="docutils literal notranslate"><span class="pre">Import</span></code> to load your data to your map canvas.</p></li>
+<li><p class="sd-card-text">The detected markings of your sketch map should now appear in the map canvas. Take a look around by zooming in and out, or panning the map.</p></li>
+</ol>
+<ul class="simple">
+<li><p class="sd-card-text">Compare detected markings with your physical map. Did the tool detect your markings correctly or are some markings missing?</p></li>
+<li><p class="sd-card-text">Which markings got detected better than others? What can you learn from this session in order to make better markings in the future?</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p class="sd-card-text">If you are further interested to customize your visualization in uMAP or to visulaize or even generate a printable map of your results in QGIS, have a look at [Exercise 4] where you will be guided through basic visualization in uMAP &amp; QGIS.</p>
 </div>
-</section>
+</div>
+</details></section>
 <section id="final-discussion-and-conclusion">
 <h3>4. Final discussion and conclusion<a class="headerlink" href="#final-discussion-and-conclusion" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
