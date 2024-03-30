@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Basic Geodata processing Exercise 1 &#8212; GIS Resource Training Center</title>
+    <title>Basic Geodata Processing Exercise 1 &#8212; GIS Resource Training Center</title>
   
   
   
@@ -186,7 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="en_qgis_basic_data_processing.html">Geodata management</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Basic Geodata processing Exercise 1</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Basic Geodata Processing Exercise 1</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_attribute_table.html">Attribute Table</a></li>
@@ -558,7 +558,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Basic Geodata processing Exercise 1</h1>
+    <h1>Basic Geodata Processing Exercise 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -585,7 +585,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-geodata-processing-exercise-1">
-<h1>Basic Geodata processing Exercise 1<a class="headerlink" href="#basic-geodata-processing-exercise-1" title="Permalink to this heading">#</a></h1>
+<h1>Basic Geodata Processing Exercise 1<a class="headerlink" href="#basic-geodata-processing-exercise-1" title="Permalink to this heading">#</a></h1>
 <section id="aim-of-the-exercise">
 <h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
 <p>The objective of this exercise is to get a feeling for geodata and start working
@@ -594,17 +594,23 @@ selection.</p>
 </section>
 <section id="links-to-wiki-articles">
 <h2>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h2>
-<p>will be done when Wiki is finished</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html">Layer Concept</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.md">Attribute Table in QGIS</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projections_wiki.html">Projections</a></p></li>
+</ul>
 <!-- FIXME: add link -->
 </section>
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
-<p>Download all datasets <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_2/Modul_2_Exercise_1_Basic_Geodata_Processing/Modul2_Basic_Geodata_Processing_exercise.zip">here</a>
-and save the folder on your computer and unzip the file. The zip folder includes:</p>
+<p>Download all datasets <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_2/Modul_2_Exercise_1_Basic_Geodata_Processing/Modul2_Basic_Geodata_Processing_exercise.zip">here</a>, save the folder on your computer and unzip the file. The zip folder includes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">nigeria_populated_places.shp</span></code> (Points) Shapefile</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nigeria_boundaries.geojson</span></code> GeoJSON</p></li>
 </ul>
+<p>The shapefile for populated places contains data on human settlements in Nigeria, including cities, villages and others. The GeoJSON file for the boundaries of Nigeria contains information on the administrative boundaries at levels 2 and 4 with level 2 representing the whole country and level 4 being the states.</p>
 <!-- CLARIFY: does it matter where to download? What do these datasets 
 	represent? -->
 </section>
@@ -614,7 +620,7 @@ and save the folder on your computer and unzip the file. The zip folder includes
 <li><p>Load both files into QGIS.</p></li>
 <li><p>Add the OpenStreetMap basemap via the browser panel –&gt;
 XYZ Tiles.</p></li>
-<li><p>Familiarise yourself with the data by opening the attribute table.</p></li>
+<li><p>To familiarise yourself with the data, open the attribute table. Determine the location of the data and the type of information it contains. Understand the different columns and the data they contain in your attribute table and try to get an overview of which columns will be relevant and important for your analysis.</p></li>
 </ol>
 <!-- CLARIFY: What sorts of things should people familiarise themselves with? -->
 <ol class="arabic simple" start="4">
@@ -627,10 +633,14 @@ the feature for <strong>Zuyel</strong>, and zoom to the selected point.</p></li>
 descending order.</p>
 </div>
 <ol class="arabic simple" start="5">
-<li><p>Export <strong>Zuyel</strong> as its own Shapefile. Check the projection and choose an
-appropriate CRS. Name it <code class="docutils literal notranslate"><span class="pre">zuyel.shp</span></code>.</p></li>
+<li><p>Export <strong>Zuyel</strong> as its own GeoPackage. Check the projection and choose an
+appropriate CRS. Name it <code class="docutils literal notranslate"><span class="pre">zuyel.gpkg</span></code>.</p></li>
 </ol>
   <!-- CHECK: We have previously recommended people use GPKG. Should we use that here? -->
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As no calculations are involved, e.g. area, WGS84 (EPSG:4326) is a good choice.</p>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 How do I know which CRS to choose?<div class="sd-summary-down docutils">
@@ -638,35 +648,19 @@ How do I know which CRS to choose?<div class="sd-summary-down docutils">
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><a class="reference external" href="http://epsg.io">EPSG.io</a> has a database you can search to find appropriate CRS
-to use for a country.</p>
+<p class="sd-card-text"><a class="reference external" href="http://epsg.io">EPSG.io</a> has a database that you can search to find the appropriate CRS
+to use for a country. More information on <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projections_wiki.html">Projections</a> can be found in the Wiki or in the corresponding section in <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_2/en_qgis_geodata_concept.html#projections">Modul 2 on Projections</a>.</p>
 </div>
-</details><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Since we don’t want to calculate anything, f. e. area, WGS84 (EPSG:4326) would
-be fine to use.</p>
-</div>
-<!-- CLARIFY: is it important to choose an appropriate CRS or should people use 
+</details><!-- CLARIFY: is it important to choose an appropriate CRS or should people use 
 	the default? Part of this section can be removed. --> 
 <ol class="arabic simple" start="6">
 <li><p>Repeat the steps for the layer <code class="docutils literal notranslate"><span class="pre">nigeria_boundaries.geojson</span></code> and only export
-the district in which <strong>Zuyel</strong> is in. Name it accordingly.</p></li>
+the district in which <strong>Zuyel</strong> is located. Name it accordingly. To find the district use the <img alt="" src="../../_images/qgis_identify_features.png" /> <code class="docutils literal notranslate"><span class="pre">Identify</span> <span class="pre">Features</span></code> tool and then manually select the correct district in the attribute table.</p></li>
 </ol>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-How do I know in which district Zuyel is in?<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">You can check by using the <code class="docutils literal notranslate"><span class="pre">identify</span> <span class="pre">features</span></code> option.
-<img alt="Check district by clicking" src="content/Modul_2/fig/modul2_ex_nigeria_district.png" />
-Afterwards you can again select manually by sorting the attribute table.</p>
-</div>
-</details><!-- FIXME: Exercises should be used to test what has been shown in a section, 
+<!-- FIXME: Exercises should be used to test what has been shown in a section, 
 	rather than introduce new functionality -->
 <ol class="arabic simple" start="7">
-<li><p>Open the attribute table for each of your new layers and check that each layer
+<li><p>Remove all the initial layers and then open the attribute table for each of your new layers and check that each layer
 only contains one feature.</p></li>
 <li><p>Save your project.</p></li>
 </ol>
