@@ -590,12 +590,18 @@ document.write(`
 <p>The objective of this exercise is to make your first steps in QGIS. Understand the user interface and get to know the layer concept.</p>
 <ul class="simple">
 <li><p>Display vector data in QGIS and view the attributes of the data</p></li>
-<li><p>Reproject the vector data (change the projection of the data)</p></li>
+<li><p>Reproject/Change the projection of the vector data</p></li>
 </ul>
 </section>
 <section id="links-to-wiki-articles">
 <h2>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h2>
-<p>will be done when Wiki is finished</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html">Layer Concept</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.md">Attribute Table in QGIS</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projections_wiki.html">Projections</a></p></li>
+</ul>
 <!-- FIXME: to be updated -->
 </section>
 <section id="data">
@@ -610,32 +616,29 @@ document.write(`
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sierra_leone_health_HOT.shp</span></code> (Points) Shapefile</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sl-airports.csv</span></code> (CSV) -modified <!-- CLARIFY: what does "modified" refer to? --></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sl-airports.csv</span></code> (CSV)</p></li>
 </ul>
+<p>The borders GeoPackage contains administrative information for Sierra Leone at both national and provincial level. Additionally, the shapefile <code class="docutils literal notranslate"><span class="pre">sierra_leone_health_HOT.shp</span></code> provides information on various health facilities within the country, while the <code class="docutils literal notranslate"><span class="pre">sl-airports.csv</span></code> CSV-file offers information on airports.</p>
+<!-- CLARIFY: what does "modified" refer to? -->
 <!-- CLARIFY: What data is being loaded here? Give a quick explanation for each 
     file -->
 </section>
 <section id="tasks">
 <h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Open QGIS and familiarise yourself with the user interface.</p></li>
-</ol>
-<!-- FIXME: this is a poorly defined task step -->
-<ol class="arabic simple" start="2">
-<li><p>Open the files you have downloaded in QGIS. Load the vector layers into the
-program. To load the CSV file, select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">delimited</span> <span class="pre">text</span></code>.</p></li>
+<li><p>Open the files you have downloaded in QGIS. To load the vector layers into QGIS, simply drag and drop the downloaded files onto the map canvas. When loading the health facilities, ensure that you select the .shp file. For the CSV file, select <code class="docutils literal notranslate"><span class="pre">Delimited</span> <span class="pre">Text</span></code>.</p></li>
 </ol>
 <!-- FIXME: We haven't shown people how to open files yet -->
 <figure class="align-default" id="delimited-text">
 <a class="reference internal image-reference" href="../../_images/en_delimited_text_screenshot.PNG"><img alt="../../_images/en_delimited_text_screenshot.PNG" src="../../_images/en_delimited_text_screenshot.PNG" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Screenshot of Data Source Manager - Delimited Text to load a CSV file</span><a class="headerlink" href="#delimited-text" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Screenshot of the Data Source Manager - Delimited Text to load a CSV file</span><a class="headerlink" href="#delimited-text" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic" start="3">
+<ol class="arabic" start="2">
 <li><p>Interact with the map and explore the datasets. Use the zoom tool and move
 the map. Take note of the status bar at the bottom of the screen and observe
-how it changes.</p>
+how it changes. Focus on the scale window and observe how it varies as you zoom in and out.</p>
 <!-- CLARIFY: What changes should people expect to see? -->
 </li>
 <li><p>Familiarise yourself with the layer window (layer list). Show and hide
@@ -647,7 +650,7 @@ a meaningful name.</p></li>
 <p>Renaming the layer does not affect the data source, such as file names or
 storage location.</p>
 </div>
-<ol class="arabic simple" start="5">
+<ol class="arabic simple" start="4">
 <li><p>Check out the attribute data of the layers by examining the attribute table.</p></li>
 <li><p>Change the projection in the map view to <code class="docutils literal notranslate"><span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">Pseudo-Mercator</span> <span class="pre">EPSG:3857</span></code>.</p></li>
 </ol>
@@ -659,27 +662,32 @@ layer. What projection is shown there?</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>You can use the search bar on the top left.</p>
+<p>To obtain information about a layer and its projections, double-click on the layer and look for the <code class="docutils literal notranslate"><span class="pre">Information</span></code> section. This section contains general details such as the file name and file path, as well as information about the Coordinate Reference System (CRS) in the respective section.</p>
 </div>
 <!-- CLARIFY: use it for what? -->
+<ol class="arabic simple" start="6">
+<li><p>Save the health facility layer in the <code class="docutils literal notranslate"><span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">Pseudo-Mercator</span> <span class="pre">EPSG:3857</span></code> projection. This will change the projection of the file. This can be done by right-clicking on the layer –&gt; <code class="docutils literal notranslate"><span class="pre">Export</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Features</span> <span class="pre">As..</span></code>. In the pop-up window, select <strong>GeoPackage as the output file format</strong> and <strong>specify the file location and name</strong> by clicking on the three small points. The file can also be given a layer name, which will be displayed when it is loaded into QGIS. Before running this process, the <strong>projection can be changed</strong> by selecting the desired CRS in the designated section. Verify the changed projection by looking at the properties of the newly created layer.</p></li>
+</ol>
+<figure class="align-default" id="export-layer">
+<a class="reference internal image-reference" href="../../_images/en_ex1_export_layer.PNG"><img alt="../../_images/en_ex1_export_layer.PNG" src="../../_images/en_ex1_export_layer.PNG" style="width: 40%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Screenshot of the Export window</span><a class="headerlink" href="#export-layer" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ol class="arabic simple" start="7">
-<li><p>Now save the health layer in the projection <code class="docutils literal notranslate"><span class="pre">WGS</span> <span class="pre">84</span> <span class="pre">/</span> <span class="pre">Pseudo-Mercator</span> <span class="pre">EPSG:3857</span></code>.
-This changes the projection of the file. Verify this by looking at the
-properties of the newly created layer.</p></li>
 <li><p>Save your project.</p></li>
 <li><p>Optional: You can add the OpenStreetMap base map via the browser window,
 under <code class="docutils literal notranslate"><span class="pre">XYZ</span> <span class="pre">Tiles</span></code>.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Online basemaps can cause display issues when combined with layers in different
-projections. It is important to remove the base map before saving the project.</p>
+<p>Combining layers in different projections with online basemaps (typically have their own projections) can lead to display issues due to CRS conflicts. When layers have a distinct CRS, they may not align correctly or appear distorted when overlaid with an online basemap. To mitigate these problems, it’s advisable to either reproject the layers to match the CRS of the basemap (which is often not applicable) or temporarily remove the basemap before saving the project. This ensures that the map is displayed accurately and avoids potential visual discrepancies caused by CRS inconsistencies.</p>
 </div>
 <!-- CLARIFY: What issues? Is there another workaround? -->
 <figure class="align-default" id="en-result-geodata-concept-exercise">
 <a class="reference internal image-reference" href="../../_images/en_result_geodata_concept_exercise.png"><img alt="../../_images/en_result_geodata_concept_exercise.png" src="../../_images/en_result_geodata_concept_exercise.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">This is how your output could look like in the end</span><a class="headerlink" href="#en-result-geodata-concept-exercise" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">This is how your output could look like in the end</span><a class="headerlink" href="#en-result-geodata-concept-exercise" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
