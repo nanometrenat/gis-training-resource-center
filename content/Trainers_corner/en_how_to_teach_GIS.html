@@ -594,17 +594,19 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="how-to-teach-gis">
 <h1>How to teach GIS<a class="headerlink" href="#how-to-teach-gis" title="Permalink to this heading">#</a></h1>
 <p>🚧This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
-<p>This article will focus on best practices for teaching GIS.</p>
-<p>Learning GIS can be challenging, especially for individuals who are new to the topic or have limited experience with technology beyond standard office systems. The concept of geodata and everything that it entails is quite removed from the things many people work on day to day in the humanitarian sector. To grasp these concepts is however essential to work effectively with GIS and solve problems. That being said, often there is not enough time to dive deep into topics like projections or algorithms. And we lean more towards practical hands-on training.</p>
-<p>That is why we must be aware of balancing practical hands-on and theory when teaching GIS.
-In the following, we will present best practices for teaching GIS according to our experiences. We will start with overarching topics. The further we progress, the further we will dive into practical things to do when teaching GIS.</p>
+<!--This article will focus on best practices for teaching GIS.
+[not needed since it's said below again]--> 
+<p>Learning GIS can be challenging, especially for individuals who are new to the topic or have limited experience with technology beyond standard office systems. The concept of geodata and everything that it entails is quite removed from the things many people work on day to day in the humanitarian sector. However, to grasp these concepts is essential to work effectively with GIS and solve problems. That being said, often there is not enough time to dive deep into topics like projections or algorithms. And we lean more through practical hands-on training than lectures about GIS theory.</p>
+<p>This is why we must be aware of balancing practical hands-on and theory when teaching GIS.
+In the following article, we will present best practices for teaching GIS according to our experiences. We will start with overarching topics <span class="xref myst">such as</span>. The further we progress, the further we will dive into practical things to do when teaching GIS.</p>
+<!--ADD: rewrite the last two sentences-->
 <section id="theory-vs-hands-on">
 <h2>Theory vs. Hands-on<a class="headerlink" href="#theory-vs-hands-on" title="Permalink to this heading">#</a></h2>
-<p>In general, we want to teach GIS in a way that people understand how they can do specific things in the easiest way possible. This means we focus on practical exercises with a real-world connection so it is easy for people to see how they can use GIS in their work. However, sometimes we need to teach things theoretically. Usually, because they are either so essential people have to understand the concept before doing anything in GIS e.g. the layer concept. Or, not knowing the concept results in errors and problems when working with GIS and geodata e.g. projections.</p>
-<p>Balancing theory and hands-on practice is essential in GIS training. Here, we outline best practices for incorporating both aspects effectively:</p>
+<p>In general, we want to teach GIS in a way that people understand how they can do specific things needed in their work in the easiest way possible. This means we focus on practical exercises with a real-world connection so it is easy for people to see how they can use GIS in their work. However, sometimes we need to teach things theoretically. Usually, because they are either so essential people have to understand the concept before doing anything in GIS e.g. the layer concept. Or, not knowing the concept results in errors and problems when working with GIS and geodata e.g. projections.</p>
+<p>Balancing theory and hands-on practice is essential in GIS training. Below, we outline some good practices for incorporating both aspects effectively:</p>
 <ul class="simple">
-<li><p>Make the trainees understand why it is important to understand the concept. E.g. avoiding mistakes and wrong results or being able to work much faster. For example, if they work with geodata that is projected in different coordinate reference systems.</p></li>
-<li><p>Use graphics, videos and other mediums to explain the concept. For example, to teach the topic of projections in Modul 1 we use videos and graphics. You can even bring a paper model and <a class="reference external" href="https://education.nationalgeographic.org/resource/the-cartographers-dilemma/">demonstrate</a> the concept example.</p></li>
+<li><p>Make the trainees understand why it is important to understand the concept (e.g. avoiding mistakes and wrong results or being able to work much faster). For example, if they work with geodata that is projected in different coordinate reference systems.</p></li>
+<li><p>Use graphics, videos and other mediums to explain the concept. For example, to teach the topic of projections in module 1, we use videos and graphics. You can even bring a paper model and <a class="reference external" href="https://education.nationalgeographic.org/resource/the-cartographers-dilemma/">demonstrate</a> the concept example.</p></li>
 </ul>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -616,28 +618,28 @@ Projection demonstration: The Cartographer’s Dilemma<div class="sd-summary-dow
 <iframe src="https://res.cloudinary.com/dtpgi0zck/video/upload/q_auto/vc_vp9/v1/videos/The%20Cartographer's%20Dilemma.webm?_s=vp-1.10.1" width="750" height="500"></iframe>
 </div>
 </details><ul class="simple">
-<li><p>Make the connection from the theory to the practical use of GIS. For example, show in what kind of errors a wrong projection can result and why projections like UTM are important to use meters and kilometres when for example buffering.</p></li>
+<li><p>Make the connection from the theory to the practical use of GIS. For example, show what kind of errors using a wrong projection can create and why projections like UTM are important to use, or the difference between metric and geographic coordinate systems (for example, when using meters or kilometers when creating buffers).</p></li>
 </ul>
 </section>
 <section id="gis-for-tackling-real-world-problems">
 <h2>GIS for tackling real-world problems<a class="headerlink" href="#gis-for-tackling-real-world-problems" title="Permalink to this heading">#</a></h2>
-<p>In the fast-paced world of humanitarian aid, time is a precious commodity, and the need to assist those in need directly is paramount. The motivation of trainees is highly dependent on them seeing the value GIS can bring to their daily work. That is why we always should work with real-life examples, data and exercises.  Abstract exercises are not as effective as real-world ones.</p>
-<p>This topic is reflected on the whole platform. The principal section dealing with the topic is <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_1/en_qgis_theorie.html#examples-of-gis-used-by-humanitarian-organisations">Modul 1: Examples of GIS used by humanitarian organisations</a>.</p>
-<p>On this training platform, nearly all exercises are oriented on products that are standard in the humanitarian sector like overview maps or maps of affected regions.</p>
+<p>In the fast-paced world of humanitarian aid, time is a precious commodity, and the need to assist those in need directly is paramount. The motivation of trainees is highly dependent on them seeing the value GIS can bring to their daily work. That is why we always should work with real-life examples, data and exercises. Abstract exercises are not as effective as real-world ones as trainees will not understand the relevance of the methods and workflows in the exercise.</p>
+<p>This topic is reflected on the whole platform. The principal section dealing with the topic is “<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_1/en_qgis_theorie.html#examples-of-gis-used-by-humanitarian-organisations">Module 1: Examples of GIS used by humanitarian organisations</a>”.</p>
+<p>On this training platform, nearly all exercises are oriented on methods, workflows or products that are standard in the humanitarian sector like overview maps or maps of affected regions.</p>
 <p>Practical tips to make exercise and teaching relevant for humanitarian work:</p>
 <ul class="simple">
 <li><p><strong>Audience:</strong> Reflect on your audience and think about what kind of products they would need the most.</p></li>
 <li><p><strong>Common products:</strong> In the beginning, go with easy map products for reports and presentations. In our experience that is interesting for everybody since everybody needs to present and report their work in reports or proposals.</p></li>
-<li><p><strong>Scenarios:</strong> Customize exercises to simulate scenarios commonly encountered in humanitarian work, such as creating situational maps for emergency response teams or analyzing spatial data to identify high-risk areas.</p></li>
+<li><p><strong>Scenarios:</strong> Customize the exercises to simulate scenarios commonly encountered in humanitarian work, such as creating situational maps for emergency response teams or analyzing spatial data to identify high-risk areas.</p></li>
 <li><p><strong>Real datasets:</strong> Encourage trainees to explore real datasets and develop GIS solutions for actual humanitarian challenges, fostering hands-on learning and problem-solving skills.</p></li>
-<li><p><strong>Success stories:</strong> Utilize case studies or success stories from organizations like Relifeweb to illustrate the tangible impact of GIS in humanitarian operations, inspiring trainees and reinforcing the value of their training.</p></li>
+<li><p><strong>Success stories:</strong> Utilize case studies or success stories from organizations such as on <a class="reference external" href="https://reliefweb.int">Reliefweb</a> to illustrate the tangible impact of GIS in humanitarian operations, inspiring trainees and reinforcing the value of their training.</p></li>
 <li><p><strong>Fulfilling a mission:</strong> Present instances where GIS has been instrumental in fulfilling a mission.</p></li>
 <li><p><strong>Planning process:</strong> Empower trainees by involving them in the curriculum planning process, allowing them to identify the types of maps and products most relevant to their work.</p></li>
 </ul>
 </section>
 <section id="hands-on-exercises">
 <h2>Hands-on exercises<a class="headerlink" href="#hands-on-exercises" title="Permalink to this heading">#</a></h2>
-<p>Hands-on exercises are highly effective when teaching GIS on all skill levels. From exploring the interface to running a whole spatial analysis, doing these things gives people a lot of understanding of how to work with GIS. It is always recommended to use hands-on exercises above theoretical presentations.</p>
+<p>Hands-on exercises are highly effective when teaching GIS on all skill levels. From exploring the interface to running a whole spatial analysis, doing these tasks gives people a better understanding how to work with GIS. It is always recommended to use hands-on exercises above theoretical presentations.</p>
 <p>There are two very common types of hands-on training: Follow-along exercises and group exercises.</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
@@ -653,14 +655,14 @@ Follow-along exercises</div>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p class="sd-card-text">+ Good to introduce new topics</p></td>
-<td><p class="sd-card-text">- Limited exchanges between trainees</p></td>
+<tr class="row-even"><td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">+</span></code> Good to introduce new topics</p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">-</span></code> Limited exchanges between trainees</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">+ Questions can be answered immediately</p></td>
-<td><p class="sd-card-text">- Not very much initiative by trainees</p></td>
+<tr class="row-odd"><td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">+</span></code> Questions can be answered immedialty</p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">-</span></code> Not a lot of initiative can be taken by trainees</p></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">+ Good problem-solving possibilities by trainers</p></td>
-<td><p class="sd-card-text"></p></td>
+<tr class="row-even"><td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">+</span></code> Good problem-solving possibilites by trainers</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -678,14 +680,14 @@ Group exercises</div>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p class="sd-card-text">+ Great exchange between trainees</p></td>
-<td><p class="sd-card-text">- No imidate support by the trainer</p></td>
+<tr class="row-even"><td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">+</span></code> Great exchange between trainees</p></td>
+<td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">-</span></code> No immediate support by the trainer(s)</p></td>
 </tr>
-<tr class="row-odd"><td><p class="sd-card-text">+  Initiative and collaborative problem-solving are fostered</p></td>
-<td><p class="sd-card-text"></p></td>
+<tr class="row-odd"><td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">+</span></code> Initiative and collaborative problem-solving are fostered</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p class="sd-card-text">+ Great for training rather than the introduction of new thinks</p></td>
-<td><p class="sd-card-text"></p></td>
+<tr class="row-even"><td><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">+</span></code> Great for training rather than the introduction of new things</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -695,16 +697,19 @@ Group exercises</div>
 </div>
 <section id="beginning-of-an-exercise">
 <h3>Beginning of an exercise<a class="headerlink" href="#beginning-of-an-exercise" title="Permalink to this heading">#</a></h3>
-<p>Independent from the type of exercise you should briefly go over the following points with the trainees at the beginning of the exercise:</p>
+<p>Independent from the type of exercise, you should briefly go over the following points with the trainees at the beginning of the exercise:</p>
 <ol class="arabic simple">
-<li><p><strong>Aim of the exercise:</strong> In general, a hands-on exercise should start with explaining the goal of the exercise. For example <em>„this exercise aims to teach the process of basic spatial data processing using the tools Clip, Merge and dissolve.”</em> This is a good opportunity to highlight the practical use of the tools the participants will learn to boost motivation.</p></li>
+<li><p><strong>Aim of the exercise:</strong> In general, a hands-on exercise should start with explaining the goal of the exercise. For example: <em>„This exercise aims to teach the process of basic spatial data processing using the tools Clip, Merge and dissolve.”</em> This is a good opportunity to highlight the practical use of the tools the participants will learn to boost motivation.</p></li>
 <li><p><strong>Background:</strong> Ideally, the exercise is built around a real-world example or a fictional scenario within the humanitarian work. In this case, you should quickly explain the background and story. An example of this is the exercise.</p></li>
-<li><p><strong>Exercise Data:</strong>  Most hands-on exercise uses real-world data for example from HDX. Each dataset used in the exercise should shortly be explained. This information can be found on each exercise on the platform. Make sure that everybody can download the exercise data. Note that some trainees are not familiar with zip. files.</p></li>
+</ol>
+<!---ADD: insert example exercise-->
+<ol class="arabic simple" start="3">
+<li><p><strong>Exercise Data:</strong>  Most hands-on exercises use real-world data (from <a class="reference external" href="https://data.humdata.org">HDX</a>, for example). Each dataset used in the exercise should be explained shortly. This information can be found on each exercise on the platform. Make sure that everybody has downloaded the exercise data before you start. Note that some trainees are not familiar with <code class="docutils literal notranslate"><span class="pre">zip.</span></code> files. Make sure the trainees unzip the folders before trying to import them into QGIS and take the time to solve any other issues concerning the exercise data.</p></li>
 </ol>
 </section>
 <section id="during-the-exercise-follow-along">
 <h3>During the exercise: Follow-along<a class="headerlink" href="#during-the-exercise-follow-along" title="Permalink to this heading">#</a></h3>
-<p>If you run a follow-along exercise you can follow these basic principles for going through the exercise. Explain the purpose of each step. E.g <em>„In this step we load the data into QGIS“</em> or <em>„In this step, we cut out all points expat the ones in the area of interest“</em>. Expect to show every step three times. Either on a large screen or by sharing your screen (remote). For this, you need to have a lot of patience. People will need a lot of time and there is no sense in rushing things. Be very deliberate and show everything step by step, even very small things.</p>
+<p>If you run a follow-along exercise, you can follow these basic principles for going through the exercise. Explain the purpose of each step. E.g. <em>„In this step we load the data into QGIS“</em> or <em>„In this step, we cut out all points expat the ones in the area of interest“</em>. Expect to show every step three times. Either on a large screen or by sharing your screen (remote). For this, you might need to have a lot of patience. People will need to switch between watching you perform the steps on your screen and orienting themselves in the QGIS interface on their own computer to perform the steps. This will take a lot of time and there is no sense in rushing things. The goal of the workshop is to not leave anybody behind. Be very deliberate and show everything step by step, even very small things. You might have to ask several times if there are any issues.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Do not use icon buttons!
@@ -719,10 +724,15 @@ Use the tabs or the geoprocessing toolbox as much as possible rather than clicki
 </section>
 <section id="during-the-exercise-group-work">
 <h3>During the exercise: Group work<a class="headerlink" href="#during-the-exercise-group-work" title="Permalink to this heading">#</a></h3>
-<p>In case you doing group work there are some other things to look out for. Sort all trainees into groups after you have done the introduction to the exercise. During the introduction of group work, it is important to explain if and how the groups should present their results.
-Once this is done, give them some time to organise themselves and go over the instructions. After some time you should make a round through the groups to see if there are any questions or misunderstandings. After the initial round trough, the groups do more visits as necessary.
-Check if the groups need more time and adjust the times accordingly</p>
-<p>Once the group work is over gather the trainees. Check if there are any problems or questions. Once this is done, let the groups present their results.</p>
+<p>In case you doing group work there are some other things to look out for.</p>
+<ol class="arabic simple">
+<li><p>Sort all trainees into groups after you have done the introduction to the exercise. During the introduction of group work, it is important to explain if and how the groups should present their results.</p></li>
+<li><p>Once this is done, give them some time to organise themselves and go over the instructions.</p></li>
+<li><p>After some time you should check and go through the groups to see if there are any questions or misunderstandings.</p></li>
+<li><p>After the initial round, visit the groups if necessary. Ask if the groups need more time and adjust the times accordingly</p></li>
+<li><p>Once the group work is over gather the trainees together. Check if there are any problems or questions.</p></li>
+<li><p>Once this is done, let the groups present their results.</p></li>
+</ol>
 </section>
 <section id="end-of-an-exercise">
 <h3>End of an exercise<a class="headerlink" href="#end-of-an-exercise" title="Permalink to this heading">#</a></h3>
@@ -732,43 +742,43 @@ Check if the groups need more time and adjust the times accordingly</p>
 <section id="practise-problem-solving-what-if-you-are-stuck">
 <h2>Practise problem-solving: What if you are stuck?<a class="headerlink" href="#practise-problem-solving-what-if-you-are-stuck" title="Permalink to this heading">#</a></h2>
 <p>Working with GIS will always entail that there is one point where you do not know how to proceed. Picture yourself wanting to achieve a specific task e.g. displaying only certain parts of the attribute table on your print map.</p>
-<p>In the vast realm of QGIS, mastering every function is impractical. Instead, problem-solving becomes paramount.
-The ability to navigate challenges, and knowing where and how to seek solutions, is fundamental in GIS. Any comprehensive GIS training should prioritize the development of this critical skill. Here, we explore strategies to empower you in problem-solving within QGIS.</p>
+<p>In the vast realm of QGIS, mastering every function is impractical. Instead, developing problem-solving methods is an important skill when working with GIS.
+The ability to navigate challenges, and knowing where and how to seek solutions, is fundamental in GIS. Any comprehensive GIS training should prioritize the development of this skill. Here, we explore strategies to empower your participants in problem-solving within QGIS.</p>
 <ul class="simple">
-<li><p><strong>Utilizing IFRF GIS Training Plattform Wiki:</strong> Encourage trainees to take advantage of QGIS training resources on this platform!</p></li>
-<li><p><strong>Effective Use of Search Engines like Google:</strong> Teach trainees how to formulate precise search queries using relevant keywords related to their specific problem. Emphasize the importance of including relevant GIS software names, error messages, and specific task descriptions to yield accurate search results.</p></li>
-<li><p><strong>Effective Use of QGIS Documentation:</strong> Trainees should learn how to effectively navigate <a class="reference external" href="https://docs.qgis.org/3.34/en/docs/user_manual/">QGIS documentation</a>, including user manuals, tutorials, and FAQs. Teach them how to use keywords related to their specific problem to find relevant information and step-by-step guides within the QGIS documentation.</p></li>
-<li><p><strong>Engaging with QGIS User Community:</strong> Introduce trainees to <a class="reference external" href="https://www.qgis.org/en/site/forusers/support.html">online forums, Telegramm groups and communities</a> dedicated to QGIS users, such as the QGIS Community Forum and <a class="reference external" href="https://www.reddit.com/r/QGIS/">QGIS subreddit</a>. Encourage active participation in discussions, where they can seek advice from experienced users, share their experiences, and collaborate on problem-solving.</p></li>
-<li><p><strong>Exploring QGIS Tutorial Videos:</strong> Recommend trainees to explore tutorial videos specifically focused on QGIS available on platforms like YouTube. These videos often provide visual demonstrations of QGIS functionalities and troubleshooting techniques for common issues.</p></li>
-<li><p><strong>Leveraging QGIS Chatbots and AI Assistants:</strong> Introduce trainees to AI-powered assistants like ChatGPT, specifically trained to provide instant responses to QGIS-related queries and offer guidance on troubleshooting specific issues. Teach them how to interact effectively with these assistants to obtain relevant information and solutions tailored to QGIS.</p></li>
-<li><p><strong>Engaging with QGIS User Groups:</strong> Encourage trainees to <a class="reference external" href="https://www.qgis.org/en/site/forusers/usergroups.html#qgis-usergroups">join local or online QGIS user groups</a> and Surge Information Management Support (SIMS) Geo group on Slack. In these communities they can connect with other QGIS users, mentors, and experts. Participation in user groups provides opportunities for networking, knowledge exchange, and mentorship in QGIS.</p></li>
+<li><p><strong>Utilizing the IFRF GIS Training Plattform Wiki:</strong> Encourage trainees to take advantage of QGIS training resources on this platform!</p></li>
+<li><p><strong>Effective use of search engines like Google:</strong> Teach trainees how to formulate precise search queries using relevant keywords related to their specific problem. Emphasize the importance of including relevant GIS software names, error messages, and specific task descriptions to yield accurate search results.</p></li>
+<li><p><strong>Effective use of QGIS Documentation:</strong> Trainees should learn how to effectively navigate <a class="reference external" href="https://docs.qgis.org/3.34/en/docs/user_manual/">QGIS documentation</a>, including user manuals, tutorials, and FAQs. Teach them how to use keywords related to their specific problem to find relevant information and step-by-step guides within the QGIS documentation.</p></li>
+<li><p><strong>Engaging with QGIS user community:</strong> Introduce trainees to <a class="reference external" href="https://www.qgis.org/en/site/forusers/support.html">online forums, Telegramm groups and communities</a> dedicated to QGIS users, such as the QGIS Community Forum and <a class="reference external" href="https://www.reddit.com/r/QGIS/">QGIS subreddit</a>. Encourage active participation in discussions, where they can seek advice from experienced users, share their experiences, and collaborate on problem-solving.</p></li>
+<li><p><strong>Exploring QGIS tutorial videos:</strong> Recommend trainees to explore tutorial videos specifically focused on QGIS available on platforms like YouTube. These videos often provide visual demonstrations of QGIS functionalities and troubleshooting techniques for common issues.</p></li>
+<li><p><strong>Leveraging QGIS chatbots and AI assistants:</strong> Introduce trainees to AI-powered assistants like ChatGPT, specifically trained to provide instant responses to QGIS-related queries and offer guidance on troubleshooting specific issues. Teach them how to interact effectively with these assistants to obtain relevant information and solutions tailored to QGIS.</p></li>
+<li><p><strong>Engaging with QGIS user groups:</strong> Encourage trainees to <a class="reference external" href="https://www.qgis.org/en/site/forusers/usergroups.html#qgis-usergroups">join local or online QGIS user groups</a> and Surge Information Management Support (SIMS) Geo group on Slack. In these communities they can connect with other QGIS users, mentors, and experts. Participating in user groups provides opportunities for networking, knowledge exchange, and mentorship in QGIS.</p></li>
 </ul>
 </section>
 <section id="common-mistakes-problems-and-hurdles">
 <h2>Common mistakes, problems and hurdles<a class="headerlink" href="#common-mistakes-problems-and-hurdles" title="Permalink to this heading">#</a></h2>
-<p>People new to GIS often fall over the same stumbling blocks. Each GIS application has its typical challenges and mistakes. In the process of teaching GIS, it’s crucial to anticipate these common pitfalls to swiftly address trainees’ hurdles.
-Typical problems can be mishandling shapefiles. Not seeing data on the map canvas because the order of layers is wrong or using the wrong tool becaus of similar names e. g. <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">by</span> <span class="pre">location</span></code> and <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">by</span> <span class="pre">location</span> <span class="pre">(summary)</span></code>.</p>
+<p>People new to GIS often fall over the same stumbling blocks. Each GIS application has its typical challenges and mistakes. In the process of teaching GIS, it’s important to anticipate these common pitfalls to quickly address trainees’ hurdles.
+Typical problems can be mishandling shapefiles, not seeing data on the map canvas because the order of layers is wrong, or using the wrong tool becaus of similar names (e.g. <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">by</span> <span class="pre">location</span></code> and <code class="docutils literal notranslate"><span class="pre">Join</span> <span class="pre">by</span> <span class="pre">location</span> <span class="pre">(summary)</span></code>).</p>
 <p>As a seasoned GIS user, you might avoid these mistakes automatically and don’t think about them often. Apprentice GIS users lack this experience.</p>
 <p>To deal with such issues you can follow the tips below:</p>
 <ul class="simple">
 <li><p><strong>Wiki:</strong> Point trainees to a curated <a class="reference internal" href="../Wiki/en_qgis_common_errors_and_Issues.html"><span class="doc std std-doc">list of common problems and solutions</span></a> available on the training platform, serving as a valuable reference resource.</p></li>
-<li><p><strong>Google and ChatGPT:</strong> Encourage trainees to leverage online resources like Google and utilize ChatGPT for additional problem-solving assistance, fostering self-reliance and resourcefulness.</p></li>
+<li><p><strong>Google and ChatGPT:</strong> Encourage trainees to use online resources like Google and utilize ChatGPT for additional problem-solving assistance, strengthening self-reliance and resourcefulness.</p></li>
 <li><p>_<strong>Be proactive:</strong> When conducting exercises, proactively flag potential issues and provide step-by-step guidance to preemptively address trainees’ concerns.</p></li>
 <li><p><strong>Collaborative learning:</strong> Foster a collaborative learning environment where trainees can share their experiences and solutions to common problems, promoting peer-to-peer support and knowledge sharing.</p></li>
-<li><p><strong>Breakout rooms:</strong> Consider utilizing breakout rooms for one-on-one troubleshooting sessions, allowing trainers to address individual challenges without disrupting the larger group.</p></li>
-<li><p><strong>Best practices:</strong> Emphasize the importance of adhering to best practices in data management to mitigate common problems, highlighting the impact of proper data handling on GIS workflows’ efficiency and accuracy.</p></li>
+<li><p><strong>Breakout rooms:</strong> Consider utilizing breakout rooms for one-on-one troubleshooting sessions. This allows trainers to address individual challenges without disrupting the larger group. Be aware that the follow-along exercise might continue in the main room. Make sure the participants in the breakout room can catch up.</p></li>
+<li><p><strong>Best practices:</strong> Emphasize the importance of adhering to best practices in data management to mitigate common problems, highlighting the impact of proper data handling on GIS workflows, and their efficiency and accuracy.</p></li>
 </ul>
-<p>By proactively addressing common mistakes and challenges in GIS training, we empower trainees to navigate the complexities of GIS effectively. Through collaborative problem-solving and adherence to best practices, we ensure a more fruitful and rewarding learning experience for all participants.</p>
+<p>By proactively addressing common mistakes and challenges in GIS training, you can empower your trainees to navigate the complexities of GIS effectively. Through collaborative problem-solving and adherence to best practices, we ensure a more fruitful and rewarding learning experience for all participants.</p>
 </section>
 <section id="discussion-and-groupwork">
 <h2>Discussion and Groupwork<a class="headerlink" href="#discussion-and-groupwork" title="Permalink to this heading">#</a></h2>
-<p>Discussion and groupwork play vital roles in GIS training, fostering collaboration, critical thinking, and knowledge exchange among participants. By engaging in discussions and collaborative activities, participants can deepen their understanding of GIS concepts and methodologies while also gaining valuable insights from their peers. Here are key reasons why discussion and groupwork are essential in GIS training:</p>
+<p>Discussion and groupwork play vital roles in GIS training, fostering collaboration, critical thinking, and knowledge exchange among participants. By engaging in discussions and collaborative activities, participants can deepen their understanding of GIS concepts and methodologies while also gaining valuable insights from their peers. The list below summarizes a few key reasons why discussion and groupwork are important in GIS training:</p>
 <ul class="simple">
-<li><p><strong>Exchange of Ideas and Perspectives:</strong> Group discussions provide opportunities for participants to share their experiences, insights, and perspectives on various GIS topics. This exchange of ideas enriches the learning environment and exposes participants to different approaches and problem-solving strategies.</p></li>
-<li><p><strong>Critical Reflection:</strong> Group activities encourage participants to critically evaluate GIS methods, data sources, and analytical techniques. Through guided discussions and peer feedback, participants can assess the strengths and limitations of different approaches, enhancing their ability to make informed decisions in real-world GIS projects.</p></li>
-<li><p><strong>Learning from Peers:</strong> Collaborative exercises and group projects enable participants to learn from each other’s strengths and expertise. By working together to solve challenges and address complex problems, participants can leverage diverse skill sets and knowledge backgrounds to achieve shared learning goals.</p></li>
-<li><p><strong>Enhanced Engagement and Participation:</strong> Groupwork promotes active learning and engagement, as participants collaborate on hands-on exercises, case studies, and project-based tasks. This interactive learning approach fosters a sense of ownership and accountability, motivating participants to actively contribute to the learning process.</p></li>
-<li><p><strong>Skill Development:</strong> Through group activities, participants have opportunities to develop essential skills such as communication, teamwork, and problem-solving. These transferable skills are valuable not only in GIS but also in various professional contexts, enhancing participants’ overall professional development.</p></li>
+<li><p><strong>Exchange of ideas and perspectives:</strong> Group discussions provide opportunities for participants to share their experiences, insights, and perspectives on various GIS topics. This exchange of ideas enriches the learning environment and exposes participants to different approaches and problem-solving strategies.</p></li>
+<li><p><strong>Critical reflection:</strong> Group activities encourage participants to critically evaluate GIS methods, data sources, and analytical techniques. Through guided discussions and peer feedback, participants can assess the strengths and limitations of different approaches, enhancing their ability to make informed decisions in real-world GIS projects.</p></li>
+<li><p><strong>Learning from peers:</strong> Collaborative exercises and group projects enable participants to learn from each other’s strengths and expertise. By working together to solve challenges and address complex problems, participants can learn diverse skill sets and knowledge backgrounds to achieve shared learning goals.</p></li>
+<li><p><strong>Enhanced engagement and participation:</strong> Groupwork promotes active learning and engagement, as participants collaborate on hands-on exercises, case studies, and project-based tasks. This interactive learning approach fosters a sense of ownership and accountability, motivating participants to actively contribute to the learning process.</p></li>
+<li><p><strong>Skill development:</strong> Through group activities, participants have opportunities to develop essential skills such as communication, teamwork, and problem-solving. These transferable skills are valuable not only in GIS but also in various professional contexts, enhancing participants’ overall professional development.</p></li>
 </ul>
 <p>Incorporating discussions and groupwork into GIS training sessions can create dynamic learning environments where participants can collaborate, learn from each other, and apply GIS concepts and skills in practical contexts.</p>
 </section>
