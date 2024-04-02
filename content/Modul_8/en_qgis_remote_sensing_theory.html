@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; GIS Resource Training Center</title>
+    <title>Introduction to Remote Sensing and Remote Sensing Data &#8212; GIS Resource Training Center</title>
   
   
   
@@ -265,8 +265,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Modul_7/en_qgis_modul_7_ex1.html">Exercises 1: Automatisation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 8 - Remote Sensing and Raster data</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_remote_sensing_raster_theorie.html">Remote Sensing and Raster data theorie 🛰️</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to Remote Sensing and Remote Sensing Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_modul_8_ex1.html">Rasterdata Exercise 1: Basic Assessment of Flood Exposure in the Indus Basin in Pakistan</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 9- Network Analysis</span></p>
@@ -558,7 +559,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Introduction to Remote Sensing and Remote Sensing Data</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -567,9 +568,13 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-remote-sensing">What is Remote Sensing?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-radiation-and-its-interaction-with-the-earths-surface">Electromagnetic Radiation and its interaction with the Earths Surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-sensors-and-platforms">Remote Sensing Sensors and Platforms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-of-remote-sensing-data">Attributes of Remote Sensing Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visuliszation-of-multi-spectral-remote-sensing-data">Visuliszation of Multi Spectral Remote Sensing Data</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -580,7 +585,76 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-remote-sensing-and-remote-sensing-data">
+<h1>Introduction to Remote Sensing and Remote Sensing Data<a class="headerlink" href="#introduction-to-remote-sensing-and-remote-sensing-data" title="Permalink to this heading">#</a></h1>
+<section id="what-is-remote-sensing">
+<h2>What is Remote Sensing?<a class="headerlink" href="#what-is-remote-sensing" title="Permalink to this heading">#</a></h2>
+<p>Remote sensing can be defined as the set of methods used to obtain information about the Earth’s surface by measuring and interpreting the energy radiated from it. The electromagnetic radiation reflected or emitted by the Earth serves as a carrier of information about the state of the Earth’s surface. <br></p>
+<p>The information provided by the radiation emitted from the Earth’s surface can be measured by sensors mounted on vehicles such as drones, aircraft or satellites, and then stored in the form of gridded image data. A simple form of remote sensing data is an ordinary aerial photograph taken, for example, by a drone. The radiation measured and stored in the form of a grid (in this case a photograph) is the visible spectrum of electromagnetic radiation emitted by the Earth’s surface and the objects on it.<br></p>
+</section>
+<section id="electromagnetic-radiation-and-its-interaction-with-the-earths-surface">
+<h2>Electromagnetic Radiation and its interaction with the Earths Surface<a class="headerlink" href="#electromagnetic-radiation-and-its-interaction-with-the-earths-surface" title="Permalink to this heading">#</a></h2>
+<figure class="align-right" id="basic-concept-of-a-spatial-raster">
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_spectrum.png"><img alt="../../_images/en_m8_rs_spectrum.png" src="../../_images/en_m8_rs_spectrum.png" style="width: 500px;" /></a>
+</figure>
+<p>An important component of remote sensing is that different sensors can measure and process a much wider range of electromagnetic radiation than the human eye, which is limited to the visi-ble spectrum. The electromagnetic spectrum can be divided into the following wavelength bands: <br><br></p>
+<p>Objects and the Earth’s surface reflect and absorb EMR across the wavelength spectrum and with distinct patterns that are unique to the type of object/surface. These unique patterns are called “spectral signatures” and are visualised in signature graphs.
+Signatures vary with variations in an object/surface’s material composition, structure and surface properties. For example:</p>
+<ul class="simple">
+<li><p>Vegetation typically has a high reflectance in the near-infrared region of the spectrum due to the absorption characteristics of chlorophyll, resulting in a prominent peak in this region.</p></li>
+<li><p>Water bodies tend to have low reflectance over most of the spectrum, with higher ab-sorption at visible wavelengths and lower absorption in the NIR.</p></li>
+<li><p>Urban areas can have complex spectral signatures due to the variety of materials pre-sent, such as asphalt, concrete and metal, each with its own reflectance characteristics across the spectrum.</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="fig/en_m8_rs_specsigs.png"><img alt="fig/en_m8_rs_specsigs.png" src="fig/en_m8_rs_specsigs.png" style="width: 800px;" /></a>
+</figure>
+<p>By analysing these spectral signatures it is possible to identify and classify surface features and materials from aerial or satellite imagery. Applications include classification of land cover types, monitoring environmental changes such as deforestation or anthropogenic processes such as urban expansion</p>
+</section>
+<section id="remote-sensing-sensors-and-platforms">
+<h2>Remote Sensing Sensors and Platforms<a class="headerlink" href="#remote-sensing-sensors-and-platforms" title="Permalink to this heading">#</a></h2>
+<p>The main source of electromagnetic radiation on Earth is the Sun, whose reflected radiation is also the dominant source of information for remote sensing imagery in general. Sensors can measure this electromagnetic radiation in specific ranges, called “bands”, which are usually represented individually by a raster file when acquiring remote sensing data. <br></p>
+<p>For example, the standard data from the Landsat 8 satellite mission, which is one of the most commonly used datasets, has X different bands ranging from X over X to X.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_landsatbands.png"><img alt="../../_images/en_m8_rs_landsatbands.png" src="../../_images/en_m8_rs_landsatbands.png" style="width: 800px;" /></a>
+</figure>
+<p>Remote sensing methods can generally be divided into two categories: active and passive remote sensing: If the source of the measured energy is the sun, it is called passive remote sensing and the result of this measurement can be a digital image. However, there is also the possibility of emitting radiation from the sensor platform and then measuring the return reflection. This method can be defined as active remote sensing.</p>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_activepassive.png"><img alt="../../_images/en_m8_rs_activepassive.png" src="../../_images/en_m8_rs_activepassive.png" style="width: 800px;" /></a>
+</figure>
+<p>Examples of passive remote sensing include radar sensors that emit microwave radiation or LiDAR sensors that emit laser beams. However, the vast majority of remote sensing data is generated using active remote sensing.</p>
+</section>
+<section id="attributes-of-remote-sensing-data">
+<h2>Attributes of Remote Sensing Data<a class="headerlink" href="#attributes-of-remote-sensing-data" title="Permalink to this heading">#</a></h2>
+<p>All general attributes of raster data, such as spatial resolution, extent or the CRS used, presented in the previous module, also apply to remote sensing data, as it is a subcategory of raster data. However, a large proportion of remotely sensed data generally have three more important attributes:</p>
+<ul class="simple">
+<li><p><strong>Spectral resolution</strong>, which is the number and location in the electromagnetic spectrum of the spectral bands in multispectral sensors. Each band is typically represented by one raster.</p></li>
+<li><p><strong>Radiometric resolution</strong>, usually measured in bits, is the range of brightness values available to quantify the intensity of the measured radiation in a given spectrum. For example, an 8-bit image has 256 levels of brightness.</p></li>
+<li><p><strong>Temporal resolution</strong> is an important attribute of satellite sensors such as Landsat 8 or SENTINEL 2 and can be defined as the period of time required to revisit and measure the same area of the Earth (e.g. 16 days for Landsat 8). It is particularly relevant for the analysis of changes using RS data.</p></li>
+</ul>
+</section>
+<section id="visuliszation-of-multi-spectral-remote-sensing-data">
+<h2>Visuliszation of Multi Spectral Remote Sensing Data<a class="headerlink" href="#visuliszation-of-multi-spectral-remote-sensing-data" title="Permalink to this heading">#</a></h2>
+<p>The fact that the bands of the individual spectral ranges are available in the files of multispectral remote sensing scenes as individual rasters allows various possible combinations of these bands to create so-called false colour composites: the optical perception of the human eye can be divid-ed into the three spectral ranges of visible light (red, blue and green, R-G-B for short). In a “true colour display”, i.e. the optical display of a satellite image as the human eye would perceive it (e.g. Google Maps Satellite), these bands are also assigned to the corresponding bands: R = Red, G = Green, B = Blue.</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_bandsconcept.png"><img alt="../../_images/en_m8_rs_bandsconcept.png" src="../../_images/en_m8_rs_bandsconcept.png" style="width: 600px;" /></a>
+</figure>
+<p>In a false colour image the optical representation of one or more of the bands is not congruent with the spectral bands assigned to it. A commonly used example is the Combination R = Near Infrared, G = Red, B = Green (see Fig X).</p>
+<figure class="align-left" id="id5">
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_RGB.png"><img alt="../../_images/en_m8_rs_RGB.png" src="../../_images/en_m8_rs_RGB.png" style="width: 400px;" /></a>
+</figure>
+<figure class="align-right" id="id6">
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_NIR_RED_GREEN.png"><img alt="../../_images/en_m8_rs_NIR_RED_GREEN.png" src="../../_images/en_m8_rs_NIR_RED_GREEN.png" style="width: 400px;" /></a>
+</figure>
+<p>This false colour composit for example strongly highlights vegetation and especially healthy vegetation which appears bright red. This is because red visualizes the near infrared spectrum-which displays high reflectance by vegetation, particularly compared to other surfaces like soil or water. This makes it easier to identify and analyze vegetation cover, health, and distribution.</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_SWIR_NIR_RED.png"><img alt="../../_images/en_m8_rs_SWIR_NIR_RED.png" src="../../_images/en_m8_rs_SWIR_NIR_RED.png" style="width: 600px;" /></a>
+</figure>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_NDVI.png"><img alt="../../_images/en_m8_rs_NDVI.png" src="../../_images/en_m8_rs_NDVI.png" style="width: 600px;" /></a>
+</figure>
+</section>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -643,9 +717,13 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-remote-sensing">What is Remote Sensing?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-radiation-and-its-interaction-with-the-earths-surface">Electromagnetic Radiation and its interaction with the Earths Surface</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-sensors-and-platforms">Remote Sensing Sensors and Platforms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-of-remote-sensing-data">Attributes of Remote Sensing Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visuliszation-of-multi-spectral-remote-sensing-data">Visuliszation of Multi Spectral Remote Sensing Data</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
