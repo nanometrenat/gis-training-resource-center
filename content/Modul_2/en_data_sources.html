@@ -360,7 +360,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_how_to_training.html">How to plan a whole GIS Training</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_training_plans.html">Basic QGIS Training: Full training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_training_graphical_outline.html">Graphical Outline for Trainings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_training_day_structure.html">How to plan and structure a GIS Training Session</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_how_to_teach_GIS.html">How to teach GIS</a></li>
@@ -679,6 +678,10 @@ licensing and to follow the respective regulations to avoid difficulties.</p>
 <td class="text-left"><p>Data on displaced populations</p></td>
 <td class="text-left"><p><a class="reference external" href="https://data.unhcr.org/en/situations">https://data.unhcr.org/en/situations</a></p></td>
 </tr>
+<tr class="row-odd"><td class="text-left"><p>Waterpoint</p></td>
+<td class="text-left"><p>Data on waterpoints</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.waterpointdata.org">https://www.waterpointdata.org</a></p></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -712,17 +715,12 @@ licensing and to follow the respective regulations to avoid difficulties.</p>
 <td class="text-left"><p>Flood extents, damage extents, earth observation data</p></td>
 <td class="text-left"><p><a class="reference external" href="https://activations.zki.dlr.de/en/activations/">https://activations.zki.dlr.de/en/activations/</a></p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Waterpoint</p></td>
-<td class="text-left"><p>Data on waterpoints</p></td>
-<td class="text-left"><p><a class="reference external" href="https://www.waterpointdata.org">https://www.waterpointdata.org</a></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>WFP Vulnerability Analysis and Mapping</p></td>
+<tr class="row-odd"><td class="text-left"><p>WFP Vulnerability Analysis and Mapping</p></td>
 <td class="text-left"><p>Data on food security, hazards, conflicts, climate</p></td>
 <td class="text-left"><p><a class="reference external" href="https://dataviz.vam.wfp.org/">https://dataviz.vam.wfp.org/</a></p></td>
 </tr>
 </tbody>
 </table>
-<!-- is water points more appropriate under humanitarian / general? it's not disaster data -->
 </section>
 <section id="population-data">
 <h3>Population data<a class="headerlink" href="#population-data" title="Permalink to this heading">#</a></h3>
@@ -903,41 +901,28 @@ is in QGIS.</p>
 <section id="quickosm-plugin">
 <h3>QuickOSM plugin<a class="headerlink" href="#quickosm-plugin" title="Permalink to this heading">#</a></h3>
 <p>The QuickOSM plugin makes it easy to download data from OpenStreetMap and add it
-to your QGIS project. To install it, open the plugin manager from the <code class="docutils literal notranslate"><span class="pre">Plugins</span></code>
-menu by choosing <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins</span></code>.</p>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-How to install QuickOSM<div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<!-- FIXME: These instructions and screenshots could be clearer -->
-<figure class="align-center" id="manage-and-install-plugins">
-<a class="reference internal image-reference" href="../../_images/managa_install_plugins.png"><img alt="../../_images/managa_install_plugins.png" src="../../_images/managa_install_plugins.png" style="width: 400px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Manage and Install Plugins.</span><a class="headerlink" href="#manage-and-install-plugins" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="installing-quickosm">
-<a class="reference internal image-reference" href="../../_images/install_quickosm.png"><img alt="../../_images/install_quickosm.png" src="../../_images/install_quickosm.png" style="width: 800px;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Installing QuickOSM.</span><a class="headerlink" href="#installing-quickosm" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</div>
-</details><p>To launch the newly installed plugin, click on <img alt="" src="content/Modul_2/fig/quickosmplugin.png" /> or
-click under <code class="docutils literal notranslate"><span class="pre">vector</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">QuickOSM</span></code>.</p>
+to your QGIS project.</p>
+<ol class="arabic simple">
+<li><p>Install the QuickOSM plugin by clicking on the <code class="docutils literal notranslate"><span class="pre">Plugin</span></code> tab, -&gt; <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">and</span>&#160; <span class="pre">Install</span> <span class="pre">Plugins…</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">All</span></code> -&gt; Search for “QuickOSM” -&gt; <code class="docutils literal notranslate"><span class="pre">Install</span> <span class="pre">Plugin</span></code></p></li>
+<li><p>To open QuickOSM click on the <code class="docutils literal notranslate"><span class="pre">Vector</span></code>tab -&gt; <code class="docutils literal notranslate"><span class="pre">QuickOSM</span></code> -&gt;  <code class="docutils literal notranslate"><span class="pre">QuickOSM</span></code></p></li>
+</ol>
+<p>To work efficiently with QuickOSM, it’s essential to have a basic understanding of the OSM data model. Here’s a brief explanation:</p>
+<ul class="simple">
+<li><p>Firstly, all data in OSM is organized using a key and value system. A combination of a key and its corresponding value is referred to as a <strong>tag</strong>.
+For instance, consider the key ‘amenity.’ According to the OSMWiki, <em>“‘amenity=</em>’ describes useful facilities such as toilets, telephones, banks, pharmacies, prisons, and schools.”*.
+Notably, a key can have multiple values, with ‘amenity’ alone having 8911 different values. Typical examples of values for amenities include schools and hospitals.
+When searching for data on OSM, it’s crucial to identify the relevant keys and values representing the desired features. Useful resources for this purpose include T<a class="reference external" href="https://taginfo.openstreetmap.org">taginfo</a> and the OSM Wiki article about <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Map_features">Map features</a>.</p></li>
+<li><p>Secondly, a feature in OSM can have multiple tags, each comprising a key and its corresponding value. This means that sometimes, multiple key-value pairs are required to retrieve all the desired data.
+For example, let’s consider hospitals. While all hospitals should ideally have the tags ‘amenity=hospital’ and ‘Health=Hospital,’ some may only have one of these tags. To ensure comprehensive data retrieval, it’s advisable to use both tags when searching for hospitals.</p></li>
+</ul>
 <p>Follow the steps to fetch for data:</p>
 <ol class="arabic simple">
-<li><p>Select a Key and Value from the dropdown list. If you are unsure, check here:
-<a class="reference external" href="https://taginfo.openstreetmap.org">taginfo</a>.</p></li>
+<li><p>Select a Key and Value from the dropdown list. If you are unsure, check here:</p></li>
 </ol>
-<!-- CLARIFY: this needs more explanation for beginners -->
 <figure class="align-center" id="choosing-key-and-value">
 <a class="reference internal image-reference" href="../../_images/key_value_quickosm.png"><img alt="../../_images/key_value_quickosm.png" src="../../_images/key_value_quickosm.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Choosing key and value in QuickOSM.</span><a class="headerlink" href="#choosing-key-and-value" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Choosing key and value in QuickOSM.</span><a class="headerlink" href="#choosing-key-and-value" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic" start="2">
@@ -952,7 +937,7 @@ minimize errors.</p>
 <figure class="align-center" id="running-the-quickosm-plugin">
 <a class="reference internal image-reference" href="../../_images/quickosm_usage.png"><img alt="../../_images/quickosm_usage.png" src="../../_images/quickosm_usage.png" style="width: 800px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Running the QuickOSM plugin.</span><a class="headerlink" href="#running-the-quickosm-plugin" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Running the QuickOSM plugin.</span><a class="headerlink" href="#running-the-quickosm-plugin" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="4">
@@ -990,15 +975,12 @@ the Export Tool</p></li>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/hot_export.png"><img alt="../../_images/hot_export.png" src="../../_images/hot_export.png" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 46 </span><span class="caption-text">The HOT Export Tool.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">The HOT Export Tool.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic" start="4">
+<ol class="arabic simple" start="4">
 <li><p>First add a name and a brief description of your export. Then click on <code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p></li>
-<li><p>Choose the file format fitting to your needs. Most likely Geojson, Shapefile or
-GeoPackage will be fit for the use with QGIS. Click on <code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p>
-<!-- COMMENT: As earlier, suggest we recommend GPKG for consistency -->
-</li>
+<li><p>Choose the file format fitting to your needs. It is recommended to use GeoPackage but Geojson or Shapefile can be used as well. Click on <code class="docutils literal notranslate"><span class="pre">Next</span></code>.</p></li>
 <li><p>The easiest way to choose the feature type you want to download is using the
 tag tree. (The YAML option is more flexible but more advanced, so we will
 focus on the first option.)</p></li>
@@ -1017,7 +999,7 @@ Click on <code class="docutils literal notranslate"><span class="pre">Import</sp
 <figure class="align-center" id="hot-export-tool-example">
 <a class="reference internal image-reference" href="../../_images/hot_export_example.png"><img alt="../../_images/hot_export_example.png" src="../../_images/hot_export_example.png" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 47 </span><span class="caption-text">An Example for the HOT Export Tool.</span><a class="headerlink" href="#hot-export-tool-example" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">An Example for the HOT Export Tool.</span><a class="headerlink" href="#hot-export-tool-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="9">
@@ -1027,7 +1009,7 @@ this:</p></li>
 <figure class="align-center" id="hot-export-tool-running">
 <a class="reference internal image-reference" href="../../_images/hot_export_running.png"><img alt="../../_images/hot_export_running.png" src="../../_images/hot_export_running.png" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 48 </span><span class="caption-text">The HOT Export Tool is running.</span><a class="headerlink" href="#hot-export-tool-running" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">The HOT Export Tool is running.</span><a class="headerlink" href="#hot-export-tool-running" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="10">
@@ -1037,13 +1019,10 @@ download your file by clicking on the link:</p></li>
 <figure class="align-center" id="hot-export-tool-done">
 <a class="reference internal image-reference" href="../../_images/hot_export_done.png"><img alt="../../_images/hot_export_done.png" src="../../_images/hot_export_done.png" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Downloading data from HOT Export Tool.</span><a class="headerlink" href="#hot-export-tool-done" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Downloading data from HOT Export Tool.</span><a class="headerlink" href="#hot-export-tool-done" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><a class="reference external" href="https://heigit.org/big-spatial-data-analytics-en/ohsome/">The Ohsome tools</a>
-provide OpenStreetMap data analytics and downloads by HeiGIT. You can also
-investigate the OSM history.</p>
-<!-- CLARIFY: how should this be used? --></section>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>

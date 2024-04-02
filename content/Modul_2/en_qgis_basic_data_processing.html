@@ -360,7 +360,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Trainers corner</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_how_to_training.html">How to plan a whole GIS Training</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_training_plans.html">Basic QGIS Training: Full training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_training_graphical_outline.html">Graphical Outline for Trainings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_training_day_structure.html">How to plan and structure a GIS Training Session</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Trainers_corner/en_how_to_teach_GIS.html">How to teach GIS</a></li>
@@ -568,7 +567,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Geodata management</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-management-fundermantals">Geodata management: Fundermantals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-folder-structure">Standard folder structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-naming">Geodata naming</a></li>
 </ul>
@@ -584,7 +583,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-import">Raster data import</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-browser-panel">The Browser-panel</a></li>
 </ul>
 </li>
 </ul>
@@ -598,25 +596,20 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>🚧 This training platform and the entire content is under ⚠️construction⚠️ and
-may not be shared or published! 🚧</p>
-<section class="tex2jax_ignore mathjax_ignore" id="geodata-management">
+  <section class="tex2jax_ignore mathjax_ignore" id="geodata-management">
 <h1>Geodata management<a class="headerlink" href="#geodata-management" title="Permalink to this heading">#</a></h1>
-<!-- no geodata processing? fix title-->
+<p><strong>🔙<a class="reference internal" href="../intro.html"><span class="doc std std-doc">Back to Homepage</span></a></strong></p>
+<p>In this chapter, we will have a close look at how to work with geodata in QGIS.
+Since vector data is the primary geodata type you will work with at the beginning
+of your GIS career, we will focus on vector geodata.</p>
 <p><strong>Competences:</strong></p>
 <ul class="simple">
 <li><p>Data import</p></li>
 <li><p>Geo features and attributes</p></li>
 <li><p>Feature selection</p></li>
-<li><p>Basemap selection</p></li>
 </ul>
-<p>This chapter will focus on how to manage geodata on your computer and in QGIS, in order to have a clean and
-structured workflow. Working in such a way can save you a lot of headaches when working with GIS-software.</p>
-<!-- In this chapter, we will have a close look at how to work with geodata in QGIS. 
-Since vector data is the primary geodata type you will work with at the beginning 
-of your GIS career, we will focus on vector geodata. -->
-<section id="id1">
-<h2>Geodata management<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<section id="geodata-management-fundermantals">
+<h2>Geodata management: Fundermantals<a class="headerlink" href="#geodata-management-fundermantals" title="Permalink to this heading">#</a></h2>
 <p>Working with geodata is not like working with data in programs such as Microsoft
 Excel or Word. Whenever you load an image in a Word file, the file will contain
 the image. If you delete the image on your computer, the Word file will still
@@ -648,14 +641,15 @@ without problems on a different computer</p></li>
 <li><p>The folder structure supports the proper organisation of project data and
 helps ensure the QGIS project will work as intended</p></li>
 </ol>
-<figure class="align-center" id="id2">
+<figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/Standard_project_folder_structure.drawio.svg"><img alt="../../_images/Standard_project_folder_structure.drawio.svg" src="../../_images/Standard_project_folder_structure.drawio.svg" width="600px" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Standard folder structure. Source: HeiGIT</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Standard folder structure. Source: HeiGIT</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <!-- CHECK: add source 
 I think Probably HeiGIT/Alec
+HeiGIT is fine
  -->
 </section>
 <section id="geodata-naming">
@@ -679,7 +673,7 @@ names are not meaningful.</p>
 <p><code class="docutils literal notranslate"><span class="pre">adm0</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_temp</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_temp2</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_temp3</span> <span class="pre">&gt;&gt;</span> <span class="pre">facilities_final</span></code></p>
 <p>A good naming system for layers is shown below. In this workflow, it is clear what
 processing was performed at each step (reproject, clip layer, join with another layer,
-output). <!-- CHECK: Is this understanding correct? -->
+final result).<br />
 In this way, other people can understand what purpose different layers serve and
 whether they are needed in the final project.</p>
 <p><code class="docutils literal notranslate"><span class="pre">adm0</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM_clipUrban</span> <span class="pre">&gt;&gt;</span> <span class="pre">adm0_projUTM_clipUrban_intersectFacilities</span> <span class="pre">&gt;&gt;</span> <span class="pre">facilities_processed</span></code></p>
@@ -830,10 +824,6 @@ Video: Open raster data via drag-and-drop<div class="sd-summary-down docutils">
 <p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/qgis_import_raster_d_d.mp4"></video></p>
 </div>
 </details></section>
-<section id="the-browser-panel">
-<h3>The Browser-panel<a class="headerlink" href="#the-browser-panel" title="Permalink to this heading">#</a></h3>
-<!-- ADD: Browser Panel workflow-->
-</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -902,7 +892,7 @@ Video: Open raster data via drag-and-drop<div class="sd-summary-down docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Geodata management</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-management-fundermantals">Geodata management: Fundermantals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-folder-structure">Standard folder structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#geodata-naming">Geodata naming</a></li>
 </ul>
@@ -918,7 +908,6 @@ Video: Open raster data via drag-and-drop<div class="sd-summary-down docutils">
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raster-data-import">Raster data import</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-browser-panel">The Browser-panel</a></li>
 </ul>
 </li>
 </ul>
