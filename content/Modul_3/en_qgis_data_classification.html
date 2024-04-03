@@ -591,28 +591,34 @@ document.write(`
 <h1>Geodata Classification<a class="headerlink" href="#geodata-classification" title="Permalink to this heading">#</a></h1>
 <p><strong>🔙<a class="reference internal" href="../intro.html"><span class="doc std std-doc">Back to Homepage</span></a></strong></p>
 <p>Spatial data classification in GIS involves categorizing geographic information into distinct groups or classes based on shared characteristics. This process enhances the organization and interpretation of spatial data.</p>
-<p>The attributes of geospatial data are stored in a specific column within the attribute table. Essentially, we choose a column containing the specific characteristics of interest, allowing QGIS to group the data based on these selected attributes</p>
+<p>The attributes of geospatial data are stored in a specific column within the attribute table. Essentially, we choose a column containing the specific characteristics of interest, allowing QGIS to group the data based on these selected attributes.</p>
 <figure class="align-center" id="basic-classification">
 <a class="reference internal image-reference" href="../../_images/classification_basic.drawio.png"><img alt="../../_images/classification_basic.drawio.png" src="../../_images/classification_basic.drawio.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Basic classification. Source:</span><a class="headerlink" href="#basic-classification" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <section id="single-symbol-classification">
 <h2>Single symbol classification<a class="headerlink" href="#single-symbol-classification" title="Permalink to this heading">#</a></h2>
-<p>By default, QGIS visualizes all layers in the <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">symbol</span></code> setting. This means all the features of a layer are visualised the same. In this setting, you can change many parameters like colour or opacity <strong>but you can not classify any data!</strong></p>
+<p>By default, QGIS visualizes all layers in the <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">symbol</span></code> setting. This means all the features of a layer are visualized the same. In this setting, you can change many parameters like colour or opacity <strong>but you can not classify any data!</strong></p>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Single_symbol_video.mp4"></video></p>
 <p><strong>To adjust the style of a layer…</strong></p>
 <ol class="arabic simple">
-<li><p>Right-click on your layer</p></li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
-<li><p>Confirm that the layer setting is on <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">Symbol</span></code></p></li>
-<li><p>Select the colour of your choice in the drop-down menu. For more colour options select in the drop-down menu <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">Color</span></code></p></li>
-<li><p><em>Optional</em>:. You can adjust the opacity/ transparency of the layer. This can be very useful when you want to show multiple overlapping layers</p></li>
-<li><p><em>Optional</em>: Here you can set the unit type. This is usefull when you want for example visualize points in a certain size.</p></li>
-<li><p>Optional. Here you can find standard and previously used styles quickly.</p></li>
-<li><p>Clic__k <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
+<li><p>Right-click on your layer.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code>.</p></li>
+<li><p>Confirm that the layer setting is on <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">Symbol</span></code>.</p></li>
+<li><p>Select the colour of your choice in the drop-down menu. For more colour options select in the drop-down menu <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">Color</span></code>.</p></li>
+<li><p><em>Optional</em>:. You can adjust the opacity/ transparency of the layer. This can be very useful when you want to show multiple overlapping layers.</p></li>
+<li><p><em>Optional</em>: Here you can set the unit type. This is useful when you want to visualize points in a certain size, for example.</p></li>
+<li><p><em>Optional:</em> Here you can find standard and previously used styles quickly.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the window.</p></li>
 </ol>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/Single_symbol_classify.png"><img alt="../../_images/Single_symbol_classify.png" src="../../_images/Single_symbol_classify.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Adjust the style of a layer.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 </section>
 <section id="categorized-classification">
@@ -643,19 +649,22 @@ document.write(`
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Classify_by_categorized.mp4"></video></p>
 <p><strong>To classify data in categories…</strong></p>
 <ol class="arabic simple">
-<li><p>Right-click on your layer</p></li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Categorized</span></code></p></li>
-<li><p>In the <code class="docutils literal notranslate"><span class="pre">Value</span></code> dropdown menu select the column based on which you want to categorize your data.</p></li>
+<li><p>Right-click on your layer.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code>.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Categorized</span></code>.</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Value</span></code> dropdown menu, select the column based on which you want to categorize your data.</p></li>
 <li><p>Further down the window click on <code class="docutils literal notranslate"><span class="pre">Classify</span></code>.  Now you should see all unique values or attributes of the selected column in <code class="docutils literal notranslate"><span class="pre">Value</span></code>. To add or delete single values use the <code class="docutils literal notranslate"><span class="pre">-</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code> buttons.</p></li>
-<li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> dropdown menu you can select the colours and symbols you want to use</p></li>
-<li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">ramp</span></code> dropdown menu you can specify the range of colours you want to use</p></li>
+<li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> dropdown menu, you can select the colours and symbols you want to use</p></li>
+<li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Color</span> <span class="pre">ramp</span></code> dropdown menu, you can specify the range of colours you want to use</p></li>
 <li><p><em>Optional</em>: You can open the panel <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">Rendering</span></code> on the button of the window. Here you can adjust the opacity/ transparency of the layer.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the window.</p></li>
 </ol>
 <figure class="align-center" id="id2">
 <img alt="../../_images/Categorized_district_map_SierraLeone.png" src="../../_images/Categorized_district_map_SierraLeone.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Categorized classification.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 </section>
 <section id="graduated-classification">
@@ -696,14 +705,20 @@ document.write(`
 <li><p>There are just a few districts with very low population</p></li>
 <li><p>It seems that there are three general groups of districts</p></li>
 </ol>
-<figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="../../_images/Histogramm_example.drawio.svg"><img alt="../../_images/Histogramm_example.drawio.svg" src="../../_images/Histogramm_example.drawio.svg" width="900px" /></a>
-</figure>
-<p>However if we want to show on a map which districts have a higher population than others, we need to classify the districts.</p>
-<p>There are <strong>seven</strong> ways in QGIS you can split quantitative data into classes.  The four most important ones are: <strong>Equal intervals</strong>, <strong>Quantile</strong>, <strong>Natiral breaks</strong>, <strong>Manual</strong>.
-Let’s have a look at how the classes of the district population would look like if we split the data into three classes using these methods.</p>
 <figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/Histogramm_example.drawio.svg"><img alt="../../_images/Histogramm_example.drawio.svg" src="../../_images/Histogramm_example.drawio.svg" width="900px" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Histogramm of population data. Source:</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>However, if we want to show on a map which districts have a higher population than others, we need to classify the districts.</p>
+<p>There are <strong>seven</strong> ways in QGIS to split quantitative data into classes.  The four most important ones are: <strong>Equal intervals</strong>, <strong>Quantile</strong>, <strong>Natural breaks</strong>, <strong>Manual</strong>.
+Let’s have a look at how the classes of the district population would look like if we split the data into three classes using these methods.</p>
+<figure class="align-center" id="id5">
 <a class="reference internal image-reference" href="../../_images/classification_method_map.drawio.svg"><img alt="../../_images/classification_method_map.drawio.svg" src="../../_images/classification_method_map.drawio.svg" width="900px" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Different classifications. Source:</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -750,9 +765,9 @@ Standard Deviation</label><div class="sd-tab-content docutils">
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/Graduated_classification.mp4"></video></p>
 <p><strong>To classify data in classes…</strong></p>
 <ol class="arabic simple">
-<li><p>Right-click on your layer</p></li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code></p></li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Graduated</span></code></p></li>
+<li><p>Right-click on your layer.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Symbology</span></code>.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Graduated</span></code>.</p></li>
 <li><p>In the <code class="docutils literal notranslate"><span class="pre">Value</span></code> dropdown menu select the column based on which you want to classify your data.</p></li>
 <li><p>Downright select the number of classes you want to use.</p></li>
 <li><p>Under <code class="docutils literal notranslate"><span class="pre">Mode</span></code> select the classification method you want to use e.g. Equal count (Quantile).</p></li>
@@ -761,6 +776,9 @@ Standard Deviation</label><div class="sd-tab-content docutils">
 </ol>
 <figure class="align-center" id="raduated-classification">
 <a class="reference internal image-reference" href="../../_images/Graduated_histogram.png"><img alt="../../_images/Graduated_histogram.png" src="../../_images/Graduated_histogram.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 66 </span><span class="caption-text">Graduated classification. Source:</span><a class="headerlink" href="#raduated-classification" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <ol class="arabic simple" start="9">
 <li><p><em>Optional</em>: In the <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> dropdown menu you can select the colours and symbols you want to use.</p></li>
@@ -770,8 +788,11 @@ Standard Deviation</label><div class="sd-tab-content docutils">
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> to put your adjustment into effect.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> to close the window.</p></li>
 </ol>
-<figure class="align-center" id="id5">
+<figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/classification_graduated_basic.png"><img alt="../../_images/classification_graduated_basic.png" src="../../_images/classification_graduated_basic.png" style="width: 900px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Graduated calssification in QGIS.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 </section>
 </section>
