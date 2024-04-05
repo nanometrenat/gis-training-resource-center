@@ -610,20 +610,25 @@ document.write(`
 <h1>Data Analysis with QGIS<a class="headerlink" href="#data-analysis-with-qgis" title="Permalink to this heading">#</a></h1>
 <p>🚧This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
 <p><strong>Competences</strong>:</p>
-<p>This Module covers a general understanding of data analysis, how to create statistics, create buffers, heatmaps, and how to break rivers, roads, or areas into segments. The following modules will cover more complex analysis methods.</p>
+<p>This Module covers a general understanding of data analysis, how to create statistics, create buffers, heatmaps,
+and how to break rivers, roads, or areas into segments. The following modules will cover more complex analysis
+methods.</p>
+<!--ADD: Break rivers into segments is not done yet! EN-->
 <section id="data-spatial-analysis">
 <h2>Data &amp; Spatial Analysis<a class="headerlink" href="#data-spatial-analysis" title="Permalink to this heading">#</a></h2>
-<p>Even in a single layer, a lot of analysis is possible. However, sometimes the things we want to analyse are <strong>split across</strong> multiple layers. In order to get these insights we use the spatial and non spatial GIS-processing tools we learned in the previous modules. In this module, we will look how to apply these tools, collect and work with data to create meaningful insights. We will go over a few examples of data analysis that are common in humanitarian work.</p>
+<p>Even in a single layer, a lot of analysis is possible. However, sometimes the things we want to analyse are <strong>split
+across</strong> multiple layers. In order to get these insights we use the spatial and non spatial GIS-processing tools we
+learned in the previous modules. In this module, we will look how to apply these tools, collect and work with data
+to create meaningful insights. We will go over a few examples of data analysis that are common in humanitarian
+work.</p>
 <section id="spatial-analysis">
 <h3>Spatial analysis<a class="headerlink" href="#spatial-analysis" title="Permalink to this heading">#</a></h3>
-<figure class="align-left" id="spatial-analysis-using-multiple-layers-example">
-<a class="reference internal image-reference" href="../../_images/multiple_layer_data_analysis.png"><img alt="../../_images/multiple_layer_data_analysis.png" src="../../_images/multiple_layer_data_analysis.png" style="width: 300px;" /></a>
+<figure class="align-center" id="spatial-analysis-using-multiple-layers-example">
+<a class="reference internal image-reference" href="../../_images/multiple_layer_data_analysis.png"><img alt="../../_images/multiple_layer_data_analysis.png" src="../../_images/multiple_layer_data_analysis.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 166 </span><span class="caption-text">Spatial analysis means using multiple layers to gain new insights</span><a class="headerlink" href="#spatial-analysis-using-multiple-layers-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<aside class="sidebar">
-<p class="sidebar-title">Spatial Analysis</p>
 <ul class="simple">
 <li><p>A spatial analysis can be a result of combining several layers with different information in a single map.</p></li>
 </ul>
@@ -638,10 +643,11 @@ document.write(`
 <li><p>How do locations <strong>change over time</strong>?</p></li>
 </ul>
 <p>Before doing any sort of processing, you need to <strong>familiarise yourself with the data</strong> and understand it.</p>
-</aside>
 <ol class="arabic simple">
-<li><p>The first step is to read the metadata from the source and understand <strong>what data was collected</strong>, <strong>who collected the data</strong>, <strong>and how the data was collected</strong>.</p></li>
-<li><p>Next, open the attribute table and look at the different features and attributes available. What do the attributes show and what are they called?</p></li>
+<li><p>The first step is to read the metadata from the source and understand <strong>what data was collected</strong>, <strong>who
+collected the data</strong>, <strong>and how the data was collected</strong>.</p></li>
+<li><p>Next, open the attribute table and look at the different features and attributes available. What do the
+attributes show and what are they called?</p></li>
 <li><p>Now you can start visualising the data:</p>
 <ul class="simple">
 <li><p>You can visualize the data cartographically by assigning or categorizing the data using symbols</p></li>
@@ -650,16 +656,22 @@ document.write(`
 </ul>
 </li>
 </ol>
-<p>We are usually looking for ways to <strong>describe</strong> our data to an audience in some ways. Sometimes spatial analysis will be used to provide recommendations for activities. Considering the amount of data available online, it is always important to take a step back and gain perspective when facing this knowledge, these capacities, as well as the data itself before rushing in to manipulate it:</p>
+<p>We are usually looking for ways to <strong>describe</strong> our data to an audience in some ways. Sometimes spatial analysis
+will be used to provide recommendations for activities. Considering the amount of data available online, it is
+always important to take a step back and gain perspective when facing this knowledge, these capacities, as well as
+the data itself before rushing in to manipulate it:</p>
 <ul class="simple">
 <li><p><strong>Reliability</strong>: Can I trust this data?</p></li>
 <li><p><strong>Interest</strong>: Do I need this data?</p></li>
+</ul>
+<ul class="simple">
 <li><p><strong>Usage</strong>: Am I able to use this data?</p></li>
 <li><p><strong>Comprehensiveness</strong>: Is this data complete?</p></li>
 <li><p><strong>Date</strong>: How old is this data?</p></li>
 <li><p><strong>Sensitivity</strong>: Is this data sensitive?</p></li>
 </ul>
-<p>With spatial analysis, you can build predictive models to plan ahead of disasters. <strong>BUT: Not all analysis is complex! Just knowing how many features are in a layer is useful.</strong> Simple analysis includes:</p>
+<p>With spatial analysis, you can build predictive models to plan ahead of disasters. <strong>BUT: Not all analysis is
+complex! Just knowing how many features are in a layer is useful.</strong> Simple analysis includes:</p>
 <ul class="simple">
 <li><p>Ranking</p></li>
 <li><p>Categorizing</p></li>
@@ -667,15 +679,15 @@ document.write(`
 <li><p>Affected Areas</p></li>
 <li><p>Population distribution</p></li>
 </ul>
-<p>It is important to know the <strong>limitations</strong> of the data at your disposal - don’t try to use unsuitable data for analysis (e.g. if you now a survey sample is not representative)</p>
+<p>It is important to know the <strong>limitations</strong> of the data at your disposal - don’t try to use unsuitable data for
+analysis (e.g. if you now a survey sample is not representative)</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Spatial Representation and Analysis
-There are some spatial analysis problems that are difficult to avoid completely. For example the <strong>Modifiable Areal Unit Problem</strong>, where the results look different depending on the unit of analysis.</p>
-<blockquote>
-<div><p>INSERT LINK TO MODIFIABLE AREAL UNIT PROBLEM EXPLANATION</p>
-</div></blockquote>
+There are some spatial analysis problems that are difficult to avoid completely. For example the <strong>Modifiable Areal
+Unit Problem</strong>, where the results look different depending on the unit of analysis.</p>
 </div>
+<!--FIXME: INSERT LINK TO MODIFIABLE AREAL UNIT PROBLEM EXPLANATION -->
 <p><strong>There are two main types of data analysis</strong>:</p>
 <figure class="align-default" id="thematic-analysis-example">
 <a class="reference internal image-reference" href="../../_images/en_thematic_analysis.png"><img alt="../../_images/en_thematic_analysis.png" src="../../_images/en_thematic_analysis.png" style="width: 500px;" /></a>
@@ -933,15 +945,16 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
 </figure>
 <section id="pivoting-tables">
 <h3>Pivoting tables<a class="headerlink" href="#pivoting-tables" title="Permalink to this heading">#</a></h3>
+<!--ADD: Insert example of short form vs. long form or check the example figures-->
 <p>Sometimes, the tables are in a format that is not suitable to join. For example, you have multiple zones per land, making the field <code class="docutils literal notranslate"><span class="pre">CNTRY_NAME</span></code> not suitable for aggregation. In this case, it is useful to pivot the table. This means that the fields for the zones and their respective area size are aggregated under the country. The values of the column <code class="docutils literal notranslate"><span class="pre">ZONE</span></code> will be turned into Columns with the values for the area in these columns. Now you can aggregate this table with additional information that has data on countries.</p>
 <figure class="align-default" id="table-pivot-1">
-<a class="reference internal image-reference" href="../../_images/en_table_pivot_1.png"><img alt="../../_images/en_table_pivot_1.png" src="../../_images/en_table_pivot_1.png" style="width: 350px;" /></a>
+<img alt="../../_images/en_table_pivot_1.png" src="../../_images/en_table_pivot_1.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 175 </span><span class="caption-text">Pivoting tables means transforming values into columns</span><a class="headerlink" href="#table-pivot-1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="table-pivot-2">
-<a class="reference internal image-reference" href="../../_images/en_table_pivot_2.png"><img alt="../../_images/en_table_pivot_2.png" src="../../_images/en_table_pivot_2.png" style="width: 350px;" /></a>
+<img alt="../../_images/en_table_pivot_2.png" src="../../_images/en_table_pivot_2.png" />
 <figcaption>
 <p><span class="caption-number">Fig. 176 </span><span class="caption-text">Values of the column <code class="docutils literal notranslate"><span class="pre">ZONE</span></code> are transformed into columns</span><a class="headerlink" href="#table-pivot-2" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1004,6 +1017,12 @@ Example video: Creating a hex map<div class="sd-summary-down docutils">
 <section id="triangulated-irregular-network">
 <h3>Triangulated Irregular Network<a class="headerlink" href="#triangulated-irregular-network" title="Permalink to this heading">#</a></h3>
 <p>TIN interpolation is commonly called <strong>Delauny triangulation</strong>. This interpolation methods creates a triangular surface with its nearest neighbour points. In order to achieve this, circles are added around known sample points and the intersection of these circles are used as corners of the triangle (see [figure]). TIN interpolation is usually used to compute <strong>digital elevation models</strong> (DEM).</p>
+<figure class="align-default" id="tin-interpolation-example">
+<a class="reference internal image-reference" href="../../_images/tin_interpolation_example.png"><img alt="../../_images/tin_interpolation_example.png" src="../../_images/tin_interpolation_example.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 182 </span><span class="caption-text">Delaunay triangulation with circumcircles around the red sample data. The resulting interpolated TIN surface created from elevation vector points is shown on the right. (Source: Mitas, L., Mitasova, H. (1999). Spatial Interpolation. In: P.Longley, M.F. Goodchild, D.J. Maguire, D.W.Rhind (Eds.), Geographical Information Systems: Principles, Techniques, Management and Applications, Wiley)</span><a class="headerlink" href="#tin-interpolation-example" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The problem with TIN statistical surfaces is that the surfaces are not smooth and may seem jagged, since they are based on triangles of varying sizes. Furthermore, triangulation is no suited to extrapolate data beyond the area where sample points have been collected (adopted from the <a class="reference external" href="https://docs.qgis.org/2.18/de/docs/gentle_gis_introduction/spatial_analysis_interpolation.html">QGIS documentation</a>)</p>
 </section>
 <section id="kriging">
