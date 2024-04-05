@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Map Design &#8212; GIS Resource Training Center</title>
+    <title>Map Design: Symbology and Colors &#8212; GIS Resource Training Center</title>
   
   
   
@@ -222,16 +222,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 4- Representation</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Map Design</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Map Design: Symbology and Colors</a></li>
 
-
-
-<li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_2.html">Print layout</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_2.html">Map Design: The Print layout</a></li>
 
 
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_map_examples.html">Examples for Good Map Design</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_modul_4_exercises.html">Exercises Modul 4- Representation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
@@ -560,7 +556,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Map Design</h1>
+    <h1>Map Design: Symbology and Colors</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -570,7 +566,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Map Design</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Map Design: Symbology and Colors</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap-types-of-maps">Recap: Types of maps</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-variables">Visual variables</a></li>
 </ul>
@@ -579,7 +575,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology">Symbology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colours">Colours</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colour-blindness">Colour Blindness</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colourblindness">Colourblindness</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for Vector data</a><ul class="nav section-nav flex-column">
@@ -593,7 +589,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-labels-and-rule-based-labeling">Single Labels and Rule-based Labeling</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#single-labels">Single Labels:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#single-labels">Single Labels</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-single-labels-to-a-layer">Adding Single Labels to a Layer</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-based-labelling">Rule-based Labelling:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-rule-based-labels-to-a-layer">Adding Rule-based Labels to a Layer</a></li>
@@ -609,15 +605,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inverting-the-colour-ramp">Inverting the colour ramp</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-and-importing-styles">Exporting and Importing Styles</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-and-importing-styles">Exporting and Importing Styles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-or-exporting-styling-settings">Saving or exporting styling settings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-style-into-a-qgis-project">Loading a style into a QGIS-project</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-ifrc-symbols">Using IFRC-Symbols</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-resources">Further Resources</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#further-resources">Further Resources</a></li>
 </ul>
 
             </nav>
@@ -630,8 +624,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="map-design">
-<h1>Map Design<a class="headerlink" href="#map-design" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="map-design-symbology-and-colors">
+<h1>Map Design: Symbology and Colors<a class="headerlink" href="#map-design-symbology-and-colors" title="Permalink to this heading">#</a></h1>
 <p>🚧This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
 <p>The representation of geodata in maps is crucial in order to provide useful location-based insights. This subchapter will cover the basics of good map design, how to create a map design in QGIS as well as common mistakes when designing or interpreting maps.</p>
 <p>In this chapter we will go over the basics of symbology, colours and how to adjust individual layers in QGIS to create comprehensive maps.</p>
@@ -645,14 +639,14 @@ document.write(`
 <p><span class="caption-number">Fig. 74 </span><span class="caption-text">Examples for topographic maps</span><a class="headerlink" href="#topographic-maps-examples" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><strong>Thematic maps</strong> adress the distribution of phenomena, including sometimes statistically processed information, such as population size, disease cases, flooding risk, etc. The representation of elements on thematic maps is decided according to the rules of graphic semiology.</p>
+<p><strong>Thematic maps</strong> address the distribution of phenomena, including sometimes statistically processed information, such as population size, disease cases, flooding risk, etc. The representation of elements on thematic maps is decided according to the rules of graphic semiology.</p>
 <figure class="align-default" id="thematic-maps-examples">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_thematic_maps_examples.png"><img alt="../../_images/en_30.30.2_thematic_maps_examples.png" src="../../_images/en_30.30.2_thematic_maps_examples.png" style="width: 500px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 75 </span><span class="caption-text">Examples for thematic maps</span><a class="headerlink" href="#thematic-maps-examples" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>These two maps use design elements differently. Topographic maps will use symbols and colors out of convention and readibility, whereas in desiging thematic maps, the symbols and colors you use depend on the context and the information you want to convey.</p>
+<p>These two maps use design elements differently. Topographic maps will use symbols and colors out of convention and readibility, whereas in designing thematic maps, the symbols and colors you use depend on the context and the information you want to convey.</p>
 <!--## Graphic Semiology
 
 __Definition__: Graphic semiology refers to a set of rules allowing the use of a __graphic sign systems__ to convey information. Graphic semiology uses visual variables to construct a system of signs, allowing the graphic translation of information.
@@ -692,8 +686,8 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <h1>Symbology and styling<a class="headerlink" href="#symbology-and-styling" title="Permalink to this heading">#</a></h1>
 <p>Depending on the use case and type of geodata at your disposal, there are multiple ways to visualise geodata in a comprehensive format:</p>
 <ul class="simple">
-<li><p>You can change the ‘styling’ and color of the data</p></li>
-<li><p>You can add textlabels</p></li>
+<li><p>You can change the ‘styling’ and color of the data.</p></li>
+<li><p>You can add text labels.</p></li>
 <li><p>Vector and raster data is visualized differently in GIS-Software.</p></li>
 </ul>
 <section id="styling-panel">
@@ -707,7 +701,7 @@ It allows for the expression of <strong>relationship of difference, order, assoc
 <p>For each layer in QGIS, there is a styling panel where you can change the symbology, colour and label for the features in that layer. There are two ways to open the layer styling options in QGIS:</p>
 <ol class="arabic simple">
 <li><p>Right click on the layer you wish to style and select <code class="docutils literal notranslate"><span class="pre">properties</span></code>. A new window will open up with a vertical tab section on the left. Navigate to the <code class="docutils literal notranslate"><span class="pre">symbology</span></code> tab.</p></li>
-<li><p>Open the layer styling panel by enabling it under <code class="docutils literal notranslate"><span class="pre">View</span></code>&gt;<code class="docutils literal notranslate"><span class="pre">Panels</span></code>&gt;<code class="docutils literal notranslate"><span class="pre">Styling</span> <span class="pre">Panel</span></code>. Usually, the</p></li>
+<li><p>Open the layer styling panel by enabling it under <code class="docutils literal notranslate"><span class="pre">View</span></code>&gt;<code class="docutils literal notranslate"><span class="pre">Panels</span></code>&gt;<code class="docutils literal notranslate"><span class="pre">Styling</span> <span class="pre">Panel</span></code>. Usually, the panel will appear on the right side of map canvas.</p></li>
 </ol>
 <p>On the left of the styling panel you can choose the different tabs to access different styling options.</p>
 <p>In the styling panel you can change the styling for all features of a layer, set up categories for different symbols, create labels, and create colour ramps to differentiate between features with variable values.</p>
@@ -734,8 +728,8 @@ Video: Opening the styling panel<div class="sd-summary-down docutils">
 </section>
 <section id="colours">
 <h2>Colours<a class="headerlink" href="#colours" title="Permalink to this heading">#</a></h2>
-<p>Colours are arguably the most striking visual variables as they are easily disinguishable. However, depending on the type of data and the information you wish to convey, there are a few things to consider when choosing a colour scheme for your map. The most important variables for colours are the <strong>hue</strong>, the <strong>value</strong> (saturation) and the <strong>transparency</strong>.</p>
-<p>Colours schemes can be <strong>categorial, sequential, or diverging</strong>. If you wish to display different types of buildings or roads, the colour schemes should be categorial. Colour gradients, either sequential or diverging, are used for numerical data or data that can be ordered. For example, for the population sizes of districts a sequential colouring schemes is best to show the relative difference between the values. However, if the data has positive <strong>and</strong> negative values, a diverging colour gradient should be used.</p>
+<p>Colours are arguably the most striking visual variables as they are easily distinguishable. However, depending on the type of data and the information you wish to convey, there are a few things to consider when choosing a colour scheme for your map. The most important variables for colours are the <strong>hue</strong>, the <strong>value</strong> (saturation) and the <strong>transparency</strong>.</p>
+<p>Colours schemes can be <strong>categorial, sequential, or diverging</strong>. If you wish to display different types of buildings or roads, the colour schemes should be catoegrial. Colour gradients, either sequential or diverging, are used for numerical data or data that can be ordered. For example, for the population sizes of districts a sequential colouring schemes is best to show the relative difference between the values. However, if the data has positive <strong>and</strong> negative values, a diverging colour gradient should be used.</p>
 <figure class="align-default" id="colouring-schemes">
 <a class="reference internal image-reference" href="../../_images/en_colour_gradients_qualities.png"><img alt="../../_images/en_colour_gradients_qualities.png" src="../../_images/en_colour_gradients_qualities.png" style="width: 750px;" /></a>
 <figcaption>
@@ -760,8 +754,8 @@ Video: Opening the styling panel<div class="sd-summary-down docutils">
 <p class="admonition-title">Tip</p>
 <p>The <span class="xref myst">Colourbrewer website</span> is a quick and useful tool to select and generate colour palettes for your use case.</p>
 </div>
-<section id="colour-blindness">
-<h3>Colour Blindness<a class="headerlink" href="#colour-blindness" title="Permalink to this heading">#</a></h3>
+<section id="colourblindness">
+<h3>Colourblindness<a class="headerlink" href="#colourblindness" title="Permalink to this heading">#</a></h3>
 <p>When choosing the colours, you have to keep in mind that colour gradients (especially diverging Red-Green gradients) can be hard or impossible to distinguish for persons with colour blindness.</p>
 <figure class="align-default" id="colour-blindness-examples">
 <a class="reference internal image-reference" href="../../_images/Colour_Blindness.png"><img alt="../../_images/Colour_Blindness.png" src="../../_images/Colour_Blindness.png" style="width: 750px;" /></a>
@@ -819,9 +813,9 @@ Most simple markers consist of a <strong>fill</strong> and an <strong>outline</s
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">/</span> <span class="pre">Export</span></code> and select <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">items</span></code></p></li>
 <li><p>Navigate to the location where you have saved the library or style and select the file (in most cases .qml but the file type can also be .xml)</p></li>
 <li><p>Now you can select which symbols you wish to import. In most cases, you can select all symbols.</p></li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Import</span></code>
-The new SVG-symbols are in your SVG library.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Import</span></code></p></li>
 </ol>
+<p>The new SVG-symbols are in your SVG library.</p>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_using_svg_symbols.mp4"></video></p>
 </section>
 </section>
@@ -833,7 +827,7 @@ The new SVG-symbols are in your SVG library.</p></li>
 <h3>Single Labels and Rule-based Labeling<a class="headerlink" href="#single-labels-and-rule-based-labeling" title="Permalink to this heading">#</a></h3>
 <p>QGIS offers two methods to display labels: <strong>Single Labels</strong> and <strong>Rule-based Labeling</strong></p>
 <section id="single-labels">
-<h4>Single Labels:<a class="headerlink" href="#single-labels" title="Permalink to this heading">#</a></h4>
+<h4>Single Labels<a class="headerlink" href="#single-labels" title="Permalink to this heading">#</a></h4>
 <p>Creates a single label style for every feature in the layer. You can select a attribute (value) which will be displayed. For example, the name of a settlement. You need to know which attribute displays the information you want to display. Look at the attribute table of the dataset to find it out.</p>
 <figure class="align-default" id="single-labels-example">
 <a class="reference internal image-reference" href="../../_images/labels_single_labels_example_nga_adm1.png"><img alt="../../_images/labels_single_labels_example_nga_adm1.png" src="../../_images/labels_single_labels_example_nga_adm1.png" style="width: 600px;" /></a>
@@ -844,7 +838,7 @@ The new SVG-symbols are in your SVG library.</p></li>
 <figure class="align-default" id="assigning-value-to-labels">
 <a class="reference internal image-reference" href="../../_images/en_30.30.2_assigning_value_to_labels.png"><img alt="../../_images/en_30.30.2_assigning_value_to_labels.png" src="../../_images/en_30.30.2_assigning_value_to_labels.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 85 </span><span class="caption-text">Assigning the coorect attribute value in the labeling options. QGIS needs to know which attribute (column) of the attribute table should be displayed as a label. In this case, we want the name of the administrative region (<code class="docutils literal notranslate"><span class="pre">ADM1_EN</span></code>) to be displayed.</span><a class="headerlink" href="#assigning-value-to-labels" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 85 </span><span class="caption-text">Assigning the correct attribute value in the labeling options. QGIS needs to know which attribute (column) of the attribute table should be displayed as a label. In this case, we want the name of the administrative region (<code class="docutils literal notranslate"><span class="pre">ADM1_EN</span></code>) to be displayed.</span><a class="headerlink" href="#assigning-value-to-labels" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -959,7 +953,7 @@ Sometimes the labels can obstruct other symbols. In that case, you can either ad
 <p>By default, QGIS renders the labels so that they don’t overlap with other labels. This means that not all the labels will be visible if the data is dense or rendered close to each other. You can optimize the rendering under the rendering option.</p>
 </div>
 <p>If you are interested in how to set up and style labels further, take a look at these wiki articles:</p>
-<p>Also check out the article “<a class="reference external" href="https://www.axismaps.com/guide/labeling">Labeling and text hierarchy in cartography</a>” by Axis Maps.</p>
+<p>You can also read further in the article “<a class="reference external" href="https://www.axismaps.com/guide/labeling">Labeling and text hierarchy in cartography</a>” by Axis Maps.</p>
 </section>
 </section>
 </section>
@@ -972,8 +966,8 @@ Sometimes the labels can obstruct other symbols. In that case, you can either ad
 <ol class="arabic simple">
 <li><p>Open the <code class="docutils literal notranslate"><span class="pre">styling</span> <span class="pre">panel</span></code> for the raster layer</p></li>
 <li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">Symbology</span> <span class="pre">tab</span></code></p></li>
-<li><p>By default, the colour scheme is set to Singleband gray (if you only have one colour band in the data set). Click on <code class="docutils literal notranslate"><span class="pre">Singleband</span> <span class="pre">Gray</span></code> and switch to <code class="docutils literal notranslate"><span class="pre">Singleband</span> <span class="pre">pseudocolour</span></code></p></li>
-<li><p>Click on <strong>the arrow to the right of the colour ramp</strong>. Here you can choose a premade colour ramp</p></li>
+<li><p>By default, the colour scheme is set to Singleband Gray (if you only have one colour band in the data set). Click on <code class="docutils literal notranslate"><span class="pre">Singleband</span> <span class="pre">Gray</span></code> and switch to <code class="docutils literal notranslate"><span class="pre">Singleband</span> <span class="pre">Pseudocolour</span></code></p></li>
+<li><p>Click on <strong>the arrow to the right of the colour ramp</strong>. Here you can choose a pre-made colour ramp</p></li>
 <li><p>You can modify the colour ramp by <strong>clicking on the colour ramp</strong>.</p></li>
 </ol>
 <figure class="align-default" id="raster-data-colour-gradient">
@@ -985,11 +979,11 @@ Sometimes the labels can obstruct other symbols. In that case, you can either ad
 <p>In the colour ramp selector, you can adjust each colour step. On the bottom, you can see a plot for the Hue, <strong>Saturation</strong>, <strong>Lightness</strong> and <strong>Opacity</strong>. Especially latter three are useful to see how your colour ramp will translate. Gradients from light to dark are easier to read: Check if the plot for the <strong>Lightness</strong> has a more or less linear plot.</p>
 <section id="styling-a-digital-elevation-model">
 <h4>Styling a digital elevation model<a class="headerlink" href="#styling-a-digital-elevation-model" title="Permalink to this heading">#</a></h4>
-<p>Elevation data sets are frequently used to communicate the terrain on a map. By default, an elevation model will be displayed with a gray colour ramp. However, if you don’t need the to know the elevation at certain points, you can choose to display the <strong>hillshade</strong> of the terrain. Hillshading will simulate the shadow of the terrain as if it would be exposed to a lightsource. In this example, we will use the elevation raster data (.tiff) of Algeria from the Humanitarian Data Exchange platform (<a class="reference external" href="http://humdata.org">humdata.org</a>) To achieve this,</p>
+<p>Elevation data sets are frequently used to communicate the terrain on a map. By default, an elevation model will be displayed with a gray colour ramp. However, if you don’t need the to know the elevation at certain points, you can choose to display the <strong>hillshade</strong> of the terrain. Hillshading will simulate the shadow of the terrain as if it would be exposed to a light source. In this example, we will use the elevation raster data (.tiff) of Algeria from the Humanitarian Data Exchange platform (<a class="reference external" href="http://humdata.org">humdata.org</a>) To achieve this,</p>
 <ol class="arabic simple">
 <li><p>Open the <code class="docutils literal notranslate"><span class="pre">symbology</span></code> tab</p></li>
-<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Render</span> <span class="pre">type</span></code> and select <code class="docutils literal notranslate"><span class="pre">Hillshade</span></code>. You will have an option to select the direction of the light. Conventionally, the lightsource is positioned in the North-West, so we can keep the default settings. In some cases with rough terrain, it can be useful to make the Hillshade <strong>Multidirectional</strong>.</p></li>
-<li><p>The Hillshade will be very dark and cover most of the map. We need to make it lighter…</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Render</span> <span class="pre">type</span></code> and select <code class="docutils literal notranslate"><span class="pre">Hillshade</span></code>. You will have an option to select the direction of the light. Conventionally, the light source is positioned in the North-West, so we can keep the default settings. In some cases with rough terrain, it can be useful to make the hillshade <strong>Multidirectional</strong>.</p></li>
+<li><p>The hillshade will be very dark and cover most of the map. We need to make it lighter…</p></li>
 </ol>
 <!--ADD: Video-->
 </section>
@@ -1003,14 +997,14 @@ Sometimes the labels can obstruct other symbols. In that case, you can either ad
 </ol>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="exporting-and-importing-styles">
-<h1>Exporting and Importing Styles<a class="headerlink" href="#exporting-and-importing-styles" title="Permalink to this heading">#</a></h1>
-<p>The layers in QGIS are saved separately from the settings and styles of a QGIS Project. This means that if you load the same layers into a different QGIS-project, the symbology and styling of the data will be different. QGIS lets you save the symbology and styling of a layer as a seperate file (<code class="docutils literal notranslate"><span class="pre">.qml</span></code>-files). Working with <code class="docutils literal notranslate"><span class="pre">.qml</span></code>-files saves you a lot of work and assures consistency between your maps.</p>
+<section id="exporting-and-importing-styles">
+<h2>Exporting and Importing Styles<a class="headerlink" href="#exporting-and-importing-styles" title="Permalink to this heading">#</a></h2>
+<p>The layers in QGIS are saved separately from the settings and styles of a QGIS Project. This means that if you load the same layers into a different QGIS-project, the symbology and styling of the data will be different. QGIS lets you save the symbology and styling of a layer as a separate file (<code class="docutils literal notranslate"><span class="pre">.qml</span></code>-files). Working with <code class="docutils literal notranslate"><span class="pre">.qml</span></code>-files saves you a lot of work and assures consistency between your maps.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">.qml</span></code>-file saves the information of a particular layer. This includes the colours, outlines, shapes, labelling, as well as the Layer configuration, attribute table settings, and other options you have set for a layer in your QGIS-project, that are not related done to the data files themselves. You can choose wether to save only the colour symbology or any additional information.</p>
 <p>You can export a style into the same folder as the data so your colleagues can apply the same styling when loading the data into QGIS.
 Some organisations may also use standarized symbols or colours in their maps.</p>
 <p>For example, if you want to send a layer to your colleague with the same styling as you, it is best to check the “<strong>Layer properties</strong>”, “<strong>Symbology</strong>”, and “<strong>Labels</strong>” categories (and any additional styling options you have set). If you only wish to save a certain colouring, line thickness, or labeling style, you only need to check the respective boxes.</p>
+</section>
 <section id="saving-or-exporting-styling-settings">
 <h2>Saving or exporting styling settings<a class="headerlink" href="#saving-or-exporting-styling-settings" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
@@ -1061,16 +1055,15 @@ Some organisations may also use standarized symbols or colours in their maps.</p
 <p>Make sure to check out the other resources available in the resource sharing plugin and see if they are useful to you.</p>
 </div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="further-resources">
-<h1>Further Resources<a class="headerlink" href="#further-resources" title="Permalink to this heading">#</a></h1>
+<section id="further-resources">
+<h2>Further Resources<a class="headerlink" href="#further-resources" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.axismaps.com/guide">Cartography Guide</a> by <span class="xref myst">Axis Maps</span></p></li>
 <li><p><a class="reference external" href="https://www.axismaps.com/guide">Cartography Guide</a> by <span class="xref myst">Axis Maps</span></p></li>
 <li><p>Tutorial on <a class="reference external" href="https://learn-sims.org/geospatial/importing-sims-color-palette-to-qgis/">how to import the SIMS Color Palette into QGIS</a></p></li>
 <li><p>Tutorial on <a class="reference external" href="https://learn-sims.org/geospatial/creating-a-shaded-relief-map-in-qgis/">how to create a shaded relief map in QGIS</a></p></li>
 <li><p><a class="reference external" href="https://learn-sims.org/information-design/creating-a-3w-who-what-where-infographic/">Creating a 3W (Who, What, Where) Infographic</a></p></li>
 </ul>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -1138,7 +1131,7 @@ Some organisations may also use standarized symbols or colours in their maps.</p
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Map Design</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Map Design: Symbology and Colors</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recap-types-of-maps">Recap: Types of maps</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-variables">Visual variables</a></li>
 </ul>
@@ -1147,7 +1140,7 @@ Some organisations may also use standarized symbols or colours in their maps.</p
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-panel">Styling Panel</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology">Symbology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colours">Colours</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colour-blindness">Colour Blindness</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#colourblindness">Colourblindness</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symbology-for-vector-data">Symbology for Vector data</a><ul class="nav section-nav flex-column">
@@ -1161,7 +1154,7 @@ Some organisations may also use standarized symbols or colours in their maps.</p
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-labels-and-rule-based-labeling">Single Labels and Rule-based Labeling</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#single-labels">Single Labels:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#single-labels">Single Labels</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-single-labels-to-a-layer">Adding Single Labels to a Layer</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-based-labelling">Rule-based Labelling:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-rule-based-labels-to-a-layer">Adding Rule-based Labels to a Layer</a></li>
@@ -1177,15 +1170,13 @@ Some organisations may also use standarized symbols or colours in their maps.</p
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inverting-the-colour-ramp">Inverting the colour ramp</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-and-importing-styles">Exporting and Importing Styles</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-and-importing-styles">Exporting and Importing Styles</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-or-exporting-styling-settings">Saving or exporting styling settings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-style-into-a-qgis-project">Loading a style into a QGIS-project</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-ifrc-symbols">Using IFRC-Symbols</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-resources">Further Resources</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#further-resources">Further Resources</a></li>
 </ul>
 
   </nav></div>
