@@ -571,10 +571,24 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Print layout</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-composition">Map composition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-print-layout-composer">Understanding the Print Layout Composer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-elements-to-the-print-layout">Adding elements to the print layout</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-map">Adding a new map</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-title-or-a-text-box">Adding a title or a text box</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-image-or-logo">Adding an image or logo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-legend">Adding a legend</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-scale-bar">Adding a scale bar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-overview-map">Adding an overview map</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-the-print-layout">Exporting the print layout</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#map-templates">Map templates</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-atlas-function-automatic-map-generation">The Atlas function (automatic map generation)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-atlas-function-automatic-map-generation">The Atlas function (automatic map generation)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-an-atlas">Generate an Atlas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-overview-maps-with-an-atlas">Setting up Overview maps with an atlas</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#good-practices-and-common-mistakes-in-mapping">Good practices and common mistakes in mapping</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Map composition</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-elements-of-a-map">Key elements of a map</a></li>
@@ -632,7 +646,7 @@ document.write(`
 </li>
 <li><p>A well structure page layout helps the reader discern the different information on the map and makes it easier to know where to look for certain information. Frames and boxes can structure the page layout. For example, a legend can be put on the bottom or to the right of the map.</p></li>
 </ul>
-<p>In the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_examples.html">next chapter</a>, we will take a look at good map design and discuss how to recreate design elements.</p>
+<!--In the [next chapter](https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_examples.html), we will take a look at good map design and discuss how to recreate design elements. -->
 </section>
 <section id="understanding-the-print-layout-composer">
 <h2>Understanding the Print Layout Composer<a class="headerlink" href="#understanding-the-print-layout-composer" title="Permalink to this heading">#</a></h2>
@@ -658,6 +672,220 @@ document.write(`
 </ul>
 <p><em>A4 and A3 are the most commonly used sizes for maps</em></p>
 </section>
+<section id="adding-elements-to-the-print-layout">
+<h2>Adding elements to the print layout<a class="headerlink" href="#adding-elements-to-the-print-layout" title="Permalink to this heading">#</a></h2>
+<section id="adding-a-new-map">
+<h3>Adding a new map<a class="headerlink" href="#adding-a-new-map" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add a new map by clicking on the <strong>Add map</strong> button on the <strong>toolbar on the left</strong> and __drag a rectangle on the map canvas.</p></li>
+<li><p>To move the map on the canvas, simply <strong>select the map</strong> and <strong>drag</strong> it with your mouse</p></li>
+<li><p>To move within a map select <strong>Move item content</strong> button on the</p></li>
+<li><p>To zoom in on the map, while using the <strong>Move item content</strong> button, you can <strong>Press CTRL + scroll the mouse wheel</strong> (gently) or enter the scale manually in the item properties</p></li>
+</ul>
+<figure class="align-default" id="add-a-new-map">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_adding_a_map.png"><img alt="../../_images/en_30.30.2_adding_a_map.png" src="../../_images/en_30.30.2_adding_a_map.png" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 96 </span><span class="caption-text">Adding a new map to the Print Layout</span><a class="headerlink" href="#add-a-new-map" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Adding a new map</label><div class="sd-tab-content docutils">
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_adding_a_new_map
+.mp4"></video></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Moving and scaling the map</label><div class="sd-tab-content docutils">
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_moving_the_map
+.mp4"></video></p>
+</div>
+</div>
+</section>
+<section id="adding-a-title-or-a-text-box">
+<h3>Adding a title or a text box<a class="headerlink" href="#adding-a-title-or-a-text-box" title="Permalink to this heading">#</a></h3>
+<p>A title should describe the phenomenen represented on the map.</p>
+<ul class="simple">
+<li><p>To add text (title, explanations), use the <strong>Add Label</strong> tool and draw a rectangle of the desired size.</p></li>
+<li><p>In the <strong>Item Properties</strong> panel (on the right of your screen) you can <strong>enter your text</strong> and <strong>change the font, style, colour, etc.</strong> (_Remember to use the scroll bar in the window to see all the options).</p></li>
+</ul>
+<figure class="align-default" id="add-text-to-the-print-layout">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_text.png"><img alt="../../_images/en_30.30.2_print_layout_add_text.png" src="../../_images/en_30.30.2_print_layout_add_text.png" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 97 </span><span class="caption-text">Adding text to the print Layout</span><a class="headerlink" href="#add-text-to-the-print-layout" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Adding a textbox<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_print_layout_adding_a_title
+.mp4"></video></p>
+</div>
+</details></section>
+<section id="adding-an-image-or-logo">
+<h3>Adding an image or logo<a class="headerlink" href="#adding-an-image-or-logo" title="Permalink to this heading">#</a></h3>
+<p>If you are working for an organisation, most likely you will add the logo of that organization on the maps you produce.</p>
+<ol class="arabic simple">
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">image</span></code> in the left toolbar.</p></li>
+<li><p>Drag a rectangle on the canvas.</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Item</span> <span class="pre">properties</span></code> tab, you will have the option to choose an SVG image from your SVG-library in QGIS or choose a <strong>Raster image</strong>. Most image files are Raster images.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Raster</span> <span class="pre">image</span></code> and click on the <code class="docutils literal notranslate"><span class="pre">...</span></code> to choose the location of the image.</p></li>
+<li><p>Your image will appear in the print layout. In order to make sure that the image does not get distorted, leave the <code class="docutils literal notranslate"><span class="pre">Resize</span> <span class="pre">Mode</span></code> on “Zoom”.</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z"></path></svg><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_adding_a_raster_image.mp4"></video></p>
+</div>
+</details></section>
+<section id="adding-a-legend">
+<h3>Adding a legend<a class="headerlink" href="#adding-a-legend" title="Permalink to this heading">#</a></h3>
+<p>Before adding a legend, make sure that:</p>
+<ul class="simple">
+<li><p>All your layers have an explicit name (“rivers”, “primary roads”,…)</p></li>
+<li><p>You use the final version of your map (no more layers to add, move, rename or modify). You can still modify them later but you will have to redo the legend.</p></li>
+</ul>
+<p>To add a legend, you can use the <strong>add legend</strong> button on the <strong>left toolbar</strong>.</p>
+<figure class="align-default" id="add-a-legend-to-the-print-layout">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_legend.png"><img alt="../../_images/en_30.30.2_print_layout_add_legend.png" src="../../_images/en_30.30.2_print_layout_add_legend.png" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 98 </span><span class="caption-text">Adding a legend to the print layout</span><a class="headerlink" href="#add-a-legend-to-the-print-layout" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the <strong>item properties</strong> panel, if you keep the <strong>‘Auto update’</strong> option checked, new layers added to your project will automatically be added to the legend but you cannot control them individually (rename if necessary, reorder ot remove items).<br />
+Once the option is unchecked, you can update the name of the layers, group them, remove or reorganise them, etc.</p>
+<p>If you have to many items on your legend, and they don’t fit on your map horizontally, you can also split the legend into several columns by navigating through the <code class="docutils literal notranslate"><span class="pre">Item</span> <span class="pre">Properties</span></code>-panel, expand the <code class="docutils literal notranslate"><span class="pre">Columns</span></code>-section and increase the <strong>Count</strong>.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Adding a legend</label><div class="sd-tab-content docutils">
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_adding_a_legend
+.mp4"></video></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Editing the legend</label><div class="sd-tab-content docutils">
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_editing_the_legend
+.mp4"></video></p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+2-Column legend</label><div class="sd-tab-content docutils">
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_multiple_columns_legend
+.mp4"></video></p>
+</div>
+</div>
+</section>
+<section id="adding-a-scale-bar">
+<h3>Adding a scale bar<a class="headerlink" href="#adding-a-scale-bar" title="Permalink to this heading">#</a></h3>
+<p>Before adding a scale bar, select your main map and check in the <strong>Item Properties</strong> panel that the <strong>Scale</strong> fielld has a <strong>round number</strong></p>
+<figure class="align-default" id="round-number-for-scale">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_scale.png"><img alt="../../_images/en_30.30.2_print_layout_scale.png" src="../../_images/en_30.30.2_print_layout_scale.png" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 99 </span><span class="caption-text">Make sure that the scale is at a round number</span><a class="headerlink" href="#round-number-for-scale" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>To add a scale bar, you can use the <strong>add scale bar</strong> button on the <strong>left toolbar</strong>. In the <strong>Item Properties</strong> panel, customize the following functions</p>
+<ul class="simple">
+<li><p>Which Map <strong>is related to the scale</strong></p></li>
+<li><p><strong>Unit system of the bar</strong> (metres, miles, degrees)</p></li>
+<li><p><strong>Segments on the left</strong>: segments shown before 0 m (always set to 0).</p></li>
+<li><p><strong>Fixed width</strong>: define the width of each segment (e.g. 1 km, 10 km, 50 km, …).</p></li>
+<li><p><strong>Height</strong>: height (thickness) of the scale bar</p></li>
+</ul>
+<p><em>There are many other options to customize the scale bar (change the font, colours, etc.).</em></p>
+<figure class="align-default" id="add-scale-bar">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_scale_bar.png"><img alt="../../_images/en_30.30.2_print_layout_add_scale_bar.png" src="../../_images/en_30.30.2_print_layout_add_scale_bar.png" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 100 </span><span class="caption-text">Add and customize the scale bar</span><a class="headerlink" href="#add-scale-bar" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z"></path></svg><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_print_layout_adding_scalebar
+.mp4"></video></p>
+</div>
+</details></section>
+<section id="adding-an-overview-map">
+<h3>Adding an overview map<a class="headerlink" href="#adding-an-overview-map" title="Permalink to this heading">#</a></h3>
+<p>Adding an overview map in the corner of your map will help locate the area you are viewing on the main map.</p>
+<p>To create an overview map, you need to follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Prepare a <strong>layer with national or subnational borders or important landmarks</strong> in your project (e.g: Administrative boundaries, Capitals)</p></li>
+<li><p><strong>Insert the overview map</strong> into your print layout (in the bottom right corner for example)</p></li>
+<li><p><strong>Lock the new map</strong> in the Item properties panel</p></li>
+<li><p>Add a rectangle to display the extent of your main map</p>
+<ol class="arabic simple">
+<li><p>Go to the <strong>properties</strong> of your Main map &gt; scroll down until you see <strong>“Overviews”</strong></p></li>
+<li><p>Add an Overview by clicking on the <strong>“+” icon</strong></p></li>
+<li><p><strong>Link the main map</strong> by selecting it in the <strong>“Map frame”</strong> option</p></li>
+</ol>
+</li>
+</ol>
+<figure class="align-default" id="overview-map-preparation">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_overview_map_preparations.png"><img alt="../../_images/en_30.30.2_print_layout_overview_map_preparations.png" src="../../_images/en_30.30.2_print_layout_overview_map_preparations.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 101 </span><span class="caption-text">An overview map should show important landmarks and borders</span><a class="headerlink" href="#overview-map-preparation" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="add-overview-map">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_overview_map.png"><img alt="../../_images/en_30.30.2_print_layout_add_overview_map.png" src="../../_images/en_30.30.2_print_layout_add_overview_map.png" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 102 </span><span class="caption-text">Add an overview map and <strong>lock the layer</strong></span><a class="headerlink" href="#add-overview-map" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="create-an-overview">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png"><img alt="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png" src="../../_images/en_30.30.2_print_layout_add_map_extent_overview_map.png" style="width: 750px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 103 </span><span class="caption-text">Add a the extent of the main map to your overview map (the red rectangle on the overview)</span><a class="headerlink" href="#create-an-overview" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Setting up an overview map<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_adding_overview_maps
+.mp4"></video></p>
+</div>
+</details><div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This method requires you to be sure that you are not going to modify the oveview map, as once the layers are locked, they will keep the style, and any updates will not affect the overview map.</p>
+</div>
+</section>
+</section>
+<section id="exporting-the-print-layout">
+<h2>Exporting the print layout<a class="headerlink" href="#exporting-the-print-layout" title="Permalink to this heading">#</a></h2>
+<p>Once you are finished with the map composition, it is time to export export the print layout as a PDF or SVG file.</p>
+<ol class="arabic simple">
+<li><p>On the Toolbar click on the <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">as</span> <span class="pre">PDF</span></code>-button.</p></li>
+<li><p>Give the new file a name and select the location you want to save it.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p></li>
+<li><p>A new window “PDF Export Options” will open. Here you can adjust the compression algorithm. For the best results, select the lossless image compression.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Save</span></code> again.</p></li>
+<li><p>A new green bar will pop up underneath the toolbars. Click on the file link to <strong>review the exported map</strong>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to check the map after exporting the PDF as some design elements might have changed in the exporting process.</p>
+</div>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="map-templates">
 <h1>Map templates<a class="headerlink" href="#map-templates" title="Permalink to this heading">#</a></h1>
@@ -667,6 +895,49 @@ If you work for an organisation that frequently publishes maps, or you need to c
 <p class="admonition-title">Note</p>
 <p>The individual layers, maps and images are not saved in the template. However, if you have the same layers in the project you load the template into, the legend will update accordingly.</p>
 </div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Saving a template</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p>Once you are satisfied with your map layout, click on the <img alt="" src="../../_images/en_30.30.2_save_as_template.png" />-symbol to save it as a new template.</p></li>
+<li><p>Choose a location where you want to save the template. Ideally, you should choose the template directory (see tip).</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p></li>
+<li><p>You can open the template by dragging it into a QGIS-project.</p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_saving_layout_template
+.mp4"></video></p>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Opening a template</label><div class="sd-tab-content docutils">
+<p>You can drag and drop template-files (<code class="docutils literal notranslate"><span class="pre">.qpt</span></code>, QGIS template file) into QGIS or use the <strong>Layout manager</strong>.</p>
+<ol class="arabic simple">
+<li><p>Open the Layout manager under <code class="docutils literal notranslate"><span class="pre">Layout</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Layout</span> <span class="pre">Manager</span></code></p></li>
+<li><p>Navigate to the section “<strong>New from Template</strong>”</p></li>
+<li><p>Choose <code class="docutils literal notranslate"><span class="pre">Specific</span></code> and select the location where you saved your template</p></li>
+<li><p>Click open.</p></li>
+</ol>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_opening_template
+.mp4"></video></p>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Template directory</label><div class="sd-tab-content docutils">
+<p>The template directory is where QGIS is looking for layout templates. If you have templates saved here, you can load templates directly through the layout manager without selecting the file.<br />
+On windows, the file path is <code class="docutils literal notranslate"><span class="pre">\Users\AppData\Roaming\QGIS\QGIS3\profiles\default\composer_templates</span></code>.
+On mac,</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_template_directory
+.mp4"></video></p>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The layout manager in QGIS already has a dedicated location for map templates. On windows, the file path is <code class="docutils literal notranslate"><span class="pre">\Users\AppData\Roaming\QGIS\QGIS3\profiles\default\composer_templates</span></code>.
+On mac,
+If you save templates here, you can load templates directly through the layout manager without looking for the file.
+You can also add file paths in the QGIS-template setting</p>
+</div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="the-atlas-function-automatic-map-generation">
 <h1>The Atlas function (automatic map generation)<a class="headerlink" href="#the-atlas-function-automatic-map-generation" title="Permalink to this heading">#</a></h1>
@@ -675,10 +946,44 @@ If you work for an organisation that frequently publishes maps, or you need to c
 <figure class="align-default" id="atlas-toolbar">
 <a class="reference internal image-reference" href="../../_images/en_atlas_toolbar.png"><img alt="../../_images/en_atlas_toolbar.png" src="../../_images/en_atlas_toolbar.png" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 96 </span><span class="caption-text">Atlas Toolbar</span><a class="headerlink" href="#atlas-toolbar" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 104 </span><span class="caption-text">Atlas Toolbar</span><a class="headerlink" href="#atlas-toolbar" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>If you can’t see the Atlas Tools, you must first activate the Atlas Toolbar under <code class="docutils literal notranslate"><span class="pre">View</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Toolbars</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Atlas</span> <span class="pre">Toolbar</span></code></p>
+<section id="generate-an-atlas">
+<h2>Generate an Atlas<a class="headerlink" href="#generate-an-atlas" title="Permalink to this heading">#</a></h2>
+<p>An Atlas will generate a new page with the same map layout for each feature in a layer. For most purposes, it useful to first create a map layout with the elements such as legend, sources and overview map and then insert the map item that will be controlled by the Atlas. To generate an Atlas:</p>
+<ol class="arabic simple">
+<li><p>Click on the Atlas Settings icon in the Atlas Toolbar</p></li>
+<li><p>In the new window, activate the <strong>Generate an Atlas</strong> option</p></li>
+<li><p>Select the <strong>Coverage Layer</strong>. This will determine the features or polygons that will be displayed on a page. In our example, we will use the subnational administrative districts in Nigeria (<code class="docutils literal notranslate"><span class="pre">Adm1</span></code>).</p></li>
+<li><p>Select the <strong>Page Name</strong>. This should be the name of the subnational district or location that is displayed on that page. To display the name of the district, we will choose <code class="docutils literal notranslate"><span class="pre">ADM1_REF</span></code>.</p></li>
+<li><p>Now let’s add a map to the empty print layout.</p></li>
+<li><p>Click on the map and navigate to the <strong>Layer Properties</strong> window on the right.</p></li>
+<li><p>Scroll down until you see the option <code class="docutils literal notranslate"><span class="pre">Controlled</span> <span class="pre">by</span> <span class="pre">Atlas</span></code> and activate it.</p></li>
+<li><p>Now activate the preview of the Atlas in the <strong>Atlas Toolbar</strong>. Otherwise, the print layout will not update to show you the atlas page. You can click through each page to see how it looks. Depending on the amount of features on your map, they may take a while to render.</p></li>
+<li><p>Now you can adjust the <strong>Margin options</strong> to best fit the readibility of the map. By default, it is set to 10% and this should fit most purposes.</p></li>
+<li><p>Before printing or exporting the atlas make sure to check every page that other elements of the map do not cover the represented region.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For now the only item in the print layout that is being controlled by the Atlas is the Map we added. The other elements of the Map are the same on every page.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Video: Setting up an Atlas<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_setting_up_an_atlas
+.mp4"></video></p>
+</div>
+</details></section>
+<section id="setting-up-overview-maps-with-an-atlas">
+<h2>Setting up Overview maps with an atlas<a class="headerlink" href="#setting-up-overview-maps-with-an-atlas" title="Permalink to this heading">#</a></h2>
+<p>Setting up Overview maps with an atlas works in the same way as setting it up for a normal map. As long as you select the Map controlled by the atlas as the <code class="docutils literal notranslate"><span class="pre">map</span> <span class="pre">frame</span></code>, it will update automatically.</p>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="good-practices-and-common-mistakes-in-mapping">
 <h1>Good practices and common mistakes in mapping<a class="headerlink" href="#good-practices-and-common-mistakes-in-mapping" title="Permalink to this heading">#</a></h1>
@@ -687,7 +992,7 @@ If you work for an organisation that frequently publishes maps, or you need to c
 <h2>Map composition<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <section id="key-elements-of-a-map">
 <h3>Key elements of a map<a class="headerlink" href="#key-elements-of-a-map" title="Permalink to this heading">#</a></h3>
-<p>A map is <strong>never complete without the following elements</strong>:</p>
+<p>In order to provide your audience and readers with sufficient information so they can contextualise the map, it is important to add these key map elements:</p>
 <ul class="simple">
 <li><p>Title</p></li>
 <li><p>Legend</p></li>
@@ -700,7 +1005,7 @@ If you work for an organisation that frequently publishes maps, or you need to c
 <figure class="align-default" id="good-map-composition-example">
 <a class="reference internal image-reference" href="../../_images/en_good_map_composition_example.png"><img alt="../../_images/en_good_map_composition_example.png" src="../../_images/en_good_map_composition_example.png" style="width: 750px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 97 </span><span class="caption-text">Elements of good map composition</span><a class="headerlink" href="#good-map-composition-example" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 105 </span><span class="caption-text">Elements of good map composition</span><a class="headerlink" href="#good-map-composition-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <hr class="docutils" />
@@ -724,7 +1029,7 @@ If you work for an organisation that frequently publishes maps, or you need to c
 <figure class="align-default" id="organized-legend">
 <a class="reference internal image-reference" href="../../_images/en_legend_good_practice.png"><img alt="../../_images/en_legend_good_practice.png" src="../../_images/en_legend_good_practice.png" style="width: 750px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 98 </span><span class="caption-text">Example of a well organized legend</span><a class="headerlink" href="#organized-legend" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 106 </span><span class="caption-text">Example of a well organized legend</span><a class="headerlink" href="#organized-legend" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>The scale bar</strong> is essential to a map since it gives the correspondence between a distance meas ured on the map and the distance in the real world. There are two types of scales:</p>
@@ -739,7 +1044,7 @@ If you work for an organisation that frequently publishes maps, or you need to c
 <figure class="align-default" id="scale-bar">
 <img alt="../../_images/example_scale_bar.png" src="../../_images/example_scale_bar.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 99 </span><span class="caption-text">Scale bar examples</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 107 </span><span class="caption-text">Scale bar examples</span><a class="headerlink" href="#scale-bar" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -892,10 +1197,24 @@ __The eye can easily distinguish 4 to 5 different symbols. Beyond that, it is di
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Print layout</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-composition">Map composition</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-print-layout-composer">Understanding the Print Layout Composer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-elements-to-the-print-layout">Adding elements to the print layout</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-new-map">Adding a new map</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-title-or-a-text-box">Adding a title or a text box</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-image-or-logo">Adding an image or logo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-legend">Adding a legend</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-a-scale-bar">Adding a scale bar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-overview-map">Adding an overview map</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-the-print-layout">Exporting the print layout</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#map-templates">Map templates</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-atlas-function-automatic-map-generation">The Atlas function (automatic map generation)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-atlas-function-automatic-map-generation">The Atlas function (automatic map generation)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-an-atlas">Generate an Atlas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-overview-maps-with-an-atlas">Setting up Overview maps with an atlas</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#good-practices-and-common-mistakes-in-mapping">Good practices and common mistakes in mapping</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Map composition</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-elements-of-a-map">Key elements of a map</a></li>
