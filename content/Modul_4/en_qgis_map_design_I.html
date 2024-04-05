@@ -225,11 +225,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Map Design</a></li>
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_map_design_2.html">Print layout</a></li>
 
 
 
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_map_examples.html">Examples for Good Map Design</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="en_qgis_modul_4_exercises.html">Exercises Modul 4- Representation</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Modul 5- Intermediate GIS operation</span></p>
@@ -611,8 +613,11 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-and-importing-styles">Exporting and Importing Styles</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-or-exporting-styling-settings">Saving or exporting styling settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-style-into-a-qgis-project">Loading a style into a QGIS-project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-ifrc-symbols">Using IFRC-Symbols</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#further-resources">Further Resources</a></li>
 </ul>
 
             </nav>
@@ -906,7 +911,7 @@ The new SVG-symbols are in your SVG library.</p></li>
 <li><p>If you want to display different types of information as labels, the font needs to be different so the reader can differentiate between the different types of information that is displayed. A good practice is to display the labels in a similar color to the objects it is referring to. For example, dark blue text for the labels of light blue bodies of water, or brown text for the labels of light-brown houses.</p></li>
 </ul>
 <figure class="align-default" id="axis-maps-good-labels-example">
-<a class="reference internal image-reference" href="../fig/good_labels_example.png"><img alt="../fig/good_labels_example.png" src="../fig/good_labels_example.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="content/fig/good_labels_example.png"><img alt="content/fig/good_labels_example.png" src="content/fig/good_labels_example.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 89 </span><span class="caption-text">A good example of label placement and font. Pay attention to the text colors and orientation. Every label can easily be attributed to the correct cartographic feature. (Source: <a class="reference external" href="https://www.axismaps.com/guide/labeling">Axis Maps</a>)</span><a class="headerlink" href="#axis-maps-good-labels-example" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1015,62 +1020,57 @@ Some organisations may also use standarized symbols or colours in their maps.</p
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_exporting_style_to_send_to_colleague
 .mp4"></video></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-```{figure} ../../fig/en_30.30.2_save_layer_style_window.png
----
-width: 350px
-name: Save layer styling window
----
-Save Layer styling window in QGIS 30.30.2.
-```
-
-When working with similar data (e.g.: building types or flooding risk), it is useful to have template styles, that can be quickly loaded into your QGIS-project or saved in your Styling Template library. 
-
-```{Tip}
-When a styling is saved in the same location as the data and has the same name as the corresponding dataset, the styling will be automatically applied to the layer when loading the data into QGIS!
-```
-
-## Loading a style into a QGIS-project
-
-1. Open the style manager: `Settings` &gt; `Style manager`
-2. Click on `import/export` and select `import items`
-3. Navigate to the folder where the style is saved and click import.
-4. The style should now be available as a preset in the styling panel.
-
-```{note} 
-You can also import styles directly in the styling panel of a layer. But it will not be added to your style library unless you save it into your library.
-```
-
-## Using IFRC-Symbols
-
-With the plugin __&quot;Plugin Resource Sharing&quot;__, you can install symbol and icon libraries used by the Red Cross and UN, as well as other useful symbols.
-
-1. Install the __&quot;Plugin Resource Sharing&quot;__ by opening the plugin installation window and searching for the plugin.
-2. Once installed, open the plugin interface by clicking on `plugin` &gt; `Plugin Resource Sharing`
-3. Search for packages by the Red Cross and UN
-4. Install the packages.
-
-Now the symbols should be available in the styling manager in the SVG folder.
-
-&lt;video width=&quot;100%&quot; controls src=&quot;https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_resource_sharing_plugin.mp4&quot;&gt;&lt;/video&gt;
-
-
-```{tip}
-Make sure to check out the other resources available in the resource sharing plugin and see if they are useful to you.
-```
-
-
-# Further Resources
-
-- [Cartography Guide](https://www.axismaps.com/guide) by [Axis Maps]()
-- [Cartography Guide](https://www.axismaps.com/guide) by [Axis Maps]()
-- Tutorial on [how to import the SIMS Color Palette into QGIS](https://learn-sims.org/geospatial/importing-sims-color-palette-to-qgis/) 
-- Tutorial on [how to create a shaded relief map in QGIS](https://learn-sims.org/geospatial/creating-a-shaded-relief-map-in-qgis/)
-- [Creating a 3W (Who, What, Where) Infographic](https://learn-sims.org/information-design/creating-a-3w-who-what-where-infographic/)
-
-</pre></div>
+<figure class="align-default" id="save-layer-styling-window">
+<a class="reference internal image-reference" href="../../_images/en_30.30.2_save_layer_style_window.png"><img alt="../../_images/en_30.30.2_save_layer_style_window.png" src="../../_images/en_30.30.2_save_layer_style_window.png" style="width: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 94 </span><span class="caption-text">Save Layer styling window in QGIS 30.30.2.</span><a class="headerlink" href="#save-layer-styling-window" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>When working with similar data (e.g.: building types or flooding risk), it is useful to have template styles, that can be quickly loaded into your QGIS-project or saved in your Styling Template library.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When a styling is saved in the same location as the data and has the same name as the corresponding dataset, the styling will be automatically applied to the layer when loading the data into QGIS!</p>
 </div>
 </section>
+<section id="loading-a-style-into-a-qgis-project">
+<h2>Loading a style into a QGIS-project<a class="headerlink" href="#loading-a-style-into-a-qgis-project" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open the style manager: <code class="docutils literal notranslate"><span class="pre">Settings</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Style</span> <span class="pre">manager</span></code></p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">import/export</span></code> and select <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">items</span></code></p></li>
+<li><p>Navigate to the folder where the style is saved and click import.</p></li>
+<li><p>The style should now be available as a preset in the styling panel.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also import styles directly in the styling panel of a layer. But it will not be added to your style library unless you save it into your library.</p>
+</div>
+</section>
+<section id="using-ifrc-symbols">
+<h2>Using IFRC-Symbols<a class="headerlink" href="#using-ifrc-symbols" title="Permalink to this heading">#</a></h2>
+<p>With the plugin <strong>“Plugin Resource Sharing”</strong>, you can install symbol and icon libraries used by the Red Cross and UN, as well as other useful symbols.</p>
+<ol class="arabic simple">
+<li><p>Install the <strong>“Plugin Resource Sharing”</strong> by opening the plugin installation window and searching for the plugin.</p></li>
+<li><p>Once installed, open the plugin interface by clicking on <code class="docutils literal notranslate"><span class="pre">plugin</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Plugin</span> <span class="pre">Resource</span> <span class="pre">Sharing</span></code></p></li>
+<li><p>Search for packages by the Red Cross and UN</p></li>
+<li><p>Install the packages.</p></li>
+</ol>
+<p>Now the symbols should be available in the styling manager in the SVG folder.</p>
+<p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_resource_sharing_plugin.mp4"></video></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Make sure to check out the other resources available in the resource sharing plugin and see if they are useful to you.</p>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="further-resources">
+<h1>Further Resources<a class="headerlink" href="#further-resources" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.axismaps.com/guide">Cartography Guide</a> by <span class="xref myst">Axis Maps</span></p></li>
+<li><p><a class="reference external" href="https://www.axismaps.com/guide">Cartography Guide</a> by <span class="xref myst">Axis Maps</span></p></li>
+<li><p>Tutorial on <a class="reference external" href="https://learn-sims.org/geospatial/importing-sims-color-palette-to-qgis/">how to import the SIMS Color Palette into QGIS</a></p></li>
+<li><p>Tutorial on <a class="reference external" href="https://learn-sims.org/geospatial/creating-a-shaded-relief-map-in-qgis/">how to create a shaded relief map in QGIS</a></p></li>
+<li><p><a class="reference external" href="https://learn-sims.org/information-design/creating-a-3w-who-what-where-infographic/">Creating a 3W (Who, What, Where) Infographic</a></p></li>
+</ul>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -1181,8 +1181,11 @@ Make sure to check out the other resources available in the resource sharing plu
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-and-importing-styles">Exporting and Importing Styles</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-or-exporting-styling-settings">Saving or exporting styling settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-style-into-a-qgis-project">Loading a style into a QGIS-project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-ifrc-symbols">Using IFRC-Symbols</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#further-resources">Further Resources</a></li>
 </ul>
 
   </nav></div>
