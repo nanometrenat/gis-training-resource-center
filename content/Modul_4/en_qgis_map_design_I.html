@@ -583,7 +583,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#svg-symbols-raster-images-and-markers">SVG-Symbols, Raster images, and Markers</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-simple-markers">Using Simple Markers</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-svg-symbols">Using SVG-Symbols</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-external-svg-library-or-other-style-libraries">Adding an external SVG-library or other style libraries</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-external-svg-library">Adding an external SVG-library</a></li>
 </ul>
 </li>
 </ul>
@@ -592,7 +592,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-labels-and-rule-based-labeling">Single Labels and Rule-based Labeling</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#single-labels">Single Labels</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-single-labels-to-a-layer">Adding Single Labels to a Layer</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-based-labelling">Rule-based Labelling:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-based-labelling">Rule-based Labelling</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-rule-based-labels-to-a-layer">Adding Rule-based Labels to a Layer</a></li>
 </ul>
 </li>
@@ -647,13 +647,12 @@ document.write(`
 <p><span class="caption-number">Fig. 75 </span><span class="caption-text">Examples for thematic maps</span><a class="headerlink" href="#thematic-maps-examples" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>These two maps use design elements differently. Topographic maps will use symbols and colors out of convention and readibility, whereas in designing thematic maps, the symbols and colors you use depend on the context and the information you want to convey.</p>
+<p>These two maps use design elements differently. Topographic maps will use symbols and colors out of convention and readability, whereas in designing thematic maps, the symbols and colors you use depend on the context and the information you want to convey.</p>
 <!--## Graphic Semiology
 
 __Definition__: Graphic semiology refers to a set of rules allowing the use of a __graphic sign systems__ to convey information. Graphic semiology uses visual variables to construct a system of signs, allowing the graphic translation of information.
 
 Our brain is capable of interpreting graphic relationships between entities in just seconds. Semiology attempts to theorise these interpretation to make the map more effective and relevant.
-
 
 EDIT: Remove this part?-->
 </section>
@@ -730,7 +729,7 @@ Video: Opening the styling panel<div class="sd-summary-down docutils">
 <section id="colours">
 <h2>Colours<a class="headerlink" href="#colours" title="Permalink to this heading">#</a></h2>
 <p>Colours are arguably the most striking visual variables as they are easily distinguishable. However, depending on the type of data and the information you wish to convey, there are a few things to consider when choosing a colour scheme for your map. The most important variables for colours are the <strong>hue</strong>, the <strong>value</strong> (saturation) and the <strong>transparency</strong>.</p>
-<p>Colours schemes can be <strong>categorial, sequential, or diverging</strong>. If you wish to display different types of buildings or roads, the colour schemes should be catoegrial. Colour gradients, either sequential or diverging, are used for numerical data or data that can be ordered. For example, for the population sizes of districts a sequential colouring schemes is best to show the relative difference between the values. However, if the data has positive <strong>and</strong> negative values, a diverging colour gradient should be used.</p>
+<p>Colours schemes can be <strong>categorial, sequential, or diverging</strong>. If you wish to display different types of buildings or roads, the colour schemes should be categorial. Colour gradients, either sequential or diverging, are used for numerical data or data that can be ordered. For example, for the population sizes of districts a sequential colouring schemes is best to show the relative difference between the values. However, if the data has positive <strong>and</strong> negative values, a diverging colour gradient should be used.</p>
 <figure class="align-default" id="colouring-schemes">
 <a class="reference internal image-reference" href="../../_images/en_colour_gradients_qualities.png"><img alt="../../_images/en_colour_gradients_qualities.png" src="../../_images/en_colour_gradients_qualities.png" style="width: 750px;" /></a>
 <figcaption>
@@ -806,8 +805,8 @@ Most simple markers consist of a <strong>fill</strong> and an <strong>outline</s
 </ol>
 <p><video width="100%" controls src="https://github.com/GIScience/gis-training-resource-center/raw/main/fig/en_30.30.2_using_svg_symbols.mp4"></video></p>
 </section>
-<section id="adding-an-external-svg-library-or-other-style-libraries">
-<h4>Adding an external SVG-library or other style libraries<a class="headerlink" href="#adding-an-external-svg-library-or-other-style-libraries" title="Permalink to this heading">#</a></h4>
+<section id="adding-an-external-svg-library">
+<h4>Adding an external SVG-library<a class="headerlink" href="#adding-an-external-svg-library" title="Permalink to this heading">#</a></h4>
 <p>If you have a library of SVG-symbols as a folder you can add them to your Styling manager.</p>
 <ol class="arabic simple">
 <li><p>Open the style manager: <code class="docutils literal notranslate"><span class="pre">setting</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">style</span> <span class="pre">manager</span></code></p></li>
@@ -846,9 +845,9 @@ Most simple markers consist of a <strong>fill</strong> and an <strong>outline</s
 <section id="adding-single-labels-to-a-layer">
 <h4>Adding Single Labels to a Layer<a class="headerlink" href="#adding-single-labels-to-a-layer" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
-<li><p>In the styling panel, click on the <code class="docutils literal notranslate"><span class="pre">Labels</span></code> tab underneath the Symbology tab.</p></li>
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">labels</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Value&quot;</span></code> is where you choose the attribute that will be displayed as a label. For example <code class="docutils literal notranslate"><span class="pre">*ADM1_EN*</span></code> will display the English names of Nigerian states for each feature in the data set.</p></li>
+<li><p>In the styling panel, click on the <code class="docutils literal notranslate"><span class="pre">Labels</span></code>-tab underneath the Symbology tab.</p></li>
+<li><p>Select <img alt="" src="fig/en_30.30.2_icon_single_labels" /> <code class="docutils literal notranslate"><span class="pre">Single</span> <span class="pre">labels</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Value</span></code> is where you choose the attribute that will be displayed as a label. For example <code class="docutils literal notranslate"><span class="pre">*ADM1_EN*</span></code> will display the English names of Nigerian states for each feature in the data set.</p></li>
 <li><p>Let’s <strong>change the font</strong>: Open the Font dropdown menu and select Arial. Make the text <code class="docutils literal notranslate"><span class="pre">Bold</span></code> in the Style dropdown menu. Change the colour by clicking on <code class="docutils literal notranslate"><span class="pre">Colour</span></code>, and change the <code class="docutils literal notranslate"><span class="pre">Size</span></code> to 8 pt</p></li>
 <li><p>Let’s <strong>add a white buffer</strong> around the label. In the <code class="docutils literal notranslate"><span class="pre">Labels</span></code> tab, you will find a list with different options to style the labels. Right now, we are in the <code class="docutils literal notranslate"><span class="pre">Text</span></code> menu. Select <code class="docutils literal notranslate"><span class="pre">Buffer</span></code> and check the <code class="docutils literal notranslate"><span class="pre">Draw</span> <span class="pre">text</span> <span class="pre">buffer</span></code> option. This will make the labels stand out more on dark or crowded maps.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code> and <code class="docutils literal notranslate"><span class="pre">OK</span></code>.</p></li>
@@ -873,7 +872,7 @@ Most simple markers consist of a <strong>fill</strong> and an <strong>outline</s
 </div>
 </section>
 <section id="rule-based-labelling">
-<h4>Rule-based Labelling:<a class="headerlink" href="#rule-based-labelling" title="Permalink to this heading">#</a></h4>
+<h4>Rule-based Labelling<a class="headerlink" href="#rule-based-labelling" title="Permalink to this heading">#</a></h4>
 <p>Create rules using expressions to select accurately which features are to be labeled. Each rule can have a different text formatting. Use this if you want to have more control over the information that will be displayed as labels. For example, you can filter your data to only display the names of regional capitals.</p>
 <figure class="align-default" id="rule-based-labeling-example-settlements-nga">
 <a class="reference internal image-reference" href="../../_images/rule-based_labeling_example_settlements_nga.png"><img alt="../../_images/rule-based_labeling_example_settlements_nga.png" src="../../_images/rule-based_labeling_example_settlements_nga.png" style="width: 500px;" /></a>
@@ -950,7 +949,7 @@ Most simple markers consist of a <strong>fill</strong> and an <strong>outline</s
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>QGIS renders the labels automatically.
-Sometimes the labels can obstruct other symbols. In that case, you can either adjust the placement of the labels in the <strong>Label tab</strong>, or use the <img alt="Move Label Icon" src="../../_images/30.30.2_move_a_label_diagram_callout_icon.png" /> <code class="docutils literal notranslate"><span class="pre">Move</span> <span class="pre">a</span> <span class="pre">Label,</span> <span class="pre">Diagram,</span> <span class="pre">or</span> <span class="pre">Callout</span></code>-tool in <strong>Label toolbar</strong></p>
+Sometimes the labels can obstruct other symbols. In that case, you can either adjust the placement of the labels in the <strong>Label tab</strong>, or use the <img alt="" src="../../_images/30.30.2_move_a_label_diagram_callout_icon.png" /> <code class="docutils literal notranslate"><span class="pre">Move</span> <span class="pre">a</span> <span class="pre">Label,</span> <span class="pre">Diagram,</span> <span class="pre">or</span> <span class="pre">Callout</span></code>-tool in <strong>Label toolbar</strong></p>
 <p>By default, QGIS renders the labels so that they don’t overlap with other labels. This means that not all the labels will be visible if the data is dense or rendered close to each other. You can optimize the rendering under the rendering option.</p>
 </div>
 <p>If you are interested in how to set up and style labels further, take a look at these wiki articles:</p>
@@ -1148,7 +1147,7 @@ Some organisations may also use standarized symbols or colours in their maps.</p
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#svg-symbols-raster-images-and-markers">SVG-Symbols, Raster images, and Markers</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-simple-markers">Using Simple Markers</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-svg-symbols">Using SVG-Symbols</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-external-svg-library-or-other-style-libraries">Adding an external SVG-library or other style libraries</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-an-external-svg-library">Adding an external SVG-library</a></li>
 </ul>
 </li>
 </ul>
@@ -1157,7 +1156,7 @@ Some organisations may also use standarized symbols or colours in their maps.</p
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-labels-and-rule-based-labeling">Single Labels and Rule-based Labeling</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#single-labels">Single Labels</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-single-labels-to-a-layer">Adding Single Labels to a Layer</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-based-labelling">Rule-based Labelling:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rule-based-labelling">Rule-based Labelling</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-rule-based-labels-to-a-layer">Adding Rule-based Labels to a Layer</a></li>
 </ul>
 </li>

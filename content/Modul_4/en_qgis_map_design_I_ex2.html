@@ -594,8 +594,8 @@ document.write(`
 <section id="aim-of-the-exercise">
 <h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
 <p>The aim of this exercise will be to create an overview map of Ghana with its subdistricts, main roads, settlements, as well as hospitals. Such information can always be of use in humanitarian work. The first part of the exercise will cover the symbolization of the data layers. The second part will focus on the design of the print layout.</p>
+<p><strong>Estimated time for completion:</strong> 3 hours</p>
 </section>
-<hr class="docutils" />
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
 <p><strong>Download the data for the exercise <a class="reference external" href="https://nexus.heigit.org/repository/gis-training-resource-center/Modul_4/Modul_4_Exercise_1_creating_a_map_of_ghana/Modul_4_Exercise_1.zip">here</a>.</strong><br />
@@ -609,7 +609,6 @@ For this exercise, we will use the following layers:</p>
 </ul>
 <p>All data has been downloaded from the humanitarian data exchange. Download the Data from the Nexus, <strong>unzip the folder</strong>, and load the data into a new QGIS project.</p>
 </section>
-<hr class="docutils" />
 <section id="wiki-articles">
 <h2>Wiki articles<a class="headerlink" href="#wiki-articles" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
@@ -618,10 +617,8 @@ For this exercise, we will use the following layers:</p>
 <li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_4/en_qgis_map_design_2.html">Modul 4: Print Layout</a></p></li>
 </ul>
 </section>
-<hr class="docutils" />
 <section id="tasks">
 <h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h2>
-<hr class="docutils" />
 <section id="preparation-of-the-data">
 <h3>Preparation of the data<a class="headerlink" href="#preparation-of-the-data" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
@@ -634,7 +631,6 @@ For this exercise, we will use the following layers:</p>
 </li>
 </ol>
 </section>
-<hr class="docutils" />
 <section id="part-1-symbolization">
 <h3>Part 1: Symbolization<a class="headerlink" href="#part-1-symbolization" title="Permalink to this heading">#</a></h3>
 <p>Now that we are familiar with the data at our disposal, let us start choosing the symbology for the different layers. Which information should be displayed on the map?</p>
@@ -667,17 +663,17 @@ For this exercise, we will use the following layers:</p>
 <li><p>The layer for the road network should sit on top of the administrative boundaries so the course and connections of roads is always visible.</p></li>
 <li><p>Open the <strong>Symbology Tab</strong> for <code class="docutils literal notranslate"><span class="pre">hotosm_gha_roads_lines</span></code>. Select “<strong>Rule-based</strong>” and add a new filter by double clicking on <code class="docutils literal notranslate"><span class="pre">(no</span> <span class="pre">filter)</span></code>.</p></li>
 <li><p>Open the expression builder by clicking on the icon to the right of the filter option.</p></li>
-<li><p>First, open a paranthese by double-clicking on <code class="docutils literal notranslate"><span class="pre">(</span></code>.</p></li>
+<li><p>First, open a parenthesis by double-clicking on <code class="docutils literal notranslate"><span class="pre">(</span></code>.</p></li>
 <li><p>In the middle tab of the expression builder, expand the <strong>“Fields and Values”</strong> list. Double click on <code class="docutils literal notranslate"><span class="pre">highway</span></code> to add it to the expression on your left. Next, on the right, click on <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">Unique</span></code> to list all the possible values of that attribute.</p></li>
 <li><p>Under the left window, click on the <code class="docutils literal notranslate"><span class="pre">=</span></code>-sign to add it to your expression.</p></li>
 <li><p>In the list with all the unique values. Select <code class="docutils literal notranslate"><span class="pre">primary</span></code> and add it to your expression.</p></li>
-<li><p>Close the parantheses by clicking on <code class="docutils literal notranslate"><span class="pre">)</span></code> under the expression field on the left.</p></li>
-<li><p>Add the Operator <code class="docutils literal notranslate"><span class="pre">OR</span></code> and repeat the same expression with the parantheses but select the unique value <code class="docutils literal notranslate"><span class="pre">secondary</span></code></p></li>
+<li><p>Close the parenthesis by clicking on <code class="docutils literal notranslate"><span class="pre">)</span></code> under the expression field on the left.</p></li>
+<li><p>Add the Operator <code class="docutils literal notranslate"><span class="pre">OR</span></code> and repeat the same expression with the parenthesis but select the unique value <code class="docutils literal notranslate"><span class="pre">secondary</span></code></p></li>
 <li><p>The finished expression should be  <code class="docutils literal notranslate"><span class="pre">(</span>&#160; <span class="pre">&quot;highway&quot;</span>&#160; <span class="pre">=</span>&#160; <span class="pre">'primary'</span> <span class="pre">)</span>&#160; <span class="pre">OR</span>&#160; <span class="pre">(</span> <span class="pre">&quot;highway&quot;</span>&#160; <span class="pre">=</span>&#160; <span class="pre">'secondary'</span>&#160; <span class="pre">)</span></code></p></li>
 <li><p>Select a color and thickness for the line so it is distinguishable from the administrative boundaries (e.g. yellow; keep in mind that some colors have conventional associations; blue for water for example).</p></li>
 </ol>
 <hr class="docutils" />
-<p>Now as a final touch, let’s select a simble for the health facilities:</p>
+<p>Now as a final touch, let’s select a symbol for the health facilities:</p>
 <ol class="arabic simple">
 <li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">hospital_GHA</span></code> layer</p></li>
 <li><p>Open the <strong>Symbology Tab</strong> and select the <code class="docutils literal notranslate"><span class="pre">Simple</span> <span class="pre">Marker</span></code>.</p></li>
@@ -692,10 +688,9 @@ For this exercise, we will use the following layers:</p>
 <p><strong>Bonus Step</strong>: <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_basemaps_wiki.html">Adding a basemap</a> can help potential readers orienting themselves.</p>
 <p>Now the Map should be ready for a print layout.</p>
 </section>
-<hr class="docutils" />
 <section id="part-2-creating-the-print-layout">
 <h3>Part 2: Creating the print layout<a class="headerlink" href="#part-2-creating-the-print-layout" title="Permalink to this heading">#</a></h3>
-<p>Once you are happy with the symbolization and colours of your data, the next step is to create a print layout. A map is never complete without adding the necessary elements such as</p>
+<p>Once you are happy with the symbolization and colours of your data, the next step is to create a print layout. By adding additional information such as a title, datasources, projection, description, etc. you provide your audience with the means to contextualise and evaluate the map and it’s content by themselves.</p>
 <ol class="arabic simple">
 <li><p>Open a new print layout abd give it a name (e.g. Ghana Map with hospitals). A new window will open with a blank canvas and a different set of tools. This is the print layout designer.</p>
 <ul class="simple">
@@ -746,14 +741,13 @@ For this exercise, we will use the following layers:</p>
 </figure>
 <p>What can we learn from this map? We can clearly identify areas that are harder to reach and where the travel time to a hospital is much longer than in the populated regions in the south of Ghana.</p>
 </section>
-<hr class="docutils" />
 <section id="bonus-exercise">
 <h3>Bonus Exercise!<a class="headerlink" href="#bonus-exercise" title="Permalink to this heading">#</a></h3>
 <p>If you are finished with the main map, click on the map and navigate to the item properties. In the layer section, check the box <code class="docutils literal notranslate"><span class="pre">Lock</span> <span class="pre">Layers</span></code> and <code class="docutils literal notranslate"><span class="pre">Lock</span> <span class="pre">styles</span> <span class="pre">for</span> <span class="pre">layers</span></code>. This means that if you change the map in the main QGIS-window, the map you have added to the Now you can start working on an overview map. We will be using a shapefile with the countries of Africa.</p>
 <ol class="arabic simple">
 <li><p>Return to the main QGIS window and load the layers from the <code class="docutils literal notranslate"><span class="pre">Bonus</span> <span class="pre">Exercise</span></code>-folder.</p></li>
 <li><p>In the <strong>Layer</strong> panel, make the layers for the main map invisible by clicking on the <img alt="Eye Icon" src="../../_images/30.30.2_layer_visibility_icon.png" /> next to the layer name.</p></li>
-<li><p>Style the countries in an neutral, inobstrusive color. For example, you can use the “<strong>Gray 3 Fill</strong>” from the styling templates.</p></li>
+<li><p>Style the countries in an neutral, unobtrusive color. For example, you can use the “<strong>Gray 3 Fill</strong>” from the styling templates.</p></li>
 <li><p>Once you are happy with the styling of your overview map, navigate back to the <strong>Print Layout window</strong>.</p></li>
 <li><p>Add a second map and position it in a corner.</p></li>
 <li><p>In the <strong>Item properties</strong> panel for the second Map (”<strong>Map 2</strong>”), scroll down and open the <code class="docutils literal notranslate"><span class="pre">Overview</span></code>-options.</p></li>
