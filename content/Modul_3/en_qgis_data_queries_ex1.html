@@ -567,9 +567,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-wiki-articles">Relevant Wiki Articles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-wiki-articles">Links to Wiki articles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a></li>
 </ul>
             </nav>
         </div>
@@ -586,74 +589,75 @@ document.write(`
 <p><strong>🔙<a class="reference internal" href="../intro.html"><span class="doc std std-doc">Back to Homepage</span></a></strong></p>
 <p>🚧 This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧</p>
 <section id="aim-of-the-exercise">
-<h2>Aim of the exercise:<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="relevant-wiki-articles">
-<h2>Relevant Wiki Articles<a class="headerlink" href="#relevant-wiki-articles" title="Permalink to this heading">#</a></h2>
+<h2>Aim of the exercise<a class="headerlink" href="#aim-of-the-exercise" title="Permalink to this heading">#</a></h2>
+<section id="links-to-wiki-articles">
+<h3>Links to Wiki articles<a class="headerlink" href="#links-to-wiki-articles" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html">QGIS Interface</a></p></li>
 <li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geodata_types_wiki.html">Types of Geodata</a></p></li>
 <li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html">Geodata Import in QGIS</a></p></li>
 <li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_layer_concept_wiki.html">Layer Concept</a></p></li>
-<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_queries_wiki.html">Non-Spatial Querie</a></p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_queries_wiki.html">Non-Spatial Queries</a></p></li>
 <li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_spatial_queries_wiki.html">Spatial Queries</a></p></li>
-<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#add-field">Table function - Add field</a>
-html#add-geometries-to-a-layer)</p></li>
+<li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_table_functions_wiki.html#add-field">Table function - Add field</a></p></li>
 <li><p><a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_geoprocessing_wiki.html#clip">Geoprocessing - Clip</a></p></li>
 </ul>
 </section>
-<section id="data-sources">
-<h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this heading">#</a></h2>
-<p>Download the data folder <span class="xref myst">here</span> and save it on your PC. Unzip the .zip file!
-The folder is called “Modul_3_Exercise_1_Flood_Nigeria” and contains the whole <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#standard-folder-structure">standard folder structure</a> with all data in the input folder and the additional documentation in the documentation folder.</p>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<p>Download all the datasets <span class="xref myst">here</span> and save the folder on your computer and unzip the file. The zip folder includes:</p>
 <ul class="simple">
-<li></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">som_admbnda_adm2_ocha_20230308.shp</span></code>: This file contains information about the Somali administrative level 0-2, state, and operational zone level 1 and 2 boundary as shapefiles. The data can also be found on <a class="reference external" href="https://data.humdata.org/dataset/cod-ab-som">HDX</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GF2_20231123_FloodExtent_BeledweyneCity_HiraanRegion.shp</span></code>: This shapefile illustrates satellite-detected surface waters in Beledweyne City, Beledweyne District, Hiraan Region, Somalia, on 12th of November 2023 at 07:32 UTC. The data is also available on <a class="reference external" href="https://data.humdata.org/dataset/water-extent-in-beledweyne-city-beledweyne-district-hiraan-region-somalia-12-november-2023">HDX</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Buildings_Belete_Weyne.geojson</span></code>: This dataset is downloaded using <a class="reference external" href="https://export.hotosm.org/v3/exports/new/describe">HOT Export Tool</a> and contains information about buildings in the Beledweyne district.</p></li>
 </ul>
-<ol class="arabic simple">
-<li><p>Open QGIS and create a <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#step-by-step-setting-up-a-new-qgis-project-from-scratch">new project</a> by clicking on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">New</span></code> N</p></li>
-<li><p>Once the project is created <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#save">save the project</a> in the “project” folder of the exercise “Modul3_Exercise_1_Flood_Nigeria”. To do that click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code> and navigate to the folder. Name the project “Somalia_flood_affected_Blete_Weyne_2023.</p></li>
-<li><p>Load the following files in your project by drag and drop (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-vector-data-via-drag-and-drop">Wiki Video</a>). Or click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Vector</span> <span class="pre">Layer</span></code>. Click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to the file. Select the file and click <code class="docutils literal notranslate"><span class="pre">Open</span></code>. Back in QGIS click <code class="docutils literal notranslate"><span class="pre">Add</span></code> (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-vector-data-via-layer-tab">Wiki Video</a>).</p>
-<ul class="simple">
-<li><p>“som_admbnda_adm2_ocha_20230308.shp”</p></li>
-<li><p>“FL20231105SOM — GF2_20231123_FloodExtent_BeledweyneCity_HiraanRegion.gpkg”</p></li>
-<li><p>“SOM_Blete_Weyne_buildings.gpkg”
-This dataset contains all administrative division areas (admin 0 to 5) with the respective population of the areas.</p></li>
-</ul>
-</li>
-</ol>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>GeoPackage file can contain multiple files and even whole QGIS projects. When you load such a file in QGIS a window will appear in which you have to select the files you want to load in your QGIS project.</p>
+<p>The folder is called <strong>Modul_3_Exercise_1_Queries_Somalia</strong> and contains the entire <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#standard-folder-structure">standard folder structure</a> with all data in the input folder.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The naming of the districts and states is not consistent across the different datasets. You will find different spellings for the district name <strong>Beledweyne</strong> which we will be focusing on. Other spellings might be <strong>Belet Weyne</strong> or <strong>Belete Weyne</strong>.</p>
 </div>
-<ol class="arabic simple" start="4">
-<li><p>First, we want to export the district <strong>Belete Weyne</strong> state from “som_admbnda_adm2_ocha_20230308” to have it as a stand-alone vector layer. To do that,</p>
+</section>
+<section id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Open the attribute table of “som_admbnda_adm2_ocha_20230308” by right click on the layer  -&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code>(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.html">Wiki Video</a>).</p></li>
-<li><p>Find the row of “Belete Weyne” and mark it by clicking on the number on the very left-hand side of the attribute table. The row will appear blue and the area of Borno state will turn yellow on the map canvas. You can right-click on the row and click <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Feature</span></code>(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.html#zoom-in-on-a-specific-feature">Wiki Video</a>).</p></li>
-<li><p>Now right-click on the layer in the Layer Panel and click on <code class="docutils literal notranslate"><span class="pre">Export</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Selected</span> <span class="pre">Features</span> <span class="pre">as</span></code>. We want to save Belete Weyne as a GeoPackage, so adjust <code class="docutils literal notranslate"><span class="pre">Format</span></code> accordingly. Click on the three points and navigate to your <code class="docutils literal notranslate"><span class="pre">temp</span></code> folder. Here you can give it the layer the name “AOI_Belete_Weyne” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>. Now you should see the same name in the <code class="docutils literal notranslate"><span class="pre">Layer</span> <span class="pre">name</span></code> field. Click <code class="docutils literal notranslate"><span class="pre">ok</span></code>(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_queries_wiki.html#save-selected-features-as-a-new-file">Wiki Video</a>)</p></li>
+<li><p>Open QGIS and create a <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#step-by-step-setting-up-a-new-qgis-project-from-scratch">new project</a> by clicking on <code class="docutils literal notranslate"><span class="pre">Project</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">New</span></code>.</p></li>
+<li><p>Once the project is created, <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_projects_folder_structure_wiki.html#save">save the project</a> in the <strong>project folder</strong> of the exercise <strong>Modul_3_Exercise_1_Queries_Somalia</strong>. To do that click on <code class="docutils literal notranslate"><span class="pre">Project</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">as</span></code> and navigate to the folder. Name the project <strong>Somalia_flood_affected_Beledweyne_2023</strong>.</p></li>
+<li><p>To load the following files into your project, drag and drop them (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-vector-data-via-drag-and-drop">Wiki Video</a>). Or click on <code class="docutils literal notranslate"><span class="pre">Layer</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Layer</span></code> –&gt; <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Vector</span> <span class="pre">Layer</span></code>. Click on the three points <img alt="" src="../../_images/Three_points.png" /> and navigate to the file. Select the file and click <code class="docutils literal notranslate"><span class="pre">Open</span></code>. Back in QGIS click <code class="docutils literal notranslate"><span class="pre">Add</span></code> (<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_import_geodata_wiki.html#open-vector-data-via-layer-tab">Wiki Video</a>).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">som_admbnda_adm2_ocha_20230308.shp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GF2_20231123_FloodExtent_BeledweyneCity_HiraanRegion.shp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Buildings_Belete_Weyne.geojson</span></code>: A pop-up window will appear for this file and you will need to decide which data to import. Select the polygons.</p></li>
+</ul>
+</li>
+<li><p>First, we want to export the district <strong>Beledweyne</strong> from the Hiraan region from <code class="docutils literal notranslate"><span class="pre">som_admbnda_adm2_ocha_20230308.shp</span></code> to have it as a stand-alone vector layer. To do that:</p>
+<ol class="arabic simple">
+<li><p>Open the attribute table of <code class="docutils literal notranslate"><span class="pre">som_admbnda_adm2_ocha_20230308.shp</span></code> by right clicking on the layer  –&gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Attribute</span> <span class="pre">Table</span></code>(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.html">Wiki Video</a>).</p></li>
+<li><p>Find the row of <code class="docutils literal notranslate"><span class="pre">Belet</span> <span class="pre">Weyne</span></code> and mark it by clicking on the number on the very left-hand side of the attribute table. The row will be highlighted in blue and the district will turn yellow on the map canvas. You can right-click on the row and click <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">to</span> <span class="pre">Feature</span></code>(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_attribute_table_wiki.html#zoom-in-on-a-specific-feature">Wiki Video</a>).</p></li>
+<li><p>Now right-click on the layer in the Layer Panel and click on <code class="docutils literal notranslate"><span class="pre">Export</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Selected</span> <span class="pre">Features</span> <span class="pre">as</span></code>. We want to save Beledweyne as a GeoPackage, so adjust <code class="docutils literal notranslate"><span class="pre">Format</span></code> accordingly. Click on the three points and navigate to your <strong>temp folder</strong>. Here you can give the layer the name <strong>AOI_Beledweyne</strong> and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>. Now click <code class="docutils literal notranslate"><span class="pre">OK</span></code>(<a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_non_spatial_queries_wiki.html#save-selected-features-as-a-new-file">Wiki Video</a>). In this exercise, we will not reproject the layers and work with the data in <code class="docutils literal notranslate"><span class="pre">ESPG:4326</span> <span class="pre">-</span> <span class="pre">WGS84</span></code>.</p></li>
 </ol>
 </li>
-<li><p>In the next steps we want to identfy all buildings that are susbected to be affected by the recent flood. To do that we will use the tool <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Location</span></code>.</p>
+<li><p>In the following steps, we want to identify all buildings that are likely to be affected by the recent flooding. To do that we will use the tool <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Location</span></code>.</p>
 <ol class="arabic simple">
-<li><p>In the <code class="docutils literal notranslate"><span class="pre">Toolbox</span></code> -&gt; Search for <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Location</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">featurs</span> <span class="pre">from</span></code>: “SOM_Blete_Weyne_buildings.gpkg”</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Where</span> <span class="pre">the</span> <span class="pre">features</span> <span class="pre">(geomeric</span> <span class="pre">predicate)</span></code>: <code class="docutils literal notranslate"><span class="pre">are</span> <span class="pre">within</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">By</span> <span class="pre">comparing</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">features</span> <span class="pre">from</span></code>: “FL20231105SOM — GF2_20231123_FloodExtent_BeledweyneCity_HiraanRegion.gpkg”</p></li>
-<li><p>Under <code class="docutils literal notranslate"><span class="pre">Extraction</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" />-&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File</span></code> and navigate to you temp folder and save the new layer under the name “Belet_Weyne_buildings_affected” and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p></li>
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
-<li><p>Adjust you layer in a way that you only see the flooded areas and your new layer  “Belet_Weyne_buildings_affected”.</p></li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">Processing</span> <span class="pre">Toolbox</span></code> –&gt; Search for <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Location</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">features</span> <span class="pre">from</span></code>: Buildings_Belete_Weyne.geojson</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Where</span> <span class="pre">the</span> <span class="pre">features</span> <span class="pre">(geometric</span> <span class="pre">predicate)</span></code>: <code class="docutils literal notranslate"><span class="pre">are</span> <span class="pre">within</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">By</span> <span class="pre">comparing</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">features</span> <span class="pre">from</span></code>: GF2_20231123_FloodExtent_BeledweyneCity_HiraanRegion.shp</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Extracted</span></code> click on the three points <img alt="" src="../../_images/Three_points.png" /> –&gt; <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">to</span> <span class="pre">File...</span></code> and navigate to your <strong>temp folder</strong> and save the new layer under the name <strong>Beledweyne_buildings_affected</strong> and click <code class="docutils literal notranslate"><span class="pre">Save</span></code>.</p></li>
+<li><p>Now click <code class="docutils literal notranslate"><span class="pre">Run</span></code></p></li>
+<li><p>Adjust your layers in a way that you only see the flooded areas and your new layer <strong>Beledweyne_buildings_affected</strong>. Remove the <code class="docutils literal notranslate"><span class="pre">som_admbnda_adm2_ocha_20230308.shp</span></code> and <code class="docutils literal notranslate"><span class="pre">Buildings_Belete_Weyne.geojson</span></code> layer.</p></li>
 </ol>
 </li>
 </ol>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>The tool <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_spatial_queries_wiki.html#select-by-location"><code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">by</span> <span class="pre">location</span></code></a> is very similar. This tool function in the same way only that it select the features insted of diretly extracting the features.</p>
+<p>The tool <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_spatial_queries_wiki.html#select-by-location"><code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">by</span> <span class="pre">Location</span></code></a> is very similar. This tool functions in the same way, but instead of directly extracting the features, it selects them.</p>
 </div>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/Extract_by_location_Belet_Weyne.png"><img alt="../../_images/Extract_by_location_Belet_Weyne.png" src="../../_images/Extract_by_location_Belet_Weyne.png" style="width: 400px;" /></a>
 </figure>
 <ol class="arabic simple" start="6">
-<li><p>In the next step we want to identfy special buildings with in the affeted buildings. Open the attribute table and check what kind of buildings can be found in the layer. This information can be found in the coloumn „building“. You can sort the column.
+<li><p>In the next step we want to identify special buildings within the affected buildings. Open the attribute table and check what kind of buildings can be found in the layer. This information can be found in the column „building“. You can sort the column.
 To extract „hospitals“, „schools“ and „mosques“ we can use the tool <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Expression</span></code> or <code class="docutils literal notranslate"><span class="pre">Extract</span> <span class="pre">by</span> <span class="pre">Attribute</span></code>.</p></li>
 </ol>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
@@ -757,9 +761,12 @@ To extract „hospitals“, „schools“ and „mosques“ we can use the tool 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relevant-wiki-articles">Relevant Wiki Articles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aim-of-the-exercise">Aim of the exercise</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#links-to-wiki-articles">Links to Wiki articles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tasks">Tasks</a></li>
 </ul>
   </nav></div>
 
