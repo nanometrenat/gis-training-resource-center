@@ -571,7 +571,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-radiation-and-its-interaction-with-the-earths-surface">Electromagnetic Radiation and its interaction with the Earths Surface</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-sensors-and-platforms">Remote Sensing Sensors and Platforms</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-of-remote-sensing-data">Attributes of Remote Sensing Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visuliszation-of-multi-spectral-remote-sensing-data">Visuliszation of Multi Spectral Remote Sensing Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visulization-of-multi-spectral-remote-sensing-data">Visulization of Multi Spectral Remote Sensing Data</a></li>
 </ul>
             </nav>
         </div>
@@ -593,9 +593,9 @@ document.write(`
 <section id="electromagnetic-radiation-and-its-interaction-with-the-earths-surface">
 <h2>Electromagnetic Radiation and its interaction with the Earths Surface<a class="headerlink" href="#electromagnetic-radiation-and-its-interaction-with-the-earths-surface" title="Permalink to this heading">#</a></h2>
 <figure class="align-right" id="basic-concept-of-a-spatial-raster">
-<a class="reference internal image-reference" href="../../_images/en_m8_rs_spectrum.png"><img alt="../../_images/en_m8_rs_spectrum.png" src="../../_images/en_m8_rs_spectrum.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_spectrum.png"><img alt="../../_images/en_m8_rs_spectrum.png" src="../../_images/en_m8_rs_spectrum.png" style="width: 350px;" /></a>
 </figure>
-<p>An important component of remote sensing is that different sensors can measure and process a much wider range of electromagnetic radiation than the human eye, which is limited to the visi-ble spectrum. The electromagnetic spectrum can be divided into the following wavelength bands: <br><br></p>
+<p>An important component of remote sensing is that different sensors can measure and process a much wider range of electromagnetic radiation than the human eye, which is limited to the visible spectrum. The electromagnetic spectrum can be divided into multiple wavelegth intervals like the visible spectrum, the infra-red spectrum or microwaves (see fig X). <br></p>
 <p>Objects and the Earth’s surface reflect and absorb EMR across the wavelength spectrum and with distinct patterns that are unique to the type of object/surface. These unique patterns are called “spectral signatures” and are visualised in signature graphs.
 Signatures vary with variations in an object/surface’s material composition, structure and surface properties. For example:</p>
 <ul class="simple">
@@ -604,7 +604,7 @@ Signatures vary with variations in an object/surface’s material composition, s
 <li><p>Urban areas can have complex spectral signatures due to the variety of materials pre-sent, such as asphalt, concrete and metal, each with its own reflectance characteristics across the spectrum.</p></li>
 </ul>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="fig/en_m8_rs_specsigs.png"><img alt="fig/en_m8_rs_specsigs.png" src="fig/en_m8_rs_specsigs.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_specsigs.jpeg"><img alt="../../_images/en_m8_rs_specsigs.jpeg" src="../../_images/en_m8_rs_specsigs.jpeg" style="width: 600px;" /></a>
 </figure>
 <p>By analysing these spectral signatures it is possible to identify and classify surface features and materials from aerial or satellite imagery. Applications include classification of land cover types, monitoring environmental changes such as deforestation or anthropogenic processes such as urban expansion</p>
 </section>
@@ -617,7 +617,7 @@ Signatures vary with variations in an object/surface’s material composition, s
 </figure>
 <p>Remote sensing methods can generally be divided into two categories: active and passive remote sensing: If the source of the measured energy is the sun, it is called passive remote sensing and the result of this measurement can be a digital image. However, there is also the possibility of emitting radiation from the sensor platform and then measuring the return reflection. This method can be defined as active remote sensing.</p>
 <figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../../_images/en_m8_rs_activepassive.png"><img alt="../../_images/en_m8_rs_activepassive.png" src="../../_images/en_m8_rs_activepassive.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_activepassive.png"><img alt="../../_images/en_m8_rs_activepassive.png" src="../../_images/en_m8_rs_activepassive.png" style="width: 600px;" /></a>
 </figure>
 <p>Examples of passive remote sensing include radar sensors that emit microwave radiation or LiDAR sensors that emit laser beams. However, the vast majority of remote sensing data is generated using active remote sensing.</p>
 </section>
@@ -630,25 +630,25 @@ Signatures vary with variations in an object/surface’s material composition, s
 <li><p><strong>Temporal resolution</strong> is an important attribute of satellite sensors such as Landsat 8 or SENTINEL 2 and can be defined as the period of time required to revisit and measure the same area of the Earth (e.g. 16 days for Landsat 8). It is particularly relevant for the analysis of changes using RS data.</p></li>
 </ul>
 </section>
-<section id="visuliszation-of-multi-spectral-remote-sensing-data">
-<h2>Visuliszation of Multi Spectral Remote Sensing Data<a class="headerlink" href="#visuliszation-of-multi-spectral-remote-sensing-data" title="Permalink to this heading">#</a></h2>
+<section id="visulization-of-multi-spectral-remote-sensing-data">
+<h2>Visulization of Multi Spectral Remote Sensing Data<a class="headerlink" href="#visulization-of-multi-spectral-remote-sensing-data" title="Permalink to this heading">#</a></h2>
 <p>The fact that the bands of the individual spectral ranges are available in the files of multispectral remote sensing scenes as individual rasters allows various possible combinations of these bands to create so-called false colour composites: the optical perception of the human eye can be divid-ed into the three spectral ranges of visible light (red, blue and green, R-G-B for short). In a “true colour display”, i.e. the optical display of a satellite image as the human eye would perceive it (e.g. Google Maps Satellite), these bands are also assigned to the corresponding bands: R = Red, G = Green, B = Blue.</p>
 <figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../../_images/en_m8_rs_bandsconcept.png"><img alt="../../_images/en_m8_rs_bandsconcept.png" src="../../_images/en_m8_rs_bandsconcept.png" style="width: 600px;" /></a>
 </figure>
 <p>In a false colour image the optical representation of one or more of the bands is not congruent with the spectral bands assigned to it. A commonly used example is the Combination R = Near Infrared, G = Red, B = Green (see Fig X).</p>
 <figure class="align-left" id="id5">
-<a class="reference internal image-reference" href="../../_images/en_m8_rs_RGB.png"><img alt="../../_images/en_m8_rs_RGB.png" src="../../_images/en_m8_rs_RGB.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_RGB.png"><img alt="../../_images/en_m8_rs_RGB.png" src="../../_images/en_m8_rs_RGB.png" style="width: 350px;" /></a>
 </figure>
 <figure class="align-right" id="id6">
-<a class="reference internal image-reference" href="../../_images/en_m8_rs_NIR_RED_GREEN.png"><img alt="../../_images/en_m8_rs_NIR_RED_GREEN.png" src="../../_images/en_m8_rs_NIR_RED_GREEN.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_NIR_RED_GREEN.png"><img alt="../../_images/en_m8_rs_NIR_RED_GREEN.png" src="../../_images/en_m8_rs_NIR_RED_GREEN.png" style="width: 350px;" /></a>
 </figure>
 <p>This false colour composit for example strongly highlights vegetation and especially healthy vegetation which appears bright red. This is because red visualizes the near infrared spectrum-which displays high reflectance by vegetation, particularly compared to other surfaces like soil or water. This makes it easier to identify and analyze vegetation cover, health, and distribution.</p>
-<figure class="align-default" id="id7">
-<a class="reference internal image-reference" href="../../_images/en_m8_rs_SWIR_NIR_RED.png"><img alt="../../_images/en_m8_rs_SWIR_NIR_RED.png" src="../../_images/en_m8_rs_SWIR_NIR_RED.png" style="width: 600px;" /></a>
+<figure class="align-left" id="id7">
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_SWIR_NIR_RED.png"><img alt="../../_images/en_m8_rs_SWIR_NIR_RED.png" src="../../_images/en_m8_rs_SWIR_NIR_RED.png" style="width: 350px;" /></a>
 </figure>
-<figure class="align-default" id="id8">
-<a class="reference internal image-reference" href="../../_images/en_m8_rs_NDVI.png"><img alt="../../_images/en_m8_rs_NDVI.png" src="../../_images/en_m8_rs_NDVI.png" style="width: 600px;" /></a>
+<figure class="align-right" id="id8">
+<a class="reference internal image-reference" href="../../_images/en_m8_rs_NDVI.png"><img alt="../../_images/en_m8_rs_NDVI.png" src="../../_images/en_m8_rs_NDVI.png" style="width: 350px;" /></a>
 </figure>
 </section>
 </section>
@@ -720,7 +720,7 @@ Signatures vary with variations in an object/surface’s material composition, s
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electromagnetic-radiation-and-its-interaction-with-the-earths-surface">Electromagnetic Radiation and its interaction with the Earths Surface</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing-sensors-and-platforms">Remote Sensing Sensors and Platforms</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-of-remote-sensing-data">Attributes of Remote Sensing Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visuliszation-of-multi-spectral-remote-sensing-data">Visuliszation of Multi Spectral Remote Sensing Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visulization-of-multi-spectral-remote-sensing-data">Visulization of Multi Spectral Remote Sensing Data</a></li>
 </ul>
   </nav></div>
 
