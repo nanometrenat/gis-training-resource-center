@@ -774,7 +774,7 @@ Raster</div>
 </tr>
 <tr class="row-odd"><td><p>.nc</p></td>
 <td><p>netCDF</p></td>
-<td><p>Standard data format for scientific data like speed or temperature. Can be be a raster file. Can contain multiple datasets</p></td>
+<td><p>Standard data format for scientific data like speed or temperature. Can be a raster file. Can contain multiple datasets</p></td>
 </tr>
 <tr class="row-even"><td><p>.asc</p></td>
 <td><p>Esri ASCII Grid files</p></td>
@@ -799,9 +799,9 @@ Raster</div>
 canvas. However, when creating a map, we are using multiple datasets at once. Every type of geographic data, such
 as raster data, polygons, points, or lines, is usually stored inside a <strong>layer</strong>. Each layer consists of geographic
 objects of the same type (line, polygon, raster, …). GIS-software displays these layers on top of each other and
-let’s you rearrange the order of these layer, in order to create insightful maps. <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+lets you rearrange the order of these layer, in order to create insightful maps. <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p>By adding different layers, you build your map and can combine information from
-different sources. With those you then can perform analyses or adapt the
+different sources. With those, you can then perform analyses or adapt the
 representation by using symbols and colors.</p>
 <figure class="align-center" id="layers-in-a-gis">
 <a class="reference internal image-reference" href="../../_images/en_layer.png"><img alt="../../_images/en_layer.png" src="../../_images/en_layer.png" style="width: 800px;" /></a>
@@ -829,12 +829,12 @@ the <strong>length</strong> between two points or from a single point (equidista
 projections are able to display the angles correctly, while others display the sizes of an area or the distance
 between two points correctly.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kIID5FDi2JQ?si=C0tYz7nteMF_xqvr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<p>Every projection has it use case. For example, the Mercator projection displays the angles between to points
+<p>Every projection has its use case. For example, the Mercator projection displays the angles between to points
 correctly. This was used extensively during the seafaring age without satellites, as ships could navigate to a
 destination by following a straight line on a map. For example, the Mercator projection displays road intersections
 correctly: a road that crosses another road at a right angle, will be displayed as such on a mercator projection.
 This is especially useful when navigating. The shape of an area remains correct, since the angles between each line
-stays true. However, if you increase the scale of the map, the size and distances get distorted dramatically (see
+stay true. However, if you increase the scale of the map, the size and distances get distorted dramatically (see
 figure below). Furthermore, the further away from the equator you get, the more distortion you get. You can check
 the true size in comparison to different placements on the map on <a class="reference external" href="https://www.thetruesize.com">TheTrueSize.com website</a>. A
 popular example is Greenland in comparison with Africa, which seem on the map to be about the same size, but in
@@ -859,11 +859,11 @@ reality Africa is a lot bigger.</p>
 <section id="how-to-choose-an-appropriate-projected-coordinate-system">
 <h3>How to choose an appropriate projected coordinate system<a class="headerlink" href="#how-to-choose-an-appropriate-projected-coordinate-system" title="Permalink to this heading">#</a></h3>
 <p>In GIS, we project the earth onto a flat coordinate system (hence the name coordinate reference system or CRS).
-It is crucial that you are aware that you data can be in one CRS and your QGIS
-project in an other CRS. The data and the project should always be the same, or
+It is crucial that you are aware that your data can be in one CRS and your QGIS
+project in another CRS. The data and the project should always be the same, or
 else you will get wrong results! The project CRS is displayed on the bottom right
 corner of the <a class="reference external" href="https://giscience.github.io/gis-training-resource-center/content/Modul_1/en_qgis_start.html#overview-of-qgis-interface">QGIS interface</a>.<br />
-To change the CRS of you data and project, follow the steps explained below.
+To change the CRS of your data and project, follow the steps explained below.
 The default CRS/EPSG code of every QGIS project is the World Geodetic System 84
 (EPSG: 4326). This CRS is optimized for world maps. So not perfect for most
 applications, because we mostly use maps for small areas.</p>
@@ -922,7 +922,7 @@ or even smaller regions, <strong>you should always use a local CRS, to avoid ina
 </div>
 <ol class="arabic simple">
 <li><p>Open a QGIS project</p></li>
-<li><p>In the very down right corner of QGIS you find the butten <code class="docutils literal notranslate"><span class="pre">EPSG</span></code>. The number
+<li><p>In the very down right corner of QGIS you find the button <code class="docutils literal notranslate"><span class="pre">EPSG</span></code>. The number
 next to it is the EPSG Code currently used in the project. To see more information, or to change the CRS, click on the <code class="docutils literal notranslate"><span class="pre">Current</span> <span class="pre">CRS</span></code>-button <img alt="" src="../../_images/EPSG_Code.png" />.</p></li>
 <li><p>The window <code class="docutils literal notranslate"><span class="pre">Project</span> <span class="pre">Properties</span></code> will open. Here you can view all availble
 CRS/EPSG-Code and their properties.</p></li>
@@ -940,10 +940,10 @@ Video: How to check and change the CRS in your QGIS project<div class="sd-summar
 </details></section>
 <section id="project-crs-and-layer-crs">
 <h3>Project CRS and Layer CRS<a class="headerlink" href="#project-crs-and-layer-crs" title="Permalink to this heading">#</a></h3>
-<p>The Coordinate reference system of your QGIS project determines how QGIS displays the information. However, layers
+<p>The coordinate reference system of your QGIS project determines how QGIS displays the information. However, layers
 and datasets have their own CRS. This can be seen in the metadata, or layer properties of the dataset. The layer
 CRS refers to the coordinate system of the features or items in the dataset. The same coordinates in two different
-coordinate reference system do not refer to the same location on earth. This is because of the distortion of
+coordinate reference systems do not refer to the same location on earth. This is because of the distortion of
 distance and area.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
