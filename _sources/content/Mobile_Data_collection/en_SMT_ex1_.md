@@ -1,7 +1,5 @@
 # Sketch Map Tool Exercise 1 - Workflow Exercise
 
-🚧This training platform and the entire content is under ⚠️construction⚠️ and may not be shared or published! 🚧
-
 Explore the whole workflow of mapping with the Sketch Map Tool, from first ideas about what you like to map to the possible digital results.
 
 
@@ -205,7 +203,6 @@ If you like to learn more about the visualisation and one possible analysis of t
     - First, unzip the folder you downloaded from the Sketch Map Tool website. In it, you will find a vector file (`geojson`) and a raster file (`geotiff`, `tiff`, or `tif`).
     - Load both files into QGIS by dragging them onto QGIS. Be aware which files are at the top, because you might not be able to see the layers which are below. If it is your first time using QGIS, take your time to familiarise yourself with the [QGIS interface](https://giscience.github.io/gis-training-resource-center/content/Wiki/en_qgis_interface_wiki.html).  
     - Take a look at the detected markings, compare it with your map. Which differences can you see? Are some markings missing in the Sketch Map Tool results?
-
 
 :::
 
